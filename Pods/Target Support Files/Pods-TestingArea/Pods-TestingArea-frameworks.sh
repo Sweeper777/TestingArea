@@ -84,12 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-TestingArea/MGSwipeTableCell.framework"
+  install_framework "Pods-TestingArea/ListKit.framework"
   install_framework "Pods-TestingArea/PureLayout.framework"
   install_framework "Pods-TestingArea/SwiftyButton.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-TestingArea/MGSwipeTableCell.framework"
+  install_framework "Pods-TestingArea/ListKit.framework"
   install_framework "Pods-TestingArea/PureLayout.framework"
   install_framework "Pods-TestingArea/SwiftyButton.framework"
 fi

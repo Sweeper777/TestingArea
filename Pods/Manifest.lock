@@ -1,5 +1,5 @@
 PODS:
-  - MGSwipeTableCell (1.5.5)
+  - ListKit (1.0.0)
   - PureLayout (3.0.1)
   - SwiftyButton (0.4.0):
     - SwiftyButton/CustomContent (= 0.4.0)
@@ -7,11 +7,11 @@ PODS:
     - PureLayout (~> 3.0)
 
 DEPENDENCIES:
-  - MGSwipeTableCell
+  - ListKit
   - SwiftyButton
 
 SPEC CHECKSUMS:
-  MGSwipeTableCell: bafeb5f351124544c9364ecbdf24c7b06a37d340
+  ListKit: 1454ee280f543c42a9eeba96eeabcf222f49fd40
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   SwiftyButton: fffcc0d82b2b5f9ec1681f20ee9c67bed0d5c73b
 

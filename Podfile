@@ -5,7 +5,7 @@ use_frameworks!
 
 target 'TestingArea' do
     pod 'SwiftyButton'
-    pod 'MGSwipeTableCell'
+    pod 'ListKit'
 end
 
 target 'TestingAreaTests' do

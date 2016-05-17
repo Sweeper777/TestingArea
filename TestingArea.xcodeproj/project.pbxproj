@@ -14,7 +14,7 @@
 		5AE0011F1CAA0F3A0058B744 /* TestingAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0011E1CAA0F3A0058B744 /* TestingAreaTests.swift */; };
 		5AE0012A1CAA0F3A0058B744 /* TestingAreaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001291CAA0F3A0058B744 /* TestingAreaUITests.swift */; };
 		5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
-		5AFA741A1CDD6D32007C3B7C /* MGSwipeTableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFA74191CDD6D32007C3B7C /* MGSwipeTableCell.framework */; };
+		5AF9A1F31CEB544D004AC018 /* ListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF9A1F21CEB544D004AC018 /* ListKit.framework */; };
 		5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA741B1CDD7589007C3B7C /* Main.storyboard */; };
 		F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +51,7 @@
 		5AE001291CAA0F3A0058B744 /* TestingAreaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAreaUITests.swift; sourceTree = "<group>"; };
 		5AE0012B1CAA0F3A0058B744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		5AF9A1F21CEB544D004AC018 /* ListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ListKit.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/ListKit.framework"; sourceTree = "<group>"; };
 		5AFA74191CDD6D32007C3B7C /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = "Pods/../build/Debug-iphoneos/MGSwipeTableCell.framework"; sourceTree = "<group>"; };
 		5AFA741B1CDD7589007C3B7C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWTableViewCell.framework; path = "Pods/../build/Debug-iphoneos/SWTableViewCell.framework"; sourceTree = "<group>"; };
@@ -63,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFA741A1CDD6D32007C3B7C /* MGSwipeTableCell.framework in Frameworks */,
+				5AF9A1F31CEB544D004AC018 /* ListKit.framework in Frameworks */,
 				F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +89,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AF9A1F21CEB544D004AC018 /* ListKit.framework */,
 				5AFA74191CDD6D32007C3B7C /* MGSwipeTableCell.framework */,
 				5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */,
 				6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */,

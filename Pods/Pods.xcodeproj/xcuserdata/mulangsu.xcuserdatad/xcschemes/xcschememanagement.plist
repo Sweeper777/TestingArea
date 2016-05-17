@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MGSwipeTableCell.xcscheme</key>
+		<key>ListKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E7528B3899D82204710F5367B33DB5D</key>
+		<key>84A4F9BD8A109EC89979CAF07E496EE5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>118AC8EC0EA3DE756769ABD464827E9A</key>
+		<key>B722425E847233F098DDC139597CF7CC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>336FAF89F9E6D7953FFD5A5831321E3F</key>
+		<key>BDDACFD744FA425764ADCFFDCA314D6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E1263BFF45F6446CF3DE29AE234C893</key>
+		<key>C199D43F87709564279345DE1B9878CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
