@@ -3,16 +3,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="wbY-FS-Egh">
             <objects>
                 <tableViewController id="iwm-Dw-rF6" customClass="MyTableViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XGy-kv-UJG">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="XGy-kv-UJG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="iwm-Dw-rF6" id="75u-O7-Ufn"/>
                             <outlet property="delegate" destination="iwm-Dw-rF6" id="LS5-F0-SV7"/>
@@ -20,11 +21,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="0LN-EQ-ml8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="MNc-MY-4eS">
-                            <connections>
-                                <action selector="edit:" destination="iwm-Dw-rF6" id="Ac8-Zc-zDH"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Remove" id="7kx-df-lat">
+                                <connections>
+                                    <action selector="remove:" destination="iwm-Dw-rF6" id="14w-Qu-dBb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Add" id="Zne-zH-Lcp">
+                                <connections>
+                                    <action selector="add:" destination="iwm-Dw-rF6" id="rUZ-Xh-jI1"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
