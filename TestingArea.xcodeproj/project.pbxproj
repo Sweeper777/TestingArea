@@ -14,8 +14,11 @@
 		5AE0011F1CAA0F3A0058B744 /* TestingAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0011E1CAA0F3A0058B744 /* TestingAreaTests.swift */; };
 		5AE0012A1CAA0F3A0058B744 /* TestingAreaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001291CAA0F3A0058B744 /* TestingAreaUITests.swift */; };
 		5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
-		5AF8C70A1CEC2ECC006895EA /* MyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8C7091CEC2ECC006895EA /* MyVC.swift */; };
 		5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA741B1CDD7589007C3B7C /* Main.storyboard */; };
+		5AFB28E71CF851410051C0AA /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB28E61CF851410051C0AA /* MyPageVC.swift */; };
+		5AFBDA631CF14A0600E0CC30 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBDA621CF14A0600E0CC30 /* Threading.swift */; };
+		5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */; };
+		5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */; };
 		F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,10 +54,13 @@
 		5AE001291CAA0F3A0058B744 /* TestingAreaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAreaUITests.swift; sourceTree = "<group>"; };
 		5AE0012B1CAA0F3A0058B744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
-		5AF8C7091CEC2ECC006895EA /* MyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyVC.swift; sourceTree = "<group>"; };
 		5AF9A1F21CEB544D004AC018 /* ListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ListKit.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/ListKit.framework"; sourceTree = "<group>"; };
 		5AFA74191CDD6D32007C3B7C /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = "Pods/../build/Debug-iphoneos/MGSwipeTableCell.framework"; sourceTree = "<group>"; };
 		5AFA741B1CDD7589007C3B7C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		5AFB28E61CF851410051C0AA /* MyPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
+		5AFBDA621CF14A0600E0CC30 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZLoadingActivity.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/EZLoadingActivity.framework"; sourceTree = "<group>"; };
 		5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWTableViewCell.framework; path = "Pods/../build/Debug-iphoneos/SWTableViewCell.framework"; sourceTree = "<group>"; };
 		6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775C4F038436742FBEE9F901 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */,
+				5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */,
 				F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +97,8 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */,
+				5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */,
 				5AF9A1F21CEB544D004AC018 /* ListKit.framework */,
 				5AFA74191CDD6D32007C3B7C /* MGSwipeTableCell.framework */,
 				5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */,
@@ -132,7 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				5AFA741B1CDD7589007C3B7C /* Main.storyboard */,
-				5AF8C7091CEC2ECC006895EA /* MyVC.swift */,
+				5AFB28E61CF851410051C0AA /* MyPageVC.swift */,
+				5AFBDA621CF14A0600E0CC30 /* Threading.swift */,
 				5AE001061CAA0F3A0058B744 /* AppDelegate.swift */,
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
@@ -343,8 +354,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AF8C70A1CEC2ECC006895EA /* MyVC.swift in Sources */,
+				5AFBDA631CF14A0600E0CC30 /* Threading.swift in Sources */,
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
+				5AFB28E71CF851410051C0AA /* MyPageVC.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 			);

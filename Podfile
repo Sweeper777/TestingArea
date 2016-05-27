@@ -6,6 +6,8 @@ use_frameworks!
 target 'TestingArea' do
     pod 'SwiftyButton'
     pod 'ListKit'
+    pod 'SwiftyJSON'
+    pod 'EZLoadingActivity'
 end
 
 target 'TestingAreaTests' do

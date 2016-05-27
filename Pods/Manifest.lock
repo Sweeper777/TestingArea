@@ -1,18 +1,24 @@
 PODS:
+  - EZLoadingActivity (0.8)
   - ListKit (1.0.0)
   - PureLayout (3.0.1)
   - SwiftyButton (0.4.0):
     - SwiftyButton/CustomContent (= 0.4.0)
   - SwiftyButton/CustomContent (0.4.0):
     - PureLayout (~> 3.0)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - EZLoadingActivity
   - ListKit
   - SwiftyButton
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
+  EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   ListKit: 1454ee280f543c42a9eeba96eeabcf222f49fd40
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   SwiftyButton: fffcc0d82b2b5f9ec1681f20ee9c67bed0d5c73b
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
