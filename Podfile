@@ -4,10 +4,11 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'TestingArea' do
-    pod 'SwiftyButton'
-    pod 'ListKit'
     pod 'SwiftyJSON'
     pod 'EZLoadingActivity'
+    pod 'DejalActivityView'
+    pod 'ABOnboarding'
+    pod 'MMMarkdown'
 end
 
 target 'TestingAreaTests' do

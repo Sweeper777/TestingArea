@@ -1,24 +1,22 @@
 PODS:
+  - ABOnboarding (1.1.1)
+  - DejalActivityView (1.2)
   - EZLoadingActivity (0.8)
-  - ListKit (1.0.0)
-  - PureLayout (3.0.1)
-  - SwiftyButton (0.4.0):
-    - SwiftyButton/CustomContent (= 0.4.0)
-  - SwiftyButton/CustomContent (0.4.0):
-    - PureLayout (~> 3.0)
+  - MMMarkdown (0.5.4)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - ABOnboarding
+  - DejalActivityView
   - EZLoadingActivity
-  - ListKit
-  - SwiftyButton
+  - MMMarkdown
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  ABOnboarding: 2f6c83c45998160e2e3e1bacb7420ffc456e8471
+  DejalActivityView: 94d85757728a02cbb32445fcf6dfba17dc1e7393
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
-  ListKit: 1454ee280f543c42a9eeba96eeabcf222f49fd40
-  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
-  SwiftyButton: fffcc0d82b2b5f9ec1681f20ee9c67bed0d5c73b
+  MMMarkdown: 754f9154136d224178f51f2b2ba67a66a89d96ea
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

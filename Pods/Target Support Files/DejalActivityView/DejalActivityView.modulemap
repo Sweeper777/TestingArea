@@ -1,0 +1,6 @@
+framework module DejalActivityView {
+  umbrella header "DejalActivityView-umbrella.h"
+
+  export *
+  module * { export * }
+}

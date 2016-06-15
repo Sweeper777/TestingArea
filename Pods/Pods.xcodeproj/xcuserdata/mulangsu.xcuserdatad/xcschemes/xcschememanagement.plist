@@ -4,27 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ABOnboarding-ABOnboarding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ABOnboarding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DejalActivityView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ListKit.xcscheme</key>
+		<key>MMMarkdown.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>230784232EBD00E423AF4631DB990024</key>
+		<key>0C4BA02EBB9EC0FF391DEF52D1D579AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73B82EF3A392BC1AF057B6E9F991E516</key>
+		<key>3401F1F61BC274FB567ED45868CCD7C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B8AAD189DB88C4B39ADBC6412E209BF</key>
+		<key>3D39E833BBC593400B6A12133ABCCF88</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3EBB97988EA73CAED65A10806B0BB121</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7E0E72AB141025A2F49A2C4C2EF899DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E00CC9741985D7EF456AC2871D0F903</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>903A108934E1A089B76F443DC34C8E54</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B722425E847233F098DDC139597CF7CC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B9A4D6DF8D9E204B37F8C19D328F62EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

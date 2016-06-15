@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A63B2861D0A9D35006FB606 /* ABOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A63B2851D0A9D35006FB606 /* ABOnboarding.framework */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
 		5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */; };
 		5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE001101CAA0F3A0058B744 /* Assets.xcassets */; };
@@ -15,10 +16,12 @@
 		5AE0012A1CAA0F3A0058B744 /* TestingAreaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001291CAA0F3A0058B744 /* TestingAreaUITests.swift */; };
 		5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
 		5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA741B1CDD7589007C3B7C /* Main.storyboard */; };
-		5AFB28E71CF851410051C0AA /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFB28E61CF851410051C0AA /* MyPageVC.swift */; };
-		5AFBDA631CF14A0600E0CC30 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBDA621CF14A0600E0CC30 /* Threading.swift */; };
+		5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBC2651D0A9C3900E27822 /* MyViewController.swift */; };
 		5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */; };
 		5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */; };
+		5AFBE9931CFAE34B00BC1366 /* DejalActivityView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBE9921CFAE34B00BC1366 /* DejalActivityView.framework */; };
+		5AFBEABD1D11154300F8A8D2 /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBEABC1D11154300F8A8D2 /* MMMarkdown.framework */; };
+		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
 		F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		423A6426DD9A5B1336AE3182 /* Pods-TestingArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.release.xcconfig"; sourceTree = "<group>"; };
+		5A63B2851D0A9D35006FB606 /* ABOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABOnboarding.framework; path = "Pods/../build/Debug-iphoneos/ABOnboarding.framework"; sourceTree = "<group>"; };
 		5AE001031CAA0F3A0058B744 /* TestingArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE001061CAA0F3A0058B744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE0010E1CAA0F3A0058B744 /* TestingArea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestingArea.xcdatamodel; sourceTree = "<group>"; };
@@ -57,10 +61,14 @@
 		5AF9A1F21CEB544D004AC018 /* ListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ListKit.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/ListKit.framework"; sourceTree = "<group>"; };
 		5AFA74191CDD6D32007C3B7C /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = "Pods/../build/Debug-iphoneos/MGSwipeTableCell.framework"; sourceTree = "<group>"; };
 		5AFA741B1CDD7589007C3B7C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
-		5AFB28E61CF851410051C0AA /* MyPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
-		5AFBDA621CF14A0600E0CC30 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
+		5AFB28E81CF86C5B0051C0AA /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/QRCodeReader.framework"; sourceTree = "<group>"; };
+		5AFB28EA1CF87C2F0051C0AA /* QRCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCode.framework; path = "Pods/../build/Debug-iphoneos/QRCode.framework"; sourceTree = "<group>"; };
+		5AFBC2651D0A9C3900E27822 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZLoadingActivity.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/EZLoadingActivity.framework"; sourceTree = "<group>"; };
+		5AFBE9921CFAE34B00BC1366 /* DejalActivityView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DejalActivityView.framework; path = "Pods/../build/Debug-iphoneos/DejalActivityView.framework"; sourceTree = "<group>"; };
+		5AFBEABC1D11154300F8A8D2 /* MMMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMMarkdown.framework; path = "Pods/../build/Debug-iphoneos/MMMarkdown.framework"; sourceTree = "<group>"; };
+		5AFBEABE1D111BBE00F8A8D2 /* modest.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = modest.css; sourceTree = "<group>"; };
 		5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWTableViewCell.framework; path = "Pods/../build/Debug-iphoneos/SWTableViewCell.framework"; sourceTree = "<group>"; };
 		6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775C4F038436742FBEE9F901 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFBEABD1D11154300F8A8D2 /* MMMarkdown.framework in Frameworks */,
+				5A63B2861D0A9D35006FB606 /* ABOnboarding.framework in Frameworks */,
+				5AFBE9931CFAE34B00BC1366 /* DejalActivityView.framework in Frameworks */,
 				5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */,
 				5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */,
 				F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */,
@@ -97,6 +108,11 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AFBEABC1D11154300F8A8D2 /* MMMarkdown.framework */,
+				5A63B2851D0A9D35006FB606 /* ABOnboarding.framework */,
+				5AFBE9921CFAE34B00BC1366 /* DejalActivityView.framework */,
+				5AFB28EA1CF87C2F0051C0AA /* QRCode.framework */,
+				5AFB28E81CF86C5B0051C0AA /* QRCodeReader.framework */,
 				5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */,
 				5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */,
 				5AF9A1F21CEB544D004AC018 /* ListKit.framework */,
@@ -121,7 +137,6 @@
 			children = (
 				5AE001051CAA0F3A0058B744 /* TestingArea */,
 				5AE0011D1CAA0F3A0058B744 /* TestingAreaTests */,
-				5AE001281CAA0F3A0058B744 /* TestingAreaUITests */,
 				5AE001041CAA0F3A0058B744 /* Products */,
 				53EDDF6FE7C70030D40B7FEC /* Pods */,
 				1EB06E18AAE7306B21230C08 /* Frameworks */,
@@ -141,11 +156,11 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
+				5AFBEABE1D111BBE00F8A8D2 /* modest.css */,
 				5AFA741B1CDD7589007C3B7C /* Main.storyboard */,
-				5AFB28E61CF851410051C0AA /* MyPageVC.swift */,
-				5AFBDA621CF14A0600E0CC30 /* Threading.swift */,
 				5AE001061CAA0F3A0058B744 /* AppDelegate.swift */,
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
+				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
 				5AE001151CAA0F3A0058B744 /* Info.plist */,
@@ -157,6 +172,7 @@
 		5AE0011D1CAA0F3A0058B744 /* TestingAreaTests */ = {
 			isa = PBXGroup;
 			children = (
+				5AE001281CAA0F3A0058B744 /* TestingAreaUITests */,
 				5AE0011E1CAA0F3A0058B744 /* TestingAreaTests.swift */,
 				5AE001201CAA0F3A0058B744 /* Info.plist */,
 			);
@@ -169,7 +185,8 @@
 				5AE001291CAA0F3A0058B744 /* TestingAreaUITests.swift */,
 				5AE0012B1CAA0F3A0058B744 /* Info.plist */,
 			);
-			path = TestingAreaUITests;
+			name = TestingAreaUITests;
+			path = ../TestingAreaUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */,
+				5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */,
 				5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
 			);
@@ -354,10 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFBDA631CF14A0600E0CC30 /* Threading.swift in Sources */,
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
-				5AFB28E71CF851410051C0AA /* MyPageVC.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
+				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +517,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +534,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
