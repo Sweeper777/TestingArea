@@ -1,14 +1,17 @@
 import UIKit
-import DejalActivityView
 
 class MyTableViewController: UITableViewController {
     var cells: [[UITableViewCell]] = [[]]
-    var loadingView: DejalBezelActivityView!
+    var rowH: CGFloat = 44
     
     override func viewDidLoad() {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Hi \(cells[0].endIndex)"
+        cell.textLabel?.text = "Hello"
         addCellToSection(0, cell: cell)
+        
+        let cell2 = UITableViewCell()
+        cell2.textLabel?.text = "Hello2"
+        addCellToSection(0, cell: cell2)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -26,11 +29,17 @@ class MyTableViewController: UITableViewController {
     
     
     @IBAction func add(sender: UIBarButtonItem) {
-        loadingView = DejalBezelActivityView(forView: self.view, withLabel: "Loading", width: 100)
+        rowH += 20
+        tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .None)
+        
     }
     
-    @IBAction func remove(sender: UIBarButtonItem) {
-        DejalBezelActivityView.removeViewAnimated(true)
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return rowH
+        } else {
+            return 44
+        }
     }
     
     func addCellToSection(section: Int, cell: UITableViewCell) {
@@ -41,17 +50,5 @@ class MyTableViewController: UITableViewController {
     func removeCellFromSection(section: Int, index: Int) {
         cells[section].removeAtIndex(index)
         tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: section)], withRowAnimation: .Left)
-    }
-}
-
-extension Array where Element : CollectionType,
-Element.Generator.Element : Equatable, Element.Index == Int {
-    func indicesOf(x: Element.Generator.Element) -> (Int, Int)? {
-        for (i, row) in self.enumerate() {
-            if let j = row.indexOf(x) {
-                return (i, j)
-            }
-        }
-        return nil
     }
 }

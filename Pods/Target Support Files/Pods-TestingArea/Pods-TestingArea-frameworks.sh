@@ -84,15 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-TestingArea/ABOnboarding.framework"
-  install_framework "Pods-TestingArea/DejalActivityView.framework"
+  install_framework "Pods-TestingArea/Base64nl.framework"
   install_framework "Pods-TestingArea/EZLoadingActivity.framework"
   install_framework "Pods-TestingArea/MMMarkdown.framework"
   install_framework "Pods-TestingArea/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-TestingArea/ABOnboarding.framework"
-  install_framework "Pods-TestingArea/DejalActivityView.framework"
+  install_framework "Pods-TestingArea/Base64nl.framework"
   install_framework "Pods-TestingArea/EZLoadingActivity.framework"
   install_framework "Pods-TestingArea/MMMarkdown.framework"
   install_framework "Pods-TestingArea/SwiftyJSON.framework"

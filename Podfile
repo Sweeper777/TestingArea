@@ -6,9 +6,8 @@ use_frameworks!
 target 'TestingArea' do
     pod 'SwiftyJSON'
     pod 'EZLoadingActivity'
-    pod 'DejalActivityView'
-    pod 'ABOnboarding'
     pod 'MMMarkdown'
+    pod 'Base64nl'
 end
 
 target 'TestingAreaTests' do

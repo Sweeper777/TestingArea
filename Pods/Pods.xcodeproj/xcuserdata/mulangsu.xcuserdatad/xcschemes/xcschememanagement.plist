@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ABOnboarding-ABOnboarding.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ABOnboarding.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>DejalActivityView.xcscheme</key>
+		<key>Base64nl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C4BA02EBB9EC0FF391DEF52D1D579AC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3401F1F61BC274FB567ED45868CCD7C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3D39E833BBC593400B6A12133ABCCF88</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3EBB97988EA73CAED65A10806B0BB121</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7E0E72AB141025A2F49A2C4C2EF899DC</key>
+		<key>4DA1A1E7D881088D196A1A4290E686FA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E00CC9741985D7EF456AC2871D0F903</key>
+		<key>8EA7EB085A729BEBFA2E5C679A976D5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96E2AC7E62BE700658E194892269B731</key>
 		<dict>
 			<key>primary</key>
 			<true/>
