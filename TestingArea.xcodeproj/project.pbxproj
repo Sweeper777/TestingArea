@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0028171D1FC1AB00F9F908 /* Base64nl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0028161D1FC1AB00F9F908 /* Base64nl.framework */; };
+		5A6B1EA41D2A492800C3B87F /* PasswordDialogViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6B1EA31D2A492800C3B87F /* PasswordDialogViewController.framework */; };
+		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
 		5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */; };
 		5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE001101CAA0F3A0058B744 /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBC2651D0A9C3900E27822 /* MyViewController.swift */; };
 		5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */; };
 		5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */; };
-		5AFBEABD1D11154300F8A8D2 /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBEABC1D11154300F8A8D2 /* MMMarkdown.framework */; };
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
 		F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +45,8 @@
 		423A6426DD9A5B1336AE3182 /* Pods-TestingArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.release.xcconfig"; sourceTree = "<group>"; };
 		5A0028161D1FC1AB00F9F908 /* Base64nl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64nl.framework; path = "Pods/../build/Debug-iphoneos/Base64nl.framework"; sourceTree = "<group>"; };
 		5A63B2851D0A9D35006FB606 /* ABOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABOnboarding.framework; path = "Pods/../build/Debug-iphoneos/ABOnboarding.framework"; sourceTree = "<group>"; };
+		5A6B1EA31D2A492800C3B87F /* PasswordDialogViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PasswordDialogViewController.framework; path = "Pods/../build/Debug-iphoneos/PasswordDialogViewController.framework"; sourceTree = "<group>"; };
+		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
 		5AE001031CAA0F3A0058B744 /* TestingArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE001061CAA0F3A0058B744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE0010E1CAA0F3A0058B744 /* TestingArea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestingArea.xcdatamodel; sourceTree = "<group>"; };
@@ -81,8 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0028171D1FC1AB00F9F908 /* Base64nl.framework in Frameworks */,
-				5AFBEABD1D11154300F8A8D2 /* MMMarkdown.framework in Frameworks */,
+				5A6B1EA41D2A492800C3B87F /* PasswordDialogViewController.framework in Frameworks */,
 				5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */,
 				5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */,
 				F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */,
@@ -109,6 +110,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A6B1EA31D2A492800C3B87F /* PasswordDialogViewController.framework */,
 				5A0028161D1FC1AB00F9F908 /* Base64nl.framework */,
 				5AFB59DD1D1554DF00BF4CAD /* CarbonCardView.framework */,
 				5AFB59DB1D154D8300BF4CAD /* MaterialCardView.framework */,
@@ -165,6 +167,7 @@
 				5AE001061CAA0F3A0058B744 /* AppDelegate.swift */,
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
+				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
 				5AE001151CAA0F3A0058B744 /* Info.plist */,
@@ -380,6 +383,7 @@
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
+				5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

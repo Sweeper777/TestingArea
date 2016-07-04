@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -22,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--My View Controller-->
+        <!--AViewController-->
         <scene sceneID="q16-hE-sOu">
             <objects>
-                <viewController id="ExC-Rw-7Cj" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ExC-Rw-7Cj" userLabel="AViewController" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XTO-rq-8BR"/>
                         <viewControllerLayoutGuide type="bottom" id="kX2-Cg-Z62"/>
@@ -34,23 +33,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq3-1o-ge4">
-                                <rect key="frame" x="20" y="72" width="560" height="520"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-t5-cpt">
+                                <rect key="frame" x="20" y="72" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dq3-1o-ge4" firstAttribute="leading" secondItem="sS5-cV-8Ll" secondAttribute="leadingMargin" id="D82-Ad-K9O"/>
-                            <constraint firstItem="dq3-1o-ge4" firstAttribute="top" secondItem="XTO-rq-8BR" secondAttribute="bottom" constant="8" symbolic="YES" id="RS3-qx-RxC"/>
-                            <constraint firstItem="dq3-1o-ge4" firstAttribute="trailing" secondItem="sS5-cV-8Ll" secondAttribute="trailingMargin" id="jnu-i5-X2x"/>
-                            <constraint firstItem="kX2-Cg-Z62" firstAttribute="top" secondItem="dq3-1o-ge4" secondAttribute="bottom" constant="8" symbolic="YES" id="xC3-tr-qlE"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xbO-Sa-E5J"/>
-                    <connections>
-                        <outlet property="webView" destination="dq3-1o-ge4" id="rdW-Xg-Lio"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ0-I7-mYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Base64nl.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MMMarkdown.xcscheme</key>
+		<key>PasswordDialogViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,17 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3EBB97988EA73CAED65A10806B0BB121</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4DA1A1E7D881088D196A1A4290E686FA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8EA7EB085A729BEBFA2E5C679A976D5E</key>
+		<key>3459880DD7A54DCB5B7165F1E68EA283</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96E2AC7E62BE700658E194892269B731</key>
+		<key>D8802230A3BEA946E65A372FDAE0529C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3CE169B11F2A27C3FC4EFC01374813D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

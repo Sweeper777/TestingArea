@@ -1,19 +1,16 @@
 PODS:
-  - Base64nl (1.2)
   - EZLoadingActivity (0.8)
-  - MMMarkdown (0.5.4)
+  - PasswordDialogViewController (0.0.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Base64nl
   - EZLoadingActivity
-  - MMMarkdown
+  - PasswordDialogViewController
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Base64nl: a497bdcd1c01ea793d36b399016195a8713c0e95
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
-  MMMarkdown: 754f9154136d224178f51f2b2ba67a66a89d96ea
+  PasswordDialogViewController: f8811ba2baf57aafe913f196f5f8fa2edf9b1a39
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
