@@ -21,6 +21,7 @@
 		5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */; };
 		5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */; };
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
+		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
 		F14E74598F6A607B41BF97E4 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		5AFBE9921CFAE34B00BC1366 /* DejalActivityView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DejalActivityView.framework; path = "Pods/../build/Debug-iphoneos/DejalActivityView.framework"; sourceTree = "<group>"; };
 		5AFBEABC1D11154300F8A8D2 /* MMMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMMarkdown.framework; path = "Pods/../build/Debug-iphoneos/MMMarkdown.framework"; sourceTree = "<group>"; };
 		5AFBEABE1D111BBE00F8A8D2 /* modest.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = modest.css; sourceTree = "<group>"; };
+		5AFE67D11D2B8F5F0074ACAE /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWTableViewCell.framework; path = "Pods/../build/Debug-iphoneos/SWTableViewCell.framework"; sourceTree = "<group>"; };
 		6668E57E70F371B0B5125FB5 /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775C4F038436742FBEE9F901 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				5AFBEABE1D111BBE00F8A8D2 /* modest.css */,
 				5AFA741B1CDD7589007C3B7C /* Main.storyboard */,
+				5AFE67D11D2B8F5F0074ACAE /* Property List.plist */,
 				5AE001061CAA0F3A0058B744 /* AppDelegate.swift */,
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
@@ -306,6 +309,7 @@
 				5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */,
 				5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */,
 				5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */,
+				5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
