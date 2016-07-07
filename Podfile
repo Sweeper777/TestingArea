@@ -6,7 +6,7 @@ use_frameworks!
 target 'TestingArea' do
     pod 'SwiftyJSON'
     pod 'EZLoadingActivity'
-    pod 'PasswordDialogViewController'
+    pod 'LTHPasscodeViewController'
 end
 
 target 'TestingAreaTests' do
