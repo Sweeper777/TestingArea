@@ -7,6 +7,7 @@ target 'TestingArea' do
     pod 'SwiftyJSON'
     pod 'EZLoadingActivity'
     pod 'LTHPasscodeViewController'
+    pod 'EZSwiftExtensions'
 end
 
 target 'TestingAreaTests' do

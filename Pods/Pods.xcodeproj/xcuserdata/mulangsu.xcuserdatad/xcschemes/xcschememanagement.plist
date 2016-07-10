@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EZSwiftExtensions.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LTHPasscodeViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2513CFBDCC9A925C67B5864FC5C7974B</key>
+		<key>2268DBBAD19F75282EC61D63011FA26F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3ACB873C7467E4C256B9BF38A25C81AE</key>
+		<key>8B15AA704B5671673ABDCD71C3274E6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>AFAD7C49D45F4A29EE885214FE72758F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF529704E2D57A46A0B88D09BCBD9804</key>
 		<dict>
 			<key>primary</key>
 			<true/>
