@@ -3,15 +3,11 @@ import UIKit
 class MyTableViewController: UITableViewController {
     var cells: [[UITableViewCell]] = [[]]
     var rowH: CGFloat = 44
+    var nextCellNum = 1
     
     override func viewDidLoad() {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Hello"
-        addCellToSection(0, cell: cell)
-        
-        let cell2 = UITableViewCell()
-        cell2.textLabel?.text = "Hello2"
-        addCellToSection(0, cell: cell2)
+        let cell = tableView.dequeueReusableCellWithIdentifier("add")
+        addCellToSection(0, cell: cell!)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -26,22 +22,6 @@ class MyTableViewController: UITableViewController {
         return cells[indexPath.section][indexPath.row]
     }
     
-    
-    
-    @IBAction func add(sender: UIBarButtonItem) {
-        rowH += 20
-        tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .None)
-        
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return rowH
-        } else {
-            return 44
-        }
-    }
-    
     func addCellToSection(section: Int, cell: UITableViewCell) {
         cells[section].append(cell)
         tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: cells[section].endIndex - 1, inSection: section)], withRowAnimation: .Left)
@@ -50,5 +30,18 @@ class MyTableViewController: UITableViewController {
     func removeCellFromSection(section: Int, index: Int) {
         cells[section].removeAtIndex(index)
         tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: index, inSection: section)], withRowAnimation: .Left)
+    }
+    
+    @IBAction func reload(sender: AnyObject) {
+        tableView.reloadData()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("normal")
+        cell?.textLabel?.text = "Cell \(nextCellNum)"
+        
+        nextCellNum += 1
+        
+        addCellToSection(0, cell: cell!)
     }
 }
