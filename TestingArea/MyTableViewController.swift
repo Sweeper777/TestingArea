@@ -7,6 +7,8 @@ class MyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         let cell = tableView.dequeueReusableCellWithIdentifier("add")
+        cell!.textLabel!.font = UIFont(name: "DB LCD Temp", size: cell!.textLabel!.font!.pointSize)
+        cell?.textLabel?.text = "16:52"
         addCellToSection(0, cell: cell!)
     }
     
