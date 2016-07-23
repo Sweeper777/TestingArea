@@ -10,6 +10,14 @@ class MyTableViewController: UITableViewController {
         cell!.textLabel!.font = UIFont(name: "DB LCD Temp", size: cell!.textLabel!.font!.pointSize)
         cell?.textLabel?.text = "16:52"
         addCellToSection(0, cell: cell!)
+        
+        let window = UIApplication.sharedApplication().keyWindow!
+        let v = UIView(frame: CGRect(x: window.frame.origin.x, y: window.frame.origin.y, width: window.frame.width, height: window.frame.height))
+        window.addSubview(v);
+        v.backgroundColor = UIColor.blackColor()
+        let v2 = UIView(frame: CGRect(x: 50, y: 50, width: 100, height: 50))
+        v2.backgroundColor = UIColor.whiteColor()
+        v.addSubview(v2)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
