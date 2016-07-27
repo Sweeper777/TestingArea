@@ -8,6 +8,7 @@ target 'TestingArea' do
     pod 'EZLoadingActivity'
     pod 'LTHPasscodeViewController'
     pod 'EZSwiftExtensions'
+    pod 'LETimeIntervalPicker'
 end
 
 target 'TestingAreaTests' do

@@ -1,18 +1,21 @@
 PODS:
   - EZLoadingActivity (0.8)
   - EZSwiftExtensions (1.5)
+  - LETimeIntervalPicker (1.0.1)
   - LTHPasscodeViewController (3.7.6)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - EZLoadingActivity
   - EZSwiftExtensions
+  - LETimeIntervalPicker
   - LTHPasscodeViewController
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   EZSwiftExtensions: fe78d7d4ac34f5c8c36415d4acee49ba67c9732a
+  LETimeIntervalPicker: 01e38d7e9292109a931561a8494f1f4836fbcd66
   LTHPasscodeViewController: 8fd65196b05f08f5278baddf436c3d26e189e90b
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 

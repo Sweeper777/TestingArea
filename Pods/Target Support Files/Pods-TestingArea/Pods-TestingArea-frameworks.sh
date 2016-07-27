@@ -86,12 +86,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-TestingArea/EZLoadingActivity.framework"
   install_framework "Pods-TestingArea/EZSwiftExtensions.framework"
+  install_framework "Pods-TestingArea/LETimeIntervalPicker.framework"
   install_framework "Pods-TestingArea/LTHPasscodeViewController.framework"
   install_framework "Pods-TestingArea/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-TestingArea/EZLoadingActivity.framework"
   install_framework "Pods-TestingArea/EZSwiftExtensions.framework"
+  install_framework "Pods-TestingArea/LETimeIntervalPicker.framework"
   install_framework "Pods-TestingArea/LTHPasscodeViewController.framework"
   install_framework "Pods-TestingArea/SwiftyJSON.framework"
 fi
