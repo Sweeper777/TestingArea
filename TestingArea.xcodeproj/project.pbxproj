@@ -47,6 +47,8 @@
 		423A6426DD9A5B1336AE3182 /* Pods-TestingArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.release.xcconfig"; sourceTree = "<group>"; };
 		5A0028161D1FC1AB00F9F908 /* Base64nl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base64nl.framework; path = "Pods/../build/Debug-iphoneos/Base64nl.framework"; sourceTree = "<group>"; };
 		5A0135A61D47397F008A0F1D /* LETimeIntervalPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LETimeIntervalPicker.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/LETimeIntervalPicker.framework"; sourceTree = "<group>"; };
+		5A07C4901D485D910013257D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5A07C4911D485D990013257D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5A63B2851D0A9D35006FB606 /* ABOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABOnboarding.framework; path = "Pods/../build/Debug-iphoneos/ABOnboarding.framework"; sourceTree = "<group>"; };
 		5A6B1EA31D2A492800C3B87F /* PasswordDialogViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PasswordDialogViewController.framework; path = "Pods/../build/Debug-iphoneos/PasswordDialogViewController.framework"; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
@@ -435,6 +437,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				5AE001131CAA0F3A0058B744 /* Base */,
+				5A07C4901D485D910013257D /* zh-Hans */,
+				5A07C4911D485D990013257D /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
