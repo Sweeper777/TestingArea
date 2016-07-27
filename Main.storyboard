@@ -22,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--View Controller-->
+        <!--My View Controller-->
         <scene sceneID="vdp-h2-VuL">
             <objects>
-                <viewController id="Y2w-nV-vce" sceneMemberID="viewController">
+                <viewController id="Y2w-nV-vce" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8B6-Px-vV8"/>
                         <viewControllerLayoutGuide type="bottom" id="J9d-5Q-Mmx"/>
@@ -34,22 +34,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hhr-Bd-zHH" customClass="LETimeIntervalPicker" customModule="LETimeIntervalPicker">
-                                <rect key="frame" x="20" y="72" width="560" height="376"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tgi-oS-9CW">
+                                <rect key="frame" x="20" y="72" width="560" height="216"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="376" id="Wk3-KP-MiT"/>
+                                    <constraint firstAttribute="height" constant="216" id="Fge-bm-RM6"/>
                                 </constraints>
-                            </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y2w-nV-vce" id="RCZ-zu-Cze"/>
+                                    <outlet property="delegate" destination="Y2w-nV-vce" id="0c4-ZQ-olH"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hhr-Bd-zHH" firstAttribute="trailing" secondItem="z7n-4a-kFo" secondAttribute="trailingMargin" id="718-gA-Exy"/>
-                            <constraint firstItem="Hhr-Bd-zHH" firstAttribute="leading" secondItem="z7n-4a-kFo" secondAttribute="leadingMargin" id="g7C-nw-6Yx"/>
-                            <constraint firstItem="Hhr-Bd-zHH" firstAttribute="top" secondItem="8B6-Px-vV8" secondAttribute="bottom" constant="8" symbolic="YES" id="ulF-Fp-GgE"/>
+                            <constraint firstItem="Tgi-oS-9CW" firstAttribute="trailing" secondItem="z7n-4a-kFo" secondAttribute="trailingMargin" id="R4M-UP-D9i"/>
+                            <constraint firstItem="Tgi-oS-9CW" firstAttribute="top" secondItem="8B6-Px-vV8" secondAttribute="bottom" constant="8" symbolic="YES" id="tlK-LL-7oy"/>
+                            <constraint firstItem="Tgi-oS-9CW" firstAttribute="leading" secondItem="z7n-4a-kFo" secondAttribute="leadingMargin" id="yRq-oS-kjH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="44Z-xp-FmG"/>
+                    <connections>
+                        <outlet property="picker" destination="Tgi-oS-9CW" id="Ibb-Fj-9oG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4b-rZ-pUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
