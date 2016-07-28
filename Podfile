@@ -9,6 +9,8 @@ target 'TestingArea' do
     pod 'LTHPasscodeViewController'
     pod 'EZSwiftExtensions'
     pod 'LETimeIntervalPicker'
+    pod 'Firebase/Core'
+    pod 'Firebase/AdMob'
 end
 
 target 'TestingAreaTests' do

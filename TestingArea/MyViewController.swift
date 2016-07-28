@@ -1,10 +1,12 @@
 import UIKit
+import GoogleMobileAds
 
 class MyViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet var picker: UIPickerView!
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
