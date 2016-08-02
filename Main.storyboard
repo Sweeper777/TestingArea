@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--My View Controller-->
+        <!--View Controller-->
         <scene sceneID="vdp-h2-VuL">
             <objects>
-                <viewController id="Y2w-nV-vce" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y2w-nV-vce" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8B6-Px-vV8"/>
                         <viewControllerLayoutGuide type="bottom" id="J9d-5Q-Mmx"/>
@@ -33,23 +33,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5D-rh-cAS">
-                                <rect key="frame" x="20" y="72" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IK-Xq-yqK">
+                                <rect key="frame" x="20" y="72" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BJs-fK-8hM" kind="presentation" id="Fga-vf-2g7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="44Z-xp-FmG"/>
-                    <connections>
-                        <outlet property="lbl" destination="J5D-rh-cAS" id="In4-nQ-Kiv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4b-rZ-pUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="55" y="185"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="d39-5x-uob">
+            <objects>
+                <navigationController id="BJs-fK-8hM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V2I-SN-7TO" kind="relationship" relationship="rootViewController" id="wfj-7Q-Bxs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUu-Bh-xqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="185"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="3VC-gm-F5c">
+            <objects>
+                <viewController id="V2I-SN-7TO" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eoU-aU-Imq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hcv-cX-DXD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iva-Eo-alP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Npf-1u-O1D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8d-Pw-oEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="185"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RY7-we-pwx">
