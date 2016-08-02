@@ -23,6 +23,7 @@ PODS:
   - LETimeIntervalPicker (1.0.1)
   - LTHPasscodeViewController (3.7.6)
   - SwiftyJSON (2.3.2)
+  - XLForm (3.2.0)
 
 DEPENDENCIES:
   - EZLoadingActivity
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - LETimeIntervalPicker
   - LTHPasscodeViewController
   - SwiftyJSON
+  - XLForm
 
 SPEC CHECKSUMS:
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
@@ -46,7 +48,8 @@ SPEC CHECKSUMS:
   LETimeIntervalPicker: 01e38d7e9292109a931561a8494f1f4836fbcd66
   LTHPasscodeViewController: 8fd65196b05f08f5278baddf436c3d26e189e90b
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  XLForm: 2250b4e96ab8ffa5f3355838c79edd90de451782
 
-PODFILE CHECKSUM: 76e84c14f1c5120e83fd5888a1ab8e3bfe707a37
+PODFILE CHECKSUM: 12b47d260428863b6d5e70d51149ac38d50fcbe3
 
 COCOAPODS: 1.1.0.beta.1

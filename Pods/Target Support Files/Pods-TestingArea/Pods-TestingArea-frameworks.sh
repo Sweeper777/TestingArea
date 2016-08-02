@@ -89,6 +89,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/LETimeIntervalPicker/LETimeIntervalPicker.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LTHPasscodeViewController/LTHPasscodeViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XLForm/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
@@ -96,4 +97,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/LETimeIntervalPicker/LETimeIntervalPicker.framework"
   install_framework "$BUILT_PRODUCTS_DIR/LTHPasscodeViewController/LTHPasscodeViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/XLForm/XLForm.framework"
 fi

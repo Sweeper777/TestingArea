@@ -11,6 +11,7 @@ target 'TestingArea' do
     pod 'LETimeIntervalPicker'
     pod 'Firebase/Core'
     pod 'Firebase/AdMob'
+    pod 'XLForm'
 end
 
 target 'TestingAreaTests' do

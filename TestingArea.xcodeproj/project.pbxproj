@@ -10,6 +10,7 @@
 		47948A69DFDDFC181872DC90 /* Pods_TestingAreaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F7B13B28DB402D9F4AA552 /* Pods_TestingAreaUITests.framework */; };
 		5A0135A71D47397F008A0F1D /* LETimeIntervalPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0135A61D47397F008A0F1D /* LETimeIntervalPicker.framework */; };
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
+		5A112F7D1D50533400B45A13 /* XLForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A112F7C1D50533400B45A13 /* XLForm.framework */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
 		5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */; };
@@ -55,6 +56,7 @@
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		5A07C4901D485D910013257D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5A07C4911D485D990013257D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5A112F7C1D50533400B45A13 /* XLForm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLForm.framework; path = "Pods/../build/Debug-iphoneos/XLForm/XLForm.framework"; sourceTree = "<group>"; };
 		5A63B2851D0A9D35006FB606 /* ABOnboarding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ABOnboarding.framework; path = "Pods/../build/Debug-iphoneos/ABOnboarding.framework"; sourceTree = "<group>"; };
 		5A6B1EA31D2A492800C3B87F /* PasswordDialogViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PasswordDialogViewController.framework; path = "Pods/../build/Debug-iphoneos/PasswordDialogViewController.framework"; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A112F7D1D50533400B45A13 /* XLForm.framework in Frameworks */,
 				5A0135A71D47397F008A0F1D /* LETimeIntervalPicker.framework in Frameworks */,
 				5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */,
 				5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */,
@@ -131,6 +134,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A112F7C1D50533400B45A13 /* XLForm.framework */,
 				5A0135A61D47397F008A0F1D /* LETimeIntervalPicker.framework */,
 				5AFD91191D31E070008BCF67 /* EZSwiftExtensions.framework */,
 				5AFE67D31D2B944C0074ACAE /* LTHPasscodeViewController.framework */,
@@ -655,6 +659,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/XLForm",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -672,6 +677,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/XLForm",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
