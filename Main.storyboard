@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="783" y="185"/>
         </scene>
-        <!--My View Controller-->
+        <!--My View Controller2-->
         <scene sceneID="3VC-gm-F5c">
             <objects>
-                <viewController id="V2I-SN-7TO" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V2I-SN-7TO" customClass="MyViewController2" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eoU-aU-Imq"/>
                         <viewControllerLayoutGuide type="bottom" id="Hcv-cX-DXD"/>
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8d-Pw-oEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1537" y="185"/>
+            <point key="canvasLocation" x="1531" y="180"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RY7-we-pwx">
