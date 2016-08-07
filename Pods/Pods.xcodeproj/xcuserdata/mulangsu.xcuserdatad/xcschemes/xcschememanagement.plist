@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DoneToolbarSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>EZSwiftExtensions.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FittableFontLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>381ED9B036E550A494552ACDCD99D604</key>
+		<key>230BF819FB557EDF3B8D37AB91D1A637</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8EFB44D2DE7C5EB00C3EC386780F54FB</key>
+		<key>7D0EC033AAE3809D99C45FF290938C9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,11 +92,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A98B39BD14AA029906A3AB1A8A0A564F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>AFAD7C49D45F4A29EE885214FE72758F</key>
 		<dict>
 			<key>primary</key>
@@ -107,12 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D19D2E214595A312D7494B0DDEB2A9CD</key>
+		<key>D4E017E9A24541A7AABB15603C6FDE2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D4E017E9A24541A7AABB15603C6FDE2B</key>
+		<key>E43BFE9082766B69DC5473F84A4B9F50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE86AAA06F9359EB9DA1EBB6175AFBD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

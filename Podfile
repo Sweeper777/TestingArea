@@ -12,7 +12,7 @@ target 'TestingArea' do
     pod 'Firebase/Core'
     pod 'Firebase/AdMob'
     pod 'XLForm'
-    pod 'FittableFontLabel'
+    pod 'DoneToolbarSwift'
 end
 
 target 'TestingAreaTests' do
