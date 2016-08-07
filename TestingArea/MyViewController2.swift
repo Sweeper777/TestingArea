@@ -1,17 +1,20 @@
 import UIKit
 import AVFoundation
+import FittableFontLabel
 
 class MyViewController2: UIViewController {
+    @IBOutlet var label: UILabel!
     @IBAction func item(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let synth = AVSpeechSynthesizer()
-        let utterance = AVSpeechUtterance(string: "你好")
-        utterance.voice = AVSpeechSynthesisVoice(language: "zh-cn")
-        synth.speakUtterance(utterance)
     }
 
+    override func viewDidLayoutSubviews() {
+        label.text = ""
+        print(label.fontSizeThatFits(text: "00:00", maxFontSize: 500))
+        print(label.fontSizeThatFits(text: "00:00:00", maxFontSize: 500))
+    }
 }

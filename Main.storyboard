@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -76,9 +77,26 @@
                     <view key="view" contentMode="scaleToFill" id="Iva-Eo-alP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhe-hw-gCL">
+                                <rect key="frame" x="20" y="72" width="565" height="508"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bhe-hw-gCL" firstAttribute="top" secondItem="eoU-aU-Imq" secondAttribute="bottom" constant="8" symbolic="YES" id="Q2b-wl-rzj"/>
+                            <constraint firstItem="Bhe-hw-gCL" firstAttribute="leading" secondItem="Iva-Eo-alP" secondAttribute="leadingMargin" id="Y5S-TH-n6z"/>
+                            <constraint firstAttribute="bottom" secondItem="Bhe-hw-gCL" secondAttribute="bottom" constant="20" symbolic="YES" id="eqr-4P-90f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bhe-hw-gCL" secondAttribute="trailing" constant="-5" id="wlD-ml-l61"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Npf-1u-O1D"/>
+                    <connections>
+                        <outlet property="label" destination="Bhe-hw-gCL" id="0nu-Wn-dQd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8d-Pw-oEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
