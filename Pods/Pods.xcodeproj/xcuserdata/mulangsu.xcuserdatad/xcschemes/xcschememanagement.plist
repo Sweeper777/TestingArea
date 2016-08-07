@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FittableFontLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LETimeIntervalPicker-LETimeIntervalPicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65B79500D985CB4F497410EADEAE5E24</key>
+		<key>381ED9B036E550A494552ACDCD99D604</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A99BA14998DB516B6C66EEEEF472EE5</key>
+		<key>8EFB44D2DE7C5EB00C3EC386780F54FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,6 +92,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A98B39BD14AA029906A3AB1A8A0A564F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>AFAD7C49D45F4A29EE885214FE72758F</key>
 		<dict>
 			<key>primary</key>
@@ -97,7 +107,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFC8399B6EFC6A01DAF1E52278155A00</key>
+		<key>D19D2E214595A312D7494B0DDEB2A9CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
