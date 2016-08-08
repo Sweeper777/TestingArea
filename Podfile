@@ -6,13 +6,10 @@ use_frameworks!
 target 'TestingArea' do
     pod 'SwiftyJSON'
     pod 'EZLoadingActivity'
-    pod 'LTHPasscodeViewController'
     pod 'EZSwiftExtensions'
-    pod 'LETimeIntervalPicker'
-    pod 'Firebase/Core'
-    pod 'Firebase/AdMob'
     pod 'XLForm'
     pod 'DoneToolbarSwift'
+    pod 'FittableFontLabel'
 end
 
 target 'TestingAreaTests' do
