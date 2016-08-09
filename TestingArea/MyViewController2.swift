@@ -15,6 +15,12 @@ class MyViewController2: UIViewController {
         toolbar.tintColor = UIColor.whiteColor()
 //        textField.inputView = toolbar.generateInputView(textField)
         textField.inputAccessoryView = toolbar
+        
+        let tagSchemes = [NSLinguisticTagSchemeLanguage]
+        let tagger = NSLinguisticTagger(tagSchemes: tagSchemes, options: 0)
+        tagger.string = "hello"
+        let language = tagger.tagAtIndex(0, scheme: NSLinguisticTagSchemeLanguage, tokenRange: nil, sentenceRange: nil)
+        print(language)
     }
 
     override func viewDidLayoutSubviews() {
