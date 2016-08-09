@@ -1,6 +1,7 @@
 import UIKit
 import AVFoundation
 import DoneToolbarSwift
+import EZSwiftExtensions
 
 class MyViewController2: UIViewController {
     @IBOutlet var textField: UITextField!
@@ -15,14 +16,16 @@ class MyViewController2: UIViewController {
         toolbar.tintColor = UIColor.whiteColor()
 //        textField.inputView = toolbar.generateInputView(textField)
         textField.inputAccessoryView = toolbar
-        
-        let tagSchemes = [NSLinguisticTagSchemeLanguage]
-        let tagger = NSLinguisticTagger(tagSchemes: tagSchemes, options: 0)
-        tagger.string = "hello"
-        let language = tagger.tagAtIndex(0, scheme: NSLinguisticTagSchemeLanguage, tokenRange: nil, sentenceRange: nil)
-        print(language)
     }
 
     override func viewDidLayoutSubviews() {
+        
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        let speech = AVSpeechSynthesizer()
+        let utterance = AVSpeechUtterance(string: "你好，你在幹什麼啦")
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-hk")
+        speech.speakUtterance(utterance)
     }
 }
