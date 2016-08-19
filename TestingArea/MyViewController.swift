@@ -17,18 +17,13 @@ class MyViewController: XLFormViewController {
     func initializeForm() {
         let form = XLFormDescriptor(title: "Add Event")
         
-        let section = XLFormSectionDescriptor.formSectionWithTitle("My Section")
+        var section = XLFormSectionDescriptor()
         form.addFormSection(section)
         
-        let row = XLFormRowDescriptor(tag: "picker", rowType: XLFormRowDescriptorTypeSelectorPickerViewInline, title: "Some Text")
-        row.selectorOptions = ["Mandarin", "Cantonese", "English", "Japanese"]
-        row.value = "Mandarin"
+        var row = XLFormRowDescriptor(tag: "title", rowType: XLFormRowDescriptorTypeText, title: "Title")
+        row.cellConfigAtConfigure.setObject("Hello", forKey: "textField.text")
         section.addFormRow(row)
         
         self.form = form
-    }
-    
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        print(form.formValues())
     }
 }
