@@ -27,6 +27,7 @@
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
 		5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD91191D31E070008BCF67 /* EZSwiftExtensions.framework */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
+		5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2FC1D688E9000176303 /* MyView.swift */; };
 		AABEFC567C3D23A4197446E3 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CDD7675EC42974CCE8358E /* Pods_TestingArea.framework */; };
 		D4666D835021B8C07DF973B2 /* Pods_TestingAreaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FCA45647320B273483AE57 /* Pods_TestingAreaTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,7 @@
 		5AFE67D11D2B8F5F0074ACAE /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		5AFE67D31D2B944C0074ACAE /* LTHPasscodeViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTHPasscodeViewController.framework; path = "Pods/../build/Debug-iphoneos/LTHPasscodeViewController.framework"; sourceTree = "<group>"; };
 		5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWTableViewCell.framework; path = "Pods/../build/Debug-iphoneos/SWTableViewCell.framework"; sourceTree = "<group>"; };
+		5AFEF2FC1D688E9000176303 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		64CDD7675EC42974CCE8358E /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872C31A8576DB1452420218 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
 		88F7B13B28DB402D9F4AA552 /* Pods_TestingAreaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAreaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
+				5AFEF2FC1D688E9000176303 /* MyView.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
 				5AE001151CAA0F3A0058B744 /* Info.plist */,
@@ -521,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */,
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,

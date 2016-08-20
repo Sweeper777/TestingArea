@@ -19,5 +19,9 @@ class MyViewController2: UIViewController {
         components.timeZone = NSTimeZone(name: "GMT")
         let correct = NSCalendar.currentCalendar().dateFromComponents(components)
         print(correct!)
+        
+        let view = MyView(frame: CGRectMake(100, 100, 100, 100))
+        view.backgroundColor = UIColor.greenColor()
+        self.view.addSubview(view)
     }
 }
