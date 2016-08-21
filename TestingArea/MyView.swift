@@ -9,7 +9,8 @@ class MyView: UIView {
     }
 
     override func drawRect(rect: CGRect) {
-        view2 = UIView(frame: CGRectMake(30, 30, 30, 30))
+        view2 = UIButton(frame: CGRectMake(30, 30, 30, 30))
+        view2.userInteractionEnabled = false
         view2.backgroundColor = UIColor.blueColor()
         self.addSubview(view2)
     }
