@@ -5,6 +5,7 @@ import EZSwiftExtensions
 
 class MyViewController2: UIViewController {
     @IBOutlet var textField: UITextField!
+    @IBOutlet var recognizer: UISwipeGestureRecognizer!
     @IBAction func item(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -23,5 +24,11 @@ class MyViewController2: UIViewController {
         let view = MyView(frame: CGRectMake(100, 100, 100, 100))
         view.backgroundColor = UIColor.greenColor()
         self.view.addSubview(view)
+        print(recognizer.numberOfTouchesRequired)
+        self.view.addGestureRecognizer(recognizer)
+    }
+    
+    @IBAction func swipe(sender: AnyObject) {
+        print("swiped")
     }
 }
