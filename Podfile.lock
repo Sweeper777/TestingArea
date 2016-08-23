@@ -1,27 +1,21 @@
 PODS:
-  - DoneToolbarSwift (1.0.0)
   - EZLoadingActivity (0.8)
   - EZSwiftExtensions (1.5)
-  - FittableFontLabel (1.2.0)
+  - ISHHoverBar (1.0.1)
   - SwiftyJSON (2.3.2)
-  - XLForm (3.2.0)
 
 DEPENDENCIES:
-  - DoneToolbarSwift
   - EZLoadingActivity
   - EZSwiftExtensions
-  - FittableFontLabel
+  - ISHHoverBar
   - SwiftyJSON
-  - XLForm
 
 SPEC CHECKSUMS:
-  DoneToolbarSwift: 5bb089476bd4949fca01b714a55bbeac76909d72
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   EZSwiftExtensions: fe78d7d4ac34f5c8c36415d4acee49ba67c9732a
-  FittableFontLabel: 50e775bdb8d643a8cc3f7f5dca7d2e8827bb2aab
+  ISHHoverBar: 44d5161b7c815a60468d181e3ce70fbbfa5bef2a
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
-  XLForm: 2250b4e96ab8ffa5f3355838c79edd90de451782
 
-PODFILE CHECKSUM: 0cceadf1daef2cc1c74808e3942b222c5bb82080
+PODFILE CHECKSUM: 1f329cf28b554c408670421da08a0d4452af293c
 
 COCOAPODS: 1.1.0.beta.1

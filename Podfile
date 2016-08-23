@@ -7,9 +7,7 @@ target 'TestingArea' do
     pod 'SwiftyJSON'
     pod 'EZLoadingActivity'
     pod 'EZSwiftExtensions'
-    pod 'XLForm'
-    pod 'DoneToolbarSwift'
-    pod 'FittableFontLabel'
+    pod 'ISHHoverBar'
 end
 
 target 'TestingAreaTests' do

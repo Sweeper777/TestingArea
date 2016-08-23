@@ -84,18 +84,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/DoneToolbarSwift/DoneToolbarSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FittableFontLabel/FittableFontLabel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ISHHoverBar/ISHHoverBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/XLForm/XLForm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/DoneToolbarSwift/DoneToolbarSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FittableFontLabel/FittableFontLabel.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ISHHoverBar/ISHHoverBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/XLForm/XLForm.framework"
 fi

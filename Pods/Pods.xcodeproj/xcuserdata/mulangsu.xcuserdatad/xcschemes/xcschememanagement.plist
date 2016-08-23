@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DoneToolbarSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,7 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FittableFontLabel.xcscheme</key>
+		<key>ISHHoverBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,15 +39,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>XLForm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8EFB44D2DE7C5EB00C3EC386780F54FB</key>
+		<key>06008BDA8C88338D6B6E5BDC162E6148</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>128E902C162F7C994AE30EB07DE4513D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>96AFCEECC9A19481EF3ABC92BABD9C2B</key>
+		<key>A285741D53CEF86489CDD8FB0504BF2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -78,21 +73,6 @@
 			<true/>
 		</dict>
 		<key>BF529704E2D57A46A0B88D09BCBD9804</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D6CF5B6E86AED4BF87A5A44FD01F481C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D852507C1A18051DF7DB3B8FCBDD9707</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E43BFE9082766B69DC5473F84A4B9F50</key>
 		<dict>
 			<key>primary</key>
 			<true/>
