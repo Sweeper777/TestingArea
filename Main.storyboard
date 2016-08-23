@@ -87,6 +87,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Npf-1u-O1D"/>
                     <connections>
+                        <outlet property="item1" destination="h8m-Sz-0pl" id="QOw-AD-ZDa"/>
+                        <outlet property="item2" destination="Hfr-px-om6" id="dVg-LY-cOR"/>
                         <outlet property="recognizer" destination="78O-Jk-WjS" id="PMK-Wb-cel"/>
                         <outlet property="textField" destination="ji5-Gf-cUN" id="9Ua-IM-ZEh"/>
                     </connections>
@@ -97,6 +99,8 @@
                         <action selector="swipe:" destination="V2I-SN-7TO" id="jOg-Rc-vTt"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <barButtonItem image="settings" id="h8m-Sz-0pl"/>
+                <barButtonItem image="home" id="Hfr-px-om6"/>
             </objects>
             <point key="canvasLocation" x="1531" y="180"/>
         </scene>
@@ -207,4 +211,8 @@
             <point key="canvasLocation" x="1531" y="900"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
+    </resources>
 </document>
