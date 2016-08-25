@@ -17,6 +17,7 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         let bar = ISHHoverBar(frame: CGRectMake(20, 200, 44, 88))
         bar.orientation = .Vertical
+        bar.borderColor = UIColor(hexString: "3b7b3b")
         bar.items = [item1, item2]
         view.addSubview(bar)
     }
