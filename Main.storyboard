@@ -110,7 +110,11 @@
                         <action selector="swipe:" destination="V2I-SN-7TO" id="jOg-Rc-vTt"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <barButtonItem image="settings" id="h8m-Sz-0pl"/>
+                <barButtonItem image="settings" id="h8m-Sz-0pl">
+                    <connections>
+                        <action selector="item:" destination="V2I-SN-7TO" id="oka-9M-cyn"/>
+                    </connections>
+                </barButtonItem>
                 <barButtonItem image="home" id="Hfr-px-om6"/>
             </objects>
             <point key="canvasLocation" x="1531" y="180"/>
