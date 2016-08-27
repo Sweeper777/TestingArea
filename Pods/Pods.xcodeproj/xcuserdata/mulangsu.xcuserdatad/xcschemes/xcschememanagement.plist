@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Eureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ISHHoverBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>128E902C162F7C994AE30EB07DE4513D</key>
+		<key>06DC14AE09EC7624D49164B5BC8F0A38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4332352E97A37C729DC7D9B3B8A4BB15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E456F4E84E15DB3FC37DBBD96539300</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -58,11 +73,6 @@
 			<true/>
 		</dict>
 		<key>9699D24B66D4C7EE133726820944314E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A285741D53CEF86489CDD8FB0504BF2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

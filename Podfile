@@ -8,6 +8,7 @@ target 'TestingArea' do
     pod 'EZLoadingActivity'
     pod 'EZSwiftExtensions'
     pod 'ISHHoverBar'
+    pod 'Eureka'
 end
 
 target 'TestingAreaTests' do
