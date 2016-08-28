@@ -9,6 +9,7 @@ target 'TestingArea' do
     pod 'EZSwiftExtensions'
     pod 'ISHHoverBar'
     pod 'Eureka'
+    pod 'PinYin4Objc'
 end
 
 target 'TestingAreaTests' do

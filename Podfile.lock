@@ -3,6 +3,7 @@ PODS:
   - EZLoadingActivity (0.8)
   - EZSwiftExtensions (1.5)
   - ISHHoverBar (1.0.1)
+  - PinYin4Objc (1.1.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -10,6 +11,7 @@ DEPENDENCIES:
   - EZLoadingActivity
   - EZSwiftExtensions
   - ISHHoverBar
+  - PinYin4Objc
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -17,8 +19,9 @@ SPEC CHECKSUMS:
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   EZSwiftExtensions: fe78d7d4ac34f5c8c36415d4acee49ba67c9732a
   ISHHoverBar: 44d5161b7c815a60468d181e3ce70fbbfa5bef2a
+  PinYin4Objc: 3fa9673610368330e2dfb688b1d19a35c3930a78
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 32590a0ea48b5054274a6676ee35b654d2035dfc
+PODFILE CHECKSUM: d239ec2e4b921e98df3cf0ef4da2c40f3af8b658
 
 COCOAPODS: 1.1.0.beta.1

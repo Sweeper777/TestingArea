@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		47948A69DFDDFC181872DC90 /* Pods_TestingAreaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F7B13B28DB402D9F4AA552 /* Pods_TestingAreaUITests.framework */; };
 		5A00C4C41D722A9C00AB34C3 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A00C4C31D722A9C00AB34C3 /* Eureka.framework */; };
+		5A01AF721D72EA5C00457245 /* PinYin4Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A01AF711D72EA5C00457245 /* PinYin4Objc.framework */; };
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F21D6C473E009F08B9 /* ISHHoverBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A03B9F11D6C473E009F08B9 /* ISHHoverBar.framework */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
@@ -57,6 +58,7 @@
 		5A0046821D56C0E2009F638E /* FittableFontLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FittableFontLabel.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/FittableFontLabel/FittableFontLabel.framework"; sourceTree = "<group>"; };
 		5A00C4C31D722A9C00AB34C3 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A0135A61D47397F008A0F1D /* LETimeIntervalPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LETimeIntervalPicker.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/LETimeIntervalPicker.framework"; sourceTree = "<group>"; };
+		5A01AF711D72EA5C00457245 /* PinYin4Objc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinYin4Objc.framework; path = "Pods/../build/Debug-iphoneos/PinYin4Objc/PinYin4Objc.framework"; sourceTree = "<group>"; };
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		5A03B9F11D6C473E009F08B9 /* ISHHoverBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ISHHoverBar.framework; path = "Pods/../build/Debug-iphoneos/ISHHoverBar/ISHHoverBar.framework"; sourceTree = "<group>"; };
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A01AF721D72EA5C00457245 /* PinYin4Objc.framework in Frameworks */,
 				5A00C4C41D722A9C00AB34C3 /* Eureka.framework in Frameworks */,
 				5A03B9F21D6C473E009F08B9 /* ISHHoverBar.framework in Frameworks */,
 				5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */,
@@ -143,6 +146,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A01AF711D72EA5C00457245 /* PinYin4Objc.framework */,
 				5A00C4C31D722A9C00AB34C3 /* Eureka.framework */,
 				5A03B9F11D6C473E009F08B9 /* ISHHoverBar.framework */,
 				5A6F4CB71D572F5B008C31F4 /* DoneToolbarSwift.framework */,
@@ -680,6 +684,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/XLForm",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FRDoneAccessory",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ISHHoverBar",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PinYin4Objc",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -700,6 +705,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/XLForm",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FRDoneAccessory",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ISHHoverBar",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PinYin4Objc",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
