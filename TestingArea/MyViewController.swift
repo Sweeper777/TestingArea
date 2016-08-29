@@ -23,11 +23,9 @@ class MyViewController: FormViewController {
                 row.options = ["Light", "Regular"]
                 row.value = NSUserDefaults.standardUserDefaults().integerForKey("fontStyle") == 1 ? "Regular" : "Light"
             }
-        let string = "卡斯计时器是世界上最好的应用"
-        let outputFormat = HanyuPinyinOutputFormat()
-        outputFormat.caseType = CaseTypeLowercase
-        outputFormat.toneType = ToneTypeWithToneMark
-        outputFormat.vCharType = VCharTypeWithUUnicode
-        print(PinyinHelper.toHanyuPinyinStringWithNSString(string, withHanyuPinyinOutputFormat: outputFormat, withNSString: " "))
+        let string = "library"
+        let mutableString = NSMutableString(string: string)
+        print(CFStringTransform(mutableString, nil, kCFStringTransformLatinKatakana, false))
+        print(mutableString)
     }
 }
