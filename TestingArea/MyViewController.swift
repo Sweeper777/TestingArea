@@ -8,10 +8,10 @@ class MyViewController: UIViewController {
         let attr: [String: AnyObject] = [
             NSFontAttributeName: UIFont.systemFontOfSize(100),
             NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.blackColor()
+            NSBackgroundColorAttributeName: UIColor.blackColor(),
         ]
         
-        let str = "Fuck you!"
+        let str = "Fuck you!\nBITCH!"
         
         let constraintSize = CGSizeMake(CGFloat.max, CGFloat.max)
         let fitSize = str.boundingRectWithSize(constraintSize, options: .UsesLineFragmentOrigin, attributes: attr, context: nil).size
