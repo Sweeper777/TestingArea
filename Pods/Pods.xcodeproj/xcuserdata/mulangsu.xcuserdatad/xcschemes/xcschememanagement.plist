@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FittableFontLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ISHHoverBar.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7413F3793127D08AF57B8062F9030C0A</key>
+		<key>73BA78C476C375610CB02532D7B36880</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EFB44D2DE7C5EB00C3EC386780F54FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D8F31C4EE6A5766364501511CF67D544</key>
+		<key>F318FFBB1D1868BD6D2BA6842D94349A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

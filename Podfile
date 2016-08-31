@@ -10,6 +10,7 @@ target 'TestingArea' do
     pod 'ISHHoverBar'
     pod 'Eureka'
     pod 'PinYin4Objc'
+    pod 'FittableFontLabel'
 end
 
 target 'TestingAreaTests' do
