@@ -5,14 +5,18 @@ import FittableFontLabel
 class MyViewController: UIViewController {
     @IBOutlet var image: UIImageView!
     override func viewDidLoad() {
-        let label = UILabel(frame: image.frame)
         let attr: [String: AnyObject] = [
-            NSFontAttributeName: UIFont.systemFontOfSize(label.fontSizeThatFits(text: "hello world", maxFontSize: 500)),
+            NSFontAttributeName: UIFont.systemFontOfSize(100),
             NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.blackColor()
         ]
         
-        image.image = imageFromString("hello world", attributes: attr, size: image.size)
+        let str = "Fuck you!"
+        
+        let constraintSize = CGSizeMake(CGFloat.max, CGFloat.max)
+        let fitSize = str.boundingRectWithSize(constraintSize, options: .UsesLineFragmentOrigin, attributes: attr, context: nil).size
+        
+        image.image = imageFromString(str, attributes: attr, size: fitSize)
     }
     
     func imageFromString(string: String, attributes: [String : AnyObject]?, size: CGSize) -> UIImage {
