@@ -1,31 +1,23 @@
 import UIKit
 import EZSwiftExtensions
-import Eureka
-import PinYin4Objc
 
-class MyViewController: FormViewController {
+class MyViewController: UIViewController {
+    @IBOutlet var image: UIImageView!
     override func viewDidLoad() {
-        title = NSLocalizedString("Global Settings", comment: "")
-        initializeForm()
+        let attr: [String: AnyObject] = [
+            NSFontAttributeName: UIFont.systemFontOfSize(100),
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSBackgroundColorAttributeName: UIColor.blackColor()
+        ]
+        
+        image.image = imageFromString("hello world", attributes: attr, size: image.size)
     }
     
-    func initializeForm() {
-        form +++ Section(footer: NSLocalizedString("gesture instructions", comment: ""))
-            <<< SwitchRow("gestureControls") {
-                row in
-                row.title = NSLocalizedString("Gesture Controls", comment: "")
-                row.value = NSUserDefaults.standardUserDefaults().boolForKey("gestureControl")
-            }
-            
-            +++ SegmentedRow<String>("fontStyle") {
-                row in
-                row.title = NSLocalizedString("Font Style", comment: "")
-                row.options = ["Light", "Regular"]
-                row.value = NSUserDefaults.standardUserDefaults().integerForKey("fontStyle") == 1 ? "Regular" : "Light"
-            }
-        let string = "library"
-        let mutableString = NSMutableString(string: string)
-        print(CFStringTransform(mutableString, nil, kCFStringTransformLatinKatakana, false))
-        print(mutableString)
+    func imageFromString(string: String, attributes: [String : AnyObject]?, size: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        string.drawInRect(CGRectMake(0, 0, size.width, size.height), withAttributes: attributes)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
     }
 }

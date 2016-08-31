@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SF-UI-Display-Thin.otf">
@@ -37,9 +38,23 @@
                     <view key="view" contentMode="scaleToFill" id="pYA-VV-OvB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVm-Z2-ND7">
+                                <rect key="frame" x="20" y="72" width="560" height="508"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iVm-Z2-ND7" firstAttribute="trailing" secondItem="pYA-VV-OvB" secondAttribute="trailingMargin" id="CZe-Jh-AhN"/>
+                            <constraint firstItem="iVm-Z2-ND7" firstAttribute="top" secondItem="tER-Ap-6dO" secondAttribute="bottom" constant="8" symbolic="YES" id="Hml-2U-pFB"/>
+                            <constraint firstItem="iVm-Z2-ND7" firstAttribute="leading" secondItem="pYA-VV-OvB" secondAttribute="leadingMargin" id="WuH-nC-73o"/>
+                            <constraint firstAttribute="bottom" secondItem="iVm-Z2-ND7" secondAttribute="bottom" constant="20" symbolic="YES" id="i6T-9n-GJu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N6R-oA-6Xg"/>
+                    <connections>
+                        <outlet property="image" destination="iVm-Z2-ND7" id="8cz-lP-1zK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGM-a9-nvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
