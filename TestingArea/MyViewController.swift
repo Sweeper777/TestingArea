@@ -1,11 +1,13 @@
 import UIKit
 import EZSwiftExtensions
+import FittableFontLabel
 
 class MyViewController: UIViewController {
     @IBOutlet var image: UIImageView!
     override func viewDidLoad() {
+        let label = UILabel(frame: image.frame)
         let attr: [String: AnyObject] = [
-            NSFontAttributeName: UIFont.systemFontOfSize(100),
+            NSFontAttributeName: UIFont.systemFontOfSize(label.fontSizeThatFits(text: "hello world", maxFontSize: 500)),
             NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSBackgroundColorAttributeName: UIColor.blackColor()
         ]
