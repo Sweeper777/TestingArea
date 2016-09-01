@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		47948A69DFDDFC181872DC90 /* Pods_TestingAreaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F7B13B28DB402D9F4AA552 /* Pods_TestingAreaUITests.framework */; };
 		5A00C4C41D722A9C00AB34C3 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A00C4C31D722A9C00AB34C3 /* Eureka.framework */; };
-		5A01AF721D72EA5C00457245 /* PinYin4Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A01AF711D72EA5C00457245 /* PinYin4Objc.framework */; };
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
-		5A03B9F21D6C473E009F08B9 /* ISHHoverBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A03B9F11D6C473E009F08B9 /* ISHHoverBar.framework */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
@@ -29,7 +27,6 @@
 		5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD91191D31E070008BCF67 /* EZSwiftExtensions.framework */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
 		5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2FC1D688E9000176303 /* MyView.swift */; };
-		5AFF1B7A1D76C3A30076E98E /* FittableFontLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0046821D56C0E2009F638E /* FittableFontLabel.framework */; };
 		AABEFC567C3D23A4197446E3 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CDD7675EC42974CCE8358E /* Pods_TestingArea.framework */; };
 		D4666D835021B8C07DF973B2 /* Pods_TestingAreaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FCA45647320B273483AE57 /* Pods_TestingAreaTests.framework */; };
 /* End PBXBuildFile section */
@@ -115,10 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFF1B7A1D76C3A30076E98E /* FittableFontLabel.framework in Frameworks */,
-				5A01AF721D72EA5C00457245 /* PinYin4Objc.framework in Frameworks */,
 				5A00C4C41D722A9C00AB34C3 /* Eureka.framework in Frameworks */,
-				5A03B9F21D6C473E009F08B9 /* ISHHoverBar.framework in Frameworks */,
 				5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */,
 				5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */,
 				5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */,

@@ -19,21 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FittableFontLabel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ISHHoverBar.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>PinYin4Objc.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,22 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06008BDA8C88338D6B6E5BDC162E6148</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4332352E97A37C729DC7D9B3B8A4BB15</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>73BA78C476C375610CB02532D7B36880</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8EFB44D2DE7C5EB00C3EC386780F54FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A707719DD04CDED14E99D74F3BD1F245</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BF529704E2D57A46A0B88D09BCBD9804</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D422564CE5BB2F2875F41A32A88AF10F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F318FFBB1D1868BD6D2BA6842D94349A</key>
+		<key>ED5F9D41818E9E9A61F84C69786F8249</key>
 		<dict>
 			<key>primary</key>
 			<true/>

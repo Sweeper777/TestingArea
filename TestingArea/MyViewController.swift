@@ -1,6 +1,5 @@
 import UIKit
 import EZSwiftExtensions
-import FittableFontLabel
 
 class MyViewController: UIViewController {
     @IBOutlet var image: UIImageView!

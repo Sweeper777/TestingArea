@@ -87,17 +87,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Eureka/Eureka.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FittableFontLabel/FittableFontLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ISHHoverBar/ISHHoverBar.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/PinYin4Objc/PinYin4Objc.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/EZLoadingActivity/EZLoadingActivity.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Eureka/Eureka.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FittableFontLabel/FittableFontLabel.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ISHHoverBar/ISHHoverBar.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/PinYin4Objc/PinYin4Objc.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
 fi

@@ -7,10 +7,7 @@ target 'TestingArea' do
     pod 'SwiftyJSON'
     pod 'EZLoadingActivity'
     pod 'EZSwiftExtensions'
-    pod 'ISHHoverBar'
     pod 'Eureka'
-    pod 'PinYin4Objc'
-    pod 'FittableFontLabel'
 end
 
 target 'TestingAreaTests' do

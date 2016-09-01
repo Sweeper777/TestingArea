@@ -2,29 +2,20 @@ PODS:
   - Eureka (1.7.0)
   - EZLoadingActivity (0.8)
   - EZSwiftExtensions (1.5)
-  - FittableFontLabel (1.3.0)
-  - ISHHoverBar (1.0.1)
-  - PinYin4Objc (1.1.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Eureka
   - EZLoadingActivity
   - EZSwiftExtensions
-  - FittableFontLabel
-  - ISHHoverBar
-  - PinYin4Objc
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Eureka: 2020d9faeef7b7e9adeb9e3d8af779e5931c1897
   EZLoadingActivity: 6fd75a05765a4085f4b6fef6f62edf9f144b3139
   EZSwiftExtensions: fe78d7d4ac34f5c8c36415d4acee49ba67c9732a
-  FittableFontLabel: e25aa22a79c9ae79655c65cd199d526e4768c1ee
-  ISHHoverBar: 44d5161b7c815a60468d181e3ce70fbbfa5bef2a
-  PinYin4Objc: 3fa9673610368330e2dfb688b1d19a35c3930a78
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 818e76f3e10254b84378d56c70c89a2fa5cc7557
+PODFILE CHECKSUM: 7f4443aec42eda832415961a9738d862601b98ce
 
 COCOAPODS: 1.1.0.beta.1
