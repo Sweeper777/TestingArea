@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SF-UI-Display-Thin.otf">
@@ -39,21 +38,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iVm-Z2-ND7">
-                                <rect key="frame" x="20" y="72" width="560" height="508"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cil-PP-2If" customClass="TouchDrawView" customModule="TouchDraw">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="1oM-y3-A4d"/>
+                                    <constraint firstAttribute="width" constant="200" id="rCn-bJ-Br2"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2L-Iq-Oga">
+                                <rect key="frame" x="20" y="72" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iVm-Z2-ND7" firstAttribute="trailing" secondItem="pYA-VV-OvB" secondAttribute="trailingMargin" id="CZe-Jh-AhN"/>
-                            <constraint firstItem="iVm-Z2-ND7" firstAttribute="top" secondItem="tER-Ap-6dO" secondAttribute="bottom" constant="8" symbolic="YES" id="Hml-2U-pFB"/>
-                            <constraint firstItem="iVm-Z2-ND7" firstAttribute="leading" secondItem="pYA-VV-OvB" secondAttribute="leadingMargin" id="WuH-nC-73o"/>
-                            <constraint firstAttribute="bottom" secondItem="iVm-Z2-ND7" secondAttribute="bottom" constant="20" symbolic="YES" id="i6T-9n-GJu"/>
+                            <constraint firstItem="Cil-PP-2If" firstAttribute="centerY" secondItem="pYA-VV-OvB" secondAttribute="centerY" id="F4r-jw-EN9"/>
+                            <constraint firstItem="Cil-PP-2If" firstAttribute="centerX" secondItem="pYA-VV-OvB" secondAttribute="centerX" id="mXc-AG-Uzw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N6R-oA-6Xg"/>
                     <connections>
-                        <outlet property="image" destination="iVm-Z2-ND7" id="8cz-lP-1zK"/>
+                        <outlet property="draw" destination="Cil-PP-2If" id="f26-hX-cgu"/>
+                        <outlet property="label" destination="f2L-Iq-Oga" id="uCn-m9-VlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGM-a9-nvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,7 +105,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMS-bC-87A">
                                 <rect key="frame" x="20" y="110" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Thin" family="SF UI Display" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

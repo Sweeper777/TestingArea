@@ -1,28 +1,44 @@
 import UIKit
 import EZSwiftExtensions
+import TouchDraw
 
-class MyViewController: UIViewController {
-    @IBOutlet var image: UIImageView!
+class MyViewController: UIViewController, TouchDrawViewDelegate {
+    @IBOutlet var label: UILabel!
+    @IBOutlet var draw: TouchDrawView!
     override func viewDidLoad() {
-        let attr: [String: AnyObject] = [
-            NSFontAttributeName: UIFont.systemFontOfSize(100),
-            NSForegroundColorAttributeName: UIColor.whiteColor(),
-            NSBackgroundColorAttributeName: UIColor.blackColor(),
-        ]
-        
-        let str = "Fuck you!\nBITCH!"
-        
-        let constraintSize = CGSizeMake(CGFloat.max, CGFloat.max)
-        let fitSize = str.boundingRectWithSize(constraintSize, options: .UsesLineFragmentOrigin, attributes: attr, context: nil).size
-        
-        image.image = imageFromString(str, attributes: attr, size: fitSize)
+        draw.layer.borderWidth = 3
+        draw.delegate = self
+        draw.setWidth(3)
     }
     
-    func imageFromString(string: String, attributes: [String : AnyObject]?, size: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        string.drawInRect(CGRectMake(0, 0, size.width, size.height), withAttributes: attributes)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image!
+    
+    
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        draw.clearDrawing()
+    }
+    
+    func undoEnabled() {
+        
+    }
+    
+    func undoDisabled() {
+        
+    }
+    
+    func redoEnabled() {
+        
+    }
+    
+    func redoDisabled() {
+        
+    }
+    
+    func clearEnabled() {
+        
+    }
+    
+    func clearDisabled() {
+        
     }
 }
