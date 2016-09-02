@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--My View Controller-->
+        <!--My View Controller2-->
         <scene sceneID="8d0-x3-h4F">
             <objects>
-                <viewController id="t3g-SB-CEg" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t3g-SB-CEg" customClass="MyViewController2" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tER-Ap-6dO"/>
                         <viewControllerLayoutGuide type="bottom" id="Uqd-J5-X7v"/>
@@ -37,33 +37,9 @@
                     <view key="view" contentMode="scaleToFill" id="pYA-VV-OvB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cil-PP-2If" customClass="TouchDrawView" customModule="TouchDraw">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="1oM-y3-A4d"/>
-                                    <constraint firstAttribute="width" constant="200" id="rCn-bJ-Br2"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2L-Iq-Oga">
-                                <rect key="frame" x="20" y="72" width="118" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Cil-PP-2If" firstAttribute="centerY" secondItem="pYA-VV-OvB" secondAttribute="centerY" id="F4r-jw-EN9"/>
-                            <constraint firstItem="Cil-PP-2If" firstAttribute="centerX" secondItem="pYA-VV-OvB" secondAttribute="centerX" id="mXc-AG-Uzw"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N6R-oA-6Xg"/>
-                    <connections>
-                        <outlet property="draw" destination="Cil-PP-2If" id="f26-hX-cgu"/>
-                        <outlet property="label" destination="f2L-Iq-Oga" id="uCn-m9-VlS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGM-a9-nvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

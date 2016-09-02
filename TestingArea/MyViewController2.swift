@@ -1,17 +1,28 @@
 import UIKit
 import AVFoundation
 import EZSwiftExtensions
+import Eureka
 
-class MyViewController2: UIViewController {
-    @IBOutlet var textField: UITextField!
-    @IBOutlet var recognizer: UISwipeGestureRecognizer!
-    
-    @IBOutlet var item1: UIBarButtonItem!
-    @IBOutlet var item2: UIBarButtonItem!
-    
-    @IBAction func item(sender: UIBarButtonItem) {
+class MyViewController2: FormViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+            form +++ SegmentedRow<String>(nil) {
+                row in
+                row.title = "test"
+                row.options = ["1", "2", "3"]
+                row.value = "1"
+        }
+            <<< PickerInlineRow<String>(nil) {
+                row in
+                row.title = "test"
+                row.options = ["1", "2", "3"]
+                row.value = "1"
+        }
     }
     
-    override func viewDidLoad() {
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        print(form.rows[0].baseCell.frame.height)
+        print(form.rows[1].baseCell.frame.height)
     }
 }
