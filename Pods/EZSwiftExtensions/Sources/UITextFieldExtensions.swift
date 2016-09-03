@@ -1,14 +1,14 @@
 //
-//  UITextViewExtensions.swift
+//  UITextFieldExtensions.swift
 //  EZSwiftExtensions
 //
-//  Created by Goktug Yilmaz on 15/07/15.
-//  Copyright (c) 2015 Goktug Yilmaz. All rights reserved.
+//  Created by Wang Yu on 6/26/16.
+//  Copyright © 2016 Goktug Yilmaz. All rights reserved.
 //
 
 import UIKit
 
-extension UITextView {
+extension UITextField {
     /// EZSwiftExtensions: Automatically sets these values: backgroundColor = clearColor, textColor = ThemeNicknameColor, clipsToBounds = true,
     /// textAlignment = Left, userInteractionEnabled = true, editable = false, scrollEnabled = false, font = ThemeFontName, fontsize = 17
     public convenience init(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat) {
@@ -24,31 +24,26 @@ extension UITextView {
         clipsToBounds = true
         textAlignment = NSTextAlignment.Left
         userInteractionEnabled = true
-
-        #if os(iOS)
-
-        editable = false
-
-        #endif
-
-        scrollEnabled = false
     }
 
-    #if os(iOS)
-
-    /// EZSE: Automatically adds a toolbar with a done button to the top of the keyboard. Tapping the button will dismiss the keyboard.
-    public func addDoneButton(barStyle: UIBarStyle = .Default, title: String? = nil) {
-        let keyboardToolbar = UIToolbar()
-        keyboardToolbar.items = [
-            UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil),
-            UIBarButtonItem(title: title ?? "Done", style: .Done, target: self, action: #selector(resignFirstResponder))
-        ]
-
-        keyboardToolbar.barStyle = barStyle
-        keyboardToolbar.sizeToFit()
-
-        inputAccessoryView = keyboardToolbar
+    /// EZSE: Add left padding to the text in textfield
+    public func addLeftTextPadding(blankSize: CGFloat) {
+        let leftView = UIView()
+        leftView.frame = CGRect(x: 0, y: 0, width: blankSize, height: frame.height)
+        self.leftView = leftView
+        self.leftViewMode = UITextFieldViewMode.Always
     }
 
-    #endif
+    /// EZSE: Add a image icon on the left side of the textfield
+    public func addLeftIcon(image: UIImage?, frame: CGRect, imageSize: CGSize) {
+        let leftView = UIView()
+        leftView.frame = frame
+        let imgView = UIImageView()
+        imgView.frame = CGRect(x: frame.width - 8 - imageSize.width, y: (frame.height - imageSize.height) / 2, w: imageSize.width, h: imageSize.height)
+        imgView.image = image
+        leftView.addSubview(imgView)
+        self.leftView = leftView
+        self.leftViewMode = UITextFieldViewMode.Always
+    }
+
 }

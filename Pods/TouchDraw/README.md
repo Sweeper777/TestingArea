@@ -1,6 +1,7 @@
 # TouchDraw
 
-[![Join the chat at https://gitter.im/dehli/TouchDraw](https://badges.gitter.im/dehli/TouchDraw.svg)](https://gitter.im/dehli/TouchDraw?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+[![](https://travis-ci.org/dehli/TouchDraw.svg?branch=master)](https://travis-ci.org/dehli/TouchDraw) [![Join the chat at https://gitter.im/dehli/TouchDraw](https://badges.gitter.im/dehli/TouchDraw.svg)](https://gitter.im/dehli/TouchDraw?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 The `TouchDraw` module allows you to use the `TouchDrawView` class. This is a subclass of `UIView` which allows you to draw pictures with your finger.
 
@@ -31,7 +32,7 @@ If programmatically adding the view, you can use the `init(frame: CGRect)` metho
 
 #### Customizing
 
-The first step when customizing the `TouchDrawView` is setting its `delegate`. The container must conform to `TouchDrawViewDelegate`, which has the following functions:
+When customizing the `TouchDrawView` you can setting its `delegate`. The container can conform to parts of `TouchDrawViewDelegate`, which has the following functions:
 
 ```
 func undoEnabled() -> Void {
@@ -78,11 +79,21 @@ func clearDisabled() -> Void {
 The `TouchDrawView` exposes the following methods:
 
 - `exportDrawing() -> UIImage`
+  - Exports a UIImage version of the drawing.
 - `clearDrawing()`
+  - Clears the TouchDrawView.
 - `undo()`
+  - Undo the last stroke. 
 - `redo()`
+  - Redo what was undone. 
 - `setColor(color: UIColor)`
+  - Sets the color of future strokes.
 - `setWidth(width: CGFloat)`
+  - Sets the width of future strokes.
+- `importStack(stack: [Stroke])`
+  - Set the `TouchDrawView` to have certain strokes (usually will be used in conjunction with `exportStack()`.
+- `exportStack() -> [Stroke]`
+  - Exports the strokes from a `TouchDrawView` so they can be imported later.
 
 ## Demo
 
