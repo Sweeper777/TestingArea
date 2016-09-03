@@ -3,8 +3,8 @@ import EZSwiftExtensions
 import TouchDraw
 
 class MyViewController: UIViewController, TouchDrawViewDelegate {
-    @IBOutlet var label: UILabel!
     @IBOutlet var draw: TouchDrawView!
+    @IBOutlet var image: UIImageView!
     override func viewDidLoad() {
         draw.layer.borderWidth = 3
         draw.delegate = self
@@ -13,18 +13,10 @@ class MyViewController: UIViewController, TouchDrawViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        let formatter = NSDateFormatter()
-        
-        let date = NSDate()
-        
-        formatter.timeStyle = .ShortStyle
-        formatter.dateStyle = .NoStyle
-        
-        label.text = formatter.stringFromDate(date)
     }
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        draw.clearDrawing()
+        image.image = draw.exportDrawing()
     }
     
     func undoEnabled() {

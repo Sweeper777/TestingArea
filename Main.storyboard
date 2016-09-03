@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--My View Controller2-->
+        <!--My View Controller-->
         <scene sceneID="8d0-x3-h4F">
             <objects>
-                <viewController id="t3g-SB-CEg" customClass="MyViewController2" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t3g-SB-CEg" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tER-Ap-6dO"/>
                         <viewControllerLayoutGuide type="bottom" id="Uqd-J5-X7v"/>
@@ -37,9 +37,22 @@
                     <view key="view" contentMode="scaleToFill" id="pYA-VV-OvB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UsY-hk-SMx" customClass="TouchDrawView" customModule="TouchDraw">
+                                <rect key="frame" x="20" y="72" width="180" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zMH-rt-oQB">
+                                <rect key="frame" x="20" y="260" width="180" height="180"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="N6R-oA-6Xg"/>
+                    <connections>
+                        <outlet property="draw" destination="UsY-hk-SMx" id="QMi-bB-95M"/>
+                        <outlet property="image" destination="zMH-rt-oQB" id="P9R-OY-xRP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGM-a9-nvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
