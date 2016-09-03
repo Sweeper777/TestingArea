@@ -18,6 +18,14 @@ class MyViewController2: FormViewController {
                 row.options = ["1", "2", "3"]
                 row.value = "1"
         }
+        
+        let alert = UIAlertController(title: "", message: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "x", style: .Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "x", style: .Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "x", style: .Default, handler: nil))
+
+        
+        self.presentVC(alert)
     }
     
     override func viewDidAppear(animated: Bool) {
