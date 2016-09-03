@@ -16,7 +16,9 @@ class MyViewController: UIViewController, TouchDrawViewDelegate {
     }
     
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        image.image = draw.exportDrawing()
+        let stack = draw.exportStack()
+        let data = NSKeyedArchiver.archivedDataWithRootObject(stack)
+        print(data.length)
     }
     
     func undoEnabled() {
