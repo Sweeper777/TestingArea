@@ -24,6 +24,7 @@
 		5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */; };
 		5AFBDA671CF1513F00E0CC30 /* EZLoadingActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA661CF1513F00E0CC30 /* EZLoadingActivity.framework */; };
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
+		5AFC3CA31D7C0E08008282B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFC3CA21D7C0E08008282B8 /* MapKit.framework */; };
 		5AFD04771D780E1B0099527B /* TouchDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD04761D780E1B0099527B /* TouchDraw.framework */; };
 		5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD91191D31E070008BCF67 /* EZSwiftExtensions.framework */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
@@ -95,6 +96,7 @@
 		5AFBE9921CFAE34B00BC1366 /* DejalActivityView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DejalActivityView.framework; path = "Pods/../build/Debug-iphoneos/DejalActivityView.framework"; sourceTree = "<group>"; };
 		5AFBEABC1D11154300F8A8D2 /* MMMarkdown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMMarkdown.framework; path = "Pods/../build/Debug-iphoneos/MMMarkdown.framework"; sourceTree = "<group>"; };
 		5AFBEABE1D111BBE00F8A8D2 /* modest.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = modest.css; sourceTree = "<group>"; };
+		5AFC3CA21D7C0E08008282B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5AFD04761D780E1B0099527B /* TouchDraw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TouchDraw.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/TouchDraw/TouchDraw.framework"; sourceTree = "<group>"; };
 		5AFD91191D31E070008BCF67 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphoneos/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
 		5AFE67D11D2B8F5F0074ACAE /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFC3CA31D7C0E08008282B8 /* MapKit.framework in Frameworks */,
 				5AFD04771D780E1B0099527B /* TouchDraw.framework in Frameworks */,
 				5A00C4C41D722A9C00AB34C3 /* Eureka.framework in Frameworks */,
 				5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */,
@@ -145,6 +148,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AFC3CA21D7C0E08008282B8 /* MapKit.framework */,
 				5AFD04761D780E1B0099527B /* TouchDraw.framework */,
 				5A01AF711D72EA5C00457245 /* PinYin4Objc.framework */,
 				5A00C4C31D722A9C00AB34C3 /* Eureka.framework */,
