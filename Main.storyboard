@@ -43,6 +43,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="valueChanged:" destination="t3g-SB-CEg" eventType="valueChanged" id="6WJ-C9-zzT"/>
                                     <outlet property="delegate" destination="t3g-SB-CEg" id="qrk-Jq-FjJ"/>
                                 </connections>
                             </textField>
@@ -50,6 +51,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="N6R-oA-6Xg"/>
+                    <connections>
+                        <outlet property="textField" destination="qyM-EX-efL" id="AKQ-uz-nix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGM-a9-nvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

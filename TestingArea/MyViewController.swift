@@ -2,8 +2,8 @@ import UIKit
 import MapKit
 import EZSwiftExtensions
 
-class MyViewController: UIViewController, UITextFieldDelegate {
-    
+class MyViewController: UIViewController {
+    @IBOutlet var textField: UITextField!
     override func viewDidLoad() {
     }
     
@@ -11,13 +11,11 @@ class MyViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        let datePicker = UIDatePicker()
-        textField.inputView = datePicker
-        datePicker.addTarget(self, action: #selector(datePickerChanged), forControlEvents: .ValueChanged)
+    @IBAction func valueChanged(sender: UITextField) {
+        print("Changed")
     }
     
-    func datePickerChanged(sender: UIDatePicker){
-        print("Hello")
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        textField.text = "Hello"
     }
 }
