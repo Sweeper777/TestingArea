@@ -18,6 +18,7 @@
 		5AE0011F1CAA0F3A0058B744 /* TestingAreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0011E1CAA0F3A0058B744 /* TestingAreaTests.swift */; };
 		5AE0012A1CAA0F3A0058B744 /* TestingAreaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001291CAA0F3A0058B744 /* TestingAreaUITests.swift */; };
 		5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
+		5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */; };
 		5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA741B1CDD7589007C3B7C /* Main.storyboard */; };
 		5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBC2651D0A9C3900E27822 /* MyViewController.swift */; };
 		5AFBDA651CF14AA300E0CC30 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFBDA641CF14AA300E0CC30 /* SwiftyJSON.framework */; };
@@ -83,6 +84,7 @@
 		5AE0012B1CAA0F3A0058B744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		5AF9A1F21CEB544D004AC018 /* ListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ListKit.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/ListKit.framework"; sourceTree = "<group>"; };
+		5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretStuff.swift; sourceTree = "<group>"; };
 		5AFA74191CDD6D32007C3B7C /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = "Pods/../build/Debug-iphoneos/MGSwipeTableCell.framework"; sourceTree = "<group>"; };
 		5AFA741B1CDD7589007C3B7C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		5AFB28E81CF86C5B0051C0AA /* QRCodeReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QRCodeReader.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/QRCodeReader.framework"; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5AFEF2FC1D688E9000176303 /* MyView.swift */,
+				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
 				5AE001151CAA0F3A0058B744 /* Info.plist */,
@@ -538,6 +541,7 @@
 			files = (
 				5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */,
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
+				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,

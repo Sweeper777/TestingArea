@@ -1,13 +1,6 @@
-//
-//  AppDelegate.swift
-//  TestingArea
-//
-//  Created by Mulang Su on 3/29/16.
-//  Copyright © 2016 Mulang Su. All rights reserved.
-//
-
 import UIKit
 import CoreData
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        let alert = UIAlertController(title: "Open URL", message: url.absoluteString, preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-        window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
+        GMSServices.provideAPIKey(gmsAPIKey)
         return true
     }
 

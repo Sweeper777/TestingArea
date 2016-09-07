@@ -8,6 +8,7 @@ target 'TestingArea' do
     pod 'EZLoadingActivity'
     pod 'EZSwiftExtensions'
     pod 'Eureka'
+    pod 'GoogleMaps'
     pod 'TouchDraw'
 end
 
