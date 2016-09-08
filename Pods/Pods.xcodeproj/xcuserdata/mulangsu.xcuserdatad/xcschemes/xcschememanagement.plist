@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NHArrowView-NHArrowView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NHArrowView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2535CE31133986D6AB642E05E5FFCBA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4332352E97A37C729DC7D9B3B8A4BB15</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5CBA54275E43C00F7A108110A7DAD6F5</key>
+		<key>494F16B643FE93535E3C897F4ACF28BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>742AAD24740C986918D4CEF051A9B957</key>
+		<key>70064A6CF505986B4D79C38DE15F0CCB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>903A108934E1A089B76F443DC34C8E54</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>94616D7F538B21F40B437803472ED973</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +93,16 @@
 			<true/>
 		</dict>
 		<key>A416FBB4C5CD2E3AF52C09F2614018CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EED748DB2A66F02A6572EF0CA978E806</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F173EB800B786D4083CF9219E9CBE055</key>
 		<dict>
 			<key>primary</key>
 			<true/>
