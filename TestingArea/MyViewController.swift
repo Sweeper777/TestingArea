@@ -2,6 +2,7 @@ import UIKit
 import MapKit
 import EZSwiftExtensions
 import GoogleMaps
+import ArrowView
 
 class MyViewController: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class MyViewController: UIViewController, GMSMapViewDelegate {
         super.viewDidAppear(animated)
     }
     
-    func mapView(mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+    func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {
         
     }
 }

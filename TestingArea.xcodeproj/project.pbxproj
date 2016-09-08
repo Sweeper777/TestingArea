@@ -27,7 +27,7 @@
 		5AFC3CA31D7C0E08008282B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFC3CA21D7C0E08008282B8 /* MapKit.framework */; };
 		5AFD04771D780E1B0099527B /* TouchDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD04761D780E1B0099527B /* TouchDraw.framework */; };
 		5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD91191D31E070008BCF67 /* EZSwiftExtensions.framework */; };
-		5AFE2B961D81C0B100F483DD /* NHArrowView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE2B951D81C0B100F483DD /* NHArrowView.framework */; };
+		5AFE2B981D81C30200F483DD /* ArrowView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE2B971D81C30200F483DD /* ArrowView.framework */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
 		5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2FC1D688E9000176303 /* MyView.swift */; };
 		AABEFC567C3D23A4197446E3 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CDD7675EC42974CCE8358E /* Pods_TestingArea.framework */; };
@@ -102,6 +102,7 @@
 		5AFD04761D780E1B0099527B /* TouchDraw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TouchDraw.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/TouchDraw/TouchDraw.framework"; sourceTree = "<group>"; };
 		5AFD91191D31E070008BCF67 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphoneos/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
 		5AFE2B951D81C0B100F483DD /* NHArrowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NHArrowView.framework; path = "Pods/../build/Debug-iphoneos/NHArrowView/NHArrowView.framework"; sourceTree = "<group>"; };
+		5AFE2B971D81C30200F483DD /* ArrowView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrowView.framework; path = "Pods/../build/Debug-iphoneos/ArrowView/ArrowView.framework"; sourceTree = "<group>"; };
 		5AFE67D11D2B8F5F0074ACAE /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		5AFE67D31D2B944C0074ACAE /* LTHPasscodeViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTHPasscodeViewController.framework; path = "Pods/../build/Debug-iphoneos/LTHPasscodeViewController.framework"; sourceTree = "<group>"; };
 		5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWTableViewCell.framework; path = "Pods/../build/Debug-iphoneos/SWTableViewCell.framework"; sourceTree = "<group>"; };
@@ -119,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFE2B961D81C0B100F483DD /* NHArrowView.framework in Frameworks */,
+				5AFE2B981D81C30200F483DD /* ArrowView.framework in Frameworks */,
 				5AFC3CA31D7C0E08008282B8 /* MapKit.framework in Frameworks */,
 				5AFD04771D780E1B0099527B /* TouchDraw.framework in Frameworks */,
 				5AFD911A1D31E070008BCF67 /* EZSwiftExtensions.framework in Frameworks */,
@@ -151,6 +152,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AFE2B971D81C30200F483DD /* ArrowView.framework */,
 				5AFE2B951D81C0B100F483DD /* NHArrowView.framework */,
 				5AFC3CA21D7C0E08008282B8 /* MapKit.framework */,
 				5AFD04761D780E1B0099527B /* TouchDraw.framework */,
@@ -696,6 +698,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ISHHoverBar",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/PinYin4Objc",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/NHArrowView",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ArrowView",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -718,6 +721,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ISHHoverBar",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/PinYin4Objc",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/NHArrowView",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ArrowView",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

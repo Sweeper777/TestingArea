@@ -10,7 +10,7 @@ target 'TestingArea' do
     pod 'Eureka'
     pod 'GoogleMaps'
     pod 'TouchDraw'
-    pod 'NHArrowView'
+    pod 'ArrowView'
 end
 
 target 'TestingAreaTests' do

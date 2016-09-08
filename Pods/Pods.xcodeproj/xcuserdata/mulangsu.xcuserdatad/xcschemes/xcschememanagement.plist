@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ArrowView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -15,16 +20,6 @@
 			<false/>
 		</dict>
 		<key>Eureka.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>NHArrowView-NHArrowView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>NHArrowView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,7 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2535CE31133986D6AB642E05E5FFCBA0</key>
+		<key>3CA59B60E7E78F08ED4D8899B7510320</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3EC18ED83B051413008072752E07E625</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,22 +67,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>494F16B643FE93535E3C897F4ACF28BD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>6D46ACCA4C3F2BE3B8F9A9E35B37F4A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70064A6CF505986B4D79C38DE15F0CCB</key>
+		<key>903A108934E1A089B76F443DC34C8E54</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<key>9622F1BC98A6282109E32D15BEDE7878</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EED748DB2A66F02A6572EF0CA978E806</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F173EB800B786D4083CF9219E9CBE055</key>
+		<key>D751E47AA26523CCDC08632711558FA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
