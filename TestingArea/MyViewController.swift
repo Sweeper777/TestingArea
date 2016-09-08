@@ -22,6 +22,9 @@ class MyViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(mapView: GMSMapView, didTapMarker marker: GMSMarker) -> Bool {
-        
+        let alert = UIAlertController(title: "Location:", message: "Longitude: \(marker.position.longitude)\nLatitude: \(marker.position.latitude)", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentVC(alert)
+        return true
     }
 }
