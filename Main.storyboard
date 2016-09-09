@@ -38,31 +38,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GMSNavSprites-0-1x.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-XT-5zU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dav_one_way_16_256.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-XT-5zU">
                                 <rect key="frame" x="118" y="72" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GMSSprites-0-1x.png" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-AK-g7u">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_marker.png" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-AK-g7u">
                                 <rect key="frame" x="216" y="72" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back-chevron.png" translatesAutoresizingMaskIntoConstraints="NO" id="546-g1-Vcz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-chevron.png" translatesAutoresizingMaskIntoConstraints="NO" id="546-g1-Vcz">
                                 <rect key="frame" x="20" y="177" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble_left.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wvg-XX-NpV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googlelogo_56x20_with_2_stroke_color_60x22pt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wvg-XX-NpV">
                                 <rect key="frame" x="118" y="177" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bubble_right.png" translatesAutoresizingMaskIntoConstraints="NO" id="PQ5-TS-xso">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googlelogo_light_56x20_with_2_stroke_color_60x22pt.png" translatesAutoresizingMaskIntoConstraints="NO" id="PQ5-TS-xso">
                                 <rect key="frame" x="216" y="177" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="XDE-De-KnG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="XDE-De-KnG">
                                 <rect key="frame" x="20" y="275" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_compass.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvQ-yc-mnJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_compass_needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvQ-yc-mnJ">
                                 <rect key="frame" x="118" y="275" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_compass_night.png" translatesAutoresizingMaskIntoConstraints="NO" id="goz-gG-bZU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_qu_direction_mylocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="goz-gG-bZU">
                                 <rect key="frame" x="216" y="275" width="90" height="90"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GMSNavNightModeSprites-0-1x.png" translatesAutoresizingMaskIntoConstraints="NO" id="8cO-nW-s9G">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_my_location.png" translatesAutoresizingMaskIntoConstraints="NO" id="8cO-nW-s9G">
                                 <rect key="frame" x="20" y="72" width="90" height="90"/>
                             </imageView>
                         </subviews>
@@ -247,16 +247,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GMSNavNightModeSprites-0-1x.png" width="128" height="142"/>
-        <image name="GMSNavSprites-0-1x.png" width="128" height="142"/>
-        <image name="GMSSprites-0-1x.png" width="64" height="68"/>
-        <image name="back-chevron.png" width="13" height="21"/>
-        <image name="bubble_left.png" width="31" height="55"/>
-        <image name="bubble_right.png" width="31" height="55"/>
-        <image name="button_background.png" width="13" height="13"/>
-        <image name="button_compass.png" width="40" height="40"/>
-        <image name="button_compass_night.png" width="40" height="40"/>
+        <image name="button_my_location.png" width="46" height="46"/>
+        <image name="dav_one_way_16_256.png" width="16" height="256"/>
+        <image name="default_marker.png" width="22" height="39"/>
+        <image name="forward-chevron.png" width="13" height="21"/>
+        <image name="googlelogo_56x20_with_2_stroke_color_60x22pt.png" width="60" height="22"/>
+        <image name="googlelogo_light_56x20_with_2_stroke_color_60x22pt.png" width="60" height="22"/>
         <image name="home" width="25" height="25"/>
+        <image name="ic_compass_needle.png" width="40" height="40"/>
+        <image name="ic_qu_direction_mylocation.png" width="24" height="24"/>
         <image name="settings" width="25" height="25"/>
     </resources>
 </document>
