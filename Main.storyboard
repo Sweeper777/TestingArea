@@ -37,35 +37,6 @@
                     <view key="view" contentMode="scaleToFill" id="pYA-VV-OvB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polyline_colors_texture_dim.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-XT-5zU">
-                                <rect key="frame" x="118" y="72" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="road_1-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-AK-g7u">
-                                <rect key="frame" x="216" y="72" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forward-chevron.png" translatesAutoresizingMaskIntoConstraints="NO" id="546-g1-Vcz">
-                                <rect key="frame" x="20" y="177" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googlelogo_56x20_with_2_stroke_color_60x22pt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wvg-XX-NpV">
-                                <rect key="frame" x="118" y="177" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="googlelogo_light_56x20_with_2_stroke_color_60x22pt.png" translatesAutoresizingMaskIntoConstraints="NO" id="PQ5-TS-xso">
-                                <rect key="frame" x="216" y="177" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="XDE-De-KnG">
-                                <rect key="frame" x="20" y="275" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_compass_needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="WvQ-yc-mnJ">
-                                <rect key="frame" x="118" y="275" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_qu_direction_mylocation.png" translatesAutoresizingMaskIntoConstraints="NO" id="goz-gG-bZU">
-                                <rect key="frame" x="216" y="275" width="90" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polyline_colors_texture.png" translatesAutoresizingMaskIntoConstraints="NO" id="8cO-nW-s9G">
-                                <rect key="frame" x="20" y="72" width="90" height="90"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="N6R-oA-6Xg"/>
@@ -247,15 +218,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="forward-chevron.png" width="13" height="21"/>
-        <image name="googlelogo_56x20_with_2_stroke_color_60x22pt.png" width="60" height="22"/>
-        <image name="googlelogo_light_56x20_with_2_stroke_color_60x22pt.png" width="60" height="22"/>
         <image name="home" width="25" height="25"/>
-        <image name="ic_compass_needle.png" width="40" height="40"/>
-        <image name="ic_qu_direction_mylocation.png" width="24" height="24"/>
-        <image name="polyline_colors_texture.png" width="216" height="25"/>
-        <image name="polyline_colors_texture_dim.png" width="216" height="25"/>
-        <image name="road_1-1.png" width="1" height="1"/>
         <image name="settings" width="25" height="25"/>
     </resources>
 </document>

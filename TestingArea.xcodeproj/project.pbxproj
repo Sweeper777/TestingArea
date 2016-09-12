@@ -30,6 +30,7 @@
 		5AFE2B981D81C30200F483DD /* ArrowView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE2B971D81C30200F483DD /* ArrowView.framework */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
 		5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2FC1D688E9000176303 /* MyView.swift */; };
+		5AFF62961D870215004217D3 /* TimeIntervalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFF62951D870215004217D3 /* TimeIntervalRow.swift */; };
 		AABEFC567C3D23A4197446E3 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64CDD7675EC42974CCE8358E /* Pods_TestingArea.framework */; };
 		D4666D835021B8C07DF973B2 /* Pods_TestingAreaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FCA45647320B273483AE57 /* Pods_TestingAreaTests.framework */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		5AFE67D31D2B944C0074ACAE /* LTHPasscodeViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTHPasscodeViewController.framework; path = "Pods/../build/Debug-iphoneos/LTHPasscodeViewController.framework"; sourceTree = "<group>"; };
 		5AFEAE411CDC99270040C48D /* SWTableViewCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SWTableViewCell.framework; path = "Pods/../build/Debug-iphoneos/SWTableViewCell.framework"; sourceTree = "<group>"; };
 		5AFEF2FC1D688E9000176303 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		5AFF62951D870215004217D3 /* TimeIntervalRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalRow.swift; sourceTree = "<group>"; };
 		64CDD7675EC42974CCE8358E /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872C31A8576DB1452420218 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
 		88F7B13B28DB402D9F4AA552 /* Pods_TestingAreaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingAreaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,6 +234,7 @@
 				5AE001061CAA0F3A0058B744 /* AppDelegate.swift */,
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
+				5AFF62951D870215004217D3 /* TimeIntervalRow.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5AFEF2FC1D688E9000176303 /* MyView.swift */,
 				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
@@ -545,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFF62961D870215004217D3 /* TimeIntervalRow.swift in Sources */,
 				5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */,
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
 				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
