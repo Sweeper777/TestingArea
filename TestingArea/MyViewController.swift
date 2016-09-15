@@ -13,7 +13,7 @@ class MyViewController: UIViewController {
         performSegueWithIdentifier("show", sender: self)
         NSTimer.runThisAfterDelay(seconds: 3) {
             [weak self] in
-            self?.myView.removeFromSuperview()
+            self?.myView.hidden = true
         }
     }
 }
