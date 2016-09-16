@@ -37,21 +37,9 @@
                     <view key="view" contentMode="scaleToFill" id="pYA-VV-OvB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Hq-jw-K6E">
-                                <rect key="frame" x="30" y="86" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="N6R-oA-6Xg"/>
-                    <connections>
-                        <outlet property="myView" destination="3Hq-jw-K6E" id="pbT-RL-5G1"/>
-                        <segue destination="BJs-fK-8hM" kind="popoverPresentation" identifier="show" popoverAnchorView="3Hq-jw-K6E" id="uFv-gj-KBJ">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vGM-a9-nvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +48,7 @@
         <!--Navigation Controller-->
         <scene sceneID="d39-5x-uob">
             <objects>
-                <navigationController id="BJs-fK-8hM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="VC" id="BJs-fK-8hM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
