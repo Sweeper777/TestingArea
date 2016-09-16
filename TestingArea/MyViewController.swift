@@ -5,10 +5,6 @@ class MyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let camera = GMSCameraPosition.cameraWithLatitude(0, longitude: 0, zoom: 3)
-        let mapView = GMSMapView.mapWithFrame(CGRect.zero, camera: camera)
-        mapView.myLocationEnabled = true
-        view = mapView
     }
     
     override func viewDidAppear(animated: Bool) {
