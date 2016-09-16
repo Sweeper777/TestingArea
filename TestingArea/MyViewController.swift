@@ -11,7 +11,6 @@ class MyViewController: UIViewController {
         super.viewDidAppear(animated)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("VC")
-        vc.modalInPopover = true
         vc.modalPresentationStyle = .Popover
         
         vc.popoverPresentationController!.sourceRect = CGRectMake(100, 100, 0, 0)
