@@ -1,6 +1,0 @@
-framework module ArrowView {
-  umbrella header "ArrowView-umbrella.h"
-
-  export *
-  module * { export * }
-}

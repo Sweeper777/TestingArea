@@ -4,14 +4,14 @@ import UIKit
 class MyView: UIView {
     var view2: UIView!
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        print(touches.first!.locationInView(view2))
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print(touches.first!.location(in: view2))
     }
 
-    override func drawRect(rect: CGRect) {
-        view2 = UIButton(frame: CGRectMake(30, 30, 30, 30))
-        view2.userInteractionEnabled = false
-        view2.backgroundColor = UIColor.blueColor()
+    override func draw(_ rect: CGRect) {
+        view2 = UIButton(frame: CGRect(x: 30, y: 30, width: 30, height: 30))
+        view2.isUserInteractionEnabled = false
+        view2.backgroundColor = UIColor.blue
         self.addSubview(view2)
     }
 }

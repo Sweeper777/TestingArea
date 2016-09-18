@@ -4,20 +4,8 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'TestingArea' do
-    pod 'SwiftyJSON'
-    pod 'EZLoadingActivity'
-    pod 'EZSwiftExtensions'
-    pod 'Eureka'
+    pod 'EZSwiftExtensions', :git => 'https://github.com/lfarah/EZSwiftExtensions.git'
+    pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'Swift3'
     pod 'GoogleMaps'
-    pod 'TouchDraw'
-    pod 'ArrowView'
-end
-
-target 'TestingAreaTests' do
-
-end
-
-target 'TestingAreaUITests' do
-
 end
 

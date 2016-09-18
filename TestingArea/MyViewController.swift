@@ -7,13 +7,13 @@ class MyViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("VC")
-        vc.modalPresentationStyle = .Popover
+        let vc = storyboard.instantiateViewController(withIdentifier: "VC")
+        vc.modalPresentationStyle = .popover
         
-        vc.popoverPresentationController!.sourceRect = CGRectMake(100, 100, 0, 0)
+        vc.popoverPresentationController!.sourceRect = CGRect(x: 100, y: 100, width: 0, height: 0)
         vc.popoverPresentationController?.sourceView = self.view
         
         self.presentVC(vc)
