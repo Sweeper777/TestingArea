@@ -22,6 +22,7 @@
 		5AFC3CA31D7C0E08008282B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFC3CA21D7C0E08008282B8 /* MapKit.framework */; };
 		5AFE43061D8E734200B063D8 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A00C4C31D722A9C00AB34C3 /* Eureka.framework */; };
 		5AFE43081D8E734200B063D8 /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE43071D8E734200B063D8 /* EZSwiftExtensions.framework */; };
+		5AFE43091D8E743F00B063D8 /* TouchDraw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD04761D780E1B0099527B /* TouchDraw.framework */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
 		5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2FC1D688E9000176303 /* MyView.swift */; };
 		95A2D321C9076CDD94E9A773 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4741A58E119E08CF4A2F19 /* Pods_TestingArea.framework */; };
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFE43091D8E743F00B063D8 /* TouchDraw.framework in Frameworks */,
 				5AFE43081D8E734200B063D8 /* EZSwiftExtensions.framework in Frameworks */,
 				5AFE43061D8E734200B063D8 /* Eureka.framework in Frameworks */,
 				5AFC3CA31D7C0E08008282B8 /* MapKit.framework in Frameworks */,
@@ -166,6 +168,7 @@
 				TargetAttributes = {
 					5AE001021CAA0F3A0058B744 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = E9MW74DJ4Y;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -382,6 +385,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -407,6 +411,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",

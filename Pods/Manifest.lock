@@ -6,11 +6,13 @@ PODS:
   - GoogleMaps/Base (2.0.1)
   - GoogleMaps/Maps (2.0.1):
     - GoogleMaps/Base (= 2.0.1)
+  - TouchDraw (1.3.1)
 
 DEPENDENCIES:
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `Swift3`)
   - EZSwiftExtensions (from `https://github.com/lfarah/EZSwiftExtensions.git`)
   - GoogleMaps
+  - TouchDraw
 
 EXTERNAL SOURCES:
   Eureka:
@@ -31,7 +33,8 @@ SPEC CHECKSUMS:
   Eureka: 2020d9faeef7b7e9adeb9e3d8af779e5931c1897
   EZSwiftExtensions: 6c5e29ae473b3d2edbf5472eab0a3d7bdb20215c
   GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  TouchDraw: 5a38513da04853b4b5d6113ce644a8fe551ece3d
 
-PODFILE CHECKSUM: 1ad1161e03180a0fc9168bb8187da0cf6570a348
+PODFILE CHECKSUM: 928801d0e7b439ab0e3c0ba29d174199b09b769f
 
 COCOAPODS: 1.1.0.beta.1

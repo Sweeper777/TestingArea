@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TouchDraw.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E11A2D776CFA010FF067EF3EF1F71CCC</key>
+		<key>8B1CB641421462B5ED4D2C5E43671DE1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFEEC418464598E0EDA34555D6368E83</key>
 		<dict>
 			<key>primary</key>
 			<true/>

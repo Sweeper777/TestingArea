@@ -7,5 +7,6 @@ target 'TestingArea' do
     pod 'EZSwiftExtensions', :git => 'https://github.com/lfarah/EZSwiftExtensions.git'
     pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'Swift3'
     pod 'GoogleMaps'
+    pod 'TouchDraw'
 end
 
