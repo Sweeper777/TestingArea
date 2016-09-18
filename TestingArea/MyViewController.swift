@@ -1,21 +1,30 @@
 import UIKit
 import GoogleMaps
+import TouchDraw
 
 class MyViewController: UIViewController {
+    @IBOutlet var touchDrawView: TouchDrawView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        touchDrawView.layer.borderWidth = 3
+        touchDrawView.setWidth(2)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "VC")
-        vc.modalPresentationStyle = .popover
         
-        vc.popoverPresentationController!.sourceRect = CGRect(x: 100, y: 100, width: 0, height: 0)
-        vc.popoverPresentationController?.sourceView = self.view
-        
-        self.presentVC(vc)
+    }
+    @IBAction func export(_ sender: AnyObject) {
+        let stack = touchDrawView.exportStack()
+        let data = NSKeyedArchiver.archivedData(withRootObject: stack)
+        UserDefaults.standard.set(data, forKey: "drawing")
+        touchDrawView.clearDrawing()
+    }
+    
+    @IBAction func `import`(_ sender: AnyObject) {
+        let data = UserDefaults.standard.data(forKey: "drawing")!
+        let stack = NSKeyedUnarchiver.unarchiveObject(with: data) as! [Stroke]
+        touchDrawView.importStack(stack)
     }
 }
