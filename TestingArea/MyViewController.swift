@@ -12,6 +12,6 @@ class MyViewController: UIViewController {
         map.settings.setAllGesturesEnabled(true)
         map.settings.compassButton = true
         map.isMyLocationEnabled = true
-        map.mapType = kGMSTypeSatellite
+        map.mapType = kGMSTypeHybrid
     }
 }
