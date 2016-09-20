@@ -13,5 +13,6 @@ class MyViewController: UIViewController {
         map.settings.compassButton = true
         map.isMyLocationEnabled = true
         map.mapType = kGMSTypeHybrid
+        map.camera = GMSCameraPosition(target: map.camera.target, zoom: 16, bearing: 0, viewingAngle: 65)
     }
 }
