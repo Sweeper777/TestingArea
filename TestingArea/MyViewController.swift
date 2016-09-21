@@ -15,7 +15,7 @@ class MyViewController: UIViewController, GMSMapViewDelegate {
         map.mapType = kGMSTypeSatellite
         map.camera = GMSCameraPosition(target: map.camera.target, zoom: 16, bearing: 0, viewingAngle: 65)
         let marker = GMSMarker(position: map.camera.target)
-        marker.isFlat = true
+        marker.isFlat = false
         marker.rotation = 90
         marker.map = map
     }
