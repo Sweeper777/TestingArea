@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
+		5A1C1BFB1DBF5DEA0009162D /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1C1BFA1DBF5DEA0009162D /* DropDown.framework */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
@@ -85,6 +86,7 @@
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		5A07C4901D485D910013257D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5A07C4911D485D990013257D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5A1C1BFA1DBF5DEA0009162D /* DropDown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropDown.framework; path = "Pods/../build/Debug-iphoneos/DropDown/DropDown.framework"; sourceTree = "<group>"; };
 		5A1F4DF91DB7F54A005990AF /* MyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRowController.swift; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
 		5AE001031CAA0F3A0058B744 /* TestingArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1C1BFB1DBF5DEA0009162D /* DropDown.framework in Frameworks */,
 				5AFE43091D8E743F00B063D8 /* TouchDraw.framework in Frameworks */,
 				5AFE43081D8E734200B063D8 /* EZSwiftExtensions.framework in Frameworks */,
 				5AFE43061D8E734200B063D8 /* Eureka.framework in Frameworks */,
@@ -136,12 +139,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		73DFDA5B5EC3DB0A09A76D07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A1C1BFA1DBF5DEA0009162D /* DropDown.framework */,
 				5AFE43071D8E734200B063D8 /* EZSwiftExtensions.framework */,
 				5AFC3CA21D7C0E08008282B8 /* MapKit.framework */,
 				5AFD04761D780E1B0099527B /* TouchDraw.framework */,
@@ -257,6 +268,7 @@
 			buildPhases = (
 				5AFEC0FE1DA0468F0054FAAA /* Resources */,
 				5AFEC1201DA046900054FAAA /* Embed App Extensions */,
+				73DFDA5B5EC3DB0A09A76D07 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -584,6 +596,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/PinYin4Objc",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/NHArrowView",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ArrowView",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/DropDown",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -610,6 +623,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/PinYin4Objc",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/NHArrowView",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ArrowView",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/DropDown",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

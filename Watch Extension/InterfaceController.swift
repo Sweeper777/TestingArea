@@ -27,6 +27,6 @@ class InterfaceController: WKInterfaceController {
         row3.btn3.setTitle("9")
         row4.btn1.setTitle(".")
         row4.btn2.setTitle("0")
-        row4.btn3.setTitle("←")
+        row4.btn3.setTitle("c")
     }
 }
