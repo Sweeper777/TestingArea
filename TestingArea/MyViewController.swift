@@ -1,37 +1,26 @@
 import UIKit
-import GoogleMaps
-import TouchDraw
+import DropDown
+import EZSwiftExtensions
 
-class MyViewController: UIViewController, GMSMapViewDelegate {
-    var line: GMSPolyline!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let map = GMSMapView()
-        self.view = map
-        
-        let path = GMSMutablePath()
-        path.addLatitude(0, longitude: 0)
-        path.addLatitude(20, longitude: 20)
-        line = GMSPolyline(path: path)
-        line.strokeColor = UIColor.red
-        line.strokeWidth = 4
-        line.map = map
-        
-        map.delegate = self
-    }
+class MyViewController: UIViewController {
     
-    func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
-        if overlay == line {
-            print("tapped overlay")
+    @IBOutlet var anchor: UIView!
+    let dropDown = DropDown()
+    
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        dropDown.anchorView = self.anchor
+        dropDown.dataSource = ["Item1", "Item2", "Item3", "Really Looong Item"]
+//        dropDown.width = view.w - 100
+        dropDown.direction = .bottom
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.selectionAction = {
+            [unowned self] index, item in
+            print(item)
         }
+        dropDown.show()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesBegan")
-    }
-    
-    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        print("tapped coordinate")
+        print("touched")
     }
 }
