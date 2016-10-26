@@ -3,6 +3,15 @@ import DropDown
 import EZSwiftExtensions
 
 class MyViewController: UIViewController {
+    var a: A!
+    var b: B!
+    
+    override func viewDidLoad() {
+        a = A()
+        b = B()
+        a.b = b
+        b.a = a
+    }
     
     @IBOutlet var anchor: UIView!
     let dropDown = DropDown()
@@ -23,4 +32,12 @@ class MyViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touched")
     }
+}
+
+class A {
+    var b: B!
+}
+
+class B {
+    var a: A!
 }
