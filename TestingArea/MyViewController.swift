@@ -11,22 +11,15 @@ class MyViewController: UIViewController {
         b = B()
         a.b = b
         b.a = a
+        let date = Date()
+        UserDefaults.standard.set(date, forKey: "myDate")
     }
     
     @IBOutlet var anchor: UIView!
     let dropDown = DropDown()
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        dropDown.anchorView = self.anchor
-        dropDown.dataSource = ["Item1", "Item2", "Item3", "Really Looong Item"]
-//        dropDown.width = view.w - 100
-        dropDown.direction = .bottom
-        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
-        dropDown.selectionAction = {
-            [unowned self] index, item in
-            print(item)
-        }
-        dropDown.show()
+        print(UserDefaults.standard.object(forKey: "myDate"))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
