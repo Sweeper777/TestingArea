@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
-		5A1C1BFB1DBF5DEA0009162D /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1C1BFA1DBF5DEA0009162D /* DropDown.framework */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
@@ -34,7 +33,6 @@
 		5AFEC1161DA046900054FAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1151DA046900054FAAA /* Assets.xcassets */; };
 		5AFEC11A1DA046900054FAAA /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5AFEC1001DA0468F0054FAAA /* Watch.app */; };
 		5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2FC1D688E9000176303 /* MyView.swift */; };
-		95A2D321C9076CDD94E9A773 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B4741A58E119E08CF4A2F19 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,13 +78,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1B4741A58E119E08CF4A2F19 /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A00C4C31D722A9C00AB34C3 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		5A07C4901D485D910013257D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5A07C4911D485D990013257D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		5A1C1BFA1DBF5DEA0009162D /* DropDown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropDown.framework; path = "Pods/../build/Debug-iphoneos/DropDown/DropDown.framework"; sourceTree = "<group>"; };
 		5A1F4DF91DB7F54A005990AF /* MyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRowController.swift; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
 		5AE001031CAA0F3A0058B744 /* TestingArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,12 +119,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A1C1BFB1DBF5DEA0009162D /* DropDown.framework in Frameworks */,
 				5AFE43091D8E743F00B063D8 /* TouchDraw.framework in Frameworks */,
 				5AFE43081D8E734200B063D8 /* EZSwiftExtensions.framework in Frameworks */,
 				5AFE43061D8E734200B063D8 /* Eureka.framework in Frameworks */,
 				5AFC3CA31D7C0E08008282B8 /* MapKit.framework in Frameworks */,
-				95A2D321C9076CDD94E9A773 /* Pods_TestingArea.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,12 +146,10 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5A1C1BFA1DBF5DEA0009162D /* DropDown.framework */,
 				5AFE43071D8E734200B063D8 /* EZSwiftExtensions.framework */,
 				5AFC3CA21D7C0E08008282B8 /* MapKit.framework */,
 				5AFD04761D780E1B0099527B /* TouchDraw.framework */,
 				5A00C4C31D722A9C00AB34C3 /* Eureka.framework */,
-				1B4741A58E119E08CF4A2F19 /* Pods_TestingArea.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -597,6 +589,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/NHArrowView",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ArrowView",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/DropDown",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/BEMAnalogClock",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -624,6 +617,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/NHArrowView",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ArrowView",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/DropDown",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/BEMAnalogClock",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -8,6 +8,6 @@ target 'TestingArea' do
     pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'Swift3'
     pod 'GoogleMaps'
     pod 'TouchDraw'
-    pod 'DropDown'
+    pod 'BEMAnalogClock'
 end
 

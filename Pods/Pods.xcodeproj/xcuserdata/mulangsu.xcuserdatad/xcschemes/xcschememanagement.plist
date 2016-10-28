@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DropDown.xcscheme</key>
+		<key>BEMAnalogClock.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6086F2CFDCC40933CDB6D800FF8C47F1</key>
+		<key>3A45B544D9B84915A293DA45512E35C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54776193FA3BDB7AEC9349981380A145</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8907F1C7C7B593425C514B3A0D19087D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9F766ADB76A46AB732825D44C4BAAABF</key>
+		<key>A93D40A73EF61F52D38BFE9A62E37398</key>
 		<dict>
 			<key>primary</key>
 			<true/>

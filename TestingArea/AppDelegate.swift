@@ -1,7 +1,6 @@
 import UIKit
 import CoreData
 import GoogleMaps
-import DropDown
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,7 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        DropDown.startListeningToKeyboard()
         return true
     }
 

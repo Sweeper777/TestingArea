@@ -84,13 +84,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/DropDown/DropDown.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BEMAnalogClock/BEMAnalogClock.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Eureka/Eureka.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TouchDraw/TouchDraw.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/DropDown/DropDown.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BEMAnalogClock/BEMAnalogClock.framework"
   install_framework "$BUILT_PRODUCTS_DIR/EZSwiftExtensions/EZSwiftExtensions.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Eureka/Eureka.framework"
   install_framework "$BUILT_PRODUCTS_DIR/TouchDraw/TouchDraw.framework"
