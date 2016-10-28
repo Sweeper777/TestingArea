@@ -13,4 +13,10 @@ class MyViewController: UIViewController {
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         print(clock.seconds)
     }
+    
+    override func viewDidLayoutSubviews() {
+        clock.minuteHandLength = clock.hubRadius * 1.5
+        clock.hourHandLength = clock.hubRadius * 1
+        clock.secondHandLength = clock.hubRadius * 2
+    }
 }
