@@ -15,8 +15,9 @@ class MyViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        clock.minuteHandLength = clock.hubRadius * 1.5
-        clock.hourHandLength = clock.hubRadius * 1
-        clock.secondHandLength = clock.hubRadius * 2
+        let radius = min(clock.w, clock.h) / 2
+        clock.minuteHandLength = radius * 0.5
+        clock.hourHandLength = radius * 0.3
+        clock.secondHandLength = radius * 0.7
     }
 }
