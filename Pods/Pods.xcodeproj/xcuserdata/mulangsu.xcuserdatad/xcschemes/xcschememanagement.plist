@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BEMAnalogClock.xcscheme</key>
+		<key>DDMathParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -14,7 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Eureka.xcscheme</key>
+		<key>JVFloatLabeledTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MGSwipeTableCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +34,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TouchDraw.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>367775726ABA7003552CA455107C1627</key>
+		<key>4E1263BFF45F6446CF3DE29AE234C893</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3A45B544D9B84915A293DA45512E35C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>54776193FA3BDB7AEC9349981380A145</key>
+		<key>68E95B5237086E70430751E00F9C3FC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A93D40A73EF61F52D38BFE9A62E37398</key>
+		<key>735882DA95E7FCCEC084FC1C5384FF8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C040450F45CDFF2D9A4FCF2AE1724100</key>
 		<dict>
 			<key>primary</key>
 			<true/>
