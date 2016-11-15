@@ -14,56 +14,64 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Custom SelectorVC-->
+        <scene sceneID="4a9-B8-UTI">
+            <objects>
+                <viewController storyboardIdentifier="CustomSelectorVC" id="75l-rb-tTa" customClass="CustomSelectorVC" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xI3-wM-2il"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y68-oO-MDr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s7p-fj-dZO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="io0-Fy-JPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-660" y="-517"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rGL-8M-CHX">
             <objects>
                 <navigationController id="oIZ-1h-2KH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eAF-b4-NLX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAF-b4-NLX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="DdE-Ij-ylK" kind="relationship" relationship="rootViewController" id="zEA-ww-LBd"/>
+                        <segue destination="X4n-4q-1cD" kind="relationship" relationship="rootViewController" id="KVR-0l-yFC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A78-X0-ZAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--My Table View Controller-->
-        <scene sceneID="bhD-jX-zUL">
+        <!--TestVC3-->
+        <scene sceneID="wIz-ix-jIS">
             <objects>
-                <viewController id="DdE-Ij-ylK" customClass="MyTableViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X4n-4q-1cD" customClass="TestVC3" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kdn-es-zvx"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vgi-en-Q3f"/>
+                        <viewControllerLayoutGuide type="top" id="vOB-zz-5L3"/>
+                        <viewControllerLayoutGuide type="bottom" id="mLW-XY-TxC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="M3p-cf-Icb">
+                    <view key="view" contentMode="scaleToFill" id="T5E-wd-qiu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hxo-dk-aP8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="DdE-Ij-ylK" id="7Z1-wO-7Va"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zad-qv-xkF"/>
+                    <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qmV-lp-TcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="184.85757121439281"/>
+            <point key="canvasLocation" x="54" y="185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d39-5x-uob">
             <objects>
                 <navigationController storyboardIdentifier="VC" id="BJs-fK-8hM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pkd-qP-iAD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -133,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAGE 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1x-ag-kC5">
-                                <rect key="frame" x="103.5" y="618" width="168" height="49"/>
+                                <rect key="frame" x="104" y="618" width="168" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="WwF-Ra-4VQ"/>
                                 </constraints>
@@ -173,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAGE 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sd-at-pF3">
-                                <rect key="frame" x="103.5" y="309" width="168" height="49"/>
+                                <rect key="frame" x="104" y="309" width="168" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="QjQ-i9-xL7"/>
                                 </constraints>
@@ -206,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAGE 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zn-oW-XBp">
-                                <rect key="frame" x="103.5" y="309" width="168" height="49"/>
+                                <rect key="frame" x="104" y="309" width="168" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="pwu-lg-mRS"/>
                                 </constraints>
