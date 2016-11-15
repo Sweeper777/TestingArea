@@ -1,14 +1,16 @@
 PODS:
   - DDMathParser (2.0.0)
+  - Eureka (2.0.0-beta.1)
   - EZLoadingActivity (0.9)
-  - EZSwiftExtensions (1.6)
+  - EZSwiftExtensions (1.7)
   - JVFloatLabeledTextField (1.1.1)
   - MGSwipeTableCell (1.5.6)
 
 DEPENDENCIES:
   - DDMathParser (from `https://github.com/davedelong/DDMathParser.git`, branch `master`)
+  - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `master`)
   - EZLoadingActivity
-  - EZSwiftExtensions (from `https://github.com/lfarah/EZSwiftExtensions.git`)
+  - EZSwiftExtensions (= 1.7)
   - JVFloatLabeledTextField
   - MGSwipeTableCell
 
@@ -16,24 +18,26 @@ EXTERNAL SOURCES:
   DDMathParser:
     :branch: master
     :git: https://github.com/davedelong/DDMathParser.git
-  EZSwiftExtensions:
-    :git: https://github.com/lfarah/EZSwiftExtensions.git
+  Eureka:
+    :branch: master
+    :git: https://github.com/xmartlabs/Eureka.git
 
 CHECKOUT OPTIONS:
   DDMathParser:
     :commit: a974061d092e2b0d7286a185bbb068d999d83a1c
     :git: https://github.com/davedelong/DDMathParser.git
-  EZSwiftExtensions:
-    :commit: 53a43266fc6926fcd22738ec1774e1aacd2fef0d
-    :git: https://github.com/lfarah/EZSwiftExtensions.git
+  Eureka:
+    :commit: 7e30cec8c3288c4f1128008a4bcb90dafc6ec17b
+    :git: https://github.com/xmartlabs/Eureka.git
 
 SPEC CHECKSUMS:
   DDMathParser: 74cddd0aa652cfed79e68fdd076f1ee63ab43a16
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   EZLoadingActivity: 7ebb84c1f2510a62d2bc0a17cc9d75634f92606d
-  EZSwiftExtensions: 6c5e29ae473b3d2edbf5472eab0a3d7bdb20215c
+  EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
 
-PODFILE CHECKSUM: bf83bed42ab14e32887876b31f7f431bcbd0b0af
+PODFILE CHECKSUM: 1c25d69f877c21b6d42224b8037c32ae8bcf02b5
 
 COCOAPODS: 1.1.0.beta.1

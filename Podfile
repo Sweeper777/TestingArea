@@ -9,5 +9,6 @@ target 'TestingArea' do
     pod 'MGSwipeTableCell'
     pod 'EZLoadingActivity'
     pod 'JVFloatLabeledTextField'
+    pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'master'
 end
 
