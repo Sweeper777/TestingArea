@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--TestVC3-->
+        <!--My View Controller-->
         <scene sceneID="wIz-ix-jIS">
             <objects>
-                <viewController id="X4n-4q-1cD" customClass="TestVC3" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="X4n-4q-1cD" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vOB-zz-5L3"/>
                         <viewControllerLayoutGuide type="bottom" id="mLW-XY-TxC"/>
