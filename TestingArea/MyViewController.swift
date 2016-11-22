@@ -3,12 +3,11 @@ import EZSwiftExtensions
 import AVFoundation
 
 class MyViewController: UIViewController {
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        let synth = AVSpeechSynthesizer()
-        let utterance = AVSpeechUtterance(string: "")
-        utterance.voice = AVSpeechSynthesisVoice(language: "hy")
-        synth.speak(utterance)
-        print(AVSpeechSynthesisVoice.speechVoices().map{$0.language})
-        //Ժամանակն է
+    override func viewDidLoad() {
+        let rect = "Hello".boundingRect(with: CGSize.zero, context: nil)
+        let lbl = UILabel(frame: CGRect(x: 200, y: 200, w: rect.w, h: rect.h))
+        lbl.backgroundColor = UIColor.black
+        lbl.textColor = UIColor.white
+        lbl.text = "Hello"
     }
 }
