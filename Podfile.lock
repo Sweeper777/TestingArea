@@ -5,6 +5,7 @@ PODS:
   - EZSwiftExtensions (1.7)
   - JVFloatLabeledTextField (1.1.1)
   - MGSwipeTableCell (1.5.6)
+  - PDFGenerator (2.0.0)
 
 DEPENDENCIES:
   - DDMathParser (from `https://github.com/davedelong/DDMathParser.git`, branch `master`)
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - EZSwiftExtensions (= 1.7)
   - JVFloatLabeledTextField
   - MGSwipeTableCell
+  - PDFGenerator (from `https://github.com/sgr-ksmt/PDFGenerator.git`, branch `swift-3.0`)
 
 EXTERNAL SOURCES:
   DDMathParser:
@@ -21,6 +23,9 @@ EXTERNAL SOURCES:
   Eureka:
     :branch: master
     :git: https://github.com/xmartlabs/Eureka.git
+  PDFGenerator:
+    :branch: swift-3.0
+    :git: https://github.com/sgr-ksmt/PDFGenerator.git
 
 CHECKOUT OPTIONS:
   DDMathParser:
@@ -29,6 +34,9 @@ CHECKOUT OPTIONS:
   Eureka:
     :commit: 7e30cec8c3288c4f1128008a4bcb90dafc6ec17b
     :git: https://github.com/xmartlabs/Eureka.git
+  PDFGenerator:
+    :commit: a5835708f53361a4e27977c0792356141a2f93e5
+    :git: https://github.com/sgr-ksmt/PDFGenerator.git
 
 SPEC CHECKSUMS:
   DDMathParser: 74cddd0aa652cfed79e68fdd076f1ee63ab43a16
@@ -37,7 +45,8 @@ SPEC CHECKSUMS:
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
+  PDFGenerator: 95e0f47b03fb90632156e3e54d8d06804424c6da
 
-PODFILE CHECKSUM: 1c25d69f877c21b6d42224b8037c32ae8bcf02b5
+PODFILE CHECKSUM: 5d5aa4e4973cafe1359e2076f23ea6e02152f048
 
 COCOAPODS: 1.1.0.beta.1

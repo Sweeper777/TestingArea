@@ -15,6 +15,7 @@
 		5A1EC8761DD266DD009C23EF /* JVFloatLabeledTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1EC8741DD266DD009C23EF /* JVFloatLabeledTextField.framework */; };
 		5A1EC8771DD266DD009C23EF /* MGSwipeTableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1EC8751DD266DD009C23EF /* MGSwipeTableCell.framework */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
+		5A1F86FF1DE97CD100110FCD /* PDFGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1F86FE1DE97CD100110FCD /* PDFGenerator.framework */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
 		5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */; };
@@ -92,6 +93,7 @@
 		5A1EC8741DD266DD009C23EF /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JVFloatLabeledTextField.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/JVFloatLabeledTextField/JVFloatLabeledTextField.framework"; sourceTree = "<group>"; };
 		5A1EC8751DD266DD009C23EF /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/MGSwipeTableCell/MGSwipeTableCell.framework"; sourceTree = "<group>"; };
 		5A1F4DF91DB7F54A005990AF /* MyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRowController.swift; sourceTree = "<group>"; };
+		5A1F86FE1DE97CD100110FCD /* PDFGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFGenerator.framework; path = "Pods/../build/Debug-iphoneos/PDFGenerator/PDFGenerator.framework"; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
 		5AE001031CAA0F3A0058B744 /* TestingArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE001061CAA0F3A0058B744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A1F86FF1DE97CD100110FCD /* PDFGenerator.framework in Frameworks */,
 				5A177EED1DD9F16300FCB79C /* Eureka.framework in Frameworks */,
 				5A1E037A1DD3118000B2AF9F /* MathParser.framework in Frameworks */,
 				5A1EC8761DD266DD009C23EF /* JVFloatLabeledTextField.framework in Frameworks */,
@@ -158,6 +161,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A1F86FE1DE97CD100110FCD /* PDFGenerator.framework */,
 				5A177EEB1DD9F09B00FCB79C /* Eureka.framework */,
 				5A1E03791DD3118000B2AF9F /* MathParser.framework */,
 				5A1EC8741DD266DD009C23EF /* JVFloatLabeledTextField.framework */,
@@ -612,6 +616,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/DDMathParser",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MGSwipeTableCell",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Eureka",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PDFGenerator",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -644,6 +649,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/DDMathParser",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MGSwipeTableCell",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Eureka",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PDFGenerator",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
