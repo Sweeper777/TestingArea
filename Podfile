@@ -10,6 +10,6 @@ target 'TestingArea' do
     pod 'EZLoadingActivity'
     pod 'JVFloatLabeledTextField'
     pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'master'
-    pod 'PDFGenerator', :git => 'https://github.com/sgr-ksmt/PDFGenerator.git', :branch => 'swift-3.0'
+    pod 'BNHtmlPdfKit', '~> 0.4'
 end
 
