@@ -43,6 +43,23 @@ class MyViewController: UIViewController, MFMailComposeViewControllerDelegate {
                 mailComposer.addAttachmentData(pdf, mimeType: "application/pdf", fileName: "lorem")
                 self.presentVC(mailComposer)
             }
+    var touchIndicators: [UIView] = []
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let location = touch.location(in: view)
+            let touchIndicator = UIView(frame: CGRect(x: location.x - 10, y: location.y - 10, width: 20, height: 20))
+            touchIndicator.alpha = 0.5
+            touchIndicator.backgroundColor = UIColor.red
+            touchIndicator.layer.cornerRadius = 10
+            self.view.addSubview(touchIndicator)
+            touchIndicators.append(touchIndicator)
         }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for indicator in touchIndicators {
+            indicator.removeFromSuperview()
+        }
+        touchIndicators = []
     }
 }
