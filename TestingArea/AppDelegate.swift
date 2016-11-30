@@ -22,6 +22,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(array)
     }
     
+    func test2() {
+        let request = NSFetchRequest<Test>(entityName: "Test")
+        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
+        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: Date())
+        components.hour = 00
+        components.minute = 00
+        components.second = 00
+        let startDate = calendar.date(from: components)
+        components.hour = 23
+        components.minute = 59
+        components.second = 59
+        let endDate = calendar.date(from: components)
+        request.predicate = /*NSCompoundPredicate(notPredicateWithSubpredicate: */NSPredicate(format: "property3 >= %@ AND property3 =< %@", argumentArray: [startDate!, endDate!])/*)*/
+        let array = try! managedObjectContext.fetch(request)
+        print(array.count)
+        print(array)
+    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
