@@ -5,10 +5,7 @@ use_frameworks!
 
 target 'TestingArea' do
     pod 'EZSwiftExtensions', '1.7'
-    pod 'DDMathParser', :git => 'https://github.com/davedelong/DDMathParser.git', :branch => 'master'
-    pod 'MGSwipeTableCell'
     pod 'EZLoadingActivity'
-    pod 'JVFloatLabeledTextField'
     pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'master'
     pod 'BNHtmlPdfKit', '~> 0.4'
 end

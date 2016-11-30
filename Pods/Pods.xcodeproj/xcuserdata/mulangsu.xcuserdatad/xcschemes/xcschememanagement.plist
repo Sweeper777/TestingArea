@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>DDMathParser.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,16 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JVFloatLabeledTextField.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MGSwipeTableCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,32 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>24167CA5A3D4AB0FE2D21628C2BCED50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>32B28B4028D630EC2D989F4925841E14</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E1263BFF45F6446CF3DE29AE234C893</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>68E95B5237086E70430751E00F9C3FC6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>6D46ACCA4C3F2BE3B8F9A9E35B37F4A4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6DAF5C311718F80C1A23537EC32B6B6E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>735882DA95E7FCCEC084FC1C5384FF8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
