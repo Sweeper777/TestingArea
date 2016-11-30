@@ -103,3 +103,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension Test {
+    public override var description: String {
+        return "{\(property1), \"\(property2!)\", \(property3!), \(property4)}"
+    }
+}
