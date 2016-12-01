@@ -40,6 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(array)
     }
     
+    func test3() {
+        let request = NSFetchRequest<Test>(entityName: "Test")
+        let array = (try! managedObjectContext.fetch(request)).filter { ($0.property3 as! Date).isTheSameDayAs(other: Date()) }
+        print(array.count)
+        print(array)
+    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
