@@ -11,6 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        test4()
         return true
     }
     
@@ -47,6 +48,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(array)
     }
     
+    func test4() {
+        var start = Date()
+        test2()
+        var end = Date()
+        var time = end.timeIntervalSince(start)
+        print("Using NSPredicate took \(time) seconds")
+        
+        start = Date()
+        test3()
+        end = Date()
+        time = end.timeIntervalSince(start)
+        print("Using filter() took \(time) seconds")
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -9,11 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
-		5A177EED1DD9F16300FCB79C /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A00C4C31D722A9C00AB34C3 /* Eureka.framework */; };
-		5A1E037A1DD3118000B2AF9F /* MathParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1E03791DD3118000B2AF9F /* MathParser.framework */; };
+		5A171DC31DECAB92007E2DEE /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A171DC21DECAB92007E2DEE /* Eureka.framework */; };
 		5A1EC8701DD2658F009C23EF /* EZLoadingActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1EC86C1DD2658F009C23EF /* EZLoadingActivity.framework */; };
-		5A1EC8761DD266DD009C23EF /* JVFloatLabeledTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1EC8741DD266DD009C23EF /* JVFloatLabeledTextField.framework */; };
-		5A1EC8771DD266DD009C23EF /* MGSwipeTableCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1EC8751DD266DD009C23EF /* MGSwipeTableCell.framework */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5A4313B71DEA471500839CD6 /* BNHtmlPdfKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4313B61DEA471500839CD6 /* BNHtmlPdfKit.framework */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
@@ -87,6 +84,7 @@
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		5A07C4901D485D910013257D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5A07C4911D485D990013257D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5A171DC21DECAB92007E2DEE /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Release-iphoneos/Eureka.framework"; sourceTree = "<group>"; };
 		5A177EEB1DD9F09B00FCB79C /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Debug-iphoneos/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A1E03791DD3118000B2AF9F /* MathParser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MathParser.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/DDMathParser/MathParser.framework"; sourceTree = "<group>"; };
 		5A1EC86C1DD2658F009C23EF /* EZLoadingActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZLoadingActivity.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework"; sourceTree = "<group>"; };
@@ -131,11 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A171DC31DECAB92007E2DEE /* Eureka.framework in Frameworks */,
 				5A4313B71DEA471500839CD6 /* BNHtmlPdfKit.framework in Frameworks */,
-				5A177EED1DD9F16300FCB79C /* Eureka.framework in Frameworks */,
-				5A1E037A1DD3118000B2AF9F /* MathParser.framework in Frameworks */,
-				5A1EC8761DD266DD009C23EF /* JVFloatLabeledTextField.framework in Frameworks */,
-				5A1EC8771DD266DD009C23EF /* MGSwipeTableCell.framework in Frameworks */,
 				5A1EC8701DD2658F009C23EF /* EZLoadingActivity.framework in Frameworks */,
 				5AFE43081D8E734200B063D8 /* EZSwiftExtensions.framework in Frameworks */,
 				BDF6CCE6DBE274D454B50F43 /* Pods_TestingArea.framework in Frameworks */,
@@ -162,6 +157,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A171DC21DECAB92007E2DEE /* Eureka.framework */,
 				5A4313B61DEA471500839CD6 /* BNHtmlPdfKit.framework */,
 				5A1F86FE1DE97CD100110FCD /* PDFGenerator.framework */,
 				5A177EEB1DD9F09B00FCB79C /* Eureka.framework */,
@@ -620,6 +616,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Eureka",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/PDFGenerator",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/BNHtmlPdfKit",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -654,6 +651,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Eureka",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/PDFGenerator",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/BNHtmlPdfKit",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
