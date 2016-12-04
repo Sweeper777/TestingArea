@@ -21,7 +21,6 @@ class MyViewController: UIViewController, MFMailComposeViewControllerDelegate {
         axis.labelCount = 4
         axis.drawLabelsEnabled = true
         axis.labelPosition = .bottom
-        axis.valueFormatter = DefaultAxisValueFormatter()
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {

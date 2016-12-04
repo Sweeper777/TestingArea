@@ -1,9 +1,9 @@
 PODS:
-  - Charts (3.0.0):
-    - Charts/Core (= 3.0.0)
-  - Charts/Core (3.0.0)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - Eureka (2.0.0-beta.1)
-  - EZLoadingActivity (0.9)
+  - EZLoadingActivity (1.01)
   - EZSwiftExtensions (1.7)
 
 DEPENDENCIES:
@@ -19,13 +19,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Eureka:
-    :commit: 7e30cec8c3288c4f1128008a4bcb90dafc6ec17b
+    :commit: ca07d8bb2c2e20c3b24fd6e1ab4dacc203c1a197
     :git: https://github.com/xmartlabs/Eureka.git
 
 SPEC CHECKSUMS:
-  Charts: beb341928d2135613b4325a6c6aff9f2f6de895e
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
-  EZLoadingActivity: 7ebb84c1f2510a62d2bc0a17cc9d75634f92606d
+  EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
 
 PODFILE CHECKSUM: e17175e9fb7fa9a1e70b7f1d969ca3fbcb666de4
