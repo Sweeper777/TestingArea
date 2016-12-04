@@ -1,12 +1,9 @@
 import UIKit
 import EZSwiftExtensions
 import MessageUI
-import BNHtmlPdfKit
 import CoreData
 
-class MyViewController: UIViewController, MFMailComposeViewControllerDelegate, BNHtmlPdfKitDelegate {
-    var pdfGenerator: BNHtmlPdfKit!
-    
+class MyViewController: UIViewController, MFMailComposeViewControllerDelegate {
     override func viewDidLoad() {
         
     }
@@ -21,24 +18,7 @@ class MyViewController: UIViewController, MFMailComposeViewControllerDelegate, B
             managedObj.property4 = i % 2 == 0
         }
         try? context.save()
-    }
-    
-    func htmlPdfKit(_ htmlPdfKit: BNHtmlPdfKit!, didSavePdfData data: Data!) {
-        if( MFMailComposeViewController.canSendMail() ) {
-            print("Can send email.")
-            
-            let mailComposer = MFMailComposeViewController()
-            mailComposer.mailComposeDelegate = self
-            mailComposer.modalPresentationStyle = .formSheet
-            
-            mailComposer.addAttachmentData(data, mimeType: "application/pdf", fileName: "lorem")
-            self.presentVC(mailComposer)
-        }
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismissVC(completion: nil)
-    }
+    }    
 }
 
 
