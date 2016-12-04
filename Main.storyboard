@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -56,23 +55,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiF-69-fTr">
-                                <rect key="frame" x="16" y="72" width="335" height="575"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-9S-Kzt" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum ad qui amet dolore, vitae cetero quaerendum mel ea. Facilis fastidii duo no. Viris partiendo ius no, alia animal nam at. Feugait imperdiet ius an, no quis facer lucilius vis. Aliquam saperet contentiones ex pro, id idque offendit ius. Fugit suavitate ad eam, ut essent debitis cum. Cu duo iudico instructior. Sea te choro perfecto, per eu meis nonumy percipit. Ut mea sint constituam, cu pro impedit constituam. Et diam wisi tollit mel, te has atqui veritus. Falli volumus ullamcorper id vis, fugit debet ei pri. Mea esse saperet oporteat cu, sumo interesset an cum. Facer expetenda ius te, sint mundi aperiri no est, mollis salutandi quo ne. No dicta errem sed. Mea ei detraxit patrioque, sumo eirmod ea vix. Et dicit omittantur eam, et vix modo eius vidit. Vis et pertinacia abhorreant constituam, eum at quod vero. Ferri consectetuer sed no, ex vix nonumy posidonium quaerendum. Eum in nostro omnesque philosophia, sit veniam recteque et. Et sit facer honestatis, sonet propriae officiis ne vel, est atqui verear eruditi eu. Ut duo augue deserunt mnesarchum, an per option dignissim, cu cum convenire consulatu deterruisset. Cu vel debet ludus, docendi nominati philosophia ex his. Ad legendos expetendis duo, sed et delicata pericula torquatos. Temporibus delicatissimi eu nam, mel ea ipsum fabulas tractatos, at vim omnis clita omittantur. Ad graeco scriptorem eos. Nam ut nulla congue singulis. Ea his doctus interpretaris, at qui aliquyam complectitur. Vix hinc habeo appareat an, at modo regione tamquam sed. Vim et tritani viderer, puto evertitur nam cu. Sed odio dicunt reprimique ex, ullum noluisse instructior ei sed, ei ius nostro corrumpit. Nec mundi equidem consulatu no. Sea an prodesset intellegat, usu dicit aperiam ut. Usu cu animal meliore. Platonem theophrastus duo ea, eum no alia ludus. Assentior referrentur quo ex. Usu id causae corrumpit patrioque, ei putant nonummy nec, ne nisl laudem petentium mea. Exerci instructior cu qui. Cum probo scribentur ut. Mei pertinax suscipiantur an. Nisl pertinax ex quo, eos esse ornatus at. Usu quidam definitionem no, eu mel quem mazim pertinax. Quodsi percipit consetetur at vim, eam omnis option explicari et. Pri at liber labores, his an utinam labore aperiam. Ei eos justo omnesque reformidans. Inani detraxit voluptatum ut pro. An sit posse probatus inimicus. Magna vivendo deseruisse has at, meis modus molestiae an has. Eam iudicabit constituam mediocritatem ne.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="xiF-69-fTr" secondAttribute="trailing" constant="8" id="Ilp-h3-jd6"/>
-                            <constraint firstItem="xiF-69-fTr" firstAttribute="top" secondItem="vOB-zz-5L3" secondAttribute="bottom" constant="8" symbolic="YES" id="mk2-jz-hr9"/>
-                            <constraint firstItem="xiF-69-fTr" firstAttribute="leading" secondItem="T5E-wd-qiu" secondAttribute="leadingMargin" id="qif-1g-v9b"/>
-                            <constraint firstAttribute="bottom" secondItem="xiF-69-fTr" secondAttribute="bottom" constant="20" symbolic="YES" id="vcg-Dj-R2o"/>
+                            <constraint firstItem="gpd-9S-Kzt" firstAttribute="leading" secondItem="T5E-wd-qiu" secondAttribute="leading" id="7hK-0c-a0f"/>
+                            <constraint firstItem="gpd-9S-Kzt" firstAttribute="top" secondItem="vOB-zz-5L3" secondAttribute="bottom" id="8Lg-t6-uOV"/>
+                            <constraint firstItem="gpd-9S-Kzt" firstAttribute="bottom" secondItem="mLW-XY-TxC" secondAttribute="top" id="zD1-OA-6Ac"/>
+                            <constraint firstAttribute="trailing" secondItem="gpd-9S-Kzt" secondAttribute="trailing" id="zwh-Hf-2rJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
+                    <connections>
+                        <outlet property="barChart" destination="gpd-9S-Kzt" id="2wk-NE-fKC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
