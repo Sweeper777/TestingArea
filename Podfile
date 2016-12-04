@@ -7,6 +7,6 @@ target 'TestingArea' do
     pod 'EZSwiftExtensions', '1.7'
     pod 'EZLoadingActivity'
     pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'master'
-    pod 'BNHtmlPdfKit', '~> 0.4'
+    pod 'Charts'
 end
 

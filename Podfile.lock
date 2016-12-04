@@ -1,11 +1,13 @@
 PODS:
-  - BNHtmlPdfKit (0.4.2)
+  - Charts (3.0.0):
+    - Charts/Core (= 3.0.0)
+  - Charts/Core (3.0.0)
   - Eureka (2.0.0-beta.1)
   - EZLoadingActivity (0.9)
   - EZSwiftExtensions (1.7)
 
 DEPENDENCIES:
-  - BNHtmlPdfKit (~> 0.4)
+  - Charts
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `master`)
   - EZLoadingActivity
   - EZSwiftExtensions (= 1.7)
@@ -21,11 +23,11 @@ CHECKOUT OPTIONS:
     :git: https://github.com/xmartlabs/Eureka.git
 
 SPEC CHECKSUMS:
-  BNHtmlPdfKit: f62aeccf09475e491a6ea3ad949e47f49a5c55a5
+  Charts: beb341928d2135613b4325a6c6aff9f2f6de895e
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   EZLoadingActivity: 7ebb84c1f2510a62d2bc0a17cc9d75634f92606d
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
 
-PODFILE CHECKSUM: 399f62a1e63584a8af7124afe1cffb28930597bf
+PODFILE CHECKSUM: e17175e9fb7fa9a1e70b7f1d969ca3fbcb666de4
 
 COCOAPODS: 1.1.0.beta.1

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BNHtmlPdfKit.xcscheme</key>
+		<key>Charts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,16 +32,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>24167CA5A3D4AB0FE2D21628C2BCED50</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>32B28B4028D630EC2D989F4925841E14</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>6D46ACCA4C3F2BE3B8F9A9E35B37F4A4</key>
 		<dict>
 			<key>primary</key>
@@ -53,6 +43,16 @@
 			<true/>
 		</dict>
 		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>909ED2F977F88D9F0901710ADCA5B6EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9949B1A6A3FB5BF7005BF09C75350B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
