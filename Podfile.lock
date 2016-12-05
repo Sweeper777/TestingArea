@@ -5,12 +5,14 @@ PODS:
   - Eureka (2.0.0-beta.1)
   - EZLoadingActivity (1.01)
   - EZSwiftExtensions (1.7)
+  - SwiftChart (0.4.0)
 
 DEPENDENCIES:
   - Charts
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `master`)
   - EZLoadingActivity
   - EZSwiftExtensions (= 1.7)
+  - SwiftChart (~> 0.4)
 
 EXTERNAL SOURCES:
   Eureka:
@@ -27,7 +29,8 @@ SPEC CHECKSUMS:
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
+  SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
 
-PODFILE CHECKSUM: e17175e9fb7fa9a1e70b7f1d969ca3fbcb666de4
+PODFILE CHECKSUM: 2593571108ac3917b48bc4653aea53a72f3cf678
 
 COCOAPODS: 1.1.0.beta.1
