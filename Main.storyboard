@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--My View Controller-->
+        <!--My View Controller2-->
         <scene sceneID="wIz-ix-jIS">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="X4n-4q-1cD" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="X4n-4q-1cD" customClass="MyViewController2" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vOB-zz-5L3"/>
                         <viewControllerLayoutGuide type="bottom" id="mLW-XY-TxC"/>
@@ -55,7 +55,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-9S-Kzt" customClass="BarChartView" customModule="Charts">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-9S-Kzt" customClass="Chart" customModule="SwiftChart">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -70,7 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                     <connections>
-                        <outlet property="barChart" destination="gpd-9S-Kzt" id="2wk-NE-fKC"/>
+                        <outlet property="chart" destination="gpd-9S-Kzt" id="369-PT-MjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
