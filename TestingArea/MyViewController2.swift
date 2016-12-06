@@ -21,4 +21,10 @@ class MyViewController2: UIViewController {
         let max = ceil(series.data.map { $0.y }.max()!)
         chart.yLabels = Array(stride(from: 0, through: max, by: 1))
     }
+    
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        let chartSeries = ChartSeries([3, 5, 4, 10, 16, 12, 7, 8])
+        chartSeries.area = true
+        chart.add(chartSeries)
+    }
 }
