@@ -2,6 +2,7 @@ import UIKit
 import AVFoundation
 import EZSwiftExtensions
 import SwiftChart
+import MLScreenshot
 
 class MyViewController2: UIViewController {
     @IBOutlet var chart: Chart!
@@ -23,8 +24,10 @@ class MyViewController2: UIViewController {
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
-        let chartSeries = ChartSeries([3, 5, 4, 10, 16, 12, 7, 8])
-        chartSeries.area = true
-        chart.add(chartSeries)
+        let image = chart.screenshot()
+        let imgView = UIImageView(frame: self.view.frame)
+        imgView.contentMode = .scaleAspectFit
+        imgView.image = image
+        self.view.addSubview(imgView)
     }
 }
