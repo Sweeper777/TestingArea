@@ -9,5 +9,6 @@ target 'TestingArea' do
     pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'master'
     pod 'Charts'
     pod 'SwiftChart', '~> 0.4'
+    pod 'MLScreenshot'
 end
 

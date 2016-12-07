@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MLScreenshot.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>00ED4E56F35D84ABC0216076A5998A92</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>07C004EE9675A950E771D1109A09AE79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>226F95A09F4F36F9ED92352969CBEEE6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>369D55024263B705F29E62E6203D8467</key>
+		<key>5DDB7CE6AF49FF64213DD6B3F39F35A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -63,6 +68,11 @@
 			<true/>
 		</dict>
 		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3BE1481AC01E986980D7C24CAEA636F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
