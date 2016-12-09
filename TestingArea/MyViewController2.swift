@@ -6,6 +6,8 @@ import MLScreenshot
 
 class MyViewController2: UIViewController {
     @IBOutlet var chart: Chart!
+    @IBOutlet var label: UILabel!
+    @IBOutlet var labelLeadingMarginConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         let labels = ["A", "B", "C", "D", "E", "F", "G", "H", ""]
