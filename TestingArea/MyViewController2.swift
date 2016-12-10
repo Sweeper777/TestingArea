@@ -10,6 +10,7 @@ class MyViewController2: UIViewController, ChartDelegate {
     @IBOutlet var labelLeadingMarginConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        label.isHidden = true
         let labels = ["A", "B", "C", "D", "E", "F", "G", "H", ""]
         let chartSeries = ChartSeries([10, 5, 7, 10, 3, 6, 4, 7])
         chartSeries.area = true
@@ -61,6 +62,6 @@ class MyViewController2: UIViewController, ChartDelegate {
     }
     
     func didFinishTouchingChart(_ chart: Chart) {
-        
+        label.isHidden = true
     }
 }
