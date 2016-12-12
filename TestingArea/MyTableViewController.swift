@@ -15,4 +15,8 @@ class MyTableViewController: UITableViewController {
         cell!.textLabel!.text = "Hello \(indexPath.row)"
         return cell!
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected")
+    }
 }
