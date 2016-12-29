@@ -11,6 +11,7 @@
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
 		5A171C851DF7328600567EEE /* MLScreenshot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A171C841DF7328600567EEE /* MLScreenshot.framework */; };
 		5A171DC31DECAB92007E2DEE /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A171DC21DECAB92007E2DEE /* Eureka.framework */; };
+		5A183DF61E15038F00FAFC52 /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */; };
 		5A1D44CF1DF346C600D1508B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1D44CE1DF346C600D1508B /* Charts.framework */; };
 		5A1DB3071DF465370061FAEB /* SwiftChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1DB3061DF465370061FAEB /* SwiftChart.framework */; };
 		5A1EC8701DD2658F009C23EF /* EZLoadingActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1EC86C1DD2658F009C23EF /* EZLoadingActivity.framework */; };
@@ -94,6 +95,7 @@
 		5A171C841DF7328600567EEE /* MLScreenshot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MLScreenshot.framework; path = "Pods/../build/Debug-iphoneos/MLScreenshot/MLScreenshot.framework"; sourceTree = "<group>"; };
 		5A171DC21DECAB92007E2DEE /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Release-iphoneos/Eureka.framework"; sourceTree = "<group>"; };
 		5A177EEB1DD9F09B00FCB79C /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Debug-iphoneos/Eureka/Eureka.framework"; sourceTree = "<group>"; };
+		5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUtils.framework; path = "Pods/../build/Debug-iphoneos/SwiftyUtils/SwiftyUtils.framework"; sourceTree = "<group>"; };
 		5A1D44CE1DF346C600D1508B /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		5A1DB3041DF45E7D0061FAEB /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SwiftCharts/SwiftCharts.framework"; sourceTree = "<group>"; };
 		5A1DB3061DF465370061FAEB /* SwiftChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftChart.framework; path = "Pods/../build/Debug-iphoneos/SwiftChart/SwiftChart.framework"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A183DF61E15038F00FAFC52 /* SwiftyUtils.framework in Frameworks */,
 				5A171C851DF7328600567EEE /* MLScreenshot.framework in Frameworks */,
 				5A1DB3071DF465370061FAEB /* SwiftChart.framework in Frameworks */,
 				5A1D44CF1DF346C600D1508B /* Charts.framework in Frameworks */,
@@ -183,6 +186,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */,
 				5A171C841DF7328600567EEE /* MLScreenshot.framework */,
 				5A1DB3061DF465370061FAEB /* SwiftChart.framework */,
 				5A1DB3041DF45E7D0061FAEB /* SwiftCharts.framework */,
@@ -753,6 +757,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftChart",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MLScreenshot",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyUtils",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -791,6 +796,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftChart",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MLScreenshot",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyUtils",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -891,6 +897,7 @@
 				5A1FD04C1DFD53390071AE2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AE000FE1CAA0F3A0058B744 /* Build configuration list for PBXProject "TestingArea" */ = {
 			isa = XCConfigurationList;

@@ -8,65 +8,46 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>EZLoadingActivity.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>EZSwiftExtensions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>MLScreenshot.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>SwiftChart.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
+		</dict>
+		<key>SwiftyUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00ED4E56F35D84ABC0216076A5998A92</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>07C004EE9675A950E771D1109A09AE79</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5DDB7CE6AF49FF64213DD6B3F39F35A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,6 +68,21 @@
 			<true/>
 		</dict>
 		<key>A3BE1481AC01E986980D7C24CAEA636F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A52E0A5EADF3F51085D66189BFFD8626</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E28B58672B3012BFD4889B460B2911AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9A405A6205C65243294FADBB5B4419D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

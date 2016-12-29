@@ -10,5 +10,6 @@ target 'TestingArea' do
     pod 'Charts'
     pod 'SwiftChart', '~> 0.4'
     pod 'MLScreenshot'
+    pod 'SwiftyUtils'
 end
 
