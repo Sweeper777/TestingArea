@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIZ-1h-2KH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIZ-1h-2KH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,36 +53,9 @@
                     <view key="view" contentMode="scaleToFill" id="T5E-wd-qiu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhw-d5-uy1" customClass="Chart" customModule="SwiftChart">
-                                <rect key="frame" x="0.0" y="104" width="375" height="255"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="255" id="ss0-qf-XZP"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozi-tJ-8N5">
-                                <rect key="frame" x="150" y="72" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Ozi-tJ-8N5" firstAttribute="top" secondItem="vOB-zz-5L3" secondAttribute="bottom" constant="8" symbolic="YES" id="AZz-VU-h1h"/>
-                            <constraint firstItem="Fhw-d5-uy1" firstAttribute="leading" secondItem="T5E-wd-qiu" secondAttribute="leading" id="Gnq-Kt-Xqv"/>
-                            <constraint firstItem="Ozi-tJ-8N5" firstAttribute="leading" secondItem="T5E-wd-qiu" secondAttribute="leading" constant="150" id="Rqs-hj-3i1"/>
-                            <constraint firstItem="Fhw-d5-uy1" firstAttribute="top" secondItem="Ozi-tJ-8N5" secondAttribute="bottom" constant="11" id="UQm-ko-C7X"/>
-                            <constraint firstAttribute="trailing" secondItem="Fhw-d5-uy1" secondAttribute="trailing" id="vEm-D5-0bU"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
-                    <connections>
-                        <outlet property="chart" destination="Fhw-d5-uy1" id="5Mc-fV-Sy1"/>
-                        <outlet property="label" destination="Ozi-tJ-8N5" id="N43-hF-m6V"/>
-                        <outlet property="labelLeadingMarginConstraint" destination="Rqs-hj-3i1" id="zgf-pd-SOh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
