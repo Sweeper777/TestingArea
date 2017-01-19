@@ -11,5 +11,6 @@ target 'TestingArea' do
     pod 'SwiftChart', '~> 0.4'
     pod 'MLScreenshot'
     pod 'SwiftyUtils'
+    pod 'SlideMenuControllerSwift'
 end
 
