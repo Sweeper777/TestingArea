@@ -19,6 +19,11 @@ class MyViewController2: UIViewController {
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        print("Hello")
+    }
+    
+    override func viewDidLoad() {
+        
         t1 = Timer.runThisEvery(seconds: 1) {
             _ in
             self.label1.text = self.n1.description
