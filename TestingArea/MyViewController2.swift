@@ -10,6 +10,14 @@ class MyViewController2: UIViewController {
     var t1: Timer!
     var t2: Timer!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.slideMenuController()!.isRightOpen() {
+            self.slideMenuController()!.closeRight()
+        } else {
+            self.slideMenuController()!.openRight()
+        }
+    }
+    
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         t1 = Timer.runThisEvery(seconds: 1) {
             _ in
