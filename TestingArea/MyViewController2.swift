@@ -24,15 +24,5 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         
-        t1 = Timer.runThisEvery(seconds: 1) {
-            _ in
-            self.label1.text = self.n1.description
-            self.n1 += 1
-        }
-        
-        t2 = Timer.every(1) {
-            self.label2.text = self.n2.description
-            self.n2 += 1
-        }
     }
 }

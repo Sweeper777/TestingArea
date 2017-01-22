@@ -12,5 +12,6 @@ target 'TestingArea' do
     pod 'MLScreenshot'
     pod 'SwiftyUtils'
     pod 'SlideMenuControllerSwift'
+    pod 'ASToast'
 end
 

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ASToast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Charts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,17 +57,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>000312B5D6AF3CEF7850A3BE5D906BA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>07C004EE9675A950E771D1109A09AE79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>38C9371D0DC79F209B7FC35787B63F7C</key>
+		<key>6819754D454CCFB5578F7BB3E4DD1A9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6D46ACCA4C3F2BE3B8F9A9E35B37F4A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6FA19F4C5FB92CDC785BBFD2127FD5C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71C1B082E50EDA52C3575D1C1BA1FB3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A712002D2B765BDF66F4F8B2458500C7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AC576432128E07DC48B00FA3A3EEF912</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AE12A66296911DC1C944EAD480F04318</key>
+		<key>EF8DBCE6371E695719EB144C595932D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,4 +1,5 @@
 PODS:
+  - ASToast (1.0.6)
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
@@ -11,6 +12,7 @@ PODS:
   - SwiftyUtils (0.6.0)
 
 DEPENDENCIES:
+  - ASToast
   - Charts
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `master`)
   - EZLoadingActivity
@@ -31,6 +33,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/xmartlabs/Eureka.git
 
 SPEC CHECKSUMS:
+  ASToast: 126a0ed341e2d19be5bdd448d713ce50e71b0f34
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
@@ -40,6 +43,6 @@ SPEC CHECKSUMS:
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftyUtils: dbfeedd5e01bbf13f23e64ea9fd4c77ffd494688
 
-PODFILE CHECKSUM: 094e3bbc861276e673b257c312abb7c89274e314
+PODFILE CHECKSUM: ff715393d6c2f98bba014e88807f66fafbfe6210
 
 COCOAPODS: 1.1.0.beta.1
