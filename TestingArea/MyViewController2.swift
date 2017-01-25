@@ -2,11 +2,24 @@ import UIKit
 import SwiftyUtils
 import EZSwiftExtensions
 import ASToast
+import NBEmojiSearchView
 
-class MyViewController2: UIViewController {
+class MyViewController2: UIViewController, NBEmojiSearchViewDelegate {
     
     @IBOutlet var view1: UIView!
     @IBOutlet var view2: UIView!
+    
+    var searchView1: NBEmojiSearchView!
+    var searchView2: NBEmojiSearchView!
+    
+    override func viewDidLoad() {
+        searchView1 = NBEmojiSearchView()
+        searchView1.delegate = self
+        searchView1.install(on: view1 as! UITextView)
+        searchView2 = NBEmojiSearchView()
+        searchView2.delegate = self
+        searchView2.install(on: view2 as! UITextView)
+    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        if self.slideMenuController()!.isRightOpen() {
