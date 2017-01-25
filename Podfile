@@ -13,5 +13,6 @@ target 'TestingArea' do
     pod 'SwiftyUtils'
     pod 'SlideMenuControllerSwift'
     pod 'ASToast'
+    pod 'NBEmojiSearchView'
 end
 

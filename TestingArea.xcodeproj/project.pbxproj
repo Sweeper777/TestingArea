@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
+		5A158C8D1E369032007000FD /* NBEmojiSearchView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */; };
+		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
 		5A16C0311E2E01F600D1DE46 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16C0301E2E01F600D1DE46 /* SlideMenuControllerSwift.framework */; };
 		5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */; };
 		5A16C0371E2E0F2500D1DE46 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0361E2E0F2500D1DE46 /* AnotherViewController.swift */; };
@@ -96,6 +98,8 @@
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		5A07C4901D485D910013257D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5A07C4911D485D990013257D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NBEmojiSearchView.framework; path = "Pods/../build/Debug-iphoneos/NBEmojiSearchView/NBEmojiSearchView.framework"; sourceTree = "<group>"; };
+		5A158C8E1E369484007000FD /* AllEmoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllEmoji.json; sourceTree = "<group>"; };
 		5A16C0301E2E01F600D1DE46 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SlideMenuControllerSwift/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
 		5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySlideMenuController.swift; sourceTree = "<group>"; };
 		5A16C0361E2E0F2500D1DE46 /* AnotherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A158C8D1E369032007000FD /* NBEmojiSearchView.framework in Frameworks */,
 				5A181E721E349C2000C058BF /* ASToast.framework in Frameworks */,
 				5A16C0311E2E01F600D1DE46 /* SlideMenuControllerSwift.framework in Frameworks */,
 				5A183DF61E15038F00FAFC52 /* SwiftyUtils.framework in Frameworks */,
@@ -196,6 +201,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */,
 				5A181E711E349C2000C058BF /* ASToast.framework */,
 				5A16C0301E2E01F600D1DE46 /* SlideMenuControllerSwift.framework */,
 				5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */,
@@ -285,6 +291,7 @@
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
 				5AE001151CAA0F3A0058B744 /* Info.plist */,
 				5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */,
+				5A158C8E1E369484007000FD /* AllEmoji.json */,
 			);
 			path = TestingArea;
 			sourceTree = "<group>";
@@ -457,6 +464,7 @@
 			files = (
 				5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */,
 				5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */,
+				5A158C8F1E369484007000FD /* AllEmoji.json in Resources */,
 				5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */,
 				5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */,
 				5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */,
@@ -775,6 +783,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MLScreenshot",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyUtils",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ASToast",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/NBEmojiSearchView",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -815,6 +824,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/MLScreenshot",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/SwiftyUtils",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/ASToast",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/NBEmojiSearchView",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
