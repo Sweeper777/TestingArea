@@ -66,7 +66,7 @@
         <scene sceneID="rGL-8M-CHX">
             <objects>
                 <navigationController storyboardIdentifier="MyVC" id="oIZ-1h-2KH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eAF-b4-NLX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAF-b4-NLX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -90,23 +90,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mp0-He-ccz">
-                                <rect key="frame" x="67" y="86" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OFl-l6-4rr">
+                                <rect key="frame" x="67" y="92" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6R3-BQ-633">
-                                <rect key="frame" x="67" y="403" width="240" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zrG-M5-mxR">
+                                <rect key="frame" x="67" y="367" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                     <connections>
-                        <outlet property="view1" destination="Mp0-He-ccz" id="NlX-lF-hDf"/>
-                        <outlet property="view2" destination="6R3-BQ-633" id="W4a-Kd-tJe"/>
+                        <outlet property="view1" destination="OFl-l6-4rr" id="Fi2-zs-pBu"/>
+                        <outlet property="view2" destination="zrG-M5-mxR" id="WWR-ke-U4t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -117,7 +121,7 @@
         <scene sceneID="d39-5x-uob">
             <objects>
                 <navigationController storyboardIdentifier="VC" id="BJs-fK-8hM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pkd-qP-iAD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -186,7 +190,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Akw-7D-GMU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="624"/>
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="624"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.79215686269999996" green="1" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
