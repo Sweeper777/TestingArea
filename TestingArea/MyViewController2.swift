@@ -21,7 +21,7 @@ class MyViewController2: UIViewController {
 //        } else {
 //            self.slideMenuController()!.openRight()
 //        }
-        view1.makeToast("Message1", duration: 1, position: ASToastPosition.ASToastPositionBotom as AnyObject?, backgroundColor: nil, titleColor: nil, messageColor: nil)
+        view1.makeToast(message: "Message1", duration: 3, position: .bottom, backgroundColor: nil, messageColor: nil)
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
