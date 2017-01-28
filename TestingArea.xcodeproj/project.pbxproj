@@ -108,6 +108,7 @@
 		5A177EEB1DD9F09B00FCB79C /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Debug-iphoneos/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A181E711E349C2000C058BF /* ASToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASToast.framework; path = "Pods/../build/Debug-iphoneos/ASToast/ASToast.framework"; sourceTree = "<group>"; };
 		5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUtils.framework; path = "Pods/../build/Debug-iphoneos/SwiftyUtils/SwiftyUtils.framework"; sourceTree = "<group>"; };
+		5A1AE2DD1E3CE45F0038B1D5 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/pop/pop.framework"; sourceTree = "<group>"; };
 		5A1D44CE1DF346C600D1508B /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		5A1DB3041DF45E7D0061FAEB /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SwiftCharts/SwiftCharts.framework"; sourceTree = "<group>"; };
 		5A1DB3061DF465370061FAEB /* SwiftChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftChart.framework; path = "Pods/../build/Debug-iphoneos/SwiftChart/SwiftChart.framework"; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A1AE2DD1E3CE45F0038B1D5 /* pop.framework */,
 				5AE20D801E38951E0064968B /* pop.framework */,
 				5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */,
 				5A181E711E349C2000C058BF /* ASToast.framework */,

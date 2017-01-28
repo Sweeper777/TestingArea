@@ -2,17 +2,12 @@ import UIKit
 import SwiftyUtils
 import EZSwiftExtensions
 import ASToast
-import pop
 
 class MyViewController2: UIViewController {
     
     @IBOutlet var view1: UIView!
     
     override func viewDidLoad() {
-        let anim = POPSpringAnimation()
-        anim.fromValue = 0
-        anim.toValue = 1
-        view1.layer.pop_add(anim, forKey: "borderWidth")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
