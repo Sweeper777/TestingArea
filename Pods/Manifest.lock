@@ -1,5 +1,5 @@
 PODS:
-  - ASToast (1.0.6)
+  - ASToast (1.0.7)
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
@@ -10,7 +10,7 @@ PODS:
   - pop (1.0.9)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
-  - SwiftyUtils (0.6.0)
+  - SwiftyUtils (0.7.0)
 
 DEPENDENCIES:
   - ASToast
@@ -31,11 +31,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Eureka:
-    :commit: ca07d8bb2c2e20c3b24fd6e1ab4dacc203c1a197
+    :commit: c8288eae13678f9b5467f7580b052059a77a884b
     :git: https://github.com/xmartlabs/Eureka.git
 
 SPEC CHECKSUMS:
-  ASToast: 126a0ed341e2d19be5bdd448d713ce50e71b0f34
+  ASToast: 111dda73186fcf091193a38eb31de3013bd392a7
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
@@ -44,7 +44,7 @@ SPEC CHECKSUMS:
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
-  SwiftyUtils: dbfeedd5e01bbf13f23e64ea9fd4c77ffd494688
+  SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
 
 PODFILE CHECKSUM: 951553acb27cc9c5b34befc71c913624c57c8d35
 
