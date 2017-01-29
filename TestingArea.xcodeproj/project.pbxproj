@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
-		5A158C8D1E369032007000FD /* NBEmojiSearchView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */; };
 		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
 		5A16C0311E2E01F600D1DE46 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16C0301E2E01F600D1DE46 /* SlideMenuControllerSwift.framework */; };
 		5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */; };
@@ -169,7 +168,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A158C8D1E369032007000FD /* NBEmojiSearchView.framework in Frameworks */,
 				5A181E721E349C2000C058BF /* ASToast.framework in Frameworks */,
 				5A16C0311E2E01F600D1DE46 /* SlideMenuControllerSwift.framework in Frameworks */,
 				5A183DF61E15038F00FAFC52 /* SwiftyUtils.framework in Frameworks */,
