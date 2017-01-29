@@ -12,6 +12,13 @@ class MyViewController2: UIViewController {
     var j = 0
     
     override func viewDidLoad() {
+        let timer1 = Timer.init(timeInterval: 1, target: self, selector: #selector(a), userInfo: nil, repeats: true)
+        timer1.start()
+        
+        Timer.every(1, {
+            self.view2.text = self.j.description
+            self.j += 1
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -25,5 +32,10 @@ class MyViewController2: UIViewController {
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
         print("Hello")
+    }
+    
+    func a() {
+        view1.text = self.i.description
+        self.i += 1
     }
 }
