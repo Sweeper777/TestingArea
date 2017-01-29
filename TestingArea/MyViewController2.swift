@@ -5,7 +5,11 @@ import ASToast
 
 class MyViewController2: UIViewController {
     
-    @IBOutlet var view1: UIView!
+    @IBOutlet var view1: UILabel!
+    @IBOutlet var view2: UILabel!
+    
+    var i = 0
+    var j = 0
     
     override func viewDidLoad() {
     }
