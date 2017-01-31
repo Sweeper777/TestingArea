@@ -2,12 +2,14 @@ import UIKit
 import SwiftyUtils
 import EZSwiftExtensions
 import ASToast
+import pop
 import NGORoundedButton
 
 class MyViewController2: UIViewController {
     
     @IBOutlet var view1: UILabel!
     @IBOutlet var view2: UILabel!
+    @IBOutlet var view3: UIView!
     
     var i = 0
     var j = 0
@@ -33,6 +35,12 @@ class MyViewController2: UIViewController {
         sender.customImage = UIImage(named: "settings")
     }
     
+    func test1() {
+        let anim = POPSpringAnimation()
+        anim.fromValue = 0
+        anim.toValue = 30
+        anim.velocity = 0.1
+        view1.layer.pop_add(anim, forKey: "borderWidth")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
