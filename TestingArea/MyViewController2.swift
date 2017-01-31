@@ -22,6 +22,12 @@ class MyViewController2: UIViewController {
         
         button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
         
+        let closure: (Timer) -> Void = { (timer) -> Void in
+            print("Hello")
+            timer.invalidate()
+        }
+        _ = Timer.every(1, closure)
+    }
     
     func buttonClicked(sender: NGORoundedButton) {
         sender.customImage = UIImage(named: "settings")

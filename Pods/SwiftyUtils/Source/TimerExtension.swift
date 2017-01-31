@@ -23,9 +23,10 @@ public extension Timer {
 
     @nonobjc
     public class func every(_ interval: TimeInterval, _ block: @escaping (Timer) -> Void) -> Timer {
-        let timer = Timer.new(every: interval, block)
-        timer.start()
-        return timer
+        let fireDate = CFAbsoluteTimeGetCurrent()
+        let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, interval, 0, 0, { x in block(x!) })
+        CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, CFRunLoopMode.commonModes)
+        return timer!
     }
 
 }
