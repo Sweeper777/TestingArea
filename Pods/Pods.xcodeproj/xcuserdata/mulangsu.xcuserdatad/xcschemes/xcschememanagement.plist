@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NGORoundedButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +72,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>082856162CD6CC4645326096C460ECF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2CE8E0CD96C474CBE7D9DB67FDFF88AC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>367775726ABA7003552CA455107C1627</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54151FB687366D085B94576E5935471C</key>
+		<key>4C34092E40FDEE540E5A9C6E4DA0E5F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>779D2805514B383C7B67A9B5F7E26982</key>
+		<key>6F05790E8ADCFC6CE0C3032C79BAC301</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,17 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9C9AECBB76F5AC2BD9262DD1A319220</key>
+		<key>C287E1EFD5921FAD69EF96374CFEF0D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D131250741275C65072C0A2807C4ADFF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FAC8AB745F8978205C04884E55444CB4</key>
+		<key>CE9FFA3A52A3EC3714E038D40F2E4164</key>
 		<dict>
 			<key>primary</key>
 			<true/>

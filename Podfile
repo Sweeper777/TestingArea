@@ -14,5 +14,6 @@ target 'TestingArea' do
     pod 'SlideMenuControllerSwift'
     pod 'ASToast'
     pod 'pop'
+    pod 'NGORoundedButton'
 end
 
