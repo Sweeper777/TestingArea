@@ -50,6 +50,16 @@ class MyViewController2: UIViewController {
         anim.velocity = 2
         
         view1.layer.pop_add(anim, forKey: "borderWidth")
+    }
+    
+    func test3() {
+        let anim = POPBasicAnimation(propertyNamed: kPOPLayerCornerRadius)!
+        anim.toValue = view3.w / 2
+        anim.duration = 0.3
+        anim.timingFunction = CAMediaTimingFunction.init(name: "easeInEaseOut")
+        
+        view3.layer.pop_add(anim, forKey: "cornerRadius")
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        if self.slideMenuController()!.isRightOpen() {
 //            self.slideMenuController()!.closeRight()
