@@ -17,6 +17,16 @@ class MyViewController2: UIViewController {
         button.frame = CGRect(origin: CGPoint(x: 100, y: 100), size: button.size)
         self.view.addSubview(button)
         
+        button.width = 44
+        button.height = 44
+        
+        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        
+    
+    func buttonClicked(sender: NGORoundedButton) {
+        sender.customImage = UIImage(named: "settings")
+    }
+    
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
