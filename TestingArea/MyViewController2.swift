@@ -43,6 +43,13 @@ class MyViewController2: UIViewController {
         view1.layer.pop_add(anim, forKey: "borderWidth")
     }
     
+    func test2() {
+        let anim = POPSpringAnimation(propertyNamed: kPOPLayerBorderWidth)!
+        anim.toValue = 3
+        anim.springBounciness = 1
+        anim.velocity = 2
+        
+        view1.layer.pop_add(anim, forKey: "borderWidth")
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        if self.slideMenuController()!.isRightOpen() {
 //            self.slideMenuController()!.closeRight()
