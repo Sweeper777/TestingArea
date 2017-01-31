@@ -2,6 +2,7 @@ import UIKit
 import SwiftyUtils
 import EZSwiftExtensions
 import ASToast
+import NGORoundedButton
 
 class MyViewController2: UIViewController {
     
@@ -12,13 +13,10 @@ class MyViewController2: UIViewController {
     var j = 0
     
     override func viewDidLoad() {
-        let timer1 = Timer.init(timeInterval: 1, target: self, selector: #selector(a), userInfo: nil, repeats: true)
-        timer1.start()
+        let button = NGORoundedButton(buttonCustomImage: UIImage(named: "home"), andShape: .circle)!
+        button.frame = CGRect(origin: CGPoint(x: 100, y: 100), size: button.size)
+        self.view.addSubview(button)
         
-        Timer.every(1, {
-            self.view2.text = self.j.description
-            self.j += 1
-        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
