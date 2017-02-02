@@ -126,6 +126,7 @@
                         <outlet property="view1" destination="Up1-QK-DEJ" id="533-b3-Tuj"/>
                         <outlet property="view2" destination="Qch-Xj-YCY" id="apt-Tv-tJS"/>
                         <outlet property="view3" destination="CMQ-rv-Fkg" id="0le-Jc-Ovh"/>
+                        <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>

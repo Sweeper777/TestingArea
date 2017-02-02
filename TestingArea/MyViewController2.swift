@@ -38,6 +38,7 @@ class MyViewController2: UIViewController {
     
     func buttonClicked(sender: NGORoundedButton) {
         sender.customImage = UIImage(named: "settings")
+        performSegue(withIdentifier: "mySegue", sender: IndexPath(row: 0, section: 0))
     }
     
     func test1() {
@@ -91,5 +92,11 @@ class MyViewController2: UIViewController {
     func a() {
         view1.text = self.i.description
         self.i += 1
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = sender as? IndexPath {
+            print(indexPath.row)
+        }
     }
 }
