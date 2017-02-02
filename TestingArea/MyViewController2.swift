@@ -29,6 +29,11 @@ class MyViewController2: UIViewController {
             timer.invalidate()
         }
         _ = Timer.every(1, closure)
+        perform(#selector(imageSelected), with: "Hello", afterDelay: 0.1)
+    }
+    
+    func imageSelected(image: String) {
+        print(image)
     }
     
     func buttonClicked(sender: NGORoundedButton) {
