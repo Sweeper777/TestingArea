@@ -60,13 +60,23 @@ class MyViewController2: UIViewController {
         
         view3.layer.pop_add(anim, forKey: "cornerRadius")
     }
+    
+    func test4() {
+        let anim = POPBasicAnimation(propertyNamed: kPOPViewBackgroundColor)!
+        anim.toValue = UIColor.blue
+        anim.duration = 0.3
+        
+        view3.layer.pop_add(anim, forKey: "color")
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        if self.slideMenuController()!.isRightOpen() {
 //            self.slideMenuController()!.closeRight()
 //        } else {
 //            self.slideMenuController()!.openRight()
 //        }
-        view1.makeToast(message: "Message1", duration: 3, position: .bottom, backgroundColor: nil, messageColor: nil)
+        test3()
+        test4()
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
