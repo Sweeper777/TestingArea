@@ -1,5 +1,5 @@
 PODS:
-  - ASToast (1.0.7)
+  - ASToast (1.0.8)
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
@@ -23,7 +23,7 @@ DEPENDENCIES:
   - SwiftyUtils
 
 SPEC CHECKSUMS:
-  ASToast: 111dda73186fcf091193a38eb31de3013bd392a7
+  ASToast: 60d9280c1dd1fdacc8755f666ec48cbe0d307be4
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638

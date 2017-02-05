@@ -42,7 +42,6 @@
 		5AFEC1141DA046900054FAAA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEC1131DA046900054FAAA /* ExtensionDelegate.swift */; };
 		5AFEC1161DA046900054FAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1151DA046900054FAAA /* Assets.xcassets */; };
 		5AFEC11A1DA046900054FAAA /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5AFEC1001DA0468F0054FAAA /* Watch.app */; };
-		5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEF2FC1D688E9000176303 /* MyView.swift */; };
 		BDF6CCE6DBE274D454B50F43 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86838F400CA1D75975B72135 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,7 +146,6 @@
 		5AFEC1131DA046900054FAAA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		5AFEC1151DA046900054FAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AFEC1171DA046900054FAAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AFEF2FC1D688E9000176303 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		86838F400CA1D75975B72135 /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872C31A8576DB1452420218 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
 		B57A215E98C1AB22AFC7D1FF /* Pods-TestingArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.release.xcconfig"; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
-				5AFEF2FC1D688E9000176303 /* MyView.swift */,
 				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
@@ -551,7 +548,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFEF2FD1D688E9000176303 /* MyView.swift in Sources */,
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
 				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
