@@ -14,22 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>EZLoadingActivity.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>EZSwiftExtensions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Eureka.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MLScreenshot.xcscheme</key>
+		<key>LTMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,22 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>082856162CD6CC4645326096C460ECF6</key>
+		<key>3BC78682B24BE6A8795120A463A9D872</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2CE8E0CD96C474CBE7D9DB67FDFF88AC</key>
+		<key>3C900E8E2449EBBCC12128A9BDA69E7F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>367775726ABA7003552CA455107C1627</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4C34092E40FDEE540E5A9C6E4DA0E5F9</key>
+		<key>4F4D186F905327BBA338B68164F6B885</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,22 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F05790E8ADCFC6CE0C3032C79BAC301</key>
+		<key>9FB5827CD2F66D864A43BFF90BE1526D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>903A108934E1A089B76F443DC34C8E54</key>
+		<key>AD6A84D0C3B7298C8DEE81A61EBB8D4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3BE1481AC01E986980D7C24CAEA636F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C287E1EFD5921FAD69EF96374CFEF0D2</key>
+		<key>C8489C7C821FC7A897FAD228F6ACACB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

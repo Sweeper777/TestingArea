@@ -5,15 +5,13 @@ use_frameworks!
 
 target 'TestingArea' do
     pod 'EZSwiftExtensions', '1.7'
-    pod 'EZLoadingActivity'
-    pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git', :branch => 'master'
     pod 'Charts'
     pod 'SwiftChart', '~> 0.4'
-    pod 'MLScreenshot'
     pod 'SwiftyUtils'
     pod 'SlideMenuControllerSwift'
     pod 'ASToast'
     pod 'pop'
     pod 'NGORoundedButton'
+    pod 'LTMorphingLabel'
 end
 

@@ -3,10 +3,8 @@ PODS:
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
-  - Eureka (2.0.0-beta.1)
-  - EZLoadingActivity (1.01)
   - EZSwiftExtensions (1.7)
-  - MLScreenshot (1.0.3)
+  - LTMorphingLabel (0.4.0)
   - NGORoundedButton (3.1)
   - pop (1.0.9)
   - SlideMenuControllerSwift (3.0.1)
@@ -16,39 +14,25 @@ PODS:
 DEPENDENCIES:
   - ASToast
   - Charts
-  - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `master`)
-  - EZLoadingActivity
   - EZSwiftExtensions (= 1.7)
-  - MLScreenshot
+  - LTMorphingLabel
   - NGORoundedButton
   - pop
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftyUtils
 
-EXTERNAL SOURCES:
-  Eureka:
-    :branch: master
-    :git: https://github.com/xmartlabs/Eureka.git
-
-CHECKOUT OPTIONS:
-  Eureka:
-    :commit: c8288eae13678f9b5467f7580b052059a77a884b
-    :git: https://github.com/xmartlabs/Eureka.git
-
 SPEC CHECKSUMS:
   ASToast: 111dda73186fcf091193a38eb31de3013bd392a7
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
-  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
-  EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
-  MLScreenshot: 09b476048a115b1f34a2e7347bb8d473b62682bd
+  LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
   NGORoundedButton: dd1e7a293ccc16e0f5c073ba9be62b0fb8b8d496
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
 
-PODFILE CHECKSUM: 27f1e6fdac5086291932c4b6fa9e268ecde5a2f2
+PODFILE CHECKSUM: ccb76a5ebe7d91e5075bb777e598415ff70727cc
 
 COCOAPODS: 1.1.0.beta.1
