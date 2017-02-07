@@ -21,4 +21,13 @@ class MyViewController2: UIViewController {
         textField.borderStyle = .roundedRect
         self.view.addSubview(textField)
     }
+    
+    func test1() {
+        let someView = UIView()
+        someView.backgroundColor = UIColor.green
+        someView.width = 100
+        someView.height = 100
+        print(type(of: textField.inputView))
+        textField.inputAccessoryView = someView
+    }
 }
