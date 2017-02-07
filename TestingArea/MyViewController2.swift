@@ -12,7 +12,7 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         label.morphingEffect = .evaporate
         Timer.runThisAfterDelay(seconds: 3) {
-            self.label.text = "Hello"
+            self.label.text = "60:00"
         }
     }
 }
