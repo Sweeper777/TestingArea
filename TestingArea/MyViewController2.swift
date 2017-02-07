@@ -30,4 +30,12 @@ class MyViewController2: UIViewController {
         print(type(of: textField.inputView))
         textField.inputAccessoryView = someView
     }
+    
+    func test2() {
+        let someView = UIView()
+        someView.backgroundColor = UIColor.green
+        someView.width = 100
+        someView.height = 100
+        textField.inputView = someView
+    }
 }
