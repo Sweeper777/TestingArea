@@ -38,4 +38,10 @@ class MyViewController2: UIViewController {
         someView.height = 100
         textField.inputView = someView
     }
+    
+    func test3() {
+        let someView = UIToolbar(frame: CGRect.zero.with(height: 40))
+        someView.items = [UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(buttonTapped))]
+        textField.inputAccessoryView = someView
+    }
 }
