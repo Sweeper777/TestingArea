@@ -51,6 +51,16 @@ class MyViewController2: UIViewController {
             print(self.textField.selectedTextRange!)
         }, for: .touchUpInside)
         
+        let button2 = RFToolbarButton(title: "Test2", andEventHandler: {
+            self.textField.insertText("****")
+            var range = self.textField.selectedRange!
+            range.location -= 2
+            self.textField.selectedTextRange = range.toTextRange(textInput: self.textField)
+            self.textField.insertText("iatlic text here")
+            let endPos = self.textField.selectedRange!.location
+            self.textField.selectedTextRange = NSRange(location: endPos - 16, length: 16).toTextRange(textInput: self.textField)
+        }, for: .touchUpInside)
+        
         textField.inputAccessoryView = RFKeyboardToolbar(buttons: [button1!, button2!])
     }
 extension UITextInput {
