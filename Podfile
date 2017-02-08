@@ -13,5 +13,6 @@ target 'TestingArea' do
     pod 'pop'
     pod 'NGORoundedButton'
     pod 'LTMorphingLabel'
+    pod 'RFKeyboardToolbar'
 end
 

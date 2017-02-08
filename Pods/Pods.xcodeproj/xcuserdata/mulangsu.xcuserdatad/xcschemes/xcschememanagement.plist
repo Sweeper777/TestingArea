@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RFKeyboardToolbar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +67,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BC78682B24BE6A8795120A463A9D872</key>
+		<key>0ED2CD6BE8F89FAC62A3F5F3B702BEB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4F4D186F905327BBA338B68164F6B885</key>
+		<key>41828E25DDB1D793E1B9846C7C870FF1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>519C3EC4813E73973DDEC5657544F4F0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,17 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9FB5827CD2F66D864A43BFF90BE1526D</key>
+		<key>6DC59B088B0C8AAF5C18B8E42D00E691</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AD6A84D0C3B7298C8DEE81A61EBB8D4B</key>
+		<key>89659650E5031E2AFDC0A29E2DD2E352</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8489C7C821FC7A897FAD228F6ACACB4</key>
+		<key>B59E7937BBFF121674F6953073BBC173</key>
 		<dict>
 			<key>primary</key>
 			<true/>

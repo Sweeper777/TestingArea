@@ -7,6 +7,7 @@ PODS:
   - LTMorphingLabel (0.4.0)
   - NGORoundedButton (3.1)
   - pop (1.0.9)
+  - RFKeyboardToolbar (1.3)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
   - SwiftyUtils (0.7.0)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - LTMorphingLabel
   - NGORoundedButton
   - pop
+  - RFKeyboardToolbar
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftyUtils
@@ -29,10 +31,11 @@ SPEC CHECKSUMS:
   LTMorphingLabel: d9a85f16ac306f0e07321d6819964deb2dc69638
   NGORoundedButton: dd1e7a293ccc16e0f5c073ba9be62b0fb8b8d496
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RFKeyboardToolbar: c96a7d9458564d1fedc8ef6844b6c467934aade2
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
 
-PODFILE CHECKSUM: ccb76a5ebe7d91e5075bb777e598415ff70727cc
+PODFILE CHECKSUM: 7d023be54b676acbd751f2187a025befa9d62535
 
 COCOAPODS: 1.1.0.beta.1
