@@ -53,4 +53,13 @@ class MyViewController2: UIViewController {
         
         textField.inputAccessoryView = RFKeyboardToolbar(buttons: [button1!, button2!])
     }
+extension UITextInput {
+    var selectedRange: NSRange? {
+        guard let range = self.selectedTextRange else { return nil }
+        let location = offset(from: beginningOfDocument, to: range.start)
+        let length = offset(from: range.start, to: range.end)
+        return NSRange(location: location, length: length)
+    }
+}
+
 }
