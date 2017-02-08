@@ -5,6 +5,7 @@ import ASToast
 import pop
 import NGORoundedButton
 import LTMorphingLabel
+import RFKeyboardToolbar
 
 class MyViewController2: UIViewController {
     @IBOutlet var label: LTMorphingLabel!
@@ -43,5 +44,13 @@ class MyViewController2: UIViewController {
         let someView = UIToolbar(frame: CGRect.zero.with(height: 40))
         someView.items = [UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(buttonTapped))]
         textField.inputAccessoryView = someView
+    }
+    
+    func test4() {
+        let button1 = RFToolbarButton(title: "Test1", andEventHandler: {
+            print(self.textField.selectedTextRange!)
+        }, for: .touchUpInside)
+        
+        textField.inputAccessoryView = RFKeyboardToolbar(buttons: [button1!, button2!])
     }
 }
