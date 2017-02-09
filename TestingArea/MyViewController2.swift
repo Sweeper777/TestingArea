@@ -26,6 +26,8 @@ class MyViewController2: UIViewController {
         test4()
         
         flashMemoryButton()
+        
+        navigationItem.leftBarButtonItem = logoutButton
     }
     
     func test1() {
@@ -77,6 +79,11 @@ class MyViewController2: UIViewController {
         
         textField.inputAccessoryView = RFKeyboardToolbar(buttons: [button1!, button2!, button3!])
     }
+    
+    func buttonTapped() {
+        view.endEditing(true)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.makeToast(message: "Hello", duration: 3, backgroundColor: nil, messageColor: nil)
     }
@@ -120,6 +127,14 @@ class MyViewController2: UIViewController {
             isFlashing = false
         }
     }
+    
+    let logoutButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(buttonTapped))
+        return button
+    }()
+}
+
+
 extension UITextInput {
     var selectedRange: NSRange? {
         guard let range = self.selectedTextRange else { return nil }
