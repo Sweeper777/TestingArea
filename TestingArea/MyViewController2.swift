@@ -10,7 +10,7 @@ import RFKeyboardToolbar
 class MyViewController2: UIViewController {
     @IBOutlet var label: LTMorphingLabel!
     
-    var textField: UITextField!
+    var textField: UITextView!
     
     override func viewDidLoad() {
         label.morphingEffect = .evaporate
@@ -18,9 +18,12 @@ class MyViewController2: UIViewController {
             self.label.text = "60:00"
         }
     
-        textField = UITextField(x: 20, y: 200, w: 100, h: 30)
-        textField.borderStyle = .roundedRect
+        textField = UITextView(x: 20, y: 200, w: 200, h: 100)
+        textField.backgroundColor = UIColor.gray
+        textField.isEditable = true
         self.view.addSubview(textField)
+        
+        test4()
     }
     
     func test1() {
@@ -61,7 +64,16 @@ class MyViewController2: UIViewController {
             self.textField.selectedTextRange = NSRange(location: endPos - 16, length: 16).toTextRange(textInput: self.textField)
         }, for: .touchUpInside)
         
-        textField.inputAccessoryView = RFKeyboardToolbar(buttons: [button1!, button2!])
+        let button3 = RFToolbarButton(title: "Test3", andEventHandler: {
+            let range: UITextRange? = self.textField.selectedTextRange
+            let rect: CGRect? = self.textField.caretRect(for: (range?.start)!)
+            let halfLineHeight: CGFloat = self.textField.font!.lineHeight / 2.0
+            let start: UITextPosition? = self.textField.closestPosition(to: CGPoint(x: CGFloat(0), y: CGFloat(rect!.origin.y + halfLineHeight)))
+            self.textField
+                .selectedTextRange = self.textField.textRange(from: start!, to: start!)
+        }, for: .touchUpInside)
+        
+        textField.inputAccessoryView = RFKeyboardToolbar(buttons: [button1!, button2!, button3!])
     }
 extension UITextInput {
     var selectedRange: NSRange? {
