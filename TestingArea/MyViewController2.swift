@@ -24,6 +24,8 @@ class MyViewController2: UIViewController {
         self.view.addSubview(textField)
         
         test4()
+        
+        flashMemoryButton()
     }
     
     func test1() {
@@ -77,6 +79,46 @@ class MyViewController2: UIViewController {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.makeToast(message: "Hello", duration: 3, backgroundColor: nil, messageColor: nil)
+    }
+    
+    var flashesRemaining: Int = 5;
+    var isFlashing: Bool = false
+    
+    @IBOutlet weak var btnMM: UIButton!
+    
+    // Flash the button
+    func flashMemoryButton() {
+        print(self.flashesRemaining)
+        if self.flashesRemaining == 0 {
+            btnMM.alpha = 1
+            return
+        }
+        if !isFlashing {
+            self.btnMM.alpha = 1.0
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseInOut, .allowUserInteraction], animations: {() -> Void in
+                self.btnMM.alpha = 0.0100000003
+            }, completion: {(finished: Bool) -> Void in
+                if finished {
+                    self.flashMemoryButton()
+                    print("lowered alpha")
+                    self.flashesRemaining = self.flashesRemaining - 1
+                }
+            })
+            
+            isFlashing = true
+        }
+        else {
+            UIView.animate(withDuration: 0.1, delay: 0.0, options: [.curveEaseInOut, .beginFromCurrentState], animations: {() -> Void in
+                self.btnMM.alpha = 1.0
+            }, completion: {(finished: Bool) -> Void in
+                if finished {
+                    self.flashMemoryButton()
+                    print("raised alpha")
+                    
+                }
+            })
+            isFlashing = false
+        }
     }
 extension UITextInput {
     var selectedRange: NSRange? {
