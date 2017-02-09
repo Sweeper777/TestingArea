@@ -75,6 +75,9 @@ class MyViewController2: UIViewController {
         
         textField.inputAccessoryView = RFKeyboardToolbar(buttons: [button1!, button2!, button3!])
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.makeToast(message: "Hello", duration: 3, backgroundColor: nil, messageColor: nil)
+    }
 extension UITextInput {
     var selectedRange: NSRange? {
         guard let range = self.selectedTextRange else { return nil }
