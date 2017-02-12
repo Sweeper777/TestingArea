@@ -10,9 +10,6 @@ target 'TestingArea' do
     pod 'SwiftyUtils'
     pod 'SlideMenuControllerSwift'
     pod 'ASToast'
-    pod 'pop'
-    pod 'NGORoundedButton'
-    pod 'LTMorphingLabel'
-    pod 'RFKeyboardToolbar'
+    pod 'FSCalendar'
 end
 
