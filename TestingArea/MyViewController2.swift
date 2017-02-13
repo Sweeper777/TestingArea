@@ -10,6 +10,7 @@ class MyViewController2: UIViewController {
         let settingsItem = YCXMenuItem("Settings", image: #imageLiteral(resourceName: "settings"), target: self, action: #selector(settings))!
         YCXMenu.show(in: self.view, from: sender.frame, menuItems: [homeItem, settingsItem], selected: nil)
         YCXMenu.setHasShadow(true)
+        YCXMenu.setBackgrounColorEffect(YCXMenuBackgrounColorEffectGradient)
     }
     
     func home() {
