@@ -8,6 +8,7 @@ PODS:
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
   - SwiftyUtils (0.7.0)
+  - YCXMenu (0.0.11)
 
 DEPENDENCIES:
   - ASToast
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftyUtils
+  - YCXMenu
 
 SPEC CHECKSUMS:
   ASToast: 60d9280c1dd1fdacc8755f666ec48cbe0d307be4
@@ -26,7 +28,8 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
+  YCXMenu: 6003bcd20d8ac72e3eb3c442c97ed21948c6dc1f
 
-PODFILE CHECKSUM: 0a77a7fd0437fc5be10ea9061d1674c2451b3a1a
+PODFILE CHECKSUM: ebe3c13b27e2747f267d8d70b4e73600d7438e2c
 
 COCOAPODS: 1.1.0.beta.1
