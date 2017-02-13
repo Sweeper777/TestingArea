@@ -8,7 +8,7 @@ class MyViewController2: UIViewController {
     @IBAction func btnClicked(sender: UIButton) {
         let homeItem = YCXMenuItem("Home", image: #imageLiteral(resourceName: "home"), target: self, action: #selector(home))!
         let settingsItem = YCXMenuItem("Settings", image: #imageLiteral(resourceName: "settings"), target: self, action: #selector(settings))!
-        YCXMenu.show(in: self.view, from: sender.frame, menuItems: [homeItem, settingsItem], selected: nil)
+        YCXMenu.show(in: self.view, from: sender.frame, menuItems: [homeItem, settingsItem], selected: { print("\($0) \($1)") })
         YCXMenu.setHasShadow(true)
         YCXMenu.setBackgrounColorEffect(YCXMenuBackgrounColorEffectGradient)
     }
