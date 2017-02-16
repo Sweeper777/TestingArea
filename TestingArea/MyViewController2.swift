@@ -10,8 +10,8 @@ class MyViewController2: UIViewController {
         let settingsItem = YCXMenuItem("Settings", image: #imageLiteral(resourceName: "settings"), target: self, action: #selector(settings))!
         YCXMenu.show(in: self.view, from: sender.frame, menuItems: [homeItem, settingsItem], selected: { print("\($0) \($1)") })
         YCXMenu.setHasShadow(true)
-        YCXMenu.setBackgrounColorEffect(YCXMenuBackgrounColorEffectGradient)
         YCXMenu.setTintColor(UIColor(hex: "5abb5a"))
+        YCXMenu.setSelectedColor(UIColor(hex: "3b7b3b"))
     }
     
     func home() {
