@@ -6,14 +6,14 @@ import SCLAlertView
 
 class MyViewController2: UIViewController {
     @IBAction func btnClicked(sender: UIButton) {
-        let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false, showCircularIcon: false, titleColor: UIColor(hex: "5abb5a")))
+        let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false, showCircularIcon: false))
         let txtLink = alert.addTextField("Enter Link")
         let txtDisplay = alert.addTextField("Enter Display Text")
         alert.addButton("OK", action: {
             print(txtLink.text)
             print(txtDisplay.text)
         })
-        alert.showEdit("Add Hyperlink", subTitle: "")
+        alert.showSuccess("Add Hyperlink", subTitle: "")
     }
     
     func home() {
