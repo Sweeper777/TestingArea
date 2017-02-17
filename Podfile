@@ -12,5 +12,6 @@ target 'TestingArea' do
     pod 'ASToast'
     pod 'FSCalendar'
     pod 'YCXMenu'
+    pod 'SCLAlertView'
 end
 
