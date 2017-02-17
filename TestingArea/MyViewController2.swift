@@ -21,4 +21,12 @@ class MyViewController2: UIViewController {
     func settings() {
         print("Settings tapped")
     }
+    
+    @IBAction func changed() {
+        print("changed")
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
