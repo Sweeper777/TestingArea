@@ -9,14 +9,21 @@ class MyViewController2: UIViewController {
     @IBOutlet var textView: UITextView!
     
     @IBAction func btnClicked(sender: UIButton) {
-        let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false, showCircularIcon: false))
-        let txtLink = alert.addTextField("Enter Link")
-        let txtDisplay = alert.addTextField("Enter Display Text")
-        alert.addButton("OK", action: {
-            print(txtLink.text)
-            print(txtDisplay.text)
-        })
-        alert.showSuccess("Add Hyperlink", subTitle: "")
+    }
+    
+    func test1() {
+        let request = URLRequest(url: URL(string: "https://api.fixer.io/latest?base=HKD")!)
+        let task = URLSession.shared.dataTask(with: request) { (data, reponse, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            DispatchQueue.main.async {
+                self.textView.text = String(data: data!, encoding: String.Encoding.utf8)!
+            }
+        }
+        
+        task.resume()
     }
     
     func home() {
