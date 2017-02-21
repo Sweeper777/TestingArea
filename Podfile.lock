@@ -8,6 +8,7 @@ PODS:
   - SCLAlertView (0.7.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
+  - SwiftyJSON (3.1.4)
   - SwiftyUtils (0.7.0)
   - YCXMenu (0.0.11)
 
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - SCLAlertView
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
+  - SwiftyJSON
   - SwiftyUtils
   - YCXMenu
 
@@ -30,9 +32,10 @@ SPEC CHECKSUMS:
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
   YCXMenu: 6003bcd20d8ac72e3eb3c442c97ed21948c6dc1f
 
-PODFILE CHECKSUM: c29966e1de72224e310b48dfab26aa2159743f28
+PODFILE CHECKSUM: ce8a5563164420e0e221e6b7a6fdc87e8d426d9e
 
 COCOAPODS: 1.1.0.beta.1

@@ -13,5 +13,6 @@ target 'TestingArea' do
     pod 'FSCalendar'
     pod 'YCXMenu'
     pod 'SCLAlertView'
+    pod 'SwiftyJSON'
 end
 
