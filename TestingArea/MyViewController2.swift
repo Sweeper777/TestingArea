@@ -3,8 +3,11 @@ import SwiftyUtils
 import EZSwiftExtensions
 import ASToast
 import SCLAlertView
+import SwiftyJSON
 
 class MyViewController2: UIViewController {
+    @IBOutlet var textView: UITextView!
+    
     @IBAction func btnClicked(sender: UIButton) {
         let alert = SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false, showCircularIcon: false))
         let txtLink = alert.addTextField("Enter Link")
