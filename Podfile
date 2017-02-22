@@ -11,8 +11,9 @@ target 'TestingArea' do
     pod 'SlideMenuControllerSwift'
     pod 'ASToast'
     pod 'FSCalendar'
-    pod 'YCXMenu'
+    pod 'ESPullToRefresh'
     pod 'SCLAlertView'
+    pod 'Alamofire'
     pod 'SwiftyJSON'
 end
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingArea/MyViewController2.swift"
-            timestampString = "509273475.8957"
+            timestampString = "509377377.483355"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "test2()"
             landmarkType = "7">
          </BreakpointContent>
