@@ -7,6 +7,11 @@ import SwiftyJSON
 
 class MyViewController2: UIViewController {
     @IBOutlet var textView: UITextView!
+    @IBOutlet var webView: UIWebView!
+    
+    override func viewDidLoad() {
+        webView.loadHTMLString("<span style=\"color: #ff0000\">some text</span>", baseURL: nil)
+    }
     
     @IBAction func btnClicked(sender: UIButton) {
     }
@@ -43,6 +48,22 @@ class MyViewController2: UIViewController {
         }
         
         task.resume()
+    }
+    
+    func test3() {
+        let printController = UIPrintInteractionController.shared
+        
+        let printInfo = UIPrintInfo(dictionary:nil)
+        printInfo.outputType = UIPrintInfoOutputType.general
+        printInfo.jobName = "some name"
+        printController.printInfo = printInfo
+        
+        let formatter = webView.viewPrintFormatter()
+        
+        formatter.perPageContentInsets = UIEdgeInsets(top: 72, left: 72, bottom: 72, right: 72)
+        printController.printFormatter = formatter
+        
+        printController.present(animated: true, completionHandler: nil)
     }
     func home() {
         print("Home tapped")
