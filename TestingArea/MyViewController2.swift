@@ -80,6 +80,20 @@ class MyViewController2: UIViewController {
             }
         }
     }
+    
+    func test5() {
+        Alamofire.request("https://api.fixer.io/latest?base=HKD").responseString {
+            response in
+            if let error = response.error {
+                print("An error occured: \(error.localizedDescription)")
+                return
+            }
+            DispatchQueue.main.async {
+                self.textView.text = "1 HKD = \(JSON(parseJSON: response.result.value!)["rates"]["GBP"].doubleValue) GBP"
+            }
+        }
+    }
+    
     func home() {
         print("Home tapped")
     }
