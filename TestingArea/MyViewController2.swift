@@ -4,6 +4,7 @@ import EZSwiftExtensions
 import ASToast
 import SCLAlertView
 import SwiftyJSON
+import Alamofire
 
 class MyViewController2: UIViewController {
     @IBOutlet var textView: UITextView!
@@ -14,6 +15,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func btnClicked(sender: UIButton) {
+        test4()
     }
     
     func test1() {
@@ -64,6 +66,19 @@ class MyViewController2: UIViewController {
         printController.printFormatter = formatter
         
         printController.present(animated: true, completionHandler: nil)
+    }
+    
+    func test4() {
+        Alamofire.request("https://api.fixer.io/latest?base=HKD").responseString {
+            response in
+            if let error = response.error {
+                print("An error occured: \(error.localizedDescription)")
+                return
+            }
+            DispatchQueue.main.async {
+                self.textView.text = response.result.value
+            }
+        }
     }
     func home() {
         print("Home tapped")
