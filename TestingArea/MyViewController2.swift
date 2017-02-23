@@ -26,6 +26,24 @@ class MyViewController2: UIViewController {
         task.resume()
     }
     
+    func test2() {
+        let request = URLRequest(url: URL(string: "https://api.fixer.io/latest?base=HKD")!)
+        let task = URLSession.shared.dataTask(with: request) { (data, reponse, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            let json = JSON(data: data!)
+            let str = "1 HKD = \(json["rates"]["GBP"].doubleValue)"
+            
+            DispatchQueue.main.async {
+                self.textView.text = str
+            }
+        }
+        
+        task.resume()
+    }
     func home() {
         print("Home tapped")
     }
