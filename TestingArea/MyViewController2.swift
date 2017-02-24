@@ -11,11 +11,14 @@ class MyViewController2: UIViewController {
     @IBOutlet var webView: UIWebView!
     
     override func viewDidLoad() {
-        webView.loadHTMLString("<span style=\"color: #ff0000\">some text</span>", baseURL: nil)
+        let string = "<div id=\"main\"><b><span style=\"color: #ff0000\">Colored Text</span></b><hr></div>"
+        let stylesPath = Bundle.main.path(forResource: "modest", ofType: "css")
+        let styles = try! String(contentsOfFile: stylesPath!)
+        webView.loadHTMLString("<style>\(styles)</style>\(string)", baseURL: nil)
     }
     
     @IBAction func btnClicked(sender: UIButton) {
-        test4()
+        test3()
     }
     
     func test1() {
