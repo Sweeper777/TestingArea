@@ -11,10 +11,9 @@ class MyViewController2: UIViewController {
     @IBOutlet var webView: UIWebView!
     
     override func viewDidLoad() {
-        let string = "<div id=\"main\"><b><span style=\"color: #ff0000\">Colored Text</span></b><hr></div>"
-        let stylesPath = Bundle.main.path(forResource: "modest", ofType: "css")
-        let styles = try! String(contentsOfFile: stylesPath!)
-        webView.loadHTMLString("<style>\(styles)</style>\(string)", baseURL: nil)
+        textView.text = "🇨🇳"
+        textView.font = UIFont(name: "NotoColorEmoji", size: 37)
+        print(UIFont.familyNames)
     }
     
     @IBAction func btnClicked(sender: UIButton) {
