@@ -14,6 +14,11 @@ class MyViewController2: UIViewController {
         textView.text = "🇨🇳"
         textView.font = UIFont(name: "NotoColorEmoji", size: 37)
         print(UIFont.familyNames)
+        
+        let layer = CAGradientLayer()
+        layer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        layer.locations = [0.5]
+        self.view.layer.addSublayer(layer)
     }
     
     @IBAction func btnClicked(sender: UIButton) {
