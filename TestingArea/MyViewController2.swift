@@ -22,7 +22,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func btnClicked(sender: UIButton) {
-        test3()
+        test4()
     }
     
     func test1() {
@@ -76,7 +76,7 @@ class MyViewController2: UIViewController {
     }
     
     func test4() {
-        Alamofire.request("https://api.fixer.io/latest?base=HKD").responseString {
+        Alamofire.request("https://api.fixer.io/latest?base=USD&symbols=EUR,JPY,GBP,AUD,CAD&amount=1").responseString {
             response in
             if let error = response.error {
                 print("An error occured: \(error.localizedDescription)")
