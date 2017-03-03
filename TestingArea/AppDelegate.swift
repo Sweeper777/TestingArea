@@ -13,53 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true
     }
-    
-    func test1() {
-        let request = NSFetchRequest<Test>(entityName: "Test")
-        request.predicate = NSPredicate(format: "property1 >= %x", 50)
-        let array = try! managedObjectContext.fetch(request)
-        print(array.count)
-        print(array)
-    }
-    
-    func test2() {
-        let request = NSFetchRequest<Test>(entityName: "Test")
-        let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
-        var components = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: Date())
-        components.hour = 00
-        components.minute = 00
-        components.second = 00
-        let startDate = calendar.date(from: components)
-        components.hour = 23
-        components.minute = 59
-        components.second = 59
-        let endDate = calendar.date(from: components)
-        request.predicate = /*NSCompoundPredicate(notPredicateWithSubpredicate: */NSPredicate(format: "property3 >= %@ AND property3 =< %@", argumentArray: [startDate!, endDate!])/*)*/
-        let array = try! managedObjectContext.fetch(request)
-        print(array.count)
-        print(array)
-    }
-    
-    func test3() {
-        let request = NSFetchRequest<Test>(entityName: "Test")
-        let array = (try! managedObjectContext.fetch(request)).filter { ($0.property3 as! Date).isTheSameDayAs(other: Date()) }
-        print(array.count)
-        print(array)
-    }
-    
-    func test4() {
-        var start = Date()
-        test2()
-        var end = Date()
-        var time = end.timeIntervalSince(start)
-        print("Using NSPredicate took \(time) seconds")
-        
-        start = Date()
-        test3()
-        end = Date()
-        time = end.timeIntervalSince(start)
-        print("Using filter() took \(time) seconds")
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -148,10 +101,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-}
-
-extension Test {
-    public override var description: String {
-        return "{\(property1), \"\(property2!)\", \(property3!), \(property4)}"
-    }
 }
