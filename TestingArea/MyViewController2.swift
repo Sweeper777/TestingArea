@@ -14,6 +14,7 @@ class MyViewController2: UIViewController {
         textView.text = "🇨🇳"
         textView.font = UIFont(name: "NotoColorEmoji", size: 37)
         print(UIFont.familyNames)
+        textView.inputView?.isUserInteractionEnabled = false
         
         let layer = CAGradientLayer()
         layer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
