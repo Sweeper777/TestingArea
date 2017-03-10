@@ -23,11 +23,29 @@ open class SomeLayout: UICollectionViewLayout, SomeProtocol {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+protocol SomeProtocol: class {}
+
+class X {
+    let propertyOfTypeY: Y
+    
+    init(_ y: Y) {
+        propertyOfTypeY = y
+    }
+}
+
+class Y {
+    var propertyOfTypeX: X?
+}
+
 class MyViewController2: UIViewController {
     
     @IBOutlet var theView: ViewWithCollectionView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var webView: UIWebView!
+    
+    var y: Y! = Y()
+    var x: X!
     
     override func viewDidLoad() {
         textView.text = "🇨🇳"
@@ -39,6 +57,11 @@ class MyViewController2: UIViewController {
         layer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
         layer.locations = [0.5]
         self.view.layer.addSublayer(layer)
+        
+        x = X(y)
+        y.propertyOfTypeX = x
+        x = nil
+        y = nil
     }
     
     @IBAction func btnClicked(sender: UIButton) {
