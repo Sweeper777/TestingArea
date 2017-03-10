@@ -1,6 +1,23 @@
 import UIKit
 import CoreData
 
+protocol P {
+    associatedtype T
+}
+
+class Temp<X> {}
+class C1<D:P> {
+    init(tmp: Temp<D.T>) {
+        print(type(of: tmp))
+    }
+}
+
+class C2<L:P> : C1<L> {}
+
+class A: P {
+    typealias T = String
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
