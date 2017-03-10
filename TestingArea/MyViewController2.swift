@@ -6,7 +6,26 @@ import SCLAlertView
 import SwiftyJSON
 import Alamofire
 
+class ViewWithCollectionView: UICollectionView, SomeProtocol {
+    override func awakeFromNib() {
+        collectionViewLayout = SomeLayout(with: self)
+    }
+}
+
+open class SomeLayout: UICollectionViewLayout, SomeProtocol {
+    unowned var delegate: SomeProtocol
+    
+    init(with delegate: SomeProtocol) {
+        self.delegate = delegate
+        super.init()
+    }
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
 class MyViewController2: UIViewController {
+    
+    @IBOutlet var theView: ViewWithCollectionView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var webView: UIWebView!
     
