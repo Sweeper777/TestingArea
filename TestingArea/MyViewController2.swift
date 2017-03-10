@@ -119,7 +119,7 @@ class MyViewController2: UIViewController {
     }
     
     func test4() {
-        Alamofire.request("https://api.fixer.io/latest?base=USD&symbols=EUR,JPY,GBP,AUD,CAD&amount=1").responseString {
+        Alamofire.request("https://api.fixer.io/latest?base=USD&symbols=EUR,JPY,GBP,AUD,CAD&amount=1.0").responseString {
             response in
             if let error = response.error {
                 print("An error occured: \(error.localizedDescription)")
