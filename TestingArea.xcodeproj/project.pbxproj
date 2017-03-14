@@ -10,13 +10,8 @@
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
 		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
-		5A16C0311E2E01F600D1DE46 /* SlideMenuControllerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16C0301E2E01F600D1DE46 /* SlideMenuControllerSwift.framework */; };
 		5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */; };
 		5A16C0371E2E0F2500D1DE46 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0361E2E0F2500D1DE46 /* AnotherViewController.swift */; };
-		5A181E721E349C2000C058BF /* ASToast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A181E711E349C2000C058BF /* ASToast.framework */; };
-		5A183DF61E15038F00FAFC52 /* SwiftyUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */; };
-		5A1D44CF1DF346C600D1508B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1D44CE1DF346C600D1508B /* Charts.framework */; };
-		5A1DB3071DF465370061FAEB /* SwiftChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1DB3061DF465370061FAEB /* SwiftChart.framework */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5A1FD0421DFD53390071AE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0411DFD53390071AE2F /* AppDelegate.swift */; };
 		5A1FD0441DFD53390071AE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0431DFD53390071AE2F /* ViewController.swift */; };
@@ -34,7 +29,6 @@
 		5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA741B1CDD7589007C3B7C /* Main.storyboard */; };
 		5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBC2651D0A9C3900E27822 /* MyViewController.swift */; };
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
-		5AFE43081D8E734200B063D8 /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFE43071D8E734200B063D8 /* EZSwiftExtensions.framework */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
 		5AFEC1041DA046900054FAAA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1021DA046900054FAAA /* Interface.storyboard */; };
 		5AFEC1061DA046900054FAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1051DA046900054FAAA /* Assets.xcassets */; };
@@ -43,7 +37,7 @@
 		5AFEC1141DA046900054FAAA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEC1131DA046900054FAAA /* ExtensionDelegate.swift */; };
 		5AFEC1161DA046900054FAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1151DA046900054FAAA /* Assets.xcassets */; };
 		5AFEC11A1DA046900054FAAA /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5AFEC1001DA0468F0054FAAA /* Watch.app */; };
-		BDF6CCE6DBE274D454B50F43 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86838F400CA1D75975B72135 /* Pods_TestingArea.framework */; };
+		77664586DAB6FEBA3E5AB213 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86838F400CA1D75975B72135 /* Pods_TestingArea.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,13 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A181E721E349C2000C058BF /* ASToast.framework in Frameworks */,
-				5A16C0311E2E01F600D1DE46 /* SlideMenuControllerSwift.framework in Frameworks */,
-				5A183DF61E15038F00FAFC52 /* SwiftyUtils.framework in Frameworks */,
-				5A1DB3071DF465370061FAEB /* SwiftChart.framework in Frameworks */,
-				5A1D44CF1DF346C600D1508B /* Charts.framework in Frameworks */,
-				5AFE43081D8E734200B063D8 /* EZSwiftExtensions.framework in Frameworks */,
-				BDF6CCE6DBE274D454B50F43 /* Pods_TestingArea.framework in Frameworks */,
+				77664586DAB6FEBA3E5AB213 /* Pods_TestingArea.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

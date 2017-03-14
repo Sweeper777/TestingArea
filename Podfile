@@ -9,11 +9,7 @@ target 'TestingArea' do
     pod 'SwiftChart', '~> 0.4'
     pod 'SwiftyUtils'
     pod 'SlideMenuControllerSwift'
-    pod 'ASToast'
-    pod 'FSCalendar'
     pod 'ESPullToRefresh'
-    pod 'SCLAlertView'
-    pod 'Alamofire'
-    pod 'SwiftyJSON'
+    pod 'RealmSwift'
 end
 

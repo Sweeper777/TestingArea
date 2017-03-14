@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ASToast.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Charts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,17 +24,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FSCalendar.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SCLAlertView.xcscheme</key>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -55,11 +45,6 @@
 			<false/>
 		</dict>
 		<key>SwiftChart.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,32 +62,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F680DE5D9B004CF4163EDDCB5A02B36</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>290E56E5F0B028FCA2D992BC71F267D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58F8527E74F83232A1EF0C9675CF627E</key>
+		<key>3452FE0B1B4A8A987E04F53206B28F38</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6819754D454CCFB5578F7BB3E4DD1A9D</key>
+		<key>4AE9500FBB50FBE5CC10DF2FAAEA9C23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68B469EAEA30C90E2366AE672CEE21EF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>69BD146497C1A6637A676B8BB7FDE813</key>
+		<key>5E22C07D03882FABB9861F1875EFE103</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,22 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>BC0E61EFC50BC3553452297A7F417724</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C4BB6E5BE57FC765AC54F61D7825EDA</key>
+		<key>E0216C0323013D2E615FA2CD8A6F1FFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AFFB98590E720DC2B2AAD7870D7B0D1C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E1106EE060BCF2640AC354C502FF7C13</key>
+		<key>E9B3424CBC66111DBAE141C71E56BF1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
