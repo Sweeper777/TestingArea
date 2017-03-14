@@ -29,6 +29,11 @@ class MyViewController2: UIViewController {
         
     }
     
+    func test2() {
+        let realm = (UIApplication.shared.delegate as! AppDelegate).realm!
+        let people = realm.objects(Person.self)
+        print(people)
+    }
 class Person: Object {
     static var nextID = 0
     
