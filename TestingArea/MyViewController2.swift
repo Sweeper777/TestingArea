@@ -47,4 +47,12 @@ class Person: Object {
         return "id"
     }
 }
+
+class Dog: Object {
+    dynamic var name: String = "Unnamed"
+    dynamic var age: Int = 0
+    
+    override static func primaryKey() -> String? {
+        return "name"
+    }
 }
