@@ -11,13 +11,11 @@ class MyViewController2: UIViewController {
     func test1() {
         let realm = (UIApplication.shared.delegate as! AppDelegate).realm!
         let tom = Person()
-        Person.nextID += 1
         tom.name = "Tom"
         tom.age = 30
         tom.isMarried = false
         
         let john = Person()
-        Person.nextID += 1
         john.name = "John"
         john.age = 20
         john.isMarried = true
@@ -38,7 +36,6 @@ class MyViewController2: UIViewController {
     func test3() {
         let realm = (UIApplication.shared.delegate as! AppDelegate).realm!
         let freddy = Person()
-        freddy.id = 2
         freddy.name = "Freddy"
         freddy.age = 30
         freddy.isMarried = false
