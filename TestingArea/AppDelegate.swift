@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        testMigration()
+        testMigration2()
         realm = try! Realm()
         return true
     }
@@ -30,6 +30,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Realm.Configuration.defaultConfiguration = config
     }
     
+    func testMigration2() {
+        let config = Realm.Configuration(
+            schemaVersion: 2,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                    
+                }
+                
+                if (oldSchemaVersion < 2) {
+                    migration.enumerateObjects(ofType: Person.className()) { oldObject, newObject in
+                        let id = oldObject!["id"] as! Int
+                        newObject!["id"] = "\(id)"
+                    }
+                }
+        })
+        
+        Realm.Configuration.defaultConfiguration = config
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
