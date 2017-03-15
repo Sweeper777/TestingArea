@@ -34,8 +34,6 @@ class MyViewController2: UIViewController {
         let people = realm.objects(Person.self)
         print(people)
     }
-class Person: Object {
-    static var nextID = 0
     
     func test3() {
         let realm = (UIApplication.shared.delegate as! AppDelegate).realm!
@@ -53,10 +51,11 @@ class Person: Object {
             realm.add(freddy)
         }
     }
+class Person: Object {
     dynamic var name: String = "Unnamed"
     dynamic var age: Int = 0
     dynamic var isMarried: Bool = false
-    dynamic var id: Int = Person.nextID
+    dynamic var id: String = NSUUID().uuidString
     
     let dogs = List<Dog>()
     
