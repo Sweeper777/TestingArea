@@ -42,6 +42,7 @@ class Person: Object {
     dynamic var isMarried: Bool = false
     dynamic var id: Int = Person.nextID
     
+    let dogs = List<Dog>()
     
     override static func primaryKey() -> String? {
         return "id"
@@ -51,6 +52,7 @@ class Person: Object {
 class Dog: Object {
     dynamic var name: String = "Unnamed"
     dynamic var age: Int = 0
+    let owner = LinkingObjects(fromType: Person.self, property: "dogs")
     
     override static func primaryKey() -> String? {
         return "name"
