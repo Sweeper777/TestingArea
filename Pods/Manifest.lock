@@ -11,6 +11,7 @@ PODS:
     - Realm (= 2.4.3)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
+  - SwiftRandom (1.0.0)
   - SwiftyUtils (0.7.0)
 
 DEPENDENCIES:
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - RealmSwift
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
+  - SwiftRandom
   - SwiftyUtils
 
 SPEC CHECKSUMS:
@@ -30,8 +32,9 @@ SPEC CHECKSUMS:
   RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
+  SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
 
-PODFILE CHECKSUM: 17ba9c76a0a6cf42708abba42b33bc3934d69110
+PODFILE CHECKSUM: 5620478351d0421068536dc28544a28cf13f5224
 
 COCOAPODS: 1.1.0.beta.1

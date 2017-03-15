@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftRandom.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,22 +67,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0AFEE2C547AF7C927A642F7C05E434B9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>14878A3B4836D01062E7CA2701242E7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1760230DDD94E7D2610EBB5EFE7C9F48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>290E56E5F0B028FCA2D992BC71F267D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3452FE0B1B4A8A987E04F53206B28F38</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4AE9500FBB50FBE5CC10DF2FAAEA9C23</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5E22C07D03882FABB9861F1875EFE103</key>
+		<key>50DB79E96231928C19492D16EC8CC157</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC0E61EFC50BC3553452297A7F417724</key>
+		<key>866EDF52761CB3E9750E0DE0D3B72B6A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0216C0323013D2E615FA2CD8A6F1FFA</key>
+		<key>937B5105344FB467E2E85AA3FDC9BE64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9B3424CBC66111DBAE141C71E56BF1A</key>
+		<key>FEA3C312A6E7080B93FDCBC6BB30E45F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

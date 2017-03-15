@@ -11,5 +11,6 @@ target 'TestingArea' do
     pod 'SlideMenuControllerSwift'
     pod 'ESPullToRefresh'
     pod 'RealmSwift'
+    pod 'SwiftRandom'
 end
 
