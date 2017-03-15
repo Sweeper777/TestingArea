@@ -37,6 +37,22 @@ class MyViewController2: UIViewController {
 class Person: Object {
     static var nextID = 0
     
+    func test3() {
+        let realm = (UIApplication.shared.delegate as! AppDelegate).realm!
+        let freddy = Person()
+        freddy.id = 2
+        freddy.name = "Freddy"
+        freddy.age = 30
+        freddy.isMarried = false
+        let dog1 = Dog()
+        dog1.name = "Fido"
+        dog1.age = 3
+        freddy.dogs.append(dog1)
+        
+        try! realm.write {
+            realm.add(freddy)
+        }
+    }
     dynamic var name: String = "Unnamed"
     dynamic var age: Int = 0
     dynamic var isMarried: Bool = false
