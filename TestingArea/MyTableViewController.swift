@@ -1,8 +1,9 @@
 import UIKit
 import ESPullToRefresh
+import RealmSwift
 
 class MyTableViewController: UITableViewController {
-    var array = ["John", "Tom", "Jerry"]
+    var array: Results<Person>!
     
      override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -12,18 +13,13 @@ class MyTableViewController: UITableViewController {
     }
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell!.textLabel!.text = "Hello \(array[indexPath.row])"
+        cell!.textLabel!.text = array[indexPath.row].name
+        cell!.detailTextLabel!.text = "\(array[indexPath.row].age), \(array[indexPath.row].isMarried)"
         return cell!
     }
     
     override func viewDidLoad() {
-        tableView.es_addPullToRefresh {
-            [weak self] in
-            Timer.runThisAfterDelay(seconds: 1) {
-                self?.array = ["Everest", "Eugene", "Boris"]
-                self?.tableView.reloadData()
-                self?.tableView.es_stopPullToRefresh()
-            }
-        }
+        let realm = (UIApplication.shared.delegate as! AppDelegate).realm!
+        array = realm.objects(Person.self).sorted(byKeyPath: "name")
     }
 }
