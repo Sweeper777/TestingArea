@@ -2,10 +2,11 @@ import UIKit
 import SwiftyUtils
 import EZSwiftExtensions
 import RealmSwift
+import SwiftRandom
 
 class MyViewController2: UIViewController {
     override func viewDidLoad() {
-        
+        test4()
     }
     
     func test1() {
@@ -48,6 +49,21 @@ class MyViewController2: UIViewController {
             realm.add(freddy)
         }
     }
+    
+    func test4() {
+        let realm = (UIApplication.shared.delegate as! AppDelegate).realm!
+        try! realm.write {
+            for _ in 0..<100 {
+                let person = Person()
+                person.name = Randoms.randomFakeName()
+                person.age = Int.random(0, 100)
+                person.isMarried = Bool.random()
+                realm.add(person)
+            }
+        }
+    }
+}
+
 class Person: Object {
     dynamic var name: String = "Unnamed"
     dynamic var age: Int = 0
