@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Charts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ESPullToRefresh-ESPullToRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,22 +62,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07C004EE9675A950E771D1109A09AE79</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0AFEE2C547AF7C927A642F7C05E434B9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>14878A3B4836D01062E7CA2701242E7E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1760230DDD94E7D2610EBB5EFE7C9F48</key>
+		<key>1D45B1E36660981203B57525FF9C01AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50DB79E96231928C19492D16EC8CC157</key>
+		<key>3B0CA103DCEB74EC4DF89C7074DCD5F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +82,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6FB5A7D4D56EAC25BE91ECDA011BD32D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>72C8B4B0CB6E007FE62DDDCCC82E0CAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>866EDF52761CB3E9750E0DE0D3B72B6A</key>
+		<key>7C4054219EB89CD4D2CF6983BFF56FCE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>937B5105344FB467E2E85AA3FDC9BE64</key>
+		<key>9A89728E50F0FD86EA5AB0CFA7550367</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FEA3C312A6E7080B93FDCBC6BB30E45F</key>
+		<key>E51C7ACF0E71936A028BE30182DE6488</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F01C4F46578128AF64E07EB52B116B62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F22A9372AC4EE06F05179331D8F37BEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,7 +1,4 @@
 PODS:
-  - Charts (3.0.1):
-    - Charts/Core (= 3.0.1)
-  - Charts/Core (3.0.1)
   - ESPullToRefresh (2.6)
   - EZSwiftExtensions (1.7)
   - Realm (2.4.3):
@@ -12,20 +9,20 @@ PODS:
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
   - SwiftRandom (1.0.0)
+  - SwiftyJSON (3.1.4)
   - SwiftyUtils (0.7.0)
 
 DEPENDENCIES:
-  - Charts
   - ESPullToRefresh
   - EZSwiftExtensions (= 1.7)
   - RealmSwift
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftRandom
+  - SwiftyJSON
   - SwiftyUtils
 
 SPEC CHECKSUMS:
-  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
@@ -33,8 +30,9 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
 
-PODFILE CHECKSUM: 5620478351d0421068536dc28544a28cf13f5224
+PODFILE CHECKSUM: 87e3bb03c54dd8110ef61c71c090fb13f7d21f29
 
 COCOAPODS: 1.1.0.beta.1
