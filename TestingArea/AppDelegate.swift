@@ -6,47 +6,13 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var realm: Realm!
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         return true
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        testMigration2()
-        realm = try! Realm()
         return true
-    }
-    
-    func testMigration() {
-        let config = Realm.Configuration(
-            schemaVersion: 1,
-            migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 1) {
-                    
-                }
-        })
-        
-        Realm.Configuration.defaultConfiguration = config
-    }
-    
-    func testMigration2() {
-        let config = Realm.Configuration(
-            schemaVersion: 2,
-            migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 1) {
-                    
-                }
-                
-                if (oldSchemaVersion < 2) {
-                    migration.enumerateObjects(ofType: Person.className()) { oldObject, newObject in
-                        let id = oldObject!["id"] as! Int
-                        newObject!["id"] = "\(id)"
-                    }
-                }
-        })
-        
-        Realm.Configuration.defaultConfiguration = config
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
