@@ -12,5 +12,6 @@ target 'TestingArea' do
     pod 'ESPullToRefresh'
     pod 'RealmSwift'
     pod 'SwiftRandom'
+    pod 'Alamofire'
 end
 

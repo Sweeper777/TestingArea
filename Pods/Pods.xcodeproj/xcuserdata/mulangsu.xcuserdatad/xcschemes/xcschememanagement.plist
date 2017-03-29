@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ESPullToRefresh-ESPullToRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D45B1E36660981203B57525FF9C01AD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>290E56E5F0B028FCA2D992BC71F267D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3B0CA103DCEB74EC4DF89C7074DCD5F9</key>
+		<key>3B9E26B1B5E9C986BB41C43FB654006C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>643B64BB7C3F607A2DBB1F432065EEC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,37 +87,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FB5A7D4D56EAC25BE91ECDA011BD32D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>72C8B4B0CB6E007FE62DDDCCC82E0CAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C4054219EB89CD4D2CF6983BFF56FCE</key>
+		<key>777CC28EE08693C5B21A2B17DD3FF3F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A89728E50F0FD86EA5AB0CFA7550367</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E51C7ACF0E71936A028BE30182DE6488</key>
+		<key>8E5B7185DCECA6E3CC25F1FCD0F38A86</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F01C4F46578128AF64E07EB52B116B62</key>
+		<key>A8822EBD5BB308389B53C9B73C4FF9DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F22A9372AC4EE06F05179331D8F37BEA</key>
+		<key>B0A9B3CC769F2D271E6DD466ACCF2E06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D357E902CDF7BAC97559EFEDEA14031A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3BD124C4D9B2789A37E360B7D3F4F23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
