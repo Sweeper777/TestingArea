@@ -1,6 +1,5 @@
 import UIKit
 import SwiftyUtils
-import EZSwiftExtensions
 import SwiftyJSON
 import Alamofire
 

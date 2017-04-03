@@ -4,7 +4,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'TestingArea' do
-    pod 'EZSwiftExtensions', '1.7'
+    pod 'Base64nl'
     pod 'SwiftyJSON'
     pod 'SwiftChart', '~> 0.4'
     pod 'SwiftyUtils'
