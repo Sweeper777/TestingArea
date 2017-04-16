@@ -9,7 +9,9 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
     override func viewDidLoad() {
-        
+        let config = FTConfiguration.shared
+        config.backgoundTintColor = #colorLiteral(red: 0.4131736755, green: 0.7676505446, blue: 0.4273042679, alpha: 1)
+        config.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     @IBAction func click() {
