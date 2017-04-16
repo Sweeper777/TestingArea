@@ -4,14 +4,13 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'TestingArea' do
-    pod 'Base64nl'
     pod 'SwiftyJSON'
     pod 'SwiftChart', '~> 0.4'
     pod 'SwiftyUtils'
     pod 'SlideMenuControllerSwift'
-    pod 'ESPullToRefresh'
     pod 'RealmSwift'
     pod 'SwiftRandom'
     pod 'Alamofire'
+    pod 'FTPopOverMenu_Swift'
 end
 
