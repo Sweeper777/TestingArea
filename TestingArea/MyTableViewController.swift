@@ -1,5 +1,4 @@
 import UIKit
-import ESPullToRefresh
 
 class MyTableViewController: UITableViewController {
     
