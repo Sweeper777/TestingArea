@@ -13,6 +13,12 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        
+        FTPopOverMenu.showForSender(sender: button, with: [
+                "Item 1", "Item2", "Item 3", "Item 4"
+            ], menuImageArray: [
+                "settings", "home", "settings", "home"
+            ], done: { index in
+                print(index)
+        }, cancel: {})
     }
 }
