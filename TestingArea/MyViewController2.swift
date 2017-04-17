@@ -10,8 +10,15 @@ class MyViewController2: UIViewController {
     @IBOutlet var button: UIButton!
     override func viewDidLoad() {
         let config = FTConfiguration.shared
-        config.backgoundTintColor = #colorLiteral(red: 0.4131736755, green: 0.7676505446, blue: 0.4273042679, alpha: 1)
-        config.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        config.textColor = UIColor.black
+        config.backgoundTintColor = UIColor(white: 0.97, alpha: 1)
+        config.borderColor = UIColor.white
+        config.menuWidth = 150
+        config.menuSeparatorColor = UIColor.lightGray
+        config.textAlignment = .left
+        config.textFont = UIFont.systemFont(ofSize: 16)
+        config.menuRowHeight = 50
+        config.cornerRadius = 20
     }
     
     @IBAction func click() {
