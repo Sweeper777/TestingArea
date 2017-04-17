@@ -11,14 +11,13 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         let config = FTConfiguration.shared
         config.textColor = UIColor.black
-        config.backgoundTintColor = UIColor(white: 0.97, alpha: 1)
-        config.borderColor = UIColor.white
-        config.menuWidth = 150
+        config.backgoundTintColor = UIColor.white
+        config.borderColor = UIColor.lightGray
         config.menuSeparatorColor = UIColor.lightGray
-        config.textAlignment = .left
-        config.textFont = UIFont.systemFont(ofSize: 16)
-        config.menuRowHeight = 50
-        config.cornerRadius = 20
+        config.textAlignment = .center
+        config.textFont = UIFont.systemFont(ofSize: 14)
+        config.menuRowHeight = 40
+        config.cornerRadius = 6
     }
     
     @IBAction func click() {
