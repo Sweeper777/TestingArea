@@ -113,6 +113,10 @@
                                     <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="eQX-1V-SwJ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="WeZ-D4-s1f" customClass="RoundedImageView" customModule="TestingArea" customModuleProvider="target">
+                                <rect key="frame" x="42" y="385" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -296,4 +300,7 @@
             <point key="canvasLocation" x="1531" y="900"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="25" height="25"/>
+    </resources>
 </document>
