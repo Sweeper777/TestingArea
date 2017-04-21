@@ -12,5 +12,6 @@ target 'TestingArea' do
     pod 'SwiftRandom'
     pod 'Alamofire'
     pod 'FTPopOverMenu_Swift'
+    pod 'SJFluidSegmentedControl'
 end
 
