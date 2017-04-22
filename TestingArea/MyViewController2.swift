@@ -23,4 +23,14 @@ class MyViewController2: UIViewController, SJFluidSegmentedControlDataSource {
     func numberOfSegmentsInSegmentedControl(_ segmentedControl: SJFluidSegmentedControl) -> Int {
         return 4
     }
+    
+    func segmentedControl(_ segmentedControl: SJFluidSegmentedControl, titleForSegmentAtIndex index: Int) -> String? {
+        switch index {
+        case 0: return "Hello"
+        case 1: return "Hey Bro"
+        case 2: return "Goodbye"
+        case 3: return "Exit"
+        default: return ""
+        }
+    }
 }
