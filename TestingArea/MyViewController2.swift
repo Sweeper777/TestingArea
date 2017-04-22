@@ -4,6 +4,12 @@ import SwiftyJSON
 import Alamofire
 import FTPopOverMenu_Swift
 
+class Card {
+    init() {
+        print("Card init")
+    }
+}
+
 class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
@@ -18,6 +24,13 @@ class MyViewController2: UIViewController {
         config.textFont = UIFont.systemFont(ofSize: 14)
         config.menuRowHeight = 40
         config.cornerRadius = 6
+        
+        var cards = [Card]()
+        
+        for _ in 0..<3 {
+            let card = Card() // Screenshot #1
+            cards.append(card) // Screenshot #2
+        }
     }
     
     @IBAction func click() {
