@@ -14,6 +14,7 @@ class MyViewController2: UIViewController, SJFluidSegmentedControlDataSource {
     
     override func viewDidLoad() {
         segmentedControl.dataSource = self
+        segmentedControl.cornerRadius = segmentedControl.height / 2
     }
     
     @IBAction func click() {
