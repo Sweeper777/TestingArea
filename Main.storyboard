@@ -66,7 +66,7 @@
         <scene sceneID="rGL-8M-CHX">
             <objects>
                 <navigationController storyboardIdentifier="MyVC" id="oIZ-1h-2KH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eAF-b4-NLX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAF-b4-NLX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -113,37 +113,12 @@
                                     <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="eQX-1V-SwJ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-B4-0SC" customClass="SJFluidSegmentedControl" customModule="SJFluidSegmentedControl">
-                                <rect key="frame" x="16" y="346" width="343" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorViewColor">
-                                        <color key="value" red="0.31511696700000003" green="0.58546738490000005" blue="0.32589400740000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="applyCornerRadiusToSelectorView" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientBounceColor">
-                                        <color key="value" red="0.82424587670000005" green="0.82424587670000005" blue="0.82424587670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowShowDuration">
-                                        <real key="value" value="0.40000000000000002"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowHideDuration">
-                                        <real key="value" value="0.40000000000000002"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shadowsEnabled" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                     <connections>
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
-                        <outlet property="segmentedControl" destination="k6M-B4-0SC" id="Mzx-kv-aHw"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
@@ -157,7 +132,7 @@
         <scene sceneID="d39-5x-uob">
             <objects>
                 <navigationController storyboardIdentifier="VC" id="BJs-fK-8hM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pkd-qP-iAD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -179,21 +154,21 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="4AF-EY-XPp" detailTextLabel="q8K-uh-Rnz" style="IBUITableViewCellStyleSubtitle" id="GOu-5g-XXS">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GOu-5g-XXS" id="PX8-ME-c8B">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4AF-EY-XPp">
-                                            <rect key="frame" x="15" y="4" width="34" height="21"/>
+                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q8K-uh-Rnz">
-                                            <rect key="frame" x="15" y="25" width="44" height="15"/>
+                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
