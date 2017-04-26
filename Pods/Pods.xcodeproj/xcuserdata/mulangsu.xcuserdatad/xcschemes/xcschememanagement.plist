@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Eureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FTPopOverMenu_Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,11 +30,6 @@
 			<false/>
 		</dict>
 		<key>RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SJFluidSegmentedControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -62,22 +62,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>057A9051645C4DAD0AD794F5D2E92C25</key>
+		<key>367775726ABA7003552CA455107C1627</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F1B7F1E7B3EF92C516B896BD8F5FC0F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>147414739CA9AC6C443F32E0E861C42B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>37D415C01E6729A49DA23521E84855A8</key>
+		<key>3A32B44D4DFFFB6199365A35920A3AB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +77,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E48521783BABDA704F2158CFBB61A30</key>
+		<key>53C50D13E040A8E112EC9A6EA8690C63</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62972E92871336D34A7614FEE12BBE3B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B3C365C46C1D775FFF3BBE6EF185D19</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6EA4761E5CBD59E4731C1C3B7362B927</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>774E8409F13E49B403041AD8BA8F73A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C166469C23E79AB182DC6176522FA3F</key>
+		<key>B0A3DBE87D0D1DB455231F6E921A4E90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86B28694FF3FB88A5F1CDC453AA7D3FD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CFD083ABB7ED93B0458EF8B8829154BE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F30EEC8BC349FD804FEBB5C21FC6FA32</key>
+		<key>E200D59F4A939E9D0356CBE3022BDEF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

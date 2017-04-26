@@ -1,12 +1,12 @@
 PODS:
   - Alamofire (4.4.0)
+  - Eureka (3.0.0)
   - FTPopOverMenu_Swift (0.0.6)
   - Realm (2.4.3):
     - Realm/Headers (= 2.4.3)
   - Realm/Headers (2.4.3)
   - RealmSwift (2.4.3):
     - Realm (= 2.4.3)
-  - SJFluidSegmentedControl (1.1.2)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
   - SwiftRandom (1.0.0)
@@ -15,9 +15,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Eureka
   - FTPopOverMenu_Swift
   - RealmSwift
-  - SJFluidSegmentedControl
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftRandom
@@ -26,16 +26,16 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
   FTPopOverMenu_Swift: ddc5689b89d375e22efd7ccd0c022392f33785ea
   Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
   RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
-  SJFluidSegmentedControl: efd26ea5f0832c715e2750314a2dc0cc81e39ae5
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
 
-PODFILE CHECKSUM: d99e43985ae0802e7a492c04df6769906def8d07
+PODFILE CHECKSUM: 9a4785f022f5f10a043f761083285d749399b4fb
 
 COCOAPODS: 1.1.0.beta.1
