@@ -32,6 +32,13 @@ class MyViewController2: FormViewController {
                                 }
                                 $0.tag = "my tag"
         }
+        form +++ ButtonRow() {
+            row in
+            row.title = "Click Me"
+            }.onCellSelection {
+                _ in
+                print(self.form.values())
+        }
     }
     
     @IBAction func click() {
