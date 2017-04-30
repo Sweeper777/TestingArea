@@ -13,5 +13,7 @@ target 'TestingArea' do
     pod 'Alamofire'
     pod 'FTPopOverMenu_Swift'
     pod 'Eureka'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end
 

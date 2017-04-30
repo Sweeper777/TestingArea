@@ -12,6 +12,7 @@
 		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
 		5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */; };
 		5A16C0371E2E0F2500D1DE46 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0361E2E0F2500D1DE46 /* AnotherViewController.swift */; };
+		5A1C32C21EB4F66200C47F13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5A1FD0421DFD53390071AE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0411DFD53390071AE2F /* AppDelegate.swift */; };
 		5A1FD0441DFD53390071AE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0431DFD53390071AE2F /* ViewController.swift */; };
@@ -99,6 +100,7 @@
 		5A181E711E349C2000C058BF /* ASToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASToast.framework; path = "Pods/../build/Debug-iphoneos/ASToast/ASToast.framework"; sourceTree = "<group>"; };
 		5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUtils.framework; path = "Pods/../build/Debug-iphoneos/SwiftyUtils/SwiftyUtils.framework"; sourceTree = "<group>"; };
 		5A1AE2DD1E3CE45F0038B1D5 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/pop/pop.framework"; sourceTree = "<group>"; };
+		5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A1D44CE1DF346C600D1508B /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		5A1DB3041DF45E7D0061FAEB /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SwiftCharts/SwiftCharts.framework"; sourceTree = "<group>"; };
 		5A1DB3061DF465370061FAEB /* SwiftChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftChart.framework; path = "Pods/../build/Debug-iphoneos/SwiftChart/SwiftChart.framework"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
+				5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */,
 				5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */,
 				5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */,
 				5A0370DB1D4AD57E00A961D1 /* beep.mp3 */,
@@ -453,6 +456,7 @@
 				5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */,
 				5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */,
 				5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */,
+				5A1C32C21EB4F66200C47F13 /* GoogleService-Info.plist in Resources */,
 				5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
 			);
