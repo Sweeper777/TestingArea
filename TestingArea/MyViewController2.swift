@@ -17,6 +17,13 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         ref = FIRDatabase.database().reference()
     }
+
+    func test1() {
+        /*ref.observeSingleEvent(of: .value, with: {
+            snapshot in
+            self.textview.text = snapshot.value!["name"] as! String
+        })*/
+    }
     
     @IBAction func click() {
         
