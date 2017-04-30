@@ -60,3 +60,5 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 TestingArea/SecretStuff.swift
+
+TestingArea/GoogleService-Info.plist
