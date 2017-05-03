@@ -39,6 +39,12 @@ class MyViewController2: UIViewController {
         ref.child("question").setValue(json.dictionaryObject)
     }
     
+    func test4() {
+        ref.observeSingleEvent(of: .childChanged, with: { _ in
+            print("data changed")
+        })
+    }
+    
     func test5() {
         ref.child("question").observeSingleEvent(of: .value, with: {
             snapshot in
