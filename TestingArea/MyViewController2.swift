@@ -24,6 +24,11 @@ class MyViewController2: UIViewController {
             self.textview.text = (snapshot.value! as! [String: Any])["name"] as! String
         })
     }
+    
+    func test2() {
+        ref.child("name").setValue("Hello")
+    }
+    
     func test5() {
         ref.child("question").observeSingleEvent(of: .value, with: {
             snapshot in
