@@ -19,7 +19,10 @@ class MyViewController2: UIViewController {
     }
 
     func test1() {
-        /*ref.observeSingleEvent(of: .value, with: {
+        ref.observeSingleEvent(of: .value, with: {
+            snapshot in
+            self.textview.text = (snapshot.value! as! [String: Any])["name"] as! String
+        })
             snapshot in
             self.textview.text = snapshot.value!["name"] as! String
         })*/
