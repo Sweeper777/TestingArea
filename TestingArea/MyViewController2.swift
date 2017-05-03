@@ -23,9 +23,13 @@ class MyViewController2: UIViewController {
             snapshot in
             self.textview.text = (snapshot.value! as! [String: Any])["name"] as! String
         })
+    }
+    func test5() {
+        ref.child("question").observeSingleEvent(of: .value, with: {
             snapshot in
-            self.textview.text = snapshot.value!["name"] as! String
-        })*/
+            let json = JSON(snapshot.value!)
+            print(json)
+        })
     }
     
     @IBAction func click() {
