@@ -5,6 +5,7 @@ import Alamofire
 import FTPopOverMenu_Swift
 import Eureka
 import FirebaseDatabase
+import FirebaseAuth
 
 
 class MyViewController2: UIViewController {
@@ -53,6 +54,11 @@ class MyViewController2: UIViewController {
         })
     }
     
+    func test6() {
+        FIRAuth.auth()?.createUser(withEmail: testEmail, password: testPassword, completion: { (user, error) in
+            print(error != nil ? error.debugDescription : "User has been created")
+        })
+    }
     @IBAction func click() {
         
     }
