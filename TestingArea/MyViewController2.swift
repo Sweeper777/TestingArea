@@ -6,9 +6,9 @@ import FTPopOverMenu_Swift
 import Eureka
 import FirebaseDatabase
 import FirebaseAuth
+import GoogleSignIn
 
-
-class MyViewController2: UIViewController {
+class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
