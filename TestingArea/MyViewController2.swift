@@ -59,6 +59,13 @@ class MyViewController2: UIViewController {
             print(error != nil ? error.debugDescription : "User has been created")
         })
     }
+    
+    func test7() {
+        FIRAuth.auth()?.signIn(withEmail: testEmail, password: testPassword, completion: { (user, error) in
+            print(error != nil ? error.debugDescription : "User logged in")
+        })
+    }
+    
     @IBAction func click() {
         
     }
