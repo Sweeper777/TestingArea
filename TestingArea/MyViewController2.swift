@@ -74,6 +74,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func click() {
-        
+        GIDSignIn.sharedInstance().signOut()
+        try? FIRAuth.auth()?.signOut()
     }
 }
