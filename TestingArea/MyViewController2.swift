@@ -17,6 +17,8 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         ref = FIRDatabase.database().reference()
+        test8()
+        test5()
     }
 
     func test1() {
@@ -64,6 +66,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         FIRAuth.auth()?.signIn(withEmail: testEmail, password: testPassword, completion: { (user, error) in
             print(error != nil ? error.debugDescription : "User logged in")
         })
+    }
+    
+    func test8() {
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func click() {
