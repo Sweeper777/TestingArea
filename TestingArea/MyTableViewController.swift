@@ -11,4 +11,11 @@ class MyTableViewController: UITableViewController {
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
+    
+    @IBAction func activity(_ sender: UIBarButtonItem) {
+        let activityViewController = UIActivityViewController(activityItems: ["hello world"], applicationActivities: nil)
+        navigationController?.present(activityViewController, animated: true) {
+            
+        }
+    }
 }
