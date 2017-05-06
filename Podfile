@@ -14,7 +14,6 @@ target 'TestingArea' do
     pod 'FTPopOverMenu_Swift'
     pod 'Eureka'
     pod 'Firebase/Core'
-    pod 'Firebase/Database'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
 end
