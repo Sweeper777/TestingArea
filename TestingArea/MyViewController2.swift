@@ -4,7 +4,6 @@ import SwiftyJSON
 import Alamofire
 import FTPopOverMenu_Swift
 import Eureka
-import FirebaseDatabase
 import FirebaseAuth
 import GoogleSignIn
 

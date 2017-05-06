@@ -7,6 +7,9 @@ PODS:
   - Firebase/Core (3.16.0):
     - FirebaseAnalytics (= 3.8.0)
     - FirebaseCore (= 3.6.0)
+  - Firebase/Storage (3.16.0):
+    - Firebase/Core
+    - FirebaseStorage (= 1.1.0)
   - FirebaseAnalytics (3.8.0):
     - FirebaseCore (~> 3.6)
     - FirebaseInstanceID (~> 1.0)
@@ -19,6 +22,9 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (1.0.10):
     - FirebaseCore (~> 3.6)
+  - FirebaseStorage (1.1.0):
+    - FirebaseAnalytics (~> 3.7)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FTPopOverMenu_Swift (0.0.6)
   - GoogleSignIn (4.0.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
@@ -58,6 +64,7 @@ DEPENDENCIES:
   - Eureka
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Storage
   - FTPopOverMenu_Swift
   - GoogleSignIn
   - RealmSwift
@@ -75,6 +82,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
   FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
   FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
+  FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
   FTPopOverMenu_Swift: ddc5689b89d375e22efd7ccd0c022392f33785ea
   GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
@@ -88,6 +96,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: 87094996d977846e5a9f2cbe653ff28dc15ba187
 
-PODFILE CHECKSUM: ab31f91a964b491f678c4bbeb0c8ee0e020a705f
+PODFILE CHECKSUM: be486980586ba869adeba0fb5e609387c7f11de7
 
 COCOAPODS: 1.1.0.beta.1

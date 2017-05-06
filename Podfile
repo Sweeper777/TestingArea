@@ -15,6 +15,7 @@ target 'TestingArea' do
     pod 'Eureka'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
+    pod 'Firebase/Storage'
     pod 'GoogleSignIn'
 end
 
