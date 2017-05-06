@@ -5,6 +5,7 @@ import Alamofire
 import FTPopOverMenu_Swift
 import Eureka
 import FirebaseAuth
+import FirebaseStorage
 import GoogleSignIn
 
 public struct MyOptions: OptionSet {
@@ -23,7 +24,10 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
     
+    var storage: FIRStorageReference!
+    
     override func viewDidLoad() {
+        storage = FIRStorage.storage().reference(forURL: storageURL)
         test1()
     }
     
