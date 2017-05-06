@@ -8,6 +8,17 @@ import FirebaseDatabase
 import FirebaseAuth
 import GoogleSignIn
 
+public struct MyOptions: OptionSet {
+    public let rawValue: Int
+    
+    public init(rawValue: Int) {
+        self.rawValue = rawValue
+    }
+    
+    public static let one = MyOptions(rawValue: 1 << 0)
+    public static let two = MyOptions(rawValue: 1 << 1)
+}
+
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
