@@ -98,6 +98,18 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
             }
         }
     }
+    
+    func test7() {
+        let downloadRef = storage.child("texts/dummy.txt")
+        downloadRef.data(withMaxSize: 1024 * 1024) { (data, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                self.textview.text = String(data: data!, encoding: .utf8)
+            }
+        }
+    }
+    
     @IBAction func click() {
         GIDSignIn.sharedInstance().signOut()
         try? FIRAuth.auth()?.signOut()
