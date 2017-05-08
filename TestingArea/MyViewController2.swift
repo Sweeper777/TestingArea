@@ -63,6 +63,16 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         })
     }
     
+    func test4() {
+        let downloadRef = storage.child("images/my_image.png")
+        downloadRef.data(withMaxSize: 1024 * 1024) { (data, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                self.imageView.image = UIImage(data: data!)
+            }
+        }
+    }
     @IBAction func click() {
         GIDSignIn.sharedInstance().signOut()
         try? FIRAuth.auth()?.signOut()
