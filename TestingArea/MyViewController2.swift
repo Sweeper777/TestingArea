@@ -73,6 +73,17 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
             }
         }
     }
+    
+    func test5() {
+        let deleteRef = storage.child("images/settings.png")
+        deleteRef.delete { (error) in
+            if error != nil {
+                print(error!)
+            } else {
+                print("Deleted successfully")
+            }
+        }
+    }
     @IBAction func click() {
         GIDSignIn.sharedInstance().signOut()
         try? FIRAuth.auth()?.signOut()
