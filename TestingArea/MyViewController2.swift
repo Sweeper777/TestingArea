@@ -49,6 +49,20 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         })
     }
     
+    func test3() {
+        let uploadRef = storage.child("images/settings.png")
+        let data = UIImagePNGRepresentation(#imageLiteral(resourceName: "settings"))
+        let metadata = FIRStorageMetadata()
+        metadata.contentType = "image/png"
+        _ = uploadRef.put(data!, metadata: metadata, completion: { (_, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                print("Upload successful!")
+            }
+        })
+    }
+    
     @IBAction func click() {
         GIDSignIn.sharedInstance().signOut()
         try? FIRAuth.auth()?.signOut()
