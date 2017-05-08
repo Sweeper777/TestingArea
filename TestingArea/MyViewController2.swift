@@ -110,6 +110,30 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         }
     }
     
+    func test8() {
+        let uploadRef = storage.child("texts/dummy.txt")
+        let data = "Hello World".data(using: .utf8)
+        let metadata = FIRStorageMetadata()
+        metadata.contentType = "text/plain"
+        uploadRef.put(data!, metadata: metadata) { (_, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                print("First: Success!")
+                let uploadRef2 = self.storage.child("texts/dummy.txt")
+                let data2 = "Hello World Number 2!".data(using: .utf8)
+                let metadata2 = FIRStorageMetadata()
+                metadata2.contentType = "text/plain"
+                uploadRef2.put(data2!, metadata: metadata2) { (_, error) in
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        print("Second: Success!")
+                    }
+                }
+            }
+        }
+    }
     @IBAction func click() {
         GIDSignIn.sharedInstance().signOut()
         try? FIRAuth.auth()?.signOut()
