@@ -16,6 +16,8 @@ target 'TestingArea' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
+    pod 'Firebase/RemoteConfig'
+    pod 'MultiSelectSegmentedControl'
     pod 'GoogleSignIn'
 end
 
