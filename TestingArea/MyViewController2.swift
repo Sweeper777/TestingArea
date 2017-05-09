@@ -34,7 +34,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         remoteConfig = FIRRemoteConfig.remoteConfig()
         remoteConfig.setDefaults(["wordOfTheDay": "Default" as NSObject])
         test1()
-        test2()
+        test10()
     }
     
     func test1() {
@@ -143,6 +143,17 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     func test9() {
         let wordOfTheDay = remoteConfig["wordOfTheDay"].stringValue!
         self.textview.text = "Word of the day: \(wordOfTheDay)"
+    }
+    
+    func test10() {
+        remoteConfig.fetch(withExpirationDuration: 10, completionHandler: { (status, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                self.remoteConfig.activateFetched()
+                self.test9()
+            }
+        })
     }
     
     @IBAction func click() {
