@@ -139,6 +139,12 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
             }
         }
     }
+    
+    func test9() {
+        let wordOfTheDay = remoteConfig["wordOfTheDay"].stringValue!
+        self.textview.text = "Word of the day: \(wordOfTheDay)"
+    }
+    
     @IBAction func click() {
         GIDSignIn.sharedInstance().signOut()
         try? FIRAuth.auth()?.signOut()
