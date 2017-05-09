@@ -6,6 +6,7 @@ import FTPopOverMenu_Swift
 import Eureka
 import FirebaseAuth
 import FirebaseStorage
+import FirebaseRemoteConfig
 import GoogleSignIn
 
 public struct MyOptions: OptionSet {
@@ -25,9 +26,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var button: UIButton!
     
     var storage: FIRStorageReference!
+    var remoteConfig: FIRRemoteConfig!
     
     override func viewDidLoad() {
         storage = FIRStorage.storage().reference(forURL: storageURL)
+        remoteConfig = FIRRemoteConfig.remoteConfig()
         test1()
         test2()
     }
