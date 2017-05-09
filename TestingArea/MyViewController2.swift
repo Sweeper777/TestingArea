@@ -24,6 +24,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
+    @IBOutlet var imageView: UIImageView!
     
     var storage: FIRStorageReference!
     var remoteConfig: FIRRemoteConfig!
@@ -31,6 +32,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         storage = FIRStorage.storage().reference(forURL: storageURL)
         remoteConfig = FIRRemoteConfig.remoteConfig()
+        remoteConfig.setDefaults(["wordOfTheDay": "Default" as NSObject])
         test1()
         test2()
     }
