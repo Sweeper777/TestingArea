@@ -13,6 +13,21 @@ public class MultiSelectSegmentedCell: Cell<NSMutableArray>, CellType, MultiSele
     
     public override func update() {
         super.update()
+        let value = [Any](row.value ?? NSMutableArray()).map { $0 as! String }
+        let indexes = NSMutableIndexSet()
+        if value.contains("A") {
+            indexes.add(0)
+        }
+        if value.contains("B") {
+            indexes.add(1)
+        }
+        if value.contains("C") {
+            indexes.add(2)
+        }
+        if value.contains("D") {
+            indexes.add(3)
+        }
+        segmentedControl.selectedSegmentIndexes = indexes
     }
     
     public func multiSelect(_ multiSelecSegmendedControl: MultiSelectSegmentedControl!, didChangeValue value: Bool, at index: UInt) {
