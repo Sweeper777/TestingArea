@@ -20,3 +20,10 @@ public class MultiSelectSegmentedCell: Cell<NSMutableArray>, CellType, MultiSele
         row.updateCell()
     }
 }
+
+public final class MultiSelectSegmentedRow: Row<MultiSelectSegmentedCell>, RowType {
+    required public init(tag: String?) {
+        super.init(tag: tag)
+        cellProvider = CellProvider<MultiSelectSegmentedCell>(nibName: "MultiSelectSegmentedCell")
+    }
+}
