@@ -15,9 +15,9 @@ target 'TestingArea' do
     pod 'Eureka'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
-    pod 'Firebase/Storage'
-    pod 'Firebase/RemoteConfig'
     pod 'MultiSelectSegmentedControl'
+    pod 'ROThumbnailGenerator'
     pod 'GoogleSignIn'
+    pod 'MultiSlider'
 end
 
