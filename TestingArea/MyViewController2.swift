@@ -6,12 +6,14 @@ import FTPopOverMenu_Swift
 import Eureka
 import FirebaseAuth
 import GoogleSignIn
+import MultiSlider
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var multiSlider: MultiSlider!
     
     override func viewDidLoad() {
         test1()
