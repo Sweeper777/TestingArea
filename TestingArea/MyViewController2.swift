@@ -17,6 +17,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         test1()
+        test2()
     }
     
     func test1() {
@@ -24,7 +25,14 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().signIn()
     }
     
+    func test2() {
+        multiSlider.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
+    }
     @IBAction func click() {
         
+    }
+    
+    func valueChanged(_ slider: MultiSlider) {
+//        textview.text = "A: \(slider.value[4])\nB: \(slider.value[3])\nC: \(slider.value[2])\nD: \(slider.value[1])\nE: \(slider.value[0])\n"
     }
 }
