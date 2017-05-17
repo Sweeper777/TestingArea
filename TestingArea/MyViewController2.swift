@@ -28,6 +28,10 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     func test2() {
         multiSlider.addTarget(self, action: #selector(valueChanged), for: .valueChanged)
     }
+    
+    func test3() {
+        multiSlider.thumbImage = #imageLiteral(resourceName: "thumb")
+    }
     @IBAction func click() {
         
     }
