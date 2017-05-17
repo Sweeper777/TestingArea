@@ -37,6 +37,10 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     func test4() {
         multiSlider.thumbImage = #imageLiteral(resourceName: "thumb_25")
     }
+    
+    func test5() {
+        imageView.image = ROThumbnail.sharedInstance.getThumbnail(URL(string: "https://sweeper777.github.io/screenshot.png")!)
+    }
     @IBAction func click() {
         
     }
