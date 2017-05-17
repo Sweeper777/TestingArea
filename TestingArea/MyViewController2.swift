@@ -18,6 +18,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         test1()
         test2()
+        test4()
     }
     
     func test1() {
@@ -31,6 +32,10 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     
     func test3() {
         multiSlider.thumbImage = #imageLiteral(resourceName: "thumb")
+    }
+    
+    func test4() {
+        multiSlider.thumbImage = #imageLiteral(resourceName: "thumb_25")
     }
     @IBAction func click() {
         
