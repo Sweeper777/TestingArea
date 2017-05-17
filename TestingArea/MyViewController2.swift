@@ -7,6 +7,7 @@ import Eureka
 import FirebaseAuth
 import GoogleSignIn
 import MultiSlider
+import ROThumbnailGenerator
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -19,6 +20,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         test1()
         test2()
         test4()
+        test6()
     }
     
     func test1() {
@@ -41,6 +43,12 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     func test5() {
         imageView.image = ROThumbnail.sharedInstance.getThumbnail(URL(string: "https://sweeper777.github.io/screenshot.png")!)
     }
+    
+    func test6() {
+        multiSlider.valueLabelPosition = .right
+        multiSlider.valueLabels.forEach { $0.borderStyle = .none }
+    }
+    
     @IBAction func click() {
         
     }
