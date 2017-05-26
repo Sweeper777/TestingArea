@@ -19,5 +19,6 @@ target 'TestingArea' do
     pod 'ROThumbnailGenerator'
     pod 'GoogleSignIn'
     pod 'MultiSlider'
+    pod 'UIViewController+NavigationBar'
 end
 

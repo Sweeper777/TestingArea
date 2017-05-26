@@ -94,10 +94,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIViewController+NavigationBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>352B1E0B729F4CBF8408D587CF962B61</key>
+		<key>038EE1123E3951DACF881FEF911C2385</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2EB371307B60FFEE1124F1D88EA0AB9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +122,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45B96AB534AA6FB0C12E80C8CF66CB3A</key>
+		<key>44D14B1291ACCCBE3F492D4A765D593E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,7 +132,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FB6229C303EBA294B57C7916AEB2B1E</key>
+		<key>5A388183DEC160851E192A2210130D85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B1AB1F553BC54B74E6A365B649A78F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B9E8A8DBBB8DF51ACE3E94646308918</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,16 +153,6 @@
 			<true/>
 		</dict>
 		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7381BB8EB967D54549555D70557C0590</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>790AB84A4DB370AC349600DD0CEC88D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,7 +172,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D28118D2A3D079D99F24EAB61EBFA161</key>
+		<key>C81AC3D69FF5C19AEFDA27A2CBAB2F1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,17 +182,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE2EEF90C06A77F579428D50A1CE2C3F</key>
+		<key>E92CC6530358C2901D3E67A34FADFF35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DF59A38D70934A4E1D8031CB367D30FE</key>
+		<key>F952FEAF0490AC35E0EEEA6CE30CB569</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E21EE6A876899F7082585F890B847F80</key>
+		<key>FBDAEC4DFC5B1E8FC46F334AE1939EAD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
