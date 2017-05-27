@@ -3,6 +3,7 @@ import SwiftyUtils
 import FirebaseAuth
 import GoogleSignIn
 import MultiSlider
+import UIViewController_NavigationBar
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -13,6 +14,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         test1()
+        customNav()
     }
     
     func test1() {
@@ -39,10 +41,13 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         view.addConstraints([top, leading, trailing])
     }
     
-    func test4() {
+    func customNav() {
+        self.navigationBar.barTintColor = .green
+        self.navigationItem.title = "Hello"
     }
     
-    func test6() {
+    override func hasCustomNavigationBar() -> Bool {
+        return true
     }
     
     @IBAction func click() {
