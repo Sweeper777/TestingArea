@@ -73,6 +73,5 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         
     }
     
-//        textview.text = "A: \(slider.value[4])\nB: \(slider.value[3])\nC: \(slider.value[2])\nD: \(slider.value[1])\nE: \(slider.value[0])\n"
-    }
+    
 }
