@@ -5,25 +5,6 @@ import GoogleSignIn
 import MultiSlider
 import UIViewController_NavigationBar
 
-extension Array where Element: Collection, Element: ExpressibleByArrayLiteral, Element.Index == Int {
-    
-    mutating func addObject(_ anObject : Element.Iterator.Element, toSubarrayAtIndex idx : Int) {
-        while self.count <= idx {
-            let newSubArray: Element = []
-            self = Array([self, [newSubArray]].joined())
-        }
-        
-        self[idx] = []
-    }
-    
-    func objectAtIndexPath(_ indexPath: IndexPath) -> Element.Iterator.Element {
-        let subArray = self[indexPath.section]
-        return subArray[indexPath.row] as Element.Iterator.Element
-    }
-    
-    func a() {}
-}
-
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
