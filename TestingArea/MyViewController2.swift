@@ -3,8 +3,9 @@ import SwiftyUtils
 import FirebaseAuth
 import GoogleSignIn
 import MultiSlider
+import Eureka
 
-class MyViewController2: UIViewController, GIDSignInUIDelegate {
+class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
@@ -12,7 +13,8 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var multiSlider: MultiSlider!
     
     override func viewDidLoad() {
-        test1()
+        super.viewDidLoad()
+        
     }
     
     func test1() {
