@@ -50,11 +50,14 @@ PODS:
   - Realm/Headers (2.7.0)
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
+  - RichTextRow (1.0.0):
+    - Eureka (= 3.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
   - SwiftRandom (1.0.0)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
+  - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -65,11 +68,13 @@ DEPENDENCIES:
   - GoogleSignIn
   - MultiSlider
   - RealmSwift
+  - RichTextRow
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftRandom
   - SwiftyJSON
   - SwiftyUtils
+  - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -88,12 +93,14 @@ SPEC CHECKSUMS:
   MultiSlider: ca6ca7e0a511378857d8822224245f3db63eb205
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
+  RichTextRow: 9c14cc395fc7ef48166fb3925e6e6d0b00ab4417
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: a68c2bc2ee52039f34d0db6b1ae173974142d2ff
+PODFILE CHECKSUM: e6cb7e9a7427d0849a0800684bd7d75c6d859966
 
 COCOAPODS: 1.1.0.beta.1

@@ -17,5 +17,7 @@ target 'TestingArea' do
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
     pod 'MultiSlider'
+    pod 'RichTextRow'
+    pod 'UIColor_Hex_Swift'
 end
 

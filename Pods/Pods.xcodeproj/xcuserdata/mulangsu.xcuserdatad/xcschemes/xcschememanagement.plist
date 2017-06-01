@@ -59,6 +59,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RichTextRow-Resources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RichTextRow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -84,20 +94,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIColor_Hex_Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1433A7B8526EE0DEC0305ACB4DD04DFB</key>
+		<key>009A8CA9EBEAC53319973687D0C116DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1D190719B502BF31FD14C7FF0C820C1F</key>
+		<key>0258B859D6EE9E6A5E0662E767F3D35A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2A70B4C07AC47BDC465991E8F28ED6B7</key>
+		<key>1AA3E05852E9CFF64A64C3154B990AF9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F395E0725573F08C2618A576687F7A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4781F492A0767C504B74D44B581D3090</key>
+		<key>474E9E38B26443F5C63A582A5896A6A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62EBE1DCA00B8EC90ED826AB34E25AF0</key>
+		<key>59F018CCCF73D1E6D770A4FAAA768FF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>72571999D973BB481419BBC8BD2199FC</key>
+		<key>6F85DA8DBB39E9880F5106E369A8F4E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,22 +167,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>844BF8A30E4D17A932668F2798E9608A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9ADD7ABD0E80833A8809AF20D837536C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F22EE439078489A94143F3517B537D8</key>
+		<key>9B92B10E2B164C8E41511562DE0EC8C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A0EC92EA493690AC88F5CBD7FE4CB337</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC050DEC6EF91DCE283B5BCC4EAA466A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D468777BEC2DE5127A16239373FFD11F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F44B77804BE39863A6568AA90C428551</key>
 		<dict>
 			<key>primary</key>
 			<true/>
