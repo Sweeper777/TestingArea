@@ -91,9 +91,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MiniLayout/MiniLayout.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/MultiSelectSegmentedControl/MultiSelectSegmentedControl.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MultiSlider/MultiSlider.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ROThumbnailGenerator/ROThumbnailGenerator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SlideMenuControllerSwift/SlideMenuControllerSwift.framework"
@@ -101,7 +99,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SwiftRandom/SwiftRandom.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyUtils/SwiftyUtils.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/UIViewController+NavigationBar/UIViewController_NavigationBar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
@@ -111,9 +108,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/GoogleToolboxForMac/GoogleToolboxForMac.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MiniLayout/MiniLayout.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/MultiSelectSegmentedControl/MultiSelectSegmentedControl.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MultiSlider/MultiSlider.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ROThumbnailGenerator/ROThumbnailGenerator.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SlideMenuControllerSwift/SlideMenuControllerSwift.framework"
@@ -121,5 +116,4 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SwiftRandom/SwiftRandom.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON/SwiftyJSON.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftyUtils/SwiftyUtils.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/UIViewController+NavigationBar/UIViewController_NavigationBar.framework"
 fi

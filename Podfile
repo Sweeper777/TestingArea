@@ -15,10 +15,7 @@ target 'TestingArea' do
     pod 'Eureka'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
-    pod 'MultiSelectSegmentedControl'
-    pod 'ROThumbnailGenerator'
     pod 'GoogleSignIn'
     pod 'MultiSlider'
-    pod 'UIViewController+NavigationBar'
 end
 

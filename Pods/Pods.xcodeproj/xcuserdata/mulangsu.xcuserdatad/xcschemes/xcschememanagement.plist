@@ -39,22 +39,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MultiSelectSegmentedControl.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MultiSlider.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ROThumbnailGenerator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -94,20 +84,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIViewController+NavigationBar.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>038EE1123E3951DACF881FEF911C2385</key>
+		<key>1433A7B8526EE0DEC0305ACB4DD04DFB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2EB371307B60FFEE1124F1D88EA0AB9D</key>
+		<key>1D190719B502BF31FD14C7FF0C820C1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2A70B4C07AC47BDC465991E8F28ED6B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,37 +112,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44D14B1291ACCCBE3F492D4A765D593E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>45EE2261CD8D644131FB813E0A1AF0FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5A388183DEC160851E192A2210130D85</key>
+		<key>4781F492A0767C504B74D44B581D3090</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B1AB1F553BC54B74E6A365B649A78F7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6B9E8A8DBBB8DF51ACE3E94646308918</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6C917119E6D5B6E56D4EC81E9DF161ED</key>
+		<key>62EBE1DCA00B8EC90ED826AB34E25AF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72571999D973BB481419BBC8BD2199FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -172,7 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C81AC3D69FF5C19AEFDA27A2CBAB2F1B</key>
+		<key>9F22EE439078489A94143F3517B537D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -182,17 +162,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E92CC6530358C2901D3E67A34FADFF35</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F952FEAF0490AC35E0EEEA6CE30CB569</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FBDAEC4DFC5B1E8FC46F334AE1939EAD</key>
+		<key>F44B77804BE39863A6568AA90C428551</key>
 		<dict>
 			<key>primary</key>
 			<true/>
