@@ -19,6 +19,7 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
         form +++ RichTextRow("test1") {
             row in
             row.value = "<span style=\"color: #00ff00\">Hello World</span>"
+            row.cell.height = { 100 }
             }
             .onChange {
                 row in
