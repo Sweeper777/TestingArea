@@ -4,6 +4,7 @@ import FirebaseAuth
 import GoogleSignIn
 import MultiSlider
 import Eureka
+import RichTextRow
 
 class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -15,6 +16,10 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        form +++ RichTextRow("test1") {
+            row in
+            row.value = "<span style=\"color: #00ff00\">Hello World</span>"
+            }
     }
     
     func test1() {
