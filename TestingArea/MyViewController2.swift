@@ -20,6 +20,11 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
             row in
             row.value = "<span style=\"color: #00ff00\">Hello World</span>"
             }
+            .onChange {
+                row in
+                print(row.value!)
+        }
+        
     }
     
     func test1() {
