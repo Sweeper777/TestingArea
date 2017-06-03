@@ -35,6 +35,32 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
             .cellSetup {
                 cell, row in
                 let palette1 = ColorPalette(name: "Default", palette: [
+                    ColorSpec(hex: "#f4f5fb", name: "")
+                    ])
+                let palette2 = ColorPalette(name: "Reds", palette: [
+                    ColorSpec(hex: "#ffebeb", name: ""),
+                    ColorSpec(hex: "#fed1d1", name: ""),
+                    ColorSpec(hex: "#fe9e9e", name: ""),
+                    ColorSpec(hex: "#e4bcbc", name: ""),
+                    ColorSpec(hex: "#cba7a7", name: "")
+                    ])
+                let palette3 = ColorPalette(name: "Yellows", palette: [
+                    ColorSpec(hex: "#fbffeb", name: ""),
+                    ColorSpec(hex: "#fafed1", name: ""),
+                    ColorSpec(hex: "#f5fe9e", name: ""),
+                    ColorSpec(hex: "#e1e4bc", name: ""),
+                    ColorSpec(hex: "#c8cba7", name: "")
+                    ])
+                let palette4 = ColorPalette(name: "Greens", palette: [
+                    ColorSpec(hex: "#ebfff0", name: ""),
+                    ColorSpec(hex: "#d1fed3", name: ""),
+                    ColorSpec(hex: "#9efea3", name: ""),
+                    ColorSpec(hex: "#bce4be", name: ""),
+                    ColorSpec(hex: "#a7cba9", name: "")
+                    ])
+                cell.palettes = [palette1, palette2, palette3, palette4]
+        }
+        
         form +++ ColorRow("test3") {
             row in
             row.title = "Select a color"
