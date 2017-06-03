@@ -35,6 +35,11 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
             .cellSetup {
                 cell, row in
                 let palette1 = ColorPalette(name: "Default", palette: [
+        form +++ ColorRow("test3") {
+            row in
+            row.title = "Select a color"
+            row.value = .green
+        }
     }
     
     func test1() {
