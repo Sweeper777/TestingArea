@@ -19,5 +19,6 @@ target 'TestingArea' do
     pod 'MultiSlider'
     pod 'RichTextRow'
     pod 'UIColor_Hex_Swift'
+    pod 'ImageRow'
 end
 

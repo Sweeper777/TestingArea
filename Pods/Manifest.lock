@@ -42,6 +42,8 @@ PODS:
   - GTMSessionFetcher/Core (1.1.10)
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
+  - ImageRow (2.0.0):
+    - Eureka (= 3.0)
   - MiniLayout (1.1.0)
   - MultiSlider (1.1.2):
     - MiniLayout
@@ -66,6 +68,7 @@ DEPENDENCIES:
   - Firebase/Core
   - FTPopOverMenu_Swift
   - GoogleSignIn
+  - ImageRow
   - MultiSlider
   - RealmSwift
   - RichTextRow
@@ -89,6 +92,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
+  ImageRow: 9dfbfa38c1e62c25d638bc40e97a48c1809443c4
   MiniLayout: 7664ed112a89d954e6ccb83b6ef5dc122fb77852
   MultiSlider: ca6ca7e0a511378857d8822224245f3db63eb205
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
@@ -101,6 +105,6 @@ SPEC CHECKSUMS:
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: e6cb7e9a7427d0849a0800684bd7d75c6d859966
+PODFILE CHECKSUM: 2d37e434a4c15dda627017a5e70c007e524f75e2
 
 COCOAPODS: 1.1.0.beta.1
