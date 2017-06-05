@@ -5,6 +5,7 @@ import GoogleSignIn
 import MultiSlider
 import Eureka
 import RichTextRow
+import ImageRow
 
 class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -14,6 +15,7 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var multiSlider: MultiSlider!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         form +++ RichTextRow("test1") {
@@ -66,6 +68,14 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
             row.title = "Select a color"
             row.value = .green
         }
+        
+        form +++ ImageRow("test4") {
+            row in
+            row.title = "Image"
+            row.sourceTypes = [.All]
+            row.clearAction = .yes(style: .default)
+        }
+        
         form +++ TextFloatLabelRow("test5") {
             row in
             row.title = "Hello"
@@ -76,6 +86,9 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
     func test1() {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
+    }
+    
+    func test2() {
     }
         
     @IBAction func click() {
