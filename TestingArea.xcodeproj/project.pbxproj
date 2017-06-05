@@ -19,12 +19,15 @@
 		5A1FD0471DFD53390071AE2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1FD0451DFD53390071AE2F /* Main.storyboard */; };
 		5A1FD0491DFD53390071AE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1FD0481DFD53390071AE2F /* Assets.xcassets */; };
 		5A1FD04E1DFD56DE0071AE2F /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
+		5A230A551EE14C8D0018045B /* FloatLabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A230A531EE14C8D0018045B /* FloatLabelRow.swift */; };
+		5A230A561EE14C8D0018045B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A230A541EE14C8D0018045B /* FloatLabelTextField.swift */; };
 		5A23109D1E62E690009B39D2 /* NotoColorEmoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */; };
 		5A2377E61EE01494005AC8C8 /* ColorPalettes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2377E11EE01494005AC8C8 /* ColorPalettes.swift */; };
 		5A2377E71EE01494005AC8C8 /* ColorPickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2377E21EE01494005AC8C8 /* ColorPickerRow.swift */; };
 		5A2377E81EE01494005AC8C8 /* ColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2377E31EE01494005AC8C8 /* ColorRow.swift */; };
 		5A2377E91EE01494005AC8C8 /* ColorSwatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2377E41EE01494005AC8C8 /* ColorSwatchCell.swift */; };
 		5A2377EA1EE01494005AC8C8 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2377E51EE01494005AC8C8 /* ColorSwatchView.swift */; };
+		5A26E9DE1EE2AA530010BA70 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A26E9E01EE2AA530010BA70 /* Localizable.strings */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
 		5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */; };
@@ -121,12 +124,16 @@
 		5A1FD0461DFD53390071AE2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A1FD0481DFD53390071AE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A1FD04A1DFD53390071AE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A230A521EE14C8D0018045B /* FloatLabelRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatLabelRow.h; sourceTree = "<group>"; };
+		5A230A531EE14C8D0018045B /* FloatLabelRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelRow.swift; sourceTree = "<group>"; };
+		5A230A541EE14C8D0018045B /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoColorEmoji.ttf; sourceTree = "<group>"; };
 		5A2377E11EE01494005AC8C8 /* ColorPalettes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalettes.swift; sourceTree = "<group>"; };
 		5A2377E21EE01494005AC8C8 /* ColorPickerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPickerRow.swift; sourceTree = "<group>"; };
 		5A2377E31EE01494005AC8C8 /* ColorRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorRow.swift; sourceTree = "<group>"; };
 		5A2377E41EE01494005AC8C8 /* ColorSwatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSwatchCell.swift; sourceTree = "<group>"; };
 		5A2377E51EE01494005AC8C8 /* ColorSwatchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
+		5A26E9DF1EE2AA530010BA70 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5A4313B61DEA471500839CD6 /* BNHtmlPdfKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BNHtmlPdfKit.framework; path = "Pods/../build/Debug-iphoneos/BNHtmlPdfKit/BNHtmlPdfKit.framework"; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
 		5AE001031CAA0F3A0058B744 /* TestingArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +250,16 @@
 			path = TestingAreaTV;
 			sourceTree = "<group>";
 		};
+		5A230A511EE14C5D0018045B /* FloatLabelRow */ = {
+			isa = PBXGroup;
+			children = (
+				5A230A521EE14C8D0018045B /* FloatLabelRow.h */,
+				5A230A531EE14C8D0018045B /* FloatLabelRow.swift */,
+				5A230A541EE14C8D0018045B /* FloatLabelTextField.swift */,
+			);
+			name = FloatLabelRow;
+			sourceTree = "<group>";
+		};
 		5A2377E01EE01494005AC8C8 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +299,7 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
+				5A230A511EE14C5D0018045B /* FloatLabelRow */,
 				5A2377E01EE01494005AC8C8 /* ColorPicker */,
 				5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */,
 				5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */,
@@ -298,6 +316,7 @@
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
+				5A26E9E01EE2AA530010BA70 /* Localizable.strings */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
 				5AE001151CAA0F3A0058B744 /* Info.plist */,
 				5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */,
@@ -474,6 +493,7 @@
 			files = (
 				5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */,
 				5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */,
+				5A26E9DE1EE2AA530010BA70 /* Localizable.strings in Resources */,
 				5A158C8F1E369484007000FD /* AllEmoji.json in Resources */,
 				5A23109D1E62E690009B39D2 /* NotoColorEmoji.ttf in Resources */,
 				5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */,
@@ -570,11 +590,13 @@
 				5A2377E81EE01494005AC8C8 /* ColorRow.swift in Sources */,
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
 				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
+				5A230A561EE14C8D0018045B /* FloatLabelTextField.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5A2377E91EE01494005AC8C8 /* ColorSwatchCell.swift in Sources */,
 				5A2377E71EE01494005AC8C8 /* ColorPickerRow.swift in Sources */,
 				5A2377EA1EE01494005AC8C8 /* ColorSwatchView.swift in Sources */,
+				5A230A551EE14C8D0018045B /* FloatLabelRow.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 				5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */,
 				5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */,
@@ -615,6 +637,14 @@
 				5A1FD0461DFD53390071AE2F /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A26E9E01EE2AA530010BA70 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A26E9DF1EE2AA530010BA70 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */ = {
