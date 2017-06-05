@@ -66,6 +66,11 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
             row.title = "Select a color"
             row.value = .green
         }
+        form +++ TextFloatLabelRow("test5") {
+            row in
+            row.title = "Hello"
+            row.value = "World"
+        }
     }
     
     func test1() {
