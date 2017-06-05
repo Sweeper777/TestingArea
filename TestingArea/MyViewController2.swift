@@ -84,3 +84,19 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
     
     
 }
+
+
+public enum Code : Int {
+    case unknown
+    case clientInvalid
+    case paymentCancelled
+    case paymentInvalid
+    case paymentNotAllowed
+    case storeProductNotAvailable
+    @available(iOS 9.3, *)
+    case cloudServicePermissionDenied
+    @available(iOS 9.3, *)
+    case cloudServiceNetworkConnectionFailed
+    @available(iOS 10.3, *)
+    case cloudServiceRevoked
+}
