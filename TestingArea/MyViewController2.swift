@@ -6,6 +6,7 @@ import MultiSlider
 import Eureka
 import RichTextRow
 import ImageRow
+import Alamofire
 
 class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -18,16 +19,7 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
         
         super.viewDidLoad()
         
-        let notification = UILocalNotification()
-        notification.timeZone = NSTimeZone.local
-        //calculation of dateTime
-        notification.fireDate = Date().addingTimeInterval(5)
-        
-        
-        notification.repeatInterval = .year
-        
-        notification.alertBody = "Body"
-        notification.userInfo = ["title": "Notify", "type": "title", "5436" : "Notify"]
+        Alamofire.upload(<#T##data: Data##Data#>, to: <#T##URLConvertible#>)
         
         form +++ RichTextRow("test1") {
             row in
