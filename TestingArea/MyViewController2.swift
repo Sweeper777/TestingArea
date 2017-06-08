@@ -18,6 +18,17 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
         
         super.viewDidLoad()
         
+        let notification = UILocalNotification()
+        notification.timeZone = NSTimeZone.local
+        //calculation of dateTime
+        notification.fireDate = Date().addingTimeInterval(5)
+        
+        
+        notification.repeatInterval = .year
+        
+        notification.alertBody = "Body"
+        notification.userInfo = ["title": "Notify", "type": "title", "5436" : "Notify"]
+        
         form +++ RichTextRow("test1") {
             row in
             row.value = "<span style=\"color: #00ff00\">Hello World</span>"
