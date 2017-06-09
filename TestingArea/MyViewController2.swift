@@ -6,7 +6,6 @@ import MultiSlider
 import Eureka
 import RichTextRow
 import ImageRow
-import Alamofire
 
 class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -18,8 +17,6 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        Alamofire.upload(<#T##data: Data##Data#>, to: <#T##URLConvertible#>)
         
         form +++ RichTextRow("test1") {
             row in
