@@ -3,6 +3,8 @@ import SwiftyUtils
 import FirebaseAuth
 import GoogleSignIn
 import Eureka
+import Alamofire
+import PromiseKit
 
 class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -30,4 +32,18 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
     }
     
     
+}
+func login() -> Promise<NSDictionary> {
+    return Promise.init { fulfill, reject in
+        Alamofire.request(try! URLRequest(url: "", method: .get))
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success(let dict):
+                    fulfill(dict as! NSDictionary)
+                case .failure(let error):
+                    reject(error)
+                }
+        }
+    }
 }
