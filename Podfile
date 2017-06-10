@@ -20,5 +20,6 @@ target 'TestingArea' do
     pod 'RichTextRow'
     pod 'UIColor_Hex_Swift'
     pod 'ImageRow'
+    pod 'PromiseKit'
 end
 
