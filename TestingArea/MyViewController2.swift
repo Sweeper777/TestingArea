@@ -35,16 +35,20 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
 }
 
 public protocol Protocol1 {
-    func execute<T, R>(req: T) -> Promise<R>
+    associatedtype RequestType
+    associatedtype ResultType
+    func execute(req: RequestType) -> Promise<ResultType>
 }
 
 struct Implemented1 : Protocol1 {
-    func execute<String, Bool>(req : String) -> Promise<Bool> {
-        return Promise<Bool>() { fulfill, reject in
+    typealias ResultType = Bool
+    typealias RequestType = String
+    func execute(req : String) -> Promise<Bool> {
+        return Promise { fulfill, reject in
             fulfill(true)
         }
     }
-
+}
 func login() -> Promise<NSDictionary> {
     return Promise.init { fulfill, reject in
         Alamofire.request(try! URLRequest(url: "", method: .get))
