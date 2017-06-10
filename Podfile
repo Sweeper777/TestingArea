@@ -11,15 +11,10 @@ target 'TestingArea' do
     pod 'RealmSwift'
     pod 'SwiftRandom'
     pod 'Alamofire'
-    pod 'FTPopOverMenu_Swift'
     pod 'Eureka'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
-    pod 'MultiSlider'
-    pod 'RichTextRow'
-    pod 'UIColor_Hex_Swift'
-    pod 'ImageRow'
     pod 'PromiseKit'
 end
 

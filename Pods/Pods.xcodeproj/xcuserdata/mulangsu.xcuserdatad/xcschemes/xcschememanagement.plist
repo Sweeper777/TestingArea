@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FTPopOverMenu_Swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,21 +25,6 @@
 			<false/>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ImageRow.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MiniLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MultiSlider.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -65,16 +45,6 @@
 			<false/>
 		</dict>
 		<key>RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RichTextRow-Resources.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RichTextRow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -104,20 +74,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIColor_Hex_Swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C6DD91258A311AFCEB0456D7A221465</key>
+		<key>082CA28B13CB9FE39886E8DC87F4A6F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C4AD7A8E1CEFEB28908A7DE7422C281</key>
+		<key>29357CB06BD2F2798D59950285F4F7ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,22 +92,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3760B853FA54727E313D902385335AF5</key>
+		<key>40F6A444E903DCA9EF2820938F5E0090</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4404C36F0A61EAA70DA2EB8526FCB85A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>45EE2261CD8D644131FB813E0A1AF0FC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>509467F254A7885F2AFB20A918E4DEF0</key>
+		<key>4936F6B0FBAC2584C5317078C12CDD36</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,37 +117,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F14D6DB69218CEC770366CF0757DFBC</key>
+		<key>7E48586CF02F5EACC1E012F87ECF9EAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A503C882433AB4E7A5DAC01190AB539</key>
+		<key>8B62992D7EC2D735FD3A8EAFFD682E79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9ADD7ABD0E80833A8809AF20D837536C</key>
+		<key>B0E01CB33415EBA91F1203ABE5C1760E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B179AEF1D065287E9EFCD48ECB25148A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C3ED89F5F82F795D0DE33A761F2F870D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C49577A6B379215518A2EE9E6434DE57</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D12C6A684265761C4A9C120E604C6E4C</key>
+		<key>C4A58B23084F1DE57B8CCB84F378D1B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -202,17 +142,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DBA40698AE471299320F64191442FECE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F53C23CA3908FE05340E881806531A54</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD8F83BC7BA8F998D93AA117B969C2A1</key>
+		<key>E7003625AC7E1D9776AC633EFCF494EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

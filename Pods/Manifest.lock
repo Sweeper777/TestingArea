@@ -19,7 +19,6 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.0):
     - FirebaseCore (~> 4.0)
-  - FTPopOverMenu_Swift (0.0.7)
   - GoogleSignIn (4.0.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -42,11 +41,6 @@ PODS:
   - GTMSessionFetcher/Core (1.1.10)
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
-  - ImageRow (2.0.0):
-    - Eureka (= 3.0)
-  - MiniLayout (1.1.0)
-  - MultiSlider (1.1.2):
-    - MiniLayout
   - PromiseKit (4.2.2):
     - PromiseKit/Foundation (= 4.2.2)
     - PromiseKit/QuartzCore (= 4.2.2)
@@ -63,33 +57,25 @@ PODS:
   - Realm/Headers (2.7.0)
   - RealmSwift (2.7.0):
     - Realm (= 2.7.0)
-  - RichTextRow (1.0.0):
-    - Eureka (= 3.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.4.0)
   - SwiftRandom (1.0.0)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
-  - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - Alamofire
   - Eureka
   - Firebase/Auth
   - Firebase/Core
-  - FTPopOverMenu_Swift
   - GoogleSignIn
-  - ImageRow
-  - MultiSlider
   - PromiseKit
   - RealmSwift
-  - RichTextRow
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftRandom
   - SwiftyJSON
   - SwiftyUtils
-  - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -99,25 +85,19 @@ SPEC CHECKSUMS:
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
   FirebaseCore: 85ad466044c2f013cdb167f85d426d15b128114a
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
-  FTPopOverMenu_Swift: 8939e3c98a72217c761e806c915101227ed7c8fc
   GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
-  ImageRow: 9dfbfa38c1e62c25d638bc40e97a48c1809443c4
-  MiniLayout: 7664ed112a89d954e6ccb83b6ef5dc122fb77852
-  MultiSlider: ca6ca7e0a511378857d8822224245f3db63eb205
   PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
-  RichTextRow: 9c14cc395fc7ef48166fb3925e6e6d0b00ab4417
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: 3e7482795bdb095234bc35835cc6666c8d5ebca1
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
-  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: a2a047e2d48ec90df3be0d46392609e63cfa90bd
+PODFILE CHECKSUM: de71fa54886ddcc171ec819c21008f1857bfee1a
 
 COCOAPODS: 1.1.0.beta.1
