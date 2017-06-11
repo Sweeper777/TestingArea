@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - CRCurrencyString (1.0.5)
   - Eureka (3.0.0)
   - Firebase/Auth (4.0.0):
     - Firebase/Core
@@ -41,17 +42,6 @@ PODS:
   - GTMSessionFetcher/Core (1.1.10)
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
-  - PromiseKit (4.2.2):
-    - PromiseKit/Foundation (= 4.2.2)
-    - PromiseKit/QuartzCore (= 4.2.2)
-    - PromiseKit/UIKit (= 4.2.2)
-  - PromiseKit/CorePromise (4.2.2)
-  - PromiseKit/Foundation (4.2.2):
-    - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.2.2):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.2.2):
-    - PromiseKit/CorePromise
   - Realm (2.7.0):
     - Realm/Headers (= 2.7.0)
   - Realm/Headers (2.7.0)
@@ -65,11 +55,11 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - CRCurrencyString
   - Eureka
   - Firebase/Auth
   - Firebase/Core
   - GoogleSignIn
-  - PromiseKit
   - RealmSwift
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
@@ -79,6 +69,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CRCurrencyString: 896feef8d094c1b944cd50562171d9c7e4cdeab2
   Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
   Firebase: 284eea779b73fdff309791817da7c68bff8dd572
   FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
@@ -89,7 +80,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
-  PromiseKit: 00e8886881f151c7e573d06b437915b0bb2970ec
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   RealmSwift: 6d06425d3900c86473c4f323bf6949b43fca22bc
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
@@ -98,6 +88,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
 
-PODFILE CHECKSUM: de71fa54886ddcc171ec819c21008f1857bfee1a
+PODFILE CHECKSUM: 44441aebd7a8c28b0a4fa4fb234f6723283b247a
 
 COCOAPODS: 1.1.0.beta.1
