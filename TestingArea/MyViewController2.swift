@@ -4,6 +4,7 @@ import FirebaseAuth
 import GoogleSignIn
 import Eureka
 import Alamofire
+import CRCurrencyString
 
 class MyViewController2: FormViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -21,6 +22,7 @@ class MyViewController2: FormViewController, GIDSignInUIDelegate {
     }
     
     func test2() {
+        textview.text = NSString.currencyString(withCentsAmount: 500, currencyCode: "HUF", andStyle: kCurrencyStyleNativeSymbol)
     }
         
     @IBAction func click() {
