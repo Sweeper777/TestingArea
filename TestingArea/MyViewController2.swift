@@ -5,12 +5,16 @@ import GoogleSignIn
 import Eureka
 import Alamofire
 import CRCurrencyString
+import MapKit
+import CoreLocation
 
-class MyViewController2: FormViewController, GIDSignInUIDelegate {
+class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var map: MKMapView!
+    
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
