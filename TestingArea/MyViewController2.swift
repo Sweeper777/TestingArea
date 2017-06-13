@@ -18,6 +18,8 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        map.delegate = self
+        locationManager.delegate = self
     }
     
     func test1() {
