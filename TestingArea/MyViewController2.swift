@@ -31,8 +31,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
         textview.text = NSString.currencyString(withCentsAmount: 500, currencyCode: "HUF", andStyle: kCurrencyStyleNativeSymbol)
     }
         
-    @IBAction func click() {
         
+    @IBAction func click() {
+        map.region.center = map.userLocation.coordinate
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .notDetermined {
             manager.requestWhenInUseAuthorization()
