@@ -20,6 +20,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
         super.viewDidLoad()
         map.delegate = self
         locationManager.delegate = self
+        test3()
     }
     
     func test1() {
@@ -30,7 +31,63 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
     func test2() {
         textview.text = NSString.currencyString(withCentsAmount: 500, currencyCode: "HUF", andStyle: kCurrencyStyleNativeSymbol)
     }
+    
+    func test3() {
+        let sourceLocation = CLLocationCoordinate2D(latitude: 40.759011, longitude: -73.984472)
+        let destinationLocation = CLLocationCoordinate2D(latitude: 40.748441, longitude: -73.985564)
         
+        // 3.
+        let sourcePlacemark = MKPlacemark(coordinate: sourceLocation, addressDictionary: nil)
+        let destinationPlacemark = MKPlacemark(coordinate: destinationLocation, addressDictionary: nil)
+        
+        // 4.
+        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+        
+        // 5.
+        let sourceAnnotation = MKPointAnnotation()
+        sourceAnnotation.title = "Times Square"
+        
+        if let location = sourcePlacemark.location {
+            sourceAnnotation.coordinate = location.coordinate
+        }
+        
+        
+        let destinationAnnotation = MKPointAnnotation()
+        destinationAnnotation.title = "Empire State Building"
+        
+        if let location = destinationPlacemark.location {
+            destinationAnnotation.coordinate = location.coordinate
+        }
+        
+        // 6.
+        self.map.showAnnotations([sourceAnnotation,destinationAnnotation], animated: true )
+        
+        // 7.
+        let directionRequest = MKDirectionsRequest()
+        directionRequest.source = sourceMapItem
+        directionRequest.destination = destinationMapItem
+        directionRequest.transportType = .automobile
+        
+        // Calculate the direction
+        let directions = MKDirections(request: directionRequest)
+        
+        // 8.
+        directions.calculate {
+            (response, error) -> Void in
+            
+            guard let response = response else {
+                if let error = error {
+                    print("Error: \(error)")
+                }
+                
+                return
+            }
+            
+            let route = response.routes[0]
+            self.map.add((route.polyline), level: MKOverlayLevel.aboveRoads)
+        }
+    }
         
     @IBAction func click() {
         map.region.center = map.userLocation.coordinate
