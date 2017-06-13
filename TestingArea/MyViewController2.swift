@@ -33,6 +33,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
         
     @IBAction func click() {
         
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .notDetermined {
+            manager.requestWhenInUseAuthorization()
+            manager.startUpdatingLocation()
+        }
     }
     
     
