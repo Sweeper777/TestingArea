@@ -40,5 +40,13 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
         }
     }
     
+    var flag = true
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        if flag {
+            mapView.region.center = userLocation.coordinate
+            flag = false
+        }
+    }
     
 }
