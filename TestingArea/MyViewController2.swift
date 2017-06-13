@@ -109,4 +109,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
         }
     }
     
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = .red
+        renderer.lineWidth = 4.0
+        
+        return renderer
+    }
 }
