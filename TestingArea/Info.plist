@@ -6,6 +6,8 @@
 	<string>xxx</string>
 	<key>NSCameraUsageDescription</key>
 	<string>xxx</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>xxx</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
