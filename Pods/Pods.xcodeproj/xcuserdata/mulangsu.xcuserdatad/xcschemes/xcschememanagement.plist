@@ -44,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PromiseKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,7 +87,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03840675674A9B3C00EA079159B12C8D</key>
+		<key>04D557CD449828771C27B09A303E037E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +102,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>32EB2007D77C8A6A495086E309FB89DD</key>
+		<key>177FA8433A089D3E364C288FED3A8811</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>294E0F169B28A7B1FEA8DE07FA52CEB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>42670F8059F1B85B5A8D08F23F764F22</key>
+		<key>3A8B4FEBE84E28A7B6E1D4E7F3D1A532</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6DE01A413C50DE6C25CE9F70C5857AFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,12 +142,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A84DAB709DE0789A792FCE775D9D5EB6</key>
+		<key>9D578EB90FFA64822B7792FCABDAA6FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7449AAB0C435FBA4E29CB9EACA15B55</key>
+		<key>C73D368378A1D4161922BC6AAA45F6A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1A49E25C6583A31A0584E7C245D929B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,17 +162,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD436B3D206E6C0960496939DDC1E82C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DEF00AC77488F5122A4776A69FFA2AC1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FF4944B9E7A4F0489D8D6A400C75DBB2</key>
+		<key>FFFCD016DA034E3D4EF1F6F3BA0E9E7D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
