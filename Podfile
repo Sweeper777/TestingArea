@@ -16,5 +16,6 @@ target 'TestingArea' do
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
     pod 'CRCurrencyString'
+    pod 'FloatLabelRow'
 end
 
