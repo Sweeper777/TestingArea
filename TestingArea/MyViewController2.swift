@@ -7,6 +7,7 @@ import Alamofire
 import CRCurrencyString
 import MapKit
 import CoreLocation
+import PromiseKit
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet var textfield: UITextField!
@@ -21,6 +22,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
         map.delegate = self
         locationManager.delegate = self
         test3()
+        test4()
     }
     
     func test1() {
@@ -86,6 +88,21 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, MKMapViewDelegat
             
             let route = response.routes[0]
             self.map.add((route.polyline), level: MKOverlayLevel.aboveRoads)
+        }
+    }
+    
+    func test4() {
+        CLLocationManager.promise().catch {
+            error in
+            print(error)
+            }.then {
+                location -> Promise<CLLocation> in
+                let alert = UIAlertController(title: location.description)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return CLLocationManager.promise()
+            }.then { _ in
+                print("done")
         }
     }
         
