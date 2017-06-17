@@ -15,7 +15,5 @@ target 'TestingArea' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
-    pod 'CRCurrencyString'
-    pod 'PromiseKit/CoreLocation'
 end
 
