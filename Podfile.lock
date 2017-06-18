@@ -46,6 +46,9 @@ PODS:
   - Realm/Headers (2.8.0)
   - RealmSwift (2.8.0):
     - Realm (= 2.8.0)
+  - RxCocoa (3.5.0):
+    - RxSwift (~> 3.4)
+  - RxSwift (3.5.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftChart (0.5.0)
   - SwiftRandom (1.0.0)
@@ -59,6 +62,8 @@ DEPENDENCIES:
   - Firebase/Core
   - GoogleSignIn
   - RealmSwift
+  - RxCocoa
+  - RxSwift
   - SlideMenuControllerSwift
   - SwiftChart (~> 0.4)
   - SwiftRandom
@@ -79,12 +84,14 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
+  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftChart: d1d22d2b1c4582f4d561edf97a210059c00ee256
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
 
-PODFILE CHECKSUM: 5975aa9f50a8d21ebfaabd46ffa1b746973f5fb6
+PODFILE CHECKSUM: 4d14e30aaa56eacd05781b3b1ae52cae8616ca73
 
 COCOAPODS: 1.1.0.beta.1

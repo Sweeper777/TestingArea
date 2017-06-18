@@ -15,5 +15,7 @@ target 'TestingArea' do
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 end
 

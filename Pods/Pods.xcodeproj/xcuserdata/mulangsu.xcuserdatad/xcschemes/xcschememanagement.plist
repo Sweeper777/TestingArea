@@ -44,6 +44,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +82,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0D2A57B5551798BB389918A448D55214</key>
+		<key>0D17494967441DF924CE3E0D2B7A2BBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>221BA26B88AEC43F7B5F873E0CFC5174</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>373C77E5BB966D0CB0827FD0A99E0FF5</key>
+		<key>4CBB780BB33ABC94206816559890A9BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>616CADADCD02F27F1F71AA552853ED30</key>
+		<key>6C5B8FB30010454F3058A1D6822B410B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C905732001A9707A3566A5832FC993C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CAE56501E95279E341579719DB4E495</key>
+		<key>70AFD8BF4B701E5ADDB75A9333165524</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71C9A1E514B77B174982ACCB054C5DDE</key>
+		<key>77012E0237821A498506EB3B7E137471</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,22 +137,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B7A48D44362E2B2E6895CA453F604B78</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D468777BEC2DE5127A16239373FFD11F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E60B85AB5B305B4AA35BF03649F665C0</key>
+		<key>DA45C0CE7C72E8BCB22A2020B6BA5CF5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC5CCF5F4469C3D4470634C46515AD58</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FB2F9FAA25DC5E4CC05620D11B6EF391</key>
+		<key>F9A9B3F023075BC43782C555568D15BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
