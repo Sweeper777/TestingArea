@@ -19,6 +19,12 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
+    
+    func test2() {
+        textfield.rx.text.orEmpty.throttle(0.3, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .bind(to: textview.rx.text).disposed(by: disposeBag)
+    }
         
     @IBAction func click() {
         
