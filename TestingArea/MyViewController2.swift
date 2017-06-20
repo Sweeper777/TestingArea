@@ -10,6 +10,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
     
+    let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
     }
