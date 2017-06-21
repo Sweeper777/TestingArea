@@ -7,6 +7,8 @@ class MyTableViewController: UITableViewController {
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
+        tableView.delegate = nil
+        tableView.dataSource = nil
         
     }
 }
