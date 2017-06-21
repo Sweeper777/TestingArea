@@ -34,6 +34,15 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
             .map { $0.uppercased() }
             .bind(to: textview.rx.text).disposed(by: disposeBag)
     }
+    
+    func test4() {
+        textfield.rx.text.orEmpty.throttle(0.3, scheduler: MainScheduler.instance)
+            .asObservable()
+            .subscribe(onNext: {
+                text in
+                self.button.setTitle(text.characters.count.description, for: .normal)
+            }).disposed(by: disposeBag)
+    }
         
     @IBAction func click() {
         
