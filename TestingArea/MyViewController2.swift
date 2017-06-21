@@ -4,6 +4,8 @@ import FirebaseAuth
 import GoogleSignIn
 import Eureka
 import Alamofire
+import RxSwift
+import RxCocoa
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -23,6 +25,13 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     func test2() {
         textfield.rx.text.orEmpty.throttle(0.3, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
+            .bind(to: textview.rx.text).disposed(by: disposeBag)
+    }
+    
+    func test3() {
+        textfield.rx.text.orEmpty.throttle(0.3, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .map { $0.uppercased() }
             .bind(to: textview.rx.text).disposed(by: disposeBag)
     }
         
