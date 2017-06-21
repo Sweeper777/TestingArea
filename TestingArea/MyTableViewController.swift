@@ -15,5 +15,13 @@ class MyTableViewController: UITableViewController {
             cell.textLabel?.text = model
         }.disposed(by: disposeBag)
         
+        tableView.rx.modelSelected(String.self)
+            .subscribe(onNext: {
+                name in
+                if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
+                    self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+                }
+                _ = self.model.value.remove(object: name)
+        }).disposed(by: disposeBag)
     }
 }
