@@ -29,6 +29,23 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, CoachMarksContro
     func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
         return 3
     }
+    
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkAt index: Int) -> CoachMark {
+        return test6()
+    }
+    
+    func test5(_ index: Int) -> CoachMark {
+        switch index {
+        case 0:
+            return cmController.helper.makeCoachMark(for: textfield)
+        case 1:
+            return cmController.helper.makeCoachMark(for: textview)
+        case 2:
+            return cmController.helper.makeCoachMark(for: button)
+        default:
+            return cmController.helper.makeCoachMark()
+        }
+    }
     func test1() {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
