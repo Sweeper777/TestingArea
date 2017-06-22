@@ -14,8 +14,16 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, CoachMarksContro
     @IBOutlet var button: UIButton!
     
     let disposeBag = DisposeBag()
+    let cmController = CoachMarksController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cmController.dataSource = self
+        cmController.delegate = self
+        
+        test3()
+        test4()
     }
     
     func test1() {
