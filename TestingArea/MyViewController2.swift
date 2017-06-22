@@ -26,6 +26,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, CoachMarksContro
         test4()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        cmController.start(on: self)
+    }
+    
     func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
         return 3
     }
