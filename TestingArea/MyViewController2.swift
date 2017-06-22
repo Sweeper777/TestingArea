@@ -46,6 +46,23 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, CoachMarksContro
             return cmController.helper.makeCoachMark()
         }
     }
+    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
+        let coachViews = coachMarksController.helper.makeDefaultCoachViews(withArrow: true, arrowOrientation: coachMark.arrowOrientation)
+        switch index {
+        case 0:
+            coachViews.bodyView.hintLabel.text = "This is a text field"
+        case 1:
+            coachViews.bodyView.hintLabel.text = "This is a text view"
+        case 2:
+            coachViews.bodyView.hintLabel.text = "This is a button"
+        default:
+            break
+        }
+        coachViews.bodyView.nextLabel.text = "Ok!"
+        
+        return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
+    }
+    
     func test1() {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
