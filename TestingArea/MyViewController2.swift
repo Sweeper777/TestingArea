@@ -26,6 +26,9 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, CoachMarksContro
         test4()
     }
     
+    func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
+        return 3
+    }
     func test1() {
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
