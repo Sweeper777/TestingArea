@@ -6,8 +6,9 @@ import Eureka
 import Alamofire
 import RxSwift
 import RxCocoa
+import Instructions
 
-class MyViewController2: UIViewController, GIDSignInUIDelegate {
+class MyViewController2: UIViewController, GIDSignInUIDelegate, CoachMarksControllerDelegate, CoachMarksControllerDataSource {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
