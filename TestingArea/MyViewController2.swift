@@ -51,6 +51,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate, CoachMarksContro
             return cmController.helper.makeCoachMark()
         }
     }
+    
+    func test6() -> CoachMark {
+        return cmController.helper.makeCoachMark()
+    }
+    
     func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
         let coachViews = coachMarksController.helper.makeDefaultCoachViews(withArrow: true, arrowOrientation: coachMark.arrowOrientation)
         switch index {
