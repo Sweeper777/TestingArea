@@ -19,8 +19,6 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseInstanceID (2.0.0):
     - FirebaseCore (~> 4.0)
-  - FloatLabelRow (1.0.0):
-    - Eureka (~> 3.0)
   - GoogleSignIn (4.0.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -63,7 +61,6 @@ DEPENDENCIES:
   - Eureka
   - Firebase/Auth
   - Firebase/Core
-  - FloatLabelRow
   - GoogleSignIn
   - Instructions (from `https://github.com/ephread/Instructions.git`)
   - RealmSwift
@@ -92,7 +89,6 @@ SPEC CHECKSUMS:
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
   FirebaseCore: 1a8bf6c795ad07d2918278657954ffd2552e9c17
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
-  FloatLabelRow: b4a93f68e19d234f99ffcdf155bbe3c616f79b06
   GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
@@ -108,6 +104,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
 
-PODFILE CHECKSUM: 757bf1559207b8415a266162d83ffa84b192b467
+PODFILE CHECKSUM: 5bb98e57cf94943515fad491b82bf8db2396957e
 
 COCOAPODS: 1.1.0.beta.1

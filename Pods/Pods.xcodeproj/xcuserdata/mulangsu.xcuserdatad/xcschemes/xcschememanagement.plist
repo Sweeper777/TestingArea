@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FloatLabelRow.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -92,17 +87,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>046E08FC99D1D57B22A752855521EBB4</key>
+		<key>081694AD3A908B428768026A6EDCCADD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0CB8025F747103B2D50537A7D136591F</key>
+		<key>2F13DE549C8C8ACBEFC08D38237E6ED8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>173309D1F91B6235C7BEBC65E7C13FEC</key>
+		<key>2F1BEA01D37AECD99E7C958A4B1204E2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31119AC077361F786C4D3A9568FEDCF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>40E414BD112920AC744BFD597166E267</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>44C7BD662F2F76612C686B389B972D1D</key>
+		<key>43B749D7E1FA2B051F7AA8DB8FC82A7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>781149B0D5996928B8C00FDA64CA2A58</key>
+		<key>7337F3BA53DC36132E2B68B6DB9F24F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,17 +142,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1DD1FDE8C23A27837A28483CE84B1FF</key>
+		<key>B56937E31DC799EBD5BBC41AFD69A2C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6454A1D52E9B94D4CC5135789829825</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0C85CB525570E5CEB80044B6A948500</key>
+		<key>CE7860C6B2C59B5F4D165495DA700147</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -167,12 +157,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E50CF8464D032F1884AAA9C997FFAEC6</key>
+		<key>D5E4A2F562C507E6E45522891FDB9AC5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB25C16FE5ED257E01A59A3CA57567C5</key>
+		<key>F87CD617F58D171C7044B826EA1ACCA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

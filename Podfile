@@ -18,6 +18,5 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Instructions', :git => 'https://github.com/ephread/Instructions.git'
-    pod 'FloatLabelRow'
 end
 
