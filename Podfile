@@ -17,6 +17,5 @@ target 'TestingArea' do
     pod 'GoogleSignIn'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'Instructions', :git => 'https://github.com/ephread/Instructions.git'
 end
 
