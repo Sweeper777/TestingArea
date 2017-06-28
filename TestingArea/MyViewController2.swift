@@ -21,6 +21,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     var i = 0
     @IBAction func click() {
         textview.font = UIFont.preferredFont(forTextStyle: fontStyles[i])
+        textfield.text = "\(i.description): \(textview.font!.pointSize)"
         i += 1
         if i == fontStyles.count {
             i = 0
