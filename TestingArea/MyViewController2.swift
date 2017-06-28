@@ -15,6 +15,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textview.text = "Testing Testing Testing"
     }
         
     @IBAction func click() {
