@@ -5,6 +5,7 @@ import GoogleSignIn
 import Eureka
 import Alamofire
 import RxSwift
+import RxCocoa
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: UITextField!
@@ -28,5 +29,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         if i == fontStyles.count {
             i = 0
         }
+        button.rx.image().onNext(#imageLiteral(resourceName: "settings"))
+        
     }
 }
