@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SkyFloatingLabelTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,7 +92,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>157D249EC816E9DAEDCC197679E63A64</key>
+		<key>2974443720242B7946E5FC641AE16E82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33E89C3140707CA40FBD269CAF95AF3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,22 +107,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>404F75ADDACF52140EDE629235D23B84</key>
+		<key>4221E2CF469A436AFA7314D26BC64D1D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>43614E3ECA7BD03CFBE4EFE63B52238F</key>
+		<key>4B6D0268C045B9D9875DD963D4CF5D5E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59D7FBEC793A6C04349F6CB5A2B8E3AA</key>
+		<key>5C0FEA42980F761E1C5BB5B3C44E4CDB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C10E6705D45BEDFD8AAA001641FEF32</key>
+		<key>6300E2F86CCA45D5CC5965CC2E809325</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65B3BF750D57C9F7E9668653251A8505</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,22 +147,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>859A5436D1A194581D1AC372992C90F1</key>
+		<key>BB9AEA7EB8E3959F9CFD4E50189E802B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9223185A8776008D6DC930A6035A8CA6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9538736CB00A7012BBC149C36DC7E27E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B95479F2F7E1A97CFC73F9F748BE866E</key>
+		<key>BC2B1F818F775968E2B839CAECA9FBB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,12 +162,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>EC7BE16EC6102668E1BB1EAD223F255A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F29939A6E87BC1066775F4F48553A397</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F409BA3D8063AB63E89898BE7253BD29</key>
+		<key>F8D1C2A7D27D584EBFB5490EBA3DBB70</key>
 		<dict>
 			<key>primary</key>
 			<true/>

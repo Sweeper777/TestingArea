@@ -18,5 +18,6 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'ObjectMapper'
+    pod 'SkyFloatingLabelTextField'
 end
 
