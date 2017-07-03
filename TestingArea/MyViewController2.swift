@@ -57,5 +57,11 @@ class Question: Mappable {
     required init?(map: Map) {
     }
     
+    func mapping(map: Map) {
+        type <- map["type"]
+        questionText <- map["questionText"]
+        possibleAnswers <- map["possibleAnswers"]
+        hint <- map["hint"]
+    }
 }
 }
