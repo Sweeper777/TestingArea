@@ -22,7 +22,14 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         textview.text = "Testing Testing Testing"
     }
     
-    var i = 0
+    func test1() {
+        textfield.addTarget(self, action: #selector(test2), for: .valueChanged)
+    }
+    
+    func test2() {
+        print("Changed")
+    }
+    
     @IBAction func click() {
         textview.font = UIFont.preferredFont(forTextStyle: fontStyles[i])
         textfield.text = "\(i.description): \(textview.font!.pointSize)"
