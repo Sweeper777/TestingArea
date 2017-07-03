@@ -6,9 +6,10 @@ import Eureka
 import Alamofire
 import RxSwift
 import RxCocoa
+import SkyFloatingLabelTextField
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
-    @IBOutlet var textfield: UITextField!
+    @IBOutlet var textfield: SkyFloatingLabelTextField!
     @IBOutlet var textview: UITextView!
     @IBOutlet var button: UIButton!
     
