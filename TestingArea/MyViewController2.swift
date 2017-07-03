@@ -7,6 +7,7 @@ import Alamofire
 import RxSwift
 import RxCocoa
 import SkyFloatingLabelTextField
+import ObjectMapper
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: SkyFloatingLabelTextField!
@@ -40,4 +41,21 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         button.rx.image().onNext(#imageLiteral(resourceName: "settings"))
         
     }
+class Question: Mappable {
+    var type: Int?
+    var questionText: String?
+    var possibleAnswers: [String]?
+    var hint: String?
+    
+    init(type: Int, questionText: String, possibleAnswers: [String], hint: String?) {
+        self.type = type
+        self.questionText = questionText
+        self.possibleAnswers = possibleAnswers
+        self.hint = hint
+    }
+    
+    required init?(map: Map) {
+    }
+    
+}
 }
