@@ -46,6 +46,10 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         let question = Question(type: 1, questionText: "Hello", possibleAnswers: ["A"], hint: "Some Hint")
         print(question.toJSONString()!)
     }
+    
+    func test4() {
+        print(Question(JSONString: "{\"hint\":\"Some Hint\",\"possibleAnswers\":[\"A\"],\"type\":1,\"questionText\":\"Hello\"}")!.toJSONString()!)
+    }
 class Question: Mappable {
     var type: Int?
     var questionText: String?
