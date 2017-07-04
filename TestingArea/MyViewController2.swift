@@ -43,6 +43,8 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     func test4() {
         print(Question(JSONString: "{\"hint\":\"Some Hint\",\"possibleAnswers\":[\"A\"],\"type\":1,\"questionText\":\"Hello\"}")!.toJSONString()!)
     }
+}
+
 class Question: Mappable {
     var type: Int?
     var questionText: String?
@@ -66,4 +68,15 @@ class Question: Mappable {
         hint <- map["hint"]
     }
 }
+
+class Quiz: ImmutableMappable {
+    let name: String
+    let gradeBoundaries: [Int]
+    let questions: [Question]
+    
+    init(name: String, questions: [Question], gradeBoundaries: [Int]) {
+        self.name = name
+        self.questions = questions
+        self.gradeBoundaries = gradeBoundaries
+    }
 }
