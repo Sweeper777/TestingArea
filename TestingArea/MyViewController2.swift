@@ -41,6 +41,11 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         button.rx.image().onNext(#imageLiteral(resourceName: "settings"))
         
     }
+    
+    func test3() {
+        let question = Question(type: 1, questionText: "Hello", possibleAnswers: ["A"], hint: "Some Hint")
+        print(question.toJSONString()!)
+    }
 class Question: Mappable {
     var type: Int?
     var questionText: String?
