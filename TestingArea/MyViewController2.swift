@@ -32,13 +32,6 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func click() {
-        textview.font = UIFont.preferredFont(forTextStyle: fontStyles[i])
-        textfield.text = "\(i.description): \(textview.font!.pointSize)"
-        i += 1
-        if i == fontStyles.count {
-            i = 0
-        }
-        button.rx.image().onNext(#imageLiteral(resourceName: "settings"))
         
     }
     
