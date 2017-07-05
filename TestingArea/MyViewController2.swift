@@ -8,6 +8,7 @@ import RxSwift
 import RxCocoa
 import SkyFloatingLabelTextField
 import ObjectMapper
+import SwiftyJSON
 
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: SkyFloatingLabelTextField!
@@ -42,6 +43,12 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     
     func test4() {
         print(Question(JSONString: "{\"hint\":\"Some Hint\",\"possibleAnswers\":[\"A\"],\"type\":1,\"questionText\":\"Hello\"}")!.toJSONString()!)
+    }
+    
+    func test5() {
+        let base64 = "eyJuYW1lIjoiTm8iLCJxdWVzdGlvbnMiOlt7ImhpbnQiOiIiLCJwb3NzaWJsZUFuc3dlcnMiOlsiQiIsIkMiLCJEIl0sInR5cGUiOjIsInF1ZXN0aW9uVGV4dCI6IldoaWNoIG9mIHRoZSBmb2xsb3dpbmcgaXMgdHJ1ZT8gU2VsZWN0IGFsbCBvcHRpb25zLlxuQS4gQWxsIGFuaW1hbCBjZWxscyBkaXZpZGUgYnkgbWl0b3Npc1xuQi4gUGxhbnQgY2VsbHMgaGF2ZSBhIGNlbGwgd2FsbFxuQy4gU3RhY2sgT3ZlcmZsb3cgaXMgdGhlIGJlc3Qgc2l0ZSBldmVyXG5ELiBUaGUgSHVuZ2FyaWFuIHVwcmlzaW5nIG9jY3VycmVkIGluIDE5NTYifSx7ImhpbnQiOm51bGwsInBvc3NpYmxlQW5zd2VycyI6WyJBIl0sInR5cGUiOjEsInF1ZXN0aW9uVGV4dCI6IkhlbGxvIn1dLCJncmFkZUJvdW5kYXJpZXMiOlsyMCw0MCw2MCw3MCw4NV19"
+        let jsonString = JSON(data: Data(base64Encoded: base64)!).rawString()
+        print((try! Quiz(JSONString: jsonString!)).toJSONString(prettyPrint: true)!)
     }
 }
 
