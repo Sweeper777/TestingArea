@@ -69,6 +69,13 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         }
     }
     
+    func test8() {
+        let blur = UIBlurEffect(style: .dark)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = CGRect(origin: .zero, size: UIScreen.size)
+        (UIApplication.shared.delegate as! AppDelegate).window?.addSubview(blurView)
+    }
+    
 }
 
 class Question: Mappable {
