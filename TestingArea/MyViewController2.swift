@@ -50,6 +50,13 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         let jsonString = JSON(data: Data(base64Encoded: base64)!).rawString()
         print((try! Quiz(JSONString: jsonString!)).toJSONString(prettyPrint: true)!)
     }
+    
+    func test6() {
+        let blur = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = CGRect(origin: .zero, size: UIScreen.size)
+        (UIApplication.shared.delegate as! AppDelegate).window?.addSubview(blurView)
+    }
 }
 
 class Question: Mappable {
