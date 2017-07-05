@@ -80,6 +80,12 @@ class Quiz: ImmutableMappable {
         self.gradeBoundaries = gradeBoundaries
     }
     
+    required init(map: Map) throws {
+        name = try map.value("name")
+        gradeBoundaries = try map.value("gradeBoundaries")
+        questions = try map.value("questions")
+    }
+    
     func mapping(map: Map) {
         name >>> map["name"]
         gradeBoundaries >>> map["gradeBoundaries"]
