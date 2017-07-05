@@ -10,6 +10,12 @@ import SkyFloatingLabelTextField
 import ObjectMapper
 import SwiftyJSON
 
+extension UIApplication {
+    static func delegate<T: UIApplicationDelegate>(_ type: T.Type) -> T? {
+        return UIApplication.shared.delegate as? T
+    }
+}
+
 class MyViewController2: UIViewController, GIDSignInUIDelegate {
     @IBOutlet var textfield: SkyFloatingLabelTextField!
     @IBOutlet var textview: UITextView!
