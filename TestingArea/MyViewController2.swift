@@ -39,6 +39,7 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func click() {
+        test9()
         
     }
     
@@ -82,6 +83,9 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
         (UIApplication.shared.delegate as! AppDelegate).window?.addSubview(blurView)
     }
     
+    func test9() {
+        print((UIApplication.shared.delegate as! AppDelegate).window === UIApplication.delegate(AppDelegate.self)?.window)
+    }
 }
 
 class Question: Mappable {
