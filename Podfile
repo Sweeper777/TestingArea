@@ -15,5 +15,6 @@ target 'TestingArea' do
     pod 'GoogleSignIn'
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'TrueTime'
 end
 

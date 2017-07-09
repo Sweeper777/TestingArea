@@ -46,12 +46,15 @@ PODS:
   - Realm/Headers (2.8.0)
   - RealmSwift (2.8.0):
     - Realm (= 2.8.0)
+  - Result (3.2.3)
   - RxCocoa (3.5.0):
     - RxSwift (~> 3.4)
   - RxSwift (3.5.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
+  - TrueTime (4.1.1):
+    - Result (~> 3.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -65,6 +68,7 @@ DEPENDENCIES:
   - SlideMenuControllerSwift
   - SwiftyJSON
   - SwiftyUtils
+  - TrueTime
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -80,12 +84,14 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
+  TrueTime: 22bd3a6c9e9ce75e62e2c1a6b39d7cf290f7b78f
 
-PODFILE CHECKSUM: d830aaffb899db2796106a6898a2e8b9a11953e2
+PODFILE CHECKSUM: 9561bf76095cd8cd53cb65edbedb2dfcd6df517c
 
 COCOAPODS: 1.1.0.beta.1
