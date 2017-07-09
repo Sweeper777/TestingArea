@@ -41,7 +41,6 @@ PODS:
   - GTMSessionFetcher/Core (1.1.10)
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
-  - ObjectMapper (2.2.7)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
   - Realm/Headers (2.8.0)
@@ -50,10 +49,7 @@ PODS:
   - RxCocoa (3.5.0):
     - RxSwift (~> 3.4)
   - RxSwift (3.5.0)
-  - SkyFloatingLabelTextField (3.1.0)
   - SlideMenuControllerSwift (3.0.1)
-  - SwiftChart (0.5.0)
-  - SwiftRandom (1.0.0)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
 
@@ -63,14 +59,10 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - GoogleSignIn
-  - ObjectMapper
   - RealmSwift
   - RxCocoa
   - RxSwift
-  - SkyFloatingLabelTextField
   - SlideMenuControllerSwift
-  - SwiftChart (~> 0.4)
-  - SwiftRandom
   - SwiftyJSON
   - SwiftyUtils
 
@@ -86,18 +78,14 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
-  ObjectMapper: 65abcfd9a61cf7396cbd14a4fb22fddfcc46577e
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
-  SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
-  SwiftChart: d1d22d2b1c4582f4d561edf97a210059c00ee256
-  SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
 
-PODFILE CHECKSUM: 252c2185e64766f912a8ad2b393308dc97ecd581
+PODFILE CHECKSUM: d830aaffb899db2796106a6898a2e8b9a11953e2
 
 COCOAPODS: 1.1.0.beta.1
