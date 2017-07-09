@@ -27,10 +27,13 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func click() {
-        let now = client.referenceTime!.now()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .full
-        formatter.timeStyle = .full
-        textview.text = formatter.string(from: now)
+        client.fetchIfNeeded(success: { (refTime) in
+            let formatter = DateFormatter()
+            formatter.dateStyle = .full
+            formatter.timeStyle = .full
+            self.textview.text = formatter.string(from: refTime.now())
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 }
