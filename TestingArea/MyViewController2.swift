@@ -35,4 +35,20 @@ class MyViewController2: UIViewController {
             }
         })
     }
+    
+    func test1() {
+        print("started")
+        geocoder.reverseGeocodeLocation(CLLocation(latitude: 20, longitude: -168), completionHandler: { (placemark, error) in
+            print("completed")
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            if let place = placemark?.first {
+                self.textview.text = ABCreateStringWithAddressDictionary(place.addressDictionary!, true)
+            } else {
+                self.textview.text = "Cannot find place"
+            }
+        })
+    }
 }
