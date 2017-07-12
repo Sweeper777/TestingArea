@@ -1,20 +1,16 @@
 import UIKit
 import SwiftyUtils
-import FirebaseAuth
-import GoogleSignIn
-import Eureka
-import Alamofire
 import RxSwift
-import RxCocoa
-import SwiftyJSON
-import TrueTime
+import CoreLocation
+import AddressBookUI
 
-class MyViewController2: UIViewController, GIDSignInUIDelegate {
+class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     
-    let client = TrueTimeClient.sharedInstance
+    let geocoder = CLGeocoder()
+    
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -22,18 +18,8 @@ class MyViewController2: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
-        
-        client.start()
     }
     
     @IBAction func click() {
-        client.fetchIfNeeded(success: { (refTime) in
-            let formatter = DateFormatter()
-            formatter.dateStyle = .full
-            formatter.timeStyle = .full
-            self.textview.text = formatter.string(from: refTime.now())
-        }) { (error) in
-            print(error.localizedDescription)
-        }
     }
 }
