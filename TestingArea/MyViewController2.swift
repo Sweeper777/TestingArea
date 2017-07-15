@@ -9,8 +9,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     
-    let geocoder = CLGeocoder()
-    
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -18,37 +16,21 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
+        
+        let blur = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = CGRect(origin: .zero, size: UIScreen.size)
+        self.view.addSubview(blurView)
+        self.view.sendSubview(toBack: blurView)
+        
+        let image = UIImageView(frame: view.frame)
+        image.contentMode = .scaleAspectFit
+        image.image = #imageLiteral(resourceName: "timer")
+        view.addSubview(image)
+        view.sendSubview(toBack: image)
     }
     
     @IBAction func click() {
-        print("started")
-        geocoder.geocodeAddressString(textfield.text!, completionHandler: { (placemark, error) in
-            print("completed")
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            if let loc = placemark?.first?.location {
-                self.textview.text = "lat: \(loc.coordinate.latitude)\nlong: \(loc.coordinate.longitude)"
-            } else {
-                self.textview.text = "Cannot find place"
-            }
-        })
-    }
-    
-    func test1() {
-        print("started")
-        geocoder.reverseGeocodeLocation(CLLocation(latitude: 20, longitude: -168), completionHandler: { (placemark, error) in
-            print("completed")
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            if let place = placemark?.first {
-                self.textview.text = ABCreateStringWithAddressDictionary(place.addressDictionary!, true)
-            } else {
-                self.textview.text = "Cannot find place"
-            }
-        })
+        
     }
 }
