@@ -16,5 +16,6 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'TrueTime'
+    pod 'EZClockView'
 end
 
