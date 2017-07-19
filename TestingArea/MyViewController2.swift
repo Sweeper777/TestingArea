@@ -16,18 +16,6 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
-        
-        let blur = UIBlurEffect(style: .light)
-        let blurView = UIVisualEffectView(effect: blur)
-        blurView.frame = CGRect(origin: .zero, size: UIScreen.size)
-        self.view.addSubview(blurView)
-        self.view.sendSubview(toBack: blurView)
-        
-        let image = UIImageView(frame: view.frame)
-        image.contentMode = .scaleAspectFit
-        image.image = #imageLiteral(resourceName: "timer")
-        view.addSubview(image)
-        view.sendSubview(toBack: image)
     }
     
     @IBAction func click() {
