@@ -21,7 +21,7 @@ class MyViewController2: UIViewController {
         let clock = EZClockView(frame: view.bounds)
         
         // Setup time
-        clock.hours = 7
+        clock.hours = 13
         clock.minutes = 12
         clock.seconds = 47
         
