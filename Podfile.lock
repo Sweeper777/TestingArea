@@ -54,6 +54,7 @@ PODS:
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
+  - TimeZoneLocate (0.3.0)
   - TrueTime (4.1.1):
     - Result (~> 3.0)
 
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - SlideMenuControllerSwift
   - SwiftyJSON
   - SwiftyUtils
+  - TimeZoneLocate
   - TrueTime
 
 SPEC CHECKSUMS:
@@ -93,8 +95,9 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
+  TimeZoneLocate: fe8894d8954a5886a5c946ba57e29ef68a7c8c12
   TrueTime: 22bd3a6c9e9ce75e62e2c1a6b39d7cf290f7b78f
 
-PODFILE CHECKSUM: 2f86cfceb7f5640ed1f0e3ba58d66f615be4dccb
+PODFILE CHECKSUM: 4778b29bb43bda187a8651f20b14118d1d3b0424
 
 COCOAPODS: 1.1.0.beta.1

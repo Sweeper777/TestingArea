@@ -17,5 +17,6 @@ target 'TestingArea' do
     pod 'RxCocoa'
     pod 'TrueTime'
     pod 'EZClockView'
+    pod 'TimeZoneLocate'
 end
 
