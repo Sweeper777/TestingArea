@@ -6,6 +6,7 @@ import AddressBookUI
 import EZClockView
 import CoreData
 import TimeZoneLocate
+import APTimeZones
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -19,6 +20,7 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
+        textview.text = APTimeZones.sharedInstance().timeZone(with: CLLocation(latitude: 0, longitude: 0)).description
     }
     
     func test1() {
