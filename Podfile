@@ -18,5 +18,6 @@ target 'TestingArea' do
     pod 'TrueTime'
     pod 'EZClockView'
     pod 'TimeZoneLocate'
+    pod 'APTimeZones'
 end
 
