@@ -4,6 +4,8 @@ import RxSwift
 import CoreLocation
 import AddressBookUI
 import EZClockView
+import CoreData
+import TimeZoneLocate
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -22,6 +24,10 @@ class MyViewController2: UIViewController {
     func test1() {
         let rxText = textfield.rx.text
         rxText.debounce(0.5, scheduler: MainScheduler.instance).bind(to: textview.rx.text).disposed(by: disposeBag)
+    }
+    
+    func test2() {
+        textview.text = TimeZoneLocate.timeZone(location: CLLocation(latitude: 0, longitude: 0))?.description
     }
     
     @IBAction func click() {
