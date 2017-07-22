@@ -17,36 +17,11 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
-        
-        let clock = EZClockView(frame: view.bounds)
-        
-        // Setup time
-        clock.hours = 13
-        clock.minutes = 12
-        clock.seconds = 47
-        
-        // Customize face with border thickness and background color
-        clock.faceBorderWidth = 3
-        clock.faceBackgroundColor = UIColor(white: 0.9, alpha: 1)
-        
-        // Set the thickness of any needle
-        clock.hoursThickness = 5
-        
-        // Set the length of any needle (1 means the needle is as long as the face radius)
-        clock.minutesLength = 0.5
-        
-        // Offset is how far beyond the center the needle can go back.
-        clock.secondsOffset = 5
-        
-        // You can customize several markings properties
-        clock.markingBorderSpacing = 5
-        clock.markingHourLength = 10
-        clock.markingMinuteLength = 5
-        clock.markingHourThickness = 3
-        
-        clock.markingMinuteColor = UIColor.darkGray
-        
-        view.addSubview(clock)
+    }
+    
+    func test1() {
+        let rxText = textfield.rx.text
+        rxText.debounce(0.5, scheduler: MainScheduler.instance).bind(to: textview.rx.text).disposed(by: disposeBag)
     }
     
     @IBAction func click() {
