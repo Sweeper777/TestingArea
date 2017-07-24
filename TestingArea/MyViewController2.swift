@@ -5,8 +5,7 @@ import CoreLocation
 import AddressBookUI
 import EZClockView
 import CoreData
-import TimeZoneLocate
-import APTimeZones
+import LatLongToTimezone
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -20,16 +19,7 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
-        textview.text = APTimeZones.sharedInstance().timeZone(with: CLLocation(latitude: 0, longitude: 0)).description
-    }
-    
-    func test1() {
-        let rxText = textfield.rx.text
-        rxText.debounce(0.5, scheduler: MainScheduler.instance).bind(to: textview.rx.text).disposed(by: disposeBag)
-    }
-    
-    func test2() {
-        textview.text = TimeZoneLocate.timeZone(location: CLLocation(latitude: 0, longitude: 0))?.description
+        textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 52, longitude: 1).coordinate)?.description
     }
     
     @IBAction func click() {
