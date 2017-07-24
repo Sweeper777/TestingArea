@@ -19,5 +19,6 @@ target 'TestingArea' do
     pod 'EZClockView'
     pod 'TimeZoneLocate'
     pod 'APTimeZones'
+    pod 'LatLongToTimezone'
 end
 

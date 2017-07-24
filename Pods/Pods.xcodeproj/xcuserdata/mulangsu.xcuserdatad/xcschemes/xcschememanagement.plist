@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LatLongToTimezone.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -102,7 +107,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>286666E2FC105B31949102D6C9FD2BA2</key>
+		<key>0A97F8223D1DA788C31CAB572D1EFFA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1342B241A6E330A2B7B866D0E3F483FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20399C7EA6B9BA607B574F189B748329</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2FB9CBDB2B1C259BA2B866AE912D17CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,12 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E9224EE482529AA5B1AA13578B4B062</key>
+		<key>3B9DF8C108E94BA62D79E05416068A95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4EFBA3340896F4D868C73489E33DCFC2</key>
+		<key>5BB51B0AE42FF8E2EA88072DC83C3C89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,22 +147,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A5B662529D6BB030779A6A16D513C41</key>
+		<key>6B9524D2D14D1DE5D797B7B03689A530</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>783170E2D2512BB6F89F588727BE63D8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7899F1065095D14C396A0C25DE940B6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -162,27 +172,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B5CD6221B29400514A0545A795E9377</key>
+		<key>8B3FB40CDB1169A5035611A264642E3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E1BA995B43BF65923617C895D6B9DE4</key>
+		<key>955A6672345105A713BAC64118E29A91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A04BAC5A9B1072089836E5CA22B645BC</key>
+		<key>991C97BA8CF3EC8857908BFF843409DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A90F9E3427C7B4316B9AAA9E51E64C13</key>
+		<key>A2100A58D5BDBACF87A8AAF2926CE84C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0EFF242C1306A983F7173F16A58E8ED</key>
+		<key>CF6294C4011E44EDF9A677F2BE3C6E95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -192,7 +202,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8EA8545F2E7A40FCEE90115D63C0A4E</key>
+		<key>FC4205CD62C6DE246BAD95715388E274</key>
 		<dict>
 			<key>primary</key>
 			<true/>

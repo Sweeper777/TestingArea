@@ -43,6 +43,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.10)
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
+  - LatLongToTimezone (1.1.2)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
   - Realm/Headers (2.8.0)
@@ -67,6 +68,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - GoogleSignIn
+  - LatLongToTimezone
   - RealmSwift
   - RxCocoa
   - RxSwift
@@ -90,6 +92,7 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
+  LatLongToTimezone: efd39e80e92c4cd3aefb597a2fd16f177a4742b5
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
@@ -101,6 +104,6 @@ SPEC CHECKSUMS:
   TimeZoneLocate: fe8894d8954a5886a5c946ba57e29ef68a7c8c12
   TrueTime: 22bd3a6c9e9ce75e62e2c1a6b39d7cf290f7b78f
 
-PODFILE CHECKSUM: 945a2201d644cdc185d0d8ac668c273ccca924a5
+PODFILE CHECKSUM: 11490ddf042cd9f13bef6125789cbce1bc1cf78c
 
 COCOAPODS: 1.1.0.beta.1
