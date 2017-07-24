@@ -25,4 +25,8 @@ class MyViewController2: UIViewController {
     @IBAction func click() {
         
     }
+    
+    func test1() {
+        textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 0, longitude: 0).coordinate)?.description
+    }
 }
