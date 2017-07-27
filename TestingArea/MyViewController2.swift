@@ -19,11 +19,13 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
-        textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 52, longitude: 1).coordinate)?.description
+        
     }
     
     @IBAction func click() {
-        
+        for i in 0..<10 {
+            textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 52, longitude: 1).coordinate)?.description
+        }
     }
     
     func test1() {
