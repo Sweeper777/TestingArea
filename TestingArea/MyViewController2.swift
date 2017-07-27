@@ -23,12 +23,19 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        for i in 0..<10 {
-            textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 52, longitude: 1).coordinate)?.description
-        }
+        test1()
     }
     
     func test1() {
-        textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 0, longitude: 0).coordinate)?.description
+        printTimeElapsedWhenRunningCode(title: "getting time zone") {
+            self.textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 0, longitude: 0).coordinate)?.description
+        }
     }
+}
+
+func printTimeElapsedWhenRunningCode(title:String, operation:()->()) {
+    let startTime = CFAbsoluteTimeGetCurrent()
+    operation()
+    let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
+    print("Time elapsed for \(title): \(timeElapsed) s.")
 }
