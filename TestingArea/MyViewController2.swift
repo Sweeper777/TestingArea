@@ -7,6 +7,7 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
+    let geocoder = CLGeocoder()
     
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -19,5 +20,18 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        print("started")
+        geocoder.geocodeAddressString(textfield.text!, completionHandler: { (placemark, error) in
+            print("completed")
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            if let loc = placemark?.first?.location {
+                self.textview.text = "lat: \(loc.coordinate.latitude)\nlong: \(loc.coordinate.longitude)"
+            } else {
+                self.textview.text = "Cannot find place"
+            }
+        })
     }
 }
