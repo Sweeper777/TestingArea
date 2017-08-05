@@ -2,10 +2,6 @@ import UIKit
 import SwiftyUtils
 import RxSwift
 import CoreLocation
-import AddressBookUI
-import EZClockView
-import CoreData
-import LatLongToTimezone
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -23,19 +19,5 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        test1()
     }
-    
-    func test1() {
-        printTimeElapsedWhenRunningCode(title: "getting time zone") {
-            self.textview.text = TimezoneMapper.latLngToTimezone(CLLocation(latitude: 0, longitude: 0).coordinate)?.description
-        }
-    }
-}
-
-func printTimeElapsedWhenRunningCode(title:String, operation:()->()) {
-    let startTime = CFAbsoluteTimeGetCurrent()
-    operation()
-    let timeElapsed = CFAbsoluteTimeGetCurrent() - startTime
-    print("Time elapsed for \(title): \(timeElapsed) s.")
 }

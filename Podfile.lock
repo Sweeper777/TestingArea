@@ -1,8 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
-  - APTimeZones (1.1)
   - Eureka (3.0.0)
-  - EZClockView (1.2)
   - Firebase/Auth (4.0.2):
     - Firebase/Core
     - FirebaseAuth (= 4.0.0)
@@ -43,46 +41,34 @@ PODS:
   - GTMSessionFetcher/Core (1.1.10)
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
-  - LatLongToTimezone (1.1.2)
   - Realm (2.8.0):
     - Realm/Headers (= 2.8.0)
   - Realm/Headers (2.8.0)
   - RealmSwift (2.8.0):
     - Realm (= 2.8.0)
-  - Result (3.2.3)
   - RxCocoa (3.5.0):
     - RxSwift (~> 3.4)
   - RxSwift (3.5.0)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
-  - TimeZoneLocate (0.3.0)
-  - TrueTime (4.1.1):
-    - Result (~> 3.0)
 
 DEPENDENCIES:
   - Alamofire
-  - APTimeZones
   - Eureka
-  - EZClockView
   - Firebase/Auth
   - Firebase/Core
   - GoogleSignIn
-  - LatLongToTimezone
   - RealmSwift
   - RxCocoa
   - RxSwift
   - SlideMenuControllerSwift
   - SwiftyJSON
   - SwiftyUtils
-  - TimeZoneLocate
-  - TrueTime
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  APTimeZones: ddb9aca50fff41d6313eb29d86d37b1edf9d2942
   Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
-  EZClockView: e14aa6e15d73da6415e2c02096ea7ea05b71231d
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
   FirebaseAnalytics: 4d7040fefc3cd8b291cde35f12cf063d7963f15d
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -92,18 +78,14 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
-  LatLongToTimezone: efd39e80e92c4cd3aefb597a2fd16f177a4742b5
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
-  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
-  TimeZoneLocate: fe8894d8954a5886a5c946ba57e29ef68a7c8c12
-  TrueTime: 22bd3a6c9e9ce75e62e2c1a6b39d7cf290f7b78f
 
-PODFILE CHECKSUM: 11490ddf042cd9f13bef6125789cbce1bc1cf78c
+PODFILE CHECKSUM: d830aaffb899db2796106a6898a2e8b9a11953e2
 
 COCOAPODS: 1.1.0.beta.1

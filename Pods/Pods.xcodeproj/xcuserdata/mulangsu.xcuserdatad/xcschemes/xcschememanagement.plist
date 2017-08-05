@@ -4,17 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>APTimeZones.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>EZClockView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,11 +29,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>LatLongToTimezone.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -55,11 +40,6 @@
 			<false/>
 		</dict>
 		<key>RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -89,40 +69,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TimeZoneLocate-TimeZoneLocate.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>TimeZoneLocate.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>TrueTime.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A97F8223D1DA788C31CAB572D1EFFA4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1342B241A6E330A2B7B866D0E3F483FA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>20399C7EA6B9BA607B574F189B748329</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2FB9CBDB2B1C259BA2B866AE912D17CF</key>
+		<key>057C03F389C50200BA2DF6CDF9F83DF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,27 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3B9DF8C108E94BA62D79E05416068A95</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5BB51B0AE42FF8E2EA88072DC83C3C89</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5FA2C944E7F244028BF5FC00816EDEC5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6B9524D2D14D1DE5D797B7B03689A530</key>
+		<key>5BBB71FE784F8001D9FD083D9B4CB42B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7250252991D52AD499EB2E77D6C17CF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -167,32 +107,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>853A01674BF2D49D72DD50151ED8F52A</key>
+		<key>9B0B1837156267E96680A71F6AE13F60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B3FB40CDB1169A5035611A264642E3C</key>
+		<key>BBBFAD45C1EE9BE465D453C6B110CD8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>955A6672345105A713BAC64118E29A91</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>991C97BA8CF3EC8857908BFF843409DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A2100A58D5BDBACF87A8AAF2926CE84C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CF6294C4011E44EDF9A677F2BE3C6E95</key>
+		<key>CDFCF2321FF3E11DC7048D0D2E671558</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -202,7 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC4205CD62C6DE246BAD95715388E274</key>
+		<key>D6ED956461BD7E3AF098BEE0E44F8165</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9FFD54F2D2307E650DE8AD844382CCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

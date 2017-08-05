@@ -15,10 +15,5 @@ target 'TestingArea' do
     pod 'GoogleSignIn'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'TrueTime'
-    pod 'EZClockView'
-    pod 'TimeZoneLocate'
-    pod 'APTimeZones'
-    pod 'LatLongToTimezone'
 end
 
