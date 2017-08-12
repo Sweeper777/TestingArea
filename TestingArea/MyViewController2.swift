@@ -16,22 +16,13 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textview.text = "Testing Testing Testing"
-        
+        textfield.rx.observe(String.self, "text").subscribe(onNext: { s in
+            print(s ?? "nil")
+        }).disposed(by: disposeBag)
     }
     
     @IBAction func click() {
-        print("started")
-        geocoder.geocodeAddressString(textfield.text!, completionHandler: { (placemark, error) in
-            print("completed")
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            if let loc = placemark?.first?.location {
-                self.textview.text = "lat: \(loc.coordinate.latitude)\nlong: \(loc.coordinate.longitude)"
-            } else {
-                self.textview.text = "Cannot find place"
-            }
-        })
+        
+        textfield.text = "Hello"
     }
 }
