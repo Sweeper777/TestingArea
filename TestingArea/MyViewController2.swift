@@ -2,6 +2,7 @@ import UIKit
 import SwiftyUtils
 import RxSwift
 import CoreLocation
+import TimeZoneLocate
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -23,6 +24,7 @@ class MyViewController2: UIViewController {
     
     @IBAction func click() {
         
-        textfield.text = "Hello"
+        textfield.text = TimeZoneLocate.timeZone(location: CLLocation(latitude: 0, longitude: 0))?.identifier
     }
 }
+
