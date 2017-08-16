@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        print(UIApplication.shared.canOpenURL(URL(string: "comgooglemaps://")!))
         return true
     }
 
