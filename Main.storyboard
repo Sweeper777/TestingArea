@@ -66,7 +66,7 @@
         <scene sceneID="rGL-8M-CHX">
             <objects>
                 <navigationController storyboardIdentifier="MyVC" id="oIZ-1h-2KH" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAF-b4-NLX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eAF-b4-NLX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -120,11 +120,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1e-U0-vtk" customClass="EZClockView" customModule="EZClockView">
-                                <rect key="frame" x="47" y="349" width="240" height="128"/>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dE-b1-HFM">
+                                <rect key="frame" x="16" y="240" width="240" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -133,6 +133,7 @@
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
+                        <outlet property="webview" destination="8dE-b1-HFM" id="VKG-gA-B6a"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
                     </connections>
                 </viewController>
@@ -144,7 +145,7 @@
         <scene sceneID="d39-5x-uob">
             <objects>
                 <navigationController storyboardIdentifier="VC" id="BJs-fK-8hM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Pkd-qP-iAD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
