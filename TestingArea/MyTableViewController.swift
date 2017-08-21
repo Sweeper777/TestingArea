@@ -25,14 +25,3 @@ class MyTableViewController: UITableViewController {
         return cell
     }
 }
-
-class MyCell: UITableViewCell {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        backgroundColor = .red // or some other color
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        backgroundColor = .white
-        
-    }
-}

@@ -14,10 +14,6 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
-        let html = try! String.init(contentsOf: URL(string: "https://motherfuckingwebsite.com")!) +  "<style>body { background: red !important; }<style/>Hello"
-        webview.loadHTMLString(html, baseURL: nil)
-//        let styles = "<style>body { background: red !important; }<style/>Hello"
-//        webview.loadHTMLString(styles, baseURL: URL(string: "https://motherfuckingwebsite.com"))
     }
     
     override func viewDidAppear(_ animated: Bool) {
