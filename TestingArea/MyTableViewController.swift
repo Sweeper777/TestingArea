@@ -19,7 +19,7 @@ class MyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = MyCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.value[indexPath.row]
         cell.isUserInteractionEnabled = true
         return cell
