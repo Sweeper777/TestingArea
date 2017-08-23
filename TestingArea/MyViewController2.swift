@@ -1,7 +1,6 @@
 import UIKit
 import SwiftyUtils
 import RxSwift
-import RealmSwift
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -22,19 +21,5 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(MyObject())
-        }
     }
-}
-
-class A {
-    
-}
-
-class MyObject: Object {
-    dynamic var string = ""
-    var normalString = ""
-    var a: A = A()
 }

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.0)
+  - CGRectExtensions (2.0)
   - Eureka (3.1.0)
   - Firebase/Auth (4.1.0):
     - Firebase/Core
@@ -59,10 +60,10 @@ PODS:
   - SlideMenuControllerSwift (3.0.1)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
-  - TimeZoneLocate (0.3.1)
 
 DEPENDENCIES:
   - Alamofire
+  - CGRectExtensions
   - Eureka
   - Firebase/Auth
   - Firebase/Core
@@ -73,10 +74,10 @@ DEPENDENCIES:
   - SlideMenuControllerSwift
   - SwiftyJSON
   - SwiftyUtils
-  - TimeZoneLocate
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  CGRectExtensions: 67fa367a91d537bc2fcdd97069a66262777d1412
   Eureka: d6725c38d0dcdceaa331d1468f75e76315715ae0
   Firebase: ebebf41db7f10e0c7668b6eaaa857fbe599aa478
   FirebaseAnalytics: 76f754d37ca5b04f36856729b6af3ca0152d1069
@@ -95,8 +96,7 @@ SPEC CHECKSUMS:
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
-  TimeZoneLocate: db3b2db5d27f273bd40b79152a2340a7b3fc2a18
 
-PODFILE CHECKSUM: 83d91eeacd3e2dc8b7af37ec388162764e830e14
+PODFILE CHECKSUM: a94fbe3f9a79dec9086411e2fa458828bb81424c
 
 COCOAPODS: 1.1.0.beta.1
