@@ -120,11 +120,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dE-b1-HFM">
-                                <rect key="frame" x="16" y="240" width="240" height="216"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01K-wq-RkP" customClass="CrossHair" customModule="TestingArea" customModuleProvider="target">
+                                <rect key="frame" x="43" y="269" width="43" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -133,7 +133,6 @@
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
-                        <outlet property="webview" destination="8dE-b1-HFM" id="VKG-gA-B6a"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
                     </connections>
                 </viewController>
