@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CGRectExtensions.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -74,6 +69,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TimeZoneLocate-TimeZoneLocate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TimeZoneLocate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,7 +87,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2762E77F36B77647684874C9112F8CD6</key>
+		<key>1130173484BC7DA0330C511349A6569E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,22 +97,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D20553FEB3B9D72C4B67EB1BB2E3C37</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>505C9587EFAE93ED823A6E1737BF1778</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56C4BED3878313670B4F4080AF3974AE</key>
+		<key>59B0F2DA7514CE270D4E1D026E27BD43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>66C372FDBFCAE03B37A5BA814FFA6877</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6FB1EE0A1C80A48F21E663CDF0FBEB08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,27 +132,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9BCE6BAE2A9C23330D438005EB5171F7</key>
+		<key>93E0060760CC807216B3AD02DE0BA751</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9FC73FA5E0294775C3CCE37C836FDE64</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A9298A45AF52C1BE78C729501F6833F0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B81A4741B913821599A164B068FC67D2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C5E2031EF6F57B12C71AC2A5E0B5F05B</key>
+		<key>B5E87C0AB65C44EB99379B318BCC61BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,7 +147,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EBF91FB84D82A9509A3CC6FD25A02720</key>
+		<key>E0CF72F1FF9BC55F1D94EACF71C655B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1792CE1A02D45C59F271078D56D4A39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E314D4B259400656BA6E3BC8A829E146</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB09CBFE41E28D434B3688418B0F88D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

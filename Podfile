@@ -15,6 +15,6 @@ target 'TestingArea' do
     pod 'GoogleSignIn'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'CGRectExtensions'
+    pod 'TimeZoneLocate'
 end
 
