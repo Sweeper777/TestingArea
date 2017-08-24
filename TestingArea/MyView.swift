@@ -2,6 +2,8 @@ import UIKit
 
 @IBDesignable
 class CrossHair: UIView {
+    var touched = false
+    
     override func draw(_ rect: CGRect) {
         let newRect = CGRect(
             x: rect.x + rect.width / 4,
@@ -12,7 +14,11 @@ class CrossHair: UIView {
         let path = UIBezierPath(ovalIn: newRect)
         let strokeWidth = min(rect.width, rect.height) * 0.05
         path.lineWidth = strokeWidth
-        UIColor.black.setStroke()
+        if touched {
+            UIColor.red.setStroke()
+        } else {
+            UIColor.black.setStroke()
+        }
         path.stroke()
         
         let horizontalLine = UIBezierPath()
@@ -26,5 +32,15 @@ class CrossHair: UIView {
         verticalLine.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
         verticalLine.lineWidth = strokeWidth
         verticalLine.stroke()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touched = true
+        setNeedsDisplay()
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touched = false
+        setNeedsDisplay()
     }
 }
