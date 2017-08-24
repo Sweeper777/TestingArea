@@ -23,19 +23,5 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(MyObject())
-        }
     }
-}
-
-class A {
-    
-}
-
-class MyObject: Object {
-    dynamic var string = ""
-    var normalString = ""
-    var a: A = A()
 }
