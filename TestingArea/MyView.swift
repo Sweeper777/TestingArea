@@ -14,5 +14,17 @@ class CrossHair: UIView {
         path.lineWidth = strokeWidth
         UIColor.black.setStroke()
         path.stroke()
+        
+        let horizontalLine = UIBezierPath()
+        horizontalLine.move(to: CGPoint(x: rect.x, y: rect.midY))
+        horizontalLine.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
+        horizontalLine.lineWidth = strokeWidth
+        horizontalLine.stroke()
+        
+        let verticalLine = UIBezierPath()
+        verticalLine.move(to: CGPoint(x: rect.midX, y: rect.y))
+        verticalLine.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
+        verticalLine.lineWidth = strokeWidth
+        verticalLine.stroke()
     }
 }
