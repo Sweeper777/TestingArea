@@ -57,9 +57,9 @@ PODS:
     - RxSwift (~> 3.6)
   - RxSwift (3.6.1)
   - SlideMenuControllerSwift (3.0.1)
+  - SwiftyAnimate (1.3.0)
   - SwiftyJSON (3.1.4)
   - SwiftyUtils (1.0.0)
-  - TimeZoneLocate (0.3.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -71,9 +71,9 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SlideMenuControllerSwift
+  - SwiftyAnimate
   - SwiftyJSON
   - SwiftyUtils
-  - TimeZoneLocate
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -93,10 +93,10 @@ SPEC CHECKSUMS:
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
+  SwiftyAnimate: 82bf6e7691bcd149250fd8cdb968c166420f269b
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
-  TimeZoneLocate: db3b2db5d27f273bd40b79152a2340a7b3fc2a18
 
-PODFILE CHECKSUM: 83d91eeacd3e2dc8b7af37ec388162764e830e14
+PODFILE CHECKSUM: ca8ccf4d5cf6a9bcbb42deefceae59c05fa9ed51
 
 COCOAPODS: 1.1.0.beta.1
