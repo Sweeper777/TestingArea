@@ -54,4 +54,11 @@ extension CrossHair {
             self.removeFromSuperview()
         }
     }
+    
+    var scaleUp: Animate {
+        return transform(duration: 0.2, transforms: [
+            .scale(x: 2, y: 2),
+            .rotate(angle: 180)
+        ])
+    }
 }
