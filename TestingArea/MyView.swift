@@ -1,4 +1,5 @@
 import UIKit
+import SwiftyAnimate
 
 @IBDesignable
 class CrossHair: UIView {
@@ -42,5 +43,15 @@ class CrossHair: UIView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         touched = false
         setNeedsDisplay()
+    }
+}
+
+extension CrossHair {
+    var fadeOut: Animate {
+        return Animate(duration: 0.5, animationBlock: {
+            self.alpha = 0
+        }).do {
+            self.removeFromSuperview()
+        }
     }
 }
