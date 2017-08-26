@@ -56,12 +56,15 @@ extension CrossHair {
     }
     
     var scaleUp: Animate {
-        return transform(duration: 0.2, transforms: [
-            .scale(x: 1.5, y: 1.5),
+        return (transform(duration: 0.1, transforms: [
             .rotate(angle: 180)
         ]).then(animation: transform(duration: 0.1, transforms: [
-            .scale(x: 2, y: 2),
             .rotate(angle: 180)
-        ]))
+        ]))).and(duration: 0.2) {
+            self.width *= 2
+            self.height *= 2
+            self.x -= self.width / 4
+            self.y -= self.height / 4
+        }
     }
 }
