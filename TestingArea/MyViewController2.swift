@@ -2,6 +2,7 @@ import UIKit
 import SwiftyUtils
 import RxSwift
 import RealmSwift
+import SwiftyAnimate
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -15,7 +16,7 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
-        crosshair.isUserInteractionEnabled = true
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -23,6 +24,13 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        crosshair.scaleUp.perform()
+        Animate(duration: 1.0) {
+            self.view.backgroundColor = .green
+        }.then(duration: 10.0) {
+            
+        }.then(duration: 1.0) {
+            self.view.backgroundColor = .white
+        }.perform()
+        performSegue(withIdentifier: "mySegue", sender: self)
     }
 }
