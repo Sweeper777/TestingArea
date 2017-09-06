@@ -8,6 +8,13 @@ class MyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         tableView.allowsSelection = false
+        if #available(iOS 10.0, *) {
+            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (_) in
+                print("timer")
+            }
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -23,5 +30,9 @@ class MyTableViewController: UITableViewController {
         cell.textLabel?.text = model.value[indexPath.row]
         cell.isUserInteractionEnabled = true
         return cell
+    }
+    
+    @IBAction func back() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
