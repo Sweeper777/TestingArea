@@ -21,6 +21,7 @@ PODS:
     - nanopb (~> 0.3)
   - FirebaseInstanceID (2.0.1):
     - FirebaseCore (~> 4.0)
+  - FittableFontLabel (1.4.0)
   - GoogleSignIn (4.0.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
@@ -66,6 +67,7 @@ DEPENDENCIES:
   - Eureka
   - Firebase/Auth
   - Firebase/Core
+  - FittableFontLabel
   - GoogleSignIn
   - RealmSwift
   - RxCocoa
@@ -83,6 +85,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 8d1d2389cf82f891048d6d50d27d044f55ae09a6
   FirebaseCore: 7d876ea97a830cbe62ba7fbbe7670c833a324ba0
   FirebaseInstanceID: 0500e3cb54a1a4e01a8cffcc09323b8bb8fc7e1e
+  FittableFontLabel: 20502441e83bb41eb8b41611cca91af85c4e21e3
   GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
@@ -97,6 +100,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
 
-PODFILE CHECKSUM: ca8ccf4d5cf6a9bcbb42deefceae59c05fa9ed51
+PODFILE CHECKSUM: 88d72edcc10b722dd1499a5dad47c6fbeda2843f
 
 COCOAPODS: 1.1.0.beta.1

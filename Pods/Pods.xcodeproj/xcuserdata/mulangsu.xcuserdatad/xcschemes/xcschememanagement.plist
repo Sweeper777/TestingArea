@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FittableFontLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,7 +87,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>26862259615C807A26E33F63AC182683</key>
+		<key>26129791570B3E9B136CC313FC5EDCDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DC8108C2DA9CA2C62F5D7269EB25AA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
+		<key>69717ADFE38EE71439C361C04BE95DB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>752276842215D7AD6C02BAB94148B6D6</key>
+		<key>6C93DE13A9E39F5C57B693BE90DBB2D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +127,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A12DAB88DB6B7206E54ECFE3D5A753D2</key>
+		<key>8EFB44D2DE7C5EB00C3EC386780F54FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A65FE271BF5EC39EF4C2C7ACBE35F193</key>
+		<key>AB67E5330A941133175ECC7A116927A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABC5A45DC048499D64C83CBC0B81DC40</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,27 +147,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D8552FF4D369D42B0DF74498FA544DC8</key>
+		<key>D8AABBD4D3D713B85F213C67BCA30C77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE85F00F001D55F14C1B323453879D67</key>
+		<key>E78880FFA795FE0DD35DA545C69CDEDE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E54996EB5C0B5BC5D9F33A44077486B9</key>
+		<key>EDDC5CA718DF1A54116164ADDFA0AD8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6BF14FF530062BCDA1D9A254990EA83</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FF68DB7D6AA849DB73D831474659D88F</key>
+		<key>FFDC130BCD7A6A719A4FA41A10FBF023</key>
 		<dict>
 			<key>primary</key>
 			<true/>
