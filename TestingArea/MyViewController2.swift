@@ -30,4 +30,12 @@ class MyViewController2: UIViewController {
             self.view.backgroundColor = .white
         }.perform()
     }
+    
+    override func viewDidLayoutSubviews() {
+        print("viewDidLayoutSubviews")
+    }
+    
+    override func viewWillLayoutSubviews() {
+        print("viewWillLayoutSubviews")
+    }
 }
