@@ -26,11 +26,8 @@ class MyViewController2: UIViewController {
     @IBAction func click() {
         Animate(duration: 1.0) {
             self.view.backgroundColor = .green
-        }.then(duration: 10.0) {
-            
-        }.then(duration: 1.0) {
+            }.wait(timeout: 2, waitBlock: { $0() }).then(duration: 1.0) {
             self.view.backgroundColor = .white
         }.perform()
-        performSegue(withIdentifier: "mySegue", sender: self)
     }
 }
