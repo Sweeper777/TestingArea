@@ -35,6 +35,9 @@ class MyViewController2: UIViewController {
         jtButton.touchEffectEnabled = true
         jtButton.cornerRadius = jtButton.height / 2
         
+        button.setImage(#imageLiteral(resourceName: "home"), for: .normal)
+        let attributed = NSAttributedString(string: "Button", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 7)])
+        button.setAttributedTitle(attributed, for: .normal)
         
     }
     
