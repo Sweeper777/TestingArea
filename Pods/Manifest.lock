@@ -44,11 +44,13 @@ PODS:
   - GTMSessionFetcher/Core (1.1.11)
   - GTMSessionFetcher/Full (1.1.11):
     - GTMSessionFetcher/Core (= 1.1.11)
+  - JTImageButton (1.0.3)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - NGORoundedButton (3.1)
   - Realm (2.10.0):
     - Realm/Headers (= 2.10.0)
   - Realm/Headers (2.10.0)
@@ -69,6 +71,8 @@ DEPENDENCIES:
   - Firebase/Core
   - FittableFontLabel
   - GoogleSignIn
+  - JTImageButton
+  - NGORoundedButton
   - RealmSwift
   - RxCocoa
   - RxSwift
@@ -90,7 +94,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
+  JTImageButton: 1b5cb0f731a9c06cdd0516d593f378dcfd233c91
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  NGORoundedButton: dd1e7a293ccc16e0f5c073ba9be62b0fb8b8d496
   Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
   RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
@@ -100,6 +106,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyUtils: f48a22d2fa8eece42a11d8bbb4d01a9758dd0602
 
-PODFILE CHECKSUM: 88d72edcc10b722dd1499a5dad47c6fbeda2843f
+PODFILE CHECKSUM: 0918ea28cb16d59494a8dbaa8ba2a3bc7c65f9c2
 
 COCOAPODS: 1.1.0.beta.1

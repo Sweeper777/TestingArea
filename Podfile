@@ -17,5 +17,7 @@ target 'TestingArea' do
     pod 'RxCocoa'
     pod 'SwiftyAnimate'
     pod 'FittableFontLabel'
+    pod 'NGORoundedButton'
+    pod 'JTImageButton'
 end
 
