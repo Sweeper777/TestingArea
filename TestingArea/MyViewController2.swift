@@ -4,6 +4,7 @@ import RxSwift
 import RealmSwift
 import SwiftyAnimate
 import NGORoundedButton
+import JTImageButton
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -11,6 +12,9 @@ class MyViewController2: UIViewController {
     @IBOutlet var button: UIButton!
     @IBOutlet var crosshair: CrossHair!
     @IBOutlet var ngoBtn: NGORoundedButton!
+    @IBOutlet var jtButton: JTImageButton!
+    
+    @IBOutlet var image: UIImageView!
     
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -22,6 +26,14 @@ class MyViewController2: UIViewController {
         ngoBtn.type = .customText
         ngoBtn.customImage = #imageLiteral(resourceName: "home")
         ngoBtn.customText = "Home"
+        
+        jtButton.borderWidth = 0
+        jtButton.bgColor = UIColor(hex: "5abb5a")
+        jtButton.titleColor = .white
+        jtButton.iconColor = .white
+        jtButton.createTitle("Home", withIcon: #imageLiteral(resourceName: "home"), font: nil, iconOffsetY: 0)
+        jtButton.touchEffectEnabled = true
+        jtButton.cornerRadius = jtButton.height / 2
         
         
     }
