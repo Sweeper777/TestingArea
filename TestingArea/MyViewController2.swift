@@ -39,6 +39,12 @@ class MyViewController2: UIViewController {
         let attributed = NSAttributedString(string: "Button", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 7)])
         button.setAttributedTitle(attributed, for: .normal)
         
+        UIGraphicsBeginImageContext(CGSize(width: 1000, height: 117))
+        let str = "HELLO WORLD" as NSString
+        str.draw(in: CGRect.init(x: 0, y: 0, width: 1000, height: 112), withAttributes: [NSFontAttributeName: UIFont(name: "Chalkboard SE", size: 100)!])
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.image.image = image
     }
     
     override func viewDidAppear(_ animated: Bool) {
