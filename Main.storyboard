@@ -134,6 +134,9 @@
                                 <rect key="frame" x="144" y="72" width="134" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                </variation>
                                 <connections>
                                     <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="eQX-1V-SwJ"/>
                                 </connections>
@@ -273,15 +276,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YLG-TS-ANE">
-                                <rect key="frame" x="-35" y="28" width="390" height="512"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YLG-TS-ANE">
+                                <rect key="frame" x="147.5" y="284" width="25" height="0.0"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQ6-oB-AVK">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="97.5"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-9w-Sq1">
-                                        <rect key="frame" x="0.0" y="122.5" width="390" height="389.5"/>
+                                        <rect key="frame" x="25" y="0.0" width="0.0" height="0.0"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3Sd-9w-Sq1" secondAttribute="height" multiplier="1:1" id="ED2-aU-mID"/>
@@ -297,7 +299,7 @@
                                         <exclude reference="VFG-Fp-NQo"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact" axis="horizontal">
+                                <variation key="heightClass=compact">
                                     <mask key="constraints">
                                         <include reference="VFG-Fp-NQo"/>
                                         <exclude reference="zMe-Nq-X9N"/>
