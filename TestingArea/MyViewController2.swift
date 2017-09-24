@@ -10,11 +10,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    @IBOutlet var crosshair: CrossHair!
-    @IBOutlet var ngoBtn: NGORoundedButton!
-    @IBOutlet var jtButton: JTImageButton!
-    
-    @IBOutlet var image: UIImageView!
     
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -52,11 +47,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        Animate(duration: 1.0) {
-            self.view.backgroundColor = .green
-            }.wait(timeout: 2, waitBlock: { $0() }).then(duration: 1.0) {
-            self.view.backgroundColor = .white
-        }.perform()
     }
     
     override func viewDidLayoutSubviews() {
