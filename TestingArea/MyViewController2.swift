@@ -76,3 +76,39 @@ class SquareView2: UIView {
     }
 }
 
+@IBDesignable
+class SquareViewLayers: UIView {
+    dynamic var squareColor: UIColor = .blue {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    func setupView() {
+        layer.backgroundColor = squareColor.cgColor
+        let sublayer = CAShapeLayer()
+        let path = UIBezierPath()
+        let strokeWidth = self.width / 8
+        path.move(to: CGPoint(x: self.width - strokeWidth / 2, y: 0))
+        path.addLine(to: CGPoint(x: self.width - strokeWidth / 2, y: self.height - strokeWidth / 2))
+        path.addLine(to: CGPoint(x: 0, y: self.height - strokeWidth / 2))
+        self.tintColor.darker().setStroke()
+        path.lineWidth = strokeWidth
+        sublayer.path = path.cgPath
+        sublayer.strokeColor = squareColor.darker().cgColor
+        sublayer.lineWidth = strokeWidth
+        sublayer.backgroundColor = UIColor.clear.cgColor
+        layer.addSublayer(sublayer)
+        
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupView()
+    }
+}
