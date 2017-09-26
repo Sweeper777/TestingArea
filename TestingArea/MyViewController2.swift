@@ -55,3 +55,23 @@ class SquareView: UIView {
         path.stroke()
     }
 }
+
+@IBDesignable
+class SquareView2: UIView {
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        self.tintColor.setFill()
+        let background = UIBezierPath(rect: self.frame)
+        background.fill()
+        let strokeWidth = self.width / 8
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: self.width - strokeWidth / 2, y: 0))
+        path.addLine(to: CGPoint(x: self.width - strokeWidth / 2, y: self.height - strokeWidth / 2))
+        path.addLine(to: CGPoint(x: 0, y: self.height - strokeWidth / 2))
+        self.tintColor.darker().setStroke()
+        path.lineWidth = strokeWidth
+        path.stroke()
+    }
+}
+
