@@ -10,6 +10,7 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
+    @IBOutlet var square: UIView!
     
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -24,6 +25,9 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        UIView.animate(withDuration: 1) { 
+//            self.square.backgroundColor = .black
+        }
     }
     
     override func viewDidLayoutSubviews() {
