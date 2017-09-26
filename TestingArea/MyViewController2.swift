@@ -28,8 +28,19 @@ class MyViewController2: UIViewController {
         UIView.animate(withDuration: 1) { 
 //            self.square.backgroundColor = .black
 //            self.square.tintColor = .black
+//            self.square.layer.backgroundColor = UIColor.red.cgColor
 //            self.view.backgroundColor = .black
         }
+        
+        let anim = CABasicAnimation(keyPath: "backgroundColor")
+        anim.fromValue = square.layer.backgroundColor
+        anim.toValue = UIColor.red.cgColor
+        anim.duration = 1
+        square.layer.add(anim, forKey: nil)
+        anim.isRemovedOnCompletion = false
+        Timer.after(1) { _ in
+            self.square.layer.backgroundColor = UIColor.red.cgColor
+        }.start()
     }
     
     override func viewDidLayoutSubviews() {
