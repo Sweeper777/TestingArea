@@ -27,6 +27,7 @@ class MyViewController2: UIViewController {
     @IBAction func click() {
         UIView.animate(withDuration: 1) { 
 //            self.square.backgroundColor = .black
+//            self.view.backgroundColor = .black
         }
     }
     
