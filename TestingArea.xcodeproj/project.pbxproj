@@ -20,9 +20,6 @@
 		5A1FD0491DFD53390071AE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1FD0481DFD53390071AE2F /* Assets.xcassets */; };
 		5A1FD04E1DFD56DE0071AE2F /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
 		5A23109D1E62E690009B39D2 /* NotoColorEmoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */; };
-		5A2673921EE705DC0022F428 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2673911EE705DC0022F428 /* MyView.swift */; };
-		5A55B58A1F6445F00046FB51 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A55B5881F6445F00046FB51 /* StatusBar.swift */; };
-		5A55B58B1F6445F00046FB51 /* StatusBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5891F6445F00046FB51 /* StatusBar.xib */; };
 		5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5911F6455A60046FB51 /* Localizable.strings */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
@@ -119,10 +116,7 @@
 		5A1FD0481DFD53390071AE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A1FD04A1DFD53390071AE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoColorEmoji.ttf; sourceTree = "<group>"; };
-		5A2673911EE705DC0022F428 /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		5A4313B61DEA471500839CD6 /* BNHtmlPdfKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BNHtmlPdfKit.framework; path = "Pods/../build/Debug-iphoneos/BNHtmlPdfKit/BNHtmlPdfKit.framework"; sourceTree = "<group>"; };
-		5A55B5881F6445F00046FB51 /* StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
-		5A55B5891F6445F00046FB51 /* StatusBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBar.xib; sourceTree = "<group>"; };
 		5A55B5901F6455A60046FB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A55B5921F6455B70046FB51 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
@@ -267,8 +261,6 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
-				5A55B5881F6445F00046FB51 /* StatusBar.swift */,
-				5A55B5891F6445F00046FB51 /* StatusBar.xib */,
 				5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */,
 				5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */,
 				5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */,
@@ -282,7 +274,6 @@
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
-				5A2673911EE705DC0022F428 /* MyView.swift */,
 				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
@@ -472,7 +463,6 @@
 				5A1C32C21EB4F66200C47F13 /* GoogleService-Info.plist in Resources */,
 				5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
-				5A55B58B1F6445F00046FB51 /* StatusBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,8 +552,6 @@
 				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
-				5A2673921EE705DC0022F428 /* MyView.swift in Sources */,
-				5A55B58A1F6445F00046FB51 /* StatusBar.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 				5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */,
 				5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */,

@@ -2,9 +2,6 @@ import UIKit
 import SwiftyUtils
 import RxSwift
 import RealmSwift
-import SwiftyAnimate
-import NGORoundedButton
-import JTImageButton
 
 struct RandomItems
 {
@@ -42,7 +39,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    @IBOutlet var square: UIView!
     
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -63,22 +59,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        UIView.animate(withDuration: 1) { 
-//            self.square.backgroundColor = .black
-//            self.square.tintColor = .black
-//            self.square.layer.backgroundColor = UIColor.red.cgColor
-//            self.view.backgroundColor = .black
-        }
         
-        let anim = CABasicAnimation(keyPath: "backgroundColor")
-        anim.fromValue = square.layer.backgroundColor
-        anim.toValue = UIColor.red.cgColor
-        anim.duration = 1
-        square.layer.add(anim, forKey: nil)
-        anim.isRemovedOnCompletion = false
-        Timer.after(1) { _ in
-            self.square.layer.backgroundColor = UIColor.red.cgColor
-        }.start()
     }
     
     override func viewDidLayoutSubviews() {
@@ -88,76 +69,7 @@ class MyViewController2: UIViewController {
     override func viewWillLayoutSubviews() {
         print("viewWillLayoutSubviews")
     }
-}
-
-@IBDesignable
-class SquareView: UIView {
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        let strokeWidth = self.width / 8
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: self.width - strokeWidth / 2, y: 0))
-        path.addLine(to: CGPoint(x: self.width - strokeWidth / 2, y: self.height - strokeWidth / 2))
-        path.addLine(to: CGPoint(x: 0, y: self.height - strokeWidth / 2))
-        self.backgroundColor?.darker().setStroke()
-        path.lineWidth = strokeWidth
-        path.stroke()
-    }
-}
-
-@IBDesignable
-class SquareView2: UIView {
-    
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        self.tintColor.setFill()
-        let background = UIBezierPath(rect: self.frame)
-        background.fill()
-        let strokeWidth = self.width / 8
-        let path = UIBezierPath()
-        path.move(to: CGPoint(x: self.width - strokeWidth / 2, y: 0))
-        path.addLine(to: CGPoint(x: self.width - strokeWidth / 2, y: self.height - strokeWidth / 2))
-        path.addLine(to: CGPoint(x: 0, y: self.height - strokeWidth / 2))
-        self.tintColor.darker().setStroke()
-        path.lineWidth = strokeWidth
-        path.stroke()
-    }
-}
-
-@IBDesignable
-class SquareViewLayers: UIView {
-    dynamic var squareColor: UIColor = .blue {
-        didSet {
-            setNeedsDisplay()
         }
-    }
-    
-    func setupView() {
-        layer.backgroundColor = squareColor.cgColor
-        let sublayer = CAShapeLayer()
-        let path = UIBezierPath()
-        let strokeWidth = self.width / 8
-        path.move(to: CGPoint(x: self.width - strokeWidth / 2, y: 0))
-        path.addLine(to: CGPoint(x: self.width - strokeWidth / 2, y: self.height - strokeWidth / 2))
-        path.addLine(to: CGPoint(x: 0, y: self.height - strokeWidth / 2))
-        self.tintColor.darker().setStroke()
-        path.lineWidth = strokeWidth
-        sublayer.path = path.cgPath
-        sublayer.strokeColor = squareColor.darker().cgColor
-        sublayer.lineWidth = strokeWidth
-        sublayer.backgroundColor = UIColor.clear.cgColor
-        layer.addSublayer(sublayer)
-        
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
     }
 }
