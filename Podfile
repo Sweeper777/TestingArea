@@ -15,9 +15,6 @@ target 'TestingArea' do
     pod 'GoogleSignIn'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'SwiftyAnimate'
-    pod 'FittableFontLabel'
-    pod 'NGORoundedButton'
-    pod 'JTImageButton'
+    pod 'SwiftyButton'
 end
 
