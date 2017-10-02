@@ -40,6 +40,9 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     
+    @IBOutlet var webView: UIWebView!
+    @IBOutlet var webview2: UIWebView!
+    
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
