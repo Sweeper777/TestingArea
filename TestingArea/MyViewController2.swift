@@ -59,6 +59,8 @@ class MyViewController2: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        webView.loadRequest(URLRequest(url: URL(string: "https://stackoverflow.com/questions/40990514/how-to-airprint-multiple-print-formatters-in-one-go")!))
+        webview2.loadRequest(URLRequest(url: URL(string: "https://stackoverflow.com/questions/39577879/how-can-i-save-a-gmscameraposition")!))
     }
     
     @IBAction func click() {
