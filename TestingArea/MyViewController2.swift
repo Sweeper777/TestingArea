@@ -35,6 +35,32 @@ struct RandomItems
     }
 }
 
+class MyPrintRenderer: UIPrintPageRenderer {
+    var webViews: [UIWebView]!
+    
+    override var numberOfPages: Int {
+        self.printFormatters = nil
+        setupPrintFormatters()
+        return super.numberOfPages
+    }
+    
+    func setupPrintFormatters() {
+        var page = 0
+        var previousFormatterMaxY = self.printableRect.minY
+        let formatter = UISimpleTextPrintFormatter(text: "Hello")
+        var contentInsets = UIEdgeInsets.zero
+        contentInsets.top = previousFormatterMaxY
+        if contentInsets.top > self.printableRect.maxY {
+            page += 1
+            contentInsets.top = self.printableRect.minY
+        }
+        formatter.contentInsets = contentInsets
+        self.addPrintFormatter(formatter, startingAtPageAt: page)
+        page = formatter.startPage + formatter.pageCount - 1
+        previousFormatterMaxY = formatter.rectForPage(at: page).maxY
+    }
+}
+
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
