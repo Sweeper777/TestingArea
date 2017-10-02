@@ -112,6 +112,10 @@ class MyViewController2: UIViewController {
         print("viewWillLayoutSubviews")
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        DispatchQueue.main.async {
+            print(self.view.frame.size)
+            print(size)
         }
     }
 }
