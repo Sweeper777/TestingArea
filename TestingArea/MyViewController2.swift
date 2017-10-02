@@ -93,7 +93,15 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        let renderer = MyPrintRenderer()
+        renderer.webViews = [webView, webview2]
+        let printInfo = UIPrintInfo.printInfo()
+        printInfo.jobName = "job"
+        printInfo.outputType = .general
         
+        printController.printPageRenderer = renderer
+        printController.printInfo = printInfo
+        printController.present(animated: true, completionHandler: nil)
     }
     
     override func viewDidLayoutSubviews() {
