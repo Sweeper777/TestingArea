@@ -2,6 +2,7 @@ import UIKit
 import MessageUI
 import CoreData
 import SwiftyUtils
+import SwiftyButton
 
 class MyViewController: UIViewController {
     @IBOutlet var stackView: UIStackView!
@@ -32,6 +33,8 @@ class MyViewController: UIViewController {
         label.font = label.font.withSize(fontSize)
         self.view.addSubview(label)
 
+        print(PressableButton.Defaults.shadowHeight)
+        print(PressableButton.Defaults.colors)
     }
 }
 
