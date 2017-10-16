@@ -4,6 +4,7 @@ import RxSwift
 import RealmSwift
 import MultipeerConnectivity
 
+class MyViewController2: UIViewController, MCNearbyServiceBrowserDelegate, MCNearbyServiceAdvertiserDelegate, MCSessionDelegate {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
@@ -54,6 +55,15 @@ import MultipeerConnectivity
     
     override func viewWillLayoutSubviews() {
         print("viewWillLayoutSubviews")
+    }
+    
+    func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
+        detectedPeers.value.append((peerID, false))
+    }
+    
+    func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
+        guard let index = detectedPeers.value.index(where: { $0.0 == peerID }) else { return }
+        detectedPeers.value.remove(at: index)
     }
     
         }
