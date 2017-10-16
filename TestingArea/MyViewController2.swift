@@ -24,7 +24,21 @@ import MultipeerConnectivity
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        detectedPeers.asObservable().bind(to: tableView.rx.items(cellIdentifier: "cell")) {
+            row, model, cell in
+            cell.textLabel?.text = model.0.displayName
+            cell.accessoryType = model.1 ? .checkmark : .none
+        }.disposed(by: disposeBag)
         
+        peer = MCPeerID(displayName: UIDevice.current.name)
+        session = MCSession(peer: peer)
+        browser = MCNearbyServiceBrowser(peer: peer, serviceType: "testingarea")
+        advertiser = MCNearbyServiceAdvertiser(peer: peer, discoveryInfo: nil, serviceType: "testingarea")
+        browser.delegate = self
+        advertiser.delegate = self
+        session.delegate = self
+        
+        advertiser.startAdvertisingPeer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
