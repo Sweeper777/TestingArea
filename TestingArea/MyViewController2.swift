@@ -2,12 +2,20 @@ import UIKit
 import SwiftyUtils
 import RxSwift
 import RealmSwift
+import MultipeerConnectivity
 
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
+    @IBOutlet var visibleSwitch: UISwitch!
+    @IBOutlet var tableView: UITableView!
     
+    var detectedPeers = Variable([(MCPeerID, Bool)]())
     
+    var peer: MCPeerID!
+    var session: MCSession!
+    var browser: MCNearbyServiceBrowser!
+    var advertiser: MCNearbyServiceAdvertiser!
     
     let disposeBag = DisposeBag()
     let fontStyles: [UIFontTextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
