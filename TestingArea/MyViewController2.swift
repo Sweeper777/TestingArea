@@ -77,6 +77,37 @@ class MyViewController2: UIViewController, MCNearbyServiceBrowserDelegate, MCNea
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         let message = String.init(data: data, encoding: .utf8)
+        if message == "disconnect" {
+            session.disconnect()
+        } else {
+            DispatchQueue.main.async {
+                [weak self] in
+                self?.textview.text = "\(peerID.displayName): \(message!)"
+            }
         }
+    }
+    
+    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        guard let index = detectedPeers.value.index(where: { $0.0 == peerID }) else { return }
+        switch state {
+        case .connected:
+            detectedPeers.value[index].1 = true
+        case .notConnected:
+            detectedPeers.value[index].1 = false
+        case .connecting:
+            print("connecting to \(peerID.displayName)")
+        }
+    }
+    
+    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+        
+    }
+    
+    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
+        
+    }
+    
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
+        
     }
 }
