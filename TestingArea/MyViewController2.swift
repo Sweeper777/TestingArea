@@ -66,6 +66,17 @@ class MyViewController2: UIViewController, MCNearbyServiceBrowserDelegate, MCNea
         detectedPeers.value.remove(at: index)
     }
     
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
+        if session.connectedPeers.isEmpty {
+            invitationHandler(true, session)
+            advertiser.stopAdvertisingPeer()
+        } else {
+            invitationHandler(false, nil)
+        }
+    }
+    
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        let message = String.init(data: data, encoding: .utf8)
         }
     }
 }
