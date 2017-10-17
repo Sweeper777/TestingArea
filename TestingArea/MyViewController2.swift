@@ -31,6 +31,17 @@ class MyViewController2: UIViewController, MCNearbyServiceBrowserDelegate, MCNea
             cell.accessoryType = model.1 ? .checkmark : .none
         }.disposed(by: disposeBag)
         
+        tableView.rx.modelSelected((MCPeerID, Bool).self).bind { [weak self] (model) in
+            guard let index = self?.detectedPeers.value.index(where: { $0.0 == model.0 }) else { return }
+            guard let `self` = self else { return }
+            if !self.detectedPeers.value[index].1 {
+                self.browser.invitePeer(self.detectedPeers.value[index].0, to: self.session, withContext: nil, timeout: 30)
+            } else {
+                let string = "disconnect"
+                try? self.session.send(string.data(using: .utf8)!, toPeers: [self.detectedPeers.value[index].0], with: .reliable)
+            }
+        }.disposed(by: disposeBag)
+        
         peer = MCPeerID(displayName: UIDevice.current.name)
         session = MCSession(peer: peer)
         browser = MCNearbyServiceBrowser(peer: peer, serviceType: "testingarea")
@@ -40,6 +51,16 @@ class MyViewController2: UIViewController, MCNearbyServiceBrowserDelegate, MCNea
         session.delegate = self
         
         advertiser.startAdvertisingPeer()
+        visibleSwitch.rx.isOn.bind(onNext: {
+            [weak self] on in
+            if on {
+                self?.advertiser.startAdvertisingPeer()
+            } else {
+                self?.advertiser.stopAdvertisingPeer()
+            }
+        }).disposed(by: disposeBag)
+        
+        browser.startBrowsingForPeers()
     }
     
     override func viewDidAppear(_ animated: Bool) {
