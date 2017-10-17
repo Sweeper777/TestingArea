@@ -68,6 +68,8 @@ class MyViewController2: UIViewController, MCNearbyServiceBrowserDelegate, MCNea
     }
     
     @IBAction func click() {
+//        try? session.send(textfield.text!.data(using: .utf8)!, toPeers: session.connectedPeers, with: .reliable)
+        session = nil
     }
     
     override func viewDidLayoutSubviews() {
