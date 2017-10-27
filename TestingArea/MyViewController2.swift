@@ -11,6 +11,8 @@ class MyViewController2: UIViewController, MCNearbyServiceBrowserDelegate, MCNea
     @IBOutlet var visibleSwitch: UISwitch!
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var stepper: UIStepper!
+    
     var detectedPeers = Variable([(MCPeerID, Bool)]())
     
     var peer: MCPeerID!
