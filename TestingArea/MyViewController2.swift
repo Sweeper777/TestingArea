@@ -16,6 +16,9 @@ class MyViewController2: UIViewController {
         super.viewDidLoad()
         let button = MDCFloatingButton(shape: .default)
         button.frame = CGRect.zero.with(x: 39).with(y: 260).with(width: 50).with(height: 50)
+        button.setImage(#imageLiteral(resourceName: "home"), for: .normal)
+        button.backgroundColor = UIColor(hex: "5abb5a")
+        self.view.addSubview(button)
         
     }
     
