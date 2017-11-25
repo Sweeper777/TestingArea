@@ -1,8 +1,7 @@
 import UIKit
 import SwiftyUtils
 import RxSwift
-import RealmSwift
-import MultipeerConnectivity
+import MaterialComponents
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -15,6 +14,8 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
+        let button = MDCFloatingButton(shape: .default)
+        button.frame = CGRect.zero.with(x: 39).with(y: 260).with(width: 50).with(height: 50)
         
     }
     
