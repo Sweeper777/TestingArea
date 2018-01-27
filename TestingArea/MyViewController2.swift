@@ -3,7 +3,7 @@ import SwiftyUtils
 import RxSwift
 import MaterialComponents
 
-class MyViewController2: UIViewController {
+class MyViewController2: UIViewController, UITextFieldDelegate {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
@@ -19,7 +19,10 @@ class MyViewController2: UIViewController {
         button.setImage(#imageLiteral(resourceName: "home"), for: .normal)
         button.backgroundColor = UIColor(hex: "5abb5a")
         self.view.addSubview(button)
-        
+        textfield.placeholder = "Hello"
+        textfield.text = "‌"
+        textfield.clearButtonMode = .unlessEditing
+        textfield.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -27,6 +30,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        view.endEditing(true)
     }
     
     override func viewDidLayoutSubviews() {
@@ -35,5 +39,13 @@ class MyViewController2: UIViewController {
     
     override func viewWillLayoutSubviews() {
         print("viewWillLayoutSubviews")
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.clearButtonMode = .unlessEditing
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.clearButtonMode = .whileEditing
     }
 }
