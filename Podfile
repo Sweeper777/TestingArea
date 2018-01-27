@@ -9,7 +9,6 @@ target 'TestingArea' do
     pod 'SlideMenuControllerSwift'
     pod 'RealmSwift'
     pod 'Alamofire'
-    pod 'Eureka'
     pod 'Firebase/Core'
     pod 'Firebase/Auth'
     pod 'GoogleSignIn'
