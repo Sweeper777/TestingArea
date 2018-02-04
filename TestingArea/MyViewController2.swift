@@ -19,7 +19,7 @@ class MyViewController2: UIViewController, UITextFieldDelegate {
         button.setImage(#imageLiteral(resourceName: "home"), for: .normal)
         button.backgroundColor = UIColor(hex: "5abb5a")
         self.view.addSubview(button)
-        textfield.placeholder = "Hello"
+        textfield.placeholder = "Hello" 
         textfield.text = "‌"
         textfield.clearButtonMode = .unlessEditing
         textfield.delegate = self
@@ -48,4 +48,23 @@ class MyViewController2: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.clearButtonMode = .whileEditing
     }
+    
+    public static func create<T: Equatable>(controller: UIViewController, values: [String: T]?) -> BottomPickerPanelView {
+        
+        let view = Bundle.main.loadNibNamed("BottomPickerPanelView", owner: controller, options: nil)!.first as! BottomPickerPanelView<T>
+        
+        view.isHidden = true
+        
+        view.pickerView.delegate = view
+        view.pickerView.dataSource = view
+        
+        view.parentViewController = controller
+        view.data = values
+        
+        return view
+    }
+    
+}
+
+class BottomPickerPanelView<T: Equatable>: UIView {
 }
