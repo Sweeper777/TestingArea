@@ -1,9 +1,8 @@
 import UIKit
 import SwiftyUtils
 import RxSwift
-import MaterialComponents
 
-class MyViewController2: UIViewController, UITextFieldDelegate {
+class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
@@ -14,15 +13,6 @@ class MyViewController2: UIViewController, UITextFieldDelegate {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
-        let button = MDCFloatingButton(shape: .default)
-        button.frame = CGRect.zero.with(x: 39).with(y: 260).with(width: 50).with(height: 50)
-        button.setImage(#imageLiteral(resourceName: "home"), for: .normal)
-        button.backgroundColor = UIColor(hex: "5abb5a")
-        self.view.addSubview(button)
-        textfield.placeholder = "Hello" 
-        textfield.text = "‌"
-        textfield.clearButtonMode = .unlessEditing
-        textfield.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,30 +31,4 @@ class MyViewController2: UIViewController, UITextFieldDelegate {
         print("viewWillLayoutSubviews")
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.clearButtonMode = .unlessEditing
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.clearButtonMode = .whileEditing
-    }
-    
-    public static func create<T: Equatable>(controller: UIViewController, values: [String: T]?) -> BottomPickerPanelView {
-        
-        let view = Bundle.main.loadNibNamed("BottomPickerPanelView", owner: controller, options: nil)!.first as! BottomPickerPanelView<T>
-        
-        view.isHidden = true
-        
-        view.pickerView.delegate = view
-        view.pickerView.dataSource = view
-        
-        view.parentViewController = controller
-        view.data = values
-        
-        return view
-    }
-    
-}
-
-class BottomPickerPanelView<T: Equatable>: UIView {
 }
