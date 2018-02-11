@@ -19,6 +19,7 @@ class MyViewController2: UIViewController {
         let scene = MyScene()
         sceneView.scene = scene
         scene.setup()
+        sceneView.allowsCameraControl = true
         sceneView.backgroundColor = .black
         sceneView.showsStatistics = true
     }
