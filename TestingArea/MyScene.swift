@@ -17,5 +17,9 @@ class MyScene: SCNScene {
         box.position = SCNVector3(0, 10, 0)
         box.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         box.physicsBody?.applyForce(SCNVector3(1, 0, 0), asImpulse: true)
+        box.light = SCNLight()
+        box.light?.type = .omni
+        self.rootNode.addChildNode(box)
+        self.rootNode.addChildNode(ground)
     }
 }
