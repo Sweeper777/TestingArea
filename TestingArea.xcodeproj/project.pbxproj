@@ -21,6 +21,7 @@
 		5A1FD04E1DFD56DE0071AE2F /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
 		5A23109D1E62E690009B39D2 /* NotoColorEmoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */; };
 		5A373C1E1FB705C000F99847 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A373C1D1FB705C000F99847 /* test.txt */; };
+		5A3C5EBE202EDFC8001EB69E /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C5EBD202EDFC8001EB69E /* MyScene.swift */; };
 		5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5911F6455A60046FB51 /* Localizable.strings */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
@@ -118,6 +119,8 @@
 		5A1FD04A1DFD53390071AE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoColorEmoji.ttf; sourceTree = "<group>"; };
 		5A373C1D1FB705C000F99847 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		5A3C5EBC202EDEC4001EB69E /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		5A3C5EBD202EDFC8001EB69E /* MyScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
 		5A4313B61DEA471500839CD6 /* BNHtmlPdfKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BNHtmlPdfKit.framework; path = "Pods/../build/Debug-iphoneos/BNHtmlPdfKit/BNHtmlPdfKit.framework"; sourceTree = "<group>"; };
 		5A55B5901F6455A60046FB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A55B5921F6455B70046FB51 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 		1EB06E18AAE7306B21230C08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A3C5EBC202EDEC4001EB69E /* SceneKit.framework */,
 				5A1AE2DD1E3CE45F0038B1D5 /* pop.framework */,
 				5AE20D801E38951E0064968B /* pop.framework */,
 				5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */,
@@ -276,6 +280,7 @@
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
+				5A3C5EBD202EDFC8001EB69E /* MyScene.swift */,
 				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
@@ -394,7 +399,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Mulang Su";
 				TargetAttributes = {
 					5A1FD03E1DFD53390071AE2F = {
@@ -597,6 +602,7 @@
 			files = (
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
 				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
+				5A3C5EBE202EDFC8001EB69E /* MyScene.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
@@ -717,14 +723,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -766,14 +778,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
