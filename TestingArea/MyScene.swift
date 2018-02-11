@@ -2,6 +2,9 @@ import SceneKit
 
 class MyScene: SCNScene {
     var cameraNode: SCNNode!
+    var box: SCNNode!
+    var ground: SCNNode!
+    
     func setup() {
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
@@ -9,11 +12,11 @@ class MyScene: SCNScene {
         
         self.rootNode.addChildNode(cameraNode)
         
-        let ground = SCNNode(geometry: SCNBox(width: 10, height: 1, length: 10, chamferRadius: 0))
+        ground = SCNNode(geometry: SCNBox(width: 10, height: 1, length: 10, chamferRadius: 0))
         ground.position = SCNVector3(0, -1, 0)
         ground.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
         
-        let box = SCNNode(geometry: SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.1))
+        box = SCNNode(geometry: SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.1))
         box.position = SCNVector3(0, 10, 0)
         box.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         box.physicsBody?.applyForce(SCNVector3(1, 0, 0), asImpulse: true)
@@ -21,5 +24,9 @@ class MyScene: SCNScene {
         box.light?.type = .omni
         self.rootNode.addChildNode(box)
         self.rootNode.addChildNode(ground)
+    }
+    
+    func executeCommand(_ command: String) {
+        
     }
 }
