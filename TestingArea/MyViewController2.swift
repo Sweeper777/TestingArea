@@ -18,7 +18,7 @@ class MyViewController2: UIViewController {
         super.viewDidLoad()
         let scene = MyScene()
         sceneView.scene = scene
-        scene.setupCamera()
+        scene.setup()
         sceneView.backgroundColor = .black
         sceneView.showsStatistics = true
     }
