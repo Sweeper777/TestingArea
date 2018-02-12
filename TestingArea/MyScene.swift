@@ -35,5 +35,27 @@ class MyScene: SCNScene {
         case "ground": node = ground
         default: return
         }
+        guard let selector = parts.dropFirst().first else { return }
+        switch selector {
+        case "applyForce":
+            if parts.count == 8 {
+                var x = Double(parts[2])!
+                var y = Double(parts[3])!
+                var z = Double(parts[4])!
+                let direction = SCNVector3(x, y, z)
+                x = Double(parts[5])!
+                y = Double(parts[6])!
+                z = Double(parts[7])!
+                let point = SCNVector3(x, y, z)
+                node.physicsBody?.applyForce(direction, at: point, asImpulse: true)
+            } else if parts.count == 5 {
+                let x = Double(parts[2])!
+                let y = Double(parts[3])!
+                let z = Double(parts[4])!
+                let direction = SCNVector3(x, y, z)
+                node.physicsBody?.applyForce(direction, asImpulse: true)
+            }
+        default: break
+        }
     }
 }
