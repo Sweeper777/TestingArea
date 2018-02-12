@@ -14,7 +14,7 @@ class MyScene: SCNScene {
         
         ground = SCNNode(geometry: SCNBox(width: 10, height: 1, length: 10, chamferRadius: 0))
         ground.position = SCNVector3(0, -1, 0)
-        ground.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
+        ground.physicsBody = SCNPhysicsBody(type: .kinematic, shape: nil)
         
         box = SCNNode(geometry: SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0.1))
         box.position = SCNVector3(0, 10, 0)
