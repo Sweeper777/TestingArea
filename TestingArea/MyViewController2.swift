@@ -33,7 +33,7 @@ class MyViewController2: UIViewController {
         if textfield.isEditing {
             view.endEditing(true)
         } else {
-            scene.executeCommand(textfield.text)
+            scene.executeCommand(textfield.text!)
         }
     }
     
