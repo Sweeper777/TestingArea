@@ -64,6 +64,15 @@ class MyScene: SCNScene {
                 let direction = SCNVector4(x, y, z, w)
                 node.physicsBody?.applyTorque(direction, asImpulse: true)
             }
+        case "rotation":
+            if parts.count == 6 {
+                let x = Double(parts[2])!
+                let y = Double(parts[3])!
+                let z = Double(parts[4])!
+                let w = Double(parts[5])!
+                let direction = SCNVector4(x, y, z, w)
+                node.rotation = direction
+            }
         default: break
         }
     }
