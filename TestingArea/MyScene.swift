@@ -27,6 +27,13 @@ class MyScene: SCNScene {
     }
     
     func executeCommand(_ command: String) {
-        
+        let parts = command.components(separatedBy: " ")
+        let node: SCNNode
+        guard let nodeString = parts.first else { return }
+        switch nodeString {
+        case "box": node = box
+        case "ground": node = ground
+        default: return
+        }
     }
 }
