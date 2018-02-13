@@ -73,6 +73,10 @@ class MyScene: SCNScene {
                 let direction = SCNVector4(x, y, z, w)
                 node.rotation = direction
             }
+        case "light":
+            if parts.count == 3 {
+                node.light?.type = SCNLight.LightType(rawValue: parts[2])
+            }
         default: break
         }
     }
