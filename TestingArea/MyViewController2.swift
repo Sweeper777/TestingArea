@@ -46,3 +46,29 @@ class MyViewController2: UIViewController {
     }
     
 }
+@IBDesignable class UIButtonRounded: UIButton
+{
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateCornerRadius()
+    }
+    
+    @IBInspectable var rounded: Bool = false {
+        didSet {
+            updateCornerRadius()
+        }
+    }
+    
+    @IBInspectable var border: Bool = false {
+        didSet {
+            updateCornerRadius()
+        }
+    }
+    
+    @IBInspectable var radious: CGFloat = 0 {
+        didSet {
+            updateCornerRadius()
+        }
+    }
+    
+}
