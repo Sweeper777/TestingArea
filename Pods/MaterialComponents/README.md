@@ -20,7 +20,6 @@ Material Components for iOS are written in Objective-C and support Swift and Int
 - [Material.io](https://www.material.io) (external site)
 - [Material Design Guidelines](https://material.io/guidelines) (external site)
 - [Checklist status spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRQLFMuo0Q3xsJp1_TdWvImtfdc8dU0lqX2DTct5pOPAEUIrN9OsuPquvv4aKRAwKK_KItpGs7c4Fok/pubhtml)
-- [Discord Chat Room](https://discord.gg/material-components)
 
 
 ## Trying out Material Components
@@ -41,12 +40,6 @@ If you want to take a look at the implementation of the components, you can find
 Use `cmd-1` to open the project navigator within Xcode. Peal open the `Pods` project and inside the `Development Pods` folder you will find the component source code.
 
 ## Installation
-
-### Requirements
-
-- Xcode 8.0 or higher.
-- Minimum iOS deployment target of 8.0 or higher
-- Cocoapods
 
 ### Getting Started with a New Project
 
@@ -71,7 +64,7 @@ pod init
 ```
 
 Next, add the
-[Material Components for iOS pod](https://cocoapods.org/pods/MaterialComponents)
+[Material Components for iOS pod](https://cocoapods.org/pods/MaterialComponentsIOS)
 to your target in your Podfile:
 
 ``` ruby

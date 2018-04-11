@@ -131,7 +131,7 @@ static int NameToIndex(NSString *_Nonnull name) {
   });
 
   NSNumber *index = map[name];
-  if (index != nil) {
+  if (index) {
     return [index intValue];
   } else {
     NSCAssert(NO, @"%@ is not a valid tint/accent name.", name);

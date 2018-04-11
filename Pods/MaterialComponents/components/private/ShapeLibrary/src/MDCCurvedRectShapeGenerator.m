@@ -17,6 +17,7 @@
 #import "MDCCurvedRectShapeGenerator.h"
 
 #import "MDCCurvedCornerTreatment.h"
+#import "MDCRectangleShapeGenerator.h"
 
 static NSString *const MDCCurvedRectShapeGeneratorCornerSizeKey =
     @"MDCCurvedRectShapeGeneratorCornerSizeKey";

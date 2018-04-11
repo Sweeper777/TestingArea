@@ -14,21 +14,15 @@
  limitations under the License.
  */
 
-#import "MDCTextField.h"
-
-#import <MDFInternationalization/MDFInternationalization.h>
-
 #import "MDCTextFieldPositioningDelegate.h"
-#import "MDCTextInput.h"
 #import "MDCTextInputBorderView.h"
 #import "MDCTextInputCharacterCounter.h"
-#import "MDCTextInputUnderlineView.h"
 #import "private/MDCTextInputCommonFundament.h"
 
 #import "MaterialMath.h"
+#import "MaterialRTL.h"
 #import "MaterialTypography.h"
 
-static NSString *const MDCTextFieldCursorColorKey = @"MDCTextFieldCursorColorKey";
 static NSString *const MDCTextFieldFundamentKey = @"MDCTextFieldFundamentKey";
 static NSString *const MDCTextFieldLeftViewModeKey = @"MDCTextFieldLeftViewModeKey";
 static NSString *const MDCTextFieldRightViewModeKey = @"MDCTextFieldRightViewModeKey";
@@ -40,9 +34,7 @@ NSString *const MDCTextFieldTextDidSetTextNotification = @"MDCTextFieldTextDidSe
 static const CGFloat MDCTextInputClearButtonImageBuiltInPadding = -2.5f;
 static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
 
-@interface MDCTextField () {
-  UIColor *_cursorColor;
-}
+@interface MDCTextField ()
 
 @property(nonatomic, strong) MDCTextInputCommonFundament *fundament;
 
@@ -75,15 +67,11 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
   if (self) {
     NSString *interfaceBuilderPlaceholder = super.placeholder;
 
-    if ([aDecoder containsValueForKey:MDCTextFieldFundamentKey]) {
-      _fundament = [aDecoder decodeObjectOfClass:[MDCTextInputCommonFundament class]
-                                          forKey:MDCTextFieldFundamentKey];
-    } else {
-      _fundament = [[MDCTextInputCommonFundament alloc] initWithTextInput:self];
-    }
+    MDCTextInputCommonFundament *fundament = [aDecoder decodeObjectForKey:MDCTextFieldFundamentKey];
+    _fundament =
+        fundament ? fundament : [[MDCTextInputCommonFundament alloc] initWithTextInput:self];
 
     [self commonMDCTextFieldInitialization];
-    _cursorColor = [aDecoder decodeObjectForKey:MDCTextFieldCursorColorKey];
 
     self.leftViewMode =
         (UITextFieldViewMode)[aDecoder decodeIntegerForKey:MDCTextFieldLeftViewModeKey];
@@ -106,7 +94,6 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
   [super encodeWithCoder:aCoder];
-  [aCoder encodeObject:self.cursorColor forKey:MDCTextFieldCursorColorKey];
   [aCoder encodeObject:self.fundament forKey:MDCTextFieldFundamentKey];
   [aCoder encodeInteger:self.leftViewMode forKey:MDCTextFieldLeftViewModeKey];
   [aCoder encodeInteger:self.rightViewMode forKey:MDCTextFieldRightViewModeKey];
@@ -115,7 +102,6 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
 - (instancetype)copyWithZone:(__unused NSZone *)zone {
   MDCTextField *copy = [[[self class] alloc] initWithFrame:self.frame];
 
-  copy.cursorColor = self.cursorColor;
   copy.fundament = [self.fundament copy];
   copy.enabled = self.isEnabled;
   if ([self.leadingView conformsToProtocol:@protocol(NSCopying)]) {
@@ -138,9 +124,6 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
 
   // Set the clear button color to black with 54% opacity.
   self.clearButton.tintColor = [UIColor colorWithWhite:0 alpha:[MDCTypography captionFontOpacity]];
-
-  _cursorColor = MDCTextInputCursorColor();
-  [self applyCursorColor];
 
   [self setupUnderlineConstraints];
 
@@ -201,7 +184,7 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
 }
 
 - (BOOL)needsUpdateUnderlinePosition {
-  return !MDCCGFloatEqual(self.underlineY.constant, [self underlineYConstant]);
+  return MDCCGFloatEqual(self.underlineY.constant, [self underlineYConstant]);
 }
 
 - (void)updateUnderlinePosition {
@@ -222,12 +205,6 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
 
 - (void)updateBorder {
   self.borderView.borderPath = self.borderPath;
-}
-
-#pragma mark - Applying Color
-
-- (void)applyCursorColor {
-  self.tintColor = self.cursorColor;
 }
 
 #pragma mark - Properties Implementation
@@ -253,15 +230,6 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
 
 - (UIButton *)clearButton {
   return _fundament.clearButton;
-}
-
-- (UIColor *)cursorColor {
-  return _cursorColor ?: MDCTextInputCursorColor();
-}
-
-- (void)setCursorColor:(UIColor *)cursorColor {
-  _cursorColor = cursorColor;
-  [self applyCursorColor];
 }
 
 - (BOOL)hidesPlaceholderOnInput {
@@ -313,38 +281,27 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
   return _fundament.trailingUnderlineLabel;
 }
 
-// In iOS 8, .leftView and .rightView are not swapped in RTL so we have to do that manually.
 - (UIView *)trailingView {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    return self.leftView;
-  }
   return self.rightView;
 }
 
 - (void)setTrailingView:(UIView *)trailingView {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    self.leftView = trailingView;
-  } else {
-    self.rightView = trailingView;
-  }
+  self.rightView = trailingView;
 }
 
 - (UITextFieldViewMode)trailingViewMode {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
+  if (self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionLeftToRight) {
+    return self.rightViewMode;
+  } else {
     return self.leftViewMode;
   }
-  return self.rightViewMode;
 }
 
 - (void)setTrailingViewMode:(UITextFieldViewMode)trailingViewMode {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    self.leftViewMode = trailingViewMode;
-  } else {
+  if (self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionLeftToRight) {
     self.rightViewMode = trailingViewMode;
+  } else {
+    self.leftViewMode = trailingViewMode;
   }
 }
 
@@ -394,38 +351,27 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
   _fundament.enabled = enabled;
 }
 
-// In iOS 8, .leftView and .rightView are not swapped in RTL so we have to do that manually.
 - (UIView *)leadingView {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    return self.rightView;
-  }
   return self.leftView;
 }
 
 - (void)setLeadingView:(UIView *)leadingView {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    self.rightView = leadingView;
-  } else {
-    self.leftView = leadingView;
-  }
+  self.leftView = leadingView;
 }
 
 - (UITextFieldViewMode)leadingViewMode {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
+  if (self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionLeftToRight) {
+    return self.leftViewMode;
+  } else {
     return self.rightViewMode;
   }
-  return self.leftViewMode;
 }
 
 - (void)setLeadingViewMode:(UITextFieldViewMode)leadingViewMode {
-  if ([self shouldManuallyEnforceRightToLeftLayoutForOverlayViews] &&
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    self.rightViewMode = leadingViewMode;
-  } else {
+  if (self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionLeftToRight) {
     self.leftViewMode = leadingViewMode;
+  } else {
+    self.rightViewMode = leadingViewMode;
   }
 }
 
@@ -469,11 +415,11 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
   // and .rightView gets the value for rightViewRectForBounds.
 
   CGFloat leftViewWidth =
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft
+      self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft
           ? CGRectGetWidth([self rightViewRectForBounds:bounds])
           : CGRectGetWidth([self leftViewRectForBounds:bounds]);
   CGFloat rightViewWidth =
-      self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft
+      self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft
           ? CGRectGetWidth([self leftViewRectForBounds:bounds])
           : CGRectGetWidth([self rightViewRectForBounds:bounds]);
 
@@ -512,9 +458,10 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
   actualY = textInsets.top - actualY;
   textRect.origin.y = actualY;
 
-  if (self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
+  if (self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
     // Now that the text field is laid out as if it were LTR, we can flip it if necessary.
-    textRect = MDFRectFlippedHorizontally(textRect, CGRectGetWidth(bounds));
+    textRect = MDCRectFlippedForRTL(textRect, CGRectGetWidth(bounds),
+                                    UIUserInterfaceLayoutDirectionRightToLeft);
   }
 
   return textRect;
@@ -525,8 +472,9 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
   CGRect editingRect = [self textRectForBounds:bounds];
 
   // The textRect comes to us flipped for RTL (if RTL) so we flip it back before adjusting.
-  if (self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    editingRect = MDFRectFlippedHorizontally(editingRect, CGRectGetWidth(bounds));
+  if (self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
+    editingRect = MDCRectFlippedForRTL(editingRect, CGRectGetWidth(bounds),
+                                       UIUserInterfaceLayoutDirectionRightToLeft);
   }
 
   // UITextFields show EITHER the clear button or the rightView. If the rightView has a superview,
@@ -555,8 +503,9 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
     }
   }
 
-  if (self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    editingRect = MDFRectFlippedHorizontally(editingRect, CGRectGetWidth(bounds));
+  if (self.mdc_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
+    editingRect = MDCRectFlippedForRTL(editingRect, CGRectGetWidth(bounds),
+                                       UIUserInterfaceLayoutDirectionRightToLeft);
   }
 
   if ([self.fundament.positioningDelegate
@@ -638,7 +587,6 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
     [self setNeedsUpdateConstraints];
   }
   [self updateBorder];
-  [self applyCursorColor];
 
   if ([self.positioningDelegate respondsToSelector:@selector(textInputDidLayoutSubviews)]) {
     [self.positioningDelegate textInputDidLayoutSubviews];
@@ -673,25 +621,14 @@ static const CGFloat MDCTextInputEditingRectRightViewPaddingCorrection = -2.f;
   [_fundament didEndEditing];
 }
 
-#pragma mark - RTL
-
-// TODO: (larche) remove when we drop iOS 8
-// Prior to iOS 9 RTL was not automatically applied, so we need to apply fixes manually.
-- (BOOL)shouldManuallyEnforceRightToLeftLayoutForOverlayViews {
-  NSOperatingSystemVersion iOS9Version = {9, 0, 0};
-  NSProcessInfo *processInfo = [NSProcessInfo processInfo];
-  return ![processInfo isOperatingSystemAtLeastVersion:iOS9Version];
-}
-
 #pragma mark - Accessibility
 
 - (BOOL)mdc_adjustsFontForContentSizeCategory {
   return _fundament.mdc_adjustsFontForContentSizeCategory;
 }
 
-// TODO: (larche) remove when we drop iOS 9
 - (void)mdc_setAdjustsFontForContentSizeCategory:(BOOL)adjusts {
-  // Prior to iOS 10 dynamic type was not automatically applied.
+  // Prior to iOS 9 RTL was not automatically applied, so we don't need to apply any fixes.
   if ([super respondsToSelector:@selector(setAdjustsFontForContentSizeCategory:)]) {
     [super setAdjustsFontForContentSizeCategory:adjusts];
   }

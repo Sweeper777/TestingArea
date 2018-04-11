@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "MaterialShapes.h"
+#import "MDCShapeGenerating.h"
 
 /**
  A pill shape generator. Rounds the corners such that the shorter sides of the generated shape are

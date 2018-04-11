@@ -9,7 +9,6 @@ import UIKit
 
 extension UIAlertController {
 
-    @objc
     public convenience init(title: String,
                             message: String? = nil,
                             defaultActionButtonTitle: String = "OK",
@@ -29,7 +28,6 @@ extension UIAlertController {
 
 extension UIAlertController {
 
-    @objc
     public func show(animated: Bool = true, completion: (() -> Void)? = nil) {
         UIApplication.shared.topViewController()?.present(self, animated: animated, completion: completion)
     }

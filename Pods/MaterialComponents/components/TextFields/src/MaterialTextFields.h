@@ -14,19 +14,18 @@
  limitations under the License.
  */
 
-#import "MDCIntrinsicHeightTextView.h"
-#import "MDCMultilineTextField.h"
-#import "MDCMultilineTextInputDelegate.h"
 #import "MDCTextField.h"
 #import "MDCTextFieldPositioningDelegate.h"
 #import "MDCTextInput.h"
 #import "MDCTextInputCharacterCounter.h"
 #import "MDCTextInputController.h"
-#import "MDCTextInputControllerFilled.h"
+#import "MDCTextInputControllerDefault.h"
 #import "MDCTextInputControllerFullWidth.h"
 #import "MDCTextInputControllerLegacyDefault.h"
 #import "MDCTextInputControllerLegacyFullWidth.h"
 #import "MDCTextInputControllerOutlined.h"
 #import "MDCTextInputControllerOutlinedTextArea.h"
-#import "MDCTextInputControllerUnderline.h"
+#import "MDCTextInputControllerFilled.h"
 #import "MDCTextInputUnderlineView.h"
+#import "MDCMultilineTextField.h"
+#import "MDCMultilineTextInputDelegate.h"

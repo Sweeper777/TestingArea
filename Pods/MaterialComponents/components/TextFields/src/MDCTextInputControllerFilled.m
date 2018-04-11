@@ -16,37 +16,29 @@
 
 #import "MDCTextInputControllerFilled.h"
 
-#import "MDCMultilineTextField.h"
-#import "MDCTextInput.h"
-#import "MDCTextInputBorderView.h"
-#import "MDCTextInputController.h"
-#import "MDCTextInputControllerBase.h"
-#import "MDCTextInputControllerFloatingPlaceholder.h"
 #import "private/MDCTextInputArt.h"
-#import "private/MDCTextInputControllerBase+Subclassing.h"
+#import "private/MDCTextInputControllerDefault+Subclassing.h"
 
 #import "MaterialMath.h"
 
 /**
- Note: Right now this is a subclass of MDCTextInputControllerBase since they share a vast
+ Note: Right now this is a subclass of MDCTextInputControllerDefault since they share a vast
  majority of code. If the designs diverge further, this would make a good candidate for its own
  class.
  */
 
 #pragma mark - Constants
 
-static const CGFloat MDCTextInputControllerFilledClearButtonPaddingAddition = -2.f;
-static const CGFloat MDCTextInputControllerFilledDefaultUnderlineActiveHeight = 2;
-static const CGFloat MDCTextInputControllerFilledDefaultUnderlineNormalHeight = 1;
-static const CGFloat MDCTextInputControllerFilledFullPadding = 16.f;
+static const CGFloat MDCTextInputFilledClearButtonPaddingAddition = -2.f;
+static const CGFloat MDCTextInputFilledFullPadding = 16.f;
 
 // The guidelines have 8 points of padding but since the fonts on iOS are slightly smaller, we need
 // to add points to keep the versions at the same height.
-static const CGFloat MDCTextInputControllerFilledHalfPadding = 8.f;
-static const CGFloat MDCTextInputControllerFilledHalfPaddingAddition = 1.f;
-static const CGFloat MDCTextInputControllerFilledNormalPlaceholderPadding = 20.f;
+static const CGFloat MDCTextInputFilledHalfPadding = 8.f;
+static const CGFloat MDCTextInputFilledHalfPaddingAddition = 1.f;
+static const CGFloat MDCTextInputFilledNormalPlaceholderPadding = 20.f;
 
-static inline UIColor *MDCTextInputControllerFilledDefaultBorderFillColorDefault() {
+static inline UIColor *MDCTextInputDefaultBorderFillColorDefault() {
   return [UIColor colorWithWhite:0 alpha:.06f];
 }
 
@@ -55,11 +47,6 @@ static inline UIColor *MDCTextInputControllerFilledDefaultBorderFillColorDefault
 static UIColor *_borderFillColorDefault;
 
 static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
-
-static CGFloat _underlineHeightActiveDefault =
-    MDCTextInputControllerFilledDefaultUnderlineActiveHeight;
-static CGFloat _underlineHeightNormalDefault =
-    MDCTextInputControllerFilledDefaultUnderlineNormalHeight;
 
 @interface MDCTextInputControllerFilled ()
 
@@ -75,7 +62,7 @@ static CGFloat _underlineHeightNormalDefault =
 
 + (UIColor *)borderFillColorDefault {
   if (!_borderFillColorDefault) {
-    _borderFillColorDefault = MDCTextInputControllerFilledDefaultBorderFillColorDefault();
+    _borderFillColorDefault = MDCTextInputDefaultBorderFillColorDefault();
   }
   return _borderFillColorDefault;
 }
@@ -88,22 +75,6 @@ static CGFloat _underlineHeightNormalDefault =
   _roundedCornersDefault = roundedCornersDefault;
 }
 
-+ (CGFloat)underlineHeightActiveDefault {
-  return _underlineHeightActiveDefault;
-}
-
-+ (void)setUnderlineHeightActiveDefault:(CGFloat)underlineHeightActiveDefault {
-  _underlineHeightActiveDefault = underlineHeightActiveDefault;
-}
-
-+ (CGFloat)underlineHeightNormalDefault {
-  return _underlineHeightNormalDefault;
-}
-
-+ (void)setUnderlineHeightNormalDefault:(CGFloat)underlineHeightNormalDefault {
-  _underlineHeightNormalDefault = underlineHeightNormalDefault;
-}
-
 #pragma mark - MDCTextInputPositioningDelegate
 
 // clang-format off
@@ -111,19 +82,18 @@ static CGFloat _underlineHeightNormalDefault =
  textInsets: is the source of truth for vertical layout. It's used to figure out the proper
  height and also where to place the placeholder / text field.
 
+
+
  NOTE: It's applied before the textRect is flipped for RTL. So all calculations are done here à la
  LTR.
 
  The vertical layout is, at most complex (floating), this form:
- MDCTextInputControllerFilledHalfPadding +                            // Small padding
- MDCTextInputControllerFilledHalfPaddingAddition                      // Additional point (iOS specific)
- MDCRint(self.textInput.placeholderLabel.font.lineHeight * scale)     // Placeholder when up
- MDCTextInputControllerFilledHalfPadding +                            // Small padding
- MDCTextInputControllerFilledHalfPaddingAddition                      // Additional point (iOS specific)
-   MDCCeil(MAX(self.textInput.font.lineHeight,                        // Text field or placeholder line height
-             self.textInput.placeholderLabel.font.lineHeight))
- MDCTextInputControllerFilledHalfPadding +                            // Small padding
- MDCTextInputControllerFilledHalfPaddingAddition                      // Additional point (iOS specific)
+ MDCTextInputFilledHalfPadding +                                // Small padding
+ MDCRint(self.textInput.placeholderLabel.font.lineHeight * scale) +   // Placeholder when up
+ MDCTextInputDefaultVerticalHalfPadding +                             // Small padding
+ MDCCeil(MAX(self.textInput.font.lineHeight,                          // Text field or placeholder line height
+ self.textInput.placeholderLabel.font.lineHeight)) +
+ MDCTextInputDefaultPadding +                                         // Padding to underline (equal to small padding)
  --Underline--                                                        // Underline (height not counted)
  underlineLabelsOffset                                                // Depends on text insets mode. See the super class.
  */
@@ -132,18 +102,18 @@ static CGFloat _underlineHeightNormalDefault =
   UIEdgeInsets textInsets = [super textInsets:defaultInsets];
   if (self.isFloatingEnabled) {
     textInsets.top =
-        MDCTextInputControllerFilledHalfPadding + MDCTextInputControllerFilledHalfPaddingAddition +
+        MDCTextInputFilledHalfPadding + MDCTextInputFilledHalfPaddingAddition +
         MDCRint(self.textInput.placeholderLabel.font.lineHeight *
                 (CGFloat)self.floatingPlaceholderScale.floatValue) +
-        MDCTextInputControllerFilledHalfPadding + MDCTextInputControllerFilledHalfPaddingAddition;
+        MDCTextInputFilledHalfPadding + MDCTextInputFilledHalfPaddingAddition;
   } else {
-    textInsets.top = MDCTextInputControllerFilledNormalPlaceholderPadding;
+    textInsets.top = MDCTextInputFilledNormalPlaceholderPadding;
   }
 
   textInsets.bottom = [self beneathInputPadding] + [self underlineOffset];
 
-  textInsets.left = MDCTextInputControllerFilledFullPadding;
-  textInsets.right = MDCTextInputControllerFilledHalfPadding;
+  textInsets.left = MDCTextInputFilledFullPadding;
+  textInsets.right = MDCTextInputFilledHalfPadding;
 
   return textInsets;
 }
@@ -157,7 +127,7 @@ static CGFloat _underlineHeightNormalDefault =
 
   CGFloat clearButtonConstant =
       -1 * ([self beneathInputPadding] - MDCTextInputClearButtonImageBuiltInPadding +
-            MDCTextInputControllerFilledClearButtonPaddingAddition);
+            MDCTextInputFilledClearButtonPaddingAddition);
   if (!self.clearButtonBottom) {
     self.clearButtonBottom = [NSLayoutConstraint constraintWithItem:self.textInput.clearButton
                                                           attribute:NSLayoutAttributeBottom
@@ -177,14 +147,14 @@ static CGFloat _underlineHeightNormalDefault =
   [super updatePlaceholder];
 
   if (!self.placeholderTop) {
-    self.placeholderTop = [NSLayoutConstraint
-        constraintWithItem:self.textInput.placeholderLabel
-                 attribute:NSLayoutAttributeTop
-                 relatedBy:NSLayoutRelationEqual
-                    toItem:self.textInput
-                 attribute:NSLayoutAttributeTop
-                multiplier:1
-                  constant:MDCTextInputControllerFilledNormalPlaceholderPadding];
+    self.placeholderTop =
+        [NSLayoutConstraint constraintWithItem:self.textInput.placeholderLabel
+                                     attribute:NSLayoutAttributeTop
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.textInput
+                                     attribute:NSLayoutAttributeTop
+                                    multiplier:1
+                                      constant:MDCTextInputFilledNormalPlaceholderPadding];
     self.placeholderTop.priority = UILayoutPriorityDefaultHigh;
     self.placeholderTop.active = YES;
   }
@@ -239,8 +209,7 @@ static CGFloat _underlineHeightNormalDefault =
   CGFloat underlineOffset = 0;
   switch (self.textInput.textInsetsMode) {
     case MDCTextInputTextInsetsModeAlways:
-      underlineOffset +=
-          MAX(leadingOffset, trailingOffset) + MDCTextInputControllerFilledHalfPadding;
+      underlineOffset += MAX(leadingOffset, trailingOffset) + MDCTextInputFilledHalfPadding;
       break;
     case MDCTextInputTextInsetsModeIfContent: {
       // contentConditionalOffset will have the estimated text height for the largest underline
@@ -254,7 +223,7 @@ static CGFloat _underlineHeightNormalDefault =
       }
 
       if (!MDCCGFloatEqual(contentConditionalOffset, 0)) {
-        underlineOffset += contentConditionalOffset + MDCTextInputControllerFilledHalfPadding;
+        underlineOffset += contentConditionalOffset + MDCTextInputFilledHalfPadding;
       }
     } break;
     case MDCTextInputTextInsetsModeNever:
@@ -273,10 +242,9 @@ static CGFloat _underlineHeightNormalDefault =
 // The space ABOVE the underline but under the text input area.
 - (CGFloat)beneathInputPadding {
   if (self.isFloatingEnabled) {
-    return MDCTextInputControllerFilledHalfPadding +
-           MDCTextInputControllerFilledHalfPaddingAddition;
+    return MDCTextInputFilledHalfPadding + MDCTextInputFilledHalfPaddingAddition;
   } else {
-    return MDCTextInputControllerFilledNormalPlaceholderPadding;
+    return MDCTextInputFilledNormalPlaceholderPadding;
   }
 }
 

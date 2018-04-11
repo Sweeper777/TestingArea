@@ -16,10 +16,8 @@
 
 #import "MDCRectangleShapeGenerator.h"
 
-#import "MDCCornerTreatment.h"
-#import "MDCEdgeTreatment.h"
-#import "MDCPathGenerator.h"
 #import "MaterialMath.h"
+#import "MDCPathGenerator.h"
 
 static NSString *const MDCRectangleShapeGeneratorTopLeftCornerKey =
     @"MDCRectangleShapeGeneratorTopLeftCornerKey";

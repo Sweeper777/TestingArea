@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @protocol MDMTransitionContext;
 
@@ -23,12 +23,11 @@
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
                   calculateFrameOfPresentedView:(CGRect (^)(UIPresentationController *))calculateFrameOfPresentedView
-                                     sourceView:(UIView *)sourceView
-    NS_DESIGNATED_INITIALIZER;
+NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
-    NS_UNAVAILABLE;
+NS_UNAVAILABLE;
 
 @property(nonatomic, strong) UIView *sourceView;
 @property(nonatomic, strong) UIView *scrimView;

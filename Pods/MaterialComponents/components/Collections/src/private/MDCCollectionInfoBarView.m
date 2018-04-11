@@ -16,7 +16,6 @@
 
 #import "MDCCollectionInfoBarView.h"
 
-#import "MaterialPalettes.h"
 #import "MaterialShadowLayer.h"
 #import "MaterialTypography.h"
 
@@ -26,12 +25,16 @@ const CGFloat MDCCollectionInfoBarFooterHeight = 48.0f;
 
 static const CGFloat MDCCollectionInfoBarLabelHorizontalPadding = 16.0f;
 
-static inline UIColor *CollectionInfoBarBlueColor(void) {
-  return MDCPalette.bluePalette.accent200;
-}
+// Colors derived from https://material.io/guidelines/style/color.html#color-color-palette .
+static const uint32_t kCollectionInfoBarBlueColor = 0x448AFF;  // Blue A200
+static const uint32_t kCollectionInfoBarRedColor = 0xF44336;   // Red 500
 
-static inline UIColor *CollectionInfoBarRedColor(void) {
-  return MDCPalette.redPalette.tint500;
+// Creates a UIColor from a 24-bit RGB color encoded as an integer.
+static inline UIColor *ColorFromRGB(uint32_t rgbValue) {
+  return [UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255
+                         green:((CGFloat)((rgbValue & 0x00FF00) >> 8)) / 255
+                          blue:((CGFloat)((rgbValue & 0x0000FF) >> 0)) / 255
+                         alpha:1];
 }
 
 @interface ShadowedView : UIView
@@ -69,11 +72,11 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
   self.backgroundColor = [UIColor clearColor];
   self.userInteractionEnabled = NO;
   _backgroundView = [[ShadowedView alloc] initWithFrame:self.bounds];
-  _backgroundView.autoresizingMask =
-      (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+  _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
   _backgroundView.hidden = YES;
 
-  _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+  _titleLabel = [[UILabel alloc]
+      initWithFrame:CGRectInset(self.bounds, MDCCollectionInfoBarLabelHorizontalPadding, 0)];
   _titleLabel.backgroundColor = [UIColor clearColor];
   _titleLabel.textAlignment = NSTextAlignmentCenter;
   _titleLabel.font = [MDCTypography body1Font];
@@ -89,24 +92,6 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
 
 - (void)layoutSubviews {
   [super layoutSubviews];
-
-  UIEdgeInsets collectionViewSafeAreaInsets = UIEdgeInsetsZero;
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
-    if (@available(iOS 11.0, *)) {
-      if (self.superview) {
-        collectionViewSafeAreaInsets = self.superview.safeAreaInsets;
-      }
-    }
-#endif
-  CGFloat leftInset = MAX(MDCCollectionInfoBarLabelHorizontalPadding,
-                          collectionViewSafeAreaInsets.left);
-  CGFloat rightInset = MAX(MDCCollectionInfoBarLabelHorizontalPadding,
-                           collectionViewSafeAreaInsets.right);
-  CGFloat height = [_kind isEqualToString:MDCCollectionInfoBarKindHeader] ?
-      MDCCollectionInfoBarHeaderHeight : MDCCollectionInfoBarFooterHeight;
-  _titleLabel.frame =
-      CGRectMake(leftInset, 0, CGRectGetWidth(self.bounds) - (leftInset + rightInset), height);
-
   if (_shouldApplyBackgroundViewShadow) {
     [self setShouldApplyBackgroundViewShadow:_shouldApplyBackgroundViewShadow];
   }
@@ -136,9 +121,10 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
 
 - (void)setKind:(NSString *)kind {
   _kind = kind;
-  _backgroundTransformY = CGRectGetHeight(self.bounds);
   if ([kind isEqualToString:MDCCollectionInfoBarKindHeader]) {
-    _backgroundTransformY *= -1.0;
+    _backgroundTransformY = -MDCCollectionInfoBarHeaderHeight;
+  } else {
+    _backgroundTransformY = MDCCollectionInfoBarFooterHeight;
   }
   _backgroundView.transform = CGAffineTransformMakeTranslation(0, _backgroundTransformY);
 }
@@ -160,7 +146,7 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
     self.allowsTap = NO;
     self.shouldApplyBackgroundViewShadow = NO;
     self.textAlignment = NSTextAlignmentLeft;
-    self.tintColor = CollectionInfoBarBlueColor();
+    self.tintColor = ColorFromRGB(kCollectionInfoBarBlueColor);
     self.titleLabel.textColor = [UIColor whiteColor];
     self.autoDismissAfterDuration = 1.0f;
     self.backgroundView.alpha = 0.9f;
@@ -169,7 +155,7 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
     self.shouldApplyBackgroundViewShadow = YES;
     self.textAlignment = NSTextAlignmentCenter;
     self.tintColor = [UIColor whiteColor];
-    self.titleLabel.textColor = CollectionInfoBarRedColor();
+    self.titleLabel.textColor = ColorFromRGB(kCollectionInfoBarRedColor);
     self.autoDismissAfterDuration = 0.0f;
     self.backgroundView.alpha = 1.0f;
     self.isAccessibilityElement = YES;
@@ -192,9 +178,7 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
 }
 
 - (void)showAnimated:(BOOL)animated {
-  [self layoutIfNeeded];
   _backgroundView.hidden = NO;
-
   // Notify delegate.
   if ([_delegate respondsToSelector:@selector(infoBar:willShowAnimated:willAutoDismiss:)]) {
     [_delegate infoBar:self willShowAnimated:animated willAutoDismiss:[self shouldAutoDismiss]];
@@ -205,16 +189,16 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
       delay:0
       options:UIViewAnimationOptionCurveEaseOut
       animations:^{
-        self.backgroundView.transform = CGAffineTransformIdentity;
+        _backgroundView.transform = CGAffineTransformIdentity;
       }
       completion:^(__unused BOOL finished) {
-        self.userInteractionEnabled = self.allowsTap;
+        self.userInteractionEnabled = _allowsTap;
 
         // Notify delegate.
-        if ([self.delegate respondsToSelector:@selector(infoBar:didShowAnimated:willAutoDismiss:)]) {
-          [self.delegate infoBar:self
-                 didShowAnimated:animated
-                 willAutoDismiss:[self shouldAutoDismiss]];
+        if ([_delegate respondsToSelector:@selector(infoBar:didShowAnimated:willAutoDismiss:)]) {
+          [_delegate infoBar:self
+              didShowAnimated:animated
+              willAutoDismiss:[self shouldAutoDismiss]];
         }
 
         [self autoDismissIfNecessaryWithAnimation:animated];
@@ -232,18 +216,17 @@ static inline UIColor *CollectionInfoBarRedColor(void) {
       delay:0
       options:UIViewAnimationOptionCurveEaseIn
       animations:^{
-        self.backgroundView.transform =
-            CGAffineTransformMakeTranslation(0, self->_backgroundTransformY);
+        _backgroundView.transform = CGAffineTransformMakeTranslation(0, _backgroundTransformY);
       }
       completion:^(__unused BOOL finished) {
         self.userInteractionEnabled = NO;
-        self.backgroundView.hidden = YES;
+        _backgroundView.hidden = YES;
 
         // Notify delegate.
-        if ([self.delegate respondsToSelector:@selector(infoBar:didDismissAnimated:didAutoDismiss:)]) {
-          [self.delegate infoBar:self
-                didDismissAnimated:animated
-                    didAutoDismiss:[self shouldAutoDismiss]];
+        if ([_delegate respondsToSelector:@selector(infoBar:didDismissAnimated:didAutoDismiss:)]) {
+          [_delegate infoBar:self
+              didDismissAnimated:animated
+                  didAutoDismiss:[self shouldAutoDismiss]];
         }
       }];
 }

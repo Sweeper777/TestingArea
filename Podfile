@@ -15,6 +15,5 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'MaterialComponents'
-    pod 'Charts', '3.0.2'
 end
 

@@ -32,9 +32,7 @@
     NSBundle *baseBundle = [NSBundle bundleForClass:[MDCIcons class]];
     NSString *bundlePath = [baseBundle pathForResource:bundleName ofType:@"bundle"];
     bundle = [NSBundle bundleWithPath:bundlePath];
-    if (bundle) {
-      [bundleCache setObject:bundle forKey:bundleName];
-    }
+    [bundleCache setObject:bundle forKey:bundleName];
   }
   return bundle;
 }

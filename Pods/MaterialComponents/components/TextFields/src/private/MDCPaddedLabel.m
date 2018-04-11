@@ -16,22 +16,7 @@
 
 #import "MDCPaddedLabel.h"
 
-static NSString *const MDCPaddedLabelHorizontalPaddingKey = @"MDCPaddedLabelHorizontalPaddingKey";
-
 @implementation MDCPaddedLabel
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-  self = [super initWithCoder:aDecoder];
-  if (self) {
-    _horizontalPadding = (CGFloat)[aDecoder decodeDoubleForKey:MDCPaddedLabelHorizontalPaddingKey];
-  }
-  return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-  [super encodeWithCoder:aCoder];
-  [aCoder encodeDouble:(double)_horizontalPadding forKey:MDCPaddedLabelHorizontalPaddingKey];
-}
 
 #pragma mark - Setters
 

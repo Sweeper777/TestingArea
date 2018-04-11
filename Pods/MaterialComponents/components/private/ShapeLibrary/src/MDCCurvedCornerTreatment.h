@@ -14,9 +14,7 @@
  limitations under the License.
  */
 
-#import <CoreGraphics/CoreGraphics.h>
-
-#import "MaterialShapes.h"
+#import "MDCCornerTreatment.h"
 
 /**
  A curved corner treatment. Distinct from MDCRoundedCornerTreatment in that MDCurvedCornerTreatment

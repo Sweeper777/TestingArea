@@ -29,6 +29,7 @@
  Side effects: If the view controller's transitioningDelegate is nil when the controller is created,
  then the controller will also be set to the transitioningDelegate property.
  */
-@property(nonatomic, strong, readonly, nonnull) id<MDMTransitionController> mdm_transitionController;
+@property(nonatomic, strong, readonly, nonnull) id<MDMTransitionController> mdm_transitionController
+    NS_SWIFT_NAME(transitionController);
 
 @end

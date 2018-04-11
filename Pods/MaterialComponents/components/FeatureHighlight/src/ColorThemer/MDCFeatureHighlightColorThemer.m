@@ -18,21 +18,10 @@
 
 @implementation MDCFeatureHighlightColorThemer
 
-+ (void)applyColorScheme:(id<MDCColorScheme>)colorScheme
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
     toFeatureHighlightView:(MDCFeatureHighlightView *)featureHighlightView {
-  if ([colorScheme respondsToSelector:@selector(primaryLightColor)]) {
-    featureHighlightView.innerHighlightColor = colorScheme.primaryLightColor;
-  }
+  featureHighlightView.innerHighlightColor = colorScheme.primaryLightColor;
   featureHighlightView.outerHighlightColor = colorScheme.primaryColor;
-}
-
-+ (void)applySemanticColorScheme:(id<MDCColorScheming>)colorScheme
-          toFeatureHighlightViewController:
-              (MDCFeatureHighlightViewController *)featureHighlightViewController {
-  featureHighlightViewController.innerHighlightColor = colorScheme.surfaceColor;
-  featureHighlightViewController.outerHighlightColor = colorScheme.primaryColor;
-  featureHighlightViewController.titleColor = colorScheme.onPrimaryColor;
-  featureHighlightViewController.bodyColor = colorScheme.onPrimaryColor;
 }
 
 @end

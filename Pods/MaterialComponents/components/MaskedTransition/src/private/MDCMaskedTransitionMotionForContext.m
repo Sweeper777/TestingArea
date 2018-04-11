@@ -14,32 +14,28 @@
  limitations under the License.
  */
 
-#import <CoreGraphics/CoreGraphics.h>
-
 #import "MDCMaskedTransitionMotionForContext.h"
 
-MDCMaskedTransitionMotionSpec
-MDCMaskedTransitionMotionSpecForContext(UIView *containerView,
-                                        UIViewController *presentedViewController) {
-  const CGRect foreBounds = presentedViewController.view.bounds;
-  const CGRect foreFrame = presentedViewController.view.frame;
-  const CGRect containerBounds = containerView.bounds;
+MDCMaskedTransitionMotionSpec motionForContext(NSObject<MDMTransitionContext> *context) {
+  const CGRect foreBounds = context.foreViewController.view.bounds;
+  const CGRect foreFrame = context.foreViewController.view.frame;
+  const CGRect containerBounds = context.containerView.bounds;
 
-  if (CGRectEqualToRect(presentedViewController.view.frame, containerBounds)) {
-    return MDCMaskedTransitionMotionSpecs.fullscreen;
+  if (CGRectEqualToRect(context.foreViewController.view.frame, containerBounds)) {
+    return fullscreen;
 
   } else if (foreBounds.size.width == containerBounds.size.width
              && CGRectGetMaxY(foreFrame) == CGRectGetMaxY(containerBounds)) {
     if (foreFrame.size.height > 100) {
-      return MDCMaskedTransitionMotionSpecs.bottomSheet;
+      return bottomSheet;
 
     } else {
-      return MDCMaskedTransitionMotionSpecs.toolbar;
+      return toolbar;
     }
 
   } else if (foreBounds.size.width < containerBounds.size.width) {
-    return MDCMaskedTransitionMotionSpecs.bottomCard;
+    return bottomCard;
   }
 
-  return MDCMaskedTransitionMotionSpecs.fullscreen;
+  return fullscreen;
 }

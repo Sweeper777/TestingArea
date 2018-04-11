@@ -16,18 +16,13 @@
 
 #import "MDCTextInputControllerOutlinedTextArea.h"
 
-#import "MDCTextInput.h"
 #import "MDCTextInputBorderView.h"
-#import "MDCTextInputController.h"
-#import "MDCTextInputControllerBase.h"
-#import "MDCTextInputControllerFloatingPlaceholder.h"
-#import "MDCTextInputUnderlineView.h"
-#import "private/MDCTextInputControllerBase+Subclassing.h"
+#import "private/MDCTextInputControllerDefault+Subclassing.h"
 
 #import "MaterialMath.h"
 
 /**
- Note: Right now this is a subclass of MDCTextInputControllerBase since they share a vast
+ Note: Right now this is a subclass of MDCTextInputControllerDefault since they share a vast
  majority of code. If the designs diverge further, this would make a good candidate for its own
  class.
  */
@@ -64,14 +59,6 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
 
 #pragma mark - Properties Implementations
 
-- (BOOL)isFloatingEnabled {
-  return YES;
-}
-
-- (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
-  // Unused. Floating is always enabled.
-}
-
 + (UIRectCorner)roundedCornersDefault {
   return _roundedCornersDefault;
 }
@@ -80,41 +67,27 @@ static UIRectCorner _roundedCornersDefault = UIRectCornerAllCorners;
   _roundedCornersDefault = roundedCornersDefault;
 }
 
+- (BOOL)isFloatingEnabled {
+  return YES;
+}
+
+- (void)setFloatingEnabled:(__unused BOOL)floatingEnabled {
+  // Unused. Floating is always enabled.
+}
+
 #pragma mark - MDCTextInputPositioningDelegate
 
 - (void)textInputDidLayoutSubviews {
   [self updateBorder];
 }
 
-// clang-format off
-/**
- textInsets: is the source of truth for vertical layout. It's used to figure out the proper
- height and also where to place the placeholder / text field.
-
- NOTE: It's applied before the textRect is flipped for RTL. So all calculations are done here à la
- LTR.
-
- The vertical layout is, at most complex, this form:
-
- MDCTextInputTextFieldOutlinedTextAreaHalfPadding +                   // Small padding
- MDCTextInputTextFieldOutlinedTextAreaPaddingAdjustment               // Additional point (iOS specific)
- placeholderEstimatedHeight                                           // Height of placeholder
- MDCTextInputTextFieldOutlinedTextAreaHalfPadding +                   // Small padding
- MDCTextInputTextFieldOutlinedTextAreaPaddingAdjustment               // Additional point (iOS specific)
- MDCCeil(MAX(self.textInput.font.lineHeight,                          // Text field or placeholder
-             self.textInput.placeholderLabel.font.lineHeight))
- underlineOffset                                                      // Small Padding +
-                                                                      // underlineLabelsOffset From super class.
- */
-// clang-format on
 - (UIEdgeInsets)textInsets:(UIEdgeInsets)defaultInsets {
   UIEdgeInsets textInsets = [super textInsets:defaultInsets];
-  textInsets.top = MDCTextInputTextFieldOutlinedTextAreaHalfPadding +
-                   MDCTextInputTextFieldOutlinedTextAreaPaddingAdjustment +
-                   MDCRint(self.textInput.placeholderLabel.font.lineHeight *
-                           (CGFloat)self.floatingPlaceholderScale.floatValue) +
-                   MDCTextInputTextFieldOutlinedTextAreaHalfPadding +
-                   MDCTextInputTextFieldOutlinedTextAreaPaddingAdjustment;
+  textInsets.top =
+      MDCTextInputTextFieldOutlinedTextAreaHalfPadding + MDCTextInputTextFieldOutlinedTextAreaPaddingAdjustment +
+      MDCRint(self.textInput.placeholderLabel.font.lineHeight *
+              (CGFloat)self.floatingPlaceholderScale.floatValue) +
+      MDCTextInputTextFieldOutlinedTextAreaHalfPadding + MDCTextInputTextFieldOutlinedTextAreaPaddingAdjustment;
 
   // .bottom = underlineOffset + the half padding above the line but below the text field and any
   // space needed for the labels and / or line.

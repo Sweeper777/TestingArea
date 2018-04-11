@@ -29,7 +29,7 @@
  @param colorScheme The color scheme to apply to MDCPageControl.
  @param pageControl A MDCPageControl instance to apply a color scheme.
  */
-+ (void)applyColorScheme:(nonnull id<MDCColorScheme>)colorScheme
-           toPageControl:(nonnull MDCPageControl *)pageControl;
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
+           toPageControl:(MDCPageControl *)pageControl;
 
 @end

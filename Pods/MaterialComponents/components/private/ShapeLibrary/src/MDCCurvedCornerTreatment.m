@@ -16,6 +16,8 @@
 
 #import "MDCCurvedCornerTreatment.h"
 
+#import "MDCPathGenerator.h"
+
 static NSString *const MDCCurvedCornerTreatmentSizeKey = @"MDCCurvedCornerTreatmentSizeKey";
 
 @implementation MDCCurvedCornerTreatment

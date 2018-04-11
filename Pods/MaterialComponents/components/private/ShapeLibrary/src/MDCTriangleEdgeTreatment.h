@@ -14,9 +14,7 @@
  limitations under the License.
  */
 
-#import <CoreGraphics/CoreGraphics.h>
-
-#import "MaterialShapes.h"
+#import "MDCEdgeTreatment.h"
 
 typedef enum : NSUInteger {
   MDCTriangleEdgeStyleHandle,

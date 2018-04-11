@@ -182,22 +182,11 @@ static const NSInteger kSupplementaryViewZIndex = 99;
       attr.size = CGSizeMake(CGRectGetWidth(currentBounds), MDCCollectionInfoBarHeaderHeight);
       // Allow header to move upwards with scroll, but prevent from moving downwards with scroll.
       CGFloat insetTop = self.collectionView.contentInset.top;
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
-      if (@available(iOS 11.0, *)) {
-        insetTop = self.collectionView.adjustedContentInset.top;
-      }
-#endif
       CGFloat boundsY = currentBounds.origin.y;
       CGFloat maxOffsetY = MAX(boundsY + insetTop, 0);
       offsetY = boundsY + (attr.size.height / 2) + insetTop - maxOffsetY;
     } else if ([kind isEqualToString:MDCCollectionInfoBarKindFooter]) {
-      CGFloat height = MDCCollectionInfoBarFooterHeight;
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
-      if (@available(iOS 11.0, *)) {
-        height += self.collectionView.safeAreaInsets.bottom;
-      }
-#endif
-      attr.size = CGSizeMake(CGRectGetWidth(currentBounds), height);
+      attr.size = CGSizeMake(CGRectGetWidth(currentBounds), MDCCollectionInfoBarFooterHeight);
       offsetY = currentBounds.origin.y + currentBounds.size.height - (attr.size.height / 2);
     }
     attr.center = CGPointMake(CGRectGetMidX(currentBounds), offsetY);
@@ -405,7 +394,7 @@ static const NSInteger kSupplementaryViewZIndex = 99;
   // view rows.
   CGRect insetFrame = attr.frame;
   if (!CGRectIsEmpty(insetFrame)) {
-    UIEdgeInsets insets;
+    UIEdgeInsets insets = self.sectionInset;
 
     // Retrieve the insets from the Flow Layout delegate to maintain consistency with the CVC
     if ([self.collectionView.delegate
@@ -467,7 +456,7 @@ static const NSInteger kSupplementaryViewZIndex = 99;
   BOOL isBottom = NO;
   BOOL hasSectionHeader = [_headerSections containsIndex:indexPath.section];
   BOOL hasSectionFooter = [_footerSections containsIndex:indexPath.section];
-  BOOL hasSectionItems = [self numberOfItemsInSection:indexPath.section] > 0;
+  BOOL hasSectionItems = YES;
 
   BOOL hidesHeaderBackground = NO;
   if ([self.styler.delegate

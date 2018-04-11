@@ -15,8 +15,7 @@
  */
 
 #import "MDCButtonTitleColorAccessibilityMutator.h"
-
-#import <MDFTextAccessibility/MDFTextAccessibility.h>
+#import "MDFTextAccessibility.h"
 #import "MaterialButtons.h"
 #import "MaterialTypography.h"
 

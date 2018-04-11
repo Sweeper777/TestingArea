@@ -16,8 +16,8 @@
 
 #import "MDCCollectionViewStyler.h"
 
-#import "MDCCollectionViewStylingDelegate.h"
 #import "MaterialCollectionLayoutAttributes.h"
+#import "MaterialCollections.h"
 #import "MaterialPalettes.h"
 
 #include <tgmath.h>
@@ -104,7 +104,6 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
 @synthesize gridColumnCount = _gridColumnCount;
 @synthesize gridPadding = _gridPadding;
 @synthesize cellStyle = _cellStyle;
-@synthesize cardBorderRadius = _cardBorderRadius;
 @synthesize separatorColor = _separatorColor;
 @synthesize separatorInset = _separatorInset;
 @synthesize separatorLineHeight = _separatorLineHeight;
@@ -127,7 +126,6 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
     // Background color is 0xEEEEEE
     _collectionView.backgroundColor = MDCPalette.greyPalette.tint200;
     _inlaidIndexPathSet = [NSMutableSet set];
-    _cardBorderRadius = kCollectionViewCellDefaultBorderRadius;
 
     // Cell separator defaults.
     _separatorColor = MDCPalette.greyPalette.tint300;
@@ -363,7 +361,7 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
     void (^completionBlock)(BOOL finished) = ^(__unused BOOL finished) {
       if ([self.delegate
               respondsToSelector:@selector(collectionView:didApplyInlayToItemAtIndexPaths:)]) {
-        [self.delegate collectionView:self.collectionView
+        [self.delegate collectionView:_collectionView
             didApplyInlayToItemAtIndexPaths:@[ indexPath ]];
       }
     };
@@ -380,7 +378,7 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
   void (^completionBlock)(BOOL finished) = ^(__unused BOOL finished) {
     if ([self.delegate
             respondsToSelector:@selector(collectionView:didRemoveInlayFromItemAtIndexPaths:)]) {
-      [self.delegate collectionView:self.collectionView
+      [self.delegate collectionView:_collectionView
           didRemoveInlayFromItemAtIndexPaths:@[ indexPath ]];
     }
   };
@@ -402,8 +400,8 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
     void (^completionBlock)(BOOL finished) = ^(__unused BOOL finished) {
       if ([self.delegate
               respondsToSelector:@selector(collectionView:didApplyInlayToItemAtIndexPaths:)]) {
-        [self.delegate collectionView:self.collectionView
-            didApplyInlayToItemAtIndexPaths:[self.inlaidIndexPathSet allObjects]];
+        [self.delegate collectionView:_collectionView
+            didApplyInlayToItemAtIndexPaths:[_inlaidIndexPathSet allObjects]];
       }
     };
 
@@ -419,7 +417,7 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
   void (^completionBlock)(BOOL finished) = ^(__unused BOOL finished) {
     if ([self.delegate
             respondsToSelector:@selector(collectionView:didRemoveInlayFromItemAtIndexPaths:)]) {
-      [self.delegate collectionView:self.collectionView didRemoveInlayFromItemAtIndexPaths:indexPaths];
+      [self.delegate collectionView:_collectionView didRemoveInlayFromItemAtIndexPaths:indexPaths];
     }
   };
 
@@ -442,7 +440,7 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
     // Invalidate current layout while allowing animation to new layout.
     [UIView animateWithDuration:0
         animations:^{
-          [self.collectionView.collectionViewLayout invalidateLayout];
+          [_collectionView.collectionViewLayout invalidateLayout];
         }
         completion:^(BOOL finished) {
           if (completion) {
@@ -503,7 +501,7 @@ NS_INLINE CGRect RectShift(CGRect rect, CGFloat dx, CGFloat dy) {
     // If not card or grouped style, revert @c isBottom to allow drawing separator at bottom.
     isBottom = NO;
   }
-  CGFloat borderRadius = (isCardStyle) ? _cardBorderRadius : 0.0f;
+  CGFloat borderRadius = (isCardStyle) ? kCollectionViewCellDefaultBorderRadius : 0.0f;
 
   // Allowance for grid decoration view.
   if (isGridLayout) {

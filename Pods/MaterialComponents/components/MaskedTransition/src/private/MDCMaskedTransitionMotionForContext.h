@@ -17,9 +17,6 @@
 #import <Foundation/Foundation.h>
 #import <MotionTransitioning/MotionTransitioning.h>
 
-#import "MDCMaskedTransitionMotionSpecs.h"
+#import "MDCMaskedTransitionMotionSpec.h"
 
-FOUNDATION_EXPORT
-MDCMaskedTransitionMotionSpec
-    MDCMaskedTransitionMotionSpecForContext(UIView *containerView,
-                                            UIViewController *presentedViewController);
+FOUNDATION_EXPORT MDCMaskedTransitionMotionSpec motionForContext(NSObject<MDMTransitionContext> *context);

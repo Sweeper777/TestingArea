@@ -16,25 +16,10 @@
 
 #import "MDMAnimatableKeyPaths.h"
 
-MDMAnimatableKeyPath MDMKeyPathAnchorPoint = @"anchorPoint";
-MDMAnimatableKeyPath MDMKeyPathBackgroundColor = @"backgroundColor";
-MDMAnimatableKeyPath MDMKeyPathBounds = @"bounds";
-MDMAnimatableKeyPath MDMKeyPathBorderWidth = @"borderWidth";
-MDMAnimatableKeyPath MDMKeyPathBorderColor = @"borderColor";
 MDMAnimatableKeyPath MDMKeyPathCornerRadius = @"cornerRadius";
 MDMAnimatableKeyPath MDMKeyPathHeight = @"bounds.size.height";
 MDMAnimatableKeyPath MDMKeyPathOpacity = @"opacity";
-MDMAnimatableKeyPath MDMKeyPathPosition = @"position";
-MDMAnimatableKeyPath MDMKeyPathRotation = @"transform.rotation.z";
 MDMAnimatableKeyPath MDMKeyPathScale = @"transform.scale";
-MDMAnimatableKeyPath MDMKeyPathShadowColor = @"shadowColor";
-MDMAnimatableKeyPath MDMKeyPathShadowOffset = @"shadowOffset";
-MDMAnimatableKeyPath MDMKeyPathShadowOpacity = @"shadowOpacity";
-MDMAnimatableKeyPath MDMKeyPathShadowRadius = @"shadowRadius";
-MDMAnimatableKeyPath MDMKeyPathStrokeStart = @"strokeStart";
-MDMAnimatableKeyPath MDMKeyPathStrokeEnd = @"strokeEnd";
-MDMAnimatableKeyPath MDMKeyPathTransform = @"transform";
 MDMAnimatableKeyPath MDMKeyPathWidth = @"bounds.size.width";
 MDMAnimatableKeyPath MDMKeyPathX = @"position.x";
 MDMAnimatableKeyPath MDMKeyPathY = @"position.y";
-MDMAnimatableKeyPath MDMKeyPathZ = @"zPosition";

@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "MDCTextInputControllerBase.h"
+#import "MDCTextInputController.h"
 
 /**
  Material Design compliant text field from 2016. The logic for 'automagic' error states changes:
@@ -25,40 +25,54 @@
  there is content or the field is being edited. The character count is below text. The Material
  Design guidelines call this 'Floating inline labels.'
  https://material.io/guidelines/components/text-fields.html#text-fields-labels
-
- NOTE: This design doesn't exactly match the 2015 text fields that had slightly different colors.
-
- Defaults:
-
- Active Color - Blue A700
-
- Border Stroke Color - Clear
- Border Fill Color - Clear
-
- Disabled Color = [UIColor lightGrayColor]
-
- Error Color - Red A400
-
- Floating Placeholder Color Active - Blue A700
- Floating Placeholder Color Normal - Black, 54% opacity
-
- Inline Placeholder Color - Black, 54% opacity
-
- Leading Underline Label Text Color - Black, 54% opacity
-
- Normal Color - Black, 54% opacity
-
- Rounded Corners - None
-
- Trailing Underline Label Text Color - Black, 54% opacity
-
- Underline Color Normal - Black, 54% opacity
-
- Underline Height Active - 2p
- Underline Height Normal - 1p
-
- Underline View Mode - While editing
 */
-@interface MDCTextInputControllerLegacyDefault : MDCTextInputControllerBase
+@interface MDCTextInputControllerLegacyDefault : NSObject <MDCTextInputController>
+
+/**
+ The color applied to the placeholder when floating. However, when in error state, it will be
+ colored with the error color and when in active state, it will be colored with the active color.
+
+ Only relevent when floatingEnabled = true.
+
+ Default is floatingPlaceholderNormalColorDefault.
+ */
+@property(nonatomic, null_resettable, strong) UIColor *floatingPlaceholderNormalColor;
+
+/**
+ Default value for floatingPlaceholderNormalColor.
+
+ Default is black with Material Design hint text opacity (textInput's tint).
+ */
+@property(class, nonatomic, null_resettable, strong) UIColor *floatingPlaceholderNormalColorDefault;
+
+/**
+ The scale of the the floating placeholder label in comparison to the inline placeholder specified
+ as a value from 0.0 to 1.0. Only relevent when floatingEnabled = true.
+
+ If null, the floatingPlaceholderScale is @(floatingPlaceholderScaleDefault).
+ */
+@property(nonatomic, null_resettable, strong) NSNumber *floatingPlaceholderScale;
+
+/**
+ Default value for the floating placeholder scale.
+
+ Default is 0.75.
+ */
+@property(class, nonatomic, assign) CGFloat floatingPlaceholderScaleDefault;
+
+/**
+ If enabled, the inline placeholder label will float above the input when there is inputted text or
+ the field is being edited.
+
+ Default is floatingEnabledDefault.
+ */
+@property(nonatomic, assign, getter=isFloatingEnabled) BOOL floatingEnabled;
+
+/**
+ Default value for floatingEnabled.
+
+ Default is YES.
+ */
+@property(class, nonatomic, assign, getter=isFloatingEnabledDefault) BOOL floatingEnabledDefault;
 
 @end

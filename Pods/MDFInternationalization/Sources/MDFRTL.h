@@ -23,7 +23,7 @@
  @param layoutDirection The layout direction to consider when computing the autoresizing mask.
  @return The leading margin part of an autoresizing mask.
  */
-FOUNDATION_EXPORT UIViewAutoresizing MDFLeadingMarginAutoresizingMaskForLayoutDirection(
+UIViewAutoresizing MDFLeadingMarginAutoresizingMaskForLayoutDirection(
     UIUserInterfaceLayoutDirection layoutDirection);
 
 /**
@@ -33,7 +33,7 @@ FOUNDATION_EXPORT UIViewAutoresizing MDFLeadingMarginAutoresizingMaskForLayoutDi
  @param layoutDirection The layout direction to consider to compute the autoresizing mask.
  @return The trailing margin part of an autoresizing mask.
  */
-FOUNDATION_EXPORT UIViewAutoresizing MDFTrailingMarginAutoresizingMaskForLayoutDirection(
+UIViewAutoresizing MDFTrailingMarginAutoresizingMaskForLayoutDirection(
     UIUserInterfaceLayoutDirection layoutDirection);
 
 /**
@@ -75,7 +75,7 @@ FOUNDATION_EXPORT UIViewAutoresizing MDFTrailingMarginAutoresizingMaskForLayoutD
  @param containerWidth The superview's bounds's width.
  @return The frame mirrored around the vertical axis.
  */
-FOUNDATION_EXPORT CGRect MDFRectFlippedHorizontally(CGRect frame, CGFloat containerWidth);
+CGRect MDFRectFlippedHorizontally(CGRect frame, CGFloat containerWidth);
 
 
 /**
@@ -84,7 +84,7 @@ FOUNDATION_EXPORT CGRect MDFRectFlippedHorizontally(CGRect frame, CGFloat contai
  @param insets The insets we are intending to flip horizontally.
  @return Insets with the right and left values exchanged.
  */
-FOUNDATION_EXPORT UIEdgeInsets MDFInsetsFlippedHorizontally(UIEdgeInsets insets);
+UIEdgeInsets MDFInsetsFlippedHorizontally(UIEdgeInsets insets);
 
 /**
  Creates a UIEdgeInsets instance from the parameters while obeying layoutDirection.
@@ -98,8 +98,8 @@ FOUNDATION_EXPORT UIEdgeInsets MDFInsetsFlippedHorizontally(UIEdgeInsets insets)
  @param trailing The trailing inset.
  @return Insets in terms of left/right, already internationalized based on the layout direction.
  */
-FOUNDATION_EXPORT UIEdgeInsets MDFInsetsMakeWithLayoutDirection(CGFloat top,
-                                                                CGFloat leading,
-                                                                CGFloat bottom,
-                                                                CGFloat trailing,
-                                                                UIUserInterfaceLayoutDirection layoutDirection);
+UIEdgeInsets MDFInsetsMakeWithLayoutDirection(CGFloat top,
+                                              CGFloat leading,
+                                              CGFloat bottom,
+                                              CGFloat trailing,
+                                              UIUserInterfaceLayoutDirection layoutDirection);

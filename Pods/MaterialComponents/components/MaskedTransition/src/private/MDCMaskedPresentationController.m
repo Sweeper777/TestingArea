@@ -14,9 +14,6 @@
  limitations under the License.
  */
 
-#import <CoreGraphics/CoreGraphics.h>
-#import <QuartzCore/QuartzCore.h>
-
 #import "MDCMaskedPresentationController.h"
 
 #import <MotionTransitioning/MotionTransitioning.h>
@@ -24,25 +21,20 @@
 
 #import "MDCMaskedTransitionMotionForContext.h"
 
+@interface MDCMaskedPresentationController () <MDMTransition>
+@end
+
 @implementation MDCMaskedPresentationController {
   CGRect (^_calculateFrameOfPresentedView)(UIPresentationController *);
-  CGFloat _initialSourceViewAlpha;
 }
 
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
-                  calculateFrameOfPresentedView:(CGRect (^)(UIPresentationController *))calculateFrameOfPresentedView
-                                     sourceView:(UIView *)sourceView {
+                  calculateFrameOfPresentedView:(CGRect (^)(UIPresentationController *))calculateFrameOfPresentedView {
   self = [super initWithPresentedViewController:presentedViewController
                        presentingViewController:presentingViewController];
   if (self) {
-    _scrimView = [[UIView alloc] init];
-    _scrimView.autoresizingMask = (UIViewAutoresizingFlexibleWidth
-                                   | UIViewAutoresizingFlexibleHeight);
-    _scrimView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3f];
-
     _calculateFrameOfPresentedView = [calculateFrameOfPresentedView copy];
-    _sourceView = sourceView;
   }
   return self;
 }
@@ -67,45 +59,15 @@
   return definitelyFullscreen;
 }
 
-- (void)presentationTransitionWillBegin {
-  self.scrimView.frame = self.containerView.bounds;
-  [self.containerView addSubview:self.scrimView];
-
-  _initialSourceViewAlpha = self.sourceView.alpha;
-
-  MDCMaskedTransitionMotionSpec motionSpecification =
-      MDCMaskedTransitionMotionSpecForContext(self.containerView, self.presentedViewController);
-
-  MDCMaskedTransitionMotionTiming motionTiming = motionSpecification.expansion;
-
-  MDMMotionAnimator *animator = [[MDMMotionAnimator alloc] init];
-  [animator animateWithTiming:motionTiming.scrimFade
-                      toLayer:self.scrimView.layer
-                   withValues:@[ @0, @1 ]
-                      keyPath:MDMKeyPathOpacity];
-}
-
 - (void)dismissalTransitionWillBegin {
-  MDCMaskedTransitionMotionSpec motionSpecification =
-      MDCMaskedTransitionMotionSpecForContext(self.containerView, self.presentedViewController);
-  if (motionSpecification.shouldSlideWhenCollapsed) {
-    // Immediately reveal the source view because our presented view controller isn't collapsing
-    // back to it.
-    self.sourceView.alpha = _initialSourceViewAlpha;
-
+  if (!self.presentedViewController.mdm_transitionController.activeTransition) {
     [self.presentedViewController.transitionCoordinator
-        animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-          self.scrimView.alpha = 0;
-        } completion:nil];
+        animateAlongsideTransition:
+            ^(__unused id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+              self.scrimView.alpha = 0;
+            }           completion:nil];
 
-  } else {
-    MDCMaskedTransitionMotionTiming motionTiming = motionSpecification.collapse;
-
-    MDMMotionAnimator *animator = [[MDMMotionAnimator alloc] init];
-    [animator animateWithTiming:motionTiming.scrimFade
-                        toLayer:self.scrimView.layer
-                     withValues:@[ @1, @0 ]
-                        keyPath:MDMKeyPathOpacity];
+    self.sourceView.alpha = 1;
   }
 }
 
@@ -114,13 +76,35 @@
     [self.scrimView removeFromSuperview];
     self.scrimView = nil;
 
-    self.sourceView.alpha = _initialSourceViewAlpha;
+    self.sourceView.alpha = 1;
     self.sourceView = nil;
 
   } else {
     self.scrimView.alpha = 1;
     self.sourceView.alpha = 0;
   }
+}
+
+- (void)startWithContext:(NSObject<MDMTransitionContext> *)context {
+  MDCMaskedTransitionMotionSpec spec = motionForContext(context);
+
+  MDMMotionAnimator *animator = [[MDMMotionAnimator alloc] init];
+  animator.shouldReverseValues = context.direction == MDMTransitionDirectionBackward;
+
+  MDCMaskedTransitionMotionTiming motion = (context.direction == MDMTransitionDirectionForward) ? spec.expansion : spec.collapse;
+
+  if (!self.scrimView) {
+    self.scrimView = [[UIView alloc] initWithFrame:context.containerView.bounds];
+    self.scrimView.autoresizingMask = (UIViewAutoresizingFlexibleWidth
+                                       | UIViewAutoresizingFlexibleHeight);
+    self.scrimView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.3f];
+    [context.containerView addSubview:self.scrimView];
+  }
+
+  [animator animateWithTiming:motion.scrimFade
+                      toLayer:self.scrimView.layer
+                   withValues:@[ @0, @1 ]
+                      keyPath:@"opacity"];
 }
 
 @end

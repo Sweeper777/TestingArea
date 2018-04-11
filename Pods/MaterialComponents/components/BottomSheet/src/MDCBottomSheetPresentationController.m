@@ -14,9 +14,7 @@
  limitations under the License.
  */
 
-#import "MDCBottomSheetPresentationController.h"
-
-#import "MDCBottomSheetController.h"
+#import "MaterialBottomSheet.h"
 
 #import "MaterialMath.h"
 #import "private/MDCSheetContainerView.h"
@@ -87,16 +85,14 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
   _dimmingView.autoresizingMask =
       UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-  UIScrollView *scrollView = self.trackingScrollView;
-  if (scrollView == nil) {
-    scrollView = MDCBottomSheetGetPrimaryScrollView(self.presentedViewController);
-  }
+  UIScrollView *scrollView = MDCBottomSheetGetPrimaryScrollView(self.presentedViewController);
   CGRect sheetFrame = [self frameOfPresentedViewInContainerView];
   _sheetView = [[MDCSheetContainerView alloc] initWithFrame:sheetFrame
                                                 contentView:self.presentedViewController.view
                                                  scrollView:scrollView];
   _sheetView.delegate = self;
-  _sheetView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+  _sheetView.autoresizingMask =
+      UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
   [containerView addSubview:_dimmingView];
   [containerView addSubview:_sheetView];
@@ -118,7 +114,7 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
   _dimmingView.alpha = 0.0;
   [transitionCoordinator animateAlongsideTransition:
       ^(__unused id<UIViewControllerTransitionCoordinatorContext> context) {
-        self->_dimmingView.alpha = 1.0;
+        _dimmingView.alpha = 1.0;
       }                                  completion:nil];
 }
 
@@ -134,7 +130,7 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
 
   [transitionCoordinator animateAlongsideTransition:
       ^(__unused id<UIViewControllerTransitionCoordinatorContext> context) {
-        self->_dimmingView.alpha = 0.0;
+        _dimmingView.alpha = 0.0;
       }                                  completion:nil];
 }
 
@@ -144,21 +140,14 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
   }
 }
 
-- (void)preferredContentSizeDidChangeForChildContentContainer:(id<UIContentContainer>)container {
-  [super preferredContentSizeDidChangeForChildContentContainer:container];
-  _sheetView.frame = [self frameOfPresentedViewInContainerView];
-  [_sheetView layoutIfNeeded];
-  [self updatePreferredSheetHeight];
-}
-
 - (void)viewWillTransitionToSize:(CGSize)size
        withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator>)coordinator {
   [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 
   [coordinator animateAlongsideTransition:
       ^(__unused id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
-        self->_sheetView.frame = [self frameOfPresentedViewInContainerView];
-        [self->_sheetView layoutIfNeeded];
+        _sheetView.frame = [self frameOfPresentedViewInContainerView];
+        [_sheetView layoutIfNeeded];
         [self updatePreferredSheetHeight];
       }                        completion:nil];
 }

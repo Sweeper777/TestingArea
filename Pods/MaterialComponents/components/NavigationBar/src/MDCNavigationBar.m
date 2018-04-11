@@ -16,16 +16,14 @@
 
 #import "MDCNavigationBar.h"
 
-#import <MDFInternationalization/MDFInternationalization.h>
-#import <objc/runtime.h>
-
-#import <MDFTextAccessibility/MDFTextAccessibility.h>
+#import "MDFTextAccessibility.h"
 #import "MaterialButtonBar.h"
 #import "MaterialMath.h"
+#import "MaterialRTL.h"
 #import "MaterialTypography.h"
 
+#import <objc/runtime.h>
 
-static const NSUInteger kTitleFontSize = 20;
 static const CGFloat kNavigationBarDefaultHeight = 56;
 static const CGFloat kNavigationBarPadDefaultHeight = 64;
 static const UIEdgeInsets kTextInsets = {16, 16, 16, 16};
@@ -120,7 +118,6 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
 
 @interface MDCNavigationBar (PrivateAPIs)
 
-/// titleLabel is hidden if there is a titleView. When not hidden, displays self.title.
 - (UILabel *)titleLabel;
 - (MDCButtonBar *)leadingButtonBar;
 - (MDCButtonBar *)trailingButtonBar;
@@ -151,10 +148,9 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
 
 - (void)commonMDCNavigationBarInit {
   _observedNavigationItemLock = [[NSObject alloc] init];
-  _titleFont = [MDCTypography titleFont];
 
   _titleLabel = [[UILabel alloc] init];
-  _titleLabel.font = _titleFont;
+  _titleLabel.font = [MDCTypography titleFont];
   _titleLabel.accessibilityTraits |= UIAccessibilityTraitHeader;
   _titleLabel.textAlignment = NSTextAlignmentCenter;
   _leadingButtonBar = [[MDCButtonBar alloc] init];
@@ -172,23 +168,20 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   if (self) {
     [self commonMDCNavigationBarInit];
     if ([aDecoder containsValueForKey:MDCNavigationBarTitleKey]) {
-      self.title = [aDecoder decodeObjectOfClass:[NSString class] forKey:MDCNavigationBarTitleKey];
+      self.title = [aDecoder decodeObjectForKey:MDCNavigationBarTitleKey];
     }
 
     if ([aDecoder containsValueForKey:MDCNavigationBarTitleViewKey]) {
-      self.titleView =  [aDecoder decodeObjectOfClass:[UIView class]
-                                               forKey:MDCNavigationBarTitleViewKey];
+      self.titleView = [aDecoder decodeObjectForKey:MDCNavigationBarTitleViewKey];
     }
 
     if ([aDecoder containsValueForKey:MDCNavigationBarTitleTextAttributesKey]) {
       self.titleTextAttributes =
-          [aDecoder decodeObjectOfClass:[NSDictionary class]
-                                 forKey:MDCNavigationBarTitleTextAttributesKey];
+          [aDecoder decodeObjectForKey:MDCNavigationBarTitleTextAttributesKey];
     }
 
     if ([aDecoder containsValueForKey:MDCNavigationBarBackItemKey]) {
-      self.backItem = [aDecoder decodeObjectOfClass:[UIBarButtonItem class]
-                                             forKey:MDCNavigationBarBackItemKey];
+      self.backItem = [aDecoder decodeObjectForKey:MDCNavigationBarBackItemKey];
     }
 
     if ([aDecoder containsValueForKey:MDCNavigationBarHidesBackButtonKey]) {
@@ -196,15 +189,12 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
     }
 
     if ([aDecoder containsValueForKey:MDCNavigationBarLeadingBarItemsKey]) {
-      self.leadingBarButtonItems =
-          [aDecoder decodeObjectOfClass:[NSArray class]
-                                 forKey:MDCNavigationBarLeadingBarItemsKey];
+      self.leadingBarButtonItems = [aDecoder decodeObjectForKey:MDCNavigationBarLeadingBarItemsKey];
     }
 
     if ([aDecoder containsValueForKey:MDCNavigationBarTrailingBarItemsKey]) {
       self.trailingBarButtonItems =
-          [aDecoder decodeObjectOfClass:[NSArray class]
-                                 forKey:MDCNavigationBarTrailingBarItemsKey];
+          [aDecoder decodeObjectForKey:MDCNavigationBarTrailingBarItemsKey];
     }
 
     if ([aDecoder containsValueForKey:MDCNavigationBarLeadingButtonSupplementsBackButtonKey]) {
@@ -223,8 +213,6 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   self = [super initWithFrame:frame];
   if (self) {
     [self commonMDCNavigationBarInit];
-    _leadingButtonBar.backgroundColor = nil;
-    _trailingButtonBar.backgroundColor = nil;
   }
   return self;
 }
@@ -263,23 +251,6 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   [aCoder encodeInteger:self.titleAlignment forKey:MDCNavigationBarTitleAlignmentKey];
 }
 
-- (void)setTitleFont:(UIFont *)titleFont {
-  // Using "fontWithSize:" did not work for system font medium, instead it returned a regular font.
-  _titleFont = [UIFont fontWithName:titleFont.fontName size:kTitleFontSize];
-  if (!_titleFont) {
-    _titleFont = [MDCTypography titleFont];
-  }
-  _titleLabel.font = _titleFont;
-}
-
-- (void)setTitleTextColor:(UIColor *)titleTextColor {
-  _titleLabel.textColor = titleTextColor;
-}
-
-- (UIColor *)titleTextColor {
-  return _titleLabel.textColor;
-}
-
 #pragma mark Accessibility
 
 - (NSArray<__kindof UIView *> *)accessibilityElements {
@@ -313,11 +284,11 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
 #if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
   if (@available(iOS 11.0, *)) {
     RTLFriendlySafeAreaInsets =
-        MDFInsetsMakeWithLayoutDirection(self.safeAreaInsets.top,
+        MDCInsetsMakeWithLayoutDirection(self.safeAreaInsets.top,
                                          self.safeAreaInsets.left,
                                          self.safeAreaInsets.bottom,
                                          self.safeAreaInsets.right,
-                                         self.mdf_effectiveUserInterfaceLayoutDirection);
+                                         self.mdc_effectiveUserInterfaceLayoutDirection);
   }
 #endif
 
@@ -326,6 +297,9 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
                                             CGRectGetMinY(self.bounds),
                                             leadingButtonBarSize.width,
                                             leadingButtonBarSize.height);
+  _leadingButtonBar.frame = MDCRectFlippedForRTL(leadingButtonBarFrame, CGRectGetWidth(self.bounds),
+                                                 self.mdc_effectiveUserInterfaceLayoutDirection);
+
   CGSize trailingButtonBarSize = [_trailingButtonBar sizeThatFits:self.bounds.size];
   CGFloat xOrigin =
       CGRectGetWidth(self.bounds) - RTLFriendlySafeAreaInsets.right - trailingButtonBarSize.width;
@@ -333,18 +307,12 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
                                              CGRectGetMinY(self.bounds),
                                              trailingButtonBarSize.width,
                                              trailingButtonBarSize.height);
-  if (self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    leadingButtonBarFrame = MDFRectFlippedHorizontally(leadingButtonBarFrame,
-                                                       CGRectGetWidth(self.bounds));
-    trailingButtonBarFrame = MDFRectFlippedHorizontally(trailingButtonBarFrame,
-                                                        CGRectGetWidth(self.bounds));
-  }
-  _leadingButtonBar.frame = leadingButtonBarFrame;
-  _trailingButtonBar.frame = trailingButtonBarFrame;
+  _trailingButtonBar.frame = MDCRectFlippedForRTL(trailingButtonBarFrame,
+                                                  CGRectGetWidth(self.bounds),
+                                                  self.mdc_effectiveUserInterfaceLayoutDirection);
 
   UIEdgeInsets textInsets = [self usePadInsets] ? kTextPadInsets : kTextInsets;
 
-  // textFrame is used to determine layout of both TitleLabel and TitleView
   CGRect textFrame = UIEdgeInsetsInsetRect(self.bounds, textInsets);
   textFrame.origin.x += _leadingButtonBar.frame.size.width;
   textFrame.size.width -= _leadingButtonBar.frame.size.width + _trailingButtonBar.frame.size.width;
@@ -355,7 +323,6 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   }
 #endif
 
-  // Layout TitleLabel
   NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
   paraStyle.lineBreakMode = _titleLabel.lineBreakMode;
 
@@ -370,20 +337,15 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   titleSize.width = MDCCeil(titleSize.width);
   titleSize.height = MDCCeil(titleSize.height);
   CGRect titleFrame = CGRectMake(textFrame.origin.x, 0, titleSize.width, titleSize.height);
-  if (self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    titleFrame = MDFRectFlippedHorizontally(titleFrame, CGRectGetWidth(self.bounds));
-  }
+  titleFrame = MDCRectFlippedForRTL(titleFrame, CGRectGetWidth(self.bounds),
+                                    self.mdc_effectiveUserInterfaceLayoutDirection);
   UIControlContentVerticalAlignment titleVerticalAlignment = UIControlContentVerticalAlignmentTop;
   CGRect alignedFrame = [self mdc_frameAlignedVertically:titleFrame
                                             withinBounds:textFrame
                                                alignment:titleVerticalAlignment];
   alignedFrame = [self mdc_frameAlignedHorizontally:alignedFrame alignment:self.titleAlignment];
-  _titleLabel.frame = MDCRectAlignToScale(alignedFrame, self.window.screen.scale);
 
-  // Layout TitleView
-  if (self.mdf_effectiveUserInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionRightToLeft) {
-    textFrame = MDFRectFlippedHorizontally(textFrame, CGRectGetWidth(self.bounds));
-  }
+  _titleLabel.frame = MDCRectAlignToScale(alignedFrame, self.window.screen.scale);
   self.titleView.frame = textFrame;
 
   // Button and title label alignment
@@ -487,7 +449,7 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   if (context == kKVOContextMDCNavigationBar) {
     void (^mainThreadWork)(void) = ^{
       @synchronized(self->_observedNavigationItemLock) {
-        if (object != self->_observedNavigationItem) {
+        if (object != _observedNavigationItem) {
           return;
         }
 
@@ -544,7 +506,7 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   switch (alignment) {
     // Center align title
     case MDCNavigationBarTitleAlignmentCenter: {
-      BOOL isRTL = [self mdf_effectiveUserInterfaceLayoutDirection] ==
+      BOOL isRTL = [self mdc_effectiveUserInterfaceLayoutDirection] ==
                    UIUserInterfaceLayoutDirectionRightToLeft;
 
       MDCButtonBar *leftButtonBar = self.leadingButtonBar;
@@ -640,26 +602,20 @@ static NSString *const MDCNavigationBarTitleAlignmentKey = @"MDCNavigationBarTit
   if ([_observedNavigationItem.titleView isKindOfClass:[MDCNavigationBarSandbagView class]]) {
     return;
   }
+  [self.titleView removeFromSuperview];
+  _titleView = titleView;
+  [self addSubview:_titleView];
 
-  // Swap in the sandbag (so that UINavigationController won't steal our view). It's important that
-  // we do this before we add titleView as a subview, because starting from iOS 11 the navigation
-  // item will call |removeFromSuperview| on the old titleView when we replace it.
+  _titleLabel.hidden = _titleView != nil;
+
+  [self setNeedsLayout];
+
+  // Swap in the sandbag (so that UINavigationController won't steal our view)
   if (titleView) {
     _observedNavigationItem.titleView = [[MDCNavigationBarSandbagView alloc] init];
   } else if (_observedNavigationItem.titleView) {
     _observedNavigationItem.titleView = nil;
   }
-
-  [self.titleView removeFromSuperview];
-  _titleView = titleView;
-
-  if (_titleView != nil) {
-    [self addSubview:_titleView];
-  }
-
-  _titleLabel.hidden = _titleView != nil;
-    
-  [self setNeedsLayout];
 }
 
 - (void)setTitleTextAttributes:(NSDictionary<NSString *, id> *)titleTextAttributes {

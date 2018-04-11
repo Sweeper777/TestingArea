@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "MDCButtonBar.h"
+#import "MaterialButtonBar.h"
 
 /** MDCBarButtonItemBuilder is an implementation of a Material button item factory. */
 @interface MDCAppBarButtonBarBuilder : NSObject <MDCButtonBarDelegate>

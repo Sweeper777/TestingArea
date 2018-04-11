@@ -17,13 +17,12 @@
 #import "MDCItemBarCell.h"
 #import "MDCItemBarCell+Private.h"
 
-#import <MDFInternationalization/MDFInternationalization.h>
-
 #import "MDCItemBarStringConstants.h"
 #import "MDCItemBarStyle.h"
 #import "MaterialAnimationTiming.h"
 #import "MaterialInk.h"
 #import "MaterialMath.h"
+#import "MaterialRTL.h"
 #import "MaterialTypography.h"
 
 /// Size of image in points.
@@ -108,8 +107,7 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
 
   // Only compute text bounding rect if necessary (all except image-only items)
   if (style.shouldDisplayTitle) {
-    // Determine size based on the unselected state because the majority of tabs are unselected.
-    UIFont *font = style.unselectedTitleFont;
+    UIFont *font = style.titleFont;
     NSDictionary *titleAttributes = @{NSFontAttributeName : font};
     textBounds = [title boundingRectWithSize:size
                                      options:NSStringDrawingTruncatesLastVisibleLine
@@ -179,23 +177,6 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
   [self setNeedsLayout];
 }
 
-- (CGRect)contentFrame {
-  if (_style.shouldDisplayTitle) {
-    if (_style.shouldDisplayImage) {
-      // Title and image.
-      CGRect titleFrame = [self convertRect:_titleLabel.bounds fromView:_titleLabel];
-      CGRect imageFrame = [self convertRect:_imageView.bounds fromView:_imageView];
-      return CGRectUnion(titleFrame, imageFrame);
-    } else {
-      // Only title.
-      return [self convertRect:_titleLabel.bounds fromView:_titleLabel];
-    }
-  } else {
-    // Only image.
-    return [self convertRect:_imageView.bounds fromView:_imageView];
-  }
-}
-
 - (void)applyStyle:(MDCItemBarStyle *)style {
   if (style != _style && ![style isEqual:_style]) {
     _style = style;
@@ -254,7 +235,8 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
 
   // Title is a fixed height based on content and is placed full-width, regardless of content style.
   titleCenter.x = CGRectGetMidX(contentBounds);
-  titleBounds.size = titleSize;
+  titleBounds.size.width = CGRectGetWidth(contentBounds);
+  titleBounds.size.height = titleSize.height;
 
   // Horizontally align the badge.
   CGSize badgeSize = [_badgeLabel sizeThatFits:contentBounds.size];
@@ -263,7 +245,7 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
 
   if (_style.shouldDisplayBadge) {
     CGFloat badgeOffset = (imageBounds.size.width / 2) + (badgeSize.width / 2);
-    if (self.mdf_effectiveUserInterfaceLayoutDirection ==
+    if (self.mdc_effectiveUserInterfaceLayoutDirection ==
         UIUserInterfaceLayoutDirectionRightToLeft) {
       badgeOffset *= -1;
     }
@@ -344,7 +326,6 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
   [self updateTitleTextColor];
   [self updateAccessibilityTraits];
   [self updateTransformsAnimated:animate];
-  [self updateTitleFont];
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
@@ -413,7 +394,14 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
 }
 
 - (UIUserInterfaceSizeClass)horizontalSizeClass {
-  return self.traitCollection.horizontalSizeClass;
+  // Use trait collection's horizontalSizeClass if available.
+  if ([self respondsToSelector:@selector(traitCollection)]) {
+    return self.traitCollection.horizontalSizeClass;
+  }
+
+  // Pre-iOS 8: Use fixed size class for device.
+  const BOOL isPad = [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad;
+  return isPad ? UIUserInterfaceSizeClassRegular : UIUserInterfaceSizeClassCompact;
 }
 
 /// Ensures that subviews exist and have the correct visibility for the current content style.
@@ -526,8 +514,8 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
 
     // Set the transforms.
     self.titleLabel.transform = titleTransform;
-    self->_badgeLabel.transform = imageTransform;
-    self->_imageView.transform = imageTransform;
+    _badgeLabel.transform = imageTransform;
+    _imageView.transform = imageTransform;
   };
   void (^completeAnimations)(BOOL) = ^(__unused BOOL finished) {
     if (titleContentsScale != self.titleLabel.layer.contentsScale) {
@@ -538,16 +526,14 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
   };
 
   if (animated) {
-    [CATransaction begin];
     CAMediaTimingFunction *translateTimingFunction =
         [CAMediaTimingFunction mdc_functionWithType:MDCAnimationTimingFunctionTranslate];
-    [CATransaction setAnimationTimingFunction:translateTimingFunction];
-    [UIView animateWithDuration:kSelectionAnimationDuration
-                          delay:0
-                        options:0
-                     animations:performAnimations
-                     completion:completeAnimations];
-    [CATransaction commit];
+    [UIView mdc_animateWithTimingFunction:translateTimingFunction
+                                 duration:kSelectionAnimationDuration
+                                    delay:0
+                                  options:0
+                               animations:performAnimations
+                               completion:completeAnimations];
   } else {
     performAnimations();
     completeAnimations(YES);
@@ -555,15 +541,13 @@ static const NSTimeInterval kSelectionAnimationDuration = 0.3f;
 }
 
 - (void)updateTitleFont {
-  _titleLabel.font = self.isSelected ? _style.selectedTitleFont : _style.unselectedTitleFont;
+  _titleLabel.font = _style.titleFont;
 }
 
 - (void)updateInk {
   MDCInkView *inkView = _inkTouchController.defaultInkView;
   inkView.inkColor = _style.inkColor;
   inkView.inkStyle = _style.inkStyle;
-  inkView.usesLegacyInkRipple = NO;
-  inkView.clipsToBounds = (inkView.inkStyle == MDCInkStyleBounded) ? YES : NO;
 }
 
 - (void)updateAccessibilityTraits {

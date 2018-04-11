@@ -16,10 +16,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MDCCornerTreatment.h"
+#import "MDCEdgeTreatment.h"
 #import "MDCShapeGenerating.h"
-
-@class MDCCornerTreatment;
-@class MDCEdgeTreatment;
 
 /**
  An MDCShapeGenerating for creating shaped rectanglular CGPaths.

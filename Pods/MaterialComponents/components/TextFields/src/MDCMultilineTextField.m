@@ -16,19 +16,15 @@
 
 #import "MDCMultilineTextField.h"
 
-#import "MDCIntrinsicHeightTextView.h"
-#import "MDCTextField.h"
 #import "MDCTextFieldPositioningDelegate.h"
 #import "MDCTextInputBorderView.h"
 #import "MDCTextInputCharacterCounter.h"
-#import "MDCTextInputController.h"
-#import "MDCTextInputUnderlineView.h"
 #import "private/MDCTextInputCommonFundament.h"
 
 #import "MaterialMath.h"
+#import "MaterialRTL.h"
 #import "MaterialTypography.h"
 
-static NSString *const MDCMultilineTextFieldCursorColorKey = @"MDCMultilineTextFieldCursorColorKey";
 static NSString *const MDCMultilineTextFieldExpandsOnOverflowKey =
     @"MDCMultilineTextFieldExpandsOnOverflowKey";
 static NSString *const MDCMultilineTextFieldFundamentKey = @"MDCMultilineTextFieldFundamentKey";
@@ -38,15 +34,11 @@ static NSString *const MDCMultilineTextFieldMinimumLinesKey = @"MDCMultilineText
 static NSString *const MDCMultilineTextFieldMultilineDelegateKey =
     @"MDCMultilineTextFieldMultilineDelegateKey";
 static NSString *const MDCMultilineTextFieldTextViewKey = @"MDCMultilineTextFieldTextViewKey";
-static NSString *const MDCMultilineTextFieldTrailingViewKey =
-    @"MDCMultilineTextFieldTrailingViewKey";
 static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
     @"MDCMultilineTextFieldTrailingViewModeKey";
 
 @interface MDCMultilineTextField () {
-  UIColor *_cursorColor;
-
-  MDCIntrinsicHeightTextView *_textView;
+  UITextView *_textView;
 }
 
 @property(nonatomic, assign, getter=isEditing) BOOL editing;
@@ -77,9 +69,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
 - (instancetype)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-    _textView = [[MDCIntrinsicHeightTextView alloc] initWithFrame:CGRectZero];
-    [self setupTextView];
-
     _fundament = [[MDCTextInputCommonFundament alloc] initWithTextInput:self];
 
     [self commonMDCMultilineTextFieldInitialization];
@@ -91,35 +80,26 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
   self = [super initWithCoder:aDecoder];
   if (self) {
-    if ([aDecoder containsValueForKey:MDCMultilineTextFieldTextViewKey]) {
-      _textView = [aDecoder decodeObjectForKey:MDCMultilineTextFieldTextViewKey];
-    }
-    if (!_textView) {
-      _textView = [[MDCIntrinsicHeightTextView alloc] initWithFrame:CGRectZero];
-    }
-    // It should be noted that setupTextView sets many properties of the textView that may have
-    // been encoded differently.
-    [self setupTextView];
-
     MDCTextInputCommonFundament *fundament =
         [aDecoder decodeObjectForKey:MDCMultilineTextFieldFundamentKey];
     _fundament =
         fundament ? fundament : [[MDCTextInputCommonFundament alloc] initWithTextInput:self];
 
     [self commonMDCMultilineTextFieldInitialization];
-    _cursorColor = [aDecoder decodeObjectForKey:MDCMultilineTextFieldCursorColorKey];
 
     if ([aDecoder containsValueForKey:MDCMultilineTextFieldExpandsOnOverflowKey]) {
-      self.expandsOnOverflow =
-          [aDecoder decodeBoolForKey:MDCMultilineTextFieldExpandsOnOverflowKey];
+      _expandsOnOverflow = [aDecoder decodeBoolForKey:MDCMultilineTextFieldExpandsOnOverflowKey];
     }
     _layoutDelegate = [aDecoder decodeObjectForKey:MDCMultilineTextFieldLayoutDelegateKey];
     if ([aDecoder containsValueForKey:MDCMultilineTextFieldMinimumLinesKey]) {
       _minimumLines = [aDecoder decodeIntegerForKey:MDCMultilineTextFieldMinimumLinesKey];
     }
     _multilineDelegate = [aDecoder decodeObjectForKey:MDCMultilineTextFieldMultilineDelegateKey];
-
-    _trailingView = [aDecoder decodeObjectForKey:MDCMultilineTextFieldTrailingViewKey];
+    if ([aDecoder containsValueForKey:MDCMultilineTextFieldTextViewKey]) {
+      _textView = [aDecoder decodeObjectForKey:MDCMultilineTextFieldTextViewKey];
+    } else {
+      _textView = [[UITextView alloc] initWithFrame:CGRectZero];
+    }
     _trailingViewMode = (UITextFieldViewMode)
         [aDecoder decodeIntegerForKey:MDCMultilineTextFieldTrailingViewModeKey];
   }
@@ -133,7 +113,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
   [super encodeWithCoder:aCoder];
-  [aCoder encodeObject:self.cursorColor forKey:MDCMultilineTextFieldCursorColorKey];
   [aCoder encodeBool:self.expandsOnOverflow forKey:MDCMultilineTextFieldExpandsOnOverflowKey];
   [aCoder encodeObject:self.fundament forKey:MDCMultilineTextFieldFundamentKey];
   [aCoder encodeConditionalObject:self.layoutDelegate
@@ -142,7 +121,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
   [aCoder encodeConditionalObject:self.multilineDelegate
                            forKey:MDCMultilineTextFieldMultilineDelegateKey];
   [aCoder encodeObject:self.textView forKey:MDCMultilineTextFieldTextViewKey];
-  [aCoder encodeObject:self.trailingView forKey:MDCMultilineTextFieldTrailingViewKey];
   [aCoder encodeInteger:self.trailingViewMode forKey:MDCMultilineTextFieldTrailingViewModeKey];
 }
 
@@ -150,10 +128,9 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
   MDCMultilineTextField *copy = [[[self class] alloc] initWithFrame:self.frame];
 
   copy.expandsOnOverflow = self.expandsOnOverflow;
-  copy.cursorColor = self.cursorColor;
 
-  // The .fundament creates a .clearButton so setting the clearButton's .tintColor must wait for the
-  // final .fundament to be created.
+  // The .fundament creates a .clearButton so setting the .tintColor must wait for the final
+  // .fundament to be created.
   copy.fundament = [self.fundament copy];
   copy.clearButton.tintColor = self.clearButton.tintColor;
 
@@ -173,21 +150,22 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
   self.backgroundColor = [UIColor clearColor];
 
   self.textColor = _fundament.textColor;
-  self.font = [UIFont mdc_standardFontForMaterialTextStyle:MDCFontTextStyleBody1];
+  self.font = [UIFont mdc_preferredFontForMaterialTextStyle:MDCFontTextStyleBody1];
   self.clearButton.tintColor = [UIColor colorWithWhite:0 alpha:[MDCTypography captionFontOpacity]];
-
-  _cursorColor = MDCTextInputCursorColor();
-  [self applyCursorColor];
 
   self.editable = YES;
 
-  self.expandsOnOverflow = YES;
+  _expandsOnOverflow = YES;
   _minimumLines = 1;
 
   [self setupUnderlineConstraints];
 
   [self setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh + 1
                                         forAxis:UILayoutConstraintAxisVertical];
+}
+
+- (BOOL)becomeFirstResponder {
+  return [self.textView becomeFirstResponder];
 }
 
 - (void)subscribeForNotifications {
@@ -206,22 +184,12 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
                       object:self.textView];
 }
 
-#pragma mark - UIResponder Overrides
-
-- (BOOL)becomeFirstResponder {
-  return [self.textView becomeFirstResponder];
-}
-
-- (BOOL)isFirstResponder {
-  return self.textView.isFirstResponder;
-}
-
 #pragma mark - TextView Implementation
 
 - (void)setupTextView {
   [self insertSubview:self.textView atIndex:0];
   self.textView.translatesAutoresizingMaskIntoConstraints = NO;
-  self.textView.scrollEnabled = !_expandsOnOverflow;
+  self.textView.scrollEnabled = NO;
 
   [self.textView setContentHuggingPriority:UILayoutPriorityDefaultLow - 1
                                    forAxis:UILayoutConstraintAxisHorizontal];
@@ -245,9 +213,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
 #pragma mark - Underline View Implementation
 
 - (void)setupUnderlineConstraints {
-  if (!self.underline) {
-    return;
-  }
   NSLayoutConstraint *underlineLeading =
       [NSLayoutConstraint constraintWithItem:self.underline
                                    attribute:NSLayoutAttributeLeading
@@ -324,7 +289,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
 
   [self.fundament layoutSubviewsOfInput];
   [self updateBorder];
-  [self applyCursorColor];
 
   if ([self.positioningDelegate respondsToSelector:@selector(textInputDidLayoutSubviews)]) {
     [self.positioningDelegate textInputDidLayoutSubviews];
@@ -366,7 +330,7 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
                                                     attribute:NSLayoutAttributeTop
                                                    multiplier:1
                                                      constant:self.textInsets.top];
-    self.textViewTop.priority = UILayoutPriorityDefaultLow + 1;
+    self.textViewTop.priority = UILayoutPriorityDefaultLow;
     self.textViewTop.active = YES;
   }
   self.textViewTop.constant = self.textInsets.top;
@@ -393,7 +357,7 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
                  attribute:NSLayoutAttributeNotAnAttribute
                 multiplier:1
                   constant:[self estimatedTextViewLineHeight] * self.minimumLines];
-    self.textViewMinHeight.priority = UILayoutPriorityDefaultLow + 1;
+    self.textViewMinHeight.priority = UILayoutPriorityDefaultLow;
   }
   self.textViewMinHeight.active = YES;
   self.textViewMinHeight.constant = [self estimatedTextViewLineHeight] * self.minimumLines;
@@ -481,7 +445,7 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
 - (CGFloat)trailingViewAlpha {
   // The trailing view has the same behavior as .rightView in UITextField: It has visual precedence
   // over the clear button.
-  CGFloat trailingViewAlpha;
+  CGFloat trailingViewAlpha = self.trailingView.alpha;
   switch (self.trailingViewMode) {
     case UITextFieldViewModeAlways:
       trailingViewAlpha = 1.f;
@@ -494,10 +458,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
       break;
     case UITextFieldViewModeNever:
       trailingViewAlpha = 0.f;
-      break;
-    default:
-      NSAssert(NO, @"Invalid enumeration value %li.", (long)self.trailingViewMode);
-      trailingViewAlpha = self.trailingViewAlpha;
       break;
   }
   return trailingViewAlpha;
@@ -516,12 +476,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
 
 - (void)updateBorder {
   self.borderView.borderPath = self.borderPath;
-}
-
-#pragma mark - Applying Color
-
-- (void)applyCursorColor {
-  self.textView.tintColor = self.cursorColor;
 }
 
 #pragma mark - Properties Implementation
@@ -574,15 +528,6 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
   self.fundament.clearButtonMode = clearButtonMode;
 }
 
-- (UIColor *)cursorColor {
-  return _cursorColor ?: MDCTextInputCursorColor();
-}
-
-- (void)setCursorColor:(UIColor *)cursorColor {
-  _cursorColor = cursorColor;
-  [self applyCursorColor];
-}
-
 - (void)setEditable:(BOOL)editable {
   [self.textView setEditable:editable];
   self.fundament.enabled = editable;
@@ -601,14 +546,10 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
   if (_expandsOnOverflow != expandsOnOverflow) {
     _expandsOnOverflow = expandsOnOverflow;
     self.textView.scrollEnabled = !expandsOnOverflow;
-    [self setNeedsUpdateConstraints];
   }
 }
 
 - (UIFont *)font {
-  if (_textView) {
-    return _textView.font;
-  }
   return self.textView.font;
 }
 
@@ -697,22 +638,19 @@ static NSString *const MDCMultilineTextFieldTrailingViewModeKey =
   self.fundament.textInsetsMode = textInsetsMode;
 }
 
-- (MDCIntrinsicHeightTextView *)textView {
+- (UITextView *)textView {
   if (!_textView) {
-    _textView = [[MDCIntrinsicHeightTextView alloc] initWithFrame:CGRectZero];
+    _textView = [[UITextView alloc] initWithFrame:CGRectZero];
     [self setupTextView];
-    [self setupUnderlineConstraints];
   }
   return _textView;
 }
 
-- (void)setTextView:(MDCIntrinsicHeightTextView *)textView {
-  if (![_textView isEqual:textView]) {
-    [_textView removeFromSuperview];
+- (void)setTextView:(UITextView *)textView {
+  if (![textView isEqual:textView]) {
     _textView = textView;
     if (textView) {
       [self setupTextView];
-      [self setupUnderlineConstraints];
     }
   }
 }

@@ -43,8 +43,6 @@ static NSDictionary<NSNumber *, NSDictionary *> *_styleTable;
 
 @implementation MDCFontTraits
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wpartial-availability"
 + (void)initialize {
   _body1Traits = @{
     UIContentSizeCategoryExtraSmall :
@@ -442,7 +440,6 @@ static NSDictionary<NSNumber *, NSDictionary *> *_styleTable;
     @(MDCFontTextStyleTitle) : _titleTraits
   };
 }
-#pragma clang diagnostic pop
 
 + (instancetype)traitsWithPointSize:(CGFloat)pointSize
                              weight:(CGFloat)weight

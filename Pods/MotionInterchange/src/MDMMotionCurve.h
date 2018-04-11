@@ -43,7 +43,7 @@ typedef NS_ENUM(NSUInteger, MDMMotionCurveType) {
   /**
    The default curve will be used.
    */
-  MDMMotionCurveTypeDefault __deprecated_enum_msg("Use MDMMotionCurveTypeBezier instead."),
+  MDMMotionCurveTypeDefault,
 
 } NS_SWIFT_NAME(MotionCurveType);
 
@@ -73,14 +73,12 @@ typedef struct MDMMotionCurve MDMMotionCurve;
  See the documentation for CAMediaTimingFunction for more information.
  */
 // clang-format off
-FOUNDATION_EXTERN
-MDMMotionCurve MDMMotionCurveMakeBezier(CGFloat p1x, CGFloat p1y, CGFloat p2x, CGFloat p2y)
+FOUNDATION_EXTERN MDMMotionCurve MDMMotionCurveMakeBezier(float p1x, float p1y, float p2x, float p2y)
     NS_SWIFT_NAME(MotionCurveMakeBezier(p1x:p1y:p2x:p2y:));
 // clang-format on
 
 // clang-format off
-FOUNDATION_EXTERN
-MDMMotionCurve MDMMotionCurveFromTimingFunction(CAMediaTimingFunction * _Nonnull timingFunction)
+FOUNDATION_EXTERN MDMMotionCurve MDMMotionCurveFromTimingFunction(CAMediaTimingFunction * _Nonnull timingFunction)
     NS_SWIFT_NAME(MotionCurve(fromTimingFunction:));
 // clang-format on
 
@@ -92,35 +90,8 @@ MDMMotionCurve MDMMotionCurveFromTimingFunction(CAMediaTimingFunction * _Nonnull
  See the documentation for CASpringAnimation for more information.
  */
 // clang-format off
-FOUNDATION_EXTERN MDMMotionCurve MDMMotionCurveMakeSpring(CGFloat mass,
-                                                          CGFloat tension,
-                                                          CGFloat friction)
+FOUNDATION_EXTERN MDMMotionCurve MDMMotionCurveMakeSpring(float mass, float tension, float friction)
     NS_SWIFT_NAME(MotionCurveMakeSpring(mass:tension:friction:));
-// clang-format on
-
-/**
- Creates a spring curve with the provided configuration.
-
- Tension and friction map to Core Animation's stiffness and damping, respectively.
-
- See the documentation for CASpringAnimation for more information.
- */
-// clang-format off
-FOUNDATION_EXTERN
-MDMMotionCurve MDMMotionCurveMakeSpringWithInitialVelocity(CGFloat mass,
-                                                           CGFloat tension,
-                                                           CGFloat friction,
-                                                           CGFloat initialVelocity)
-    NS_SWIFT_NAME(MotionCurveMakeSpring(mass:tension:friction:initialVelocity:));
-// clang-format on
-
-/**
- For cubic bezier curves, returns a reversed cubic bezier curve. For all other curve types, a copy
- of the original curve is returned.
- */
-// clang-format off
-FOUNDATION_EXTERN MDMMotionCurve MDMMotionCurveReversedBezier(MDMMotionCurve motionCurve)
-    NS_SWIFT_NAME(MotionCurveReversedBezier(fromMotionCurve:));
 // clang-format on
 
 /**
@@ -139,52 +110,27 @@ typedef NS_ENUM(NSUInteger, MDMBezierMotionCurveDataIndex) {
 typedef NS_ENUM(NSUInteger, MDMSpringMotionCurveDataIndex) {
   MDMSpringMotionCurveDataIndexMass,
   MDMSpringMotionCurveDataIndexTension,
-  MDMSpringMotionCurveDataIndexFriction,
-
-  /**
-   The initial velocity of the animation.
-
-   A value of zero indicates no initial velocity.
-   A positive value indicates movement toward the destination.
-   A negative value indicates movement away from the destination.
-
-   The value's units are dependent on the context and the value being animated.
-   */
-  MDMSpringMotionCurveDataIndexInitialVelocity
+  MDMSpringMotionCurveDataIndexFriction
 } NS_SWIFT_NAME(SpringMotionCurveDataIndex);
 
 // Objective-C-specific macros
 
 #define _MDMBezier(p1x, p1y, p2x, p2y) \
-  ((MDMMotionCurve) {                   \
+  (MDMMotionCurve) {                   \
     .type = MDMMotionCurveTypeBezier,  \
     .data = { p1x,                     \
               p1y,                     \
               p2x,                     \
               p2y }                    \
-  })
+  }
 
 #define _MDMSpring(mass, tension, friction) \
-  ((MDMMotionCurve) {                        \
+  (MDMMotionCurve) {                        \
     .type = MDMMotionCurveTypeSpring,       \
     .data = { mass,                         \
               tension,                      \
               friction }                    \
-  })
-
-#define _MDMSpringWithInitialVelocity(mass, tension, friction, initialVelocity) \
-  ((MDMMotionCurve) {                        \
-    .type = MDMMotionCurveTypeSpring,       \
-    .data = { mass,                         \
-              tension,                      \
-              friction,                     \
-              initialVelocity }             \
-  })
-
-/**
- A linear bezier motion curve.
- */
-#define MDMLinearMotionCurve _MDMBezier(0, 0, 1, 1)
+  }
 
 /**
  Timing information for an iOS modal presentation slide animation.

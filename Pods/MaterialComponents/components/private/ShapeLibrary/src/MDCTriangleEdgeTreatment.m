@@ -16,6 +16,8 @@
 
 #import "MDCTriangleEdgeTreatment.h"
 
+#import "MDCPathGenerator.h"
+
 static NSString *const MDCTriangleEdgeTreatmentSizeKey = @"MDCTriangleEdgeTreatmentSizeKey";
 static NSString *const MDCTriangleEdgeTreatmentStyleKey = @"MDCTriangleEdgeTreatmentStyleKey";
 

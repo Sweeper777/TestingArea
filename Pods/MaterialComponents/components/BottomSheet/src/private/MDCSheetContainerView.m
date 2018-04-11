@@ -37,8 +37,7 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
 @property(nonatomic) UIDynamicAnimator *animator;
 @property(nonatomic) MDCSheetBehavior *sheetBehavior;
 @property(nonatomic) BOOL isDragging;
-@property(nonatomic) CGFloat originalPreferredSheetHeight;
-@property(nonatomic) CGRect previousAnimatedBounds;
+@property(nonatomic) CGFloat lastFrameHeight;
 
 @end
 
@@ -57,22 +56,14 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
   self = [super initWithFrame:frame];
   if (self) {
     _sheetState = MDCSheetStatePreferred;
-
-    // Don't set the frame yet because we're going to change the anchor point.
-    _sheet = [[MDCDraggableView alloc] initWithFrame:CGRectZero scrollView:scrollView];
+    _sheet = [[MDCDraggableView alloc] initWithFrame:self.bounds scrollView:scrollView];
     _sheet.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     _sheet.delegate = self;
-    _sheet.backgroundColor = contentView.backgroundColor;
-
-    // Adjust the anchor point so all positions relate to the top edge rather than the actual
-    // center.
-    _sheet.layer.anchorPoint = CGPointMake(0.5f, 0.f);
-    _sheet.frame = self.bounds;
-
     _contentView = contentView;
     _contentView.autoresizingMask =
         UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
+    _sheet.backgroundColor = contentView.backgroundColor;
     [_sheet addSubview:_contentView];
     [self addSubview:_sheet];
 
@@ -101,14 +92,6 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
        name:name
        object:nil];
     }
-
-    // Since we handle the SafeAreaInsets ourselves through the contentInset property, we disable
-    // the adjustment behavior to prevent accounting for it twice.
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
-    if (@available(iOS 11.0, *)) {
-      scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
-#endif
   }
   return self;
 }
@@ -154,25 +137,6 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
   }
 }
 
-- (void)safeAreaInsetsDidChange {
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
-  if (@available(iOS 11.0, *)) {
-    [super safeAreaInsetsDidChange];
-
-    _preferredSheetHeight = self.originalPreferredSheetHeight + self.safeAreaInsets.bottom;
-
-    UIEdgeInsets contentInset = self.sheet.scrollView.contentInset;
-    contentInset.bottom = MAX(contentInset.bottom, self.safeAreaInsets.bottom);
-    self.sheet.scrollView.contentInset = contentInset;
-
-    CGRect scrollViewFrame = CGRectStandardize(self.sheet.scrollView.frame);
-    scrollViewFrame.size = CGSizeMake(scrollViewFrame.size.width,
-                                      CGRectGetHeight(self.frame) - self.safeAreaInsets.top);
-    self.sheet.scrollView.frame = scrollViewFrame;
-  }
-#endif
-}
-
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -192,28 +156,13 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
 
 #pragma mark - Layout
 
-- (void)layoutSubviews {
-  [super layoutSubviews];
-  if (!CGRectEqualToRect(self.bounds, self.previousAnimatedBounds) && self.window) {
-    // Adjusts the pane to the correct snap point if we are visible.
-    [self animatePaneWithInitialVelocity:CGPointZero];
-  }
-}
-
 - (void)setPreferredSheetHeight:(CGFloat)preferredSheetHeight {
-  self.originalPreferredSheetHeight = preferredSheetHeight;
-
-  CGFloat adjustedPreferredSheetHeight = self.originalPreferredSheetHeight;
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
-  if (@available(iOS 11.0, *)) {
-    adjustedPreferredSheetHeight += self.safeAreaInsets.bottom;
-  }
-#endif
-
-  if (_preferredSheetHeight == adjustedPreferredSheetHeight) {
+  if (_preferredSheetHeight == preferredSheetHeight && _lastFrameHeight == self.frame.size.height) {
     return;
   }
-  _preferredSheetHeight = adjustedPreferredSheetHeight;
+
+  _preferredSheetHeight = preferredSheetHeight;
+  _lastFrameHeight = self.frame.size.height;
 
   [self updateSheetFrame];
 
@@ -232,6 +181,10 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
   sheetRect.size.height += kSheetBounceBuffer;
 
   self.sheet.frame = sheetRect;
+
+  // Adjust the anchor point so all positions relate to the top edge rather than the actual center.
+  // This makes -targetPoint calculations simpler and based on the desired sheet height.
+  self.sheet.layer.anchorPoint = CGPointMake(0.5f, 0.f);
 
   CGRect contentFrame = self.sheet.bounds;
   contentFrame.size.height -= kSheetBounceBuffer;
@@ -262,27 +215,20 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
 
 // Returns the maximum allowable height that the sheet can be dragged to.
 - (CGFloat)maximumSheetHeight {
-  CGFloat boundsHeight = CGRectGetHeight(self.bounds);
-#if defined(__IPHONE_11_0) && (__IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_11_0)
-  if (@available(iOS 11.0, *)) {
-    boundsHeight -= self.safeAreaInsets.top;
-  }
-#endif
-  CGFloat scrollViewContentHeight = self.sheet.scrollView.contentInset.top +
-      self.sheet.scrollView.contentSize.height + self.sheet.scrollView.contentInset.bottom;
+  CGSize size = self.bounds.size;
+  CGFloat scrollViewContentHeight = self.sheet.scrollView.contentSize.height;
 
   // If we have a scrollview, the sheet should never get taller than its content height.
   if (scrollViewContentHeight > 0) {
-    return MIN(boundsHeight, scrollViewContentHeight);
+    return MIN(size.height, scrollViewContentHeight);
   } else {
-    return MIN(boundsHeight, self.preferredSheetHeight);
+    return MIN(size.height, self.preferredSheetHeight);
   }
 }
 
 #pragma mark - Gesture-driven animation
 
 - (void)animatePaneWithInitialVelocity:(CGPoint)initialVelocity {
-  self.previousAnimatedBounds = self.bounds;
   self.sheetBehavior.targetPoint = [self targetPoint];
   self.sheetBehavior.velocity = initialVelocity;
   __weak MDCSheetContainerView *weakSelf = self;
@@ -352,9 +298,7 @@ static const CGFloat kSheetBounceBuffer = 150.0f;
           return YES;
         } else {
           // Allow dragging in any direction if the content is not scrollable.
-          CGFloat contentHeight = scrollView.contentInset.top + scrollView.contentSize.height +
-              scrollView.contentInset.bottom;
-          return (CGRectGetHeight(scrollView.bounds) >= contentHeight);
+          return (CGRectGetHeight(scrollView.bounds) >= scrollView.contentSize.height);
         }
       }
       return YES;

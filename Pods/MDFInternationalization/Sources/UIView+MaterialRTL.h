@@ -60,8 +60,7 @@
 /**
  Returns the layout direction implied by the provided semantic content attribute relative to the
  application-wide layout direction (as returned by
- UIApplication.sharedApplication.userInterfaceLayoutDirection). However, if it's being called from
- an iOS 8 extension, it will return left-to-right every time.
+ UIApplication.sharedApplication.userInterfaceLayoutDirection).
 
  @param semanticContentAttribute The semantic content attribute.
  @return The layout direction.

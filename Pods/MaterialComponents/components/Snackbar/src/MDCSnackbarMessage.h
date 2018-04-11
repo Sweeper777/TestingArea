@@ -42,7 +42,7 @@ extern const NSTimeInterval MDCSnackbarMessageDurationMax;
  This attribute can be set over any range of @c attributedText and that text will have the proper
  font applied.
  */
-extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
+extern NSString *const MDCSnackbarMessageBoldAttributeName;
 
 /**
  Represents a message to unobtrusively show to the user.
@@ -61,7 +61,7 @@ extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
  @param text The text to display in the message.
  @return An initialized MDCSnackbarMessage object with @c text.
  */
-+ (nonnull instancetype)messageWithText:(nonnull NSString *)text;
++ (instancetype)messageWithText:(NSString *)text;
 
 /**
  Returns a MDCSnackbarMessage with its attributed text initialized.
@@ -69,19 +69,14 @@ extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
  @param attributedText The attributed text to display in the message.
  @return An initialized MDCSnackbarMessage object with @c attributedText.
  */
-+ (nonnull instancetype)messageWithAttributedText:(nonnull NSAttributedString *)attributedText;
-
-/**
- Use the older legacy version of snackbar. Default is YES.
- */
-@property(class, nonatomic, assign) BOOL usesLegacySnackbar;
++ (instancetype)messageWithAttributedText:(NSAttributedString *)attributedText;
 
 /**
  The primary text of the message.
 
  Either @c text or @c attributedText must be set.
  */
-@property(nonatomic, copy, nullable) NSString *text;
+@property(nonatomic, copy) NSString *text;
 
 /**
  The primary text of the message with styling.
@@ -89,7 +84,7 @@ extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
  Any attributes supported by UIKit may be set, though font and color will be overridden by the
  snackbar. Either @c text or @c attributedText must be set.
  */
-@property(nonatomic, copy, nullable) NSAttributedString *attributedText;
+@property(nonatomic, copy) NSAttributedString *attributedText;
 
 /**
  Optional button to show along with the rest of the message.
@@ -97,16 +92,21 @@ extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
  A MDCSnackbarMessageAction is displayed as a button on the snackbar. If no action is set no button
  will appear on the Snackbar.
  */
-@property(nonatomic, strong, nullable) MDCSnackbarMessageAction *action;
+@property(nonatomic, strong) MDCSnackbarMessageAction *action;
 
 /**
-  The color used for button text on the snackbar in normal state.
+ The color used for button text on the snackbar in normal state.
 
-  Default is nil, but MDCRGBAColor(0xFF, 0xFF, 0xFF, 0.6f) will be set as the default color
-  and is taken from MDCSnackbarMessageView's buttonTitleColorForState:
-  */
-@property(nonatomic, strong, nullable) UIColor *buttonTextColor
-    __deprecated_msg("Use MDCSnackbarMessageView's buttonTitleColorForState: instead.");
+ Default is white.
+ */
+@property(nonatomic, strong) UIColor *buttonTextColor;
+
+/**
+ The color used for button text on the snackbar in highlighted state.
+
+ Default is white.
+ */
+@property(nonatomic, strong) UIColor *highlightedButtonTextColor;
 
 /**
  How long the message should be displayed.
@@ -122,7 +122,7 @@ extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
  The message completion handler is called regardless of whether or not buttons were tapped and is
  always called on the main thread.
  */
-@property(nonatomic, copy, nullable) MDCSnackbarMessageCompletionHandler completionHandler;
+@property(nonatomic, copy) MDCSnackbarMessageCompletionHandler completionHandler;
 
 /**
  The category of messages to which a message belongs.
@@ -131,17 +131,17 @@ extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
  showing or pending messages in this category will be dismissed as if the user had directly tapped
  the snackbar.
  */
-@property(nonatomic, copy, nullable) NSString *category;
+@property(nonatomic, copy) NSString *category;
 
 /**
  Redeclaration from UIAccessibility to make clear that this class supports accessibility labels.
  */
-@property(nonatomic, copy, nullable) NSString *accessibilityLabel;
+@property(nonatomic, copy) NSString *accessibilityLabel;
 
 /**
  Text that should be read when the message appears on screen and VoiceOver is enabled.
  */
-@property(nonatomic, readonly, nullable) NSString *voiceNotificationText;
+@property(nonatomic, readonly) NSString *voiceNotificationText;
 
 @end
 
@@ -153,13 +153,13 @@ extern NSString * __nonnull const MDCSnackbarMessageBoldAttributeName;
 /**
  The title text on the button.
  */
-@property(nonatomic, copy, nullable) NSString *title;
+@property(nonatomic, copy) NSString *title;
 
 /**
  Called when the button in the snackbar is tapped.
 
  Always called on the main thread.
  */
-@property(nonatomic, copy, nullable) MDCSnackbarMessageActionHandler handler;
+@property(nonatomic, copy) MDCSnackbarMessageActionHandler handler;
 
 @end

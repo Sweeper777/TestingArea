@@ -53,11 +53,10 @@ static inline UIColor *MDCTextInputUnderlineColor() {
   if (self) {
     [self commonMDCUnderlineViewInit];
 
-    _color = [coder decodeObjectOfClass:[UIColor class] forKey:MDCTextInputUnderlineColorKey];
-    _disabledColor =
-        [coder decodeObjectOfClass:[UIColor class] forKey:MDCTextInputUnderlineDisabledColorKey];
+    _color = [coder decodeObjectForKey:MDCTextInputUnderlineColorKey];
+    _disabledColor = [coder decodeObjectForKey:MDCTextInputUnderlineDisabledColorKey];
     _enabled = [coder decodeBoolForKey:MDCTextInputUnderlineEnabledKey];
-    _lineHeight = (CGFloat)[coder decodeDoubleForKey:MDCTextInputUnderlineLineHeightKey];
+    _lineHeight = (CGFloat)[coder decodeFloatForKey:MDCTextInputUnderlineLineHeightKey];
   }
   return self;
 }
@@ -79,7 +78,7 @@ static inline UIColor *MDCTextInputUnderlineColor() {
   [coder encodeObject:self.color forKey:MDCTextInputUnderlineColorKey];
   [coder encodeObject:self.disabledColor forKey:MDCTextInputUnderlineDisabledColorKey];
   [coder encodeBool:self.enabled forKey:MDCTextInputUnderlineEnabledKey];
-  [coder encodeDouble:(double)self.lineHeight forKey:MDCTextInputUnderlineLineHeightKey];
+  [coder encodeFloat:(float)self.lineHeight forKey:MDCTextInputUnderlineLineHeightKey];
 }
 
 - (instancetype)copyWithZone:(__unused NSZone *)zone {
@@ -188,12 +187,6 @@ static inline UIColor *MDCTextInputUnderlineColor() {
     _lineHeight = lineHeight;
   }
   [self updateUnderline];
-}
-
-#pragma mark - NSSecureCoding
-
-+ (BOOL)supportsSecureCoding {
-  return YES;
 }
 
 @end

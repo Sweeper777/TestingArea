@@ -15,50 +15,13 @@
  */
 
 #import "MDCSliderColorThemer.h"
-#import "MaterialPalettes.h"
-
-static const CGFloat kSliderThemerLightAlpha = 0.26f;
-static const CGFloat kSliderThemerDarkAlpha = 0.3f;
 
 @implementation MDCSliderColorThemer
 
-+ (void)applyColorScheme:(id<MDCColorScheme>)colorScheme
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
                 toSlider:(MDCSlider *)slider {
-  if ([colorScheme respondsToSelector:@selector(primaryLightColor)]) {
-    slider.trackBackgroundColor = colorScheme.primaryLightColor;
-  }
+  slider.trackBackgroundColor = colorScheme.primaryLightColor;
   slider.color = colorScheme.primaryColor;
-  if ([colorScheme respondsToSelector:@selector(primaryDarkColor)]) {
-    slider.disabledColor = colorScheme.primaryDarkColor;
-  }
-}
-
-#pragma mark - Default color schemes
-
-+ (MDCBasicColorScheme *)defaultSliderLightColorScheme {
-  UIColor *lightTrackOffColor =
-      [[UIColor blackColor] colorWithAlphaComponent:kSliderThemerLightAlpha];
-  UIColor *lightDisabledColor =
-      [[UIColor blackColor] colorWithAlphaComponent:kSliderThemerLightAlpha];
-
-  MDCBasicColorScheme *lightScheme =
-      [[MDCBasicColorScheme alloc] initWithPrimaryColor:MDCPalette.bluePalette.tint500
-                                      primaryLightColor:lightTrackOffColor
-                                       primaryDarkColor:lightDisabledColor];
-  return lightScheme;
-}
-
-+ (MDCBasicColorScheme *)defaultSliderDarkColorScheme {
-  UIColor *darkTrackOffColor =
-      [[UIColor whiteColor] colorWithAlphaComponent:kSliderThemerDarkAlpha];
-  UIColor *darkDisabledColor =
-      [[UIColor whiteColor] colorWithAlphaComponent:kSliderThemerDarkAlpha];
-
-  MDCBasicColorScheme *darkScheme =
-      [[MDCBasicColorScheme alloc] initWithPrimaryColor:MDCPalette.bluePalette.tint500
-                                      primaryLightColor:darkTrackOffColor
-                                       primaryDarkColor:darkDisabledColor];
-  return darkScheme;
 }
 
 @end

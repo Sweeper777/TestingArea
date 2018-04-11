@@ -15,13 +15,11 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <CoreGraphics/CoreGraphics.h>
 
+#import "MDCCollectionViewEditing.h"
 #import "MDCCollectionViewEditingDelegate.h"
+#import "MDCCollectionViewStyling.h"
 #import "MDCCollectionViewStylingDelegate.h"
-
-@protocol MDCCollectionViewEditing;
-@protocol MDCCollectionViewStyling;
 
 /**
  Controller that implements a collection view that adheres to Material Design layout

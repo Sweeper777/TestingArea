@@ -18,15 +18,15 @@
 
 #import "MDCAppBarContainerViewController.h"
 
-#import <MDFInternationalization/MDFInternationalization.h>
-#import <MDFTextAccessibility/MDFTextAccessibility.h>
 #import "MaterialApplication.h"
 #import "MaterialFlexibleHeader.h"
 #import "MaterialIcons+ic_arrow_back.h"
+#import "MaterialRTL.h"
 #import "MaterialShadowElevations.h"
 #import "MaterialShadowLayer.h"
 #import "MaterialTypography.h"
 #import "MaterialUIMetrics.h"
+#import "MDFTextAccessibility.h"
 #import "private/MaterialAppBarStrings.h"
 #import "private/MaterialAppBarStrings_table.h"
 
@@ -104,19 +104,16 @@ static NSString *const kMaterialAppBarBundle = @"MaterialAppBar.bundle";
   if (self) {
     [self commonMDCAppBarInit];
     if ([aDecoder containsValueForKey:MDCAppBarHeaderViewControllerKey]) {
-      _headerViewController = [aDecoder decodeObjectOfClass:[MDCFlexibleHeaderViewController class]
-                                                     forKey:MDCAppBarHeaderViewControllerKey];
+      _headerViewController = [aDecoder decodeObjectForKey:MDCAppBarHeaderViewControllerKey];
     }
 
     if ([aDecoder containsValueForKey:MDCAppBarNavigationBarKey]) {
-      _navigationBar = [aDecoder decodeObjectOfClass:[MDCNavigationBar class]
-                                              forKey:MDCAppBarNavigationBarKey];
+      _navigationBar = [aDecoder decodeObjectForKey:MDCAppBarNavigationBarKey];
       _appBarController.navigationBar = _navigationBar;
     }
 
     if ([aDecoder containsValueForKey:MDCAppBarHeaderStackViewKey]) {
-      _headerStackView = [aDecoder decodeObjectOfClass:[MDCHeaderStackView class]
-                                              forKey:MDCAppBarHeaderStackViewKey];
+      _headerStackView = [aDecoder decodeObjectForKey:MDCAppBarHeaderStackViewKey];
       _appBarController.headerStackView = _headerStackView;
     }
 
@@ -182,12 +179,6 @@ static NSString *const kMaterialAppBarBundle = @"MaterialAppBar.bundle";
   [fhvc didMoveToParentViewController:fhvc.parentViewController];
 
   [self.navigationBar observeNavigationItem:fhvc.parentViewController.navigationItem];
-}
-
-#pragma mark - NSSecureCoding
-
-+ (BOOL)supportsSecureCoding {
-  return YES;
 }
 
 @end
@@ -262,9 +253,9 @@ static NSString *const kMaterialAppBarBundle = @"MaterialAppBar.bundle";
   if (!backBarButtonItem) {
     UIImage *backButtonImage = [MDCIcons imageFor_ic_arrow_back];
     backButtonImage = [backButtonImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    if (self.navigationBar.mdf_effectiveUserInterfaceLayoutDirection ==
+    if (self.navigationBar.mdc_effectiveUserInterfaceLayoutDirection ==
         UIUserInterfaceLayoutDirectionRightToLeft) {
-      backButtonImage = [backButtonImage mdf_imageWithHorizontallyFlippedOrientation];
+      backButtonImage = [backButtonImage mdc_imageFlippedForRightToLeftLayoutDirection];
     }
     backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:backButtonImage
                                                          style:UIBarButtonItemStyleDone

@@ -19,8 +19,6 @@
 #import "MDCOverlayObserverOverlay.h"
 #import "MDCOverlayUtilities.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 @interface MDCOverlayObserverTransition ()
 
 /**

@@ -16,6 +16,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MaterialDialogs.h"
 #import "MaterialThemes.h"
 
 /**
@@ -28,6 +29,6 @@
  
  @param colorScheme The color scheme to apply to all MDCAlertController alert dialogs.
  */
-+ (void)applyColorScheme:(nonnull id<MDCColorScheme>)colorScheme;
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme;
 
 @end

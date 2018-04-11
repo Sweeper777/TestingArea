@@ -16,25 +16,11 @@
 
 #import "MDCAppBarColorThemer.h"
 
-#import "MDCFlexibleHeaderColorThemer.h"
-#import "MDCNavigationBarColorThemer.h"
-
 @implementation MDCAppBarColorThemer
 
-+ (void)applySemanticColorScheme:(id<MDCColorScheming>)colorScheme
-                        toAppBar:(MDCAppBar *)appBar {
-  [MDCFlexibleHeaderColorThemer applySemanticColorScheme:colorScheme
-                                    toFlexibleHeaderView:appBar.headerViewController.headerView];
-  [MDCNavigationBarColorThemer applySemanticColorScheme:colorScheme
-                                toNavigationBar:appBar.navigationBar];
-}
-
-+ (void)applyColorScheme:(id<MDCColorScheme>)colorScheme
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
                 toAppBar:(MDCAppBar *)appBar {
-  [MDCFlexibleHeaderColorThemer applyColorScheme:colorScheme
-                   toMDCFlexibleHeaderController:appBar.headerViewController];
-  [MDCNavigationBarColorThemer applyColorScheme:colorScheme
-                                toNavigationBar:appBar.navigationBar];
+  appBar.headerViewController.headerView.backgroundColor = colorScheme.primaryColor;
 }
 
 @end

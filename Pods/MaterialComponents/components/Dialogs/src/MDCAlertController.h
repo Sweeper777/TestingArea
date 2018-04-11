@@ -16,12 +16,18 @@
 
 #import <UIKit/UIKit.h>
 
+#if !defined(__IPHONE_8_0) || (__IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0)
+#error "This component only supports iOS 8.0 and above."
+#endif
+
 @class MDCAlertAction;
 
 /**
  MDCAlertController displays an alert message to the user, similar to UIAlertController.
 
  https://material.io/guidelines/components/dialogs.html
+
+ MDCAlertController requires iOS 8 or later.
 
  MDCAlertController class is intended to be used as-is and does not support subclassing. The view
  hierarchy for this class is private and must not be modified.
@@ -69,24 +75,6 @@
  */
 @property(nonatomic, nonnull, readonly) NSArray<MDCAlertAction *> *actions;
 
-/** The font applied to the title of Alert Controller.*/
-@property(nonatomic, strong, nullable) UIFont *titleFont;
-
-/** The color applied to the title of Alert Controller.*/
-@property(nonatomic, strong, nullable) UIColor *titleColor;
-
-/** The font applied to the message of Alert Controller.*/
-@property(nonatomic, strong, nullable) UIFont *messageFont;
-
-/** The color applied to the message of Alert Controller.*/
-@property(nonatomic, strong, nullable) UIColor *messageColor;
-
-/** The font applied to the button of Alert Controller.*/
-@property(nonatomic, strong, nullable) UIFont *buttonFont;
-
-/** The color applied to the button title text of Alert Controller.*/
-@property(nonatomic, strong, nullable) UIColor *buttonTitleColor;
-
 // TODO(iangordon): Add support for preferredAction to match UIAlertController.
 // TODO(iangordon): Consider adding support for UITextFields to match UIAlertController.
 
@@ -111,7 +99,7 @@
  Default value is NO.
  */
 @property(nonatomic, readwrite, setter=mdc_setAdjustsFontForContentSizeCategory:)
-    BOOL mdc_adjustsFontForContentSizeCategory;
+    BOOL mdc_adjustsFontForContentSizeCategory UI_APPEARANCE_SELECTOR;
 
 /** MDCAlertController handles its own transitioning delegate. */
 - (void)setTransitioningDelegate:

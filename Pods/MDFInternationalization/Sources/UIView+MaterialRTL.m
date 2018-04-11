@@ -105,7 +105,8 @@ static inline UIUserInterfaceLayoutDirection
 #endif  // MDF_BASE_SDK_EQUAL_OR_ABOVE(9_0)
   {
     // If we are running in the context of an app, we query [UIApplication sharedApplication].
-    // Otherwise use a default of Left-to-Right.
+    // Otherwise use a default of Left-to-Right, as UIKit in iOS 8 and below doesn't support native
+    // RTL layout.
     UIUserInterfaceLayoutDirection applicationLayoutDirection =
         UIUserInterfaceLayoutDirectionLeftToRight;
     NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
@@ -150,7 +151,7 @@ static inline UIUserInterfaceLayoutDirection
 - (UISemanticContentAttribute)mdf_associatedSemanticContentAttribute {
   NSNumber *semanticContentAttributeNumber =
       objc_getAssociatedObject(self, @selector(mdf_semanticContentAttribute));
-  if (semanticContentAttributeNumber != nil) {
+  if (semanticContentAttributeNumber) {
     return [semanticContentAttributeNumber integerValue];
   }
   return UISemanticContentAttributeUnspecified;

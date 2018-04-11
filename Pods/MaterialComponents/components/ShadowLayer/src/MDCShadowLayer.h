@@ -64,8 +64,6 @@
  the shadow.
 
  Negative values act as if zero were specified.
-
- The default value is 0.
  */
 @property(nonatomic, assign) MDCShadowElevation elevation;
 
@@ -78,11 +76,4 @@
  */
 @property(nonatomic, getter=isShadowMaskEnabled, assign) BOOL shadowMaskEnabled;
 
-@end
-
-/**
- Subclasses can depend on MDCShadowLayer implementing CALayerDelegate actionForLayer:forKey: in
- order to implicitly animate 'path' or 'shadowPath' on sublayers.
- */
-@interface MDCShadowLayer (Subclassing) <CALayerDelegate>
 @end

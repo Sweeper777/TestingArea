@@ -14,4 +14,4 @@
  limitations under the License.
  */
 
-#import "MDCMaskedTransitionController.h"
+#import "MDCMaskedTransition.h"

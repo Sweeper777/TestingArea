@@ -18,12 +18,10 @@
 
 @implementation MDCButtonColorThemer
 
-+ (void)applyColorScheme:(id<MDCColorScheme>)colorScheme
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
                 toButton:(MDCButton *)button {
   [button setBackgroundColor:colorScheme.primaryColor forState:UIControlStateNormal];
-  if ([colorScheme respondsToSelector:@selector(primaryLightColor)]) {
-    [button setBackgroundColor:colorScheme.primaryLightColor forState:UIControlStateDisabled];
-  }
+  [button setBackgroundColor:colorScheme.primaryLightColor forState:UIControlStateDisabled];
 }
 
 @end

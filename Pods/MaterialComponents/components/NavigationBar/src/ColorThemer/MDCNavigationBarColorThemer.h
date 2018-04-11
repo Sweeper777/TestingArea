@@ -14,36 +14,22 @@
  limitations under the License.
  */
 
-#import "MaterialColorScheme.h"
+#import "MaterialThemes.h"
 #import "MaterialNavigationBar.h"
 
 /**
- A color themer for MDCNavigationBar that implements the Material design color system mappings.
+ Used to apply a color scheme to theme MDCNavigationBar.
  */
 @interface MDCNavigationBarColorThemer : NSObject
-
-/**
- Applies a color scheme's properties to an MDCNavigationBar.
-
- @param colorScheme The color scheme to apply to MDCNavigationBar.
- @param navigationBar An MDCNavigationBar instance to which the color scheme should be applied.
- */
-+ (void)applySemanticColorScheme:(nonnull id<MDCColorScheming>)colorScheme
-                 toNavigationBar:(nonnull MDCNavigationBar *)navigationBar;
-
-#pragma mark - Soon to be deprecated
 
 /**
  Applies a color scheme to theme a MDCNavigationBar. Use a UIAppearance proxy to apply a color
  scheme to all instances of MDCNavigationBar.
 
- This method will soon be deprecated. Consider using +applySemanticColorScheme:toNavigationBar:
- instead.
-
  @param colorScheme The color scheme to apply to MDCNavigationBar.
  @param navigationBar A MDCNavigationBar instance to apply a color scheme.
  */
-+ (void)applyColorScheme:(nonnull id<MDCColorScheme>)colorScheme
-         toNavigationBar:(nonnull MDCNavigationBar *)navigationBar;
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
+         toNavigationBar:(MDCNavigationBar *)navigationBar;
 
 @end

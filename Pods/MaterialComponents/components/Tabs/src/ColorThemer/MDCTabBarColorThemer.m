@@ -18,15 +18,11 @@
 
 @implementation MDCTabBarColorThemer
 
-+ (void)applyColorScheme:(id<MDCColorScheme>)colorScheme
++ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
                 toTabBar:(MDCTabBar *)tabBar {
-  if ([colorScheme respondsToSelector:@selector(primaryLightColor)]) {
-    tabBar.unselectedItemTintColor = colorScheme.primaryLightColor;
-    tabBar.inkColor = colorScheme.primaryLightColor;
-  }
-  if ([colorScheme respondsToSelector:@selector(primaryDarkColor)]) {
-    tabBar.selectedItemTintColor = colorScheme.primaryDarkColor;
-  }
+  tabBar.selectedItemTintColor = colorScheme.primaryDarkColor;
+  tabBar.unselectedItemTintColor = colorScheme.primaryLightColor;
+  tabBar.inkColor = colorScheme.primaryLightColor;
 }
 
 @end

@@ -16,9 +16,5 @@
 
 #import "MDCTabBar.h"
 #import "MDCTabBarAlignment.h"
-#import "MDCTabBarIndicatorAttributes.h"
-#import "MDCTabBarIndicatorContext.h"
-#import "MDCTabBarIndicatorTemplate.h"
 #import "MDCTabBarItemAppearance.h"
-#import "MDCTabBarUnderlineIndicatorTemplate.h"
 #import "MDCTabBarViewController.h"

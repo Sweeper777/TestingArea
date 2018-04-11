@@ -64,8 +64,8 @@ static NSString *const kPageControlAnimationKeyDraw = @"drawTrack";
     // After drawn, remove animation and update track frame.
     [self removeAnimationForKey:kPageControlAnimationKeyDraw];
     [self updateTrackFrameWithAnimation:NO completion:nil];
-    self->_trackHidden = NO;
-    self->_isAnimating = NO;
+    _trackHidden = NO;
+    _isAnimating = NO;
   }];
 
   // Get animation keyframes.

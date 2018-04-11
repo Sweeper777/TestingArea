@@ -20,38 +20,31 @@
  */
 + (NSString *)mdc_fontWeightDescription:(CGFloat)weight {
 // The UIFontWeight enumeration was added in iOS 8.2
-  NSString *description = [NSString stringWithFormat:@"(%.3f)", weight];
 #if defined(__IPHONE_8_2)
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wpartial-availability"
-#pragma clang diagnostic ignored "-Wtautological-pointer-compare"
-  if (&UIFontWeightMedium != NULL) {
-    if (weight == UIFontWeightUltraLight) {
-      return @"UltraLight";
-    } else if (weight == UIFontWeightThin) {
-      return @"Thin";
-    } else if (weight == UIFontWeightLight) {
-      return @"Light";
-    } else if (weight == UIFontWeightRegular) {
-      return @"Regular";
-    } else if (weight == UIFontWeightMedium) {
-      return @"Medium";
-    } else if (weight == UIFontWeightSemibold) {
-      return @"Semibold";
-    } else if (weight == UIFontWeightBold) {
-      return @"Bold";
-    } else if (weight == UIFontWeightHeavy) {
-      return @"Heavy";
-    } else if (weight == UIFontWeightBlack) {
-      return @"Black";
-    } else {
-      return description;
-    }
+  if (weight == UIFontWeightUltraLight) {
+    return @"UltraLight";
+  } else if (weight == UIFontWeightThin) {
+    return @"Thin";
+  } else if (weight == UIFontWeightLight) {
+    return @"Light";
+  } else if (weight == UIFontWeightRegular) {
+    return @"Regular";
+  } else if (weight == UIFontWeightMedium) {
+    return @"Medium";
+  } else if (weight == UIFontWeightSemibold) {
+    return @"Semibold";
+  } else if (weight == UIFontWeightBold) {
+    return @"Bold";
+  } else if (weight == UIFontWeightHeavy) {
+    return @"Heavy";
+  } else if (weight == UIFontWeightBlack) {
+    return @"Black";
   } else {
+    NSString *description = [NSString stringWithFormat:@"(%.3f)", weight];
     return description;
   }
-#pragma clang diagnostic pop
 #else
+  NSString *description = [NSString stringWithFormat:@"(%.3f)", weight];
   return description;
 #endif
 }
@@ -63,7 +56,7 @@
   NSDictionary *fontTraits = [self.fontDescriptor objectForKey:UIFontDescriptorTraitsAttribute];
   if (fontTraits) {
     NSNumber *weightNumber = fontTraits[UIFontWeightTrait];
-    if (weightNumber != nil) {
+    if (weightNumber) {
       weight = [weightNumber floatValue];
     }
   }
@@ -77,7 +70,7 @@
   NSDictionary *fontTraits = [self.fontDescriptor objectForKey:UIFontDescriptorTraitsAttribute];
   if (fontTraits) {
     NSNumber *slantNumber = fontTraits[UIFontSlantTrait];
-    if (slantNumber != nil) {
+    if (slantNumber) {
       slant = [slantNumber floatValue];
     }
   }

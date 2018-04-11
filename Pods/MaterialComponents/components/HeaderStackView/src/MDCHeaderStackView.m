@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-#import <CoreGraphics/CoreGraphics.h>
 
 #import "MDCHeaderStackView.h"
 
@@ -26,12 +25,11 @@ static NSString *const MDCHeaderStackViewBottomBarKey = @"MDCHeaderStackViewBott
   self = [super initWithCoder:aDecoder];
   if (self) {
     if ([aDecoder containsValueForKey:MDCHeaderStackViewTopBarKey]) {
-      _topBar = [aDecoder decodeObjectOfClass:[UIView class] forKey:MDCHeaderStackViewTopBarKey];
+      _topBar = [aDecoder decodeObjectForKey:MDCHeaderStackViewTopBarKey];
     }
 
     if ([aDecoder containsValueForKey:MDCHeaderStackViewBottomBarKey]) {
-      _bottomBar = [aDecoder decodeObjectOfClass:[UIView class]
-                                          forKey:MDCHeaderStackViewBottomBarKey];
+      _bottomBar = [aDecoder decodeObjectForKey:MDCHeaderStackViewBottomBarKey];
     }
   }
   return self;

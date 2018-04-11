@@ -75,14 +75,12 @@ NSString *RLMRealmPathForFile(NSString *fileName) {
 }
 
 + (RLMRealmConfiguration *)rawDefaultConfiguration {
-    RLMRealmConfiguration *configuration;
     @synchronized(c_defaultRealmFileName) {
         if (!s_defaultConfiguration) {
             s_defaultConfiguration = [[RLMRealmConfiguration alloc] init];
         }
-        configuration = s_defaultConfiguration;
     }
-    return configuration;
+    return s_defaultConfiguration;
 }
 
 + (void)resetRealmConfigurationState {
@@ -296,10 +294,6 @@ static void RLMNSStringToStdString(std::string &out, NSString *in) {
         _config.should_compact_on_launch_function = nullptr;
     }
     _shouldCompactOnLaunch = shouldCompactOnLaunch;
-}
-
-- (void)setCustomSchemaWithoutCopying:(RLMSchema *)schema {
-    _customSchema = schema;
 }
 
 @end
