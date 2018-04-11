@@ -14,13 +14,22 @@
  limitations under the License.
  */
 
-#import "MDCColorScheme.h"
 #import "MaterialAppBar.h"
+#import "MaterialColorScheme.h"
 
 /**
- Used to apply a color scheme to theme MDCAppBar.
+ A color themer for MDCNavigationBar that implements the Material design color system mappings.
  */
 @interface MDCAppBarColorThemer : NSObject
+
+/**
+ Applies a color scheme's properties to an MDCAppBar.
+
+ @param colorScheme The color scheme to apply to MDCAppBar.
+ @param appBar An MDCAppBar instance to which the color scheme should be applied.
+ */
++ (void)applySemanticColorScheme:(nonnull id<MDCColorScheming>)colorScheme
+                        toAppBar:(nonnull MDCAppBar *)appBar;
 
 /**
  Applies a color scheme to theme a MDCAppBar. Use a UIAppearance proxy to apply a color scheme to
@@ -29,7 +38,7 @@
  @param colorScheme The color scheme to apply to MDCAppBar.
  @param appBar A MDCAppBar instance to apply a color scheme.
  */
-+ (void)applyColorScheme:(NSObject<MDCColorScheme> *)colorScheme
-                toAppBar:(MDCAppBar *)appBar;
++ (void)applyColorScheme:(nonnull id<MDCColorScheme>)colorScheme
+                toAppBar:(nonnull MDCAppBar *)appBar;
 
 @end

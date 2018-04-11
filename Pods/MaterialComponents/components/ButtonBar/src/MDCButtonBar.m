@@ -16,8 +16,9 @@
 
 #import "MDCButtonBar.h"
 
+#import <MDFInternationalization/MDFInternationalization.h>
+
 #import "MaterialButtons.h"
-#import "MaterialRTL.h"
 #import "private/MDCAppBarButtonBarBuilder.h"
 
 static const CGFloat kDefaultHeight = 56;
@@ -63,16 +64,27 @@ static NSString *const MDCButtonBarButtonLayoutPositionKey = @"MDCButtonBarButto
   self = [super initWithCoder:coder];
   if (self) {
     [self commonMDCButtonBarInit];
-    if ([coder containsValueForKey:MDCButtonBarItemsKey]) {
-      _items = [coder decodeObjectForKey:MDCButtonBarItemsKey];
-    }
-
     if ([coder containsValueForKey:MDCButtonBarButtonTitleBaselineKey]) {
       _buttonTitleBaseline = (CGFloat)[coder decodeDoubleForKey:MDCButtonBarButtonTitleBaselineKey];
     }
 
     if ([coder containsValueForKey:MDCButtonBarButtonLayoutPositionKey]) {
       _layoutPosition = [coder decodeIntegerForKey:MDCButtonBarButtonLayoutPositionKey];
+    }
+
+    if ([coder containsValueForKey:MDCButtonBarItemsKey]) {
+      // Force going through the setter to ensure KVO is observed for these items
+      NSArray *items = [coder decodeObjectOfClass:[NSArray class] forKey:MDCButtonBarItemsKey];
+      BOOL isValid = YES;
+      for (id item in items) {
+        if (![item isKindOfClass:[UIBarButtonItem class]]) {
+          isValid = NO;
+          NSAssert(NO, @"Wrong class type for MDCButtonBar items when decoding.");
+        }
+      }
+      if (isValid) {
+        self.items = [coder decodeObjectOfClass:[NSArray class] forKey:MDCButtonBarItemsKey];
+      }
     }
   }
   return self;
@@ -108,7 +120,7 @@ static NSString *const MDCButtonBarButtonLayoutPositionKey = @"MDCButtonBarButto
   CGFloat totalWidth = 0;
 
   CGFloat edge;
-  switch (self.mdc_effectiveUserInterfaceLayoutDirection) {
+  switch (self.mdf_effectiveUserInterfaceLayoutDirection) {
     case UIUserInterfaceLayoutDirectionLeftToRight:
       edge = 0;
       break;
@@ -126,7 +138,7 @@ static NSString *const MDCButtonBarButtonLayoutPositionKey = @"MDCButtonBarButto
 
   for (UIView *view in positionedButtonViews) {
     CGFloat width = view.frame.size.width;
-    switch (self.mdc_effectiveUserInterfaceLayoutDirection) {
+    switch (self.mdf_effectiveUserInterfaceLayoutDirection) {
       case UIUserInterfaceLayoutDirectionLeftToRight:
         break;
       case UIUserInterfaceLayoutDirectionRightToLeft:
@@ -142,7 +154,7 @@ static NSString *const MDCButtonBarButtonLayoutPositionKey = @"MDCButtonBarButto
         }
       }
     }
-    switch (self.mdc_effectiveUserInterfaceLayoutDirection) {
+    switch (self.mdf_effectiveUserInterfaceLayoutDirection) {
       case UIUserInterfaceLayoutDirectionLeftToRight:
         edge += width;
         break;
@@ -250,12 +262,12 @@ static NSString *const MDCButtonBarButtonLayoutPositionKey = @"MDCButtonBarButto
                        context:(void *)context {
   if (context == kKVOContextMDCButtonBar) {
     void (^mainThreadWork)(void) = ^{
-      @synchronized(_buttonItemsLock) {
-        NSUInteger itemIndex = [_items indexOfObject:object];
-        if (itemIndex == NSNotFound || itemIndex > [_buttonViews count]) {
+      @synchronized(self->_buttonItemsLock) {
+        NSUInteger itemIndex = [self.items indexOfObject:object];
+        if (itemIndex == NSNotFound || itemIndex > [self->_buttonViews count]) {
           return;
         }
-        UIButton *button = _buttonViews[itemIndex];
+        UIButton *button = self->_buttonViews[itemIndex];
 
         id newValue = [object valueForKey:keyPath];
         if (newValue == [NSNull null]) {
@@ -312,8 +324,7 @@ static NSString *const MDCButtonBarButtonLayoutPositionKey = @"MDCButtonBarButto
   // https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIBarButtonItem_Class/#//apple_ref/occ/instp/UIBarButtonItem/action
   // "If nil, the action message is passed up the responder chain where it may be handled by any
   // object implementing a method corresponding to the selector held by the action property."
-  if (target == nil && [self respondsToSelector:@selector(targetForAction:withSender:)]) {
-    // iOS 7 and up.
+  if (target == nil) {
     target = [self targetForAction:item.action withSender:self];
   }
 
@@ -392,10 +403,16 @@ static NSString *const MDCButtonBarButtonLayoutPositionKey = @"MDCButtonBarButto
   }
 }
 
-- (void)mdc_setSemanticContentAttribute:(UISemanticContentAttribute)semanticContentAttribute {
-  [super mdc_setSemanticContentAttribute:semanticContentAttribute];
+// UISemanticContentAttribute was added in iOS SDK 9.0 but is available on devices running earlier
+// version of iOS. We ignore the partial-availability warning that gets thrown on our use of this
+// symbol.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpartial-availability"
+- (void)mdf_setSemanticContentAttribute:(UISemanticContentAttribute)semanticContentAttribute {
+  [super mdf_setSemanticContentAttribute:semanticContentAttribute];
   [self reloadButtonViews];
 }
+#pragma clang diagnostic pop
 
 - (void)setButtonTitleBaseline:(CGFloat)buttonTitleBaseline {
   _buttonTitleBaseline = buttonTitleBaseline;

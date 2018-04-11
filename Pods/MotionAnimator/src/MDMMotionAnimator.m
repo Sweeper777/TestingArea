@@ -18,114 +18,167 @@
 
 #import <UIKit/UIKit.h>
 
-#if TARGET_IPHONE_SIMULATOR
-UIKIT_EXTERN float UIAnimationDragCoefficient(void); // UIKit private drag coefficient.
-#endif
-
-static CGFloat simulatorAnimationDragCoefficient(void) {
-#if TARGET_IPHONE_SIMULATOR
-  return UIAnimationDragCoefficient();
-#else
-  return 1.0;
-#endif
-}
-
-static CAMediaTimingFunction* timingFunctionWithControlPoints(CGFloat controlPoints[4]);
-static NSArray* coerceUIKitValuesToCoreAnimationValues(NSArray *values);
-static CABasicAnimation *animationFromTiming(MDMMotionTiming timing, CGFloat timeScaleFactor);
-static void makeAnimationAdditive(CABasicAnimation *animation);
+#import "CATransaction+MotionAnimator.h"
+#import "private/CABasicAnimation+MotionAnimator.h"
+#import "private/MDMAnimationRegistrar.h"
+#import "private/MDMUIKitValueCoercion.h"
+#import "private/MDMBlockAnimations.h"
+#import "private/MDMDragCoefficient.h"
 
 @implementation MDMMotionAnimator {
   NSMutableArray *_tracers;
+  MDMAnimationRegistrar *_registrar;
 }
 
 - (instancetype)init {
   self = [super init];
   if (self) {
+    _registrar = [[MDMAnimationRegistrar alloc] init];
     _timeScaleFactor = 1;
     _additive = true;
   }
   return self;
 }
 
-- (void)animateWithTiming:(MDMMotionTiming)timing
-                  toLayer:(CALayer *)layer
-               withValues:(NSArray *)values
+- (void)animateWithTraits:(MDMAnimationTraits *)traits
+                  between:(NSArray *)values
+                    layer:(CALayer *)layer
                   keyPath:(MDMAnimatableKeyPath)keyPath {
-  [self animateWithTiming:timing toLayer:layer withValues:values keyPath:keyPath completion:nil];
+  [self animateWithTraits:traits between:values layer:layer keyPath:keyPath completion:nil];
 }
 
-- (void)animateWithTiming:(MDMMotionTiming)timing
-                  toLayer:(CALayer *)layer
-               withValues:(NSArray *)values
+- (void)animateWithTraits:(MDMAnimationTraits *)traits
+                  between:(NSArray *)values
+                    layer:(CALayer *)layer
                   keyPath:(MDMAnimatableKeyPath)keyPath
-               completion:(void(^)(void))completion {
+               completion:(void(^)(BOOL))completion {
   NSAssert([values count] == 2, @"The values array must contain exactly two values.");
 
   if (_shouldReverseValues) {
     values = [[values reverseObjectEnumerator] allObjects];
   }
-  values = coerceUIKitValuesToCoreAnimationValues(values);
+  values = MDMCoerceUIKitValuesToCoreAnimationValues(values);
 
-  if (timing.duration == 0 || timing.curve.type == MDMMotionCurveTypeInstant) {
+  void (^commitToModelLayer)(void) = ^{
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
     [layer setValue:[values lastObject] forKeyPath:keyPath];
+    [CATransaction commit];
+  };
+
+  void (^exitEarly)(void) = ^{
+    commitToModelLayer();
+
     if (completion) {
-      completion();
+      completion(YES);
     }
+  };
+
+  CGFloat timeScaleFactor = [self computedTimeScaleFactor];
+  if (timeScaleFactor == 0) {
+    exitEarly();
     return;
   }
 
-  CGFloat timeScaleFactor = simulatorAnimationDragCoefficient() * _timeScaleFactor;
-  CABasicAnimation *animation = animationFromTiming(timing, timeScaleFactor);
+  CABasicAnimation *animation = MDMAnimationFromTraits(traits, timeScaleFactor);
 
-  if (animation) {
-    animation.keyPath = keyPath;
+  if (animation == nil) {
+    exitEarly();
+    return;
+  }
 
-    id initialValue;
-    if (_beginFromCurrentState) {
-      if ([layer presentationLayer]) {
-        initialValue = [[layer presentationLayer] valueForKeyPath:keyPath];
-      } else {
-        initialValue = [layer valueForKeyPath:keyPath];
-      }
-    } else {
-      initialValue = [values firstObject];
+  BOOL beginFromCurrentState = self.beginFromCurrentState;
+
+  [self addAnimation:animation
+             toLayer:layer
+         withKeyPath:keyPath
+              traits:traits
+     timeScaleFactor:timeScaleFactor
+         destination:[values lastObject]
+        initialValue:^(BOOL wantsPresentationValue) {
+          if (beginFromCurrentState) {
+            if (wantsPresentationValue && [layer presentationLayer]) {
+              return [[layer presentationLayer] valueForKeyPath:keyPath];
+            } else {
+              return [layer valueForKeyPath:keyPath];
+            }
+          } else {
+            return [values firstObject];
+          }
+
+        } completion:completion];
+
+  commitToModelLayer();
+
+  for (void (^tracer)(CALayer *, CAAnimation *) in _tracers) {
+    tracer(layer, animation);
+  }
+}
+
+- (void)animateWithTraits:(MDMAnimationTraits *)traits animations:(void (^)(void))animations {
+  [self animateWithTraits:traits animations:animations completion:nil];
+}
+
+- (void)animateWithTraits:(MDMAnimationTraits *)traits
+               animations:(void (^)(void))animations
+               completion:(void(^)(BOOL))completion {
+  NSArray<MDMImplicitAction *> *actions = MDMAnimateImplicitly(animations);
+
+  void (^exitEarly)(void) = ^{
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    animations();
+    [CATransaction commit];
+
+    if (completion) {
+      completion(YES);
     }
+  };
 
-    animation.fromValue = initialValue;
-    animation.toValue = [values lastObject];
+  CGFloat timeScaleFactor = [self computedTimeScaleFactor];
+  if (timeScaleFactor == 0) {
+    exitEarly();
+    return; // No need to animate anything.
+  }
 
-    if (![animation.fromValue isEqual:animation.toValue]) {
-      if (self.additive) {
-        makeAnimationAdditive(animation);
-      }
+  // We'll reuse this animation template for each action.
+  CABasicAnimation *animationTemplate = MDMAnimationFromTraits(traits, timeScaleFactor);
+  if (animationTemplate == nil) {
+    exitEarly();
+    return;
+  }
 
-      if (timing.delay != 0) {
-        animation.beginTime = ([layer convertTime:CACurrentMediaTime() fromLayer:nil]
-                               + timing.delay * timeScaleFactor);
-        animation.fillMode = kCAFillModeBackwards;
-      }
+  [CATransaction begin];
+  if (completion) {
+    [CATransaction setCompletionBlock:^{
+      completion(YES);
+    }];
+  }
 
-      if (completion) {
-        [CATransaction begin];
-        [CATransaction setCompletionBlock:completion];
-      }
+  for (MDMImplicitAction *action in actions) {
+    CABasicAnimation *animation = [animationTemplate copy];
 
-      // When we use a nil key, Core Animation will ensure that the animation is added with a
-      // unique key - this enables our additive animations to stack upon one another.
-      [layer addAnimation:animation forKey:nil];
+    [self addAnimation:animation
+               toLayer:action.layer
+           withKeyPath:action.keyPath
+                traits:traits
+       timeScaleFactor:timeScaleFactor
+           destination:[action.layer valueForKeyPath:action.keyPath]
+          initialValue:^(BOOL wantsPresentationValue) {
+               if (wantsPresentationValue && action.hadPresentationLayer) {
+                 return action.initialPresentationValue;
+               } else {
+                 // Additive animations always animate from the initial model layer value.
+                 return action.initialModelValue;
+               }
+             } completion:nil];
 
-      for (void (^tracer)(CALayer *, CAAnimation *) in _tracers) {
-        tracer(layer, animation);
-      }
-
-      if (completion) {
-        [CATransaction commit];
-      }
+    for (void (^tracer)(CALayer *, CAAnimation *) in _tracers) {
+      tracer(action.layer, animation);
     }
   }
 
-  [layer setValue:[values lastObject] forKeyPath:keyPath];
+  [CATransaction commit];
 }
 
 - (void)addCoreAnimationTracer:(void (^)(CALayer *, CAAnimation *))tracer {
@@ -135,105 +188,163 @@ static void makeAnimationAdditive(CABasicAnimation *animation);
   [_tracers addObject:[tracer copy]];
 }
 
+- (void)removeAllAnimations {
+  [_registrar removeAllAnimations];
+}
+
+- (void)stopAllAnimations {
+  [_registrar commitCurrentAnimationValuesToAllLayers];
+  [_registrar removeAllAnimations];
+}
+
+#pragma mark - UIKit equivalency
+
++ (void)animateWithDuration:(NSTimeInterval)duration
+                 animations:(void (^ __nonnull)(void))animations {
+  [self animateWithDuration:duration animations:animations completion:nil];
+}
+
++ (void)animateWithDuration:(NSTimeInterval)duration
+                 animations:(void (^)(void))animations
+                 completion:(void (^)(BOOL))completion {
+  [self animateWithDuration:duration
+                      delay:UIViewAnimationOptionCurveEaseInOut
+                    options:0
+                 animations:animations
+                 completion:completion];
+}
+
++ (void)animateWithDuration:(NSTimeInterval)duration
+                      delay:(NSTimeInterval)delay
+                    options:(UIViewAnimationOptions)options
+                 animations:(void (^ __nonnull)(void))animations
+                 completion:(void (^ __nullable)(BOOL finished))completion {
+  MDMMotionAnimator *animator = [[[self class] alloc] init];
+  MDMAnimationTraits *traits = [[MDMAnimationTraits alloc] initWithDuration:duration];
+  traits.delay = delay;
+  if ((options & UIViewAnimationOptionCurveEaseIn) == UIViewAnimationOptionCurveEaseIn) {
+    traits.timingCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+  } else if ((options & UIViewAnimationOptionCurveEaseOut) == UIViewAnimationOptionCurveEaseOut) {
+    traits.timingCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+  } else if ((options & UIViewAnimationOptionCurveLinear) == UIViewAnimationOptionCurveLinear) {
+    traits.timingCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+  }
+  [animator animateWithTraits:traits animations:animations completion:completion];
+}
+
++ (void)animateWithDuration:(NSTimeInterval)duration
+                      delay:(NSTimeInterval)delay
+     usingSpringWithDamping:(CGFloat)dampingRatio
+      initialSpringVelocity:(CGFloat)velocity
+                    options:(UIViewAnimationOptions)options
+                 animations:(void (^)(void))animations
+                 completion:(void (^)(BOOL))completion {
+  MDMMotionAnimator *animator = [[[self class] alloc] init];
+  MDMAnimationTraits *traits = [[MDMAnimationTraits alloc] initWithDuration:duration];
+  traits.delay = delay;
+  traits.timingCurve =
+      [[MDMSpringTimingCurveGenerator alloc] initWithDuration:duration
+                                                 dampingRatio:dampingRatio
+                                              initialVelocity:velocity].springTimingCurve;
+  [animator animateWithTraits:traits animations:animations completion:completion];
+}
+
+#pragma mark - Legacy
+
+- (void)animateWithTiming:(MDMMotionTiming)timing animations:(void (^)(void))animations {
+  MDMAnimationTraits *traits = [[MDMAnimationTraits alloc] initWithMotionTiming:timing];
+  [self animateWithTraits:traits animations:animations];
+}
+
+- (void)animateWithTiming:(MDMMotionTiming)timing
+               animations:(void (^)(void))animations
+               completion:(void (^)(void))completion {
+  MDMAnimationTraits *traits = [[MDMAnimationTraits alloc] initWithMotionTiming:timing];
+  [self animateWithTraits:traits animations:animations completion:^(BOOL didComplete) {
+    if (completion) {
+      completion();
+    }
+  }];
+}
+
+- (void)animateWithTiming:(MDMMotionTiming)timing
+                  toLayer:(CALayer *)layer
+               withValues:(NSArray *)values
+                  keyPath:(MDMAnimatableKeyPath)keyPath {
+  MDMAnimationTraits *traits = [[MDMAnimationTraits alloc] initWithMotionTiming:timing];
+  [self animateWithTraits:traits between:values layer:layer keyPath:keyPath];
+}
+
+- (void)animateWithTiming:(MDMMotionTiming)timing
+                  toLayer:(CALayer *)layer
+               withValues:(NSArray *)values
+                  keyPath:(MDMAnimatableKeyPath)keyPath
+               completion:(void (^)(void))completion {
+  MDMAnimationTraits *traits = [[MDMAnimationTraits alloc] initWithMotionTiming:timing];
+  [self animateWithTraits:traits
+                  between:values
+                    layer:layer
+                  keyPath:keyPath
+               completion:^(BOOL didComplete) {
+                 if (completion) {
+                   completion();
+                 }
+               }];
+}
+
+#pragma mark - Private
+
+- (CGFloat)computedTimeScaleFactor {
+  CGFloat timeScaleFactor;
+  id transactionTimeScaleFactor = [CATransaction mdm_timeScaleFactor];
+  if (transactionTimeScaleFactor != nil) {
+#if CGFLOAT_IS_DOUBLE
+    timeScaleFactor = [transactionTimeScaleFactor doubleValue];
+#else
+    timeScaleFactor = [transactionTimeScaleFactor floatValue];
+#endif
+  } else {
+    timeScaleFactor = _timeScaleFactor;
+  }
+
+  return MDMSimulatorAnimationDragCoefficient() * timeScaleFactor;
+}
+
+- (void)addAnimation:(CABasicAnimation *)animation
+             toLayer:(CALayer *)layer
+         withKeyPath:(NSString *)keyPath
+              traits:(MDMAnimationTraits *)traits
+     timeScaleFactor:(CGFloat)timeScaleFactor
+         destination:(id)destination
+        initialValue:(id(^)(BOOL wantsPresentationValue))initialValueBlock
+          completion:(void(^)(BOOL))completion {
+  // Must configure the keyPath and toValue before we can identify whether the animation supports
+  // being additive.
+  animation.keyPath = keyPath;
+  animation.toValue = destination;
+  animation.additive = self.additive && MDMCanAnimationBeAdditive(keyPath, animation.toValue);
+
+  // Additive animations always read from the model layer's value so that the new displacement
+  // reflects the change in destination and momentum appears to be conserved across multiple
+  // animations.
+  //
+  // Non-additive animations should try to read from the presentation layer's current value
+  // because we'll be interrupting whatever animation previously existed and immediately moving
+  // toward the new destination.
+  BOOL wantsPresentationValue = self.beginFromCurrentState && !animation.additive;
+  animation.fromValue = initialValueBlock(wantsPresentationValue);
+
+  NSString *key = animation.additive ? nil : keyPath;
+
+  MDMConfigureAnimation(animation, traits);
+
+  if (traits.delay != 0) {
+    animation.beginTime = ([layer convertTime:CACurrentMediaTime() fromLayer:nil]
+                           + traits.delay * timeScaleFactor);
+    animation.fillMode = kCAFillModeBackwards;
+  }
+
+  [_registrar addAnimation:animation toLayer:layer forKey:key completion:completion];
+}
+
 @end
-
-static CAMediaTimingFunction* timingFunctionWithControlPoints(CGFloat controlPoints[4]) {
-  return [CAMediaTimingFunction functionWithControlPoints:(float)controlPoints[0]
-                                                         :(float)controlPoints[1]
-                                                         :(float)controlPoints[2]
-                                                         :(float)controlPoints[3]];
-}
-
-static NSArray* coerceUIKitValuesToCoreAnimationValues(NSArray *values) {
-  if ([[values firstObject] isKindOfClass:[UIColor class]]) {
-    NSMutableArray *convertedArray = [NSMutableArray arrayWithCapacity:values.count];
-    for (UIColor *color in values) {
-      [convertedArray addObject:(id)color.CGColor];
-    }
-    values = convertedArray;
-
-  } else if ([[values firstObject] isKindOfClass:[UIBezierPath class]]) {
-    NSMutableArray *convertedArray = [NSMutableArray arrayWithCapacity:values.count];
-    for (UIBezierPath *bezierPath in values) {
-      [convertedArray addObject:(id)bezierPath.CGPath];
-    }
-    values = convertedArray;
-  }
-  return values;
-}
-
-static CABasicAnimation *animationFromTiming(MDMMotionTiming timing, CGFloat timeScaleFactor) {
-  CABasicAnimation *animation;
-  switch (timing.curve.type) {
-    case MDMMotionCurveTypeInstant:
-      animation = nil;
-      break;
-
-    case MDMMotionCurveTypeDefault:
-    case MDMMotionCurveTypeBezier:
-      animation = [CABasicAnimation animation];
-      animation.timingFunction = timingFunctionWithControlPoints(timing.curve.data);
-      animation.duration = timing.duration * timeScaleFactor;
-      break;
-
-    case MDMMotionCurveTypeSpring: {
-#pragma clang diagnostic push
-      // CASpringAnimation is a private API on iOS 8 - we're able to make use of it because we're
-      // linking against the public API on iOS 9+.
-#pragma clang diagnostic ignored "-Wpartial-availability"
-      CASpringAnimation *spring = [CASpringAnimation animation];
-#pragma clang diagnostic pop
-      spring.mass = timing.curve.data[MDMSpringMotionCurveDataIndexMass];
-      spring.stiffness = timing.curve.data[MDMSpringMotionCurveDataIndexTension];
-      spring.damping = timing.curve.data[MDMSpringMotionCurveDataIndexFriction];
-
-      // This API is only available on iOS 9+
-      if ([spring respondsToSelector:@selector(settlingDuration)]) {
-        spring.duration = spring.settlingDuration;
-      } else {
-        spring.duration = timing.duration;
-      }
-      animation = spring;
-      break;
-    }
-  }
-  return animation;
-}
-
-static void makeAnimationAdditive(CABasicAnimation *animation) {
-  static NSSet *sizeKeyPaths = nil;
-  static NSSet *positionKeyPaths = nil;
-  static dispatch_once_t onceToken;
-  dispatch_once(&onceToken, ^{
-    sizeKeyPaths = [NSSet setWithArray:@[@"bounds.size"]];
-
-    positionKeyPaths = [NSSet setWithArray:@[@"position",
-                                             @"anchorPoint"]];
-  });
-
-  if ([animation.toValue isKindOfClass:[NSNumber class]]) {
-    CGFloat currentValue = (CGFloat)[animation.fromValue doubleValue];
-    CGFloat delta = currentValue - (CGFloat)[animation.toValue doubleValue];
-    animation.fromValue = @(delta);
-    animation.toValue = @0;
-    animation.additive = true;
-
-  } else if ([sizeKeyPaths containsObject:animation.keyPath]) {
-    CGSize currentValue = [animation.fromValue CGSizeValue];
-    CGSize destinationValue = [animation.toValue CGSizeValue];
-    CGSize delta = CGSizeMake(currentValue.width - destinationValue.width,
-                              currentValue.height - destinationValue.height);
-    animation.fromValue = [NSValue valueWithCGSize:delta];
-    animation.toValue = [NSValue valueWithCGSize:CGSizeZero];
-    animation.additive = true;
-
-  } else if ([positionKeyPaths containsObject:animation.keyPath]) {
-    CGPoint currentValue = [animation.fromValue CGPointValue];
-    CGPoint destinationValue = [animation.toValue CGPointValue];
-    CGPoint delta = CGPointMake(currentValue.x - destinationValue.x,
-                                currentValue.y - destinationValue.y);
-    animation.fromValue = [NSValue valueWithCGPoint:delta];
-    animation.toValue = [NSValue valueWithCGPoint:CGPointZero];
-    animation.additive = true;
-  }
-}

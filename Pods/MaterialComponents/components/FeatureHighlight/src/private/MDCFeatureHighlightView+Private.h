@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MaterialFeatureHighlight.h"
+#import "MDCFeatureHighlightView.h"
 
 typedef void (^MDCFeatureHighlightInteractionBlock)(BOOL accepted);
 
@@ -29,7 +29,7 @@ typedef void (^MDCFeatureHighlightInteractionBlock)(BOOL accepted);
 @property(nonatomic, strong) UIView *displayedView;
 @property(nonatomic, strong) UILabel *titleLabel;
 @property(nonatomic, strong) UILabel *bodyLabel;
-@property(nonatomic, strong) MDCFeatureHighlightInteractionBlock interactionBlock;
+@property(nonatomic, copy) MDCFeatureHighlightInteractionBlock interactionBlock;
 
 @end
 
@@ -44,6 +44,7 @@ typedef void (^MDCFeatureHighlightInteractionBlock)(BOOL accepted);
 - (void)animateRejected:(NSTimeInterval)duration;
 - (void)animatePulse;
 
-- (void)updateFontsForDynamicType;
+- (void)updateTitleFont;
+- (void)updateBodyFont;
 
 @end

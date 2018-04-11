@@ -14,10 +14,11 @@
  limitations under the License.
  */
 
+#import <CoreGraphics/CoreGraphics.h>
+
 #import "MDCPillShapeGenerator.h"
 
 #import "MaterialMath.h"
-#import "MDCRectangleShapeGenerator.h"
 #import "MDCRoundedCornerTreatment.h"
 
 @implementation MDCPillShapeGenerator {

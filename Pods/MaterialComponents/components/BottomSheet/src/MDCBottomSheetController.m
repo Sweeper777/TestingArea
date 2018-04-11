@@ -14,7 +14,11 @@
  limitations under the License.
  */
 
-#import "MaterialBottomSheet.h"
+#import "MDCBottomSheetController.h"
+
+#import "MDCBottomSheetPresentationController.h"
+#import "MDCBottomSheetTransitionController.h"
+#import "UIViewController+MaterialBottomSheet.h"
 
 @interface MDCBottomSheetController () <MDCBottomSheetPresentationControllerDelegate>
 @end
@@ -50,7 +54,10 @@
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
   self.mdc_bottomSheetPresentationController.delegate = self;
+#pragma clang diagnostic pop
 
   [self.contentViewController.view layoutIfNeeded];
 }
@@ -72,6 +79,24 @@
   self.contentViewController.preferredContentSize = preferredContentSize;
 }
 
+- (void)preferredContentSizeDidChangeForChildContentContainer:(id<UIContentContainer>)container {
+  [super preferredContentSizeDidChangeForChildContentContainer:container];
+  // Informing the presentation controller of the change in preferred content size needs to be done
+  // directly since the MDCBottomSheetController's preferredContentSize property is backed by
+  // contentViewController's preferredContentSize. Therefore |[super setPreferredContentSize:]| is
+  // never called, and UIKit never calls |preferredContentSizeDidChangeForChildContentContainer:|
+  // on the presentation controller.
+  [self.presentationController preferredContentSizeDidChangeForChildContentContainer:self];
+}
+
+- (UIScrollView *)trackingScrollView {
+  return _transitionController.trackingScrollView;
+}
+
+- (void)setTrackingScrollView:(UIScrollView *)trackingScrollView {
+  _transitionController.trackingScrollView = trackingScrollView;
+}
+
 /* Disable setter. Always use internal transition controller */
 - (void)setTransitioningDelegate:
     (__unused id<UIViewControllerTransitioningDelegate>)transitioningDelegate {
@@ -85,8 +110,11 @@
   return;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)bottomSheetPresentationControllerDidDismissBottomSheet:
     (nonnull __unused MDCBottomSheetPresentationController *)bottomSheet {
+#pragma clang diagnostic pop
   [self.delegate bottomSheetControllerDidDismissBottomSheet:self];
 }
 

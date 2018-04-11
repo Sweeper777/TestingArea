@@ -16,13 +16,13 @@
 
 #import "MDCAppBarButtonBarBuilder.h"
 
-#import "MDCButtonBar+Private.h"
-#import "MaterialButtons.h"
-#import "MaterialRTL.h"
-
 #import <objc/runtime.h>
+#import <MDFInternationalization/MDFInternationalization.h>
 
-static const CGFloat kMinimumItemWidth = 36.f;
+#import "MaterialButtons.h"
+#import "MDCButtonBarButton.h"
+#import "MDCButtonBar+Private.h"
+#import "MDCButtonBarButton+Private.h"
 
 // The padding around button contents.
 static const CGFloat kButtonPaddingHorizontal = 12.f;
@@ -47,13 +47,6 @@ static const UIEdgeInsets kImageOnlyButtonInset = {0, 12.0f, 0, 12.0f};
 // steal them away. In order to avoid crashing during KVO updates, we steal the view away and
 // replace it with a sandbag view.
 @interface MDCButtonBarSandbagView : UIView
-@end
-
-@interface MDCButtonBarButton : MDCFlatButton
-
-// Content padding for the button.
-@property(nonatomic) UIEdgeInsets contentPadding;
-
 @end
 
 @interface UIBarButtonItem (MDCHeaderInternal)
@@ -122,7 +115,7 @@ static const UIEdgeInsets kImageOnlyButtonInset = {0, 12.0f, 0, 12.0f};
   UIEdgeInsets contentInsets = [MDCAppBarButtonBarBuilder
       contentInsetsForButton:button
                  layoutHints:layoutHints
-             layoutDirection:[buttonBar mdc_effectiveUserInterfaceLayoutDirection]
+             layoutDirection:[buttonBar mdf_effectiveUserInterfaceLayoutDirection]
                                 userInterfaceIdiom:[self usePadInsetsForButtonBar:buttonBar] ?
                                 UIUserInterfaceIdiomPad : UIUserInterfaceIdiomPhone];
 
@@ -293,32 +286,6 @@ static const UIEdgeInsets kImageOnlyButtonInset = {0, 12.0f, 0, 12.0f};
 @end
 
 @implementation MDCButtonBarSandbagView
-@end
-
-@implementation MDCButtonBarButton
-
-- (CGSize)sizeThatFits:(CGSize)size {
-  CGSize fitSize = [super sizeThatFits:size];
-  fitSize.height =
-      self.contentPadding.top + MAX(kMinimumItemWidth, fitSize.height) + self.contentPadding.bottom;
-  fitSize.width =
-      self.contentPadding.left + MAX(kMinimumItemWidth, fitSize.width) + self.contentPadding.right;
-
-  return fitSize;
-}
-
-- (void)layoutSubviews {
-  [super layoutSubviews];
-
-  // TODO(featherless): Remove this conditional and always set the max ripple radius once
-  // https://github.com/material-components/material-components-ios/issues/329 lands.
-  if (self.inkStyle == MDCInkStyleUnbounded) {
-    self.inkMaxRippleRadius = MIN(self.bounds.size.width, self.bounds.size.height) / 2;
-  } else {
-    self.inkMaxRippleRadius = 0;
-  }
-}
-
 @end
 
 @implementation UIBarButtonItem (MDCHeaderInternal)
