@@ -33,38 +33,10 @@ class MyViewController2: UIViewController {
     }
     
 }
-@IBDesignable class UIButtonRounded: UIButton
-{
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateCornerRadius()
+    
+    
     }
     
-    @IBInspectable var rounded: Bool = false {
-        didSet {
-            updateCornerRadius()
-        }
-    }
-    
-    @IBInspectable var border: Bool = false {
-        didSet {
-            updateCornerRadius()
-        }
-    }
-    
-    @IBInspectable var radious: CGFloat = 0 {
-        didSet {
-            updateCornerRadius()
-        }
-    }
-    
-    func updateCornerRadius() {
-        layer.cornerRadius = rounded ? radious : 0
-        layer.masksToBounds = true
-        if(border){
-            layer.borderWidth = 1.3
-            layer.borderColor = UIColor.blue.cgColor
-        }
         
     }
 }
