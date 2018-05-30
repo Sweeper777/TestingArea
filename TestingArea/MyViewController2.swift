@@ -2,6 +2,7 @@ import UIKit
 import SwiftyUtils
 import RxSwift
 import SceneKit
+import SwiftyJSON
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -22,6 +23,8 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        UserDefaults.standard.set(try! Customer().toJSON().rawData(), forKey: "my key")
+        let customer = Customer.fromJSON(JSON(data: UserDefaults.standard.data(forKey: "my key")!))
     }
     
     override func viewDidLayoutSubviews() {
@@ -33,10 +36,25 @@ class MyViewController2: UIViewController {
     }
     
 }
+
+class Customer: NSObject {
     
+    var name: String!
+    var age: Int!
+    var address: String!
     
+    func toJSON() -> JSON {
+        return [
+            "name": name,
+            "age": age,
+            "address": address
+        ]
     }
     
+    static func fromJSON(_ json: JSON) -> Customer {
+        let customer = Customer()
+        customer.name = json["name"].string
+        customer.age = json["age"].int
         
     }
 }
