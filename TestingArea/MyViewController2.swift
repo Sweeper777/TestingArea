@@ -36,25 +36,3 @@ class MyViewController2: UIViewController {
     }
     
 }
-
-class Customer: NSObject {
-    
-    var name: String!
-    var age: Int!
-    var address: String!
-    
-    func toJSON() -> JSON {
-        return [
-            "name": name,
-            "age": age,
-            "address": address
-        ]
-    }
-    
-    static func fromJSON(_ json: JSON) -> Customer {
-        let customer = Customer()
-        customer.name = json["name"].string
-        customer.age = json["age"].int
-        
-    }
-}
