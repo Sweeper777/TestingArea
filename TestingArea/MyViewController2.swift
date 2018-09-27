@@ -23,8 +23,9 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        UserDefaults.standard.set(try! Customer().toJSON().rawData(), forKey: "my key")
-        let customer = Customer.fromJSON(JSON(data: UserDefaults.standard.data(forKey: "my key")!))
+        UIView.animate(withDuration: 2, animations: {
+            self.textview.transform = self.textview.transform.scaledBy(x: 0.9, y: 0.9)
+        },completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
