@@ -1,11 +1,11 @@
 import SceneKit
 
 class MyScene: SCNScene {
-    var cameraNode: SCNNode!
-    var box: SCNNode!
-    var ground: SCNNode!
+    @objc var cameraNode: SCNNode!
+    @objc var box: SCNNode!
+    @objc var ground: SCNNode!
     
-    func setup() {
+    @objc func setup() {
         cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 10)
@@ -26,7 +26,7 @@ class MyScene: SCNScene {
         self.rootNode.addChildNode(ground)
     }
     
-    func executeCommand(_ command: String) {
+    @objc func executeCommand(_ command: String) {
         let parts = command.components(separatedBy: " ")
         let node: SCNNode
         guard let nodeString = parts.first else { return }
