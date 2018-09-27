@@ -20,6 +20,7 @@ class MyViewController2: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.textview.backgroundColor = .red
     }
     
     @IBAction func click() {
