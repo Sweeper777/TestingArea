@@ -14,6 +14,7 @@ target 'TestingArea' do
     pod 'GoogleSignIn'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'MaterialComponents'
+    pod 'TagWriteView'
+    pod 'MultiAutoCompleteTextSwift'
 end
 
