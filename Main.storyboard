@@ -137,12 +137,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXL-W4-WLU" customClass="MultiAutoCompleteTextField" customModule="MultiAutoCompleteTextSwift">
+                                <rect key="frame" x="16" y="220" width="238" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                     <connections>
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
+                        <outlet property="multiAutocomplete" destination="UXL-W4-WLU" id="eXt-Uv-6Ae"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
