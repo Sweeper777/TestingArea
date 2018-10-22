@@ -7,14 +7,9 @@ target 'TestingArea' do
     pod 'SwiftyJSON'
     pod 'SwiftyUtils'
     pod 'SlideMenuControllerSwift'
-    pod 'RealmSwift'
     pod 'Alamofire'
     pod 'Firebase/Core'
-    pod 'Firebase/Auth'
-    pod 'GoogleSignIn'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'TagWriteView'
-    pod 'MultiAutoCompleteTextSwift'
 end
 
