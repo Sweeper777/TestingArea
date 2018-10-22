@@ -5,8 +5,7 @@ use_frameworks!
 
 target 'TestingArea' do
     pod 'SwiftyJSON'
-    pod 'SwiftyUtils'
-    pod 'SlideMenuControllerSwift'
+    pod 'SwiftyUtils', :git => 'https://github.com/tbaranes/SwiftyUtils.git', :commit => '982bffaadf8e831e75d3444dfba56af4d3962224'
     pod 'Alamofire'
     pod 'Firebase/Core'
     pod 'RxSwift'

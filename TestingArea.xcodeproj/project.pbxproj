@@ -10,8 +10,6 @@
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
 		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
-		5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */; };
-		5A16C0371E2E0F2500D1DE46 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A16C0361E2E0F2500D1DE46 /* AnotherViewController.swift */; };
 		5A1C32C21EB4F66200C47F13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5A1FD0421DFD53390071AE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0411DFD53390071AE2F /* AppDelegate.swift */; };
@@ -93,8 +91,6 @@
 		5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NBEmojiSearchView.framework; path = "Pods/../build/Debug-iphoneos/NBEmojiSearchView/NBEmojiSearchView.framework"; sourceTree = "<group>"; };
 		5A158C8E1E369484007000FD /* AllEmoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllEmoji.json; sourceTree = "<group>"; };
 		5A16C0301E2E01F600D1DE46 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SlideMenuControllerSwift/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
-		5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySlideMenuController.swift; sourceTree = "<group>"; };
-		5A16C0361E2E0F2500D1DE46 /* AnotherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
 		5A171C841DF7328600567EEE /* MLScreenshot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MLScreenshot.framework; path = "Pods/../build/Debug-iphoneos/MLScreenshot/MLScreenshot.framework"; sourceTree = "<group>"; };
 		5A171DC21DECAB92007E2DEE /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Release-iphoneos/Eureka.framework"; sourceTree = "<group>"; };
 		5A177EEB1DD9F09B00FCB79C /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "Pods/../build/Debug-iphoneos/Eureka/Eureka.framework"; sourceTree = "<group>"; };
@@ -275,8 +271,6 @@
 				5AFA741B1CDD7589007C3B7C /* Main.storyboard */,
 				5AFE67D11D2B8F5F0074ACAE /* Property List.plist */,
 				5AE001061CAA0F3A0058B744 /* AppDelegate.swift */,
-				5A16C0321E2E026F00D1DE46 /* MySlideMenuController.swift */,
-				5A16C0361E2E0F2500D1DE46 /* AnotherViewController.swift */,
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
@@ -409,7 +403,7 @@
 					5AE001021CAA0F3A0058B744 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = E9MW74DJ4Y;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 					};
 					5AFEC0FF1DA0468F0054FAAA = {
 						CreatedOnToolsVersion = 8.0;
@@ -419,7 +413,7 @@
 					5AFEC10B1DA046900054FAAA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = E9MW74DJ4Y;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -524,7 +518,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -535,7 +528,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -568,9 +560,7 @@
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
-				5A16C0331E2E026F00D1DE46 /* MySlideMenuController.swift in Sources */,
 				5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */,
-				5A16C0371E2E0F2500D1DE46 /* AnotherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,7 +811,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -863,7 +853,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -922,7 +912,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
@@ -941,7 +931,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
