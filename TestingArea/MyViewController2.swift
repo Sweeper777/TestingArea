@@ -27,6 +27,7 @@ class MyViewController2: UIViewController {
             BarChartDataEntry(x: 11, y: 36),
             BarChartDataEntry(x: 13, y: 49),
             ], label: "Squares")
+        dataSet1.colors = [UIColor.green.darker()]
         let dataSet2 = BarChartDataSet(values: [
             BarChartDataEntry(x: 2, y: 1),
             BarChartDataEntry(x: 4, y: 8),
@@ -36,6 +37,8 @@ class MyViewController2: UIViewController {
             BarChartDataEntry(x: 12, y: 196),
             BarChartDataEntry(x: 14, y: 343),
             ], label: "Cubes")
+        
+        dataSet2.colors = [UIColor.blue.darker()]
         
         barChart.data = BarChartData(dataSets: [dataSet1, dataSet2])
     }
