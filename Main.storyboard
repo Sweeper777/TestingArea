@@ -70,20 +70,8 @@
                                     <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="eQX-1V-SwJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U2-vv-ZH4" customClass="UIButtonRounded" customModule="TestingArea" customModuleProvider="target">
-                                <rect key="frame" x="137" y="295" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="border" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="radious">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXL-W4-WLU" customClass="MultiAutoCompleteTextField" customModule="MultiAutoCompleteTextSwift">
-                                <rect key="frame" x="16" y="220" width="238" height="33"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T82-su-roU" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="218" width="273" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -92,8 +80,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                     <connections>
+                        <outlet property="barChart" destination="T82-su-roU" id="WSx-GO-bzf"/>
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
-                        <outlet property="multiAutocomplete" destination="UXL-W4-WLU" id="eXt-Uv-6Ae"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
