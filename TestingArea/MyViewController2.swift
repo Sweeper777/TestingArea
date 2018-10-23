@@ -44,5 +44,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        (barChart.barData?.dataSets.first as? BarChartDataSet)?.colors = [UIColor.red]
     }
 }
