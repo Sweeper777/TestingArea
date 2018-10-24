@@ -41,6 +41,10 @@ class MyViewController2: UIViewController {
         dataSet2.colors = [UIColor.blue.darker()]
         
         barChart.data = BarChartData(dataSets: [dataSet1, dataSet2])
+        barChart.setScaleEnabled(false)
+        barChart.dragEnabled = false
+        barChart.drawValueAboveBarEnabled = false
+        
     }
     
     @IBAction func click() {
