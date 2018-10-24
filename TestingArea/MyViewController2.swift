@@ -51,3 +51,13 @@ class MyViewController2: UIViewController {
         (barChart.barData?.dataSets.first as? BarChartDataSet)?.colors = [UIColor.red]
     }
 }
+
+class MyValueFormatter : IAxisValueFormatter {
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        if Int(value) % 2 == 1 {
+            return ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh"][Int(value) / 2]
+        } else {
+            return ""
+        }
+    }
+}
