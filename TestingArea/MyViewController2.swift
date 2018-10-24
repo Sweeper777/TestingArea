@@ -45,6 +45,7 @@ class MyViewController2: UIViewController {
         barChart.dragEnabled = false
         barChart.drawValueAboveBarEnabled = false
         
+        barChart.xAxis.valueFormatter = MyValueFormatter()
     }
     
     @IBAction func click() {
