@@ -10,6 +10,5 @@ target 'TestingArea' do
     pod 'Firebase/Core'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'Charts', :git => 'https://github.com/danielgindi/Charts.git', :branch => 'master'
 end
 
