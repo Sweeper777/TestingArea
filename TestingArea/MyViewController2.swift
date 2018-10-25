@@ -17,6 +17,24 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let bars = BarsChart(frame: barChart.frame,
+                             chartConfig: BarsChartConfig(valsAxisConfig: ChartAxisConfig(from: 1, to: 7, by: 1)),
+                             xTitle: "x",
+                             yTitle: "x squared",
+                             bars: [
+                            ("one", 1),
+                            ("two", 4),
+                            ("three", 9),
+                            ("four", 16),
+                            ("five", 25),
+                            ("six", 36),
+                            ("seven", 49),
+                                ],
+                             color: .blue,
+                             barWidth: 5)
+        barChart.removeFromSuperview()
+        view.addSubview(bars.view)
     }
     
     @IBAction func click() {
