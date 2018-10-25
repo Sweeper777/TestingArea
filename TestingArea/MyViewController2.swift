@@ -3,12 +3,13 @@ import SwiftyUtils
 import RxSwift
 import SceneKit
 import SwiftyJSON
-import Charts
+import SwiftCharts
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
+    @IBOutlet var barChart: ChartBaseView!
     
     let disposeBag = DisposeBag()
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
