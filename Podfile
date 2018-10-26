@@ -11,5 +11,6 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'SwiftCharts', '0.6.2'
+    pod 'ISHPullUp'
 end
 
