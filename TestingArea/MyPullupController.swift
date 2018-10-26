@@ -3,7 +3,11 @@ import ISHPullUp
 
 class MyPullupController: ISHPullUpViewController {
     override func viewDidLoad() {
-        self.contentViewController = UIStoryboard.main?.instantiateViewController(withIdentifier: "MyVC")
-        self.bottomViewController = UIStoryboard.main?.instantiateViewController(withIdentifier: "PullupVC")
+        let contentVC = UIStoryboard.main?.instantiateViewController(withIdentifier: "MyVC")
+        let bottomVC = UIStoryboard.main?.instantiateViewController(withIdentifier: "PullupVC") as! MyViewController
+        contentViewController = contentVC
+        bottomViewController = bottomVC
+        sizingDelegate = bottomVC
+        stateDelegate = bottomVC
     }
 }
