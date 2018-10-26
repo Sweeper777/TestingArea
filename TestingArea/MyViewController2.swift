@@ -35,6 +35,8 @@ class MyViewController2: UIViewController {
                              barWidth: 5)
         barChart.removeFromSuperview()
         view.addSubview(bars.view)
+        
+        print(self.parent?.parent ?? "No parent")
     }
     
     @IBAction func click() {
