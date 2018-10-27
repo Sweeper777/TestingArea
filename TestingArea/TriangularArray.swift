@@ -12,5 +12,28 @@ struct TriangularArray<T> : Sequence, ExpressibleByArrayLiteral {
             innerArray.append(Array(repeating: defaultValue, count: i + 1))
         }
     }
+    
+    subscript(_ row: Int, _ index: Int) -> T? {
+        get {
+            if row < 0 || row >= innerArray.count {
+                return nil
+            }
+            if index < 0 || index > row {
+                return nil
+            }
+            return innerArray[row][index]
+        }
+        
+        set {
+            if row < 0 || row >= innerArray.count {
+                return
+            }
+            if index < 0 || index > row {
+                return
+            }
+            innerArray[row][index] = newValue!
+        }
+    }
+    
 }
 
