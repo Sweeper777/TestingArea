@@ -71,6 +71,10 @@
                             <constraint firstItem="irr-tc-iPH" firstAttribute="leading" secondItem="XmK-Nn-I2L" secondAttribute="leadingMargin" id="yv3-wG-XwK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pullUpHandle" destination="irr-tc-iPH" id="mrQ-5L-Srp"/>
+                        <outlet property="textView" destination="n6L-T2-czW" id="u3h-eU-wgz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glQ-Yj-Zps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
