@@ -35,5 +35,37 @@ struct TriangularArray<T> : Sequence, ExpressibleByArrayLiteral {
         }
     }
     
+    func makeIterator() -> TriangularArray<T>._Iterator {
+        return _Iterator(triangularArray: self, currentRow: -1, currentIndex: -1)
+    }
+    
+    init(arrayLiteral elements: ArrayLiteralElement...) {
+        rowCount = elements.count
+        innerArray = elements
+    }
+    
+    typealias Element = T
+    typealias Iterator = _Iterator
+    typealias ArrayLiteralElement = [T]
+    
+    struct _Iterator : IteratorProtocol {
+        let triangularArray: TriangularArray
+        var currentRow: Int
+        var currentIndex: Int
+        
+        mutating func next() -> T? {
+            currentIndex += 1
+            if currentIndex > currentRow {
+                currentIndex = 0
+                currentRow += 1
+            }
+            if currentRow >= triangularArray.rowCount {
+                return nil
+            }
+            return triangularArray[currentRow, currentIndex]
+        }
+        
+        typealias Element = T
+    }
 }
 
