@@ -39,6 +39,19 @@ struct TriangularArray<T> : Sequence, ExpressibleByArrayLiteral {
         return _Iterator(triangularArray: self, currentRow: -1, currentIndex: -1)
     }
     
+    func adjacentIndices(forRow row: Int, index: Int) -> [(Int, Int)] {
+        let possibleIndices = [
+            (row - 1, index - 1),
+            (row - 1, index),
+            (row, index - 1),
+            (row, index + 1),
+            (row + 1, index),
+            (row + 1, index + 1),
+        ]
+        return possibleIndices.filter {
+            (0..<rowCount).contains($0.0) && (0...$0.0).contains($0.1)
+        }
+    }
     init(arrayLiteral elements: ArrayLiteralElement...) {
         rowCount = elements.count
         innerArray = elements
