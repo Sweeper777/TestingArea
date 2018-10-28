@@ -14,4 +14,20 @@ class MyView: UIView {
         path.fill()
     }
     
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        print("point(inside:with:) called")
+        
+        func isInRegion(_ point: CGPoint) -> Bool {
+            return (0...bounds.midX).contains(point.x) || (bounds.midY...bounds.maxY).contains(point.y)
+        }
+        
+        guard let touches = event?.touches(for: self) else { return false }
+        guard !touches.isEmpty else { return false }
+        
+        print("passed all the guards")
+        let first = touches.first!
+        print("first touch: \(first.location(in: self))")
+        
+        return touches.map { $0.location(in: self) }.contains(where: isInRegion)
+    }
 }
