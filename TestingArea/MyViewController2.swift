@@ -51,5 +51,12 @@ class MyViewController2: UIViewController {
         for element in triangularArray {
             print(element)
         }
+        
+        print("----")
+        
+        print(triangularArray[3, 1]!)
+        triangularArray[3, 1] = 999
+        print(triangularArray[3, 1]!)
+        print(triangularArray[1, 3] ?? "Nil")
     }
 }
