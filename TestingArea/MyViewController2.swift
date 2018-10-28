@@ -45,7 +45,8 @@ class MyViewController2: UIViewController {
             [2, 3],
             [4, 5, 6],
             [7, 8, 9, 10],
-            [11, 12, 13, 14, 15]
+            [11, 12, 13, 14, 15],
+            [16, 17, 18, 19, 20, 21],
         ]
         
         for element in triangularArray {
@@ -58,5 +59,10 @@ class MyViewController2: UIViewController {
         triangularArray[3, 1] = 999
         print(triangularArray[3, 1]!)
         print(triangularArray[1, 3] ?? "Nil")
+        
+        print("----")
+        print(triangularArray.adjacentIndices(forRow: 0, index: 0))
+        print(triangularArray.adjacentIndices(forRow: 4, index: 0))
+        print(triangularArray.adjacentIndices(forRow: 3, index: 1))
     }
 }
