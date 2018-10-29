@@ -18,7 +18,9 @@
 		5A1FD0491DFD53390071AE2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1FD0481DFD53390071AE2F /* Assets.xcassets */; };
 		5A1FD04E1DFD56DE0071AE2F /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
 		5A23109D1E62E690009B39D2 /* NotoColorEmoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */; };
+		5A35DE5621846CD100001FB1 /* TriangularArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35DE5521846CD100001FB1 /* TriangularArray.swift */; };
 		5A373C1E1FB705C000F99847 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A373C1D1FB705C000F99847 /* test.txt */; };
+		5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A375C3D2185CDCC0020B23B /* MyView.swift */; };
 		5A37F7A5218305FA000217A9 /* MyPullupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A37F7A4218305FA000217A9 /* MyPullupController.swift */; };
 		5A3C5EBE202EDFC8001EB69E /* MyScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C5EBD202EDFC8001EB69E /* MyScene.swift */; };
 		5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5911F6455A60046FB51 /* Localizable.strings */; };
@@ -115,7 +117,9 @@
 		5A1FD0481DFD53390071AE2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A1FD04A1DFD53390071AE2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NotoColorEmoji.ttf; sourceTree = "<group>"; };
+		5A35DE5521846CD100001FB1 /* TriangularArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangularArray.swift; sourceTree = "<group>"; };
 		5A373C1D1FB705C000F99847 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		5A375C3D2185CDCC0020B23B /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		5A37F7A4218305FA000217A9 /* MyPullupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPullupController.swift; sourceTree = "<group>"; };
 		5A3C5EBC202EDEC4001EB69E /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		5A3C5EBD202EDFC8001EB69E /* MyScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScene.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5A37F7A4218305FA000217A9 /* MyPullupController.swift */,
+				5A35DE5521846CD100001FB1 /* TriangularArray.swift */,
+				5A375C3D2185CDCC0020B23B /* MyView.swift */,
 				5A3C5EBD202EDFC8001EB69E /* MyScene.swift */,
 				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
@@ -563,9 +569,11 @@
 			files = (
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
 				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
+				5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */,
 				5A3C5EBE202EDFC8001EB69E /* MyScene.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
+				5A35DE5621846CD100001FB1 /* TriangularArray.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 				5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */,
 				5A37F7A5218305FA000217A9 /* MyPullupController.swift in Sources */,
