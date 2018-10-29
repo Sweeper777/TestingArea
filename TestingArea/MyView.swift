@@ -21,7 +21,7 @@ class MyView: UIView {
             return (0...bounds.midX).contains(point.x) || (bounds.midY...bounds.maxY).contains(point.y)
         }
         
-        guard let touches = event?.touches(for: self) else { return false }
+        guard let touches = event?.allTouches else { return false }
         guard !touches.isEmpty else { return false }
         
         print("passed all the guards")
