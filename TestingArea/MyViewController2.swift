@@ -20,25 +20,11 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bars = BarsChart(frame: barChart.frame,
-                             chartConfig: BarsChartConfig(valsAxisConfig: ChartAxisConfig(from: 1, to: 7, by: 1)),
-                             xTitle: "x",
-                             yTitle: "x squared",
-                             bars: [
-                            ("one", 1),
-                            ("two", 4),
-                            ("three", 9),
-                            ("four", 16),
-                            ("five", 25),
-                            ("six", 36),
-                            ("seven", 49),
-                                ],
-                             color: .blue,
-                             barWidth: 5)
-        barChart.removeFromSuperview()
-        view.addSubview(bars.view)
+        blueView.isUserInteractionEnabled = true
+        greenView.isUserInteractionEnabled = true
         
-        print(self.parent?.parent ?? "No parent")
+        blueView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(blueViewTapped)))
+        greenView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(greenViewTapped)))
     }
     
     @IBAction func click() {
