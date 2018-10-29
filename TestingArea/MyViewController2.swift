@@ -27,6 +27,14 @@ class MyViewController2: UIViewController {
         greenView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(greenViewTapped)))
     }
     
+    @objc func blueViewTapped() {
+        print("Blue view tapped")
+    }
+    
+    @objc func greenViewTapped() {
+        print("Green view tapped")
+    }
+    
     @IBAction func click() {
         var triangularArray: TriangularArray<Int> = [
             [1],
