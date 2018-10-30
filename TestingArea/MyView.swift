@@ -1,4 +1,5 @@
 import UIKit
+import Alamofire
 
 class MyView: UIView {
     override func draw(_ rect: CGRect) {
@@ -21,13 +22,6 @@ class MyView: UIView {
             return (0...bounds.midX).contains(point.x) || (bounds.midY...bounds.maxY).contains(point.y)
         }
         
-        guard let touches = event?.allTouches else { return false }
-        guard !touches.isEmpty else { return false }
-        
-        print("passed all the guards")
-        let first = touches.first!
-        print("first touch: \(first.location(in: self))")
-        
-        return touches.map { $0.location(in: self) }.contains(where: isInRegion)
+        return isInRegion(point)
     }
 }
