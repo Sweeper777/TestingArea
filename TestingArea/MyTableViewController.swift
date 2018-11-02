@@ -5,6 +5,7 @@ class MyTableViewController: UITableViewController {
     let model = ["Hello", "World", "Bye"]
     
     override func viewDidLoad() {
+        tableView.register(UINib(nibName: "CardTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
