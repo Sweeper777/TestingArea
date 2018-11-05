@@ -9,6 +9,12 @@ class BarChartView: UIView {
     
     let barWidth = 12.f
     
+    override func draw(_ rect: CGRect) {
+        guard let percentages = self.percentages else { return }
+        
+        let graphHeight = height * 8.0 / 9.0
+        let separator = (width - barWidth * percentages.count.f) / (percentages.count.f + 1)
+    }
 extension UIColor {
     
     @nonobjc class var pinkishTan: UIColor {
