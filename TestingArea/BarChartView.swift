@@ -7,4 +7,6 @@ class BarChartView: UIView {
         }
     }
     
+    let barWidth = 12.f
+    
 }
