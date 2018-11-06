@@ -14,6 +14,7 @@ class BarChartView: UIView {
         
         let graphHeight = height * 8.0 / 9.0
         let separator = (width - barWidth * percentages.count.f) / (percentages.count.f + 1)
+        let weekdays = getLast7Weekdays(date: Date())
         for (index, bar) in percentages.enumerated() {
             let barX = (index + 1).f * separator + index.f * barWidth
             let barY = graphHeight * (1.0 - bar.0).f
@@ -38,6 +39,13 @@ class BarChartView: UIView {
                 subBarPath.fill()
             }
             
+            let textRect = CGRect(x: barX - separator / 2, y: barY + barHeight, width: separator + barWidth, height: 14)
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            (weekdays[index] as NSString).draw(in: textRect, withAttributes: [
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)
+                ])
         }
     }
 }
