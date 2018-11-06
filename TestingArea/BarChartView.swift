@@ -40,6 +40,8 @@ class BarChartView: UIView {
             
         }
     }
+}
+
 extension UIColor {
     
     @nonobjc class var pinkishTan: UIColor {
@@ -59,4 +61,10 @@ extension UIColor {
     }
     
 }
+
+fileprivate func getLast7Weekdays(date: Date) -> [String] {
+    let dates = (0..<7).map { date.addingTimeInterval(Double(60 * 60 * 24 * -$0)) }
+    let formatter = DateFormatter()
+    formatter.dateFormat = "E"
+    return dates.map { formatter.string(from: $0) }.reversed()
 }
