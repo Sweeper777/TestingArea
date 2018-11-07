@@ -1,6 +1,9 @@
 import UIKit
 import SwiftyUtils
 import RxSwift
+import Feathers
+import FeathersSwiftSocketIO
+import SocketIO
 import SwiftCharts
 
 class MyViewController2: UIViewController {
@@ -28,5 +31,10 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        let manager = SocketManager(socketURL: URL(string: "http://localhost:3030")!, config: [.log(true), .compress])
+        let feathers = Feathers(provider: SocketProvider(manager: manager))
+        feathers.authenticate([
+            "login": "admin", "password": "admin"
+            ])
     }
 }
