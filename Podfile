@@ -12,5 +12,7 @@ target 'TestingArea' do
     pod 'RxCocoa'
     pod 'SwiftCharts', '0.6.2'
     pod 'ISHPullUp'
+    pod 'Feathers'
+    pod 'FeathersSwiftSocketIO'
 end
 
