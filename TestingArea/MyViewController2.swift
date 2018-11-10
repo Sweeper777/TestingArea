@@ -31,10 +31,11 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let manager = SocketManager(socketURL: URL(string: "http://localhost:3030")!, config: [.log(true), .compress])
+        let manager = SocketManager(socketURL: URL(string: testURL)!, config: [.log(true), .compress])
         let feathers = Feathers(provider: SocketProvider(manager: manager))
-        feathers.authenticate([
+        let result = feathers.authenticate([
             "login": "admin", "password": "admin"
             ])
+        
     }
 }
