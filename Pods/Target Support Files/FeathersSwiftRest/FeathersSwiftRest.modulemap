@@ -1,0 +1,6 @@
+framework module FeathersSwiftRest {
+  umbrella header "FeathersSwiftRest-umbrella.h"
+
+  export *
+  module * { export * }
+}

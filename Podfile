@@ -13,6 +13,6 @@ target 'TestingArea' do
     pod 'SwiftCharts', '0.6.2'
     pod 'ISHPullUp'
     pod 'Feathers'
-    pod 'FeathersSwiftSocketIO'
+    pod 'FeathersSwiftRest'
 end
 
