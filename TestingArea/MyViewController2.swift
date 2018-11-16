@@ -2,8 +2,7 @@ import UIKit
 import SwiftyUtils
 import RxSwift
 import Feathers
-import FeathersSwiftSocketIO
-import SocketIO
+import FeathersSwiftRest
 import SwiftCharts
 
 class MyViewController2: UIViewController {
@@ -31,11 +30,17 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let manager = SocketManager(socketURL: URL(string: testURL)!, config: [.log(true), .compress])
-        let feathers = Feathers(provider: SocketProvider(manager: manager))
+        let feathers = Feathers(provider: RestProvider(baseURL: URL(string: testURL)!))
         let result = feathers.authenticate([
-            "login": "admin", "password": "admin"
-            ])
-        
+            "strategy":"local","email": "admin", "password": "admin"
+            ]).on(starting: {print("started")},
+                  started: {print("starting")},
+                  event: { (event) in print("event: \(event)")},
+                  failed: {print($0.localizedDescription)},
+                  completed: {print("completed")},
+                  interrupted: {print("interrupted")},
+                  terminated: {print("terminated")},
+                  disposed: {print("disposed")},
+                  value: {print("value: \($0)")}).start()
     }
 }
