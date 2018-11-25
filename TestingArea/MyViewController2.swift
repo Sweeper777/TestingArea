@@ -1,9 +1,9 @@
 import UIKit
 import SwiftyUtils
 import RxSwift
-import Feathers
-import FeathersSwiftRest
-import SwiftCharts
+import RxCocoa
+import Alamofire
+import SwiftyJSON
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -30,17 +30,18 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let feathers = Feathers(provider: RestProvider(baseURL: URL(string: testURL)!))
-        let result = feathers.authenticate([
-            "strategy":"local","email": "admin", "password": "admin"
-            ]).on(starting: {print("started")},
-                  started: {print("starting")},
-                  event: { (event) in print("event: \(event)")},
-                  failed: {print($0.localizedDescription)},
-                  completed: {print("completed")},
-                  interrupted: {print("interrupted")},
-                  terminated: {print("terminated")},
-                  disposed: {print("disposed")},
-                  value: {print("value: \($0)")}).start()
+        Alamofire.request("https://ilich.ml/_zak/authentication",
+                          method: .post,
+                          parameters: ["strategy": "local", "email": "admin", "password": "admin"],
+                          headers: [:]).responseString {
+                            (response) in
+                            let json = JSON(parseJSON: response.value!)
+                            let accessToken = json["accessToken"].stringValue
+                            print(accessToken)
+                            Alamofire.request("https://ilich.ml/_zak/history", method: .get, parameters: [:], headers: ["Authorization": accessToken])
+                                .responseString(completionHandler: { (response) in
+                                    print(response)
+                                })
+        }
     }
 }
