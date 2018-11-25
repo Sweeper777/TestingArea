@@ -27,6 +27,8 @@ class MyViewController2: UIViewController {
             (1.0, 0.4, 0.5, 0.6),
             (0.5, 0.9, 0.8, 0.7)
         ]
+        let swtch = UISwitch()
+        swtch.rx.value.changed.subscribe(onNext: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>, onError: <#T##((Error) -> Void)?##((Error) -> Void)?##(Error) -> Void#>, onCompleted: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, onDisposed: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
     
     @IBAction func click() {
