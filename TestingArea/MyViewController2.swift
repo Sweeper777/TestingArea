@@ -1,6 +1,8 @@
 import UIKit
 import SwiftyUtils
+import UserNotifications
 
+@available(iOS 10.0, *)
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField! {
@@ -10,6 +12,8 @@ class MyViewController2: UIViewController {
     }
     @IBOutlet var button: UIButton!
     @IBOutlet var barChart: BarChartView!
+    
+    let center = UNUserNotificationCenter.current()
     
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -29,6 +33,29 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        center.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                print("Notification not authorised")
+            } else {
+                if #available(iOS 12.0, *) {
+                    let content = UNMutableNotificationContent()
+                    content.title = "Test Title"
+                    content.subtitle = "Test Subtitle"
+                    content.body = "Test Body"
+                    content.sound = UNNotificationSound.defaultCritical
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                    let request = UNNotificationRequest(identifier: "Test Notification", content: content, trigger: trigger)
+                    self.center.add(request, withCompletionHandler: { (error) in
+                        if let e = error {
+                            print(e.localizedDescription)
+                        }
+                    })
+                } else {
+                    // Fallback on earlier versions
+                }
+
+                
+            }
         }
     }
 }
