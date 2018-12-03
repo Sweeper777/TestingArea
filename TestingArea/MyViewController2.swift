@@ -1,9 +1,5 @@
 import UIKit
 import SwiftyUtils
-import RxSwift
-import RxCocoa
-import Alamofire
-import SwiftyJSON
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -16,7 +12,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var barChart: BarChartView!
     
     
-    let disposeBag = DisposeBag()
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
@@ -31,23 +26,9 @@ class MyViewController2: UIViewController {
             (1.0, 0.4, 0.5, 0.6),
             (0.5, 0.9, 0.8, 0.7)
         ]
-        let swtch = UISwitch()
-        swtch.rx.value.changed.subscribe(onNext: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>, onError: <#T##((Error) -> Void)?##((Error) -> Void)?##(Error) -> Void#>, onCompleted: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>, onDisposed: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
     
     @IBAction func click() {
-        Alamofire.request("https://ilich.ml/_zak/authentication",
-                          method: .post,
-                          parameters: ["strategy": "local", "email": "admin", "password": "admin"],
-                          headers: [:]).responseString {
-                            (response) in
-                            let json = JSON(parseJSON: response.value!)
-                            let accessToken = json["accessToken"].stringValue
-                            print(accessToken)
-                            Alamofire.request("https://ilich.ml/_zak/history", method: .get, parameters: [:], headers: ["Authorization": accessToken])
-                                .responseString(completionHandler: { (response) in
-                                    print(response)
-                                })
         }
     }
 }
