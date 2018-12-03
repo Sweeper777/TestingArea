@@ -7,7 +7,11 @@ import SwiftyJSON
 
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
-    @IBOutlet var textfield: UITextField!
+    @IBOutlet var textfield: UITextField! {
+        didSet {
+            print("XXXXXXXXXX \(textfield)")
+        }
+    }
     @IBOutlet var button: UIButton!
     @IBOutlet var barChart: BarChartView!
     
