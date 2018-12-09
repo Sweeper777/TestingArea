@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oyN-nA-4Dx">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="g66-8c-yDb">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,20 +9,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Pullup Controller-->
-        <scene sceneID="TPy-BH-uU2">
-            <objects>
-                <viewController id="oyN-nA-4Dx" customClass="MyPullupController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wE1-SY-o3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1561" y="173"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rGL-8M-CHX">
             <objects>
                 <navigationController storyboardIdentifier="MyVC" id="oIZ-1h-2KH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAF-b4-NLX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -42,11 +34,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mLW-XY-TxC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="T5E-wd-qiu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6vX-sX-PmJ">
-                                <rect key="frame" x="-1" y="0.0" width="415" height="44"/>
+                                <rect key="frame" x="-1" y="0.0" width="321" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="WMJ-GT-ugh"/>
@@ -104,7 +96,7 @@
             <objects>
                 <navigationController storyboardIdentifier="VC" id="BJs-fK-8hM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -120,19 +112,19 @@
             <objects>
                 <tableViewController id="3Bm-IU-Jt5" customClass="MyTableViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="114" sectionHeaderHeight="28" sectionFooterHeight="28" id="MOW-5T-Hre">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ldV-yM-ZpQ" rowHeight="114" style="IBUITableViewCellStyleDefault" id="ISd-wW-snn">
-                                <rect key="frame" x="0.0" y="28" width="414" height="114"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ISd-wW-snn" id="ckM-OC-QT8">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ldV-yM-ZpQ">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="114"/>
+                                            <rect key="frame" x="16" y="0.0" width="288" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -350,32 +342,76 @@ Two view subclasses are provided to make beautiful iOS10 style designs easier. <
             </objects>
             <point key="canvasLocation" x="-781" y="878"/>
         </scene>
-        <!--My View Controller2-->
+        <!--Navigation Controller-->
+        <scene sceneID="pG9-zb-Wwg">
+            <objects>
+                <navigationController id="g66-8c-yDb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ul-2D-a5X">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="TfG-v3-WB2" kind="relationship" relationship="rootViewController" id="sFW-8E-i6A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWi-Sb-Dsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="919"/>
+        </scene>
+        <!--My View Controller-->
         <scene sceneID="njc-om-saJ">
             <objects>
-                <viewController id="TfG-v3-WB2" customClass="MyViewController2" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TfG-v3-WB2" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ypo-wY-J6D"/>
                         <viewControllerLayoutGuide type="bottom" id="Fon-za-dwg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tGg-BT-t8Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-1o-Yhw">
-                                <rect key="frame" x="20" y="181" width="374" height="354"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UYe-R8-Oxe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POa-6F-GQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11.594202898550726" y="921.42857142857133"/>
+            <point key="canvasLocation" x="686" y="919"/>
+        </scene>
+        <!--Latitude Selector Controller-->
+        <scene sceneID="B9A-RJ-ukp">
+            <objects>
+                <viewController storyboardIdentifier="LatitudeSelector" id="RJ0-ai-98a" customClass="LatitudeSelectorController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxT-Vy-SyI"/>
+                        <viewControllerLayoutGuide type="bottom" id="RzA-NB-0z3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6xn-Ed-OpK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iag-t5-YPb">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RJ0-ai-98a" id="HBG-rO-HYg"/>
+                                    <outlet property="delegate" destination="RJ0-ai-98a" id="d7Y-hD-c7l"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Iag-t5-YPb" firstAttribute="leading" secondItem="6xn-Ed-OpK" secondAttribute="leading" id="0FM-Xb-8YS"/>
+                            <constraint firstItem="Iag-t5-YPb" firstAttribute="top" secondItem="fxT-Vy-SyI" secondAttribute="bottom" id="HZm-7e-Bhy"/>
+                            <constraint firstAttribute="trailing" secondItem="Iag-t5-YPb" secondAttribute="trailing" id="hQM-cT-zoK"/>
+                            <constraint firstItem="RzA-NB-0z3" firstAttribute="top" secondItem="Iag-t5-YPb" secondAttribute="bottom" id="wHq-1J-Yzq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="latitudePicker" destination="Iag-t5-YPb" id="0Gh-y1-ciI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75p-OF-gOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="919"/>
         </scene>
     </scenes>
 </document>
