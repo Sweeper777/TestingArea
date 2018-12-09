@@ -1,18 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
-  - Feathers (5.3.0):
-    - Feathers/Core (= 5.3.0)
-  - Feathers/Core (5.3.0):
-    - KeychainSwift
-    - ReactiveSwift
-    - Result
-  - FeathersSwiftRest (4.0.0):
-    - FeathersSwiftRest/Core (= 4.0.0)
-  - FeathersSwiftRest/Core (4.0.0):
-    - Alamofire
-    - Feathers
-    - ReactiveSwift
-    - Result
+  - Eureka (4.3.0)
   - Firebase/Core (5.10.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.2.0)
@@ -57,54 +45,39 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.3):
     - GoogleUtilities/Logger
-  - ISHPullUp (1.0.7)
-  - KeychainSwift (12.0.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
-  - ReactiveSwift (4.0.0):
-    - Result (~> 4.0)
-  - Result (4.0.0)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
-  - SwiftCharts (0.6.2)
   - SwiftyJSON (4.2.0)
   - SwiftyUtils (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - Feathers
-  - FeathersSwiftRest
+  - Eureka
   - Firebase/Core
-  - ISHPullUp
   - RxCocoa
   - RxSwift
-  - SwiftCharts (= 0.6.2)
   - SwiftyJSON
   - SwiftyUtils (from `https://github.com/tbaranes/SwiftyUtils.git`, commit `982bffaadf8e831e75d3444dfba56af4d3962224`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - Feathers
-    - FeathersSwiftRest
+    - Eureka
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseInstanceID
     - GoogleAppMeasurement
     - GoogleUtilities
-    - ISHPullUp
-    - KeychainSwift
     - nanopb
-    - ReactiveSwift
-    - Result
     - RxCocoa
     - RxSwift
-    - SwiftCharts
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -119,25 +92,19 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Feathers: d88238d23a6a2e2f80bc9c239e58ee3a04b8de5f
-  FeathersSwiftRest: 2b6786a438dbc6cdfacf26bd84544bc88bcd7786
+  Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
   Firebase: 6691d47562a780c26281ce8464518faafc90c610
   FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
   FirebaseCore: c6079de64c1a87000e52e9b408dddcadc901177f
   FirebaseInstanceID: 78ba376fcd5b94c001f9999b2cbd3d1f1e56e78d
   GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
   GoogleUtilities: 8208aee3e97a1ae93d44c57e96c476a5a3b03f0a
-  ISHPullUp: eaa91bef06270264e1f923bc764705173d341495
-  KeychainSwift: d5e776578587ee5958ce36601df22f168f65138a
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
-  ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
-  SwiftCharts: bacd8c02aea5385c565b3819a0ef5c871cd6179d
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwiftyUtils: 9d09fedd742f9959e5682784657e913d5c554e6d
 
-PODFILE CHECKSUM: da8db2753cc1bb0bc841e30d7ff159842391295b
+PODFILE CHECKSUM: 7c1a2212c8b477bfd3101a0e22f3951a85e2484f
 
 COCOAPODS: 1.5.3

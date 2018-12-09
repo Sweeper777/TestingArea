@@ -9,12 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Feathers.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FeathersSwiftRest.xcscheme</key>
+		<key>Eureka.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,27 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ISHPullUp.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>KeychainSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ReactiveSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Result.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -60,11 +35,6 @@
 			<false/>
 		</dict>
 		<key>RxSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftCharts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

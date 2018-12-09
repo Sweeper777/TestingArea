@@ -1,6 +1,0 @@
-framework module Feathers {
-  umbrella header "Feathers-umbrella.h"
-
-  export *
-  module * { export * }
-}

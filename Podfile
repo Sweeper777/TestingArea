@@ -10,9 +10,6 @@ target 'TestingArea' do
     pod 'Firebase/Core'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'SwiftCharts', '0.6.2'
-    pod 'ISHPullUp'
-    pod 'Feathers'
-    pod 'FeathersSwiftRest'
+    pod 'Eureka'
 end
 
