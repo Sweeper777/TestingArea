@@ -53,6 +53,7 @@ PODS:
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
+  - SwiftyAnimate (1.3.0)
   - SwiftyJSON (4.2.0)
   - SwiftyUtils (3.0.0)
 
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - Firebase/Core
   - RxCocoa
   - RxSwift
+  - SwiftyAnimate
   - SwiftyJSON
   - SwiftyUtils (from `https://github.com/tbaranes/SwiftyUtils.git`, commit `982bffaadf8e831e75d3444dfba56af4d3962224`)
 
@@ -78,6 +80,7 @@ SPEC REPOS:
     - nanopb
     - RxCocoa
     - RxSwift
+    - SwiftyAnimate
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -102,9 +105,10 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SwiftyAnimate: 82bf6e7691bcd149250fd8cdb968c166420f269b
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwiftyUtils: 9d09fedd742f9959e5682784657e913d5c554e6d
 
-PODFILE CHECKSUM: 7c1a2212c8b477bfd3101a0e22f3951a85e2484f
+PODFILE CHECKSUM: 5519a95b099107b9eefa951374f0c253837ddf1e
 
 COCOAPODS: 1.5.3

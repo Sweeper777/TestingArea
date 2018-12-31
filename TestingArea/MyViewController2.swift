@@ -1,6 +1,6 @@
 import UIKit
 import SwiftyUtils
-import UserNotifications
+import SwiftyAnimate
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -17,25 +17,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        UIView.animate(withDuration: 1, animations: {
-            self.textview.transform = CGAffineTransform(scaleX: 2, y: 2)
-        })
-        DispatchQueue.main.async {
-            let result = self.doSomeWork()
-            print(result)
-            UIView.animate(withDuration: 1, animations: {
-                self.textfield.transform = CGAffineTransform(scaleX: 2, y: 2)
-            })
-        }
-    }
-    
-    func doSomeWork() -> Int {
-        var count = 0
-        for i in 0..<100000 {
-            if "\(i)".reversed() == Array("\(i)") {
-                count += 1
-            }
-        }
-        return count
+        
     }
 }

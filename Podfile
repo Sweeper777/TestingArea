@@ -11,5 +11,6 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Eureka'
+    pod 'SwiftyAnimate'
 end
 
