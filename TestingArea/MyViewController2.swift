@@ -1,6 +1,5 @@
 import UIKit
 import SwiftyUtils
-import SwiftyAnimate
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -17,12 +16,8 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        textview.customAnimation().perform()
+        
     }
-}
 
-extension UIView {
-    func customAnimation() -> Animate {
-        return Animate().and(animation: transform(duration: 1, transforms: [.move(x: 0, y: 300), .scale(x: 0.01, y: 0.01)]))
     }
 }
