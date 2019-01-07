@@ -13,6 +13,16 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let myView = UIView(frame: .zero)
+        myView.backgroundColor = .green
+        view.addSubview(myView)
+        myView.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-8)
+            make.bottom.equalToSuperview().offset(-8)
+            make.width.equalTo(myView.snp.height).dividedBy(1.2)
+//            make.height.equalTo(UIScreen.main.nativeBounds.height / UIScreen.main.nativeScale / 7)
+        }
     }
     
     @IBAction func click() {
