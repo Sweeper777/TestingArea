@@ -1,11 +1,15 @@
 import UIKit
 import SwiftyUtils
+import SnapKit
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
+    
+    var constraintRelativeToHeight: Constraint!
+    var constraintRelativeToWidth: Constraint!
     
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -22,6 +26,8 @@ class MyViewController2: UIViewController {
             make.bottom.equalToSuperview().offset(-8)
             make.width.equalTo(myView.snp.height).dividedBy(1.2)
 //            make.height.equalTo(UIScreen.main.nativeBounds.height / UIScreen.main.nativeScale / 7)
+            constraintRelativeToHeight = make.height.equalTo(view.snp.height).dividedBy(7).constraint
+            constraintRelativeToWidth = make.width.equalTo(view.snp.width).dividedBy(7).constraint
         }
     }
     
