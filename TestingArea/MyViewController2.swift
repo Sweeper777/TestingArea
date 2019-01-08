@@ -52,6 +52,18 @@ class MyViewController2: UIViewController {
         }
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { (context) in
+            if self.traitCollection.horizontalSizeClass == .compact &&
+                self.traitCollection.verticalSizeClass == .regular {
+                self.constraintRelativeToWidth.deactivate()
+                self.constraintRelativeToHeight.activate()
+            } else {
+                self.constraintRelativeToWidth.activate()
+                self.constraintRelativeToHeight.deactivate()
+            }
+        }, completion: nil)
 
     }
 }
