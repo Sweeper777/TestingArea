@@ -28,6 +28,15 @@ class MyViewController2: UIViewController {
     @IBAction func click() {
         
     }
+    
+    override func overrideTraitCollection(forChild childViewController: UIViewController) -> UITraitCollection? {
+        if view.bounds.width < view.bounds.height {
+            return UITraitCollection(horizontalSizeClass: .compact)
+        } else {
+            return UITraitCollection(horizontalSizeClass: .regular)
+        }
+    }
+    
 
     }
 }
