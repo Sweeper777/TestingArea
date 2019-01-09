@@ -1,6 +1,7 @@
 import UIKit
 import SwiftyUtils
 import SnapKit
+import SwiftyJSON
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -41,7 +42,27 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        
+        let jsonString = """
+[
+{
+"sno": "21",
+"title": "title 1",
+"tableid": "table 1"
+},
+{
+"sno": "19",
+"title": "title 222",
+"tableid": "table 222"
+},
+{
+"sno": "3",
+"title": "title 333",
+"tableid": "table 333"
+}
+]
+"""
+        let json = JSON(parseJSON: jsonString)
+        print(json[0]["sno"].string)
     }
     
     override func overrideTraitCollection(forChild childViewController: UIViewController) -> UITraitCollection? {
