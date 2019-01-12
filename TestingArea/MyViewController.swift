@@ -1,7 +1,12 @@
 import UIKit
-import Eureka
+import ARKit
+import SceneKit
 
-class MyViewController: FormViewController{
+class MyViewController: UIViewController{
+    var sceneView: ARSCNView {
+        return self.view as! ARSCNView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
