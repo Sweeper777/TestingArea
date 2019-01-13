@@ -9,10 +9,9 @@ class MyViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        form +++ LatitudeSelectorRow(tag: "foo") {
-            row in
-            row.value = 30
-        }
+        let scene = SCNScene(named: "test.scn")!
+        sceneView.scene = scene
+        sceneView.debugOptions = [.showFeaturePoints, .showWorldOrigin]
+        sceneView.delegate = self
     }
 }
