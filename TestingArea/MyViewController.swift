@@ -14,4 +14,11 @@ class MyViewController: UIViewController{
         sceneView.debugOptions = [.showFeaturePoints, .showWorldOrigin]
         sceneView.delegate = self
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = .horizontal
+        sceneView.session.run(config)
+    }
 }
