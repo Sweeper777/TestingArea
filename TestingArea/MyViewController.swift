@@ -28,4 +28,10 @@ class MyViewController: UIViewController{
     }
 }
 
+extension MyViewController : ARSCNViewDelegate {
+    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        let planeAnchor = anchor as! ARPlaneAnchor
+        let box = SCNBox(width: CGFloat(planeAnchor.extent.x), height: 0.01, length: CGFloat(planeAnchor.extent.z), chamferRadius: 0)
+        return SCNNode(geometry: box)
+    }
 }
