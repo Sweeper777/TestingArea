@@ -21,4 +21,11 @@ class MyViewController: UIViewController{
         config.planeDetection = .horizontal
         sceneView.session.run(config)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        sceneView.session.pause()
+    }
+}
+
 }
