@@ -9,9 +9,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     
-    var constraintRelativeToHeight: Constraint!
-    var constraintRelativeToWidth: Constraint!
-    
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -19,25 +16,9 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myView = UIView(frame: .zero)
-        myView.backgroundColor = .green
         view.addSubview(myView)
-        myView.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-8)
-            make.bottom.equalToSuperview().offset(-8)
-            make.width.equalTo(myView.snp.height).dividedBy(1.2)
-//            make.height.equalTo(UIScreen.main.nativeBounds.height / UIScreen.main.nativeScale / 7)
-            constraintRelativeToHeight = make.height.equalTo(view.snp.height).dividedBy(7).constraint
-            constraintRelativeToWidth = make.width.equalTo(view.snp.width).dividedBy(7).constraint
         }
         
-        if traitCollection.horizontalSizeClass == .compact &&
-            traitCollection.verticalSizeClass == .regular {
-            constraintRelativeToWidth.deactivate()
-            constraintRelativeToHeight.activate()
-        } else {
-            constraintRelativeToWidth.activate()
-            constraintRelativeToHeight.deactivate()
         }
     }
     
@@ -71,20 +52,5 @@ class MyViewController2: UIViewController {
         } else {
             return UITraitCollection(horizontalSizeClass: .regular)
         }
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        coordinator.animate(alongsideTransition: { (context) in
-            if self.traitCollection.horizontalSizeClass == .compact &&
-                self.traitCollection.verticalSizeClass == .regular {
-                self.constraintRelativeToWidth.deactivate()
-                self.constraintRelativeToHeight.activate()
-            } else {
-                self.constraintRelativeToWidth.activate()
-                self.constraintRelativeToHeight.deactivate()
-            }
-        }, completion: nil)
-
     }
 }
