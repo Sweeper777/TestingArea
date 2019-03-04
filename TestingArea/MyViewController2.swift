@@ -16,6 +16,18 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    func testRotation() {
+        let label1 = UIView(frame: CGRect(x: 10, y: 100, width: 100, height: 50))
+        let label2 = UIView(frame: CGRect(x: 10, y: 100, width: 100, height: 50))
+        view.addSubview(label1)
+        view.addSubview(label2)
+        label1.backgroundColor = .red
+        label2.backgroundColor = .blue
+        label2.transform = CGAffineTransform(rotationAngle: .pi / 2)
+    }
+    
         label1.backgroundColor = .red
         label2.backgroundColor = .blue
     }
