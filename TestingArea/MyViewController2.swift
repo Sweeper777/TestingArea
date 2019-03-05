@@ -28,6 +28,15 @@ class MyViewController2: UIViewController {
         label2.transform = CGAffineTransform(rotationAngle: .pi / 2)
     }
     
+    func rotateRect(_ rect: CGRect) -> CGRect {
+        let x = rect.x
+        let y = rect.y
+        let transform = CGAffineTransform(translationX: -x, y: -y)
+            .rotated(by: .pi / 2)
+            .translatedBy(x: x, y: y)
+        return rect.applying(transform)
+    }
+    
         label1.backgroundColor = .red
         label2.backgroundColor = .blue
     }
