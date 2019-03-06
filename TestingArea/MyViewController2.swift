@@ -16,6 +16,7 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        testSameFrame()
     }
     
     func testRotation() {
@@ -37,8 +38,18 @@ class MyViewController2: UIViewController {
         return rect.applying(transform)
     }
     
+    func testSameFrame() {
+        let desiredFrame = CGRect(x: 10, y: 100, width: 50, height: 100)
+        let label1 = UIView(frame: desiredFrame)
+        let center = CGPoint(x: desiredFrame.midX, y: desiredFrame.midY)
+        let label2Frame = CGRect(x: 0, y: 0, width: desiredFrame.height, height: desiredFrame.width)
+        let label2 = UIView(frame: label2Frame)
+        view.addSubview(label1)
+        view.addSubview(label2)
         label1.backgroundColor = .red
         label2.backgroundColor = .blue
+        label2.center = center
+        label2.transform = CGAffineTransform(rotationAngle: -.pi / 2)
     }
     
     @IBAction func click() {
