@@ -28,6 +28,10 @@ class MyViewController2: UIViewController {
     }
 }
 
+protocol TimerModelDelegate : class {
+    func timerTextDidChange(_ time: TimerModel, text: String)
+}
+
 class TimerModel: NSObject {
     var myTimer: Timer? = Timer()
     var timerInterval: TimeInterval = 1.0
