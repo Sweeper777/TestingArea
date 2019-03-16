@@ -4,7 +4,7 @@ import SnapKit
 import SwiftyJSON
 
 @available(iOS 10.0, *)
-class MyViewController2: UIViewController {
+class MyViewController2: UIViewController, TimerModelDelegate {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
@@ -25,6 +25,10 @@ class MyViewController2: UIViewController {
         } else {
             return UITraitCollection(horizontalSizeClass: .regular)
         }
+    }
+    
+    func timerTextDidChange(_ time: TimerModel, text: String) {
+        textview.text = text
     }
 }
 
