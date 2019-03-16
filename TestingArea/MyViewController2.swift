@@ -27,3 +27,34 @@ class MyViewController2: UIViewController {
         }
     }
 }
+
+class TimerModel: NSObject {
+    var myTimer: Timer? = Timer()
+    var timerInterval: TimeInterval = 1.0
+    var timerEnd: TimeInterval = 0.0
+    var timerCount: TimeInterval = 86400.0 // 24 hours
+    weak var delegate: TimerModelDelegate?
+    var timerStr: String = "TIME" {
+        didSet {
+            delegate?.timerTextDidChange(self, text: timerStr)
+        }
+    }
+    
+    func StartTimer(time: Double) {
+        timerCount = time
+        myTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(UpdateTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc func UpdateTime() {
+        self.timerCount-=1
+        self.timerStr = self.TimerDate(time: self.timerCount)
+        print(self.timerStr)
+    }
+    
+    func TimerDate(time:TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format: "%02i:%02i:%02i", hours, minutes, seconds)
+    }
+}
