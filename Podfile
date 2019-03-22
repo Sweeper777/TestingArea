@@ -11,6 +11,6 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Eureka'
-    pod 'SnapKit'
+    pod 'CorePlot'
 end
 
