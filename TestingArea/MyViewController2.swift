@@ -1,5 +1,6 @@
 import UIKit
 import SwiftyUtils
+import CorePlot
 import SwiftyJSON
 
 @available(iOS 10.0, *)
@@ -7,7 +8,7 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    var timer: TimerModel!
+    @IBOutlet var graphHostView: CPTGraphHostingView!
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -25,7 +26,13 @@ class MyViewController2: UIViewController {
     
     }
     
+
+extension MyViewController2 : CPTRangePlotDataSource, CPTRangePlotDelegate {
+    func numberOfRecords(for plot: CPTPlot) -> UInt {
+        return 10
     }
     
+    func double(for plot: CPTPlot, field fieldEnum: UInt, record idx: UInt) -> Double {
+        return [6,8,9,3,5,7,3,1,2,4][Int(idx)]
     }
 }
