@@ -15,12 +15,20 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     @IBAction func click() {
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        initPlot()
     }
     
+    func initPlot() {
+        configureHostView()
+        configureGraph()
+        configureChart()
     }
     }
     
