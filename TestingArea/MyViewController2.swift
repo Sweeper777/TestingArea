@@ -30,6 +30,9 @@ class MyViewController2: UIViewController {
         configureGraph()
         configureChart()
     }
+    
+    func configureHostView() {
+        graphHostView.allowPinchScaling = false
     }
     
     }
