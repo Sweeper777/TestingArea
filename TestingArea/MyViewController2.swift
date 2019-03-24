@@ -35,6 +35,24 @@ class MyViewController2: UIViewController {
         graphHostView.allowPinchScaling = false
     }
     
+    func configureGraph() {
+        let graph = CPTXYGraph(frame: graphHostView.bounds)
+        graphHostView.hostedGraph = graph
+        graph.paddingLeft = 0.0
+        graph.paddingTop = 0.0
+        graph.paddingRight = 0.0
+        graph.paddingBottom = 0.0
+        graph.axisSet = nil
+        
+        let textStyle: CPTMutableTextStyle = CPTMutableTextStyle()
+        textStyle.color = CPTColor.black()
+        textStyle.fontName = "HelveticaNeue-Bold"
+        textStyle.fontSize = 16.0
+        textStyle.textAlignment = .center
+        
+        graph.title = "Title Here"
+        graph.titleTextStyle = textStyle
+        graph.titlePlotAreaFrameAnchor = CPTRectAnchor.top
     }
     
 
