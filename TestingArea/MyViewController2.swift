@@ -16,8 +16,12 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textview.textColor = .red
     }
     @IBAction func click() {
+        UIView.animate(withDuration: 1) {
+            self.textview.textColor = .gray
+        }
     }
     
     override func viewDidLayoutSubviews() {
