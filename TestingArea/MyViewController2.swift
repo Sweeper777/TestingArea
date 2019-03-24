@@ -55,6 +55,16 @@ class MyViewController2: UIViewController {
         graph.titlePlotAreaFrameAnchor = CPTRectAnchor.top
     }
     
+    func configureChart() {
+        let graph = graphHostView.hostedGraph!
+        
+        let pieChart = CPTRangePlot()
+        pieChart.delegate = self
+        pieChart.dataSource = self
+        
+        graph.add(pieChart)
+    }
+}
 
 extension MyViewController2 : CPTRangePlotDataSource, CPTRangePlotDelegate {
     func numberOfRecords(for plot: CPTPlot) -> UInt {
