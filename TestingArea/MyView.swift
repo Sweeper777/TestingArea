@@ -32,6 +32,23 @@ class Line : GameObject {
     var horizontal: Bool
     var color: UIColor
     
+    func draw(in rect: CGRect) {
+        if horizontal {
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: position.x * rect.width, y: position.y * rect.height))
+            path.addLine(to: CGPoint(x: (position.x + length) * rect.width, y: position.y * rect.height))
+            path.lineWidth = 5
+            color.setStroke()
+            path.stroke()
+        } else {
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: position.x * rect.width, y: position.y * rect.height))
+            path.addLine(to: CGPoint(x: position.x * rect.width * rect.width, y: (position.y + length) * rect.height))
+            path.lineWidth = 5
+            color.setStroke()
+            path.stroke()
+        }
+    }
 }
         UIColor.red.setFill()
         path.fill()
