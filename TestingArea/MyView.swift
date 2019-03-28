@@ -59,6 +59,17 @@ class Line : GameObject {
     }
     
 }
+
+class Dot : GameObject {
+    init(position: CGPoint, zIndex: Int) {
+        self.zIndex = zIndex
+        self.position = position
+    }
+    
+    var velocity: (CGFloat, CGFloat) = (0, 0)
+    var zIndex: Int
+    var position: CGPoint
+    
         UIColor.red.setFill()
         path.fill()
     }
