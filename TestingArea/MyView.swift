@@ -49,6 +49,15 @@ class Line : GameObject {
             path.stroke()
         }
     }
+    
+    func isOutOf(rect: CGRect) -> Bool {
+        if horizontal {
+            return position.x + length < 0
+        } else {
+            return position.y - length > 1
+        }
+    }
+    
 }
         UIColor.red.setFill()
         path.fill()
