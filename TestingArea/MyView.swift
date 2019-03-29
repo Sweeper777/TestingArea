@@ -9,7 +9,18 @@ class GameView: UIView {
             }
         }
     }
+    var displayLink: CADisplayLink!
+    
     override func draw(_ rect: CGRect) {
+    
+    func commonInit() {
+        displayLink = CADisplayLink(target: self, selector: #selector(update))
+        displayLink.add(to: .main, forMode: .common)
+    }
+    
+    @objc func update() {
+        setNeedsDisplay()
+    }
 }
 
 protocol GameObject {
