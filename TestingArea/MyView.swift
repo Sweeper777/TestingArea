@@ -12,6 +12,10 @@ class GameView: UIView {
     var displayLink: CADisplayLink!
     
     override func draw(_ rect: CGRect) {
+        for gameObject in gameObjects {
+            gameObject.draw(in: self.bounds)
+        }
+    }
     
     func commonInit() {
         displayLink = CADisplayLink(target: self, selector: #selector(update))
