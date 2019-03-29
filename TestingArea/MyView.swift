@@ -80,3 +80,18 @@ class Dot : GameObject {
         return !rect.intersects(CGRect(x: position.x * rect.width, y: position.y * rect.height, width: 0, height: 0).insetBy(dx: -10, dy: -10))
     }
 }
+
+class AndGate: GameObject {
+    init(position: CGPoint, velocity: (CGFloat, CGFloat), zIndex: Int) {
+        self.position = position
+        self.velocity = velocity
+        self.zIndex = zIndex
+    }
+    
+    var velocity: (CGFloat, CGFloat)
+    var zIndex: Int
+    var position: CGPoint
+    
+    
+    
+}
