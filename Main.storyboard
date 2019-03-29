@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIZ-1h-2KH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5hN-v2-yUY">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,6 +24,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A78-X0-ZAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="M7l-Er-W3G">
+            <objects>
+                <viewController id="5hN-v2-yUY" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w4W-FE-nzv"/>
+                        <viewControllerLayoutGuide type="bottom" id="tCw-5J-UyT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ro-Ts-m0T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Te4-Oy-G2M">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yb-dM-6Gk" customClass="GameView" customModule="TestingArea" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="288" height="532"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0yb-dM-6Gk" firstAttribute="leading" secondItem="8ro-Ts-m0T" secondAttribute="leadingMargin" id="41z-Bg-S0m"/>
+                            <constraint firstItem="tCw-5J-UyT" firstAttribute="top" secondItem="0yb-dM-6Gk" secondAttribute="bottom" constant="8" id="H4s-bK-Iuo"/>
+                            <constraint firstItem="0yb-dM-6Gk" firstAttribute="trailing" secondItem="8ro-Ts-m0T" secondAttribute="trailingMargin" id="Xkh-qt-de3"/>
+                            <constraint firstItem="0yb-dM-6Gk" firstAttribute="top" secondItem="w4W-FE-nzv" secondAttribute="bottom" constant="8" id="aeI-o8-cir"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="0yb-dM-6Gk" id="dkv-pl-fR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulg-tJ-MOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-656.25" y="874.64788732394368"/>
         </scene>
         <!--My View Controller2-->
         <scene sceneID="wIz-ix-jIS">
@@ -150,90 +188,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmp-Me-Y6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1635" y="184.85915492957747"/>
-        </scene>
-        <!--My View Controller-->
-        <scene sceneID="Uem-At-uoQ">
-            <objects>
-                <viewController id="oSw-fx-H9u" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="LDg-hF-bb8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qy1-pg-LnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2431" y="234"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pG9-zb-Wwg">
-            <objects>
-                <navigationController id="g66-8c-yDb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Ul-2D-a5X">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="TfG-v3-WB2" kind="relationship" relationship="rootViewController" id="sFW-8E-i6A"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UWi-Sb-Dsd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-48" y="919"/>
-        </scene>
-        <!--My View Controller-->
-        <scene sceneID="njc-om-saJ">
-            <objects>
-                <viewController id="TfG-v3-WB2" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ypo-wY-J6D"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fon-za-dwg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tGg-BT-t8Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="UYe-R8-Oxe"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="POa-6F-GQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="686" y="919"/>
-        </scene>
-        <!--Latitude Selector Controller-->
-        <scene sceneID="B9A-RJ-ukp">
-            <objects>
-                <viewController storyboardIdentifier="LatitudeSelector" id="RJ0-ai-98a" customClass="LatitudeSelectorController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fxT-Vy-SyI"/>
-                        <viewControllerLayoutGuide type="bottom" id="RzA-NB-0z3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6xn-Ed-OpK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iag-t5-YPb">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="RJ0-ai-98a" id="HBG-rO-HYg"/>
-                                    <outlet property="delegate" destination="RJ0-ai-98a" id="d7Y-hD-c7l"/>
-                                </connections>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Iag-t5-YPb" firstAttribute="leading" secondItem="6xn-Ed-OpK" secondAttribute="leading" id="0FM-Xb-8YS"/>
-                            <constraint firstItem="Iag-t5-YPb" firstAttribute="top" secondItem="fxT-Vy-SyI" secondAttribute="bottom" id="HZm-7e-Bhy"/>
-                            <constraint firstAttribute="trailing" secondItem="Iag-t5-YPb" secondAttribute="trailing" id="hQM-cT-zoK"/>
-                            <constraint firstItem="RzA-NB-0z3" firstAttribute="top" secondItem="Iag-t5-YPb" secondAttribute="bottom" id="wHq-1J-Yzq"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="latitudePicker" destination="Iag-t5-YPb" id="0Gh-y1-ciI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="75p-OF-gOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1457" y="919"/>
         </scene>
     </scenes>
 </document>
