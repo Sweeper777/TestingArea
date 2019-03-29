@@ -92,6 +92,19 @@ class AndGate: GameObject {
     var zIndex: Int
     var position: CGPoint
     
+    func draw(in rect: CGRect) {
+        let path = UIBezierPath()
+        path.addArc(withCenter: CGPoint(x: position.x * rect.width, y: position.y * rect.height), radius: rect.height / 8, startAngle: 3 * .pi / 2, endAngle: .pi / 2, clockwise: true)
+        path.addLine(to: CGPoint(x: position.x * rect.width - rect.height / 8, y: (position.y + 0.125) * rect.height))
+        path.addLine(to: CGPoint(x: position.x * rect.width - rect.height / 8, y: (position.y - 0.125) * rect.height))
+        path.close()
+        path.lineWidth = 10
+        UIColor.white.setFill()
+        UIColor.black.setStroke()
+        path.stroke()
+        path.fill()
+    }
+    
     
     
 }
