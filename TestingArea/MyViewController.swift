@@ -6,5 +6,7 @@ class MyViewController: UIViewController{
         super.viewDidLoad()
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
     }
 }
