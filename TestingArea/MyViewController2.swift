@@ -26,12 +26,32 @@ struct MyData : Codable {
     var myInt: Int
     var myString: String
     var myArray: [String]
+}
+
+class MyDataDocument: UIDocument {
+    static let fileExtension = "mydoc"
     
+    var myData: MyData = MyData(myInt: 0, myString: "", myArray: []) {
+        didSet {
+            updateChangeCount(.done)
+        }
     }
     
+    override func contents(forType typeName: String) throws -> Any {
+        let encoder = JSONEncoder()
+        let data = try encoder.encode(myData)
+        return data
     }
     
+    override func load(fromContents contents: Any, ofType typeName: String?) throws {
+        guard let data = contents as? Data else {
+            throw DocumentError.unknownType
+        }
+        let decoder = JSONDecoder()
+        myData = try decoder.decode(MyData.self, from: data)
     }
 }
 
+enum DocumentError: Error {
+    case unknownType
 }
