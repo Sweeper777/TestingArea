@@ -13,8 +13,17 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
+        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("my document").appendingPathExtension(MyDataDocument.fileExtension)
+        let myDataDocument = MyDataDocument(fileURL: url)
+        try? myDataDocument.read(from: url)
+        textfield.text = myDataDocument.myData.myString
     }
     @IBAction func click() {
+        let myData = MyData(myInt: 10, myString: "hello", myArray: ["item 1", "item 2"])
+        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("my document").appendingPathExtension(MyDataDocument.fileExtension)
+        let myDataDocument = MyDataDocument(fileURL: url)
+        myDataDocument.myData = myData
+        myDataDocument.save(to: url, for: .forOverwriting, completionHandler: { print($0) })
     }
     
     override func viewDidLayoutSubviews() {
