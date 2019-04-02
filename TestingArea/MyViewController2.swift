@@ -20,6 +20,12 @@ class MyViewController2: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
+}
+
+struct MyData : Codable {
+    var myInt: Int
+    var myString: String
+    var myArray: [String]
     
     }
     
