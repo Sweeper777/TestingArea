@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.7.3)
-  - CorePlot (2.2)
   - Eureka (4.3.0)
   - Firebase/Core (5.10.0):
     - Firebase/CoreOnly
@@ -46,6 +45,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (5.3.3):
     - GoogleUtilities/Logger
+  - GPUImage (0.1.7)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -54,23 +54,24 @@ PODS:
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
+  - SwiftOCR (1.1):
+    - GPUImage
   - SwiftyJSON (4.2.0)
   - SwiftyUtils (3.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - CorePlot
   - Eureka
   - Firebase/Core
   - RxCocoa
   - RxSwift
+  - SwiftOCR
   - SwiftyJSON
   - SwiftyUtils (from `https://github.com/tbaranes/SwiftyUtils.git`, commit `982bffaadf8e831e75d3444dfba56af4d3962224`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - CorePlot
     - Eureka
     - Firebase
     - FirebaseAnalytics
@@ -78,9 +79,11 @@ SPEC REPOS:
     - FirebaseInstanceID
     - GoogleAppMeasurement
     - GoogleUtilities
+    - GPUImage
     - nanopb
     - RxCocoa
     - RxSwift
+    - SwiftOCR
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -95,7 +98,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
   Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
   Firebase: 6691d47562a780c26281ce8464518faafc90c610
   FirebaseAnalytics: 831f1f127f4a75698e9875a87bf7e2668730d953
@@ -103,12 +105,14 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 78ba376fcd5b94c001f9999b2cbd3d1f1e56e78d
   GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
   GoogleUtilities: 8208aee3e97a1ae93d44c57e96c476a5a3b03f0a
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SwiftOCR: e1a5c7582f074b54df2b1ad273983088b3cf5d45
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwiftyUtils: 9d09fedd742f9959e5682784657e913d5c554e6d
 
-PODFILE CHECKSUM: 32fca9e978bc69daec5c572000f895d7899bdd1a
+PODFILE CHECKSUM: 866f671a1599391022918bbaa992fd70fe7e2d80
 
 COCOAPODS: 1.5.3
