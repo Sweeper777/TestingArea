@@ -23,14 +23,24 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
     @IBAction func click() {
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
     
+    func processTextObservation(_ observation: VNTextObservation, originalImage: UIImage) -> UIImage? {
+        let transform = CGAffineTransform(scaleX: 1, y: -1).translatedBy(x: 0, y: -originalImage.size.height)
+        
+        let translate = CGAffineTransform.identity.scaledBy(x: originalImage.size.width, y: originalImage.size.height)
+        guard let croppedImage = originalImage.cropped(rect: observation.boundingBox.applying(translate).applying(transform)) else {
+            print("Image crop failed")
+            return nil
         }
+        return croppedImage
     }
 }
 
