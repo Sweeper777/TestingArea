@@ -22,54 +22,33 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("my document").appendingPathExtension(MyDataDocument.fileExtension)
-        let myDataDocument = MyDataDocument(fileURL: url)
-        try? myDataDocument.read(from: url)
-        textfield.text = myDataDocument.myData.myString
     }
     @IBAction func click() {
-        let myData = MyData(myInt: 10, myString: "hello", myArray: ["item 1", "item 2"])
-        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("my document").appendingPathExtension(MyDataDocument.fileExtension)
-        let myDataDocument = MyDataDocument(fileURL: url)
-        myDataDocument.myData = myData
-        myDataDocument.save(to: url, for: .forOverwriting, completionHandler: { print($0) })
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
-}
-
-struct MyData : Codable {
-    var myInt: Int
-    var myString: String
-    var myArray: [String]
-}
-
-class MyDataDocument: UIDocument {
-    static let fileExtension = "mydoc"
     
-    var myData: MyData = MyData(myInt: 0, myString: "", myArray: []) {
-        didSet {
-            updateChangeCount(.done)
         }
     }
-    
-    override func contents(forType typeName: String) throws -> Any {
-        let encoder = JSONEncoder()
-        let data = try encoder.encode(myData)
-        return data
-    }
-    
-    override func load(fromContents contents: Any, ofType typeName: String?) throws {
-        guard let data = contents as? Data else {
-            throw DocumentError.unknownType
-        }
-        let decoder = JSONDecoder()
-        myData = try decoder.decode(MyData.self, from: data)
-    }
 }
 
-enum DocumentError: Error {
-    case unknownType
+extension UIImage {
+    func cropped(rect: CGRect) -> UIImage? {
+        let transform: CGAffineTransform
+        switch self.imageOrientation {
+        case .left:
+            transform = CGAffineTransform(translationX: 0, y: -self.size.height).rotated(by: .pi / 2)
+        case .right:
+            transform = CGAffineTransform(translationX: -self.size.width, y: 0).rotated(by: -.pi / 2)
+        case .down:
+            transform = CGAffineTransform(translationX: -self.size.width, y: -self.size.height).rotated(by: -.pi)
+        default:
+            transform = .identity
+        }
+        guard let imageRef = self.cgImage?.cropping(to: rect.applying(transform.scaledBy(x: self.scale, y: self.scale))) else { return nil }
+        let image = UIImage(cgImage: imageRef, scale: self.scale, orientation: self.imageOrientation)
+        return image
+    }
 }
