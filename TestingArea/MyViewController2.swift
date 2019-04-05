@@ -38,6 +38,13 @@ class MyViewController2: UIViewController {
             if let results = request.results as? [VNTextObservation] {
                 self.results = results
                 print("\(results.count) Results found")
+                for result in results {
+                    guard let croppedImage = self.processTextObservation(result, originalImage: self.image) else { return }
+                    let swiftOCRInstance = SwiftOCR()
+                    swiftOCRInstance.recognize(croppedImage) { recognizedString in
+                        print(recognizedString)
+                    }
+                }
             }
         }
         
