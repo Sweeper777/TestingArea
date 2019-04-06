@@ -324,7 +324,7 @@
 		59896559084F23B39DEDB2225ECD8E9E /* CombineLatest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148ED9B5BC950BD59C2AE1B97007B8D /* CombineLatest.swift */; };
 		59C2D0003ED5CDB81166FE845BC29CB7 /* GPUImageThresholdedNonMaximumSuppressionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 957787D49E78E143A3855EEA273EEBE3 /* GPUImageThresholdedNonMaximumSuppressionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A24CB2C1453B843171D05D8E749A341 /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8642951C782E2C726E46B41E19FC7357 /* ButtonRowWithPresent.swift */; };
-		5A3840D422574A1D0090A90C /* OCR-Network in Resources */ = {isa = PBXBuildFile; fileRef = 5A3840D322574A1C0090A90C /* OCR-Network */; };
+		5A3840DF225751050090A90C /* OCR-Network in Resources */ = {isa = PBXBuildFile; fileRef = 5A3840DE225751040090A90C /* OCR-Network */; };
 		5A527E3205CCB55E0E331491AF9BD30D /* ObserverBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAFC2886F466D3283F237FFFE8C616 /* ObserverBase.swift */; };
 		5A8152A823EAED2EAA14319A13D8541D /* GPUImageSubtractBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A238DE5A8E5917FCC36611F80CC716D /* GPUImageSubtractBlendFilter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		5A9D7717087024CD71CA46FB9EFAAF22 /* SwipeActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A92193424AD732C306FEC78C27734 /* SwipeActions.swift */; };
@@ -1294,7 +1294,7 @@
 		58CCEFE69C8499E3B661F091E34789ED /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		5941275FF2FB024F73C4F3AE8C230C2D /* UIView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Rx.swift"; path = "RxCocoa/iOS/UIView+Rx.swift"; sourceTree = "<group>"; };
 		59774DD05C17BB05B82EC2870B1BCE75 /* GPUImageHardLightBlendFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPUImageHardLightBlendFilter.h; path = framework/Source/GPUImageHardLightBlendFilter.h; sourceTree = "<group>"; };
-		5A3840D322574A1C0090A90C /* OCR-Network */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "OCR-Network"; sourceTree = "<group>"; };
+		5A3840DE225751040090A90C /* OCR-Network */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "OCR-Network"; sourceTree = "<group>"; };
 		5A764D0D109E0629C2379192D6DC9C55 /* GULReachabilityChecker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULReachabilityChecker.h; path = GoogleUtilities/Reachability/Private/GULReachabilityChecker.h; sourceTree = "<group>"; };
 		5ABE16FC4E186676AF594C8A5D344DA5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		5AC07F8C3278CE615CD70CA956FA83DB /* RxCocoaObjCRuntimeError+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RxCocoaObjCRuntimeError+Extensions.swift"; path = "RxCocoa/Common/RxCocoaObjCRuntimeError+Extensions.swift"; sourceTree = "<group>"; };
@@ -2616,7 +2616,7 @@
 		CBC683A8305ED9105327895216AE4610 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5A3840D322574A1C0090A90C /* OCR-Network */,
+				5A3840DE225751040090A90C /* OCR-Network */,
 				BCA723636AA6209400C4D5A025F36052 /* TrainingBackground_1.png */,
 				17ADA905ECC0C0F04926AD98F08E64CE /* TrainingBackground_2.png */,
 				F96714B6D18B7A4D8F5044D1473F8B40 /* TrainingBackground_3.png */,
@@ -3936,7 +3936,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3840D422574A1D0090A90C /* OCR-Network in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3944,6 +3943,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3840DF225751050090A90C /* OCR-Network in Resources */,
 				07C5C49B2D0B00699D919BDE4689D852 /* TrainingBackground_1.png in Resources */,
 				C122BB0182C82FBA98FBAF2A52A3430C /* TrainingBackground_2.png in Resources */,
 				56B9437B3A09ED5348A6771B963D0AA5 /* TrainingBackground_3.png in Resources */,
