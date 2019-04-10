@@ -11,6 +11,7 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Eureka'
-    pod 'SwiftOCR'
+    pod 'Firebase/MLVision'
+    pod 'Firebase/MLVisionTextModel'
 end
 
