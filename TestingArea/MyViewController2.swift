@@ -1,6 +1,7 @@
 import UIKit
 import SwiftyUtils
 import SwiftyJSON
+import Firebase
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -20,7 +21,22 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
+        let vision = Vision.vision()
+        let textRecognizer = vision.onDeviceTextRecognizer()
+        let vImage = VisionImage(image: image)
+        textRecognizer.process(vImage) { (result, error) in
+            guard error == nil, let result = result else {
+                print("An error occurred: \(error!.localizedDescription)")
+                return
+            }
+            let blocks = result.blocks
+            for (index, block) in blocks.enumerated() {
+                print("Block \(index)")
+                print("Frame: \(block.frame)")
+                for line in block.lines {
+                    print("Line: \(line.text)")
                 }
+                print("-----------------")
             }
         }
     }
