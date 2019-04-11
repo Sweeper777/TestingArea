@@ -13,5 +13,6 @@ target 'TestingArea' do
     pod 'Eureka'
     pod 'Firebase/MLVision'
     pod 'Firebase/MLVisionTextModel'
+    pod 'HFCardCollectionViewLayout'
 end
 
