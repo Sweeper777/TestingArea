@@ -6,6 +6,13 @@ class MyViewController: UIViewController{
     
     override func viewDidLoad() {
         collectionView.allowsSelection = true
+        let bgView = UIView()
+        bgView.backgroundColor = .white
+        let button = UIButton(type: .system)
+        button.setTitle("Press ME", for: .normal)
+        button.frame = CGRect(x: 100, y: 400, width: 200, height: 100)
+        bgView.addSubview(button)
+        collectionView.backgroundView = bgView
     }
 }
 
