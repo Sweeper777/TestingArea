@@ -17,20 +17,7 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     override func viewDidLoad() {
         super.viewDidLoad()
-        let html = """
-<style>
-div{
-position:absolute;
-padding: 0px;
-text-alignment: center;
-}
-</style>
-<div style="left:0%;top:20%;height:20%;width:50%;background:green;font-size:10vw;">
-www.google.com
-</div>
-"""
-        webView.loadHTMLString(html, baseURL: nil)
-        webView.scrollView.isScrollEnabled = false
+        
     }
     
     @IBAction func click() {
