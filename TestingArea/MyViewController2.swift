@@ -53,6 +53,17 @@ class MyViewController2: UIViewController {
         return nil
     }
 }
+
+extension MyViewController2 : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true) { [ weak self] in
+            if let image = info[.originalImage] as? UIImage {
+                self?.imageView.image = self?.getScannedImage(inputImage: image.noir!)
+            }
+        }
+    }
+}
+
 extension UIImage {
     var noir: UIImage? {
         let context = CIContext(options: nil)
