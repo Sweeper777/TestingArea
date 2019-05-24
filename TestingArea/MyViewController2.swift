@@ -21,7 +21,11 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
         
+        self.present(imagePicker, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
