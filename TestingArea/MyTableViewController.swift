@@ -50,3 +50,22 @@ struct StringSection : AnimatableSectionModelType {
     
     var identity: String { return "" }
 }
+
+class StringWrapper : IdentifiableType, Equatable {
+    
+    var wrapped = ""
+    
+    typealias Identity = String
+    
+    var identity: String {
+        return wrapped
+    }
+    
+    init(_ string: String) {
+        wrapped = string
+    }
+    
+    static func ==(lhs: StringWrapper, rhs: StringWrapper) -> Bool {
+        return lhs.wrapped == rhs.wrapped
+    }
+}
