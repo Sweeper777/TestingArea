@@ -3,28 +3,29 @@ import RxSwift
 import RxDataSources
 import RxCocoa
 
-class MyTableViewController: UITableViewController {
+class MyTableViewController: UICollectionViewController {
     let observable = Variable(["Hello", "World", "Bye", "Foo", "Bar"])
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        tableView.dataSource = nil
-        let dataSource = RxTableViewSectionedAnimatedDataSource<StringSection>(configureCell:  {
-            (dataSource, tableView, indexPath, string) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-            cell.textLabel?.text = string
+        collectionView.dataSource = nil
+        collectionView.register(UINib(nibName: "MyCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        let dataSource = RxCollectionViewSectionedAnimatedDataSource<StringSection>(configureCell:  {
+            (dataSource, collectionView, indexPath, string) -> UICollectionViewCell in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCell
+            cell.textLabel.text = string
             return cell
         })
         observable.asObservable()
             .map {
                 [StringSection(items: $0)]
             }
-            .bind(to: self.tableView.rx.items(dataSource: dataSource))
+            .bind(to: self.collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        observable.value.remove(at: observable.value.count - 1)
+        observable.value.append("XXX")
     }
 }
 
