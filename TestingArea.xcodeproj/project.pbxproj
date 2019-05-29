@@ -21,6 +21,7 @@
 		5A35050F218DEA9400BC7C23 /* FontSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35050E218DEA9400BC7C23 /* FontSizeHelper.swift */; };
 		5A373C1E1FB705C000F99847 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A373C1D1FB705C000F99847 /* test.txt */; };
 		5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A375C3D2185CDCC0020B23B /* MyView.swift */; };
+		5A528FC0229D28050065EBFC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A528FBF229D28050065EBFC /* MyCell.xib */; };
 		5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5911F6455A60046FB51 /* Localizable.strings */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
@@ -120,6 +121,7 @@
 		5A375C3D2185CDCC0020B23B /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		5A3C5EBC202EDEC4001EB69E /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		5A4313B61DEA471500839CD6 /* BNHtmlPdfKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BNHtmlPdfKit.framework; path = "Pods/../build/Debug-iphoneos/BNHtmlPdfKit/BNHtmlPdfKit.framework"; sourceTree = "<group>"; };
+		5A528FBF229D28050065EBFC /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		5A55B5901F6455A60046FB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A55B5921F6455B70046FB51 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5A375C3D2185CDCC0020B23B /* MyView.swift */,
+				5A528FBF229D28050065EBFC /* MyCell.xib */,
 				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5A35050E218DEA9400BC7C23 /* FontSizeHelper.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
@@ -458,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */,
+				5A528FC0229D28050065EBFC /* MyCell.xib in Resources */,
 				5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */,
 				5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */,
 				5A158C8F1E369484007000FD /* AllEmoji.json in Resources */,
