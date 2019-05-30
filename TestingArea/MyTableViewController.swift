@@ -13,7 +13,7 @@ class MyTableViewController: UICollectionViewController {
         let dataSource = RxCollectionViewSectionedAnimatedDataSource<StringSection>(configureCell:  {
             (dataSource, collectionView, indexPath, string) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCell
-            cell.textLabel.text = string
+            cell.textLabel.text = string.wrapped
             return cell
         })
         observable.asObservable()
@@ -33,18 +33,18 @@ class MyTableViewController: UICollectionViewController {
 }
 
 struct StringSection : AnimatableSectionModelType {
-    var items: [String]
+    var items: [StringWrapper]
     
-    init(original: StringSection, items: [String]) {
+    init(original: StringSection, items: [StringWrapper]) {
         self = original
         self.items = items
     }
     
     init(items: [String]) {
-        self.items = items
+        self.items = items.map(StringWrapper.init)
     }
     
-    typealias Item = String
+    typealias Item = StringWrapper
     
     typealias Identity = String
     
