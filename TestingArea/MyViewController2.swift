@@ -30,6 +30,13 @@ class MyViewController2: UIViewController {
     @IBAction func click() {
     }
     
+    func test1() {
+        let contact = CNMutableContact()
+        contact.familyName = "Cheng"
+        contact.givenName = "Xiu"
+        contact.emailAddresses = [CNLabeledValue(label: "work", value: "xiu.cheng2001@gmail.com" as NSString)]
+        let store = CNContactStore()
+        
     }
     
         }
