@@ -51,7 +51,13 @@ struct StringSection : AnimatableSectionModelType {
     var identity: String { return "" }
 }
 
-class StringWrapper : IdentifiableType, Equatable {
+class StringWrapperBase : Equatable {
+    static func ==(lhs: StringWrapperBase, rhs: StringWrapperBase) -> Bool {
+        return lhs === rhs
+    }
+}
+
+class StringWrapper : StringWrapperBase, IdentifiableType {
     
     var wrapped = ""
     
