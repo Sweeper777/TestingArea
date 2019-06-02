@@ -28,7 +28,7 @@ class MyTableViewController: UICollectionViewController {
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        observable.value.append("XXX")
+        observable.value[0] = "Hello"
     }
 }
 
