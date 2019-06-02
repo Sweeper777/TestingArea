@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxDataSources
 import RxCocoa
+import EmptyDataSet_Swift
 
 class MyTableViewController: UICollectionViewController {
     let observable = Variable(["Hello", "World", "Bye", "Foo", "Bar"])
@@ -16,6 +17,12 @@ class MyTableViewController: UICollectionViewController {
             cell.textLabel.text = string.wrapped
             return cell
         })
+        
+        collectionView.emptyDataSetView { (view) in
+            view.titleLabelString(NSAttributedString(string: "Nothing to see here!"))
+            view.shouldDisplay(true)
+        }
+        
         observable.asObservable()
             .map {
                 [StringSection(items: $0)]
