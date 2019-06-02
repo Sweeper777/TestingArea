@@ -12,5 +12,6 @@ target 'TestingArea' do
     pod 'RxCocoa'
     pod 'Eureka'
     pod 'RxDataSources'
+    pod 'EmptyDataSet-Swift'
 end
 

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - Differentiator (3.1.0)
+  - EmptyDataSet-Swift (4.2.0)
   - Eureka (4.3.0)
   - Firebase/Core (5.20.1):
     - Firebase/CoreOnly
@@ -64,6 +65,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - EmptyDataSet-Swift
   - Eureka
   - Firebase/Core
   - RxCocoa
@@ -76,6 +78,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
+    - EmptyDataSet-Swift
     - Eureka
     - Firebase
     - FirebaseAnalytics
@@ -102,6 +105,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
   Eureka: 6d711cb30ca333b4bc893110285a722ae3840114
   Firebase: 2f5235e62f141cb86181c3af0dfe4509706351ac
   FirebaseAnalytics: fd72a26bf8dac84cefba2f0864366f718555a5b0
@@ -116,6 +120,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwiftyUtils: 9d09fedd742f9959e5682784657e913d5c554e6d
 
-PODFILE CHECKSUM: a055816908d9869eff424033636bc000d27e3489
+PODFILE CHECKSUM: cc9910d305f1501a3d38987cc96db19d7295ccf5
 
 COCOAPODS: 1.5.3
