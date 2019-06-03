@@ -1,5 +1,7 @@
 import UIKit
 import SwiftyUtils
+import Contacts
+import ContactsUI
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -18,6 +20,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+       test1()
     }
     
     func test1() {
@@ -33,6 +36,17 @@ class MyViewController2: UIViewController {
         self.present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
     }
     
+    func test2() {
+        let contact = CNMutableContact()
+        contact.familyName = "Foo"
+        contact.givenName = "Bar"
+        contact.emailAddresses = [CNLabeledValue(label: "work", value: "user@example.com" as NSString)]
+        let saveRequest = CNSaveRequest()
+        saveRequest.add(contact, toContainerWithIdentifier: nil)
+        do {
+            try CNContactStore().execute(saveRequest)
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }
