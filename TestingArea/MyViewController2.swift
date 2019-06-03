@@ -37,5 +37,8 @@ class MyViewController2: UIViewController {
     }
 }
 
+extension MyViewController2 : CNContactViewControllerDelegate {
+    func contactViewController(_ viewController: CNContactViewController, didCompleteWith contact: CNContact?) {
+        viewController.dismiss(animated: true, completion: nil)
     }
 }
