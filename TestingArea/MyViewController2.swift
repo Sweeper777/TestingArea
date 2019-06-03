@@ -27,6 +27,10 @@ class MyViewController2: UIViewController {
         contact.emailAddresses = [CNLabeledValue(label: "work", value: "xiu.cheng2001@gmail.com" as NSString)]
         let store = CNContactStore()
         
+        let controller = CNContactViewController(forNewContact: contact)
+        controller.contactStore = store
+        controller.delegate = self
+        self.present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
     }
     
         }
