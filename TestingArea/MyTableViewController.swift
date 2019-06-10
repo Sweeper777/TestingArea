@@ -5,7 +5,7 @@ import RxCocoa
 import EmptyDataSet_Swift
 
 class MyTableViewController: UICollectionViewController {
-    let observable = Variable(["Hello", "World", "Bye", "Foo", "Bar"])
+    let observable = Variable<[StringWrapper]>(["Hello", "World", "Bye", "Foo", "Bar"])
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -14,7 +14,7 @@ class MyTableViewController: UICollectionViewController {
         let dataSource = RxCollectionViewSectionedAnimatedDataSource<StringSection>(configureCell:  {
             (dataSource, collectionView, indexPath, string) -> UICollectionViewCell in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCell
-            cell.textLabel.text = string.wrapped
+            cell.textLabel.text = string.string
             return cell
         })
         
@@ -25,7 +25,7 @@ class MyTableViewController: UICollectionViewController {
         
         observable.asObservable()
             .map {
-                [StringSection(items: $0)]
+                [StringSection(items: $0.map(StringWrapperStruct.init))]
             }
             .bind(to: self.collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
@@ -40,18 +40,18 @@ class MyTableViewController: UICollectionViewController {
 }
 
 struct StringSection : AnimatableSectionModelType {
-    var items: [StringWrapper]
+    var items: [StringWrapperStruct]
     
-    init(original: StringSection, items: [StringWrapper]) {
+    init(original: StringSection, items: [StringWrapperStruct]) {
         self = original
         self.items = items
     }
     
-    init(items: [String]) {
-        self.items = items.map(StringWrapper.init)
+    init(items: [StringWrapperStruct]) {
+        self.items = items
     }
     
-    typealias Item = StringWrapper
+    typealias Item = StringWrapperStruct
     
     typealias Identity = String
     
