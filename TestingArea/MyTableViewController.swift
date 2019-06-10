@@ -58,27 +58,17 @@ struct StringSection : AnimatableSectionModelType {
     var identity: String { return "" }
 }
 
-class StringWrapperBase : Equatable {
-    static func ==(lhs: StringWrapperBase, rhs: StringWrapperBase) -> Bool {
-        return lhs === rhs
-    }
-}
 
-class StringWrapper : StringWrapperBase, IdentifiableType {
+class StringWrapper : ExpressibleByStringLiteral {
+    typealias StringLiteralType = String
     
     var wrapped = ""
-    
-    typealias Identity = String
-    
-    var identity: String {
-        return wrapped
-    }
     
     init(_ string: String) {
         wrapped = string
     }
     
-    static func ==(lhs: StringWrapper, rhs: StringWrapper) -> Bool {
-        return lhs.wrapped == rhs.wrapped
+    required convenience init(stringLiteral value: String) {
+        self.init(value)
     }
 }
