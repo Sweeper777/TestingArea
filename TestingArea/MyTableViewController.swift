@@ -72,3 +72,13 @@ class StringWrapper : ExpressibleByStringLiteral {
         self.init(value)
     }
 }
+
+struct StringWrapperStruct : IdentifiableType, Equatable {
+    let string: String
+    init(wrapper: StringWrapper) {
+        string = wrapper.wrapped
+    }
+    
+    typealias Identity = String
+    var identity: String { return string }
+}
