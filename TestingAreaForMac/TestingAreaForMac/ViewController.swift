@@ -13,3 +13,16 @@ class ViewController: NSViewController {
         tableView.delegate = self
     }
 }
+
+extension ViewController : NSTableViewDelegate, NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cell"), owner: nil) as? NSTableCellView
+        cell?.textField?.stringValue = dataSource[row]
+        return cell
+    }
+}
+
