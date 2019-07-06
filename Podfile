@@ -14,4 +14,3 @@ target 'TestingArea' do
     pod 'RxDataSources'
     pod 'EmptyDataSet-Swift'
 end
-
