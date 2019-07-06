@@ -2,6 +2,7 @@ import UIKit
 import SwiftyUtils
 import Contacts
 import ContactsUI
+import Alamofire
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -17,6 +18,7 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(AlamofireVersionNumber)
     }
     
     @IBAction func click() {
