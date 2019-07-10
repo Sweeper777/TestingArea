@@ -1,7 +1,8 @@
 import UIKit
 
-class MyCell: UICollectionViewCell {
-    @IBOutlet var textLabel: UILabel!
+class MyCell: UITableViewCell {
+    @IBOutlet var label: UILabel!
+    @IBOutlet var container: UIView!
     
     override var isSelected: Bool {
         didSet {
