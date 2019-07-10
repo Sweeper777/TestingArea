@@ -7,9 +7,9 @@ class MyCell: UITableViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                backgroundColor = .gray
+                container.backgroundColor = .gray
             } else {
-                backgroundColor = .white
+                container.backgroundColor = .white
             }
         }
     }
