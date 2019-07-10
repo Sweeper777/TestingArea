@@ -4,7 +4,7 @@ class MyCell: UITableViewCell {
     @IBOutlet var label: UILabel!
     @IBOutlet var container: UIView!
     
-    override var isSelected: Bool {
+    override var isHighlighted: Bool {
         didSet {
             if isSelected {
                 container.backgroundColor = .gray
