@@ -4,13 +4,19 @@ class MyCell: UITableViewCell {
     @IBOutlet var label: UILabel!
     @IBOutlet var container: UIView!
     
-    override var isHighlighted: Bool {
-        didSet {
-            if isSelected {
-                container.backgroundColor = .gray
-            } else {
-                container.backgroundColor = .white
-            }
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            container.backgroundColor = .gray
+        } else {
+            container.backgroundColor = .white
+        }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        if selected {
+            container.backgroundColor = .gray
+        } else {
+            container.backgroundColor = .white
         }
     }
     
