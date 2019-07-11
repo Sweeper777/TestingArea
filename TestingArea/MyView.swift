@@ -22,9 +22,11 @@ class MyCell: UITableViewCell {
     
     override func awakeFromNib() {
         container.layer.shadowColor = UIColor.black.cgColor
-        container.layer.shadowOpacity = 0.5
+        container.layer.shadowOpacity = 0.7
         container.layer.shadowOffset = CGSize(width: 3, height: 3)
         container.layer.shadowRadius = 4
-        container.layer.shadowPath = UIBezierPath(rect: container.bounds).cgPath
+        container.layer.cornerRadius = 4
+        container.layer.shadowPath = UIBezierPath(roundedRect: container.bounds, cornerRadius: 4).cgPath
+        selectionStyle = .none
     }
 }
