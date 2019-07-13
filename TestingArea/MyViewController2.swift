@@ -18,6 +18,11 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        shadowView.layer.shadowColor = UIColor.black.cgColor
+        shadowView.layer.shadowRadius = 0
+        shadowView.layer.opacity = 0.5
+        shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
     
     @IBAction func click() {
