@@ -25,54 +25,32 @@
             </objects>
             <point key="canvasLocation" x="-639" y="185"/>
         </scene>
-        <!--My View Controller-->
-        <scene sceneID="M7l-Er-W3G">
+        <!--Foo Bar-->
+        <scene sceneID="EHe-PY-q51">
             <objects>
-                <viewController id="5hN-v2-yUY" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vuk-gF-NSP" customClass="FooBar" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="w4W-FE-nzv"/>
-                        <viewControllerLayoutGuide type="bottom" id="tCw-5J-UyT"/>
+                        <viewControllerLayoutGuide type="top" id="Bzb-VC-itF"/>
+                        <viewControllerLayoutGuide type="bottom" id="MLZ-nv-r6W"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8ro-Ts-m0T">
+                    <view key="view" contentMode="scaleToFill" id="SfH-yo-E2z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3hb-DZ-Gtw" customClass="HFCardCollectionView" customModule="HFCardCollectionViewLayout">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggv-g4-FLy">
+                                <rect key="frame" x="139" y="274" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewLayout key="collectionViewLayout" id="g0g-33-pcc" customClass="HFCardCollectionViewLayout" customModule="HFCardCollectionViewLayout">
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cardMaximumHeight">
-                                            <real key="value" value="300"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </collectionViewLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="fzl-3F-xh5" customClass="HFCardCollectionViewCell" customModule="HFCardCollectionViewLayout">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="5hN-v2-yUY" id="ebA-Qp-2qE"/>
-                                    <outlet property="delegate" destination="5hN-v2-yUY" id="Tws-po-6Bc"/>
-                                </connections>
-                            </collectionView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <connections>
-                        <outlet property="collectionView" destination="3hb-DZ-Gtw" id="mHN-qj-M0w"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ulg-tJ-MOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hm1-l8-XMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-656.25" y="874.64788732394368"/>
+            <point key="canvasLocation" x="-694" y="896"/>
         </scene>
         <!--My View Controller2-->
         <scene sceneID="wIz-ix-jIS">

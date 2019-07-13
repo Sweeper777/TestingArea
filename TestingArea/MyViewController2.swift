@@ -60,3 +60,10 @@ extension MyViewController2 : CNContactViewControllerDelegate {
         print(contact)
     }
 }
+
+public class Foo {
+    @objc(FooBar)
+    public class Bar : UIViewController {
+        @IBOutlet var foo: UILabel!
+    }
+}
