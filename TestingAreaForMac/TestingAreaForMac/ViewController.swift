@@ -29,5 +29,14 @@ class ViewController: NSViewController {
             print("something else")
         }
     }
+    
+    func test1() {
+        let alert = NSAlert()
+        alert.addButton(withTitle: "OK")
+        alert.messageText = "Message Text"
+        alert.informativeText = "Informative Text"
+        alert.beginSheetModal(for: view.window!, completionHandler: completionHandler)
+    }
+    
 }
 
