@@ -38,5 +38,15 @@ class ViewController: NSViewController {
         alert.beginSheetModal(for: view.window!, completionHandler: completionHandler)
     }
     
+    func test2() {
+        let alert = NSAlert()
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: "Something Else")
+        alert.messageText = "Message Text"
+        alert.informativeText = "Informative Text"
+        completionHandler(alert.runModal())
+    }
+    
 }
 
