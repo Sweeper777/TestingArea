@@ -709,48 +709,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="303"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cKJ-eG-BoJ">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="303"/>
-                                <subviews>
-                                    <customView fixedFrame="YES" id="qRT-zg-d1D">
-                                        <rect key="frame" x="0.0" y="0.0" width="237" height="303"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </customView>
-                                    <customView misplaced="YES" id="fAf-cA-hDD">
-                                        <rect key="frame" x="247" y="0.0" width="233" height="303"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-At-GwZ">
-                                                <rect key="frame" x="18" y="266" width="41" height="17"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="17" id="4FQ-6a-RGv"/>
-                                                </constraints>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="nNT-zD-zyX">
-                                                    <font key="font" usesAppearanceFont="YES"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="gi4-At-GwZ" secondAttribute="trailing" constant="20" id="AOT-ha-S35"/>
-                                            <constraint firstItem="gi4-At-GwZ" firstAttribute="top" secondItem="fAf-cA-hDD" secondAttribute="top" constant="20" id="be3-Ue-rvt"/>
-                                            <constraint firstItem="gi4-At-GwZ" firstAttribute="leading" secondItem="fAf-cA-hDD" secondAttribute="leading" constant="20" id="rvR-8j-Rhn"/>
-                                        </constraints>
-                                    </customView>
-                                </subviews>
-                                <holdingPriorities>
-                                    <real value="250"/>
-                                    <real value="250"/>
-                                </holdingPriorities>
-                            </splitView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-8T-N7t">
+                                <rect key="frame" x="200" y="134" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y7C-fV-19l">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonPressedWithSender:" target="XfG-lQ-9wD" id="fOi-mc-MTS"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="cKJ-eG-BoJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="6PF-nA-wM8"/>
-                            <constraint firstAttribute="bottom" secondItem="cKJ-eG-BoJ" secondAttribute="bottom" id="GoQ-rh-GMj"/>
-                            <constraint firstItem="cKJ-eG-BoJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="QyP-bS-8vh"/>
-                            <constraint firstAttribute="trailing" secondItem="cKJ-eG-BoJ" secondAttribute="trailing" id="wNG-3x-QC1"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
