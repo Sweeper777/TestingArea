@@ -8,7 +8,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func buttonPressed(sender: NSButton) {
-        test3()
+        test4()
     }
     
     func completionHandler(_ response: NSApplication.ModalResponse) {
@@ -55,6 +55,10 @@ class ViewController: NSViewController {
         alert.informativeText = "Informative Text"
         alert.accessoryView = NSTextField(frame: NSRect(x: 20, y: 50, width: 400, height: 20))
         alert.beginSheetModal(for: view.window!, completionHandler: completionHandler)
+    }
+    
+    func test4() {
+        performSegue(withIdentifier: "showSegue", sender: nil)
     }
 }
 
