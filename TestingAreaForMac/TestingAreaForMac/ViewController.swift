@@ -48,5 +48,13 @@ class ViewController: NSViewController {
         completionHandler(alert.runModal())
     }
     
+    func test3() {
+        let alert = NSAlert()
+        alert.addButton(withTitle: "OK")
+        alert.messageText = "Message Text"
+        alert.informativeText = "Informative Text"
+        alert.accessoryView = NSTextField(frame: NSRect(x: 20, y: 50, width: 400, height: 20))
+        alert.beginSheetModal(for: view.window!, completionHandler: completionHandler)
+    }
 }
 
