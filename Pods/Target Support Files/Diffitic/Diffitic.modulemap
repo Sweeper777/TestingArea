@@ -1,0 +1,6 @@
+framework module Diffitic {
+  umbrella header "Diffitic-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double EmptyDataSet_SwiftVersionNumber;
-FOUNDATION_EXPORT const unsigned char EmptyDataSet_SwiftVersionString[];
+FOUNDATION_EXPORT double DiffiticVersionNumber;
+FOUNDATION_EXPORT const unsigned char DiffiticVersionString[];
 
