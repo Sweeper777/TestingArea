@@ -12,5 +12,5 @@ target 'TestingArea' do
     pod 'RxCocoa'
     pod 'Eureka'
     pod 'RxDataSources'
-    pod 'Diffitic'
+    pod 'DifferenceKit'
 end
