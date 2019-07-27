@@ -3,7 +3,7 @@ import SwiftyUtils
 import Contacts
 import ContactsUI
 import Alamofire
-import Diffitic
+import DifferenceKit
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -22,11 +22,12 @@ class MyViewController2: UIViewController {
     @IBAction func click() {
         let old = ["A", "B", "C", "D"]
         let new = ["B", "C", "A", "D"]
-        let difference = diff(leftCount: 4, rightCount: 4) {
-            old[$0] == new[$1]
-        }
-        for d in difference {
-            print(d)
+        
+        let changeset = StagedChangeset(source: old, target: new)
+        for change in changeset {
+            print(change)
         }
     }
 }
+
+extension String: Differentiable {}
