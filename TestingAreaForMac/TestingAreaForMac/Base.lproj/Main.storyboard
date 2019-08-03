@@ -723,25 +723,38 @@
                         </subviews>
                     </view>
                     <connections>
-                        <segue destination="VJc-5N-YEO" kind="popover" identifier="showSegue" popoverAnchorView="eXf-8T-N7t" popoverBehavior="t" preferredEdge="maxY" id="SbM-5X-KE1"/>
+                        <segue destination="VJc-5N-YEO" kind="sheet" identifier="showSegue" id="SbM-5X-KE1"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="671.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Sheet View Controller-->
         <scene sceneID="uxI-D1-hTN">
             <objects>
-                <viewController id="VJc-5N-YEO" sceneMemberID="viewController">
+                <viewController id="VJc-5N-YEO" customClass="SheetViewController" customModule="TestingAreaForMac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ODn-wD-BRu">
-                        <rect key="frame" x="0.0" y="0.0" width="292" height="181"/>
+                        <rect key="frame" x="0.0" y="0.0" width="226" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8BL-DO-yIu">
+                                <rect key="frame" x="73" y="24" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m8w-sK-H3f">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonPressed:" target="VJc-5N-YEO" id="cqn-TB-Ams"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="rLz-o7-Wbd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="600" y="611.5"/>
+            <point key="canvasLocation" x="567" y="562.5"/>
         </scene>
     </scenes>
 </document>
