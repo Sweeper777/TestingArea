@@ -11,6 +11,7 @@
 		5A4FF54422CF846A00B564A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FF54322CF846A00B564A2 /* ViewController.swift */; };
 		5A4FF54622CF846B00B564A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FF54522CF846B00B564A2 /* Assets.xcassets */; };
 		5A50EB7522DF11D20028A479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A50EB7322DF11D20028A479 /* Main.storyboard */; };
+		5A53AEB822F2F2CC0043D2EE /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A53AEB722F2F2CC0043D2EE /* SheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		5A4FF54A22CF846B00B564A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A4FF54B22CF846B00B564A2 /* TestingAreaForMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestingAreaForMac.entitlements; sourceTree = "<group>"; };
 		5A50EB7422DF11D20028A479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A53AEB722F2F2CC0043D2EE /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				5A50EB7322DF11D20028A479 /* Main.storyboard */,
 				5A4FF54122CF846A00B564A2 /* AppDelegate.swift */,
 				5A4FF54322CF846A00B564A2 /* ViewController.swift */,
+				5A53AEB722F2F2CC0043D2EE /* SheetViewController.swift */,
 				5A4FF54522CF846B00B564A2 /* Assets.xcassets */,
 				5A4FF54A22CF846B00B564A2 /* Info.plist */,
 				5A4FF54B22CF846B00B564A2 /* TestingAreaForMac.entitlements */,
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A53AEB822F2F2CC0043D2EE /* SheetViewController.swift in Sources */,
 				5A4FF54422CF846A00B564A2 /* ViewController.swift in Sources */,
 				5A4FF54222CF846A00B564A2 /* AppDelegate.swift in Sources */,
 			);
