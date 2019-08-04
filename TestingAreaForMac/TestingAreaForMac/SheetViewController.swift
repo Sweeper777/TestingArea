@@ -2,6 +2,6 @@ import Cocoa
 
 class SheetViewController : NSViewController {
     @IBAction func buttonPressed(_ sender: NSButton) {
-        preferredContentSize = CGSize(width: 300, height: 300)
+        view.window?.setFrame(CGRect(x: 0, y: 0, width: 300, height: 300), display: true, animate: true)
     }
 }
