@@ -55,6 +55,22 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Test" id="L4Y-Ck-vFH">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Test" id="C2Q-fj-QiZ">
+                                    <items>
+                                        <menuItem title="Item 1" id="4lt-Qh-2Zs">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="Item 2" id="prL-Iw-xJL">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="Item 3" id="cly-6W-K40">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
