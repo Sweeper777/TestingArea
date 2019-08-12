@@ -61,6 +61,9 @@
                                     <items>
                                         <menuItem title="Item 1" id="4lt-Qh-2Zs">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="item1Pressed:" target="Voe-Tx-rLC" id="MYO-ax-QP2"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem title="Item 2" id="prL-Iw-xJL">
                                             <modifierMask key="keyEquivalentModifierMask"/>

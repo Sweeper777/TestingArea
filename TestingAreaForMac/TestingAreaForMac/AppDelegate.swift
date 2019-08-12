@@ -22,5 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
+    @IBAction func item1Pressed(_ sender: Any) {
+        print(sender)
+    }
 }
 
