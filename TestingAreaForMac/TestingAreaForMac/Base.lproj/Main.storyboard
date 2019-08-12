@@ -67,6 +67,9 @@
                                         </menuItem>
                                         <menuItem title="Item 2" id="prL-Iw-xJL">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="item2Pressed:" target="Ady-hI-5gd" id="BEZ-V8-VN9"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem title="Item 3" id="cly-6W-K40">
                                             <modifierMask key="keyEquivalentModifierMask"/>

@@ -10,5 +10,9 @@ class ViewController: NSViewController {
     @IBAction func buttonPressed(sender: NSButton) {
         performSegue(withIdentifier: "showSegue", sender: nil)
     }
+    
+    @IBAction func item2Pressed(_ sender: NSMenuItem) {
+        performSegue(withIdentifier: "showSegue", sender: nil)
+    }
 }
 
