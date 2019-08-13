@@ -4,13 +4,5 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'TestingArea' do
-    pod 'SwiftyJSON'
-    pod 'SwiftyUtils', :git => 'https://github.com/tbaranes/SwiftyUtils.git', :commit => '982bffaadf8e831e75d3444dfba56af4d3962224'
-    pod 'Alamofire'
-    pod 'Firebase/Core'
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'Eureka'
-    pod 'RxDataSources'
-    pod 'DifferenceKit'
+    
 end

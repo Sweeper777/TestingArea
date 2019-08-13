@@ -1,9 +1,4 @@
 import UIKit
-import SwiftyUtils
-import Contacts
-import ContactsUI
-import Alamofire
-import DifferenceKit
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -22,13 +17,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let old = ["A", "B", "C", "D"]
-        let new = ["B", "C", "A", "D"]
         
-        let changeset = StagedChangeset(source: old, target: new)
-        for change in changeset {
-            print(change)
-        }
     }
 }
 
