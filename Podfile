@@ -4,5 +4,13 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'TestingArea' do
-    
+    pod 'SwiftyJSON'
+    pod 'SwiftyUtils'
+    pod 'Alamofire'
+    pod 'Firebase/Core'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'Eureka'
+    pod 'RxDataSources'
+    pod 'DifferenceKit'
 end
