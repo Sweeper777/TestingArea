@@ -20,5 +20,3 @@ class MyViewController2: UIViewController {
         
     }
 }
-
-extension String: Differentiable {}

@@ -10,7 +10,6 @@
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
 		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
-		5A1C32C21EB4F66200C47F13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */; };
 		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5A1FD0421DFD53390071AE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0411DFD53390071AE2F /* AppDelegate.swift */; };
 		5A1FD0441DFD53390071AE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0431DFD53390071AE2F /* ViewController.swift */; };
@@ -30,7 +29,6 @@
 		5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE001101CAA0F3A0058B744 /* Assets.xcassets */; };
 		5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */; };
 		5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
-		5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */; };
 		5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA741B1CDD7589007C3B7C /* Main.storyboard */; };
 		5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBC2651D0A9C3900E27822 /* MyViewController.swift */; };
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
@@ -100,7 +98,6 @@
 		5A181E711E349C2000C058BF /* ASToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ASToast.framework; path = "Pods/../build/Debug-iphoneos/ASToast/ASToast.framework"; sourceTree = "<group>"; };
 		5A183DF51E15038F00FAFC52 /* SwiftyUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUtils.framework; path = "Pods/../build/Debug-iphoneos/SwiftyUtils/SwiftyUtils.framework"; sourceTree = "<group>"; };
 		5A1AE2DD1E3CE45F0038B1D5 /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/pop/pop.framework"; sourceTree = "<group>"; };
-		5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A1D44CE1DF346C600D1508B /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		5A1DB3041DF45E7D0061FAEB /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SwiftCharts/SwiftCharts.framework"; sourceTree = "<group>"; };
 		5A1DB3061DF465370061FAEB /* SwiftChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftChart.framework; path = "Pods/../build/Debug-iphoneos/SwiftChart/SwiftChart.framework"; sourceTree = "<group>"; };
@@ -135,7 +132,6 @@
 		5AE001151CAA0F3A0058B744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AE20D801E38951E0064968B /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = "Pods/../build/Debug-iphoneos/pop/pop.framework"; sourceTree = "<group>"; };
 		5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
-		5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretStuff.swift; sourceTree = "<group>"; };
 		5AFA741B1CDD7589007C3B7C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		5AFBC2651D0A9C3900E27822 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		5AFBEABE1D111BBE00F8A8D2 /* modest.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = modest.css; sourceTree = "<group>"; };
@@ -269,7 +265,6 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
-				5A1C32C11EB4F66200C47F13 /* GoogleService-Info.plist */,
 				5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */,
 				5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */,
 				5A0370DB1D4AD57E00A961D1 /* beep.mp3 */,
@@ -283,7 +278,6 @@
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5A375C3D2185CDCC0020B23B /* MyView.swift */,
 				5A528FBF229D28050065EBFC /* MyCell.xib */,
-				5AFA092E1D8097E400DC8EAB /* SecretStuff.swift */,
 				5A35050E218DEA9400BC7C23 /* FontSizeHelper.swift */,
 				5AE001101CAA0F3A0058B744 /* Assets.xcassets */,
 				5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */,
@@ -411,7 +405,7 @@
 					5AE001021CAA0F3A0058B744 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = E9MW74DJ4Y;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1030;
 					};
 					5AFEC0FF1DA0468F0054FAAA = {
 						CreatedOnToolsVersion = 8.0;
@@ -421,7 +415,7 @@
 					5AFEC10B1DA046900054FAAA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = E9MW74DJ4Y;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1030;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -431,6 +425,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				fr,
@@ -471,7 +466,6 @@
 				5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */,
 				5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */,
 				5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */,
-				5A1C32C21EB4F66200C47F13 /* GoogleService-Info.plist in Resources */,
 				5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */,
 				5A373C1E1FB705C000F99847 /* test.txt in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
@@ -534,7 +528,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
-				5AFA092F1D8097E400DC8EAB /* SecretStuff.swift in Sources */,
 				5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */,
 				5A4FE2F122FFA2C100EC7479 /* MyNavigationController.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
@@ -792,7 +785,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -834,7 +827,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -893,7 +886,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
@@ -912,7 +905,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
