@@ -81,7 +81,7 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
   - SwiftyJSON (5.0.0)
-  - SwiftyUtils (2.0.0)
+  - SwiftyUtils (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -92,7 +92,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxSwift
   - SwiftyJSON
-  - SwiftyUtils
+  - SwiftyUtils (from `https://github.com/tbaranes/SwiftyUtils.git`, commit `adf37824622a46190aef33be686163311888a3c9`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -116,7 +116,16 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SwiftyJSON
-    - SwiftyUtils
+
+EXTERNAL SOURCES:
+  SwiftyUtils:
+    :commit: adf37824622a46190aef33be686163311888a3c9
+    :git: https://github.com/tbaranes/SwiftyUtils.git
+
+CHECKOUT OPTIONS:
+  SwiftyUtils:
+    :commit: adf37824622a46190aef33be686163311888a3c9
+    :git: https://github.com/tbaranes/SwiftyUtils.git
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -139,8 +148,8 @@ SPEC CHECKSUMS:
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  SwiftyUtils: ae914aa96b5672e9282904771e5e5b44d2e307d6
+  SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: c62b1646b9efcaad25a5fb8f3efd2c2341d7fbf7
+PODFILE CHECKSUM: ac34e7339c47d6af3b3368e4786bcdf5790ef2b0
 
 COCOAPODS: 1.7.5

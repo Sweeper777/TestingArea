@@ -5,7 +5,7 @@ use_frameworks!
 
 target 'TestingArea' do
     pod 'SwiftyJSON'
-    pod 'SwiftyUtils', '4.0.0'
+    pod 'SwiftyUtils', :git => 'https://github.com/tbaranes/SwiftyUtils.git', :commit => 'adf37824622a46190aef33be686163311888a3c9'
     pod 'Alamofire'
     pod 'Firebase/Core'
     pod 'RxSwift'
