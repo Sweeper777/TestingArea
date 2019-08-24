@@ -10,7 +10,7 @@ class MyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         tableView.dataSource = nil
-        let dataSource = RxTableViewSectionedAnimatedDataSource<StringSection>(configureCell:  {
+        let dataSource = RxTableViewSectionedReloadDataSource<StringSection>(configureCell:  {
             (dataSource, collectionView, indexPath, string) -> UITableViewCell in
             let cell = collectionView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text = string
@@ -32,7 +32,6 @@ class MyTableViewController: UITableViewController {
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         observable.accept(["String"])
-        tableView.reloadData()
     }
 }
 
