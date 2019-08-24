@@ -114,7 +114,7 @@ open class RxTableViewSectionedAnimatedDataSource<Section: AnimatableSectionMode
                                 tableView.endUpdates()
                             }
                         }
-                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: tableView.reloadData)
                     case .reload:
                         dataSource.setSections(newSections)
                         tableView.reloadData()
