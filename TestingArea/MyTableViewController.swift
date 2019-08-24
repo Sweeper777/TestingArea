@@ -32,6 +32,7 @@ class MyTableViewController: UITableViewController {
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         observable.accept(["String"])
+        tableView.reloadData()
     }
 }
 
