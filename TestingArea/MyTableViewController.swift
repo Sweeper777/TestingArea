@@ -10,7 +10,7 @@ class MyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         tableView.dataSource = nil
-        let dataSource = RxTableViewSectionedReloadDataSource<StringSection>(configureCell:  {
+        let dataSource = RxTableViewSectionedAnimatedDataSource<StringSection>(configureCell:  {
             (dataSource, collectionView, indexPath, string) -> UITableViewCell in
             let cell = collectionView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text = string
