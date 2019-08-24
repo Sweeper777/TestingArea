@@ -13,4 +13,5 @@ target 'TestingArea' do
     pod 'Eureka', '5.0.0'
     pod 'RxDataSources'
     pod 'DifferenceKit'
+    pod 'EmptyDataSet-Swift'
 end
