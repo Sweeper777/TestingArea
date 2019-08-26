@@ -3,8 +3,15 @@ import RxDataSources
 import RxSwift
 import RxCocoa
 import EmptyDataSet_Swift
+import SwiftyUtils
 
 class MyTableViewController: UITableViewController {
+    var strings = [String]() {
+        didSet {
+            observable.accept(strings)
+        }
+    }
+    
     let observable = BehaviorRelay(value: [String]())
     let disposeBag = DisposeBag()
     
