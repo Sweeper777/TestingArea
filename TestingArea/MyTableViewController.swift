@@ -30,10 +30,17 @@ class MyTableViewController: UITableViewController {
             }
             .bind(to: self.tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+
+        tableView.rx.itemDeleted
+            .subscribe(onNext: { _ = self.strings.remove(at: $0.row) })
+            .disposed(by: disposeBag)
+        strings = ["Item 1", "Item 2", "Item 3"]
+        
+        navigationItem.rightBarButtonItem = editButtonItem
     }
     
-    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        observable.accept(["String"])
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
     }
 }
 
