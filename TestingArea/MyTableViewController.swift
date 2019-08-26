@@ -23,12 +23,7 @@ class MyTableViewController: UITableViewController {
             cell.textLabel?.text = string
             return cell
         })
-        
-        tableView.emptyDataSetView { (view) in
-            view.titleLabelString(NSAttributedString(string: "Nothing to see here!"))
-            view.shouldDisplay(true)
-        }
-        
+
         observable.asObservable()
             .map {
                 [StringSection(items: $0)]
