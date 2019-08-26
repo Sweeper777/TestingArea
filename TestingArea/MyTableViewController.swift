@@ -23,6 +23,7 @@ class MyTableViewController: UITableViewController {
             cell.textLabel?.text = string
             return cell
         })
+        dataSource.canEditRowAtIndexPath = { _, _ in return true }
 
         observable.asObservable()
             .map {
@@ -37,10 +38,6 @@ class MyTableViewController: UITableViewController {
         strings = ["Item 1", "Item 2", "Item 3"]
         
         navigationItem.rightBarButtonItem = editButtonItem
-    }
-    
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
     }
 }
 
