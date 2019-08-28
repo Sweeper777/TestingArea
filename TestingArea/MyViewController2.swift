@@ -1,11 +1,11 @@
 import UIKit
+import MediaPlayer
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    @IBOutlet var coolButton: UIButton!
 
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -13,10 +13,14 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coolButton.titleLabel?.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
     }
     
     @IBAction func click() {
-        
+        // Instantiate a new music player
+        let myMediaPlayer = MPMusicPlayerApplicationController.applicationQueuePlayer
+        // Add a playback queue containing all songs on the device
+        myMediaPlayer.setQueue(with: MPMediaQuery.songs())
+        // Start playing from the beginning of the queue
+        myMediaPlayer.play()
     }
 }
