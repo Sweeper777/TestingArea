@@ -18,7 +18,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let utterance = AVSpeechUtterance(string: "Hello World, my name is Sweeper")
+        let utterance = AVSpeechUtterance(string: textview.text)
         utterance.rate = AVSpeechUtteranceMinimumSpeechRate
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         synthesiser.delegate = self
@@ -28,6 +28,8 @@ class MyViewController2: UIViewController {
 
 extension MyViewController2 : AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
-        print((utterance.speechString as NSString).substring(with: characterRange))
+        let attributedString = NSMutableAttributedString(string: utterance.speechString)
+        attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: characterRange)
+        textview.attributedText = attributedString
     }
 }
