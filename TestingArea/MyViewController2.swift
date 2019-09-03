@@ -22,5 +22,10 @@ class MyViewController2: UIViewController {
         myMediaPlayer.setQueue(with: MPMediaQuery.songs())
         // Start playing from the beginning of the queue
         myMediaPlayer.play()
+}
+
+extension MyViewController2 : AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+        print((utterance.speechString as NSString).substring(with: characterRange))
     }
 }
