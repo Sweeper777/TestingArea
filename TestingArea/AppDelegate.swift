@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
-//import Firebase
-//import UserNotifications
+import Firebase
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,17 +9,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        FirebaseApp.configure()
-//
-//        if #available(iOS 10.0, *) {
-//            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-//                if let e = error {
-//                    print(e.localizedDescription)
-//                }
-//            }
-//        } else {
-//            // Fallback on earlier versions
-//        }
+        FirebaseApp.configure()
+        try? AVAudioSession.sharedInstance().setCategory(.playback)
         return true
     }
 
