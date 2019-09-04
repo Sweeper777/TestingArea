@@ -32,4 +32,12 @@ extension MyViewController2 : AVSpeechSynthesizerDelegate {
         attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: characterRange)
         textview.attributedText = attributedString
     }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        try? AVAudioSession.sharedInstance().setActive(true)
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        try? AVAudioSession.sharedInstance().setActive(false)
+    }
 }
