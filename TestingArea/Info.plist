@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>xxx</string>
-	<key>NSContactsUsageDescription</key>
-	<string>Foo Bar Baz</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -49,8 +45,12 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>xxx</string>
 	<key>NSCameraUsageDescription</key>
 	<string>xxx</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Foo Bar Baz</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>xxx</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -58,6 +58,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>NotoColorEmoji.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
