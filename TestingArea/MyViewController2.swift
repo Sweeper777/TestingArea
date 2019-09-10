@@ -18,11 +18,16 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let utterance = AVSpeechUtterance(string: textview.text)
-        utterance.rate = AVSpeechUtteranceMinimumSpeechRate
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        synthesiser.delegate = self
-        synthesiser.speak(utterance)
+        if synthesiser.isSpeaking {
+            print("Manually stopping")
+            synthesiser.stopSpeaking(at: .immediate)
+        } else {
+            let utterance = AVSpeechUtterance(string: "One Two Three Four Internationalization")
+            utterance.rate = AVSpeechUtteranceMinimumSpeechRate
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            synthesiser.delegate = self
+            synthesiser.speak(utterance)
+        }
     }
 }
 
