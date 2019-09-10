@@ -27,12 +27,6 @@ class MyViewController2: UIViewController {
 }
 
 extension MyViewController2 : AVSpeechSynthesizerDelegate {
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
-        let attributedString = NSMutableAttributedString(string: utterance.speechString)
-        attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: characterRange)
-        textview.attributedText = attributedString
-    }
-    
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
         try? AVAudioSession.sharedInstance().setActive(true)
     }
