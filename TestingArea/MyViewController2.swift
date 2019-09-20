@@ -18,23 +18,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        if synthesiser.isSpeaking {
-            print("Manually stopping")
-            synthesiser.stopSpeaking(at: .immediate)
-        } else {
-            let utterance = AVSpeechUtterance(string: "One Two Three Four Internationalization")
-            utterance.rate = AVSpeechUtteranceMinimumSpeechRate
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-            synthesiser.delegate = self
-            synthesiser.speak(utterance)
-        }
     }
-}
-
-extension MyViewController2 : AVSpeechSynthesizerDelegate {
-
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        print("Stopped!")
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
