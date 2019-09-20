@@ -15,6 +15,7 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textview.attributedText = NSAttributedString(string: textview.text, attributes: [.font: UIFont.systemFont(ofSize: 19)])
     }
     
     @IBAction func click() {
