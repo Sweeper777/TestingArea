@@ -19,6 +19,11 @@ class MyViewController2: UIViewController {
     
     @IBAction func click() {
     }
+    
+    func test1() {
+        let start = textview.attributedText.string.count - 2
+        let range = NSRange(location: start, length: 1)
+        textview.scrollRangeToVisible(range)
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
