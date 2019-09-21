@@ -19,6 +19,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        test2()
     }
     
     func test1() {
@@ -27,7 +28,15 @@ class MyViewController2: UIViewController {
         textview.scrollRangeToVisible(range)
     }
     
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        print("Cancelled!")
+    
+    var i = 0
+    func test2() {
+        _ = Timer.every(0.2) { (timer) in
+            self.textview.attributedText = attributedString
+            self.textview.scrollRangeToVisible(range)
+            if self.i + 1 >= self.textview.attributedText.string.count {
+                timer.invalidate()
+            }
+        }
     }
 }
