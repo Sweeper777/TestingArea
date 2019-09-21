@@ -32,6 +32,11 @@ class MyViewController2: UIViewController {
     var i = 0
     func test2() {
         _ = Timer.every(0.2) { (timer) in
+            let range = NSRange(location: self.i, length: 1)
+            self.i += 10
+            let attributedString = NSMutableAttributedString(attributedString: self.textview.attributedText)
+            attributedString.removeAttribute(NSAttributedString.Key.backgroundColor, range: NSRange(location: 0, length: attributedString.length))
+            attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.red, range: range)
             self.textview.attributedText = attributedString
             self.textview.scrollRangeToVisible(range)
             if self.i + 1 >= self.textview.attributedText.string.count {
