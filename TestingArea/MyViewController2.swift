@@ -15,11 +15,22 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        synthesiser.delegate = self
         textview.attributedText = NSAttributedString(string: textview.text, attributes: [.font: UIFont.systemFont(ofSize: 19)])
     }
     
     @IBAction func click() {
+        synthesiser.speak(AVSpeechUtterance(attributedString: textview.attributedText))
     }
     
+}
+
+extension MyViewController2 : AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+        let attributedString = NSMutableAttributedString(attributedString: textview.attributedText)
+        attributedString.removeAttribute(NSAttributedString.Key.backgroundColor, range: NSRange(location: 0, length: attributedString.length))
+        attributedString.addAttribute(NSAttributedString.Key.backgroundColor, value: UIColor.yellow, range: characterRange)
+        textview.attributedText = attributedString
+        textview.scrollRangeToVisible(characterRange)
     }
 }
