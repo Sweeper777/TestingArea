@@ -11,11 +11,6 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>BoringSSL-GRPC.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>24</integer>
-		</dict>
 		<key>DifferenceKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -58,11 +53,6 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>FirebaseAuthInterop.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>25</integer>
-		</dict>
 		<key>FirebaseCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -83,11 +73,6 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>10</integer>
-		</dict>
-		<key>FirebaseFirestore.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>26</integer>
 		</dict>
 		<key>FirebaseInstanceID.xcscheme</key>
 		<dict>
@@ -131,11 +116,6 @@
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
-		<key>Protobuf.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>31</integer>
-		</dict>
 		<key>RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -164,39 +144,26 @@
 			<key>orderHint</key>
 			<integer>21</integer>
 		</dict>
-		<key>SwiftyJSON.xcscheme</key>
+		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>22</integer>
 		</dict>
-		<key>SwiftyUtils.xcscheme</key>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>23</integer>
 		</dict>
-		<key>gRPC-C++-gRPCCertificates-Cpp.xcscheme</key>
+		<key>SwiftyUtils.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
-			<integer>28</integer>
-		</dict>
-		<key>gRPC-C++.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>27</integer>
-		</dict>
-		<key>gRPC-Core.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>29</integer>
-		</dict>
-		<key>leveldb-library.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>30</integer>
+			<integer>24</integer>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>

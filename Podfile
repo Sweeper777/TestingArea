@@ -14,4 +14,5 @@ target 'TestingArea' do
     pod 'RxDataSources'
     pod 'DifferenceKit'
     pod 'EmptyDataSet-Swift'
+    pod 'SnapKit'
 end
