@@ -1,7 +1,9 @@
 import UIKit
+import SnapKit
 
 class MyViewController: UIViewController{
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var blur: UIVisualEffectView!
+    @IBOutlet var text: UITextView!
     
     override func viewDidLoad() {
     }
