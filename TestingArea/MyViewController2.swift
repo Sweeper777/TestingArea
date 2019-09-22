@@ -20,7 +20,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        synthesiser.speak(AVSpeechUtterance(attributedString: textview.attributedText))
+//        performSegue(withIdentifier: "show", sender: nil)
     }
     
 }
