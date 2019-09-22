@@ -9,6 +9,7 @@ class MyViewController: UIViewController{
         blur.snp.makeConstraints { (make) in
             make.width.equalToSuperview()
             make.height.equalToSuperview()
+            make.center.equalToSuperview()
         }
         
         text.snp.makeConstraints { (make) in
