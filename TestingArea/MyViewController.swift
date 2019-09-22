@@ -17,4 +17,8 @@ class MyViewController: UIViewController{
             make.center.equalToSuperview()
         }
     }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        dismiss(animated: true, completion: nil)
+    }
 }
