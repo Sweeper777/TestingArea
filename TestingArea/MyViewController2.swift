@@ -7,6 +7,7 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
+    @IBOutlet var label: UILabel!
     
     let synthesiser = AVSpeechSynthesizer()
     let disposeBag = DisposeBag()
@@ -23,6 +24,10 @@ class MyViewController2: UIViewController {
     
     @IBAction func click() {
 //        performSegue(withIdentifier: "show", sender: nil)
+//        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
+//            .take(30).map { String($0) }
+//            .bind(to: label.rx.text)
+//            .disposed(by: disposeBag)
     }
     
 }
