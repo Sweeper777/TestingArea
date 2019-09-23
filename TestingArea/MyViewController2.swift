@@ -23,7 +23,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-//        performSegue(withIdentifier: "show", sender: nil)
+        performSegue(withIdentifier: "show", sender: nil)
 //        Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
 //            .take(30).map { String($0) }
 //            .bind(to: label.rx.text)
