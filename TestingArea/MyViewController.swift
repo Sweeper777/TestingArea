@@ -16,9 +16,8 @@ class MyViewController: UIViewController{
             make.center.equalToSuperview()
         }
         
-        text.snp.makeConstraints { (make) in
-            make.width.equalTo(240)
-            make.height.equalTo(128)
+        betterSC.indicatorViewBackgroundColor = UIColor.blue.darker()
+        betterSC.cornerRadius = 20
             make.center.equalToSuperview()
         }
     }
