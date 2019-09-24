@@ -20,6 +20,7 @@ class MyViewController: UIViewController{
         betterSC.cornerRadius = 20
             make.center.equalToSuperview()
         }
+    }
     
     func test1() {
         betterSC.segments = [
@@ -41,6 +42,24 @@ class MyViewController: UIViewController{
         ]
     }
     
+    func test2() {
+        betterSC.segments = [
+            LabelSegment(
+                text: "None",
+                numberOfLines: 0,
+                normalTextColor: UIColor.blue.darker(),
+                selectedTextColor: .white),
+            IconSegment(
+                icon: UIImage(named: "settings")!,
+                iconSize: CGSize(width: 25, height: 25),
+                normalIconTintColor: UIColor.blue.darker(),
+                selectedIconTintColor: .white),
+            IconSegment(
+                icon: UIImage(named: "icons8-repeat_filled")!,
+                iconSize: CGSize(width: 25, height: 25),
+                normalIconTintColor: UIColor.blue.darker(),
+                selectedIconTintColor: .white),
+        ]
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
