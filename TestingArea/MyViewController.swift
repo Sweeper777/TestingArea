@@ -16,9 +16,23 @@ class MyViewController: UIViewController{
             make.center.equalToSuperview()
         }
         
+        test2()
         betterSC.indicatorViewBackgroundColor = UIColor.blue.darker()
         betterSC.cornerRadius = 20
+        
+        lunSC.dataSource = self
+        
+        betterSC.snp.makeConstraints { (make) in
+            make.height.equalTo(40)
+            make.width.equalTo(180)
             make.center.equalToSuperview()
+        }
+        
+        lunSC.snp.makeConstraints { (make) in
+            make.height.equalTo(40)
+            make.width.equalTo(180)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(betterSC.snp.bottom).offset(10)
         }
     }
     
