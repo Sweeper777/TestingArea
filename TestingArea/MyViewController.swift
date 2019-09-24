@@ -1,9 +1,13 @@
 import UIKit
 import SnapKit
+import BetterSegmentedControl
+import LUNSegmentedControl
 
 class MyViewController: UIViewController{
     @IBOutlet var blur: UIVisualEffectView!
-    @IBOutlet var text: UITextView!
+    
+    @IBOutlet var betterSC: BetterSegmentedControl!
+    @IBOutlet var lunSC: LUNSegmentedControl!
     
     override func viewDidLoad() {
         blur.snp.makeConstraints { (make) in
