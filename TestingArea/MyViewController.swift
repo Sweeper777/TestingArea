@@ -80,3 +80,27 @@ class MyViewController: UIViewController{
         dismiss(animated: true, completion: nil)
     }
 }
+
+extension MyViewController: LUNSegmentedControlDataSource {
+    func numberOfStates(in segmentedControl: LUNSegmentedControl!) -> Int {
+        return 3
+    }
+    
+    func segmentedControl(_ segmentedControl: LUNSegmentedControl!, viewForStateAt index: Int) -> UIView! {
+        switch index {
+        case 0:
+            let label = UILabel()
+            label.text = "None"
+            label.sizeToFit()
+            return label
+        case 1:
+            let imageView = UIImageView(image: UIImage(named: "home"))
+            return imageView
+        case 2:
+            let imageView = UIImageView(image: UIImage(named: "icons8-repeat_filled"))
+            return imageView
+        default:
+            fatalError()
+        }
+    }
+}
