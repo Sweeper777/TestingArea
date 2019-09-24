@@ -34,6 +34,8 @@ class MyViewController: UIViewController{
             make.centerX.equalToSuperview()
             make.top.equalTo(betterSC.snp.bottom).offset(10)
         }
+        lunSC.applyCornerRadiusToSelectorView = true
+        lunSC.cornerRadius = 20
     }
     
     func test1() {
