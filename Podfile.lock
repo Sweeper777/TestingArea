@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.8.2)
-  - BetterSegmentedControl (1.2.1)
   - DifferenceKit (1.1.3):
     - DifferenceKit/Core (= 1.1.3)
     - DifferenceKit/UIKitExtension (= 1.1.3)
@@ -67,7 +66,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.2.4):
     - GoogleUtilities/Logger
-  - LUNSegmentedControl (1.0.7)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -89,12 +87,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - BetterSegmentedControl
   - DifferenceKit
   - EmptyDataSet-Swift
   - Eureka (= 5.0.0)
   - Firebase/Core
-  - LUNSegmentedControl
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -105,7 +101,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - BetterSegmentedControl
     - DifferenceKit
     - Differentiator
     - EmptyDataSet-Swift
@@ -120,7 +115,6 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
-    - LUNSegmentedControl
     - nanopb
     - RxCocoa
     - RxDataSources
@@ -141,7 +135,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  BetterSegmentedControl: b27bddbdff29b6cae988678d6cd106858986cd03
   DifferenceKit: 5018791b6c1fc839921a3c171a0a539ace6ea60c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   EmptyDataSet-Swift: 1fa0b35f530a35f852ecb2b53564728b0c300aaf
@@ -156,7 +149,6 @@ SPEC CHECKSUMS:
   GoogleDataTransport: ffbadce4ab93c88fb9dd8e6366c47bfcb4a32193
   GoogleDataTransportCCTSupport: 3451e7d8ba19093e533362a6d78d6d9014c6a037
   GoogleUtilities: 64b5e3982b1b01bda26712affd5c523ef32563cf
-  LUNSegmentedControl: f868b1ea740f9917f05dbcb4cded85c33ec606e6
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
@@ -166,6 +158,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 5fa8f103e27e11d8127a52bd19821d3fc43822a3
+PODFILE CHECKSUM: 626b5cd3cf39be807935ebd19682e2e076e2809c
 
 COCOAPODS: 1.7.5

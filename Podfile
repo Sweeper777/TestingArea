@@ -15,6 +15,4 @@ target 'TestingArea' do
     pod 'DifferenceKit'
     pod 'EmptyDataSet-Swift'
     pod 'SnapKit'
-    pod 'BetterSegmentedControl'
-    pod 'LUNSegmentedControl'
 end
