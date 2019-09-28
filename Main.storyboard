@@ -80,7 +80,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
+                    <navigationItem key="navigationItem" id="WN4-pT-4GI">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="icons8-trash-medium" id="JQU-YW-nLb"/>
+                            <barButtonItem title="Item" image="icons8-trash" id="h9Q-Sj-Bx5"/>
+                            <barButtonItem systemItem="trash" id="xMG-Aq-vZn"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
                         <outlet property="label" destination="bSm-c4-QhF" id="fkO-4E-NZc"/>
@@ -148,4 +154,8 @@
             <point key="canvasLocation" x="1533.75" y="184.85915492957747"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-trash" width="25" height="25"/>
+        <image name="icons8-trash-medium" width="32" height="32"/>
+    </resources>
 </document>
