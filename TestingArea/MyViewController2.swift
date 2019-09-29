@@ -24,6 +24,8 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupAVCapture()
     }
     
     @IBAction func click() {
@@ -31,5 +33,55 @@ class MyViewController2: UIViewController {
     
 }
 
+extension MyViewController2:  AVCaptureVideoDataOutputSampleBufferDelegate{
+    func setupAVCapture(){
+        session.sessionPreset = AVCaptureSession.Preset.photo
+        guard let device = AVCaptureDevice
+            .default(AVCaptureDevice.DeviceType.builtInWideAngleCamera,
+                     for: .video,
+                     position: AVCaptureDevice.Position.back) else {
+                        return
+        }
+        captureDevice = device
+        beginSession()
+    }
+    
+    func beginSession(){
+        var deviceInput: AVCaptureDeviceInput!
+        
+        do {
+            deviceInput = try AVCaptureDeviceInput(device: captureDevice)
+            guard deviceInput != nil else {
+                print("error: cant get deviceInput")
+                return
+            }
+            
+            if self.session.canAddInput(deviceInput){
+                self.session.addInput(deviceInput)
+            }
+            
+            videoDataOutput = AVCaptureVideoDataOutput()
+            videoDataOutput.alwaysDiscardsLateVideoFrames=true
+            videoDataOutputQueue = DispatchQueue(label: "VideoDataOutputQueue")
+            videoDataOutput.setSampleBufferDelegate(self, queue:self.videoDataOutputQueue)
+            
+            if session.canAddOutput(self.videoDataOutput){
+                session.addOutput(self.videoDataOutput)
+            }
+            
+            videoDataOutput.connection(with: .video)?.isEnabled = true
+            
+            previewLayer = AVCaptureVideoPreviewLayer(session: self.session)
+            previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            
+            let rootLayer :CALayer = self.cameraView.layer
+            rootLayer.masksToBounds=true
+            previewLayer.frame = rootLayer.bounds
+            rootLayer.addSublayer(self.previewLayer)
+            session.startRunning()
+        } catch let error as NSError {
+            deviceInput = nil
+            print("error: \(error.localizedDescription)")
+        }
     }
 }
