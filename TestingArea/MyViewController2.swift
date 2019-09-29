@@ -84,4 +84,14 @@ extension MyViewController2:  AVCaptureVideoDataOutputSampleBufferDelegate{
             print("error: \(error.localizedDescription)")
         }
     }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        // do stuff here
+    }
+    
+    // clean up AVCapture
+    func stopCamera(){
+        session.stopRunning()
+    }
+    
 }
