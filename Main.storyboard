@@ -70,26 +70,18 @@
                                     <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="eQX-1V-SwJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSm-c4-QhF">
-                                <rect key="frame" x="138" y="274" width="42" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVj-jB-Ong">
+                                <rect key="frame" x="0.0" y="265" width="320" height="303"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WN4-pT-4GI">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="icons8-trash-medium" id="JQU-YW-nLb"/>
-                            <barButtonItem title="Item" image="icons8-trash" id="h9Q-Sj-Bx5"/>
-                            <barButtonItem systemItem="trash" id="xMG-Aq-vZn"/>
-                        </rightBarButtonItems>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                     <connections>
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
-                        <outlet property="label" destination="bSm-c4-QhF" id="fkO-4E-NZc"/>
+                        <outlet property="cameraView" destination="sVj-jB-Ong" id="CPA-dq-fIz"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
@@ -154,8 +146,4 @@
             <point key="canvasLocation" x="1533.75" y="184.85915492957747"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-trash" width="25" height="25"/>
-        <image name="icons8-trash-medium" width="32" height="32"/>
-    </resources>
 </document>
