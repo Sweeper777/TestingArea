@@ -29,6 +29,11 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        if session.isRunning {
+            session.stopRunning()
+        } else {
+            session.startRunning()
+        }
     }
     
 }
