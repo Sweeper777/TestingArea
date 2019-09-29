@@ -15,4 +15,5 @@ target 'TestingArea' do
     pod 'DifferenceKit'
     pod 'EmptyDataSet-Swift'
     pod 'SnapKit'
+    pod 'AACameraView', :git => 'https://github.com/EngrAhsanAli/AACameraView.git', :commit => '7b81550ada116c3632d7e2218cf1466e0cbd029b'
 end
