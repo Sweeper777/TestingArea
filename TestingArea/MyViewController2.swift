@@ -1,6 +1,7 @@
 import UIKit
 import AVFoundation
 import RxSwift
+import AACameraView
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -35,6 +36,8 @@ class MyViewController2: UIViewController {
         cameraView.stopSession()
     }
     
+    @IBAction func click() {
+//        cameraView.captureImage()
     }
     
 }
