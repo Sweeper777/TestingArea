@@ -18,6 +18,10 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cameraView.response = {
+            if let image = $0 as? UIImage {
+                print("Image Captured: \(image.pngData()?.count ?? 0) Bytes")
+            }
         }
     }
     
