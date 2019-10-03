@@ -8,7 +8,7 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     
-    @IBOutlet var cameraView: UIView!
+    @IBOutlet var cameraView: AACameraView!
     
     let disposeBag = DisposeBag()
 
