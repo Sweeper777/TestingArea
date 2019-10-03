@@ -38,6 +38,7 @@ class MyViewController2: UIViewController {
     
     @IBAction func click() {
 //        cameraView.captureImage()
+        cameraView.triggerCamera()
     }
     
 }
