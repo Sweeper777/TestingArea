@@ -2,7 +2,6 @@ import UIKit
 import RxDataSources
 import RxSwift
 import RxCocoa
-import EmptyDataSet_Swift
 import SwiftyUtils
 
 class MyTableViewController: UITableViewController {

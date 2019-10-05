@@ -1,15 +1,12 @@
 import UIKit
 import AVFoundation
 import RxSwift
-import AACameraView
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    
-    @IBOutlet var cameraView: AACameraView!
     
     let disposeBag = DisposeBag()
 
@@ -19,26 +16,9 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        cameraView.response = {
-            if let image = $0 as? UIImage {
-                print("Image Captured: \(image.pngData()?.count ?? 0) Bytes")
-            }
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        cameraView.startSession()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        cameraView.stopSession()
     }
     
     @IBAction func click() {
-//        cameraView.captureImage()
-        cameraView.triggerCamera()
     }
     
 }
