@@ -13,7 +13,8 @@ target 'TestingArea' do
     pod 'Eureka', '5.0.0'
     pod 'RxDataSources'
     pod 'DifferenceKit'
-    pod 'EmptyDataSet-Swift'
-    pod 'SnapKit'
-    pod 'AACameraView', :git => 'https://github.com/EngrAhsanAli/AACameraView.git', :commit => '7b81550ada116c3632d7e2218cf1466e0cbd029b'
+    pod 'RealmSwift'
+    target 'MyTodayExtension' do
+      inherit! :search_paths
+    end
 end
