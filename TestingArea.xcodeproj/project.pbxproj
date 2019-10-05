@@ -9,8 +9,13 @@
 /* Begin PBXBuildFile section */
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
+		5A14CC9C234669D700E31F0D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A14CC9B234669D700E31F0D /* NotificationCenter.framework */; };
+		5A14CC9F234669D700E31F0D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14CC9E234669D700E31F0D /* TodayViewController.swift */; };
+		5A14CCA2234669D700E31F0D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A14CCA0234669D700E31F0D /* MainInterface.storyboard */; };
+		5A14CCA6234669D700E31F0D /* MyTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A14CC9A234669D700E31F0D /* MyTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5A14CCAC23466E1300E31F0D /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14CCAB23466E1300E31F0D /* RealmHelper.swift */; };
+		5A14CCAD23466E1600E31F0D /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14CCAB23466E1300E31F0D /* RealmHelper.swift */; };
 		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
-		5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F4DF91DB7F54A005990AF /* MyRowController.swift */; };
 		5A1FD0421DFD53390071AE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0411DFD53390071AE2F /* AppDelegate.swift */; };
 		5A1FD0441DFD53390071AE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0431DFD53390071AE2F /* ViewController.swift */; };
 		5A1FD0471DFD53390071AE2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A1FD0451DFD53390071AE2F /* Main.storyboard */; };
@@ -34,41 +39,28 @@
 		5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFBC2651D0A9C3900E27822 /* MyViewController.swift */; };
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
-		5AFEC1041DA046900054FAAA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1021DA046900054FAAA /* Interface.storyboard */; };
-		5AFEC1061DA046900054FAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1051DA046900054FAAA /* Assets.xcassets */; };
-		5AFEC10D1DA046900054FAAA /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5AFEC10C1DA046900054FAAA /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5AFEC1121DA046900054FAAA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEC1111DA046900054FAAA /* InterfaceController.swift */; };
-		5AFEC1141DA046900054FAAA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFEC1131DA046900054FAAA /* ExtensionDelegate.swift */; };
-		5AFEC1161DA046900054FAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFEC1151DA046900054FAAA /* Assets.xcassets */; };
-		5AFEC11A1DA046900054FAAA /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5AFEC1001DA0468F0054FAAA /* Watch.app */; };
 		77664586DAB6FEBA3E5AB213 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86838F400CA1D75975B72135 /* Pods_TestingArea.framework */; };
+		ECA130705928FF933718BDB8 /* Pods_MyTodayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1FFA0621621391240409E9 /* Pods_MyTodayExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5AFEC10E1DA046900054FAAA /* PBXContainerItemProxy */ = {
+		5A14CCA4234669D700E31F0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5AE000FB1CAA0F3A0058B744 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5AFEC10B1DA046900054FAAA;
-			remoteInfo = "Watch Extension";
-		};
-		5AFEC1181DA046900054FAAA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AE000FB1CAA0F3A0058B744 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AFEC0FF1DA0468F0054FAAA;
-			remoteInfo = Watch;
+			remoteGlobalIDString = 5A14CC99234669D700E31F0D;
+			remoteInfo = MyTodayExtension;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5AFEC1201DA046900054FAAA /* Embed App Extensions */ = {
+		5A14CCAA234669D700E31F0D /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				5AFEC10D1DA046900054FAAA /* Watch Extension.appex in Embed App Extensions */,
+				5A14CCA6234669D700E31F0D /* MyTodayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,7 +71,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				5AFEC11A1DA046900054FAAA /* Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,9 +78,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTodayExtension/Pods-MyTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5A00C4C31D722A9C00AB34C3 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
+		5A14CC9A234669D700E31F0D /* MyTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A14CC9B234669D700E31F0D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5A14CC9E234669D700E31F0D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		5A14CCA1234669D700E31F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5A14CCA3234669D700E31F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A14CCAB23466E1300E31F0D /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		5A14CCB02346758C00E31F0D /* MyTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTodayExtension.entitlements; sourceTree = "<group>"; };
+		5A14CCB1234675D300E31F0D /* TestingArea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestingArea.entitlements; sourceTree = "<group>"; };
 		5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NBEmojiSearchView.framework; path = "Pods/../build/Debug-iphoneos/NBEmojiSearchView/NBEmojiSearchView.framework"; sourceTree = "<group>"; };
 		5A158C8E1E369484007000FD /* AllEmoji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllEmoji.json; sourceTree = "<group>"; };
 		5A16C0301E2E01F600D1DE46 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/SlideMenuControllerSwift/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
@@ -106,7 +106,6 @@
 		5A1EC86C1DD2658F009C23EF /* EZLoadingActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZLoadingActivity.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/EZLoadingActivity/EZLoadingActivity.framework"; sourceTree = "<group>"; };
 		5A1EC8741DD266DD009C23EF /* JVFloatLabeledTextField.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JVFloatLabeledTextField.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/JVFloatLabeledTextField/JVFloatLabeledTextField.framework"; sourceTree = "<group>"; };
 		5A1EC8751DD266DD009C23EF /* MGSwipeTableCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MGSwipeTableCell.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/MGSwipeTableCell/MGSwipeTableCell.framework"; sourceTree = "<group>"; };
-		5A1F4DF91DB7F54A005990AF /* MyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRowController.swift; sourceTree = "<group>"; };
 		5A1F86FE1DE97CD100110FCD /* PDFGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFGenerator.framework; path = "Pods/../build/Debug-iphoneos/PDFGenerator/PDFGenerator.framework"; sourceTree = "<group>"; };
 		5A1FD03F1DFD53390071AE2F /* TestingAreaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingAreaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A1FD0411DFD53390071AE2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,21 +140,23 @@
 		5AFD04761D780E1B0099527B /* TouchDraw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TouchDraw.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/TouchDraw/TouchDraw.framework"; sourceTree = "<group>"; };
 		5AFE43071D8E734200B063D8 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/EZSwiftExtensions/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
 		5AFE67D11D2B8F5F0074ACAE /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
-		5AFEC1001DA0468F0054FAAA /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AFEC1031DA046900054FAAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		5AFEC1051DA046900054FAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5AFEC1071DA046900054FAAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AFEC10C1DA046900054FAAA /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AFEC1111DA046900054FAAA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		5AFEC1131DA046900054FAAA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		5AFEC1151DA046900054FAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5AFEC1171DA046900054FAAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C1FFA0621621391240409E9 /* Pods_MyTodayExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTodayExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8232176D5945D26B4D998235 /* Pods-MyTodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTodayExtension/Pods-MyTodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		86838F400CA1D75975B72135 /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872C31A8576DB1452420218 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
 		B57A215E98C1AB22AFC7D1FF /* Pods-TestingArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A14CC97234669D700E31F0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A14CC9C234669D700E31F0D /* NotificationCenter.framework in Frameworks */,
+				ECA130705928FF933718BDB8 /* Pods_MyTodayExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A1FD03C1DFD53390071AE2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,20 +169,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				77664586DAB6FEBA3E5AB213 /* Pods_TestingArea.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AFEC1091DA046900054FAAA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		73DFDA5B5EC3DB0A09A76D07 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +202,8 @@
 				5AFD04761D780E1B0099527B /* TouchDraw.framework */,
 				5A00C4C31D722A9C00AB34C3 /* Eureka.framework */,
 				86838F400CA1D75975B72135 /* Pods_TestingArea.framework */,
+				5A14CC9B234669D700E31F0D /* NotificationCenter.framework */,
+				7C1FFA0621621391240409E9 /* Pods_MyTodayExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,8 +213,21 @@
 			children = (
 				8872C31A8576DB1452420218 /* Pods-TestingArea.debug.xcconfig */,
 				B57A215E98C1AB22AFC7D1FF /* Pods-TestingArea.release.xcconfig */,
+				8232176D5945D26B4D998235 /* Pods-MyTodayExtension.debug.xcconfig */,
+				1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A14CC9D234669D700E31F0D /* MyTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				5A14CCB02346758C00E31F0D /* MyTodayExtension.entitlements */,
+				5A14CC9E234669D700E31F0D /* TodayViewController.swift */,
+				5A14CCA0234669D700E31F0D /* MainInterface.storyboard */,
+				5A14CCA3234669D700E31F0D /* Info.plist */,
+			);
+			path = MyTodayExtension;
 			sourceTree = "<group>";
 		};
 		5A1FD0401DFD53390071AE2F /* TestingAreaTV */ = {
@@ -244,9 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				5AE001051CAA0F3A0058B744 /* TestingArea */,
-				5AFEC1011DA046900054FAAA /* Watch */,
-				5AFEC1101DA046900054FAAA /* Watch Extension */,
 				5A1FD0401DFD53390071AE2F /* TestingAreaTV */,
+				5A14CC9D234669D700E31F0D /* MyTodayExtension */,
 				5AE001041CAA0F3A0058B744 /* Products */,
 				1EB06E18AAE7306B21230C08 /* Frameworks */,
 				58DE2F7C93F929B49488DF3C /* Pods */,
@@ -257,9 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				5AE001031CAA0F3A0058B744 /* TestingArea.app */,
-				5AFEC1001DA0468F0054FAAA /* Watch.app */,
-				5AFEC10C1DA046900054FAAA /* Watch Extension.appex */,
 				5A1FD03F1DFD53390071AE2F /* TestingAreaTV.app */,
+				5A14CC9A234669D700E31F0D /* MyTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +267,7 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
+				5A14CCB1234675D300E31F0D /* TestingArea.entitlements */,
 				5AFA8C482302609C00713D8F /* GoogleService-Info.plist */,
 				5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */,
 				5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */,
@@ -279,6 +280,7 @@
 				5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */,
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
+				5A14CCAB23466E1300E31F0D /* RealmHelper.swift */,
 				5A375C3D2185CDCC0020B23B /* MyView.swift */,
 				5A528FBF229D28050065EBFC /* MyCell.xib */,
 				5A35050E218DEA9400BC7C23 /* FontSizeHelper.swift */,
@@ -293,31 +295,27 @@
 			path = TestingArea;
 			sourceTree = "<group>";
 		};
-		5AFEC1011DA046900054FAAA /* Watch */ = {
-			isa = PBXGroup;
-			children = (
-				5AFEC1021DA046900054FAAA /* Interface.storyboard */,
-				5AFEC1051DA046900054FAAA /* Assets.xcassets */,
-				5AFEC1071DA046900054FAAA /* Info.plist */,
-			);
-			path = Watch;
-			sourceTree = "<group>";
-		};
-		5AFEC1101DA046900054FAAA /* Watch Extension */ = {
-			isa = PBXGroup;
-			children = (
-				5AFEC1111DA046900054FAAA /* InterfaceController.swift */,
-				5A1F4DF91DB7F54A005990AF /* MyRowController.swift */,
-				5AFEC1131DA046900054FAAA /* ExtensionDelegate.swift */,
-				5AFEC1151DA046900054FAAA /* Assets.xcassets */,
-				5AFEC1171DA046900054FAAA /* Info.plist */,
-			);
-			path = "Watch Extension";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5A14CC99234669D700E31F0D /* MyTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A14CCA9234669D700E31F0D /* Build configuration list for PBXNativeTarget "MyTodayExtension" */;
+			buildPhases = (
+				C8DA2D733439BD3CBA2DB092 /* [CP] Check Pods Manifest.lock */,
+				5A14CC96234669D700E31F0D /* Sources */,
+				5A14CC97234669D700E31F0D /* Frameworks */,
+				5A14CC98234669D700E31F0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTodayExtension;
+			productName = MyTodayExtension;
+			productReference = 5A14CC9A234669D700E31F0D /* MyTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5A1FD03E1DFD53390071AE2F /* TestingAreaTV */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A1FD04D1DFD53390071AE2F /* Build configuration list for PBXNativeTarget "TestingAreaTV" */;
@@ -345,51 +343,17 @@
 				5AE001011CAA0F3A0058B744 /* Resources */,
 				5AFEC1221DA046900054FAAA /* Embed Watch Content */,
 				C87F2E35626397E792B27E35 /* [CP] Embed Pods Frameworks */,
+				5A14CCAA234669D700E31F0D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5AFEC1191DA046900054FAAA /* PBXTargetDependency */,
+				5A14CCA5234669D700E31F0D /* PBXTargetDependency */,
 			);
 			name = TestingArea;
 			productName = TestingArea;
 			productReference = 5AE001031CAA0F3A0058B744 /* TestingArea.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5AFEC0FF1DA0468F0054FAAA /* Watch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AFEC1211DA046900054FAAA /* Build configuration list for PBXNativeTarget "Watch" */;
-			buildPhases = (
-				5AFEC0FE1DA0468F0054FAAA /* Resources */,
-				5AFEC1201DA046900054FAAA /* Embed App Extensions */,
-				73DFDA5B5EC3DB0A09A76D07 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5AFEC10F1DA046900054FAAA /* PBXTargetDependency */,
-			);
-			name = Watch;
-			productName = Watch;
-			productReference = 5AFEC1001DA0468F0054FAAA /* Watch.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		5AFEC10B1DA046900054FAAA /* Watch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AFEC11F1DA046900054FAAA /* Build configuration list for PBXNativeTarget "Watch Extension" */;
-			buildPhases = (
-				5AFEC1081DA046900054FAAA /* Sources */,
-				5AFEC1091DA046900054FAAA /* Frameworks */,
-				5AFEC10A1DA046900054FAAA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Watch Extension";
-			productName = "Watch Extension";
-			productReference = 5AFEC10C1DA046900054FAAA /* Watch Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -397,10 +361,20 @@
 		5AE000FB1CAA0F3A0058B744 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Mulang Su";
 				TargetAttributes = {
+					5A14CC99234669D700E31F0D = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = E9MW74DJ4Y;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					5A1FD03E1DFD53390071AE2F = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = E9MW74DJ4Y;
@@ -411,21 +385,13 @@
 						DevelopmentTeam = E9MW74DJ4Y;
 						LastSwiftMigration = 1030;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
-					};
-					5AFEC0FF1DA0468F0054FAAA = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = E9MW74DJ4Y;
-						ProvisioningStyle = Automatic;
-					};
-					5AFEC10B1DA046900054FAAA = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = E9MW74DJ4Y;
-						LastSwiftMigration = 1030;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -444,14 +410,21 @@
 			projectRoot = "";
 			targets = (
 				5AE001021CAA0F3A0058B744 /* TestingArea */,
-				5AFEC0FF1DA0468F0054FAAA /* Watch */,
-				5AFEC10B1DA046900054FAAA /* Watch Extension */,
 				5A1FD03E1DFD53390071AE2F /* TestingAreaTV */,
+				5A14CC99234669D700E31F0D /* MyTodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A14CC98234669D700E31F0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A14CCA2234669D700E31F0D /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A1FD03D1DFD53390071AE2F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,23 +451,6 @@
 				5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */,
 				5A373C1E1FB705C000F99847 /* test.txt in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AFEC0FE1DA0468F0054FAAA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AFEC1061DA046900054FAAA /* Assets.xcassets in Resources */,
-				5AFEC1041DA046900054FAAA /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AFEC10A1DA046900054FAAA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AFEC1161DA046900054FAAA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,36 +482,34 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestingArea/Pods-TestingArea-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AACameraView/AACameraView.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DifferenceKit/DifferenceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
-				"${BUILT_PRODUCTS_DIR}/EmptyDataSet-Swift/EmptyDataSet_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AACameraView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DifferenceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EmptyDataSet_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -565,9 +519,40 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestingArea/Pods-TestingArea-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C8DA2D733439BD3CBA2DB092 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTodayExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A14CC96234669D700E31F0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A14CC9F234669D700E31F0D /* TodayViewController.swift in Sources */,
+				5A14CCAD23466E1600E31F0D /* RealmHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5A1FD03B1DFD53390071AE2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,6 +571,7 @@
 				5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */,
 				5A4FE2F122FFA2C100EC7479 /* MyNavigationController.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
+				5A14CCAC23466E1300E31F0D /* RealmHelper.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 				5A35050F218DEA9400BC7C23 /* FontSizeHelper.swift in Sources */,
@@ -593,32 +579,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AFEC1081DA046900054FAAA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AFEC1141DA046900054FAAA /* ExtensionDelegate.swift in Sources */,
-				5AFEC1121DA046900054FAAA /* InterfaceController.swift in Sources */,
-				5A1F4DFA1DB7F54A005990AF /* MyRowController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5AFEC10F1DA046900054FAAA /* PBXTargetDependency */ = {
+		5A14CCA5234669D700E31F0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5AFEC10B1DA046900054FAAA /* Watch Extension */;
-			targetProxy = 5AFEC10E1DA046900054FAAA /* PBXContainerItemProxy */;
-		};
-		5AFEC1191DA046900054FAAA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AFEC0FF1DA0468F0054FAAA /* Watch */;
-			targetProxy = 5AFEC1181DA046900054FAAA /* PBXContainerItemProxy */;
+			target = 5A14CC99234669D700E31F0D /* MyTodayExtension */;
+			targetProxy = 5A14CCA4234669D700E31F0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5A14CCA0234669D700E31F0D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A14CCA1234669D700E31F0D /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		5A1FD0451DFD53390071AE2F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -644,17 +623,63 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		5AFEC1021DA046900054FAAA /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AFEC1031DA046900054FAAA /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A14CCA7234669D700E31F0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8232176D5945D26B4D998235 /* Pods-MyTodayExtension.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MyTodayExtension/MyTodayExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9MW74DJ4Y;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MyTodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea.MyTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A14CCA8234669D700E31F0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MyTodayExtension/MyTodayExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9MW74DJ4Y;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MyTodayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea.MyTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5A1FD04B1DFD53390071AE2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -808,6 +833,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestingArea/TestingArea.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -838,7 +865,7 @@
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -850,6 +877,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TestingArea/TestingArea.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = E9MW74DJ4Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -880,95 +909,24 @@
 				INFOPLIST_FILE = TestingArea/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		5AFEC11B1DA046900054FAAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = E9MW74DJ4Y;
-				IBSC_MODULE = Watch_Extension;
-				INFOPLIST_FILE = Watch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Debug;
-		};
-		5AFEC11C1DA046900054FAAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = E9MW74DJ4Y;
-				IBSC_MODULE = Watch_Extension;
-				INFOPLIST_FILE = Watch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Release;
-		};
-		5AFEC11D1DA046900054FAAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = E9MW74DJ4Y;
-				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
-			};
-			name = Debug;
-		};
-		5AFEC11E1DA046900054FAAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = E9MW74DJ4Y;
-				INFOPLIST_FILE = "Watch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TestingArea.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A14CCA9234669D700E31F0D /* Build configuration list for PBXNativeTarget "MyTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A14CCA7234669D700E31F0D /* Debug */,
+				5A14CCA8234669D700E31F0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5A1FD04D1DFD53390071AE2F /* Build configuration list for PBXNativeTarget "TestingAreaTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -992,24 +950,6 @@
 			buildConfigurations = (
 				5AE0012F1CAA0F3A0058B744 /* Debug */,
 				5AE001301CAA0F3A0058B744 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5AFEC11F1DA046900054FAAA /* Build configuration list for PBXNativeTarget "Watch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AFEC11D1DA046900054FAAA /* Debug */,
-				5AFEC11E1DA046900054FAAA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5AFEC1211DA046900054FAAA /* Build configuration list for PBXNativeTarget "Watch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AFEC11B1DA046900054FAAA /* Debug */,
-				5AFEC11C1DA046900054FAAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
