@@ -19,6 +19,13 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        let number = Int(textfield.text!)!
+        let entity = Entity()
+        entity.number = number
+        try? RealmWrapper.shared.realm.write {
+            RealmWrapper.shared.realm.add(entity)
+        }
+        print(RealmWrapper.shared.entities.map { $0.number } as [Int])
     }
     
 }
