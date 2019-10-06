@@ -1,6 +1,5 @@
 import UIKit
 import CoreData
-import Firebase
 import AVFoundation
 
 @UIApplicationMain
@@ -9,7 +8,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
         try? AVAudioSession.sharedInstance().setCategory(.playback)
         return true
     }
