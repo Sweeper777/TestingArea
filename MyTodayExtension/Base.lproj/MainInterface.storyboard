@@ -13,24 +13,41 @@
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="MyTodayExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="0.0" y="25" width="320" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDa-pG-qts">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7CP-NP-CyI">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="GcN-lo-r42" secondAttribute="bottom" id="3ve-2V-eKb"/>
+                                        <constraint firstItem="GcN-lo-r42" firstAttribute="top" secondItem="7CP-NP-CyI" secondAttribute="top" id="IEI-Yw-NTN"/>
+                                        <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="7CP-NP-CyI" secondAttribute="leading" id="iKD-rH-ZDj"/>
+                                        <constraint firstAttribute="trailing" secondItem="GcN-lo-r42" secondAttribute="trailing" id="wox-L4-MCn"/>
+                                    </constraints>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="light"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="2bq-q7-YpB"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="UiG-9N-r8A"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="VtG-Ia-V9d"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="rS1-kn-nQL"/>
+                            <constraint firstItem="aDa-pG-qts" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="IPj-c6-Pig"/>
+                            <constraint firstItem="aDa-pG-qts" firstAttribute="trailing" secondItem="ssy-KU-ocm" secondAttribute="trailing" id="SKG-go-sr6"/>
+                            <constraint firstAttribute="bottom" secondItem="aDa-pG-qts" secondAttribute="bottom" id="myC-Wk-bfx"/>
+                            <constraint firstItem="aDa-pG-qts" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="nU3-oa-FS8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
@@ -39,10 +56,12 @@
                     <size key="freeformSize" width="320" height="70"/>
                     <connections>
                         <outlet property="label" destination="GcN-lo-r42" id="ox1-Pt-6Kc"/>
+                        <outlet property="vibrancy" destination="aDa-pG-qts" id="Qew-2V-Rnn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="28"/>
+            <point key="canvasLocation" x="-184.05797101449278" y="27.455357142857142"/>
         </scene>
     </scenes>
 </document>
