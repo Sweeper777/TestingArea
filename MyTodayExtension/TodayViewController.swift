@@ -8,6 +8,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "Max number is: Fetching..."
+        var config = Realm.Configuration()
+        config.fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.io.github.sweeper777.TestingAreaGroup")!.appendingPathComponent("default.realm")
+        Realm.Configuration.defaultConfiguration = config
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
