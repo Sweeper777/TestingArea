@@ -1,6 +1,7 @@
 import UIKit
 import CoreData
 import AVFoundation
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,6 +10,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         try? AVAudioSession.sharedInstance().setCategory(.playback)
+        let fileManager = FileManager.default
+
+        //Cache original realm path (documents directory)
+        guard let originalDefaultRealmPath = Realm.Configuration.defaultConfiguration.fileURL?.path else {
+            return true
+        }
+        
+        //Generate new realm path based on app group
+        let appGroupURL: URL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.io.github.sweeper777.TestingAreaGroup")!
+        let realmPath = appGroupURL.appendingPathComponent("default.realm").path
+        
+        //Moves the realm to the new location if it hasn't been done previously
+        if (fileManager.fileExists(atPath: originalDefaultRealmPath) && !fileManager.fileExists(atPath: realmPath)) {
+            do {
+                try fileManager.moveItem(atPath: originalDefaultRealmPath, toPath: realmPath)
+            } catch {
+                print(error)
+            }
+        }
+
+        //Set the realm path to the new directory
+        var config = Realm.Configuration()
+        config.fileURL = URL(string: realmPath)
+        Realm.Configuration.defaultConfiguration = config
         return true
     }
 
