@@ -5,6 +5,8 @@ import RealmSwift
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet var label: UILabel!
+    @IBOutlet var vibrancy: UIVisualEffectView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "Max number is: Fetching..."
@@ -14,6 +16,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         
+        vibrancy.effect = UIVibrancyEffect.widgetPrimary()
     }
     
     override func viewDidAppear(_ animated: Bool) {
