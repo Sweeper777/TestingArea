@@ -12,6 +12,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         config.fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.io.github.sweeper777.TestingAreaGroup")!.appendingPathComponent("default.realm")
         Realm.Configuration.defaultConfiguration = config
         
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
