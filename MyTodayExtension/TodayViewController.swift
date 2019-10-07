@@ -28,4 +28,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.newData)
     }
     
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        let expanded = activeDisplayMode == .expanded
+        preferredContentSize = expanded ? CGSize(width: maxSize.width, height: 200) : maxSize
+    }
 }
