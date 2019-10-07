@@ -15,4 +15,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let sorted = RealmWrapper.shared.realm.objects(Entity.self).sorted(byKeyPath: "number", ascending: false)
         label.text = "Max number is: \(sorted.first?.number.description ?? "None")"
     }
+        
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
+        let sorted = RealmWrapper.shared.realm.objects(Entity.self).sorted(byKeyPath: "number", ascending: false)
+        label.text = "Max number is: \(sorted.first?.number.description ?? "None")"
+        completionHandler(NCUpdateResult.newData)
+    }
+    
 }
