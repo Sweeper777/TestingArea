@@ -12,3 +12,9 @@ struct SwiftUITest_Previews: PreviewProvider {
 }
 
 
+class MyHostingController: UIHostingController<SwiftUITest> {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder, rootView: SwiftUITest())
+        
+    }
+}
