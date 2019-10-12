@@ -8,6 +8,8 @@ struct SwiftUITest: View {
             Text(verbatim: "\(count)")
             Button(action: { self.count += 1 }) {
                 Text("Press Me!")
+                    .foregroundColor(.red)
+                    .font(Font.custom("Chalkboard SE", size: 30))
             }
         }
     }
