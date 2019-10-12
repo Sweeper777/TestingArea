@@ -6,6 +6,9 @@ struct SwiftUITest: View {
     var body: some View {
         VStack(alignment: .center, spacing: 70) {
             Text(verbatim: "\(count)")
+            Button(action: { self.count += 1 }) {
+                Text("Press Me!")
+            }
         }
     }
 }
