@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct SwiftUITest: View {
-    @State private var count = 0
+    @State private var value1 = 0.0
+    @State private var value2 = 0.0
+    @State private var value3 = 0.0
     
     var body: some View {
         VStack(alignment: .center, spacing: 70) {
