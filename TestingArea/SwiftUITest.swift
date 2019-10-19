@@ -6,14 +6,19 @@ struct SwiftUITest: View {
     @State private var value3 = 0.0
     
     var body: some View {
-        VStack(alignment: .center, spacing: 70) {
-            Text(verbatim: "\(count)")
-            Button(action: { self.count += 1 }) {
-                Text("Press Me!")
-                    .foregroundColor(.red)
-                    .font(Font.custom("Chalkboard SE", size: 30))
+        VStack {
+            Text("Total: \(value1 + value2 + value3)").font(Font.system(.largeTitle))
+            Spacer()
+            Slider(value: $value1, minimumValueLabel: Text("Min"), maximumValueLabel: Text("Max")) {
+                Text("Value 1")
             }
-        }
+            Slider(value: $value2, minimumValueLabel: Text("Min"), maximumValueLabel: Text("Max")) {
+                Text("Value 2")
+            }
+            Slider(value: $value3, minimumValueLabel: Text("Min"), maximumValueLabel: Text("Max")) {
+                Text("Value 3")
+            }
+        }.padding(20)
     }
 }
 
