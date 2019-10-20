@@ -16,7 +16,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         
-        vibrancy.effect = UIVibrancyEffect.widgetPrimary()
+        vibrancy.effect = UIVibrancyEffect.widgetEffect(forVibrancyStyle: .label)
     }
     
     override func viewDidAppear(_ animated: Bool) {
