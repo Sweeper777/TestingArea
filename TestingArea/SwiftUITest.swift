@@ -1,4 +1,5 @@
 import SwiftUI
+import SCLAlertView
 
 struct SwiftUITest: View {
     @State private var value1 = 0.0
@@ -17,6 +18,13 @@ struct SwiftUITest: View {
             }
             Slider(value: $value3, minimumValueLabel: Text("Min"), maximumValueLabel: Text("Max")) {
                 Text("Value 3")
+            }
+            Button(action: {
+                let alert = SCLAlertView()
+                _ = alert.addTextField()
+                alert.showEdit("Foo")
+            }) {
+                Text("Press Me!")
             }
         }.padding(20)
     }
