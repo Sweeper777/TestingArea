@@ -13,6 +13,7 @@ target 'TestingArea' do
     pod 'RxDataSources'
     pod 'DifferenceKit'
     pod 'RealmSwift'
+    pod 'SCLAlertView' , :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
     target 'MyTodayExtension' do
       inherit! :search_paths
     end
