@@ -9,16 +9,15 @@ struct SwiftUITest: View {
     var body: some View {
         VStack {
             Text("Total: \(value1 + value2 + value3)").font(Font.system(.largeTitle))
+                .gesture(
+                    RotationGesture()
+                        .onChanged(
+                            { angle in
+                                self.value1 = angle.degrees
+                            }
+                )
+            )
             Spacer()
-            Slider(value: $value1, minimumValueLabel: Text("Min"), maximumValueLabel: Text("Max")) {
-                Text("Value 1")
-            }
-            Slider(value: $value2, minimumValueLabel: Text("Min"), maximumValueLabel: Text("Max")) {
-                Text("Value 2")
-            }
-            Slider(value: $value3, minimumValueLabel: Text("Min"), maximumValueLabel: Text("Max")) {
-                Text("Value 3")
-            }
             Button(action: {
                 let alert = SCLAlertView()
                 _ = alert.addTextField()
