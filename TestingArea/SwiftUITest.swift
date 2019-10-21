@@ -18,6 +18,7 @@ struct SwiftUITest: View {
                 )
             )
             Image(systemName: "quote.bubble.fill")
+                .frame(width: 100, height: 100)
             Spacer()
             Button(action: {
                 let alert = SCLAlertView()
