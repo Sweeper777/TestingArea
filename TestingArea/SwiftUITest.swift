@@ -18,7 +18,8 @@ struct SwiftUITest: View {
                 )
             )
             Image(systemName: "quote.bubble.fill")
-                .frame(width: 100, height: 100)
+                .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100)
+                .aspectRatio(contentMode: .fit)
             Spacer()
             Button(action: {
                 let alert = SCLAlertView()
