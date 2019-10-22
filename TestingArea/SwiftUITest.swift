@@ -2,34 +2,25 @@ import SwiftUI
 import SCLAlertView
 
 struct SwiftUITest: View {
-    @State private var value1 = 0.0
-    @State private var value2 = 0.0
-    @State private var value3 = 0.0
     
     var body: some View {
-        VStack {
-            Text("Total: \(value1 + value2 + value3)").font(Font.system(.largeTitle))
-                .gesture(
-                    RotationGesture()
-                        .onChanged(
-                            { angle in
-                                self.value1 = angle.degrees
-                            }
-                )
-            )
-            Image(systemName: "quote.bubble.fill")
-                .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100)
-                .aspectRatio(contentMode: .fit)
-            Spacer()
-            Button(action: {
-                let alert = SCLAlertView()
-                _ = alert.addTextField()
-                alert.showEdit("Foo")
-            }) {
-                Text("Press Me!")
+//        NavigationView {
+            List {
+                ForEach(0...10) {
+                    number in
+                    Text("\(number)")
+                }
             }
-        }.padding(20)
+//            .navigationBarTitle("Welcome!")
+//        }
     }
+}
+
+extension Int : Identifiable {
+    
+    public typealias ID = Int
+    public var id: Int { return self }
+    
 }
 
 struct SwiftUITest_Previews: PreviewProvider {
