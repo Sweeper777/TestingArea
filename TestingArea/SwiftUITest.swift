@@ -13,6 +13,13 @@ final class MyObservableObject : ObservableObject {
     
     private var canc: AnyCancellable!
     
+    init() {
+        canc = $input
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .map { "You wrote \"\($0)\"" }
+            .sink { self.output = $0 }
+    }
+    
 }
 
 struct SwiftUITest_Previews: PreviewProvider {
