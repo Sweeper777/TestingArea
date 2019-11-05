@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zRf-9l-phd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIZ-1h-2KH">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -9,7 +9,7 @@
         <!--My Navigation Controller-->
         <scene sceneID="rGL-8M-CHX">
             <objects>
-                <navigationController storyboardIdentifier="MyVC" id="oIZ-1h-2KH" customClass="MyNavigationController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="oIZ-1h-2KH" customClass="MyNavigationController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAF-b4-NLX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -66,17 +66,12 @@
                                     <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="eQX-1V-SwJ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJP-mc-5Ut">
-                                <rect key="frame" x="39" y="265" width="240" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI"/>
                     <connections>
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
-                        <outlet property="imageView" destination="UJP-mc-5Ut" id="bwp-Uq-aOb"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
@@ -89,7 +84,7 @@
         <!--Welcome!-->
         <scene sceneID="oKz-1E-psx">
             <objects>
-                <hostingController id="KCf-bj-fuu" customClass="MyHostingController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <hostingController storyboardIdentifier="MyVC" id="KCf-bj-fuu" customClass="MyHostingController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Welcome!" id="QWc-lR-tZH"/>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAE-fZ-bsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
