@@ -7,7 +7,11 @@ struct SwiftUITest: View {
     }
 }
 
+final class MyObservableObject : ObservableObject {
+    @Published var input = ""
+    @Published var output: String = ""
     
+    private var canc: AnyCancellable!
     
 }
 
