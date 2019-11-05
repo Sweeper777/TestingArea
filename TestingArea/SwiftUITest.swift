@@ -4,22 +4,10 @@ import SCLAlertView
 struct SwiftUITest: View {
     
     var body: some View {
-//        NavigationView {
-            List {
-                ForEach(0...10) {
-                    number in
-                    Text("\(number)")
-                }
-            }
-//            .navigationBarTitle("Welcome!")
-//        }
     }
 }
 
-extension Int : Identifiable {
     
-    public typealias ID = Int
-    public var id: Int { return self }
     
 }
 
