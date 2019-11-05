@@ -20,6 +20,9 @@ final class MyObservableObject : ObservableObject {
             .sink { self.output = $0 }
     }
     
+    deinit {
+        canc.cancel()
+    }
 }
 
 struct SwiftUITest_Previews: PreviewProvider {
