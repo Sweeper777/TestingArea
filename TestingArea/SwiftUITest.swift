@@ -1,9 +1,16 @@
 import SwiftUI
 import SCLAlertView
+import Combine
 
 struct SwiftUITest: View {
+    @ObservedObject var myObject = MyObservableObject()
     
     var body: some View {
+        VStack {
+            TextField("", text: $myObject.input)
+            Text(myObject.output)
+            Spacer()
+        }.padding()
     }
 }
 
