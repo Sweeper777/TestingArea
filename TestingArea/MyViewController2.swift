@@ -20,17 +20,10 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
-            let alert = UIAlertController(title: "错误", message: "无法查看照片图库", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            return
-        }
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.mediaTypes = ["public.image"]
-        present(imagePicker, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "MyVC")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
 }
