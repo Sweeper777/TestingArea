@@ -10,6 +10,11 @@ struct SwiftUITest: View {
             TextField("", text: $myObject.input)
             Text(myObject.output)
             Spacer()
+            
+            (1...3).map {
+                Text("\($0)")
+                    .foregroundColor([Color.red, .green, .blue][$0 - 1])
+            }.reduce(Text(""), +)
         }.padding()
     }
 }
