@@ -1,6 +1,7 @@
 import UIKit
 import AVFoundation
 import RxSwift
+import Eureka
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -26,6 +27,7 @@ class MyViewController2: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
+    @objc func process(_ block: ((UIImage) -> UIImage?)?) {}
 }
 
 extension MyViewController2 : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
