@@ -3,40 +3,12 @@ import SCLAlertView
 import Combine
 
 struct SwiftUITest: View {
-    @ObservedObject var myObject = MyObservableObject()
     
     var body: some View {
-        VStack {
-            TextField("", text: $myObject.input)
-            Text(myObject.output)
-            Spacer()
-            
-            (1...3).map {
-                Text("\($0)")
-                    .foregroundColor([Color.red, .green, .blue][$0 - 1])
-            }.reduce(Text(""), +)
-        }.padding()
+    }
+
     }
 }
-
-final class MyObservableObject : ObservableObject {
-    @Published var input = ""
-    @Published var output: String = ""
-    
-    private var canc: AnyCancellable!
-    
-    init() {
-        canc = $input
-            .debounce(for: 0.5, scheduler: DispatchQueue.main)
-            .map { "You wrote \"\($0)\"" }
-            .sink { self.output = $0 }
-    }
-    
-    deinit {
-        canc.cancel()
-    }
-}
-
 struct SwiftUITest_Previews: PreviewProvider {
     static var previews: some View {
         SwiftUITest()
