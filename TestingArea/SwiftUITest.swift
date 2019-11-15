@@ -45,3 +45,11 @@ class MyHostingController: UIHostingController<SwiftUITest> {
         
     }
 }
+
+struct TestView: View {
+    @Binding var myBinding: String?
+    
+    var body: some View {
+        TextField("", text: Binding.init($myBinding))
+    }
+}
