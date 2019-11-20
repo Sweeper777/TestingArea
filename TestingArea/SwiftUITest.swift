@@ -8,15 +8,9 @@ struct SwiftUITest: View {
 
     var body: some View {
         NavigationView {
-            Form {
-                Section {
-                    Picker.init("Every", selection: $interval) {
-                        ForEach(1 ..< 1000) { weeks in
-                            Text("\(weeks) week\(weeks == 1 ? "" : "s")")
-                                .tag(weeks)
-                        }
-                        }.pickerStyle(WheelPickerStyle())
-                }
+            VStack {
+                Text("Hello")
+                Text("World")
             }
         }
         .onTapGesture {
@@ -39,17 +33,5 @@ class MyHostingController: UIHostingController<SwiftUITest> {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder, rootView: SwiftUITest())
         
-    }
-    
-    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        
-    }
-}
-
-struct TestView: View {
-    @Binding var myBinding: String?
-    
-    var body: some View {
-        TextField("", text: Binding.init($myBinding))
     }
 }
