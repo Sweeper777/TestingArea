@@ -18,6 +18,8 @@ class MyViewController2: UIViewController {
     @IBOutlet var fill2: UIView!
     @IBOutlet var label2: UILabel!
     
+    var state = false
+    
     let disposeBag = DisposeBag()
 
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -29,6 +31,28 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
+        if state {
+            background1.backgroundColor = .systemBackground
+            groupedBackground1.backgroundColor = .systemGroupedBackground
+            fill1.backgroundColor = .systemFill
+            label1.textColor = .label
+            
+            background2.backgroundColor = .secondarySystemBackground
+            groupedBackground2.backgroundColor = .secondarySystemGroupedBackground
+            fill2.backgroundColor = .secondarySystemFill
+            label2.textColor = .secondaryLabel
+        } else {
+            background1.backgroundColor = .tertiarySystemBackground
+            groupedBackground1.backgroundColor = .tertiarySystemGroupedBackground
+            fill1.backgroundColor = .tertiarySystemFill
+            label1.textColor = .tertiaryLabel
+            
+            background2.backgroundColor = .tertiarySystemBackground
+            groupedBackground2.backgroundColor = .tertiarySystemGroupedBackground
+            fill2.backgroundColor = .quaternarySystemFill
+            label2.textColor = .quaternaryLabel
         }
+        state.toggle()
+        
     }
 }
