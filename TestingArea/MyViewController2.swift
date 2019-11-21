@@ -8,7 +8,15 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    @IBOutlet var imageView: UIImageView!
+    
+    @IBOutlet var background1: UIView!
+    @IBOutlet var groupedBackground1: UIView!
+    @IBOutlet var fill1: UIView!
+    @IBOutlet var label1: UILabel!
+    @IBOutlet var background2: UIView!
+    @IBOutlet var groupedBackground2: UIView!
+    @IBOutlet var fill2: UIView!
+    @IBOutlet var label2: UILabel!
     
     let disposeBag = DisposeBag()
 
