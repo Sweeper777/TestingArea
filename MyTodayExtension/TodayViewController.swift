@@ -26,6 +26,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print(view.frame.height)
     }
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
