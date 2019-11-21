@@ -29,24 +29,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "MyVC")
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-    @objc func process(_ block: ((UIImage) -> UIImage?)?) {}
-}
-
-extension MyViewController2 : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.editedImage] as? UIImage {
-            imageView.image = image
         }
-        picker.dismiss(animated: true, completion: nil)
     }
 }
