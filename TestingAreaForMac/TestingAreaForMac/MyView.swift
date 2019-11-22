@@ -3,6 +3,7 @@ import AppKit
 class MyView : NSView {
     
     override func draw(_ dirtyRect: NSRect) {
+        layer = CALayer()
         let path1 = NSBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.midX, height: bounds.midY))
         NSColor.black.setStroke()
         NSColor.red.setFill()
