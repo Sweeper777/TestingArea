@@ -54,5 +54,6 @@ class MyViewController2: UIViewController {
         }
         state.toggle()
         
+        print(type(of: view.layer))
     }
 }
