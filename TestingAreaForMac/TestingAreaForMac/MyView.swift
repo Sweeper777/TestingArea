@@ -16,14 +16,8 @@ class MyView : NSView {
         path2.fill()
     }
     
-    override func viewDidMoveToWindow() {
-        wantsLayer = true
-        layer?.transform =
-        CATransform3DScale(
-            CATransform3DTranslate(
-                CATransform3DIdentity,
-                0, frame.height, 0),
-            1, -1, 1)
+    override var isFlipped: Bool {
+        true
     }
     
     override func mouseUp(with event: NSEvent) {
