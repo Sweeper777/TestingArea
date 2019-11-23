@@ -25,4 +25,10 @@ class MyView : NSView {
                 0, frame.height, 0),
             1, -1, 1)
     }
+    
+    override func mouseUp(with event: NSEvent) {
+        let locationInWindow = event.locationInWindow
+        let locationInSelf = self.convert(locationInWindow, from: self.window?.contentView)
+        print(locationInSelf)
+    }
 }
