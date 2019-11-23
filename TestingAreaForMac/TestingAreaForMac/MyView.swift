@@ -15,4 +15,14 @@ class MyView : NSView {
         path2.stroke()
         path2.fill()
     }
+    
+    override func viewDidMoveToWindow() {
+        wantsLayer = true
+        layer?.transform =
+        CATransform3DScale(
+            CATransform3DTranslate(
+                CATransform3DIdentity,
+                0, frame.height, 0),
+            1, -1, 1)
+    }
 }

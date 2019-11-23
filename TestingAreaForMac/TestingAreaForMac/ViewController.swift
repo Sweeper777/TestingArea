@@ -11,11 +11,6 @@ class ViewController: NSViewController {
         
     }
     
-    override func viewDidAppear() {
-        myView.wantsLayer = true
-        myView.layer?.transform = CATransform3DScale(CATransform3DTranslate(CATransform3DIdentity, 0, 100, 0), 1, -1, 1)
-    }
-    
     @IBAction func buttonPressed(sender: NSButton) {
         
     }
