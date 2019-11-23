@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -322,67 +323,33 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="O9m-WB-0uc" kind="relationship" relationship="window.shadowedContentViewController" id="qFa-2f-w33"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="hIz-AP-VOD">
+        <!--Hosting Controller-->
+        <scene sceneID="RPD-1w-Ms3">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TestingAreaForMac" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="303"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-8T-N7t">
-                                <rect key="frame" x="200" y="134" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y7C-fV-19l">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="buttonPressedWithSender:" target="XfG-lQ-9wD" id="fOi-mc-MTS"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <segue destination="VJc-5N-YEO" kind="sheet" identifier="showSegue" id="SbM-5X-KE1"/>
-                    </connections>
-                </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="kON-Df-UpQ" sceneMemberID="viewController"/>
+                <customObject id="n4s-H2-v9V" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="671.5"/>
+            <point key="canvasLocation" x="75" y="671"/>
         </scene>
-        <!--Sheet View Controller-->
-        <scene sceneID="uxI-D1-hTN">
+        <!--View Controller-->
+        <scene sceneID="ruL-Nl-fjd">
             <objects>
-                <viewController id="VJc-5N-YEO" customClass="SheetViewController" customModule="TestingAreaForMac" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ODn-wD-BRu">
-                        <rect key="frame" x="0.0" y="0.0" width="226" height="83"/>
+                <viewController id="O9m-WB-0uc" customClass="ViewController" customModule="TestingAreaForMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="DzC-gx-ibl">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8BL-DO-yIu">
-                                <rect key="frame" x="73" y="24" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m8w-sK-H3f">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="buttonPressed:" target="VJc-5N-YEO" id="cqn-TB-Ams"/>
-                                </connections>
-                            </button>
-                        </subviews>
                     </view>
                 </viewController>
-                <customObject id="rLz-o7-Wbd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="hZd-5H-8nO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="567" y="562.5"/>
+            <point key="canvasLocation" x="598" y="671"/>
         </scene>
     </scenes>
 </document>
