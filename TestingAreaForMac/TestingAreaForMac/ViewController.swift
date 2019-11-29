@@ -11,7 +11,7 @@ class ViewController: NSViewController {
     }
     
     @IBAction func buttonPressed(sender: NSButton) {
-        
+        textfield.stringValue = "Changed!"
     }
     
     @IBAction func item2Pressed(_ sender: NSMenuItem) {
@@ -19,3 +19,8 @@ class ViewController: NSViewController {
     }
 }
 
+extension ViewController : NSTextFieldDelegate {
+    func controlTextDidChange(_ obj: Notification) {
+        print("called")
+    }
+}
