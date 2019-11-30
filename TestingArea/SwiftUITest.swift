@@ -4,22 +4,17 @@ import Combine
 
 struct SwiftUITest: View {
     
-    @State var interval = 1
+    @State var deck : String = "ABアイウエオCD"
 
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Hello")
-                Text("World")
-            }
-        }
-        .onTapGesture {
-            self.updateRruleString()
-        }
-    }
+        VStack {
 
-    public func updateRruleString() {
-        
+            TextField("deck name", text: $deck)
+                .font(Font.custom("Hiragino Maru Gothic ProN", size: 20))
+                .foregroundColor(Color.black)
+                .multilineTextAlignment(.center)
+                .lineLimit(1)
+        }
     }
 }
 struct SwiftUITest_Previews: PreviewProvider {
