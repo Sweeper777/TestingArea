@@ -346,38 +346,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JXS-zi-uCA">
-                                <rect key="frame" x="185" y="188" width="81" height="32"/>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-BZ-B2w">
+                                <rect key="frame" x="167" y="137" width="173" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yQk-Vm-iNT">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="BSQ-wP-aAb">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="buttonPressedWithSender:" target="O9m-WB-0uc" id="xx9-4x-8AU"/>
-                                </connections>
-                            </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-Rf-6OK">
-                                <rect key="frame" x="177" y="158" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Hk9-iU-5Ce">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                                <connections>
-                                    <outlet property="delegate" destination="O9m-WB-0uc" id="Kgv-qa-k3v"/>
-                                </connections>
-                            </textField>
+                                    <segments>
+                                        <segment image="icons8-stop_squared"/>
+                                        <segment image="icons8-unchecked_checkbox_filled" selected="YES" tag="1"/>
+                                        <segment image="icons8-qr_code"/>
+                                        <segment image="icons8-calendar_1"/>
+                                    </segments>
+                                </segmentedCell>
+                            </segmentedControl>
                         </subviews>
                     </view>
-                    <connections>
-                        <outlet property="textfield" destination="MTA-Rf-6OK" id="scH-Kz-OGx"/>
-                    </connections>
                 </viewController>
                 <customObject id="hZd-5H-8nO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="598" y="671"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-calendar_1" width="25" height="25"/>
+        <image name="icons8-qr_code" width="25" height="25"/>
+        <image name="icons8-stop_squared" width="25" height="25"/>
+        <image name="icons8-unchecked_checkbox_filled" width="25" height="25"/>
+    </resources>
 </document>
