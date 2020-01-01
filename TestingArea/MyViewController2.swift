@@ -8,17 +8,7 @@ class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    
-    @IBOutlet var background1: UIView!
-    @IBOutlet var groupedBackground1: UIView!
-    @IBOutlet var fill1: UIView!
-    @IBOutlet var label1: UILabel!
-    @IBOutlet var background2: UIView!
-    @IBOutlet var groupedBackground2: UIView!
-    @IBOutlet var fill2: UIView!
-    @IBOutlet var label2: UILabel!
-    
-    var state = false
+    @IBOutlet var myView: MyView!
     
     let disposeBag = DisposeBag()
 
@@ -31,29 +21,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        if state {
-            background1.backgroundColor = .systemBackground
-            groupedBackground1.backgroundColor = .systemGroupedBackground
-            fill1.backgroundColor = .systemFill
-            label1.textColor = .label
-            
-            background2.backgroundColor = .secondarySystemBackground
-            groupedBackground2.backgroundColor = .secondarySystemGroupedBackground
-            fill2.backgroundColor = .secondarySystemFill
-            label2.textColor = .secondaryLabel
-        } else {
-            background1.backgroundColor = .tertiarySystemBackground
-            groupedBackground1.backgroundColor = .tertiarySystemGroupedBackground
-            fill1.backgroundColor = .tertiarySystemFill
-            label1.textColor = .tertiaryLabel
-            
-            background2.backgroundColor = .tertiarySystemBackground
-            groupedBackground2.backgroundColor = .tertiarySystemGroupedBackground
-            fill2.backgroundColor = .quaternarySystemFill
-            label2.textColor = .quaternaryLabel
-        }
-        state.toggle()
-        
-        print(type(of: view.layer))
+        myView.reflect()
     }
 }
