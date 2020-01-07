@@ -346,19 +346,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-BZ-B2w">
-                                <rect key="frame" x="167" y="137" width="173" height="24"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ApY-47-xh6">
+                                <rect key="frame" x="57" y="218" width="81" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="BSQ-wP-aAb">
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3RO-n3-gFF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <segments>
-                                        <segment image="icons8-stop_squared"/>
-                                        <segment image="icons8-unchecked_checkbox_filled" selected="YES" tag="1"/>
-                                        <segment image="icons8-qr_code"/>
-                                        <segment image="icons8-calendar_1"/>
-                                    </segments>
-                                </segmentedCell>
-                            </segmentedControl>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buttonPressedWithSender:" target="O9m-WB-0uc" id="6Ir-r9-Rev"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                 </viewController>
@@ -367,10 +365,4 @@
             <point key="canvasLocation" x="598" y="671"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-calendar_1" width="25" height="25"/>
-        <image name="icons8-qr_code" width="25" height="25"/>
-        <image name="icons8-stop_squared" width="25" height="25"/>
-        <image name="icons8-unchecked_checkbox_filled" width="25" height="25"/>
-    </resources>
 </document>
