@@ -29,6 +29,9 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        myView.reflect()
+        let getValueIntent = GetDictEntryIntent()
+        getValueIntent.key = textfield.text
+        let interaction = INInteraction(intent: getValueIntent, response: nil)
+        interaction.donate(completion: nil)
     }
 }
