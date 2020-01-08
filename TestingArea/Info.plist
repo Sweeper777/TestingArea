@@ -55,6 +55,10 @@
 	<string>xxx</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>xxx</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>GetDictEntryIntent</string>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NotoColorEmoji.ttf</string>
