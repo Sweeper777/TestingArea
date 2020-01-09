@@ -4,15 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GetDictIntents.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>18</integer>
-		</dict>
 		<key>MyTodayExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>16</integer>
 		</dict>
 		<key>TestingArea.xcscheme</key>
 		<dict>
@@ -32,6 +27,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5A0142A423C31DAC0003D3DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5A1FD03E1DFD53390071AE2F</key>
 		<dict>
 			<key>primary</key>

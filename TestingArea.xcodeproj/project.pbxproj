@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0142A823C31DAD0003D3DF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0142A723C31DAD0003D3DF /* IntentHandler.swift */; };
 		5A0142AC23C31DAD0003D3DF /* GetDictIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A0142A523C31DAC0003D3DF /* GetDictIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5A0142B023C31E8D0003D3DF /* TestIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5A058A4123C28C290074A48D /* TestIntents.intentdefinition */; settings = {ATTRIBUTES = (codegen, ); }; };
-		5A0142B323C32AD50003D3DF /* GetDictEntryIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0142B223C32AD50003D3DF /* GetDictEntryIntentHandler.swift */; };
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
-		5A058A4223C28C290074A48D /* TestIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5A058A4123C28C290074A48D /* TestIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		5A1027CA2351BC1C00402A5D /* SwiftUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1027C92351BC1C00402A5D /* SwiftUITest.swift */; };
 		5A14CC9C234669D700E31F0D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A14CC9B234669D700E31F0D /* NotificationCenter.framework */; };
 		5A14CC9F234669D700E31F0D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14CC9E234669D700E31F0D /* TodayViewController.swift */; };
@@ -95,13 +91,8 @@
 		1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTodayExtension/Pods-MyTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5A00C4C31D722A9C00AB34C3 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A0142A523C31DAC0003D3DF /* GetDictIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetDictIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A0142A723C31DAD0003D3DF /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		5A0142A923C31DAD0003D3DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A0142B123C320050003D3DF /* GetDictIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GetDictIntents.entitlements; sourceTree = "<group>"; };
-		5A0142B223C32AD50003D3DF /* GetDictEntryIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDictEntryIntentHandler.swift; sourceTree = "<group>"; };
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
-		5A058A4123C28C290074A48D /* TestIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TestIntents.intentdefinition; sourceTree = "<group>"; };
 		5A1027C92351BC1C00402A5D /* SwiftUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITest.swift; sourceTree = "<group>"; };
 		5A14CC9A234669D700E31F0D /* MyTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A14CC9B234669D700E31F0D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -247,17 +238,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5A0142A623C31DAD0003D3DF /* GetDictIntents */ = {
-			isa = PBXGroup;
-			children = (
-				5A0142B123C320050003D3DF /* GetDictIntents.entitlements */,
-				5A0142A723C31DAD0003D3DF /* IntentHandler.swift */,
-				5A0142B223C32AD50003D3DF /* GetDictEntryIntentHandler.swift */,
-				5A0142A923C31DAD0003D3DF /* Info.plist */,
-			);
-			path = GetDictIntents;
-			sourceTree = "<group>";
-		};
 		5A14CC9D234669D700E31F0D /* MyTodayExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,7 +267,6 @@
 				5AE001051CAA0F3A0058B744 /* TestingArea */,
 				5A1FD0401DFD53390071AE2F /* TestingAreaTV */,
 				5A14CC9D234669D700E31F0D /* MyTodayExtension */,
-				5A0142A623C31DAD0003D3DF /* GetDictIntents */,
 				5AE001041CAA0F3A0058B744 /* Products */,
 				1EB06E18AAE7306B21230C08 /* Frameworks */,
 				58DE2F7C93F929B49488DF3C /* Pods */,
@@ -333,7 +312,6 @@
 				5A158C8E1E369484007000FD /* AllEmoji.json */,
 				5A55B5911F6455A60046FB51 /* Localizable.strings */,
 				5A373C1D1FB705C000F99847 /* test.txt */,
-				5A058A4123C28C290074A48D /* TestIntents.intentdefinition */,
 			);
 			path = TestingArea;
 			sourceTree = "<group>";
@@ -620,9 +598,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0142B023C31E8D0003D3DF /* TestIntents.intentdefinition in Sources */,
-				5A0142A823C31DAD0003D3DF /* IntentHandler.swift in Sources */,
-				5A0142B323C32AD50003D3DF /* GetDictEntryIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,7 +632,6 @@
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 				5A1027CA2351BC1C00402A5D /* SwiftUITest.swift in Sources */,
-				5A058A4223C28C290074A48D /* TestIntents.intentdefinition in Sources */,
 				5A35050F218DEA9400BC7C23 /* FontSizeHelper.swift in Sources */,
 				5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */,
 			);

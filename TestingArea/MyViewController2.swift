@@ -2,8 +2,6 @@ import UIKit
 import AVFoundation
 import RxSwift
 import Eureka
-import GetDictIntents
-import Intents
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -29,9 +27,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let getValueIntent = GetDictEntryIntent()
-        getValueIntent.key = textfield.text
-        let interaction = INInteraction(intent: getValueIntent, response: nil)
-        interaction.donate(completion: nil)
+        
     }
 }
