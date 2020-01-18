@@ -2,6 +2,7 @@ import UIKit
 import AVFoundation
 import RxSwift
 import Eureka
+import BigNumber
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -28,5 +29,26 @@ class MyViewController2: UIViewController {
     
     @IBAction func click() {
         
+    }
+    
+    func alt() {
+        var a = BInt(0)
+        var b = BInt(1)
+        var m = BInt(1)
+        while m <= 23 {
+            let temp = a
+            a = b
+            b = b + temp
+            var str = a.asString(radix: 10)
+            str = str.replacingOccurrences(of: "9", with: "3")
+            str = str.replacingOccurrences(of: "6", with: "23")
+            str = str.replacingOccurrences(of: "8", with: "2")
+            str = str.replacingOccurrences(of: "4", with: "2")
+            if (str.firstIndex(of:"5") == nil) && str.contains("1") && str.contains("2") && str.contains("3") && str.contains("7")  {
+                    print(m, "Fib 1237 number is ", a, " | Digits: ", str.count)
+                    m+=1
+                }
+
+        }
     }
 }
