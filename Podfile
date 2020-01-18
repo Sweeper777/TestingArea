@@ -14,6 +14,7 @@ target 'TestingArea' do
     pod 'DifferenceKit'
     pod 'RealmSwift'
     pod 'SCLAlertView' , :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
+    pod 'BigNumber', :git => 'https://github.com/mkrd/Swift-Big-Integer.git'
     target 'MyTodayExtension' do
       inherit! :search_paths
     end
