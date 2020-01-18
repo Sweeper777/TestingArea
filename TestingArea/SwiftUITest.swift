@@ -1,32 +1,50 @@
 import SwiftUI
-import SCLAlertView
-import Combine
 
-struct SwiftUITest: View {
-    
-    @State var deck : String = "ABアイウエオCD"
+struct Word: Identifiable, Codable {
+ var id: String
+}
 
-    var body: some View {
-        VStack {
+struct TestView: View {
+  @State var isPresented = false
+   var items: [Word] = [Word(id: "Test1"),
+                     Word(id: "Test2"),
+                     Word(id: "Test3")]
+ var body: some View {
+   NavigationView {
+     List {
+       ForEach(items) { word in
+          Button(word.id) {
+//            self.isPresented = true
+          }
+     }.sheet(isPresented: self.$isPresented) {
+     SomeTestViewInsideTheSheet(action: {
+         self.isPresented = false
+       })
+     .frame(minHeight: 0, maxHeight: 400, alignment: .center)
+     }
+   }
+  
+  .navigationBarTitle(Text("My Title"))
+   }
+  }
+}
 
-            TextField("deck name", text: $deck)
-                .font(Font.custom("Hiragino Maru Gothic ProN", size: 20))
-                .foregroundColor(Color.black)
-                .multilineTextAlignment(.center)
-                .lineLimit(1)
+struct SomeTestViewInsideTheSheet: View {
+   var action: ()->()
+   var body: some View {
+       VStack {
+        Text("Test View")
+        Button("Dismiss") {
+            self.action()
         }
     }
-}
-struct SwiftUITest_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUITest()
-    }
+  }
 }
 
 
-class MyHostingController: UIHostingController<SwiftUITest> {
+class MyHostingController: UIHostingController<TestView> {
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder, rootView: SwiftUITest())
+        super.init(coder: aDecoder, rootView: TestView())
         
     }
 }
