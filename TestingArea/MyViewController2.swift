@@ -51,4 +51,15 @@ class MyViewController2: UIViewController {
 
         }
     }
+    
+    func reduce(_ s: String) -> String {
+        let unique = String(Set(s))
+        let replaced = unique.replacingOccurrences(of: "9", with: "3")
+                                    .replacingOccurrences(of: "6", with: "23")
+                                    .replacingOccurrences(of: "8", with: "2")
+                                    .replacingOccurrences(of: "4", with: "2")
+                                    .replacingOccurrences(of: "0", with: "")
+        let sortedUniqueAgain = String(Set(replaced).sorted())
+        return sortedUniqueAgain
+    }
 }
