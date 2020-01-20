@@ -10,7 +10,7 @@ class MyTableViewController: UITableViewController {
                    ("C", "Another Text")]
     
     override func viewDidLoad() {
-        
+        tableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "cell")
     }
 }
     }
