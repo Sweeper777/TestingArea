@@ -15,8 +15,19 @@ class MyTableViewController: UITableViewController {
 }
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return strings.count
+    }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel!.text = strings[indexPath.row].0
+        cell.detailTextLabel!.text = strings[indexPath.row].1
+        return cell
+    }
     
 }
