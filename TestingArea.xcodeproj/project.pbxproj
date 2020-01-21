@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0142AC23C31DAD0003D3DF /* GetDictIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A0142A523C31DAC0003D3DF /* GetDictIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
 		5A1027CA2351BC1C00402A5D /* SwiftUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1027C92351BC1C00402A5D /* SwiftUITest.swift */; };
@@ -46,13 +45,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A0142AA23C31DAD0003D3DF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AE000FB1CAA0F3A0058B744 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A0142A423C31DAC0003D3DF;
-			remoteInfo = GetDictIntents;
-		};
 		5A14CCA4234669D700E31F0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5AE000FB1CAA0F3A0058B744 /* Project object */;
@@ -70,7 +62,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				5A14CCA6234669D700E31F0D /* MyTodayExtension.appex in Embed App Extensions */,
-				5A0142AC23C31DAD0003D3DF /* GetDictIntents.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +81,6 @@
 /* Begin PBXFileReference section */
 		1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTodayExtension/Pods-MyTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5A00C4C31D722A9C00AB34C3 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
-		5A0142A523C31DAC0003D3DF /* GetDictIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetDictIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		5A1027C92351BC1C00402A5D /* SwiftUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITest.swift; sourceTree = "<group>"; };
@@ -160,13 +150,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5A0142A223C31DAC0003D3DF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A14CC97234669D700E31F0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,7 +262,6 @@
 				5AE001031CAA0F3A0058B744 /* TestingArea.app */,
 				5A1FD03F1DFD53390071AE2F /* TestingAreaTV.app */,
 				5A14CC9A234669D700E31F0D /* MyTodayExtension.appex */,
-				5A0142A523C31DAC0003D3DF /* GetDictIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -319,23 +301,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A0142A423C31DAC0003D3DF /* GetDictIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A0142AD23C31DAD0003D3DF /* Build configuration list for PBXNativeTarget "GetDictIntents" */;
-			buildPhases = (
-				5A0142A123C31DAC0003D3DF /* Sources */,
-				5A0142A223C31DAC0003D3DF /* Frameworks */,
-				5A0142A323C31DAC0003D3DF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GetDictIntents;
-			productName = GetDictIntents;
-			productReference = 5A0142A523C31DAC0003D3DF /* GetDictIntents.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		5A14CC99234669D700E31F0D /* MyTodayExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A14CCA9234669D700E31F0D /* Build configuration list for PBXNativeTarget "MyTodayExtension" */;
@@ -387,7 +352,6 @@
 			);
 			dependencies = (
 				5A14CCA5234669D700E31F0D /* PBXTargetDependency */,
-				5A0142AB23C31DAD0003D3DF /* PBXTargetDependency */,
 			);
 			name = TestingArea;
 			productName = TestingArea;
@@ -404,11 +368,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Mulang Su";
 				TargetAttributes = {
-					5A0142A423C31DAC0003D3DF = {
-						CreatedOnToolsVersion = 11.0;
-						DevelopmentTeam = E9MW74DJ4Y;
-						ProvisioningStyle = Automatic;
-					};
 					5A14CC99234669D700E31F0D = {
 						CreatedOnToolsVersion = 10.3;
 						DevelopmentTeam = E9MW74DJ4Y;
@@ -456,19 +415,11 @@
 				5AE001021CAA0F3A0058B744 /* TestingArea */,
 				5A1FD03E1DFD53390071AE2F /* TestingAreaTV */,
 				5A14CC99234669D700E31F0D /* MyTodayExtension */,
-				5A0142A423C31DAC0003D3DF /* GetDictIntents */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5A0142A323C31DAC0003D3DF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A14CC98234669D700E31F0D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +486,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestingArea/Pods-TestingArea-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BigNumber/BigNumber.framework",
 				"${BUILT_PRODUCTS_DIR}/DifferenceKit/DifferenceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
@@ -551,6 +503,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigNumber.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DifferenceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
@@ -594,13 +547,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5A0142A123C31DAC0003D3DF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A14CC96234669D700E31F0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,11 +586,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5A0142AB23C31DAD0003D3DF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A0142A423C31DAC0003D3DF /* GetDictIntents */;
-			targetProxy = 5A0142AA23C31DAD0003D3DF /* PBXContainerItemProxy */;
-		};
 		5A14CCA5234669D700E31F0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5A14CC99234669D700E31F0D /* MyTodayExtension */;
@@ -689,58 +630,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5A0142AE23C31DAD0003D3DF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = GetDictIntents/GetDictIntents.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E9MW74DJ4Y;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = GetDictIntents/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea.GetDictIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5A0142AF23C31DAD0003D3DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = GetDictIntents/GetDictIntents.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E9MW74DJ4Y;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = GetDictIntents/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea.GetDictIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		5A14CCA7234669D700E31F0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8232176D5945D26B4D998235 /* Pods-MyTodayExtension.debug.xcconfig */;
@@ -1033,15 +922,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A0142AD23C31DAD0003D3DF /* Build configuration list for PBXNativeTarget "GetDictIntents" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A0142AE23C31DAD0003D3DF /* Debug */,
-				5A0142AF23C31DAD0003D3DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5A14CCA9234669D700E31F0D /* Build configuration list for PBXNativeTarget "MyTodayExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
