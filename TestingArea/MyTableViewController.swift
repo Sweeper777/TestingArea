@@ -10,54 +10,6 @@ class MyTableViewController: UITableViewController {
                    ("C", "Another Text")]
     
     override func viewDidLoad() {
-        tableView.register(UINib(nibName: "MyCell", bundle: nil), forCellReuseIdentifier: "cell")
-        let jsonString = """
-{
-    "matches": {
-        "page1": [{
-            "name": "John",
-            "surname": "Doe",
-            "interests": [{
-                    "id": 13,
-                    "text": "basketball"
-                },
-                {
-                    "id": 37,
-                    "text": "competitive knitting"
-                },
-                {
-                    "id": 127,
-                    "text": "romcoms"
-                }
-            ]
-        }],
-        "page2": [{
-            "name": "Dwayne",
-            "surname": "Johnson",
-            "interests": [{
-                    "id": 42,
-                    "text": "sci-fi"
-                },
-                {
-                    "id": 255,
-                    "text": "round numbers"
-                }
-            ]
-        }]
-    }
-}
-"""
-        let json = JSON(parseJSON: jsonString)
-        let matchesObject = json["matches"]
-        let interests = (0..<2).flatMap {
-            matchesObject["page\($0 + 1)"].arrayValue.flatMap {
-                $0["interests"].arrayValue.map {
-                    Interest(id: $0["id"].intValue, text: $0["text"].stringValue)
-                }
-            }
-        }
-        
-        print(interests.map { $0.text })
     }
     
     override func viewDidAppear(_ animated: Bool) {
