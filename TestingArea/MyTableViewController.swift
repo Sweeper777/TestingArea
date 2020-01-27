@@ -10,6 +10,7 @@ class MyTableViewController: UITableViewController {
                    ("C", "Another Text")]
     
     override func viewDidLoad() {
+        tableView.register(MyRightDetailCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,9 +27,12 @@ class MyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel!.text = strings[indexPath.row].0
-        cell.detailTextLabel!.text = strings[indexPath.row].1
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MyRightDetailCell
+        cell.myTextLabel.text = strings[indexPath.row].0
+        cell.myDetailTextLabel.text = strings[indexPath.row].1
+
+        cell.myTextLabel.isHidden = (strings[indexPath.row].0 == "")
+        cell.myDetailTextLabel.isHidden = (strings[indexPath.row].1 == "")
         return cell
     }
     
