@@ -73,7 +73,7 @@
                     <connections>
                         <outlet property="button" destination="VGH-nt-Q7r" id="i9X-mD-gwI"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
-                        <outlet property="textview" destination="4qu-IC-9ga" id="6wQ-TY-mJm"/>
+                        <outlet property="textview" destination="4qu-IC-9ga" id="dVQ-iq-rAi"/>
                         <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
                     </connections>
                 </viewController>
