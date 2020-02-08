@@ -19,6 +19,14 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let calendar = Calendar.current
+        let start = Date(timeIntervalSince1970: 1577375330)
+        let end = Date(timeIntervalSince1970: 1577893730)
+        let startDateComponents = calendar.dateComponents([.weekOfYear], from: start)
+        let endDateComponents = calendar.dateComponents([.weekOfYear], from: end)
+        let interval = calendar.dateComponents([.weekOfYear], from: startDateComponents, to: endDateComponents).weekOfYear!
+        print(interval)
+        
     }
     
     @IBAction func click() {
