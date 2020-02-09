@@ -2,6 +2,7 @@ import UIKit
 import CoreData
 import AVFoundation
 import RealmSwift
+import LocalAuthentication
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -34,6 +35,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var config = Realm.Configuration()
         config.fileURL = URL(string: realmPath)
         Realm.Configuration.defaultConfiguration = config
+        
+        let context = LAContext()
+        context.localizedCancelTitle = "Cancel"
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Some description") { (success, error) in
+                if success {
+                    print("Success")
+                } else {
+                    print(error?.localizedDescription ?? "General Error")
+                }
+            }
+        }
+        
         return true
     }
 
@@ -48,7 +62,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        let context = LAContext()
+        context.localizedCancelTitle = "Cancel"
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Some description") { (success, error) in
+                if success {
+                    print("Success")
+                } else {
+                    print(error?.localizedDescription ?? "General Error")
+                }
+            }
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
