@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "WKWebViewCrawler.h"
 
-FOUNDATION_EXPORT double BigNumberVersionNumber;
-FOUNDATION_EXPORT const unsigned char BigNumberVersionString[];
+FOUNDATION_EXPORT double WKWebViewCrawlerVersionNumber;
+FOUNDATION_EXPORT const unsigned char WKWebViewCrawlerVersionString[];
 

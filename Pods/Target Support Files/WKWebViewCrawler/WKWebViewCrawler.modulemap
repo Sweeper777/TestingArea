@@ -1,0 +1,6 @@
+framework module WKWebViewCrawler {
+  umbrella header "WKWebViewCrawler-umbrella.h"
+
+  export *
+  module * { export * }
+}
