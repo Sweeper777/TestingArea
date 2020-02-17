@@ -8,6 +8,7 @@ PODS:
     - DifferenceKit/Core
   - Differentiator (4.0.1)
   - Eureka (5.0.0)
+  - HTMLReader (2.1.4)
   - Realm (3.17.3):
     - Realm/Headers (= 3.17.3)
   - Realm/Headers (3.17.3)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Alamofire
   - DifferenceKit
   - Eureka (= 5.0.0)
+  - HTMLReader
   - RealmSwift
   - RxCocoa
   - RxDataSources
@@ -47,6 +49,7 @@ SPEC REPOS:
     - DifferenceKit
     - Differentiator
     - Eureka
+    - HTMLReader
     - Realm
     - RealmSwift
     - RxCocoa
@@ -76,6 +79,7 @@ SPEC CHECKSUMS:
   DifferenceKit: 5018791b6c1fc839921a3c171a0a539ace6ea60c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
+  HTMLReader: 2fc5ccf6a041b7070d9b43b101034cba63d2ae2a
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -87,6 +91,6 @@ SPEC CHECKSUMS:
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
   WKWebViewCrawler: 507f66ae4d99e9fa6f81aa727762702d9b5e6801
 
-PODFILE CHECKSUM: b17f0fedee40bc96db8251054d7a01e44634646f
+PODFILE CHECKSUM: 16361364f0da8c3d78215cd375798246093eb3fc
 
 COCOAPODS: 1.7.5

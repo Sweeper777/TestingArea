@@ -315,6 +315,17 @@ SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>HTMLReader is in the public domain.
+</string>
+			<key>License</key>
+			<string>Public domain</string>
+			<key>Title</key>
+			<string>HTMLReader</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>TABLE OF CONTENTS
 
 1. Apache License version 2.0
