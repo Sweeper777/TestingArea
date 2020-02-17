@@ -15,8 +15,12 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = URL(string: "xxx")!
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: URL(string: "xxx")!,timeoutInterval: Double.infinity)
+        request.addValue("ASP.NET_SessionId=xxx", forHTTPHeaderField: "Cookie")
+        request.addValue("keep-alive", forHTTPHeaderField: "Connection")
+
+        request.httpMethod = "GET"
+        
         crawler.request(request) { _ in
             print("Done!")
         }
