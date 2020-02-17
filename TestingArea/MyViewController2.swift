@@ -31,8 +31,9 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        crawler.filter(selector: ".xxx") { (element) in
-            print(element ?? [])
-        }
+        let document = HTMLDocument(string: html)
+        let nodes = document.nodes(matchingSelector: ".xxx")
+        nodes.map { $0.textContent }.forEach { print($0) }
+        nodes.map { $0.attributes["href"]! }.forEach { print($0) }
     }
 }
