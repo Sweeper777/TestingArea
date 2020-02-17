@@ -23,6 +23,8 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        
+        crawler.filter(selector: ".xxx") { (element) in
+            print(element ?? [])
+        }
     }
 }
