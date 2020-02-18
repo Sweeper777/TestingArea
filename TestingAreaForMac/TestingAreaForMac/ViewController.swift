@@ -1,37 +1,26 @@
 import Cocoa
-import CSV
 
 class ViewController: NSViewController {
     
-    @IBOutlet var textfield: NSTextField!
+    @IBOutlet var outlineView: NSOutlineView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func buttonPressed(sender: NSButton) {
-        var records = [Vessel]()
-        do {
-            let csvString = try String(contentsOfFile: "/Users/mulangsu/Downloads/csv.csv")
-            let reader = try CSVReader(string: csvString, hasHeaderRow: true)
-            let decoder = CSVRowDecoder()
-            while reader.next() != nil {
-                let row = try decoder.decode(Vessel.self, from: reader)
-                records.append(row)
-            }
-        } catch let error {
-            print(error)
-        }
-        print("Read \(records.count) Records")
-    }
-    
-    @IBAction func item2Pressed(_ sender: NSMenuItem) {
-        
-    }
 }
 
-extension ViewController : NSTextFieldDelegate {
-    func controlTextDidChange(_ obj: Notification) {
-        print("called")
+extension ViewController: NSOutlineViewDataSource, NSOutlineViewDelegate {
+    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
+        }
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
     }
 }
