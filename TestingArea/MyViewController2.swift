@@ -9,7 +9,16 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     
-    var html: String!
+    let html = """
+<div>
+<span>1</span>
+<span>2</span>
+<span class="a">3</span>
+<span>4</span>
+<span>5</span>
+<span>9</span>
+</div>
+"""
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
