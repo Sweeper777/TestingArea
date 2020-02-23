@@ -26,23 +26,11 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var request = URLRequest(url: URL(string: "xxx")!,timeoutInterval: Double.infinity)
-        request.addValue("ASP.NET_SessionId=xxx", forHTTPHeaderField: "Cookie")
-        request.addValue("keep-alive", forHTTPHeaderField: "Connection")
-
-        request.httpMethod = "GET"
-        
-        Alamofire.request(request).responseString { (response) in
-            guard case .success(let html) = response.result else { return }
-            print("Done")
-            self.html = html
-        }
     }
     
     @IBAction func click() {
         let document = HTMLDocument(string: html)
-        let nodes = document.nodes(matchingSelector: ".xxx")
-        nodes.map { $0.textContent }.forEach { print($0) }
-        nodes.map { $0.attributes["href"]! }.forEach { print($0) }
+        let nodes = document.nodes(matchingSelector: "span.a ~ span")
+        print(nodes.map { $0.textContent })
     }
 }
