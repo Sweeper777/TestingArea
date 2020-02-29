@@ -9,16 +9,8 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     
-    let html = """
-<div>
-<span>1</span>
-<span>2</span>
-<span class="a">3</span>
-<span>4</span>
-<span>5</span>
-<span>9</span>
-</div>
-"""
+    @UserDefaultsBacked(key: "snap-is-enabled", defaultValue: false)
+    var snapStatus: Bool
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -32,5 +24,20 @@ class MyViewController2: UIViewController {
         let document = HTMLDocument(string: html)
         let nodes = document.nodes(matchingSelector: "span.a ~ span")
         print(nodes.map { $0.textContent })
+    }
+}
+
+
+@propertyWrapper struct UserDefaultsBacked<Value> {
+    let key: String
+    let storage: UserDefaults = .standard
+    var defaultValue: Value
+
+    var wrappedValue: Value {
+        get {
+            let value = storage.value(forKey: key) as? Value
+            return value ?? defaultValue
+        }
+        set { storage.setValue(newValue, forKey: key) }
     }
 }
