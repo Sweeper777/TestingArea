@@ -21,9 +21,11 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        let document = HTMLDocument(string: html)
-        let nodes = document.nodes(matchingSelector: "span.a ~ span")
-        print(nodes.map { $0.textContent })
+        print(snapStatus)
+        textfield.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+           self.textfield.transform = .identity
+        }, completion: nil)
     }
 }
 
