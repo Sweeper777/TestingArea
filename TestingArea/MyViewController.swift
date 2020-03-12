@@ -17,4 +17,14 @@ class MyViewController: UIViewController{
         
         myText.attributedText = NSAttributedString(string: "Hello World", attributes: [.foregroundColor: UIColor(named: "myColor")!])
     }
+
+    @objc func f(_ c: @escaping (Status) -> Void) {}
 }
+
+@objc public enum Status : Int {
+    case unknown;
+    case ok;
+    case failed;
+    
+}
+
