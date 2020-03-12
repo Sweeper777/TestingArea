@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double CSVVersionNumber;
-FOUNDATION_EXPORT const unsigned char CSVVersionString[];
+FOUNDATION_EXPORT double SwiftyXMLParserVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftyXMLParserVersionString[];
 

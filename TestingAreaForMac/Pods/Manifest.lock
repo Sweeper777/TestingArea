@@ -1,16 +1,21 @@
 PODS:
-  - CSV.swift (2.4.2)
+  - SwiftyXMLParser (5.1.0)
 
 DEPENDENCIES:
-  - CSV.swift
+  - SwiftyXMLParser (from `https://github.com/yahoojapan/SwiftyXMLParser.git`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - CSV.swift
+EXTERNAL SOURCES:
+  SwiftyXMLParser:
+    :git: https://github.com/yahoojapan/SwiftyXMLParser.git
+
+CHECKOUT OPTIONS:
+  SwiftyXMLParser:
+    :commit: bc85162ecee60d6eb94b778648bc4c51e1c4d34f
+    :git: https://github.com/yahoojapan/SwiftyXMLParser.git
 
 SPEC CHECKSUMS:
-  CSV.swift: 9670cc1b3e3f01e9eebb1aeb603b17b4459e7493
+  SwiftyXMLParser: 8271497e0a37b5c04b0b167c77b4896e36175a21
 
-PODFILE CHECKSUM: 94be3219f99a4805bfaa54227cda4ae33ef103b3
+PODFILE CHECKSUM: aba5ea98530813e20cc3163dd3ed2044f5ac4965
 
 COCOAPODS: 1.7.5

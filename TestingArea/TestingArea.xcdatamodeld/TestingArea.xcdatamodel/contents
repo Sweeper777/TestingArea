@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Entity2" representedClassName="Entity2" syncable="YES" codeGenerationType="class">
-        <attribute name="keyword" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="eventIDs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventID" inverseName="entity2" inverseEntity="EventID" syncable="YES"/>
+        <attribute name="keyword" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="eventIDs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventID" inverseName="entity2" inverseEntity="EventID"/>
     </entity>
     <entity name="EventID" representedClassName="EventID" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="entity2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entity2" inverseName="eventIDs" inverseEntity="Entity2" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="entity2" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entity2" inverseName="eventIDs" inverseEntity="Entity2"/>
     </entity>
     <elements>
-        <element name="Entity2" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Entity2" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="EventID" positionX="-63" positionY="-9" width="128" height="75"/>
     </elements>
 </model>
