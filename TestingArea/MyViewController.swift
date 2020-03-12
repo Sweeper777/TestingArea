@@ -4,7 +4,6 @@ class MyViewController: UIViewController{
 
     override func viewDidLoad() {
         let myText = UITextView()
-        myText.text = "Hello World!"
         view.addSubview(myText)
         myText.translatesAutoresizingMaskIntoConstraints = false
         myText.textAlignment = .center
@@ -15,5 +14,7 @@ class MyViewController: UIViewController{
           myText.trailingAnchor.constraint(equalTo: view.trailingAnchor),
           myText.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+        
+        myText.attributedText = NSAttributedString(string: "Hello World", attributes: [.foregroundColor: UIColor(named: "myColor")!])
     }
 }
