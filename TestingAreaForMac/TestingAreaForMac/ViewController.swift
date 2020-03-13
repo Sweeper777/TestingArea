@@ -36,6 +36,8 @@ class ViewController: NSViewController {
 //            }
     }
     
+    @IBAction func sliderChanged(_ sender: Any) {
+        myView.svgStrings = [svgStrings[slider.integerValue - 1]]
     }
     
 }
