@@ -2,6 +2,8 @@ import UIKit
 import Alamofire
 import HTMLReader
 import WKWebViewCrawler
+import Realm
+import RealmSwift
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -21,11 +23,18 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction func click() {
-        print(snapStatus)
-        textfield.transform = CGAffineTransform(scaleX: 0, y: 0)
-        UIView.animate(withDuration: 0.8, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-           self.textfield.transform = .identity
-        }, completion: nil)
+        
+        try! RealmWrapper.shared.realm.write {
+            let a = Entity()
+            a.kids.append("Hello")
+            a.kids.append("thingOne")
+            let b = Entity()
+            b.kids.append("Hello")
+            
+            RealmWrapper.shared.realm.add(a)
+            RealmWrapper.shared.realm.add(b)
+        }
+        print(RealmWrapper.shared.entities.filter("%@ IN kids", "thingOne").count)
     }
 }
 
