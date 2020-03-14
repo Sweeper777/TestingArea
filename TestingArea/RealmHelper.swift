@@ -24,5 +24,5 @@ final class RealmWrapper {
 }
 
 class Entity: Object {
-    @objc dynamic var number = 0
+    var kids = List<String>()
 }
