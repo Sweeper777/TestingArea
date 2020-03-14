@@ -14,3 +14,18 @@ class SheetViewController : NSViewController {
         
     }
 }
+
+@objc class Test: NSObject {
+
+    @objc func testBoolean() -> Bool {
+        return true
+    }
+
+    func testOptionalBoolean() -> Bool? {
+        return true
+    }
+    
+    @objc func testOptionalBoolean() -> NSNumber? {
+        return testOptionalBoolean().map(NSNumber.init(value:))
+    }
+}
