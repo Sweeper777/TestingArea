@@ -10,9 +10,9 @@
 		5A01429C23C31D190003D3DF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01429B23C31D190003D3DF /* IntentHandler.swift */; };
 		5A058A4023C1FAB00074A48D /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A058A3F23C1FAB00074A48D /* MyModel.swift */; };
 		5A079E492414FEF200F03D78 /* SKUBezierPath+SVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A079E482414FEF200F03D78 /* SKUBezierPath+SVG.m */; };
-		5A079E4B241503E800F03D78 /* map.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5A079E4A241503E800F03D78 /* map.svg */; };
 		5A08171723893B0500EFB833 /* MySwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08171623893B0500EFB833 /* MySwiftUIView.swift */; };
 		5A0F543D23829568004E5708 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0F543C23829568004E5708 /* MyView.swift */; };
+		5A12B12924279E6B00124870 /* map.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5A12B12824279E6B00124870 /* map.svg */; };
 		5A4FF54222CF846A00B564A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FF54122CF846A00B564A2 /* AppDelegate.swift */; };
 		5A4FF54422CF846A00B564A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FF54322CF846A00B564A2 /* ViewController.swift */; };
 		5A4FF54622CF846B00B564A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FF54522CF846B00B564A2 /* Assets.xcassets */; };
@@ -31,9 +31,9 @@
 		5A079E462414FEC500F03D78 /* SKUBezierPath+SVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKUBezierPath+SVG.h"; sourceTree = "<group>"; };
 		5A079E472414FEF200F03D78 /* TestingAreaForMac-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestingAreaForMac-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A079E482414FEF200F03D78 /* SKUBezierPath+SVG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SKUBezierPath+SVG.m"; sourceTree = "<group>"; };
-		5A079E4A241503E800F03D78 /* map.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = map.svg; sourceTree = "<group>"; };
 		5A08171623893B0500EFB833 /* MySwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySwiftUIView.swift; sourceTree = "<group>"; };
 		5A0F543C23829568004E5708 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		5A12B12824279E6B00124870 /* map.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map.svg; sourceTree = "<group>"; };
 		5A4FF53E22CF846A00B564A2 /* TestingAreaForMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingAreaForMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4FF54122CF846A00B564A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A4FF54322CF846A00B564A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 				5A058A3F23C1FAB00074A48D /* MyModel.swift */,
 				5A079E462414FEC500F03D78 /* SKUBezierPath+SVG.h */,
 				5A079E482414FEF200F03D78 /* SKUBezierPath+SVG.m */,
-				5A079E4A241503E800F03D78 /* map.svg */,
 				5A8AC6AE2415992A0003703A /* china.svg */,
+				5A12B12824279E6B00124870 /* map.svg */,
 				5A4FF54522CF846B00B564A2 /* Assets.xcassets */,
 				5A4FF54A22CF846B00B564A2 /* Info.plist */,
 				5A4FF54B22CF846B00B564A2 /* TestingAreaForMac.entitlements */,
@@ -223,10 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A079E4B241503E800F03D78 /* map.svg in Resources */,
 				5A4FF54622CF846B00B564A2 /* Assets.xcassets in Resources */,
 				5A8AC6AF2415992A0003703A /* china.svg in Resources */,
 				5A50EB7522DF11D20028A479 /* Main.storyboard in Resources */,
+				5A12B12924279E6B00124870 /* map.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
