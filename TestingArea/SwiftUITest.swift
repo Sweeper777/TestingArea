@@ -1,22 +1,35 @@
 import SwiftUI
+import Combine
 
 struct ContentView: View {
-    @State var count = 1
+
+    @ObservedObject var viewModel = ViewModel()
+
     var body: some View {
-        VStack {
-            CountView(count: $count)
-            Text("My Count: \(count)")
-            Button("Show My Count"){print("\(self.count)")}
+        Text(viewModel.content).onAppear() {
+            self.viewModel.subsribe()
         }
     }
 }
-struct CountView: View {
-    @Binding var count: Int
-    var body: some View {
-        VStack {
-            Button("Increase count"){self.count += 1}
-            Text("Count = \(count)")
+class ViewModel: ObservableObject {
+
+    @Published var content: String = ""
+    var subscription: AnyCancellable?
+    private let model = Model()
+
+    func subsribe() {
+        subscription = model.getPublisher().sink { value in
+            self.content = value
         }
+    }
+}
+
+struct Model {
+
+    func getPublisher() -> AnyPublisher<String, Never> {
+        Just("Test")
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
 }
 struct ContentView_Previews: PreviewProvider {
