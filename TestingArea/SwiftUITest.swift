@@ -1,48 +1,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var number: Double = 0
-    
-    let formatter : NumberFormatter = {
-        let f = NumberFormatter()
-        f.maximumFractionDigits = 0
-        return f
-    }()
-    
+    @State var count = 1
     var body: some View {
         VStack {
-            Infobox {
-                Text("Hello, World!")
-                
-            }.border(Color.red)
-            Infobox(withHeader: "Title") {
-                Text("Hello, World!")
-                
-            }.border(Color.green)
-            
+            CountView(count: $count)
+            Text("My Count: \(count)")
+            Button("Show My Count"){print("\(self.count)")}
         }
     }
 }
-
-struct Infobox<Content>: View where Content: View {
-
-    let content: () -> Content
-    let headerText: String
-
+struct CountView: View {
+    @Binding var count: Int
     var body: some View {
-        VStack(alignment: .leading) {
-            if !headerText.isEmpty {
-                Text(headerText)
-                    .font(.headline)
-            }
-            content()
+        VStack {
+            Button("Increase count"){self.count += 1}
+            Text("Count = \(count)")
         }
     }
-
-    // note the optional parameter here
-    init(withHeader headerText: String = "", @ViewBuilder _ content: @escaping () -> Content) {
-        self.content = content
-        self.headerText = headerText
+}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 
