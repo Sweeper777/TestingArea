@@ -1,18 +1,11 @@
 import UIKit
-import Alamofire
-import HTMLReader
-import WKWebViewCrawler
-import Realm
-import RealmSwift
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    
-    @UserDefaultsBacked(key: "snap-is-enabled", defaultValue: false)
-    var snapStatus: Bool
+    @IBOutlet var myView: UIView!
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -22,33 +15,23 @@ class MyViewController2: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidLayoutSubviews() {
+        myView.rounded()
+    }
+    
     @IBAction func click() {
         
-        try! RealmWrapper.shared.realm.write {
-            let a = Entity()
-            a.kids.append("Hello")
-            a.kids.append("thingOne")
-            let b = Entity()
-            b.kids.append("Hello")
-            
-            RealmWrapper.shared.realm.add(a)
-            RealmWrapper.shared.realm.add(b)
-        }
-        print(RealmWrapper.shared.entities.filter("%@ IN kids", "thingOne").count)
     }
 }
 
-
-@propertyWrapper struct UserDefaultsBacked<Value> {
-    let key: String
-    let storage: UserDefaults = .standard
-    var defaultValue: Value
-
-    var wrappedValue: Value {
-        get {
-            let value = storage.value(forKey: key) as? Value
-            return value ?? defaultValue
+extension UIView {
+    func rounded(cornerRadius: CGFloat? = nil) {
+        if let cornerRadius = cornerRadius {
+            layer.cornerRadius = cornerRadius
+        } else {
+            layer.cornerRadius = min(frame.size.height, frame.size.width) / 2
         }
-        set { storage.setValue(newValue, forKey: key) }
+        clipsToBounds = true
     }
+
 }
