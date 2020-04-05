@@ -1,36 +1,54 @@
 import SwiftUI
 import Combine
-
 struct ContentView: View {
 
-    @ObservedObject var viewModel = ViewModel()
+  @State var employees = ["Alex", "Olga", "Mark"]
+  @State var presentEmployeeView = false
 
-    var body: some View {
-        Text(viewModel.content).onAppear() {
-            self.viewModel.subsribe()
+  var body: some View {
+    NavigationView {
+      List {
+        Section {
+          Button(action: {
+            self.presentEmployeeView = true
+          }, label: {
+            Text("All employees")
+          }).buttonStyle(BorderlessButtonStyle())
         }
+      }
     }
+    .sheet(isPresented: $presentEmployeeView) {
+      EmployeesView(employees: self.employees).onDismiss {
+        self.presentEmployeeView = false
+      }
+    }
+  }
 }
-class ViewModel: ObservableObject {
 
-    @Published var content: String = ""
-    var subscription: AnyCancellable?
-    private let model = Model()
+struct EmployeesView: View {
+  let employees: [String]
 
-    func subsribe() {
-        subscription = model.getPublisher().sink { value in
-            self.content = value
+  @State private var onDismissClosure: (() -> Void)? = nil
+  func onDismiss(perform action: (() -> Void)? = nil) -> some View {
+    self.onDismissClosure = action
+    return self
+  }
+
+  var body: some View {
+    NavigationView {
+      List {
+        ForEach(employees, id: \.self) { employee in
+          Text(employee)
         }
+      }.navigationBarItems(leading:
+        Button(action: {
+          self.onDismissClosure?()
+        }, label: {
+          Text("Close")
+       })
+      )
     }
-}
-
-struct Model {
-
-    func getPublisher() -> AnyPublisher<String, Never> {
-        Just("Test")
-            .receive(on: DispatchQueue.main)
-            .eraseToAnyPublisher()
-    }
+  }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
