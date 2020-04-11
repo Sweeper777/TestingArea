@@ -20,4 +20,7 @@ class MyViewController2: UIViewController {
     @IBAction func click() {
         
     }
+    
+    @available(*, unavailable)
+    @objc func foo() {}
 }
