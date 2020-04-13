@@ -1,54 +1,37 @@
 import SwiftUI
 import Combine
-struct ContentView: View {
-
-  @State var employees = ["Alex", "Olga", "Mark"]
-  @State var presentEmployeeView = false
-
-  var body: some View {
-    NavigationView {
-      List {
-        Section {
-          Button(action: {
-            self.presentEmployeeView = true
-          }, label: {
-            Text("All employees")
-          }).buttonStyle(BorderlessButtonStyle())
-        }
-      }
-    }
-    .sheet(isPresented: $presentEmployeeView) {
-      EmployeesView(employees: self.employees).onDismiss {
-        self.presentEmployeeView = false
-      }
-    }
-  }
+struct SomeItem: Identifiable { // identifiable item
+    var id: Int // identity
 }
 
-struct EmployeesView: View {
-  let employees: [String]
+struct ContentView: View {
 
-  @State private var onDismissClosure: (() -> Void)? = nil
-  func onDismiss(perform action: (() -> Void)? = nil) -> some View {
-    self.onDismissClosure = action
-    return self
-  }
+    @State private var selectedItem: SomeItem? = nil
 
-  var body: some View {
-    NavigationView {
-      List {
-        ForEach(employees, id: \.self) { employee in
-          Text(employee)
+    var body: some View {
+        VStack {
+            ScrollView (.vertical, showsIndicators: false) {
+                ForEach (0..<5) { i in
+
+                    Text("Item \(i)").padding()
+                    .onTapGesture {
+                        self.selectedItem = SomeItem(id: i)
+
+                        // below simulate change identity while alert is shown
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//                            self.selectedItem = nil                    // works !!
+
+                             self.selectedItem?.id = 100             // crash !!
+                            // self.selectedItem = SomeItem(id: 100)  // crash !!
+                        }
+                    }
+                }
+            }
         }
-      }.navigationBarItems(leading:
-        Button(action: {
-          self.onDismissClosure?()
-        }, label: {
-          Text("Close")
-       })
-      )
+        .alert(item: self.$selectedItem) { item in
+             Alert(title: Text("Alert"), message: Text("For item \(item.id)"), dismissButton: .default(Text("OK")))
+        }
     }
-  }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
