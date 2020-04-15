@@ -1,4 +1,5 @@
 import UIKit
+import DCTextEngine
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -14,6 +15,23 @@ class MyViewController2: UIViewController {
         super.viewDidLoad()
         let test = ToolTipView(frame: CGRect(x: 0 , y: self.view.center.y, width: self.view.frame.size.width, height: 50))
         self.view.addSubview(test)
+        
+        let engine = DCTextEngine.withMarkdown()!
+        let attributedString = engine.parse(
+"""
+# Title
+
+Lorem ipsum
+
+## Subheading
+
+### Sub-subheading
+
+- item 1
+- item 2
+- item 3
+""")
+        textview.attributedText = attributedString
     }
     
     
