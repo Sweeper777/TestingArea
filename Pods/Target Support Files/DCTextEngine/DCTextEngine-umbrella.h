@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "WKWebViewCrawler.h"
+#import "DCTextEngine.h"
 
-FOUNDATION_EXPORT double WKWebViewCrawlerVersionNumber;
-FOUNDATION_EXPORT const unsigned char WKWebViewCrawlerVersionString[];
+FOUNDATION_EXPORT double DCTextEngineVersionNumber;
+FOUNDATION_EXPORT const unsigned char DCTextEngineVersionString[];
 
