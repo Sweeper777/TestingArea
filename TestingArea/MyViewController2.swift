@@ -17,21 +17,8 @@ class MyViewController2: UIViewController {
         self.view.addSubview(test)
         
         let engine = DCTextEngine.withMarkdown()!
-        let attributedString = engine.parse(
-"""
-# Title
-
-Lorem ipsum
-
-## Subheading
-
-### Sub-subheading
-
-- item 1
-- item 2
-- item 3
-""")
-        textview.attributedText = attributedString
+        let attributedString = engine.parse("abc")
+        print(attributedString?.attribute(.font, at: 0, effectiveRange: nil) ?? "nil")
     }
     
     
