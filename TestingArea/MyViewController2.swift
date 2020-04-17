@@ -25,7 +25,12 @@ class MyViewController2: UIViewController {
     
     
     @IBAction func click() {
-        
+        let imageAttachment = NSTextAttachment(image: UIImage(named: "home")!)
+
+        let fullString = NSMutableAttributedString(string: "2: Press the ")
+        fullString.append(NSAttributedString(attachment: imageAttachment))
+        fullString.append(NSAttributedString(string: " button"))
+        textview.attributedText = fullString
     }
     
     @available(*, unavailable)
