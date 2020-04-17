@@ -13,12 +13,14 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let test = ToolTipView(frame: CGRect(x: 0 , y: self.view.center.y, width: self.view.frame.size.width, height: 50))
-        self.view.addSubview(test)
-        
-        let engine = DCTextEngine.withMarkdown()!
-        let attributedString = engine.parse("abc")
-        print(attributedString?.attribute(.font, at: 0, effectiveRange: nil) ?? "nil")
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = UIImage(named: "home")?.withTintColor(.link)
+
+        let fullString = NSMutableAttributedString(string: "1: Press the ")
+        fullString.append(NSAttributedString(attachment: imageAttachment))
+        fullString.append(NSAttributedString(string: " button"))
+        textview.attributedText = fullString
+
     }
     
     
