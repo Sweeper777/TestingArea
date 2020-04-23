@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
-  - DCTextEngine (0.1.0)
+  - DateTimePicker (2.4.0)
   - DifferenceKit (1.1.3):
     - DifferenceKit/Core (= 1.1.3)
     - DifferenceKit/UIKitExtension (= 1.1.3)
@@ -30,7 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - DCTextEngine
+  - DateTimePicker
   - DifferenceKit
   - Eureka (= 5.0.0)
   - RealmSwift
@@ -44,7 +44,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - DCTextEngine
+    - DateTimePicker
     - DifferenceKit
     - Differentiator
     - Eureka
@@ -73,7 +73,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  DCTextEngine: 44a8084ef5227753660db343acdb8a3225e29d75
+  DateTimePicker: 778c3d3d1e3b1d4172c46feb0a319e2b31a94879
   DifferenceKit: 5018791b6c1fc839921a3c171a0a539ace6ea60c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
@@ -87,6 +87,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 3fcfaa2c16725218e7771eaddc5df6e88c6bbf8c
+PODFILE CHECKSUM: 51adec80a0756670bf68d61b5a64afb67f72614b
 
 COCOAPODS: 1.7.5
