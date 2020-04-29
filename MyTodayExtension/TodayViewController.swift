@@ -1,6 +1,6 @@
 import UIKit
 import NotificationCenter
-import RealmSwift
+import SwiftyUtils
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
@@ -8,20 +8,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var config = Realm.Configuration()
-        config.fileURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.io.github.sweeper777.TestingAreaGroup")!.appendingPathComponent("default.realm")
-        Realm.Configuration.defaultConfiguration = config
         
-        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+        print(Bundle.main.appBuild)
         
-        vibrancy.effect = UIVibrancyEffect.widgetEffect(forVibrancyStyle: .label)
-        
-        let view1 = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        view1.backgroundColor = .red
-        view.addSubview(view1)
-        let view2 = UIView(frame: CGRect(x: 50, y: view.safeAreaInsets.top, width: 50, height: 50))
-        view2.backgroundColor = .green
-        view.addSubview(view2)
     }
     
     override func viewDidAppear(_ animated: Bool) {
