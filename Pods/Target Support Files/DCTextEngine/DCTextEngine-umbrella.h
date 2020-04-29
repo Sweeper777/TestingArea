@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "DCTextEngine.h"
 
-FOUNDATION_EXPORT double DateTimePickerVersionNumber;
-FOUNDATION_EXPORT const unsigned char DateTimePickerVersionString[];
+FOUNDATION_EXPORT double DCTextEngineVersionNumber;
+FOUNDATION_EXPORT const unsigned char DCTextEngineVersionString[];
 

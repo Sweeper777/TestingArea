@@ -14,7 +14,7 @@ target 'TestingArea' do
     pod 'DifferenceKit'
     pod 'RealmSwift'
     pod 'SCLAlertView' , :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
-    pod 'DateTimePicker'
+    pod 'DCTextEngine'
     target 'MyTodayExtension' do
       inherit! :search_paths
     end
