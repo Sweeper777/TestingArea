@@ -338,6 +338,19 @@
             </objects>
             <point key="canvasLocation" x="75" y="671"/>
         </scene>
+        <!--Page Controller-->
+        <scene sceneID="5ei-dC-J5G">
+            <objects>
+                <pagecontroller transitionStyle="horizontalStrip" id="H4J-hF-vgF" sceneMemberID="viewController">
+                    <view key="view" id="0ky-wE-bQl">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </pagecontroller>
+                <customObject id="ZGI-rl-aR9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="250"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ruL-Nl-fjd">
             <objects>

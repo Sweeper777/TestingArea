@@ -41,7 +41,7 @@
 		5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */ = {isa = PBXBuildFile; fileRef = 5AFBEABE1D111BBE00F8A8D2 /* modest.css */; };
 		5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFE67D11D2B8F5F0074ACAE /* Property List.plist */; };
 		77664586DAB6FEBA3E5AB213 /* Pods_TestingArea.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86838F400CA1D75975B72135 /* Pods_TestingArea.framework */; };
-		ECA130705928FF933718BDB8 /* Pods_MyTodayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1FFA0621621391240409E9 /* Pods_MyTodayExtension.framework */; };
+		ACD8D9286F0B856C67F06414 /* Pods_MyTodayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4DFEB82038497D0753B0A87 /* Pods_MyTodayExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		098D9319A5CCBF0C57CC4BAC /* Pods-TestingArea-MyTodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea-MyTodayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea-MyTodayExtension/Pods-TestingArea-MyTodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTodayExtension/Pods-MyTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5A00C4C31D722A9C00AB34C3 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
@@ -142,11 +143,12 @@
 		5AFD04761D780E1B0099527B /* TouchDraw.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TouchDraw.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/TouchDraw/TouchDraw.framework"; sourceTree = "<group>"; };
 		5AFE43071D8E734200B063D8 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/EZSwiftExtensions/EZSwiftExtensions.framework"; sourceTree = "<group>"; };
 		5AFE67D11D2B8F5F0074ACAE /* Property List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
-		7C1FFA0621621391240409E9 /* Pods_MyTodayExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTodayExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63ADD0FFB1B7FCE0D67FC6A9 /* Pods-TestingArea-MyTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea-MyTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea-MyTodayExtension/Pods-TestingArea-MyTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		8232176D5945D26B4D998235 /* Pods-MyTodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTodayExtension/Pods-MyTodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		86838F400CA1D75975B72135 /* Pods_TestingArea.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingArea.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8872C31A8576DB1452420218 /* Pods-TestingArea.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.debug.xcconfig"; sourceTree = "<group>"; };
 		B57A215E98C1AB22AFC7D1FF /* Pods-TestingArea.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea/Pods-TestingArea.release.xcconfig"; sourceTree = "<group>"; };
+		D4DFEB82038497D0753B0A87 /* Pods_MyTodayExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTodayExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A14CC9C234669D700E31F0D /* NotificationCenter.framework in Frameworks */,
-				ECA130705928FF933718BDB8 /* Pods_MyTodayExtension.framework in Frameworks */,
+				ACD8D9286F0B856C67F06414 /* Pods_MyTodayExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +207,7 @@
 				5A00C4C31D722A9C00AB34C3 /* Eureka.framework */,
 				86838F400CA1D75975B72135 /* Pods_TestingArea.framework */,
 				5A14CC9B234669D700E31F0D /* NotificationCenter.framework */,
-				7C1FFA0621621391240409E9 /* Pods_MyTodayExtension.framework */,
+				D4DFEB82038497D0753B0A87 /* Pods_MyTodayExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +219,8 @@
 				B57A215E98C1AB22AFC7D1FF /* Pods-TestingArea.release.xcconfig */,
 				8232176D5945D26B4D998235 /* Pods-MyTodayExtension.debug.xcconfig */,
 				1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */,
+				098D9319A5CCBF0C57CC4BAC /* Pods-TestingArea-MyTodayExtension.debug.xcconfig */,
+				63ADD0FFB1B7FCE0D67FC6A9 /* Pods-TestingArea-MyTodayExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";

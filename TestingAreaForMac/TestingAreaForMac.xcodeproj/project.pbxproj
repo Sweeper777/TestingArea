@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A01429C23C31D190003D3DF /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A01429B23C31D190003D3DF /* IntentHandler.swift */; };
 		5A058A4023C1FAB00074A48D /* MyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A058A3F23C1FAB00074A48D /* MyModel.swift */; };
 		5A079E492414FEF200F03D78 /* SKUBezierPath+SVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A079E482414FEF200F03D78 /* SKUBezierPath+SVG.m */; };
 		5A08171723893B0500EFB833 /* MySwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08171623893B0500EFB833 /* MySwiftUIView.swift */; };
@@ -25,8 +24,6 @@
 /* Begin PBXFileReference section */
 		28835ADBBBC3ADC5343C5CDB /* Pods-TestingAreaForMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingAreaForMac.release.xcconfig"; path = "Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac.release.xcconfig"; sourceTree = "<group>"; };
 		5A01429923C31D190003D3DF /* GetDictIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GetDictIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A01429B23C31D190003D3DF /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		5A01429D23C31D190003D3DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A058A3F23C1FAB00074A48D /* MyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModel.swift; sourceTree = "<group>"; };
 		5A079E462414FEC500F03D78 /* SKUBezierPath+SVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKUBezierPath+SVG.h"; sourceTree = "<group>"; };
 		5A079E472414FEF200F03D78 /* TestingAreaForMac-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestingAreaForMac-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -66,20 +63,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A01429A23C31D190003D3DF /* GetDictIntents */ = {
-			isa = PBXGroup;
-			children = (
-				5A01429B23C31D190003D3DF /* IntentHandler.swift */,
-				5A01429D23C31D190003D3DF /* Info.plist */,
-			);
-			path = GetDictIntents;
-			sourceTree = "<group>";
-		};
 		5A4FF53522CF846A00B564A2 = {
 			isa = PBXGroup;
 			children = (
 				5A4FF54022CF846A00B564A2 /* TestingAreaForMac */,
-				5A01429A23C31D190003D3DF /* GetDictIntents */,
 				5A4FF53F22CF846A00B564A2 /* Products */,
 				A38AE7D008277997EDB5FE0D /* Pods */,
 				8FBE0E7BB850971AC78B3020 /* Frameworks */,
@@ -279,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A01429C23C31D190003D3DF /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
