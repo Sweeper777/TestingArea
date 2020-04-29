@@ -1,5 +1,5 @@
 import UIKit
-import DateTimePicker
+import DCTextEngine
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -13,10 +13,17 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let datePicker = DateTimePicker(frame: CGRect(x: 16, y: 110, width: 288, height: 125))
-        self.view.addSubview(datePicker)
-//        datePicker.includesSecond = true
-//        datePicker.isTimePickerOnly = true
+        
+        let engine = DCTextEngine.withMarkdown()!
+        engine.addPattern("<title> \\w+") { (regex, text) -> DCTextOptions? in
+            let options = DCTextOptions()
+            options.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+            options.replaceText = String(text?.dropFirst(8) ?? "")
+            return options
+        }
+        let attributedString = engine.parse("<title> abc\nhello")
+        print(attributedString?.attribute(.font, at: 0, effectiveRange: nil) ?? "nil")
+        textview.attributedText = attributedString
     }
     
     
