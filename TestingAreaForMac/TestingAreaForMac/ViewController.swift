@@ -1,5 +1,6 @@
 import Cocoa
 import SwiftyXMLParser
+import Automator
 
 class ViewController: NSViewController {
     
