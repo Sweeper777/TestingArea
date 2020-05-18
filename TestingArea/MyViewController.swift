@@ -1,30 +1,28 @@
 import UIKit
+import Eureka
+import SplitRow
+import SCLAlertView
 
-class MyViewController: UIViewController{
-
+class MyViewController: FormViewController{
     override func viewDidLoad() {
-        let myText = UITextView()
-        view.addSubview(myText)
-        myText.translatesAutoresizingMaskIntoConstraints = false
-        myText.textAlignment = .center
-        myText.backgroundColor = .gray
-        NSLayoutConstraint.activate([
-          myText.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-          myText.topAnchor.constraint(equalTo: view.topAnchor),
-          myText.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-          myText.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
+        super.viewDidLoad()
         
-        myText.attributedText = NSAttributedString(string: "Hello World", attributes: [.foregroundColor: UIColor(named: "myColor")!])
+        form +++ Section()
+            <<< SplitRow<PickerInlineRow<String>,TextRow>(){
+                $0.rowLeft = PickerInlineRow<String>(){
+                    $0.title = "Choice 1"
+                    $0.options = ["A","B","C"]
+                    $0.value = "A"
+                }
+
+                $0.rowRight = TextRow(){
+                    $0.title = "Hello"
+                }
+                
+                $0.rowLeftPercentage = 0.5
+                
+
+            }
+        
     }
-
-    @objc func f(_ c: @escaping (Status) -> Void) {}
 }
-
-@objc public enum Status : Int {
-    case unknown;
-    case ok;
-    case failed;
-    
-}
-
