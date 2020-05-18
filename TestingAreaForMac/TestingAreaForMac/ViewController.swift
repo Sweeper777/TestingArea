@@ -28,6 +28,23 @@ class ViewController: NSViewController {
         slider.isContinuous = true
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+
+        let dd = dateFromString("Aug 20", format: "MMM yy")
+        
+        print("")
+    }
+    
+    func dateFromString(_ dateString:String,  format: String = "dd/MM/yy") -> Date?
+    {
+        let dueDateFormatter = DateFormatter()
+        dueDateFormatter.timeZone = TimeZone(identifier: "UTC")!
+        dueDateFormatter.dateFormat = format
+        let date = dueDateFormatter.date(from: dateString)
+        return date
+     }
+    
     func editSVGString(_ string: String) -> String {
         let uppercased = string.uppercased()
 //            if !uppercased.hasSuffix("Z") {
@@ -41,4 +58,8 @@ class ViewController: NSViewController {
         myView.svgStrings = [svgStrings[slider.integerValue - 1]]
     }
     
+}
+
+struct Foo {
+    let a: Date
 }
