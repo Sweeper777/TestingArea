@@ -10,6 +10,7 @@ target 'TestingArea' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Eureka', '5.0.0'
+    pod 'SplitRow'
     pod 'RxDataSources'
     pod 'DifferenceKit'
     pod 'RealmSwift'
