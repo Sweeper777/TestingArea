@@ -63,3 +63,4 @@ TestingArea/SecretStuff.swift
 
 TestingArea/GoogleService-Info.plist
 Pods/GoogleMobileVision/TextDetector/Frameworks/TextDetector.framework/TextDetector
+TestingArea/MobileNetV2Int8LUT.mlmodel

@@ -2,6 +2,8 @@ import UIKit
 import DCTextEngine
 import RxSwift
 import RxCocoa
+import Vision
+import CoreMedia
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -19,81 +21,26 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let engine = DCTextEngine.withMarkdown()!
-        engine.addPattern("<title> \\w+") { (regex, text) -> DCTextOptions? in
-            let options = DCTextOptions()
-            options.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-            options.replaceText = String(text?.dropFirst(8) ?? "")
-            return options
+        print(textview.attributedText.attributes(at: 0, effectiveRange: nil))
+        let model = try! VNCoreMLModel(for: MLModel(contentsOf: MobileNetV2Int8LUT.urlOfModelInThisBundle))
+        let request = VNCoreMLRequest(model: model) {
+            r, _ in
+            print(r.results ?? "nil")
         }
-        let attributedString = engine.parse("<title> abc\nhello")
-        print(attributedString?.attribute(.font, at: 0, effectiveRange: nil) ?? "nil")
-        textview.attributedText = attributedString
+        let image = CIImage(cgImage: UIImage(named: "settings")!.cgImage!)
+        let handler = VNImageRequestHandler(ciImage: image, orientation: .up)
+        try! handler.perform([request])
+        
+        let observable = Observable<[String: Int]>.of(["a": 1, "b": 2], ["c": 3, "d": 4]).flatMap { Observable.from(Array($0)) }.
+        
+        print("Hello!")
     }
     
     
     @IBAction func click() {
+        textview.font = .systemFont(ofSize: textview.font!.pointSize)
     }
     
     @available(*, unavailable)
     @objc func foo() {}
-}
-
-class Timer {
-    var paused = true
-    {
-        didSet {
-            rxPaused.accept(paused)
-        }
-    }
-    var ended = false
-    
-    let rxPaused = BehaviorRelay(value: true)
-    let disposeBag = DisposeBag()
-    var timerEvents: Observable<Int>!
-    
-    private var currentState: Int
-    private let resetState: Int
-    
-    private init(currentState: Int, resetState: Int) {
-        self.currentState = currentState
-        self.resetState = resetState
-        reset()
-    }
-    
-    static func newCountDownInstance(countDownTime: Int) -> Timer {
-        Timer(currentState: countDownTime,
-              resetState: countDownTime)
-    }
-    
-    func start() {
-        if !ended {
-            paused = false
-        }
-    }
-    
-    func pause() {
-        paused = true
-    }
-    
-    func reset() {
-        ended = false
-        currentState = resetState
-        pause()
-        timerEvents = rxPaused.asObservable()
-            .flatMapLatest {  isRunning in
-                isRunning ? .empty() : Observable<Int>.interval(.seconds(1), scheduler: MainScheduler.instance)
-            }
-            .enumerated().flatMap { (index, int) in Observable.just(index) }
-        .map { [weak self] x in (self?.resetState ?? x) - x }
-            .take(self.resetState)
-        timerEvents.subscribe(onNext: { [weak self]
-            timerEvent in
-            self?.currentState -= 1
-            }, onCompleted: {
-                [weak self] in
-                self?.ended = true
-        }).disposed(by: disposeBag)
-    }
 }
