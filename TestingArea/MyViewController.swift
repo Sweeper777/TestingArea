@@ -7,12 +7,31 @@ class MyViewController: FormViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section()
-            <<< SplitRow<PickerInlineRow<String>,TextRow>(){
-                $0.rowLeft = PickerInlineRow<String>(){
-                    $0.title = "Choice 1"
-                    $0.options = ["A","B","C"]
-                    $0.value = "A"
+        form +++ MultivaluedSection(
+            multivaluedOptions: [.Insert, .Delete]) {
+            $0.addButtonProvider = { section in
+                return ButtonRow(){
+                    $0.title = "Add"
+                }
+            }
+            $0.multivaluedRowToInsertAt = { index in
+                return SplitRow<MyRow,TextRow>(){
+                    $0.rowLeft = MyRow(){
+                        $0.title = ""
+                    }
+
+                    $0.rowRight = TextRow(){
+                        $0.title = "Hello"
+                    }
+                    
+                    $0.rowLeftPercentage = 0.5
+                    
+
+                }
+            }
+            $0 <<< SplitRow<MyRow,TextRow>(){
+                $0.rowLeft = MyRow(){
+                    $0.title = ""
                 }
 
                 $0.rowRight = TextRow(){
