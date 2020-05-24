@@ -21,19 +21,7 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(textview.attributedText.attributes(at: 0, effectiveRange: nil))
-        let model = try! VNCoreMLModel(for: MLModel(contentsOf: MobileNetV2Int8LUT.urlOfModelInThisBundle))
-        let request = VNCoreMLRequest(model: model) {
-            r, _ in
-            print(r.results ?? "nil")
-        }
-        let image = CIImage(cgImage: UIImage(named: "settings")!.cgImage!)
-        let handler = VNImageRequestHandler(ciImage: image, orientation: .up)
-        try! handler.perform([request])
-        
-        let observable = Observable<[String: Int]>.of(["a": 1, "b": 2], ["c": 3, "d": 4]).flatMap { Observable.from(Array($0)) }.
-        
-        print("Hello!")
+        button.setImage(UIImage(named: "home"), for: .normal)
     }
     
     
