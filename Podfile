@@ -16,6 +16,7 @@ target 'TestingArea' do
     pod 'RealmSwift'
     pod 'SCLAlertView' , :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
     pod 'DCTextEngine'
+    pod 'LTMorphingLabel'
     target 'MyTodayExtension' do
       inherit! :search_paths
     end
