@@ -9,7 +9,7 @@ PODS:
     - DifferenceKit/Core
   - Differentiator (4.0.1)
   - Eureka (5.0.0)
-  - LTMorphingLabel (0.7.0)
+  - LTMorphingLabel (0.8.0)
   - Realm (3.17.3):
     - Realm/Headers (= 3.17.3)
   - Realm/Headers (3.17.3)
@@ -36,7 +36,7 @@ DEPENDENCIES:
   - DCTextEngine
   - DifferenceKit
   - Eureka (= 5.0.0)
-  - LTMorphingLabel
+  - LTMorphingLabel (= 0.8.0)
   - RealmSwift
   - RxCocoa
   - RxDataSources
@@ -84,7 +84,7 @@ SPEC CHECKSUMS:
   DifferenceKit: 5018791b6c1fc839921a3c171a0a539ace6ea60c
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
-  LTMorphingLabel: 22147fb1ec2b0306537ccc348b36ea8617179b03
+  LTMorphingLabel: 1ada1cb5c046ae4ce5c66b428cf2e05e227e8e4f
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
@@ -96,6 +96,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 7bd2bcbc994177d85fbef1beeb3fc1825c36cb40
+PODFILE CHECKSUM: a0173870faed1bba004ccc8ada3b2d54f28b585a
 
 COCOAPODS: 1.7.5
