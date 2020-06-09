@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -282,7 +282,7 @@
                                         <menuItem title="Item 1" id="4lt-Qh-2Zs">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="item1Pressed:" target="Voe-Tx-rLC" id="MYO-ax-QP2"/>
+                                                <action selector="f:" target="Ady-hI-5gd" id="KjN-5D-UDZ"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="Item 2" id="prL-Iw-xJL">
@@ -359,33 +359,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="1E4-j9-ZdW" customClass="MyView" customModule="TestingAreaForMac" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="410" height="231"/>
-                            </customView>
-                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="enN-so-TEW">
-                                <rect key="frame" x="18" y="263" width="414" height="19"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="CWt-86-wxc"/>
-                                </constraints>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Aev-av-NCg"/>
-                                <connections>
-                                    <action selector="sliderChanged:" target="O9m-WB-0uc" id="Jl5-nN-Fov"/>
-                                </connections>
-                            </slider>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7u-ll-8Sm">
+                                <rect key="frame" x="187" y="203" width="77" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1GS-He-JcI" id="cAY-sq-GRG">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="hCh-ws-qXQ">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="1GS-He-JcI"/>
+                                            <menuItem title="Item 2" id="GWh-HU-MFn"/>
+                                            <menuItem title="Item 3" id="4ga-FN-7RK"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="1E4-j9-ZdW" secondAttribute="trailing" constant="20" id="0za-yC-L1t"/>
-                            <constraint firstAttribute="bottom" secondItem="1E4-j9-ZdW" secondAttribute="bottom" constant="20" id="4hB-3b-umK"/>
-                            <constraint firstItem="1E4-j9-ZdW" firstAttribute="top" secondItem="enN-so-TEW" secondAttribute="bottom" constant="14" id="ZKw-jm-LZP"/>
-                            <constraint firstItem="enN-so-TEW" firstAttribute="top" secondItem="DzC-gx-ibl" secondAttribute="top" constant="20" id="afj-z2-Ml7"/>
-                            <constraint firstItem="enN-so-TEW" firstAttribute="leading" secondItem="DzC-gx-ibl" secondAttribute="leading" constant="20" id="e7n-fR-FdF"/>
-                            <constraint firstItem="1E4-j9-ZdW" firstAttribute="leading" secondItem="DzC-gx-ibl" secondAttribute="leading" constant="20" id="lW4-mJ-O0f"/>
-                            <constraint firstAttribute="trailing" secondItem="enN-so-TEW" secondAttribute="trailing" constant="20" id="laW-Gn-Utb"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="myView" destination="1E4-j9-ZdW" id="t2V-j3-28j"/>
-                        <outlet property="slider" destination="enN-so-TEW" id="xC7-yH-DZa"/>
+                        <outlet property="button" destination="I7u-ll-8Sm" id="pH7-dP-8K3"/>
                     </connections>
                 </viewController>
                 <customObject id="hZd-5H-8nO" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
