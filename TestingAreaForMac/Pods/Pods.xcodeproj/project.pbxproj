@@ -7,128 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1711F551E28B55702C28884C1C9708F5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		37831711A9BFF260B36AE192457E457E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659895D3DC77C57A4D1DDD52280402C /* Parser.swift */; };
-		694AB51A74C16FAA6BAD6FF8DF55C82D /* XML.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8FDCC6320DEA6125A34CA88F6BA3E7 /* XML.swift */; };
-		919A2BF0A2E670511134CC2E75EAFCE0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
-		9451E35B7EBA2AF73FF5B6A184358CE5 /* Accessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A1823C65ACE5479845C5CA099DD19 /* Accessor.swift */; };
-		AC1CFBD999586025DFCF402A81409EFB /* SwiftyXMLParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B5F4EE402870DC0CC7D5172F4E0FE7 /* SwiftyXMLParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C45C45653436B5A7FE4A8D30EC5F20BF /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78414CB4604480D77454D7FAC864B080 /* Element.swift */; };
-		C8C3C6B6E50058B3EC6A4F747B0E9A07 /* Pods-TestingAreaForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E972F88B1929E7F23374AA649759C4D /* Pods-TestingAreaForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEA1B8E13BFFA6E7E80D1C31B3A5EA07 /* SwiftyXMLParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 334503328179071A7DACCBCF1A05AA6B /* SwiftyXMLParser-dummy.m */; };
-		D58B840E6C9437136543F20665EAC8B2 /* Pods-TestingAreaForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC863E358B26D32D4DB5DEC728CC159 /* Pods-TestingAreaForMac-dummy.m */; };
-		FBE2CEBD95DBCF60367CE505238F00C4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F06F2C27F16DD81A64A64033555577 /* Error.swift */; };
+		12660BD0ED7212F8434AA8EA8542E620 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */; };
+		6A8626BA05E0B1E1716E873E47425A43 /* Pods-TestingAreaForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E8CF01DC03B87914EC00866C0A42FE7 /* Pods-TestingAreaForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9876AE45843FF45395B98945120F3DE /* Pods-TestingAreaForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FE4CE8DA0848B73B5E29EDA37BDCBF3 /* Pods-TestingAreaForMac-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		827D044B99F2C2239D5D10CEFA197861 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C96998A189BC645DB45F2AFFF9D802BD;
-			remoteInfo = SwiftyXMLParser;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00B5F4EE402870DC0CC7D5172F4E0FE7 /* SwiftyXMLParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXMLParser-umbrella.h"; sourceTree = "<group>"; };
-		15529D07DE88B3C6ABDBDCDA572C2E63 /* SwiftyXMLParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyXMLParser.modulemap; sourceTree = "<group>"; };
-		1C32B08DB2DFB6E8F32730A261006CFD /* SwiftyXMLParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyXMLParser-prefix.pch"; sourceTree = "<group>"; };
-		334503328179071A7DACCBCF1A05AA6B /* SwiftyXMLParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyXMLParser-dummy.m"; sourceTree = "<group>"; };
-		33F039EDCD939383FCDAA034BDC6B60E /* Pods-TestingAreaForMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestingAreaForMac.release.xcconfig"; sourceTree = "<group>"; };
-		413DC13209855993B9E359042C4014DE /* Pods-TestingAreaForMac-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestingAreaForMac-acknowledgements.plist"; sourceTree = "<group>"; };
-		4232468C2A600E06589CDB95C9D2FF29 /* SwiftyXMLParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyXMLParser.framework; path = SwiftyXMLParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54D240032FC81682BB867EF9D2D7724F /* Pods-TestingAreaForMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestingAreaForMac.debug.xcconfig"; sourceTree = "<group>"; };
-		5659895D3DC77C57A4D1DDD52280402C /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = SwiftyXMLParser/Parser.swift; sourceTree = "<group>"; };
-		56A89542478F9296F63219506EAD2A96 /* Pods-TestingAreaForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestingAreaForMac.modulemap"; sourceTree = "<group>"; };
-		57F06F2C27F16DD81A64A64033555577 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = SwiftyXMLParser/Error.swift; sourceTree = "<group>"; };
-		78414CB4604480D77454D7FAC864B080 /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = SwiftyXMLParser/Element.swift; sourceTree = "<group>"; };
-		8E972F88B1929E7F23374AA649759C4D /* Pods-TestingAreaForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestingAreaForMac-umbrella.h"; sourceTree = "<group>"; };
-		8EDA74E0C9547ADA61B6E7FBEDF7FF3A /* SwiftyXMLParser.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyXMLParser.xcconfig; sourceTree = "<group>"; };
-		98FCF6900F2D55B2ABC46C0153A611F8 /* Pods-TestingAreaForMac-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestingAreaForMac-Info.plist"; sourceTree = "<group>"; };
+		0CB700B92E71E15B5EB91002F93FEB7E /* Pods-TestingAreaForMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestingAreaForMac.debug.xcconfig"; sourceTree = "<group>"; };
+		1FE4CE8DA0848B73B5E29EDA37BDCBF3 /* Pods-TestingAreaForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestingAreaForMac-dummy.m"; sourceTree = "<group>"; };
+		2BD20A7E0667C4DC0AAC78C66739F85A /* Pods-TestingAreaForMac-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestingAreaForMac-acknowledgements.markdown"; sourceTree = "<group>"; };
+		56D4615CDD5FE28779F13243AF387C23 /* Pods-TestingAreaForMac-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestingAreaForMac-Info.plist"; sourceTree = "<group>"; };
+		57C85AB9DE344C8B71724960DA21C90B /* Pods-TestingAreaForMac-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TestingAreaForMac-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E8CF01DC03B87914EC00866C0A42FE7 /* Pods-TestingAreaForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TestingAreaForMac-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AAC863E358B26D32D4DB5DEC728CC159 /* Pods-TestingAreaForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TestingAreaForMac-dummy.m"; sourceTree = "<group>"; };
-		C340BD6F469D92B066357F5A41C66ADF /* Pods-TestingAreaForMac-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TestingAreaForMac-frameworks.sh"; sourceTree = "<group>"; };
-		CD8FDCC6320DEA6125A34CA88F6BA3E7 /* XML.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = XML.swift; path = SwiftyXMLParser/XML.swift; sourceTree = "<group>"; };
+		9DA753049D7824395DFB6706D5D570B0 /* Pods-TestingAreaForMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TestingAreaForMac.release.xcconfig"; sourceTree = "<group>"; };
+		C572EFA7F077A4F4E7B9CEAC6CB7B105 /* Pods-TestingAreaForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TestingAreaForMac.modulemap"; sourceTree = "<group>"; };
 		CF2E05DF53D296975B44D64780731070 /* Pods_TestingAreaForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TestingAreaForMac.framework; path = "Pods-TestingAreaForMac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA7DBF9B5E572FA4C2CD133B485B963A /* SwiftyXMLParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyXMLParser-Info.plist"; sourceTree = "<group>"; };
-		F36A1823C65ACE5479845C5CA099DD19 /* Accessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Accessor.swift; path = SwiftyXMLParser/Accessor.swift; sourceTree = "<group>"; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		FDDE7C918C99BA85C1A514E62CE94719 /* Pods-TestingAreaForMac-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TestingAreaForMac-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5932E894FB7D540CA1125C608A7FF179 /* Frameworks */ = {
+		0CC99E06514B1D21CFA2FBCC6FD024BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				919A2BF0A2E670511134CC2E75EAFCE0 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		774A4879A879D7F3B8D81D61D6013406 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1711F551E28B55702C28884C1C9708F5 /* Cocoa.framework in Frameworks */,
+				12660BD0ED7212F8434AA8EA8542E620 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		504318E926D7B6F4CC097836C37536F8 /* Pods */ = {
+		06DF29DDAF29D36388D93D0583F2564A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				530F6D7734F3DA62AC8CC1DD35397ED3 /* SwiftyXMLParser */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		530F6D7734F3DA62AC8CC1DD35397ED3 /* SwiftyXMLParser */ = {
-			isa = PBXGroup;
-			children = (
-				F36A1823C65ACE5479845C5CA099DD19 /* Accessor.swift */,
-				78414CB4604480D77454D7FAC864B080 /* Element.swift */,
-				57F06F2C27F16DD81A64A64033555577 /* Error.swift */,
-				5659895D3DC77C57A4D1DDD52280402C /* Parser.swift */,
-				CD8FDCC6320DEA6125A34CA88F6BA3E7 /* XML.swift */,
-				D547CCD5F9A99AEA75D0DF7DD006AE7A /* Support Files */,
-			);
-			name = SwiftyXMLParser;
-			path = SwiftyXMLParser;
-			sourceTree = "<group>";
-		};
-		7EA0C4CF7944DE15225D33EA049F96A7 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8498D0317FBADE92CDDAE07CB99F3E40 /* Pods-TestingAreaForMac */,
+				E6FEFA199E1AAA704CB3C43AE5758266 /* Pods-TestingAreaForMac */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8498D0317FBADE92CDDAE07CB99F3E40 /* Pods-TestingAreaForMac */ = {
-			isa = PBXGroup;
-			children = (
-				56A89542478F9296F63219506EAD2A96 /* Pods-TestingAreaForMac.modulemap */,
-				FDDE7C918C99BA85C1A514E62CE94719 /* Pods-TestingAreaForMac-acknowledgements.markdown */,
-				413DC13209855993B9E359042C4014DE /* Pods-TestingAreaForMac-acknowledgements.plist */,
-				AAC863E358B26D32D4DB5DEC728CC159 /* Pods-TestingAreaForMac-dummy.m */,
-				C340BD6F469D92B066357F5A41C66ADF /* Pods-TestingAreaForMac-frameworks.sh */,
-				98FCF6900F2D55B2ABC46C0153A611F8 /* Pods-TestingAreaForMac-Info.plist */,
-				8E972F88B1929E7F23374AA649759C4D /* Pods-TestingAreaForMac-umbrella.h */,
-				54D240032FC81682BB867EF9D2D7724F /* Pods-TestingAreaForMac.debug.xcconfig */,
-				33F039EDCD939383FCDAA034BDC6B60E /* Pods-TestingAreaForMac.release.xcconfig */,
-			);
-			name = "Pods-TestingAreaForMac";
-			path = "Target Support Files/Pods-TestingAreaForMac";
-			sourceTree = "<group>";
-		};
-		B212C6ABE696C12FB31BE2978776D88C /* Products */ = {
+		32AE69A0B1676E24D780080781B9D69C /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				CF2E05DF53D296975B44D64780731070 /* Pods_TestingAreaForMac.framework */,
-				4232468C2A600E06589CDB95C9D2FF29 /* SwiftyXMLParser.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,24 +67,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */,
-				504318E926D7B6F4CC097836C37536F8 /* Pods */,
-				B212C6ABE696C12FB31BE2978776D88C /* Products */,
-				7EA0C4CF7944DE15225D33EA049F96A7 /* Targets Support Files */,
+				32AE69A0B1676E24D780080781B9D69C /* Products */,
+				06DF29DDAF29D36388D93D0583F2564A /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D547CCD5F9A99AEA75D0DF7DD006AE7A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				15529D07DE88B3C6ABDBDCDA572C2E63 /* SwiftyXMLParser.modulemap */,
-				8EDA74E0C9547ADA61B6E7FBEDF7FF3A /* SwiftyXMLParser.xcconfig */,
-				334503328179071A7DACCBCF1A05AA6B /* SwiftyXMLParser-dummy.m */,
-				DA7DBF9B5E572FA4C2CD133B485B963A /* SwiftyXMLParser-Info.plist */,
-				1C32B08DB2DFB6E8F32730A261006CFD /* SwiftyXMLParser-prefix.pch */,
-				00B5F4EE402870DC0CC7D5172F4E0FE7 /* SwiftyXMLParser-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyXMLParser";
 			sourceTree = "<group>";
 		};
 		E0A1E60606E0BF6E2E10F1F01350DFE8 /* Frameworks */ = {
@@ -174,22 +80,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E6FEFA199E1AAA704CB3C43AE5758266 /* Pods-TestingAreaForMac */ = {
+			isa = PBXGroup;
+			children = (
+				C572EFA7F077A4F4E7B9CEAC6CB7B105 /* Pods-TestingAreaForMac.modulemap */,
+				2BD20A7E0667C4DC0AAC78C66739F85A /* Pods-TestingAreaForMac-acknowledgements.markdown */,
+				57C85AB9DE344C8B71724960DA21C90B /* Pods-TestingAreaForMac-acknowledgements.plist */,
+				1FE4CE8DA0848B73B5E29EDA37BDCBF3 /* Pods-TestingAreaForMac-dummy.m */,
+				56D4615CDD5FE28779F13243AF387C23 /* Pods-TestingAreaForMac-Info.plist */,
+				6E8CF01DC03B87914EC00866C0A42FE7 /* Pods-TestingAreaForMac-umbrella.h */,
+				0CB700B92E71E15B5EB91002F93FEB7E /* Pods-TestingAreaForMac.debug.xcconfig */,
+				9DA753049D7824395DFB6706D5D570B0 /* Pods-TestingAreaForMac.release.xcconfig */,
+			);
+			name = "Pods-TestingAreaForMac";
+			path = "Target Support Files/Pods-TestingAreaForMac";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7F3F31EFAF5C023640C3B60F1E0C35DF /* Headers */ = {
+		30E8D1B99BC1215F3E7B56EC633A38C2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1CFBD999586025DFCF402A81409EFB /* SwiftyXMLParser-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CBE96B653C5B283615F6946E27F2650E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C8C3C6B6E50058B3EC6A4F747B0E9A07 /* Pods-TestingAreaForMac-umbrella.h in Headers */,
+				6A8626BA05E0B1E1716E873E47425A43 /* Pods-TestingAreaForMac-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,39 +112,20 @@
 /* Begin PBXNativeTarget section */
 		C554ACDA35A74EF05BA8A5553F15616E /* Pods-TestingAreaForMac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF08FF1EEAB2B3CF2865C1112F17463D /* Build configuration list for PBXNativeTarget "Pods-TestingAreaForMac" */;
+			buildConfigurationList = 9C2B65D387B35BFDF79B0A1B009A68BE /* Build configuration list for PBXNativeTarget "Pods-TestingAreaForMac" */;
 			buildPhases = (
-				CBE96B653C5B283615F6946E27F2650E /* Headers */,
-				94843D0F3E001EA635D5FFDA43776657 /* Sources */,
-				774A4879A879D7F3B8D81D61D6013406 /* Frameworks */,
-				FB0EDD7FBC9C4A50613345714BB3B06F /* Resources */,
+				30E8D1B99BC1215F3E7B56EC633A38C2 /* Headers */,
+				423E0728BDEDA13E9ABB9BEEA5047D0A /* Sources */,
+				0CC99E06514B1D21CFA2FBCC6FD024BE /* Frameworks */,
+				416A8D4D249165C0C89FB7B9FAB4612D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CA23FA4A7CA559E9B5B877C545A264E5 /* PBXTargetDependency */,
 			);
 			name = "Pods-TestingAreaForMac";
 			productName = "Pods-TestingAreaForMac";
 			productReference = CF2E05DF53D296975B44D64780731070 /* Pods_TestingAreaForMac.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C96998A189BC645DB45F2AFFF9D802BD /* SwiftyXMLParser */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 673F526225EE4358878EFF12A9C39536 /* Build configuration list for PBXNativeTarget "SwiftyXMLParser" */;
-			buildPhases = (
-				7F3F31EFAF5C023640C3B60F1E0C35DF /* Headers */,
-				46D4D9F8C26D3F8C900EAF39D5D120AD /* Sources */,
-				5932E894FB7D540CA1125C608A7FF179 /* Frameworks */,
-				00FFA3CC511D331B50B31BDAB6895011 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyXMLParser;
-			productName = SwiftyXMLParser;
-			productReference = 4232468C2A600E06589CDB95C9D2FF29 /* SwiftyXMLParser.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -248,27 +143,20 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = B212C6ABE696C12FB31BE2978776D88C /* Products */;
+			productRefGroup = 32AE69A0B1676E24D780080781B9D69C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C554ACDA35A74EF05BA8A5553F15616E /* Pods-TestingAreaForMac */,
-				C96998A189BC645DB45F2AFFF9D802BD /* SwiftyXMLParser */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00FFA3CC511D331B50B31BDAB6895011 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB0EDD7FBC9C4A50613345714BB3B06F /* Resources */ = {
+		416A8D4D249165C0C89FB7B9FAB4612D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -278,37 +166,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46D4D9F8C26D3F8C900EAF39D5D120AD /* Sources */ = {
+		423E0728BDEDA13E9ABB9BEEA5047D0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9451E35B7EBA2AF73FF5B6A184358CE5 /* Accessor.swift in Sources */,
-				C45C45653436B5A7FE4A8D30EC5F20BF /* Element.swift in Sources */,
-				FBE2CEBD95DBCF60367CE505238F00C4 /* Error.swift in Sources */,
-				37831711A9BFF260B36AE192457E457E /* Parser.swift in Sources */,
-				CEA1B8E13BFFA6E7E80D1C31B3A5EA07 /* SwiftyXMLParser-dummy.m in Sources */,
-				694AB51A74C16FAA6BAD6FF8DF55C82D /* XML.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94843D0F3E001EA635D5FFDA43776657 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D58B840E6C9437136543F20665EAC8B2 /* Pods-TestingAreaForMac-dummy.m in Sources */,
+				D9876AE45843FF45395B98945120F3DE /* Pods-TestingAreaForMac-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CA23FA4A7CA559E9B5B877C545A264E5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyXMLParser;
-			target = C96998A189BC645DB45F2AFFF9D802BD /* SwiftyXMLParser */;
-			targetProxy = 827D044B99F2C2239D5D10CEFA197861 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		430C0A1F2A9CB52955BEC7CE69B7B629 /* Debug */ = {
@@ -375,10 +241,11 @@
 			};
 			name = Debug;
 		};
-		4687DC121660738FC44AF9C85D0481CD /* Release */ = {
+		51F47DA6EB92F73CCF5DC50B354A4964 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EDA74E0C9547ADA61B6E7FBEDF7FF3A /* SwiftyXMLParser.xcconfig */;
+			baseConfigurationReference = 9DA753049D7824395DFB6706D5D570B0 /* Pods-TestingAreaForMac.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -392,22 +259,23 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXMLParser/SwiftyXMLParser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyXMLParser/SwiftyXMLParser-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/SwiftyXMLParser/SwiftyXMLParser.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyXMLParser;
-				PRODUCT_NAME = SwiftyXMLParser;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = "Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -473,87 +341,9 @@
 			};
 			name = Release;
 		};
-		5CBBE0BEC9510F9379C45226988E9CB3 /* Debug */ = {
+		6BC1868089BDF362E872A1CB4A0CAF57 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EDA74E0C9547ADA61B6E7FBEDF7FF3A /* SwiftyXMLParser.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyXMLParser/SwiftyXMLParser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyXMLParser/SwiftyXMLParser-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/SwiftyXMLParser/SwiftyXMLParser.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyXMLParser;
-				PRODUCT_NAME = SwiftyXMLParser;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5DC02AA4DF7258C2E16C7B2B48542132 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33F039EDCD939383FCDAA034BDC6B60E /* Pods-TestingAreaForMac.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MODULEMAP_FILE = "Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		80E2B1A62FCF1E0FE2D8D352607B966C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54D240032FC81682BB867EF9D2D7724F /* Pods-TestingAreaForMac.debug.xcconfig */;
+			baseConfigurationReference = 0CB700B92E71E15B5EB91002F93FEB7E /* Pods-TestingAreaForMac.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -603,20 +393,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		673F526225EE4358878EFF12A9C39536 /* Build configuration list for PBXNativeTarget "SwiftyXMLParser" */ = {
+		9C2B65D387B35BFDF79B0A1B009A68BE /* Build configuration list for PBXNativeTarget "Pods-TestingAreaForMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CBBE0BEC9510F9379C45226988E9CB3 /* Debug */,
-				4687DC121660738FC44AF9C85D0481CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DF08FF1EEAB2B3CF2865C1112F17463D /* Build configuration list for PBXNativeTarget "Pods-TestingAreaForMac" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				80E2B1A62FCF1E0FE2D8D352607B966C /* Debug */,
-				5DC02AA4DF7258C2E16C7B2B48542132 /* Release */,
+				6BC1868089BDF362E872A1CB4A0CAF57 /* Debug */,
+				51F47DA6EB92F73CCF5DC50B354A4964 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,6 @@
 		5A50EB7522DF11D20028A479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A50EB7322DF11D20028A479 /* Main.storyboard */; };
 		5A53AEB822F2F2CC0043D2EE /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A53AEB722F2F2CC0043D2EE /* SheetViewController.swift */; };
 		5A8AC6AF2415992A0003703A /* china.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AC6AE2415992A0003703A /* china.svg */; };
-		91E06089A4DF435065338B2F /* Pods_TestingAreaForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EBC44B7C411531E5C1BF7E /* Pods_TestingAreaForMac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +57,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E06089A4DF435065338B2F /* Pods_TestingAreaForMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +150,6 @@
 				5A4FF53A22CF846A00B564A2 /* Sources */,
 				5A4FF53B22CF846A00B564A2 /* Frameworks */,
 				5A4FF53C22CF846A00B564A2 /* Resources */,
-				64002C8F6BB1917155C37DD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,23 +221,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		64002C8F6BB1917155C37DD5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestingAreaForMac/Pods-TestingAreaForMac-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9763FF8801050E33837D61FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
