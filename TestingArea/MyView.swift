@@ -82,5 +82,18 @@ class AnalogClockView: UIView {
         marking.stroke()
     }
     
+    func drawHand(angle: CGFloat, longRadius: CGFloat, shortRadius: CGFloat, lineWidth: CGFloat, color: UIColor) {
+        let center = CGPoint(x: clockFrame.midX, y: clockFrame.midY)
+        let hand = UIBezierPath()
+        hand.move(to: center.applying(
+            CGAffineTransform(translationX: -shortRadius * cos(angle), y: -shortRadius * sin(angle))
+        ))
+        hand.addLine(to: center.applying(
+            CGAffineTransform(translationX: longRadius * cos(angle), y: longRadius * sin(angle))
+        ))
+        hand.lineWidth = lineWidth
+        hand.lineCapStyle = .round
+        color.setStroke()
+        hand.stroke()
     }
 }
