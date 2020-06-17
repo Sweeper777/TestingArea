@@ -37,5 +37,17 @@ class AnalogClockView: UIView {
         labels.forEach(self.addSubview(_:))
     }
     
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let center = CGPoint(x: clockFrame.midX, y: clockFrame.midY)
+        let radius = clockSize * (1 - digitsInset) / 2
+        for (label, angle) in zip(labels, stride(from: CGFloat.pi / -3, to: 5 * .pi / 3, by: .pi / 6)) {
+            label.font = UIFont.monospacedDigitSystemFont(ofSize: clockSize * fontScale, weight: .regular)
+            label.sizeToFit()
+            label.center = center.applying(CGAffineTransform(translationX: radius * cos(angle), y: radius * sin(angle)))
+        }
+    }
+    
     }
 }
