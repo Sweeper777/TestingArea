@@ -66,5 +66,21 @@ class AnalogClockView: UIView {
         }
     }
     
+    
+    func drawMarking(angle: CGFloat, radius: CGFloat, lineWidth: CGFloat) {
+        let clockFrameRadius = clockFrame.width / 2
+        let center = CGPoint(x: clockFrame.midX, y: clockFrame.midY)
+        let marking = UIBezierPath()
+        marking.move(to: center.applying(
+            CGAffineTransform(translationX: radius * cos(angle), y: radius * sin(angle))
+        ))
+        marking.addLine(to: center.applying(
+            CGAffineTransform(translationX: clockFrameRadius * cos(angle), y: clockFrameRadius * sin(angle))
+        ))
+        marking.lineWidth = lineWidth
+        marking.lineCapStyle = .round
+        marking.stroke()
+    }
+    
     }
 }
