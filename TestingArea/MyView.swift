@@ -38,6 +38,23 @@ class AnalogClockView: UIView {
     }
     
     
+    let digitsInset = 0.3.f
+    let fontScale = 0.1.f
+    let borderWidthScale = 0.014.f
+    let thinMarkingInset = 0.1.f
+    let thickMarkingInset = 0.16.f
+    let thinMarkingWidthScale = 0.01.f
+    let thickMarkingWidthScale = 0.014.f
+    let secondHandLongRadius = 0.9.f
+    let secondHandShortRadius = 0.1.f
+    let secondHandWidthScale = 0.01.f
+    let minuteHandLongRadius = 0.85.f
+    let minuteHandShortRadius = 0.095.f
+    let minuteHandWidthScale = 0.02.f
+    let hourHandLongRadius = 0.5.f
+    let hourHandShortRadius = 0.05.f
+    let hourHandWidthScale = 0.03.f
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         let center = CGPoint(x: clockFrame.midX, y: clockFrame.midY)
