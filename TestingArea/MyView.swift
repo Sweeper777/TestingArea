@@ -66,6 +66,24 @@ class AnalogClockView: UIView {
         }
     }
     
+    override func draw(_ rect: CGRect) {
+        let clockBorder = UIBezierPath(ovalIn: clockFrame)
+        clockBorder.lineWidth = borderWidthScale * clockSize
+        UIColor.label.setStroke()
+        clockBorder.stroke()
+        
+        let thinMarkingRadius = clockSize * (1 - thinMarkingInset) / 2
+        let thickMarkingRadius = clockSize * (1 - thickMarkingInset) / 2
+        for i in 0..<60 {
+            let angle = i.f * .pi / 30
+            if i % 5 == 0 {
+                drawMarking(angle: angle, radius: thickMarkingRadius, lineWidth: thickMarkingWidthScale * clockSize)
+            } else {
+                drawMarking(angle: angle, radius: thinMarkingRadius, lineWidth: thinMarkingWidthScale * clockSize)
+            }
+        }
+        
+    }
     
     func drawMarking(angle: CGFloat, radius: CGFloat, lineWidth: CGFloat) {
         let clockFrameRadius = clockFrame.width / 2
