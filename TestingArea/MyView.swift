@@ -5,6 +5,7 @@ class AnalogClockView: UIView {
     
     var labels = [UILabel]()
     
+    var dateComponents: DateComponents!
     
     var clockFrame: CGRect {
         if width > height {
@@ -83,6 +84,38 @@ class AnalogClockView: UIView {
             }
         }
         
+        guard let dc = dateComponents else { return }
+        func calculateHourAngle() -> CGFloat {
+            let hourPart = dc.hour!.f / 12.f
+            let minutePart = dc.minute!.f / (12 * 60).f
+            let secondPart = dc.second!.f / (12 * 3600).f
+            return (hourPart + minutePart + secondPart) * 2 * .pi
+        }
+        let hourAngle = calculateHourAngle()
+        drawHand(angle: hourAngle - .pi / 2,
+                 longRadius: clockSize * hourHandLongRadius / 2,
+                 shortRadius: clockSize * hourHandShortRadius / 2,
+                 lineWidth: clockSize * hourHandWidthScale,
+                 color: .label)
+        
+        func calculateMinuteAngle() -> CGFloat {
+            let minutePart = dc.minute!.f / 60.f
+            let secondPart = dc.second!.f / 3600.f
+            return (minutePart + secondPart) * 2 * .pi
+        }
+        let minuteAngle = calculateMinuteAngle()
+        drawHand(angle: minuteAngle - .pi / 2,
+                 longRadius: clockSize * minuteHandLongRadius / 2,
+                 shortRadius: clockSize * minuteHandShortRadius / 2,
+                 lineWidth: clockSize * minuteHandWidthScale,
+                 color: .label)
+        
+        let secondAngle = dc.second!.f / 60 * 2 * .pi
+        drawHand(angle: secondAngle - .pi / 2,
+                 longRadius: clockSize * secondHandLongRadius / 2,
+                 shortRadius: clockSize * secondHandShortRadius / 2,
+                 lineWidth: clockSize * secondHandWidthScale,
+                 color: .systemRed)
     }
     
     func drawMarking(angle: CGFloat, radius: CGFloat, lineWidth: CGFloat) {
