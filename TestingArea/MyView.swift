@@ -6,6 +6,7 @@ class AnalogClockView: UIView {
     var labels = [UILabel]()
     
     var dateComponents: DateComponents!
+    var displayLink: CADisplayLink!
     
     var clockFrame: CGRect {
         if width > height {
@@ -36,8 +37,17 @@ class AnalogClockView: UIView {
             return label
         })
         labels.forEach(self.addSubview(_:))
+        displayLink = CADisplayLink(target: self, selector: #selector(updateDisplay))
+        displayLink.add(to: .main, forMode: .common)
     }
     
+    @objc func updateDisplay() {
+        let newDateComponents = Calendar.autoupdatingCurrent.dateComponents([.hour, .minute, .second], from: Date())
+        if dateComponents == nil || newDateComponents != dateComponents {
+            dateComponents = newDateComponents
+            setNeedsDisplay()
+        }
+    }
     
     let digitsInset = 0.3.f
     let fontScale = 0.1.f
