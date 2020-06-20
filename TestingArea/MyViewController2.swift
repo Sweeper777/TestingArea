@@ -33,6 +33,6 @@ class MyViewController2: UIViewController {
     
     
     @IBAction func click() {
-        
+        print(database.document(withID: document.id)?.string(forKey: "firstName"))
     }
 }
