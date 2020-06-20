@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - CouchbaseLite-Swift (2.7.1)
   - DCTextEngine (0.1.0)
   - DifferenceKit (1.1.5):
     - DifferenceKit/Core (= 1.1.5)
@@ -9,7 +10,6 @@ PODS:
     - DifferenceKit/Core
   - Differentiator (4.0.1)
   - Eureka (5.0.0)
-  - LTMorphingLabel (0.8.0)
   - Realm (5.0.2):
     - Realm/Headers (= 5.0.2)
   - Realm/Headers (5.0.2)
@@ -33,10 +33,10 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - CouchbaseLite-Swift
   - DCTextEngine
   - DifferenceKit
   - Eureka (= 5.0.0)
-  - LTMorphingLabel (= 0.8.0)
   - RealmSwift
   - RxCocoa
   - RxDataSources
@@ -49,11 +49,11 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CouchbaseLite-Swift
     - DCTextEngine
     - DifferenceKit
     - Differentiator
     - Eureka
-    - LTMorphingLabel
     - Realm
     - RealmSwift
     - RxCocoa
@@ -80,11 +80,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  CouchbaseLite-Swift: 02012c1d5715106b349fb16fbcf88266d8f457c4
   DCTextEngine: 44a8084ef5227753660db343acdb8a3225e29d75
   DifferenceKit: 516f12e336ed65a3a0665847b5c3cb5cad4bd4ea
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
-  LTMorphingLabel: 1ada1cb5c046ae4ce5c66b428cf2e05e227e8e4f
   Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
   RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -96,6 +96,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: a0173870faed1bba004ccc8ada3b2d54f28b585a
+PODFILE CHECKSUM: 9fa403919622a4120a27560a54388ff5a26d8ed3
 
 COCOAPODS: 1.9.1
