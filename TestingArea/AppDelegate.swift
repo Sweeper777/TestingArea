@@ -10,43 +10,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        try? AVAudioSession.sharedInstance().setCategory(.playback)
-        let fileManager = FileManager.default
-
-        //Cache original realm path (documents directory)
-        guard let originalDefaultRealmPath = Realm.Configuration.defaultConfiguration.fileURL?.path else {
-            return true
-        }
-        
-        //Generate new realm path based on app group
-        let appGroupURL: URL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.io.github.sweeper777.TestingAreaGroup")!
-        let realmPath = appGroupURL.appendingPathComponent("default.realm").path
-        
-        //Moves the realm to the new location if it hasn't been done previously
-        if (fileManager.fileExists(atPath: originalDefaultRealmPath) && !fileManager.fileExists(atPath: realmPath)) {
-            do {
-                try fileManager.moveItem(atPath: originalDefaultRealmPath, toPath: realmPath)
-            } catch {
-                print(error)
-            }
-        }
-
-        //Set the realm path to the new directory
-        var config = Realm.Configuration()
-        config.fileURL = URL(string: realmPath)
-        Realm.Configuration.defaultConfiguration = config
-        
-        let context = LAContext()
-        context.localizedCancelTitle = "Cancel"
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Some description") { (success, error) in
-                if success {
-                    print("Success")
-                } else {
-                    print(error?.localizedDescription ?? "General Error")
-                }
-            }
-        }
         
         return true
     }
