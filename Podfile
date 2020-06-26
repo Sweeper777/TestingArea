@@ -9,14 +9,11 @@ target 'TestingArea' do
     pod 'Alamofire'
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'Eureka', '5.0.0'
-    pod 'SplitRow'
+    pod 'Eureka'
     pod 'RxDataSources'
-    pod 'DifferenceKit'
     pod 'RealmSwift'
     pod 'SCLAlertView' , :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
-    pod 'DCTextEngine'
-    pod 'CouchbaseLite-Swift'
+    pod 'TimelineTableViewCell'
     target 'MyTodayExtension' do
       inherit! :search_paths
     end

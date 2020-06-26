@@ -1,7 +1,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import CouchbaseLiteSwift
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -15,24 +14,12 @@ class MyViewController2: UIViewController {
     
     let disposeBag = DisposeBag()
     
-    var database: Database!
-    var document: MutableDocument!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            database = try Database(name: "my-database")
-            document = MutableDocument()
-                   .setString("John", forKey: "firstName")
-            try database.saveDocument(document)
-            print(database.path)
-        } catch {
-            print(error)
-        }
     }
     
     
     @IBAction func click() {
-        print(database.document(withID: document.id)?.string(forKey: "firstName"))
+        
     }
 }

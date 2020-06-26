@@ -15,8 +15,6 @@
 		5A14CC9F234669D700E31F0D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14CC9E234669D700E31F0D /* TodayViewController.swift */; };
 		5A14CCA2234669D700E31F0D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A14CCA0234669D700E31F0D /* MainInterface.storyboard */; };
 		5A14CCA6234669D700E31F0D /* MyTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5A14CC9A234669D700E31F0D /* MyTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5A14CCAC23466E1300E31F0D /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14CCAB23466E1300E31F0D /* RealmHelper.swift */; };
-		5A14CCAD23466E1600E31F0D /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14CCAB23466E1300E31F0D /* RealmHelper.swift */; };
 		5A158C8F1E369484007000FD /* AllEmoji.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A158C8E1E369484007000FD /* AllEmoji.json */; };
 		5A1FD0421DFD53390071AE2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0411DFD53390071AE2F /* AppDelegate.swift */; };
 		5A1FD0441DFD53390071AE2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FD0431DFD53390071AE2F /* ViewController.swift */; };
@@ -92,7 +90,6 @@
 		5A14CC9E234669D700E31F0D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		5A14CCA1234669D700E31F0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		5A14CCA3234669D700E31F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A14CCAB23466E1300E31F0D /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
 		5A14CCB02346758C00E31F0D /* MyTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyTodayExtension.entitlements; sourceTree = "<group>"; };
 		5A14CCB1234675D300E31F0D /* TestingArea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestingArea.entitlements; sourceTree = "<group>"; };
 		5A158C8C1E369032007000FD /* NBEmojiSearchView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NBEmojiSearchView.framework; path = "Pods/../build/Debug-iphoneos/NBEmojiSearchView/NBEmojiSearchView.framework"; sourceTree = "<group>"; };
@@ -290,7 +287,6 @@
 				5AFBC2651D0A9C3900E27822 /* MyViewController.swift */,
 				5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */,
 				5A1027C92351BC1C00402A5D /* SwiftUITest.swift */,
-				5A14CCAB23466E1300E31F0D /* RealmHelper.swift */,
 				5A375C3D2185CDCC0020B23B /* MyView.swift */,
 				5A528FBF229D28050065EBFC /* MyCell.xib */,
 				5A35050E218DEA9400BC7C23 /* FontSizeHelper.swift */,
@@ -493,10 +489,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestingArea/Pods-TestingArea-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${PODS_ROOT}/CouchbaseLite-Swift/iOS/CouchbaseLiteSwift.framework",
-				"${PODS_ROOT}/CouchbaseLite-Swift/iOS/CouchbaseLiteSwift.framework.dSYM",
-				"${BUILT_PRODUCTS_DIR}/DCTextEngine/DCTextEngine.framework",
-				"${BUILT_PRODUCTS_DIR}/DifferenceKit/DifferenceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -506,17 +498,13 @@
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
-				"${BUILT_PRODUCTS_DIR}/SplitRow/SplitRow.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/TimelineTableViewCell/TimelineTableViewCell.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CouchbaseLiteSwift.framework",
-				"${DWARF_DSYM_FOLDER_PATH}/CouchbaseLiteSwift.framework.dSYM",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DCTextEngine.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DifferenceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -526,9 +514,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SplitRow.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TimelineTableViewCell.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -565,7 +553,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A14CC9F234669D700E31F0D /* TodayViewController.swift in Sources */,
-				5A14CCAD23466E1600E31F0D /* RealmHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +574,6 @@
 				5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */,
 				5A4FE2F122FFA2C100EC7479 /* MyNavigationController.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
-				5A14CCAC23466E1300E31F0D /* RealmHelper.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5A0285642469420D00CFF0FC /* MobileNetV2Int8LUT.mlmodel in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
