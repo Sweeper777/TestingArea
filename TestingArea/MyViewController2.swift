@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import EventKit
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -16,10 +17,48 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            
+        }
     }
     
     
     @IBAction func click() {
+        var components = DateComponents()
+        components.year = 2020
+        components.month = 6
+        components.day = 27
+        components.hour = 9
+        let eventStore : EKEventStore = EKEventStore()
+
+        // 'EKEntityTypeReminder' or 'EKEntityTypeEvent'
         
+
+        eventStore.requestAccess(to: .event) { (granted, error) in
+
+            if (granted) && (error == nil) {
+
+//                let event:EKEvent = EKEvent(eventStore: eventStore)
+//
+//                event.title = "Test Title"
+//                let date = Calendar.current.date(from: components)!
+//                event.startDate = date
+//                event.endDate = date
+//                event.isAllDay = true
+//                event.notes = "This is a note"
+//                event.calendar = eventStore.calendar
+//                event.alarms = [EKAlarm(relativeOffset: -86400 + 9 * 3600), EKAlarm(relativeOffset: -86400 * 2 + 9 * 3600)]
+                do {
+//                    try eventStore.save(event, span: .thisEvent)
+                    let calendar = EKCalendar(for: .event, eventStore: eventStore)
+                    calendar.title = "Test Calendar"
+                    calendar.source = eventStore.sources.first(where: { $0.sourceType == .local })
+                    try eventStore.saveCalendar(calendar, commit: true)
+                } catch let error as NSError {
+                    print("failed to save event with error : \(error)")
+                }
+                print("Saved Event")
+            }
+        }
     }
 }

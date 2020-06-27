@@ -2,10 +2,9 @@ import UIKit
 import CoreData
 import AVFoundation
 import RealmSwift
-import LocalAuthentication
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -25,17 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        let context = LAContext()
-        context.localizedCancelTitle = "Cancel"
-        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: nil) {
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Some description") { (success, error) in
-                if success {
-                    print("Success")
-                } else {
-                    print(error?.localizedDescription ?? "General Error")
-                }
-            }
-        }
+        
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
