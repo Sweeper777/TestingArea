@@ -59,5 +59,7 @@ fileprivate extension Timeline {
         shapeLayer.lineCap = .round
 
         view.layer.addSublayer(shapeLayer)
+        
+        shapeLayer.zPosition = -100
     }
 }

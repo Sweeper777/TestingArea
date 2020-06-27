@@ -65,5 +65,6 @@ public struct TimelinePoint {
         shapeLayer.lineWidth = lineWidth
 
         view.layer.addSublayer(shapeLayer)
+        shapeLayer.zPosition = -99
     }
 }

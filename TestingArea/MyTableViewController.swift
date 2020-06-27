@@ -5,7 +5,7 @@ import TimelineTableViewCell
 
 class MyTableViewController: UITableViewController {
 
-    var things = ["Hello World This is a very long textttttttt! Lorem Ipsum!", "xxxx", "xxxxx"]
+    var things = ["xxxx", "Two\nLines", "xxxxx"]
     var dates = ["xxxx", "xxxxx", "xxxxx"]
     
     override func viewDidLoad() {
@@ -46,8 +46,10 @@ class MyTableViewController: UITableViewController {
                 cell.timeline.backColor = .black
             }
             cell.titleLabel.text = things[indexPath.row]
-            cell.lineInfoLabel.text = "Lorem Ipsum. Hello World!"
-//            cell.illustrationImageView.image = UIImage(systemName: "person.fill")
+            cell.timeline.leftMargin = 120
+            cell.lineInfoLabel.text = "Lorem Ipsum. Hello World! Long Long Long Text"
+            cell.illustrationImageView.image = UIImage(systemName: "person.circle.fill")
+            cell.timelinePoint.diameter = 25
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.width)
             return cell
         }

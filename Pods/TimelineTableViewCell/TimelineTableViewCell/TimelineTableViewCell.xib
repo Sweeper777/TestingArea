@@ -41,9 +41,9 @@
                         </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFP-zW-cVP">
-                        <rect key="frame" x="39" y="15" width="16" height="16"/>
+                        <rect key="frame" x="75" y="10.5" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="16" id="PXT-6u-JPT"/>
+                            <constraint firstAttribute="width" constant="25" id="PXT-6u-JPT"/>
                             <constraint firstAttribute="width" secondItem="aFP-zW-cVP" secondAttribute="height" multiplier="1:1" id="aMd-vc-LxB"/>
                         </constraints>
                     </imageView>
@@ -51,6 +51,7 @@
                 <constraints>
                     <constraint firstItem="W66-Ck-wDF" firstAttribute="leading" secondItem="HxZ-h8-hOq" secondAttribute="leading" id="KIc-ik-mFn"/>
                     <constraint firstItem="Bvw-S8-TSj" firstAttribute="top" secondItem="HxZ-h8-hOq" secondAttribute="top" constant="8" id="Pvp-pi-ekz"/>
+                    <constraint firstItem="aFP-zW-cVP" firstAttribute="centerX" secondItem="W66-Ck-wDF" secondAttribute="trailing" constant="32.5" id="UnV-cU-8yG"/>
                     <constraint firstItem="4Od-hl-ENS" firstAttribute="leading" secondItem="HxZ-h8-hOq" secondAttribute="leading" constant="88" id="W5Z-YV-Yjl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="LWm-f0-Lj3" secondAttribute="bottom" id="XMs-7H-S0s"/>
                     <constraint firstAttribute="trailing" secondItem="Bvw-S8-TSj" secondAttribute="trailing" constant="16" id="aad-WB-WNL"/>
@@ -58,7 +59,6 @@
                     <constraint firstItem="LWm-f0-Lj3" firstAttribute="top" secondItem="4Od-hl-ENS" secondAttribute="bottom" constant="22" id="jMi-d8-WUj"/>
                     <constraint firstItem="Bvw-S8-TSj" firstAttribute="leading" secondItem="4Od-hl-ENS" secondAttribute="trailing" constant="18" id="jZ2-fn-rkf"/>
                     <constraint firstItem="W66-Ck-wDF" firstAttribute="trailing" secondItem="HxZ-h8-hOq" secondAttribute="leading" constant="55" id="ngi-V5-gD4" userLabel="Line Info Label Right Margin"/>
-                    <constraint firstItem="aFP-zW-cVP" firstAttribute="trailing" secondItem="W66-Ck-wDF" secondAttribute="trailing" id="o7X-wK-V0y"/>
                     <constraint firstItem="LWm-f0-Lj3" firstAttribute="trailing" secondItem="HxZ-h8-hOq" secondAttribute="trailingMargin" id="oYD-h6-WyT"/>
                     <constraint firstItem="4Od-hl-ENS" firstAttribute="centerY" secondItem="aFP-zW-cVP" secondAttribute="centerY" id="pek-Dw-jRh"/>
                     <constraint firstItem="Bvw-S8-TSj" firstAttribute="centerY" secondItem="4Od-hl-ENS" secondAttribute="centerY" id="zMY-zh-scu"/>
