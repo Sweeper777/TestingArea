@@ -5,61 +5,57 @@ import TimelineTableViewCell
 
 class MyTableViewController: UITableViewController {
 
-    var things = ["xxxx", "Two\nLines", "xxxxx"]
-    var dates = ["xxxx", "xxxxx", "xxxxx"]
-    
+    var itemCount = 7
     override func viewDidLoad() {
-        let bundle = Bundle(for: TimelineTableViewCell.self)
-        let nibUrl = bundle.url(forResource: "TimelineTableViewCell", withExtension: "bundle")
-        let timelineTableViewCellNib = UINib(nibName: "TimelineTableViewCell",
-            bundle: Bundle(url: nibUrl!)!)
-        tableView.register(timelineTableViewCellNib, forCellReuseIdentifier: "TimelineTableViewCell")
-//        tableView.separatorStyle = .none
+        tableView.register(TimelineItemCell.self, forCellReuseIdentifier: "timelineItemCell")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        itemCount > 3 ? 2 : 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 3
+        if itemCount > 3 {
+            return section == 1 ? itemCount : 1
         } else {
-            return things.count
+            return itemCount
         }
+    }
+    
+    var editableSection: Int {
+        itemCount > 3 ? 1 : 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            return tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = UITableViewCell()
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if itemCount > 3 {
+            return indexPath.section == 1
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell",
-                                                     for: indexPath) as! TimelineTableViewCell
-            if indexPath.row == 0 {
-                cell.timeline.frontColor = .clear
-                cell.timeline.backColor = .black
-            } else if indexPath.row == things.count - 1{
-                cell.timeline.frontColor = .black
-                cell.timeline.backColor = .clear
-            } else {
-                cell.timeline.frontColor = .black
-                cell.timeline.backColor = .black
-            }
-            cell.titleLabel.text = things[indexPath.row]
-            cell.timeline.leftMargin = 120
-            cell.lineInfoLabel.text = "Lorem Ipsum. Hello World! Long Long Long Text"
-            cell.illustrationImageView.image = UIImage(systemName: "person.circle.fill")
-            cell.timelinePoint.diameter = 25
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.width)
-            return cell
+            return true
         }
     }
     
-    @IBAction func buttonTapped() {
-        things.append("Thing 4")
-        dates.append("2020-07-01")
-        tableView.insertRows(at: [IndexPath(row: things.count - 1, section: 1)], with: .automatic)
-        tableView.reloadRows(at: [IndexPath(row: things.count - 2, section: 1)], with: .automatic)
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if itemCount > 3 {
+            return indexPath.section == 1 ? .delete : .none
+        } else {
+            return .delete
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        itemCount -= 1
+        tableView.beginUpdates()
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+//        tableView.reloadSections([indexPath.section], with: .automatic)
+        if itemCount == 3 {
+            tableView.deleteSections([0], with: .automatic)
+        }
+        tableView.endUpdates()
     }
 }
 
