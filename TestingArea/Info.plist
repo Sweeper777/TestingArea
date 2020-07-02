@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCalendarsUsageDescription</key>
-	<string>Adding events!</string>
-	<key>NSFaceIDUsageDescription</key>
-	<string>xxx</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -51,10 +47,14 @@
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>xxx</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Adding events!</string>
 	<key>NSCameraUsageDescription</key>
 	<string>xxx</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Foo Bar Baz</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>xxx</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>xxx</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -79,6 +79,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDarkContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
