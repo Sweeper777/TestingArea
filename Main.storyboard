@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BJs-fK-8hM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIZ-1h-2KH">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,9 +10,10 @@
         <scene sceneID="rGL-8M-CHX">
             <objects>
                 <navigationController id="oIZ-1h-2KH" customClass="MyNavigationController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAF-b4-NLX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="eAF-b4-NLX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="X4n-4q-1cD" kind="relationship" relationship="rootViewController" id="KVR-0l-yFC"/>
@@ -89,7 +90,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             </variation>
                             <connections>
-                                <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="eQX-1V-SwJ"/>
+                                <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="xV8-e7-4Yd"/>
                             </connections>
                         </button>
                     </navigationItem>
@@ -100,7 +101,6 @@
                         <outlet property="textview" destination="4qu-IC-9ga" id="dVQ-iq-rAi"/>
                         <outlet property="view1" destination="PGS-n8-SFo" id="grd-vC-HHW"/>
                         <outlet property="view2" destination="lnW-es-hzF" id="NRB-6e-8yr"/>
-                        <segue destination="BJs-fK-8hM" kind="presentation" identifier="mySegue" id="hBJ-fx-tSi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,57 +132,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBY-sc-cLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-681" y="899"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="d39-5x-uob">
-            <objects>
-                <navigationController storyboardIdentifier="VC" id="BJs-fK-8hM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pkd-qP-iAD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="C00-ee-ZXY" kind="relationship" relationship="rootViewController" id="2po-tG-ydP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rUu-Bh-xqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="783" y="185"/>
-        </scene>
-        <!--My Table View Controller-->
-        <scene sceneID="4gM-oi-aF7">
-            <objects>
-                <tableViewController id="C00-ee-ZXY" customClass="MyTableViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="zDC-Ur-MLU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="mmr-W8-KF3">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mmr-W8-KF3" id="TXb-Qx-Xg6">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="C00-ee-ZXY" id="8wc-9Z-q3x"/>
-                            <outlet property="delegate" destination="C00-ee-ZXY" id="7hX-88-egM"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="k17-zf-O6a">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="iWH-hk-MWB">
-                            <connections>
-                                <action selector="buttonTapped" destination="C00-ee-ZXY" id="tL8-RH-aba"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3hk-hq-Ukg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1543" y="185"/>
         </scene>
     </scenes>
 </document>

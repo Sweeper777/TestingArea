@@ -22,16 +22,48 @@ class MyViewController2: UIViewController {
         super.viewDidLoad()
         view1.alpha = 1
         view2.alpha = 0
+        for x in ["a", "b", "c"] {
+            loadData(key: x) { $0(&self.dict) }
+        }
     }
     
     
     @IBAction func click() {
-        if segmentedControl.selectedSegmentIndex == 0 {
-            view1.alpha = 1
-            view2.alpha = 0
-        } else if segmentedControl.selectedSegmentIndex == 1 {
-            view1.alpha = 0
-            view2.alpha = 1
+        print(dict)
+    }
+    
+    func loadData(key: String, applyChanges: @escaping ((inout [String: String]) -> Void) -> Void) {
+        // Load some data. Use DispatchQueue to simulate async request
+        DispatchQueue.main.async {
+            applyChanges { dict in
+                dict[key] = "loadedData"
+            }
         }
     }
+
+    var dict = [String:String]()
+}
+
+class SearchViewController: UIViewController,UISearchBarDelegate {
+
+
+    let seacrhController = UISearchController(searchResultsController: nil)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupsearch()
+       
+     
+    }
+    
+
+    func setupsearch(){
+        seacrhController.searchBar.backgroundColor = .darkGray
+//        navigationController?.navigationBar.barTintColor = .darkGray
+        navigationItem.searchController = seacrhController
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        seacrhController.searchBar.delegate = self
+    }
+
 }
