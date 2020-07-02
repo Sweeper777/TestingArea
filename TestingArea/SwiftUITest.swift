@@ -2,32 +2,56 @@ import SwiftUI
 import Combine
 
 
-struct ContentView : View {
+import SwiftUI
+
+struct GradientView: View {
+    @State private var angle: Double = 0
+    var foreverAnimation: Animation {
+            Animation.easeInOut(duration: 3)
+            .repeatForever()
+     }
 
     var body: some View {
-        Form{
-            Section(header: Text("Sort")){
-                List { ForEach(0...10, id: \.self) { item in
-                    Text("\(item)")
-                }
-                .onMove(perform: {_, _ in}) }
-            } // Sort Section
-        } // Form
-        .navigationBarItems(trailing:
-               EditButton()
+        VStack(alignment: .leading){
+            Button(action: {
+                self.angle += 360
+            }) {
+                Text("Tap here")
+                    .foregroundColor(.white)
+                    .padding()
+                    .rotationEffect(.degrees(angle))
+                    .animation(.easeInOut)
+            }
+        }
+        .frame(minWidth: 0,
+               maxWidth: .infinity,
+               minHeight: 0,
+               maxHeight: .infinity,
+               alignment: .topLeading)
+        .background(
+            AngularGradient(
+                gradient: Gradient(colors:
+                    [.red, .yellow,.green,.blue,.purple,.red]
+                ),
+                center: .center,
+                startAngle: .degrees(self.angle),
+                endAngle: .degrees(self.angle + 360)
+            )
+            .edgesIgnoringSafeArea(.all)
         )
+        .animation(foreverAnimation)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct GradientView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        GradientView()
     }
 }
 
-class MyHostingController: UIHostingController<ContentView> {
+class MyHostingController: UIHostingController<GradientView> {
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder, rootView: ContentView())
+        super.init(coder: aDecoder, rootView: GradientView())
         
     }
 }
