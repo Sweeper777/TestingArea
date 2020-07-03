@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SwiftyJSON
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -20,50 +21,19 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view1.alpha = 1
-        view2.alpha = 0
-        for x in ["a", "b", "c"] {
-            loadData(key: x) { $0(&self.dict) }
-        }
+        let json: JSON = [
+            "hello": [
+                [
+                    "key": "value"
+                ]
+            ]
+        ]
+        let path: [JSONSubscriptType] = ["hello", 0, "key"]
+        print(json[path])
     }
     
     
     @IBAction func click() {
         print(dict)
     }
-    
-    func loadData(key: String, applyChanges: @escaping ((inout [String: String]) -> Void) -> Void) {
-        // Load some data. Use DispatchQueue to simulate async request
-        DispatchQueue.main.async {
-            applyChanges { dict in
-                dict[key] = "loadedData"
-            }
-        }
-    }
-
-    var dict = [String:String]()
-}
-
-class SearchViewController: UIViewController,UISearchBarDelegate {
-
-
-    let seacrhController = UISearchController(searchResultsController: nil)
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupsearch()
-       
-     
-    }
-    
-
-    func setupsearch(){
-        seacrhController.searchBar.backgroundColor = .darkGray
-//        navigationController?.navigationBar.barTintColor = .darkGray
-        navigationItem.searchController = seacrhController
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        seacrhController.searchBar.delegate = self
-    }
-
 }
