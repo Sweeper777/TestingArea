@@ -2,11 +2,11 @@ PODS:
   - Alamofire (5.2.1)
   - Differentiator (4.0.1)
   - Eureka (5.0.0)
-  - Realm (5.0.2):
-    - Realm/Headers (= 5.0.2)
-  - Realm/Headers (5.0.2)
-  - RealmSwift (5.0.2):
-    - Realm (= 5.0.2)
+  - Realm (10.0.0-beta.2):
+    - Realm/Headers (= 10.0.0-beta.2)
+  - Realm/Headers (10.0.0-beta.2)
+  - RealmSwift (10.0.0-beta.2):
+    - Realm (= 10.0.0-beta.2)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -25,7 +25,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Eureka
-  - RealmSwift
+  - RealmSwift (= 10.0.0-beta.2)
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -67,8 +67,8 @@ SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
-  Realm: 6b6f096671b64b04d08974177cabb2ff9343d153
-  RealmSwift: a3db6be0488bf3e1d5314c2956cefe98a65cdd01
+  Realm: 211e32e680c354c9b1a2bdc0e3aeb01c25849641
+  RealmSwift: f9043abf9b6821ad5c3032c2a36b5ddfc90b4ce3
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -78,6 +78,6 @@ SPEC CHECKSUMS:
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
   TimelineTableViewCell: b2721a3c1f17c4a4950ae442f45cd4e8669a2750
 
-PODFILE CHECKSUM: db280d81d1a40c854d57bdbc37fab8e748a8d55a
+PODFILE CHECKSUM: d154ed3057e2ff9264eed81832690312731b4e76
 
 COCOAPODS: 1.9.1

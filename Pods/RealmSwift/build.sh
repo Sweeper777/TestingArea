@@ -22,7 +22,7 @@ source_root="$(dirname "$0")"
 
 : ${REALM_SYNC_VERSION:=$(sed -n 's/^REALM_SYNC_VERSION=\(.*\)$/\1/p' ${source_root}/dependencies.list)}
 
-: ${REALM_OBJECT_SERVER_VERSION:=$(sed -n 's/^REALM_OBJECT_SERVER_VERSION=\(.*\)$/\1/p' ${source_root}/dependencies.list)}
+: ${REALM_OBJECT_SERVER_VERSION:=$(sed -n 's/^MONGODB_STITCH_ADMIN_SDK_VERSION=\(.*\)$/\1/p' ${source_root}/dependencies.list)}
 
 # You can override the xcmode used
 : ${XCMODE:=xcodebuild} # must be one of: xcodebuild (default), xcpretty, xctool
@@ -1249,17 +1249,19 @@ EOM
           rm -rf include
           mkdir -p include
           mv core/include include/core
+          cp Realm/ObjectStore/external/json/json.hpp include/core
 
-          mkdir -p include/impl/apple include/util/apple include/sync/impl/apple
+          mkdir -p include/impl/apple include/util/apple include/sync/impl/apple include/util/bson
           cp Realm/*.hpp include
           cp Realm/ObjectStore/src/*.hpp include
+          cp Realm/ObjectStore/src/impl/*.hpp include/impl
+          cp Realm/ObjectStore/src/impl/apple/*.hpp include/impl/apple
           cp Realm/ObjectStore/src/sync/*.hpp include/sync
           cp Realm/ObjectStore/src/sync/impl/*.hpp include/sync/impl
           cp Realm/ObjectStore/src/sync/impl/apple/*.hpp include/sync/impl/apple
-          cp Realm/ObjectStore/src/impl/*.hpp include/impl
-          cp Realm/ObjectStore/src/impl/apple/*.hpp include/impl/apple
           cp Realm/ObjectStore/src/util/*.hpp include/util
           cp Realm/ObjectStore/src/util/apple/*.hpp include/util/apple
+	  cp Realm/ObjectStore/src/util/bson/*.hpp include/util/bson
 
           echo '' > Realm/RLMPlatform.h
           if [ -n "$COCOAPODS_VERSION" ]; then
@@ -1410,7 +1412,6 @@ EOM
         if [[ "$PLATFORM" = "catalyst" ]] && (( $(xcode_version_major) < 11 )); then
             mkdir -p build/catalyst/swift-$REALM_XCODE_VERSION
         else
-            sh build.sh prelaunch-simulator
             sh build.sh $PLATFORM-swift
         fi
 
@@ -1564,9 +1565,8 @@ x.y.z Release notes (yyyy-MM-dd)
 <!-- ### Breaking Changes - ONLY INCLUDE FOR NEW MAJOR version -->
 
 ### Compatibility
-* File format: Generates Realms with format v10 (Reads and upgrades all previous formats)
-* Realm Object Server: 3.21.0 or later.
-* Realm Studio: 3.11 or later.
+* File format: Generates Realms with format v11 (Reads and upgrades all previous formats)
+* Realm Studio: 10.0.0 or later.
 * APIs are backwards compatible with all previous releases in the 5.x.y series.
 * Carthage release for Swift is built with Xcode 11.5.
 
