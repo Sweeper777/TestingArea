@@ -21,19 +21,88 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let json: JSON = [
-            "hello": [
-                [
-                    "key": "value"
-                ]
-            ]
-        ]
-        let path: [JSONSubscriptType] = ["hello", 0, "key"]
-        print(json[path])
+        let demo = CustomView(frame: view.frame)
+
+        view.addSubview(demo)
+        
+        
+        demo.customButton.addTarget(self, action: #selector(click), for: .touchUpInside)
     }
     
     
     @IBAction func click() {
-        print(dict)
+        print("Hello")
     }
+}
+
+public class CustomView: UIView {
+
+    var topConstraint: NSLayoutConstraint!
+
+    public let customButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Save", for: .normal)
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.red.cgColor
+        button.setTitleColor(.red, for: .normal)
+        
+        return button
+    }()
+
+    public var buttonWidth: CGFloat = 100
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        initConstraints()
+    }
+
+
+    private func initConstraints(){
+        addSubview(customButton)
+        topConstraint = customButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 80)
+        NSLayoutConstraint.activate([
+            
+            topConstraint,
+            customButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            customButton.widthAnchor.constraint(equalToConstant: buttonWidth)
+
+        ])
+    }
+
+    public required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
+
+class FrameworkView: UIView {
+
+    let customButton: CustomView = {
+        let cusomView = CustomView()
+        cusomView.translatesAutoresizingMaskIntoConstraints = false
+        return cusomView
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initConst()
+    }
+
+    func initConst()  {
+        
+        addSubview(customButton)
+        NSLayoutConstraint.activate([
+            customButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 100),
+            customButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 25),
+            customButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25),
+//            customButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
+        ])
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
