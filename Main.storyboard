@@ -89,9 +89,6 @@
                             <variation key="widthClass=regular">
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             </variation>
-                            <connections>
-                                <action selector="click" destination="X4n-4q-1cD" eventType="touchUpInside" id="xV8-e7-4Yd"/>
-                            </connections>
                         </button>
                     </navigationItem>
                     <connections>

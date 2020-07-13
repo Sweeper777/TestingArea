@@ -19,18 +19,23 @@ class MyViewController2: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    private let infoButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .clear
+        button.adjustsImageWhenHighlighted = false
+        button.setTitle("Press Me!", for: .normal)
+        button.addTarget(self, action: #selector(click), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let demo = CustomView(frame: view.frame)
-
-        view.addSubview(demo)
-        
-        
-        demo.customButton.addTarget(self, action: #selector(click), for: .touchUpInside)
+        infoButton.frame = CGRect(x: 200, y: 200, width: 100, height: 100)
+        view.addSubview(infoButton)
     }
     
     
-    @IBAction func click() {
+    @IBAction private func click() {
         print("Hello")
     }
 }
