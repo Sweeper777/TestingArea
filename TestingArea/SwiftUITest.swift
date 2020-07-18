@@ -5,19 +5,19 @@ import Combine
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        NavigationView {
-            VStack {
-                List {
-                    Text("Hello, World!")
-                }
-                
-                Spacer()
-                
-                Rectangle()
-                    .frame(height: 150)
-            }
-            .edgesIgnoringSafeArea(.bottom)
+    @State var text = "你好世界"
+    
+     var body: some View {
+        NavigationView() {
+            Text("Hello")
+                .navigationBarTitle("Hello")
+                .navigationBarItems(trailing: Button(action: { }) {
+                    Text("Hello").foregroundColor(.red)
+                })
+        }.onAppear {
+            let standardAppearance = UINavigationBarAppearance()
+            standardAppearance.configureWithTransparentBackground()
+            UINavigationBar.appearance().standardAppearance = standardAppearance
         }
     }
 }
