@@ -1,5 +1,6 @@
 import UIKit
 import Combine
+import SCLAlertView
 import SwiftyJSON
 
 @available(iOS 10.0, *)
@@ -31,14 +32,8 @@ class MyViewController2: UIViewController {
         print("changed")
     }
     
-    var cancellable: AnyCancellable!
     @IBAction private func click() {
-        cancellable = Timer.TimerPublisher(interval: 1.0, runLoop: .main, mode: .default)
-            .autoconnect()
-            .throttle(for: 5, scheduler: DispatchQueue.main, latest: false)
-            .sink { (date) in
-                print(date)
-        }
+        SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false)).showWait("Waiting...", subTitle: nil, closeButtonTitle: nil)
         
     }
 }
