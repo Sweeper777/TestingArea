@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double TimelineTableViewCellVersionNumber;
-FOUNDATION_EXPORT const unsigned char TimelineTableViewCellVersionString[];
+FOUNDATION_EXPORT double StencilVersionNumber;
+FOUNDATION_EXPORT const unsigned char StencilVersionString[];
 

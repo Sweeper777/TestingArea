@@ -1,7 +1,9 @@
 import UIKit
-import Combine
+import RxSwift
+import RxCocoa
 import SCLAlertView
 import SwiftyJSON
+import Stencil
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -14,7 +16,8 @@ class MyViewController2: UIViewController {
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
-    
+    let disposeBag = DisposeBag()
+    let relay = PublishRelay<Int>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +27,6 @@ class MyViewController2: UIViewController {
         picker.dataSource = self
         textfield.inputView = picker
         textview.tag = 2
-        
-        
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -33,8 +34,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
-        SCLAlertView(appearance: SCLAlertView.SCLAppearance(showCloseButton: false)).showWait("Waiting...", subTitle: nil, closeButtonTitle: nil)
-        
+        JSON(arrayLiteral: []).array
     }
 }
 

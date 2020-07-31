@@ -7,4 +7,8 @@ class MyViewController: FormViewController{
         super.viewDidLoad()
         
     }
+    
+    deinit {
+        print("deinit")
+    }
 }

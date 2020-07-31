@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.2.1)
   - Differentiator (4.0.1)
   - Eureka (5.0.0)
+  - PathKit (0.9.2)
   - Realm (10.0.0-beta.2):
     - Realm/Headers (= 10.0.0-beta.2)
   - Realm/Headers (10.0.0-beta.2)
@@ -18,9 +19,10 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SCLAlertView (0.8.1)
+  - Stencil (0.13.1):
+    - PathKit (~> 0.9.0)
   - SwiftyJSON (5.0.0)
   - SwiftyUtils (4.0.0)
-  - TimelineTableViewCell (2.2.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -30,23 +32,24 @@ DEPENDENCIES:
   - RxDataSources
   - RxSwift
   - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`)
+  - Stencil
   - SwiftyJSON
   - SwiftyUtils (from `https://github.com/tbaranes/SwiftyUtils.git`, commit `adf37824622a46190aef33be686163311888a3c9`)
-  - TimelineTableViewCell
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Differentiator
     - Eureka
+    - PathKit
     - Realm
     - RealmSwift
     - RxCocoa
     - RxDataSources
     - RxRelay
     - RxSwift
+    - Stencil
     - SwiftyJSON
-    - TimelineTableViewCell
 
 EXTERNAL SOURCES:
   SCLAlertView:
@@ -67,6 +70,7 @@ SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
+  PathKit: 273f59a38e3218eb95abd9f6a61730a8bcfd2f06
   Realm: 211e32e680c354c9b1a2bdc0e3aeb01c25849641
   RealmSwift: f9043abf9b6821ad5c3032c2a36b5ddfc90b4ce3
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -74,10 +78,10 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SCLAlertView: 776813fb1f62248965f37cb7edf4088ee6394460
+  Stencil: b5128a0a43ece9225db5cbd94d6569fe6fba609b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
-  TimelineTableViewCell: b2721a3c1f17c4a4950ae442f45cd4e8669a2750
 
-PODFILE CHECKSUM: d154ed3057e2ff9264eed81832690312731b4e76
+PODFILE CHECKSUM: 2a500e8a6f6780cdb91d7fc3988e3e1696cc66c1
 
 COCOAPODS: 1.9.1
