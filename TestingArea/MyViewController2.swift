@@ -3,7 +3,7 @@ import RxSwift
 import RxCocoa
 import SCLAlertView
 import SwiftyJSON
-import Stencil
+import Alamofire
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -17,16 +17,13 @@ class MyViewController2: UIViewController {
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     let disposeBag = DisposeBag()
-    let relay = PublishRelay<Int>()
+    
+    var v: CustomView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let picker = UIPickerView()
-        picker.tag = 1
-        picker.delegate = self
-        picker.dataSource = self
-        textfield.inputView = picker
-        textview.tag = 2
+        v = CustomView(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
+        view.addSubview(v)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -34,20 +31,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
-        JSON(arrayLiteral: []).array
-    }
-}
-
-extension MyViewController2 : UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        3
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        ["a", "b", "c"][row]
+        v.animateToOffShape()
     }
 }
