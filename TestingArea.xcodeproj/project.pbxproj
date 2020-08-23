@@ -24,7 +24,7 @@
 		5A23109D1E62E690009B39D2 /* NotoColorEmoji.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */; };
 		5A35050F218DEA9400BC7C23 /* FontSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35050E218DEA9400BC7C23 /* FontSizeHelper.swift */; };
 		5A373C1E1FB705C000F99847 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A373C1D1FB705C000F99847 /* test.txt */; };
-		5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A375C3D2185CDCC0020B23B /* MyView.swift */; };
+		5A3BB82424E2A317008628E3 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A375C3D2185CDCC0020B23B /* MyView.swift */; };
 		5A4FE2F122FFA2C100EC7479 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FE2F022FFA2C100EC7479 /* MyNavigationController.swift */; };
 		5A528FC0229D28050065EBFC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A528FBF229D28050065EBFC /* MyCell.xib */; };
 		5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5911F6455A60046FB51 /* Localizable.strings */; };
@@ -573,8 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */,
-				5A375C3E2185CDCC0020B23B /* MyView.swift in Sources */,
 				5A4FE2F122FFA2C100EC7479 /* MyNavigationController.swift in Sources */,
+				5A3BB82424E2A317008628E3 /* MyView.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
 				5A0285642469420D00CFF0FC /* MobileNetV2Int8LUT.mlmodel in Sources */,
