@@ -22,8 +22,10 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        v = CustomView(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
-        view.addSubview(v)
+        let x = UIBarButtonItem(title: "Hiiiii", style: .plain, target: nil, action: nil)
+        x.setTitleTextAttributes([.font: UIFont.monospacedSystemFont(ofSize: 17, weight: .regular)], for: .normal)
+        x.setTitleTextAttributes([.font: UIFont.monospacedSystemFont(ofSize: 17, weight: .regular)], for: .highlighted)
+        navigationItem.rightBarButtonItem = x
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -31,6 +33,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
-        v.animateToOffShape()
+        
     }
 }
