@@ -7,13 +7,11 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let t = Test()
-        let ref = t.$value
-        ref
     }
     
     @IBAction func f(_ sender: Any) {
-        button.performClick(nil)
+        let result = FileManager.default.createFile(atPath: "/Users/mulangsu/Desktop/test.txt", contents: "Hello".data(using: .utf8))
+        print(result)
     }
     
 }

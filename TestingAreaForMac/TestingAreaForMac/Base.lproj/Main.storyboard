@@ -373,6 +373,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="f:" target="O9m-WB-0uc" id="kAN-pC-vyZ"/>
+                                </connections>
                             </popUpButton>
                         </subviews>
                     </view>
