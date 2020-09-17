@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0285642469420D00CFF0FC /* MobileNetV2Int8LUT.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5A0285632469420D00CFF0FC /* MobileNetV2Int8LUT.mlmodel */; };
 		5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A0370DB1D4AD57E00A961D1 /* beep.mp3 */; };
 		5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */; };
 		5A1027CA2351BC1C00402A5D /* SwiftUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1027C92351BC1C00402A5D /* SwiftUITest.swift */; };
@@ -81,7 +80,6 @@
 		098D9319A5CCBF0C57CC4BAC /* Pods-TestingArea-MyTodayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingArea-MyTodayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingArea-MyTodayExtension/Pods-TestingArea-MyTodayExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		1A452EFACC4A1B928F3401E5 /* Pods-MyTodayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTodayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTodayExtension/Pods-MyTodayExtension.release.xcconfig"; sourceTree = "<group>"; };
 		5A00C4C31D722A9C00AB34C3 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = "../../Library/Developer/Xcode/DerivedData/TestingArea-ebirhtxcktfkkqcpcpuxeathcpcl/Build/Products/Debug-iphonesimulator/Eureka/Eureka.framework"; sourceTree = "<group>"; };
-		5A0285632469420D00CFF0FC /* MobileNetV2Int8LUT.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2Int8LUT.mlmodel; sourceTree = "<group>"; };
 		5A0370DB1D4AD57E00A961D1 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		5A03B9F51D6D7C58009F08B9 /* SF-UI-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Thin.otf"; sourceTree = "<group>"; };
 		5A1027C92351BC1C00402A5D /* SwiftUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITest.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
-				5A0285632469420D00CFF0FC /* MobileNetV2Int8LUT.mlmodel */,
 				5A14CCB1234675D300E31F0D /* TestingArea.entitlements */,
 				5AFA8C482302609C00713D8F /* GoogleService-Info.plist */,
 				5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */,
@@ -577,7 +574,6 @@
 				5A3BB82424E2A317008628E3 /* MyView.swift in Sources */,
 				5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */,
 				5AFBC2661D0A9C3900E27822 /* MyViewController.swift in Sources */,
-				5A0285642469420D00CFF0FC /* MobileNetV2Int8LUT.mlmodel in Sources */,
 				5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */,
 				5A1027CA2351BC1C00402A5D /* SwiftUITest.swift in Sources */,
 				5A35050F218DEA9400BC7C23 /* FontSizeHelper.swift in Sources */,

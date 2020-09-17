@@ -18,14 +18,10 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     let disposeBag = DisposeBag()
     
-    var v: CustomView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let x = UIBarButtonItem(title: "Hiiiii", style: .plain, target: nil, action: nil)
-        x.setTitleTextAttributes([.font: UIFont.monospacedSystemFont(ofSize: 17, weight: .regular)], for: .normal)
-        x.setTitleTextAttributes([.font: UIFont.monospacedSystemFont(ofSize: 17, weight: .regular)], for: .highlighted)
-        navigationItem.rightBarButtonItem = x
+        
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {

@@ -7,9 +7,7 @@ import SwiftUI
 struct ContentView: View {
 
      var body: some View {
-        Text("Hello World, ") +
-        Link("Link") +
-        Text(" is a link.")
+        Text("Hello World, ")
      }
 }
 
