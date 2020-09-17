@@ -1,13 +1,14 @@
 import UIKit
 
-@IBDesignable class CustomView: UIView {
-    
-    private lazy var shapeLayer = CAShapeLayer()
-    
+class DMSLongLatInputView : UIView {
+    private var degreeTextField: DMSLongLatTextField!
+    private var minuteTextField: DMSLongLatTextField!
+    private var secondTextField: DMSLongLatTextField!
+    var signSelector: UISegmentedControl!
+    let fontSize: CGFloat = 22
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -16,42 +17,69 @@ import UIKit
     }
     
     private func commonInit() {
-        shapeLayer.frame = bounds
-        shapeLayer.fillColor = UIColor.black.cgColor
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 3
-        layer.addSublayer(shapeLayer)
-        
-    }
-    
-    override func layoutSubviews() {
-        
-        shapeLayer.path = drawSunShape(bounds)
-    }
-    private func drawSunShape(_ group:CGRect) -> CGPath {
-        let bezierPath = UIBezierPath()
-        let radius = group.maxX/2
-        let center =  CGPoint(x: group.midX, y: group.midY)
-        bezierPath.addArc(withCenter:center, radius: radius, startAngle: -.pi/2, endAngle: 3 * .pi * 0.5 , clockwise: true)
-        return bezierPath.cgPath
-    }
-    
-    private func drawMoonShape(_ group:CGRect) -> CGPath {
-         
-         let big = UIBezierPath()
+        degreeTextField = DMSLongLatTextField()
+        minuteTextField = DMSLongLatTextField()
+        secondTextField = DMSLongLatTextField()
+        signSelector = UISegmentedControl(items: ["N", "S"])
+        signSelector.selectedSegmentIndex = 0
+        signSelector.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: fontSize)], for: .normal)
+        [degreeTextField, minuteTextField, secondTextField].forEach { (tf) in
+            tf?.font = UIFont.monospacedDigitSystemFont(ofSize: fontSize, weight: .regular)
+        }
+        let degreeLabel = UILabel()
+        degreeLabel.text = "°"
+        let minuteLabel = UILabel()
+        minuteLabel.text = "′"
+        let secondLabel = UILabel()
+        secondLabel.text = "″"
+        [degreeLabel, minuteLabel, secondLabel].forEach {
+            l in l.font = UIFont.systemFont(ofSize: fontSize)
+        }
+        let stackView = UIStackView(arrangedSubviews:
+            [degreeTextField,
+             degreeLabel,
+             minuteTextField,
+             minuteLabel,
+             secondTextField,
+             secondLabel,
+             signSelector
+        ])
+        stackView.arrangedSubviews.forEach { (v) in
+            v.setContentCompressionResistancePriority(.required, for: .horizontal)
+            v.setContentHuggingPriority(.required, for: .horizontal)
+        }
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 0
+        addSubview(stackView)
+        stackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//        stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+//        stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 
-        big.addArc(withCenter: CGPoint(x: group.midX, y: group.midY), radius: group.width / 2, startAngle:-.pi/2, endAngle: .pi/2.0, clockwise: true)
-        big.addQuadCurve(to: CGPoint(x: group.width / 2, y: 0), controlPoint: CGPoint(x: group.width, y: group.width / 2))
-//        big.apply(.init(rotationAngle: .pi / 4))
         
-        
-        return big.cgPath
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .clear
     }
-    func animateToOffShape()  {
-        
-        let anim = CABasicAnimation(keyPath: "path")
-        anim.toValue = drawMoonShape(bounds)
-        anim.duration = 5.0
-        shapeLayer.add(anim, forKey: nil)
+}
+
+fileprivate class DMSLongLatTextField: UITextField, UITextFieldDelegate {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        backgroundColor = .tertiarySystemFill
+        placeholder = "00"
+        borderStyle = .none
+        textAlignment = .right
     }
 }
