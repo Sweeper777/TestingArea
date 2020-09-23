@@ -70,7 +70,7 @@
 		<key>PathKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>28</integer>
 		</dict>
 		<key>Pods-MyTodayExtension.xcscheme</key>
 		<dict>
@@ -82,7 +82,7 @@
 		<key>Pods-MyTodayExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>24</integer>
 		</dict>
 		<key>Pods-TestingArea.xcscheme</key>
 		<dict>
@@ -101,7 +101,7 @@
 		<key>Realm.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>21</integer>
 		</dict>
 		<key>RealmSwift.xcscheme</key>
 		<dict>
@@ -113,7 +113,7 @@
 		<key>RealmSwift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>23</integer>
 		</dict>
 		<key>RxCocoa.xcscheme</key>
 		<dict>
@@ -139,7 +139,7 @@
 		<key>RxRelay.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>20</integer>
 		</dict>
 		<key>RxSwift.xcscheme</key>
 		<dict>
@@ -158,7 +158,7 @@
 		<key>SCLAlertView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>22</integer>
 		</dict>
 		<key>Stencil.xcscheme</key>
 		<dict>
@@ -170,7 +170,7 @@
 		<key>Stencil.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>25</integer>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
