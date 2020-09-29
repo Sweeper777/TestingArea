@@ -1,3 +1,1 @@
-{% for p in array1 %}
-    {% include "someLogic.stencil" p %} {# passing "p" as the context #}
-{% endfor %}
+{% include "someLogic.stencil" array1 %} {# passing "p" as the context #}

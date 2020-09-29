@@ -15,7 +15,7 @@ class MyViewController: UIViewController{
                 "array2": [["property1": "A"], ["property1": "B"], ["property1": "C"]],
 //                "someLogic.stencil": template
             ] as [String : Any]
-            let rendered = try environment.renderTemplate(name: "template2.stencil", context: context)
+            let rendered = try environment.renderTemplate(name: "template1.stencil", context: context)
             print(rendered)
         } catch {
             print(error)
