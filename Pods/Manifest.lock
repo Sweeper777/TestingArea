@@ -1,7 +1,7 @@
 PODS:
-  - Alamofire (5.2.1)
+  - Alamofire (5.2.2)
   - Differentiator (4.0.1)
-  - PathKit (0.9.2)
+  - PathKit (1.0.0)
   - Realm (10.0.0-beta.2):
     - Realm/Headers (= 10.0.0-beta.2)
   - Realm/Headers (10.0.0-beta.2)
@@ -18,8 +18,8 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SCLAlertView (0.8.1)
-  - Stencil (0.13.1):
-    - PathKit (~> 0.9.0)
+  - Stencil (0.14.0):
+    - PathKit (~> 1.0.0)
   - SwiftyJSON (5.0.0)
   - SwiftyUtils (4.0.0)
 
@@ -64,9 +64,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/tbaranes/SwiftyUtils.git
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
-  PathKit: 273f59a38e3218eb95abd9f6a61730a8bcfd2f06
+  PathKit: 364e0de7fb5adb142aecab4e112187e5548fc4b6
   Realm: 211e32e680c354c9b1a2bdc0e3aeb01c25849641
   RealmSwift: f9043abf9b6821ad5c3032c2a36b5ddfc90b4ce3
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -74,7 +74,7 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SCLAlertView: 776813fb1f62248965f37cb7edf4088ee6394460
-  Stencil: b5128a0a43ece9225db5cbd94d6569fe6fba609b
+  Stencil: 19487b54873a6ed8d8e4cccc4b45c1a601941f06
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
