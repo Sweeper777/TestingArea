@@ -1,0 +1,4 @@
+{% for a in array2 %}
+    {% include "someLogic.stencil" a %} {# passing "a" as the context #}
+{% endfor %}
+

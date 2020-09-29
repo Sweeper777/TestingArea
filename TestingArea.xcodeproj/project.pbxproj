@@ -27,6 +27,9 @@
 		5A4FE2F122FFA2C100EC7479 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FE2F022FFA2C100EC7479 /* MyNavigationController.swift */; };
 		5A528FC0229D28050065EBFC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A528FBF229D28050065EBFC /* MyCell.xib */; };
 		5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5911F6455A60046FB51 /* Localizable.strings */; };
+		5A8A87FF2522CADE00172AF6 /* someLogic.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 5A8A87FE2522CADE00172AF6 /* someLogic.stencil */; };
+		5A8A88042522CB0200172AF6 /* template1.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 5A8A88032522CB0200172AF6 /* template1.stencil */; };
+		5A8A88092522CB3900172AF6 /* template2.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 5A8A88082522CB3900172AF6 /* template2.stencil */; };
 		5AD6D7171D23EDDD0015BF0E /* MyViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */; };
 		5AE001071CAA0F3A0058B744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE001061CAA0F3A0058B744 /* AppDelegate.swift */; };
 		5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */; };
@@ -123,6 +126,9 @@
 		5A528FBF229D28050065EBFC /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		5A55B5901F6455A60046FB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A55B5921F6455B70046FB51 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5A8A87FE2522CADE00172AF6 /* someLogic.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = someLogic.stencil; sourceTree = "<group>"; };
+		5A8A88032522CB0200172AF6 /* template1.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = template1.stencil; sourceTree = "<group>"; };
+		5A8A88082522CB3900172AF6 /* template2.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = template2.stencil; sourceTree = "<group>"; };
 		5AD6D7161D23EDDD0015BF0E /* MyViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyViewController2.swift; sourceTree = "<group>"; };
 		5AE001031CAA0F3A0058B744 /* TestingArea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestingArea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE001061CAA0F3A0058B744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -294,6 +300,9 @@
 				5A158C8E1E369484007000FD /* AllEmoji.json */,
 				5A55B5911F6455A60046FB51 /* Localizable.strings */,
 				5A373C1D1FB705C000F99847 /* test.txt */,
+				5A8A87FE2522CADE00172AF6 /* someLogic.stencil */,
+				5A8A88032522CB0200172AF6 /* template1.stencil */,
+				5A8A88082522CB3900172AF6 /* template2.stencil */,
 			);
 			path = TestingArea;
 			sourceTree = "<group>";
@@ -453,7 +462,10 @@
 				5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */,
 				5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */,
 				5A373C1E1FB705C000F99847 /* test.txt in Resources */,
+				5A8A88042522CB0200172AF6 /* template1.stencil in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
+				5A8A87FF2522CADE00172AF6 /* someLogic.stencil in Resources */,
+				5A8A88092522CB3900172AF6 /* template2.stencil in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
