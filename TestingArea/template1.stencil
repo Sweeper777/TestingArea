@@ -1,1 +1,0 @@
-{% include "someLogic.stencil" array1 %} {# passing "p" as the context #}
