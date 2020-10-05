@@ -45,8 +45,8 @@ struct TestWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             TestWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Testing Area")
+        .description("This is a test widget.")
     }
 }
 
