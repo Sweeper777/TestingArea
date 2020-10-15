@@ -25,10 +25,12 @@ class MyViewController2: UIViewController {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        print("changed")
+        
     }
     
     @IBAction private func click() {
-        
+        UIView.animate(withDuration: 1) {
+            self.segmentedControl.transform = CGAffineTransform(translationX: 0, y: 0).rotated(by: .pi / 2).translatedBy(x: 0, y: 0)
+        }
     }
 }
