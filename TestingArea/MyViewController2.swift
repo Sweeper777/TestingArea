@@ -29,8 +29,27 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
-        UIView.animate(withDuration: 1) {
-            self.segmentedControl.transform = CGAffineTransform(translationX: 0, y: 0).rotated(by: .pi / 2).translatedBy(x: 0, y: 0)
+        let format = UIGraphicsPDFRendererFormat()
+        format.documentInfo = [
+            kCGPDFContextCreator as String: "My App",
+            kCGPDFContextAuthor as String: "Sweeper777"
+          ]
+
+        let pageWidth = 8.5 * 72.0
+        let pageHeight = 11 * 72.0
+        let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
+        let data = renderer.pdfData { (context) in
+            let image = UIImage(named: "example")!
+            context.beginPage(withBounds: CGRect(origin: .zero, size: image.size), pageInfo: [:])
+            image.draw(at: .zero)
+        }
+        do {
+            let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("test.pdf")
+            try data.write(to: url, options: .atomic)
+            print("Written PDF file to \(url)")
+        } catch {
+            print(error)
         }
     }
 }
