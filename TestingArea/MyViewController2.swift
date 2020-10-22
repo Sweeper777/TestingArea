@@ -3,14 +3,14 @@ import RxSwift
 import RxCocoa
 import SCLAlertView
 import SwiftyJSON
-import Alamofire
+import PDFKit
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
-    
+    @IBOutlet var image: UIImageView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
@@ -29,15 +29,16 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
+        test5()
+    }
+    
+    func test1() {
         let format = UIGraphicsPDFRendererFormat()
         format.documentInfo = [
             kCGPDFContextCreator as String: "My App",
             kCGPDFContextAuthor as String: "Sweeper777"
           ]
-
-        let pageWidth = 8.5 * 72.0
-        let pageHeight = 11 * 72.0
-        let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        let pageRect = CGRect(x: 0, y: 0, width: 0, height: 0)
         let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
         let data = renderer.pdfData { (context) in
             let image = UIImage(named: "example")!
