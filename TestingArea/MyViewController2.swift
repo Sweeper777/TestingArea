@@ -78,4 +78,20 @@ class MyViewController2: UIViewController {
         }
     }
     
+    func test3() {
+        let images = [UIImage(named: "example")!, UIImage(named: "timer")!, UIImage(named: "thumb_25")!]
+        let pages = images.compactMap(PDFPage.init)
+        let document = PDFDocument()
+        for page in pages {
+            document.insert(page, at: document.pageCount)
+        }
+        do {
+            let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("test.pdf")
+            document.write(to: url)
+            print("Written PDF file to \(url)")
+        } catch {
+            print(error)
+        }
+    }
+    
 }
