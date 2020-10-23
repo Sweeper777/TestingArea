@@ -94,4 +94,16 @@ class MyViewController2: UIViewController {
         }
     }
     
+    func test4() {
+        let document = PDFDocument(url: Bundle.main.url(forResource: "test", withExtension: "pdf")!)!
+        document.insert(PDFPage(image: UIImage(named: "home")!)!, at: document.pageCount)
+        do {
+            let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("test.pdf")
+            document.write(to: url)
+            print("Written PDF file to \(url)")
+        } catch {
+            print(error)
+        }
+    }
+    
 }
