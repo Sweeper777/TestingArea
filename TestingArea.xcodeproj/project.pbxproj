@@ -27,6 +27,7 @@
 		5A4FE2F122FFA2C100EC7479 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4FE2F022FFA2C100EC7479 /* MyNavigationController.swift */; };
 		5A528FC0229D28050065EBFC /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A528FBF229D28050065EBFC /* MyCell.xib */; };
 		5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A55B5911F6455A60046FB51 /* Localizable.strings */; };
+		5A6CD0BA253BDE38004C03A6 /* test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD0B9253BDE38004C03A6 /* test.pdf */; };
 		5A6E3D87252AB1EE00C6FCBE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6E3D86252AB1EE00C6FCBE /* WidgetKit.framework */; };
 		5A6E3D89252AB1EE00C6FCBE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6E3D88252AB1EE00C6FCBE /* SwiftUI.framework */; };
 		5A6E3D8C252AB1EE00C6FCBE /* TestWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E3D8B252AB1EE00C6FCBE /* TestWidget.swift */; };
@@ -136,6 +137,7 @@
 		5A528FBF229D28050065EBFC /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
 		5A55B5901F6455A60046FB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5A55B5921F6455B70046FB51 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5A6CD0B9253BDE38004C03A6 /* test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test.pdf; sourceTree = "<group>"; };
 		5A6E3D85252AB1EE00C6FCBE /* TestWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TestWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6E3D86252AB1EE00C6FCBE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5A6E3D88252AB1EE00C6FCBE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -312,6 +314,7 @@
 		5AE001051CAA0F3A0058B744 /* TestingArea */ = {
 			isa = PBXGroup;
 			children = (
+				5A6CD0B9253BDE38004C03A6 /* test.pdf */,
 				5A14CCB1234675D300E31F0D /* TestingArea.entitlements */,
 				5AFA8C482302609C00713D8F /* GoogleService-Info.plist */,
 				5A23109C1E62E690009B39D2 /* NotoColorEmoji.ttf */,
@@ -521,6 +524,7 @@
 				5A55B58F1F6455A60046FB51 /* Localizable.strings in Resources */,
 				5AFBEABF1D111BBE00F8A8D2 /* modest.css in Resources */,
 				5A158C8F1E369484007000FD /* AllEmoji.json in Resources */,
+				5A6CD0BA253BDE38004C03A6 /* test.pdf in Resources */,
 				5A23109D1E62E690009B39D2 /* NotoColorEmoji.ttf in Resources */,
 				5A0370DC1D4AD57E00A961D1 /* beep.mp3 in Resources */,
 				5A03B9F61D6D7C58009F08B9 /* SF-UI-Display-Thin.otf in Resources */,
