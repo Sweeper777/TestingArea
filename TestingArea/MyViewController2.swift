@@ -106,4 +106,8 @@ class MyViewController2: UIViewController {
         }
     }
     
+    func test5() {
+        let document = PDFDocument(url: Bundle.main.url(forResource: "test", withExtension: "pdf")!)!
+        image.image = document.page(at: 0)?.thumbnail(of: image.bounds.size, for: .artBox)
+    }
 }
