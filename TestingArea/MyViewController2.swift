@@ -42,8 +42,15 @@ class MyViewController2: UIViewController {
             documentPicker.allowsMultipleSelection = true
         }
     }
+
+    private func test3() {
+        if let document = PDFDocument(url: Bundle.main.url(forResource: "my_image", withExtension: "png")!) {
+            image.image = document.page(at: 0)?.thumbnail(of: image.bounds.size, for: .artBox)
+        } else {
+            print("Not PDF!")
         }
     }
+}
 
 extension MyViewController2: UIDocumentPickerDelegate {
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
