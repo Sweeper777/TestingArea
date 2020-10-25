@@ -38,5 +38,9 @@ class MyViewController2: UIViewController {
     }
         }
     }
+
+extension MyViewController2: UIDocumentPickerDelegate {
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        urls.forEach { print($0) }
     }
 }
