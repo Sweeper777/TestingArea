@@ -34,6 +34,12 @@ class MyViewController2: UIViewController {
         documentPicker.delegate = self
         present(documentPicker, animated: true)
     }
+
+    private func test2() {
+        let documentPicker = UIDocumentPickerViewController(documentTypes: ["com.adobe.pdf", "public.image"], in: .import)
+        documentPicker.delegate = self
+        present(documentPicker, animated: false) {
+            documentPicker.allowsMultipleSelection = true
         }
     }
         }
