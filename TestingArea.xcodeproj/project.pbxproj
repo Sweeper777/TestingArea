@@ -38,6 +38,7 @@
 		5AE0010F1CAA0F3A0058B744 /* TestingArea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */; };
 		5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE001101CAA0F3A0058B744 /* Assets.xcassets */; };
 		5AE001141CAA0F3A0058B744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE001121CAA0F3A0058B744 /* LaunchScreen.storyboard */; };
+		5AF4493D2543E38E007C124C /* my_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AF4493C2543E38E007C124C /* my_image.png */; };
 		5AF7B00F1CCC6C2100292386 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */; };
 		5AFA741C1CDD7589007C3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA741B1CDD7589007C3B7C /* Main.storyboard */; };
 		5AFA8C492302609C00713D8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5AFA8C482302609C00713D8F /* GoogleService-Info.plist */; };
@@ -152,6 +153,7 @@
 		5AE001131CAA0F3A0058B744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AE001151CAA0F3A0058B744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AE20D801E38951E0064968B /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = pop.framework; path = "Pods/../build/Debug-iphoneos/pop/pop.framework"; sourceTree = "<group>"; };
+		5AF4493C2543E38E007C124C /* my_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_image.png; sourceTree = "<group>"; };
 		5AF7B00E1CCC6C2100292386 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		5AFA741B1CDD7589007C3B7C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		5AFA8C482302609C00713D8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				5AE001151CAA0F3A0058B744 /* Info.plist */,
 				5AE0010D1CAA0F3A0058B744 /* TestingArea.xcdatamodeld */,
 				5A158C8E1E369484007000FD /* AllEmoji.json */,
+				5AF4493C2543E38E007C124C /* my_image.png */,
 				5A55B5911F6455A60046FB51 /* Localizable.strings */,
 				5A373C1D1FB705C000F99847 /* test.txt */,
 			);
@@ -532,6 +535,7 @@
 				5AFE67D21D2B8F5F0074ACAE /* Property List.plist in Resources */,
 				5A373C1E1FB705C000F99847 /* test.txt in Resources */,
 				5AE001111CAA0F3A0058B744 /* Assets.xcassets in Resources */,
+				5AF4493D2543E38E007C124C /* my_image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,7 +1014,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/pop",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1054,7 +1058,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos/pop",
 				);
 				INFOPLIST_FILE = TestingArea/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.TestingArea;
 				PRODUCT_NAME = "$(TARGET_NAME)";
