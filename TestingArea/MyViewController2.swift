@@ -34,5 +34,19 @@ class MyViewController2: UIViewController {
     }
 }
 
+extension MyViewController2 : PHPickerViewControllerDelegate {
+    public func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        for result in results {
+            result.itemProvider.loadObject(ofClass: UIImage.self) { object, error in
+                if let image = object as? UIImage {
+                    DispatchQueue.main.async {
+                        self.image.image = image
+                    }
+                } else {
+                    print(error as Any)
+                }
+            }
+        }
+        picker.dismiss(animated: true)
     }
 }
