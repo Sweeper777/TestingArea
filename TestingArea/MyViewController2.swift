@@ -3,7 +3,6 @@ import RxSwift
 import RxCocoa
 import SCLAlertView
 import SwiftyJSON
-import PDFKit
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -25,35 +24,15 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
-        test3()
     }
 
     private func test1() {
-        let documentPicker = UIDocumentPickerViewController(documentTypes: ["com.adobe.pdf", "public.image"], in: .import)
-        documentPicker.allowsMultipleSelection = true
-        documentPicker.delegate = self
-        present(documentPicker, animated: true)
     }
 
     private func test2() {
-        let documentPicker = UIDocumentPickerViewController(documentTypes: ["com.adobe.pdf", "public.image"], in: .import)
-        documentPicker.delegate = self
-        present(documentPicker, animated: false) {
-            documentPicker.allowsMultipleSelection = true
-        }
-    }
 
-    private func test3() {
-        if let document = PDFDocument(url: Bundle.main.url(forResource: "my_image", withExtension: "png")!) {
-            image.image = document.page(at: 0)?.thumbnail(of: image.bounds.size, for: .artBox)
-        } else {
-            print("Not PDF!")
-        }
     }
 }
 
-extension MyViewController2: UIDocumentPickerDelegate {
-    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
-        urls.forEach { print($0) }
     }
 }
