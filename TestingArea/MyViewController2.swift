@@ -25,6 +25,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
+        test2()
     }
 
     private func test1() {
@@ -38,7 +39,13 @@ class MyViewController2: UIViewController {
     }
 
     private func test2() {
+        var config = PHPickerConfiguration()
+        config.selectionLimit = 10
+        config.filter = PHPickerFilter.images
 
+        let pickerViewController = PHPickerViewController(configuration: config)
+        pickerViewController.delegate = self
+        self.present(pickerViewController, animated: true, completion: nil)
     }
 }
 
