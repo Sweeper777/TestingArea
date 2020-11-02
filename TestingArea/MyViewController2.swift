@@ -3,6 +3,7 @@ import RxSwift
 import RxCocoa
 import SCLAlertView
 import SwiftyJSON
+import PhotosUI
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -27,6 +28,13 @@ class MyViewController2: UIViewController {
     }
 
     private func test1() {
+        var config = PHPickerConfiguration()
+        config.selectionLimit = 1
+        config.filter = PHPickerFilter.images
+
+        let pickerViewController = PHPickerViewController(configuration: config)
+        pickerViewController.delegate = self
+        self.present(pickerViewController, animated: true, completion: nil)
     }
 
     private func test2() {
