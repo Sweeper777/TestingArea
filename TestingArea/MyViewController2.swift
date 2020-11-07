@@ -6,7 +6,7 @@ import SwiftyJSON
 import PhotosUI
 
 @available(iOS 10.0, *)
-class MyViewController2: UIViewController {
+class MyViewController2: UICollectionViewController {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
@@ -25,43 +25,6 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
-        test2()
-    }
-
-    private func test1() {
-        var config = PHPickerConfiguration()
-        config.selectionLimit = 1
-        config.filter = PHPickerFilter.images
-
-        let pickerViewController = PHPickerViewController(configuration: config)
-        pickerViewController.delegate = self
-        self.present(pickerViewController, animated: true, completion: nil)
-    }
-
-    private func test2() {
-        var config = PHPickerConfiguration()
-        config.selectionLimit = 10
-        config.filter = PHPickerFilter.images
-
-        let pickerViewController = PHPickerViewController(configuration: config)
-        pickerViewController.delegate = self
-        self.present(pickerViewController, animated: true, completion: nil)
-    }
-}
-
-extension MyViewController2 : PHPickerViewControllerDelegate {
-    public func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        for result in results {
-            result.itemProvider.loadObject(ofClass: UIImage.self) { object, error in
-                if let image = object as? UIImage {
-                    DispatchQueue.main.async {
-                        self.image.image = image
-                    }
-                } else {
-                    print(error as Any)
-                }
-            }
-        }
-        picker.dismiss(animated: true)
+//        test2()
     }
 }
