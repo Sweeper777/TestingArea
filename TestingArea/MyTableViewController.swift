@@ -59,6 +59,23 @@ class MyTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { (_) -> UIMenu? in
+            UIMenu(title: self.data[indexPath.row], image: UIImage(systemName: "ellipsis"), identifier: nil, options: .displayInline, children: [
+                UIAction(title: "Action 1", image: UIImage(systemName: "mappin"), handler: { (_) in
+                    print("Hello World!")
+                }),
+                UIAction(title: "Action 2", state: .on, handler: { (_) in
+                    print("Hello World!")
+                }),
+                UIAction(title: "Action 3", state: .mixed, handler: { (_) in
+                    print("Hello World!")
+                }),
+                UIAction(title: "Action 4", attributes: [.destructive], handler: { (_) in
+                    print("Hello World!")
+                }),
+            ])
+        }
     }
 }
 
