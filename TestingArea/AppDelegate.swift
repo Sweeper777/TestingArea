@@ -9,8 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let layout = UICollectionViewFlowLayout()
-        window?.rootViewController = MyViewController2(collectionViewLayout: layout)
+        
         return true
     }
 
