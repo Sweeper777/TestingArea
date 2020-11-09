@@ -18,8 +18,14 @@ class MyTableViewController: UITableViewController {
             UIAction(title: "Action 4", attributes: [.destructive], handler: { (_) in
                 print("Hello World!")
             }),
+            UICommand(title: "Action 5", action: #selector(foo)),
         ])
     }
+    
+    @objc func foo() {
+        print("Hello World")
+    }
+    
     }
 }
 
