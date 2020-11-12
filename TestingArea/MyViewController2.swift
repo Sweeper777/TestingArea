@@ -39,3 +39,11 @@ class MyViewController2: UIViewController {
 //        test2()
     }
 }
+
+extension MyViewController2 : CLTokenInputViewDelegate {
+    func tokenInputView(_ view: CLTokenInputView, didChangeText text: String?) {
+        if text?.hasSuffix(" ") ?? false {
+            view.add(CLToken(displayText: String(text!.dropLast()), context: nil))
+        }
+    }
+}
