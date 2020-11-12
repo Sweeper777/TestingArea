@@ -13,6 +13,7 @@ target 'TestingArea' do
     pod 'RealmSwift', '=10.0.0-beta.2'
     pod 'SCLAlertView' , :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git'
     pod 'Stencil'
+    pod 'CLTokenInputView'
     target 'MyTodayExtension' do
       inherit! :search_paths
     end

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.2)
+  - CLTokenInputView (2.3.0)
   - Differentiator (4.0.1)
   - PathKit (1.0.0)
   - Realm (10.0.0-beta.2):
@@ -25,6 +26,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - CLTokenInputView
   - RealmSwift (= 10.0.0-beta.2)
   - RxCocoa
   - RxDataSources
@@ -37,6 +39,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CLTokenInputView
     - Differentiator
     - PathKit
     - Realm
@@ -65,6 +68,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  CLTokenInputView: 9dc1ffb7c9d2d81787e69a63c75bd97b0b2d1e76
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   PathKit: 364e0de7fb5adb142aecab4e112187e5548fc4b6
   Realm: 211e32e680c354c9b1a2bdc0e3aeb01c25849641
@@ -78,6 +82,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 1929e14cd7995aa23e720d058aa0299ac05e4ac7
+PODFILE CHECKSUM: 22b6edec2526429ed0f0a21f6ed76db8effa352c
 
 COCOAPODS: 1.10.0.rc.1
