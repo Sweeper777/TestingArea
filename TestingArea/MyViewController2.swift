@@ -42,10 +42,11 @@ class MyViewController2: UIViewController {
     }
 }
 
-extension MyViewController2 : CLTokenInputViewDelegate {
-    func tokenInputView(_ view: CLTokenInputView, didChangeText text: String?) {
-        if text?.hasSuffix(" ") ?? false {
-            view.add(CLToken(displayText: String(text!.dropLast()), context: nil))
-        }
+extension MyViewController2 : TagWriteViewDelegate {
+    func tagWriteView(view: TagWriteView!, didMakeTag tag: String!) {
+        print("Made tag: \(tag!)")
+    }
+    func tagWriteView(view: TagWriteView!, didRemoveTag tag: String!) {
+        print("Removed tag: \(tag!)")
     }
 }
