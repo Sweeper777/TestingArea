@@ -35,6 +35,18 @@ class MyViewController2: UIViewController {
         tagWriteView.delegate = self
         tagWriteView.layer.borderWidth = 1
         tagWriteView.layer.borderColor = UIColor.black.cgColor
+        
+        tagsPanelView = TagsPanelView(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
+        view.addSubview(tagsPanelView)
+        tagsPanelView.translatesAutoresizingMaskIntoConstraints = false
+        tagsPanelView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        tagsPanelView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        tagsPanelView.topAnchor.constraint(equalTo: tagWriteView.bottomAnchor, constant: 20).isActive = true
+        tagsPanelView.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        
+        tagsPanelView.tagArray = ["hello", "world", "many", "tags", "more", "cool", "stuff", "overflow"]
+        tagsPanelView.tagsBackgroundColorsArray = Array(repeating: .blue, count: 8)
+        
     }
     
     @IBAction private func click() {
