@@ -9,7 +9,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        let data = try! Data(contentsOf: Bundle.main.url(forResource: "beep", withExtension: "mp3")!)
+        let documentURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        FileManager.default.createFile(atPath: documentURL.path, contents: data, attributes: nil)
         return true
     }
 
