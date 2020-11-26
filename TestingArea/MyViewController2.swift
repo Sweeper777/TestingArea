@@ -52,6 +52,7 @@ class MyViewController2: UIViewController {
         
         pdfView.document = document
         
+        pdfView.displayMode = .singlePage
     }
     
     @IBAction private func click() {
