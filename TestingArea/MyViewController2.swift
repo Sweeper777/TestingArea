@@ -34,7 +34,23 @@ class MyViewController2: UIViewController {
         pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         
+        let thumbnailView = PDFThumbnailView()
+        thumbnailView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(thumbnailView)
+
+        thumbnailView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        thumbnailView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        thumbnailView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
+        pdfView.bottomAnchor.constraint(equalTo: thumbnailView.topAnchor).isActive = true
+        thumbnailView.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        
+        thumbnailView.thumbnailSize = CGSize(width: 100, height: 100)
+        thumbnailView.layoutMode = .horizontal
+        
+        thumbnailView.pdfView = pdfView
+        
+        pdfView.document = document
         
     }
     
