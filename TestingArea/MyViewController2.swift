@@ -2,7 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftyUtils
-import PDFKit
+import Speech
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -20,42 +20,63 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.subviews.forEach { $0.removeFromSuperview() }
-        
-        let documentURL = Bundle.main.url(forResource: "test", withExtension: "pdf")!
-        let document = PDFDocument(url: documentURL)!
-        
-        let pdfView = PDFView()
-
-        pdfView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(pdfView)
-
-        pdfView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        pdfView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        pdfView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        
-        let thumbnailView = PDFThumbnailView()
-        thumbnailView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(thumbnailView)
-
-        thumbnailView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        thumbnailView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        thumbnailView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
-        pdfView.bottomAnchor.constraint(equalTo: thumbnailView.topAnchor).isActive = true
-        thumbnailView.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        
-        thumbnailView.thumbnailSize = CGSize(width: 100, height: 100)
-        thumbnailView.layoutMode = .horizontal
-        
-        thumbnailView.pdfView = pdfView
-        
-        pdfView.document = document
-        
-        pdfView.displayMode = .singlePage
     }
     
+    var bool = false
+    
     @IBAction private func click() {
-//        test2()
+        if bool {
+            stopRecording()
+            bool.toggle()
+        } else {
+            try! startRecording(completion: {_ in})
+            bool.toggle()
+        }
+    }
+    
+    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
+    var recognitionRequest: SFSpeechAudioBufferRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+    var recognitionTask: SFSpeechRecognitionTask?
+    let audioEngine = AVAudioEngine()
+    var timer: Timer? = nil {
+        willSet {
+            timer?.invalidate()
+        }
+    }
+    
+
+    private func startRecording(completion: @escaping (String) -> Void) throws {
+        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
+
+            if let result = result {
+                // Update the text view with the results.
+                let text = result.bestTranscription.formattedString
+                print("Text: \(text)")
+                completion(text)
+            }
+
+            if error != nil {
+                print("error descr:", error!.localizedDescription)
+            }
+
+            self.timer?.invalidate()
+            if result?.isFinal ?? false {
+                self.timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { _ in
+                    print("timed out!")
+                    //self.stopRecording()
+                })
+            }
+        }
+    }
+
+    func stopRecording() {
+        recognitionTask?.finish()
+        self.stopTimer()
+    }
+
+    func stopTimer(){
+        //print("stopTimer()")
+        self.timer?.invalidate()
+        self.timer = nil
     }
 }
