@@ -2,7 +2,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftyUtils
-import Speech
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -22,61 +21,8 @@ class MyViewController2: UIViewController {
         
     }
     
-    var bool = false
     
     @IBAction private func click() {
-        if bool {
-            stopRecording()
-            bool.toggle()
-        } else {
-            try! startRecording(completion: {_ in})
-            bool.toggle()
-        }
-    }
-    
-    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
-    var recognitionRequest: SFSpeechAudioBufferRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-    var recognitionTask: SFSpeechRecognitionTask?
-    let audioEngine = AVAudioEngine()
-    var timer: Timer? = nil {
-        willSet {
-            timer?.invalidate()
-        }
-    }
-    
-
-    private func startRecording(completion: @escaping (String) -> Void) throws {
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
-
-            if let result = result {
-                // Update the text view with the results.
-                let text = result.bestTranscription.formattedString
-                print("Text: \(text)")
-                completion(text)
-            }
-
-            if error != nil {
-                print("error descr:", error!.localizedDescription)
-            }
-
-            self.timer?.invalidate()
-            if result?.isFinal ?? false {
-                self.timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { _ in
-                    print("timed out!")
-                    //self.stopRecording()
-                })
-            }
-        }
-    }
-
-    func stopRecording() {
-        recognitionTask?.finish()
-        self.stopTimer()
-    }
-
-    func stopTimer(){
-        //print("stopTimer()")
-        self.timer?.invalidate()
-        self.timer = nil
+        
     }
 }
