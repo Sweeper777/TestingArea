@@ -23,11 +23,11 @@ class PDFCreator {
     }()
     
     
-    func prepareData() -> Data {
+    func pdfWithText(_ text: String) -> Data {
         //1
         let pdfMetaData = [
             kCGPDFContextCreator: "PDF Creator",
-            kCGPDFContextAuthor: "Pratik Sodha",
+            kCGPDFContextAuthor: "Sweeper",
             kCGPDFContextTitle: "My PDF"
         ]
         
@@ -42,7 +42,7 @@ class PDFCreator {
         let data = renderer.pdfData { (context) in
             
             //6
-            self.addText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", context: context)
+            self.addText(text, context: context)
         }
         
         return data
