@@ -23,7 +23,7 @@ class PDFCreator {
     }()
     
     
-    func pdfWithText(_ text: String) -> Data {
+    func pdfWithText(_ text: String, attributes: [NSAttributedString.Key: Any]) -> Data {
         //1
         let pdfMetaData = [
             kCGPDFContextCreator: "PDF Creator",
@@ -42,33 +42,24 @@ class PDFCreator {
         let data = renderer.pdfData { (context) in
             
             //6
-            self.addText(text, context: context)
+            self.addText(text, attributes: attributes, context: context)
         }
         
         return data
     }
     
     @discardableResult
-    func addText(_ text : String, context : UIGraphicsPDFRendererContext) -> CGFloat {
-        
-        // 1
-        let textFont = UIFont.systemFont(ofSize: 60.0, weight: .regular)
+    func addText(_ text : String, attributes: [NSAttributedString.Key: Any], context : UIGraphicsPDFRendererContext) -> CGFloat {
         
         // 2
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .natural
         paragraphStyle.lineBreakMode = .byWordWrapping
         
-        // 3
-        let textAttributes = [
-            NSAttributedString.Key.paragraphStyle: paragraphStyle,
-            NSAttributedString.Key.font: textFont
-        ]
-        
         //4
         let currentText = CFAttributedStringCreate(nil,
                                                    text as CFString,
-                                                   textAttributes as CFDictionary)
+                                                   attributes as CFDictionary)
         //5
         let framesetter = CTFramesetterCreateWithAttributedString(currentText!)
         
