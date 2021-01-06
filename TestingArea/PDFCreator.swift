@@ -65,7 +65,6 @@ class PDFCreator {
         
         //6
         var currentRange = CFRangeMake(0, 0)
-        var currentPage = 0
         var done = false
         repeat {
             
@@ -73,17 +72,10 @@ class PDFCreator {
             /* Mark the beginning of a new page.*/
             context.beginPage()
             
-            //8
-            /*Draw a page number at the bottom of each page.*/
-            currentPage += 1
-            drawPageNumber(currentPage)
-            
-            
             //9
             /*Render the current page and update the current range to
              point to the beginning of the next page. */
-            currentRange = renderPage(currentPage,
-                                      withTextRange: currentRange,
+            currentRange = renderPage(withTextRange: currentRange,
                                       andFramesetter: framesetter)
             
             //10
@@ -97,7 +89,7 @@ class PDFCreator {
         return CGFloat(currentRange.location + currentRange.length)
     }
     
-    func renderPage(_ pageNum: Int, withTextRange currentRange: CFRange, andFramesetter framesetter: CTFramesetter?) -> CFRange {
+    func renderPage(withTextRange currentRange: CFRange, andFramesetter framesetter: CTFramesetter?) -> CFRange {
         var currentRange = currentRange
         // Get the graphics context.
         let currentContext = UIGraphicsGetCurrentContext()
@@ -131,23 +123,5 @@ class PDFCreator {
         currentRange.length = CFIndex(0)
         
         return currentRange
-    }
-    
-    func drawPageNumber(_ pageNum: Int) {
-        
-        let theFont = UIFont.systemFont(ofSize: 20)
-        
-        let pageString = NSMutableAttributedString(string: "Page \(pageNum)")
-        pageString.addAttribute(NSAttributedString.Key.font, value: theFont, range: NSRange(location: 0, length: pageString.length))
-        
-        let pageStringSize =  pageString.size()
-        
-        let stringRect = CGRect(x: (pageRect.width - pageStringSize.width) / 2.0,
-                                y: pageRect.height - (pageStringSize.height) / 2.0 - 15,
-                                width: pageStringSize.width,
-                                height: pageStringSize.height)
-        
-        pageString.draw(in: stringRect)
-        
     }
 }
