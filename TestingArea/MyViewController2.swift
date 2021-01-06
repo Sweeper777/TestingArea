@@ -3,17 +3,6 @@ import RxSwift
 import RxCocoa
 import SwiftyUtils
 
-class SimpleViewModel {
-    var list = BehaviorRelay<[String]>(value: [])
-    var randomString = BehaviorRelay<String>(value: "")
-    
-    func fetch() {
-        // Request...
-        list.accept(["result1", "result2", "result3"])
-        randomString.accept("Random...")
-    }
-}
-
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
     @IBOutlet var textview: UITextView!
@@ -22,9 +11,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var image: UIImageView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     
-    let tableView = UITableView()
-    let viewModel = SimpleViewModel()
-    
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
@@ -32,12 +18,28 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Observable.combineLatest(viewModel.list, viewModel.randomString)
-            .map { (list, randomString) in list.map { (element: $0, randomString: randomString) } }
-    .bind(to: tableView.rx.items(cellIdentifier: "cell")) {
-    (index, model, cell) in
-        cell.textLabel?.text = model.element + model.randomString
-    }.disposed(by: disposeBag)
+        let format = UIGraphicsPDFRendererFormat()
+        format.documentInfo = [
+            kCGPDFContextCreator as String: "My App",
+            kCGPDFContextAuthor as String: "Sweeper777"
+          ]
+
+        let pageWidth = 8.5 * 72.0
+        let pageHeight = 11 * 72.0
+        let pageRect = CGRect(x: 0, y: 0, width: pageWidth, height: pageHeight)
+        let renderer = UIGraphicsPDFRenderer(bounds: pageRect, format: format)
+        let data = renderer.pdfData { (context) in
+            context.beginPage(withBounds: pageRect, pageInfo: [:])
+            let paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pulvinar, massa vitae malesuada sollicitudin, mauris purus condimentum metus, eget gravida nunc mauris sit amet orci. Cras nec magna turpis. Cras risus justo, ullamcorper id ex quis, lobortis mattis elit. Nunc a ligula auctor dolor cursus lobortis id ac velit. Cras eget tincidunt dui, eget auctor purus. Nunc quam urna, vulputate at est at,\n\n\n\n\n\n sodales aliquam neque. Praesent tincidunt, justo nec pellentesque imperdiet, nulla justo tristique ligula, quis maximus elit nulla eget diam. Praesent a nunc id orci rhoncus tempus et vitae mi. Donec commodo elementum neque a eleifend. Praesent faucibus pretium faucibus. In hac habitasse platea dictumst. Mauris rhoncus nisi nisi, at venenatis diam ornare auctor."
+            ((paragraph) as NSString).draw(with: pageRect.insetBy(dx: 20, dy: 20), options: [.usesLineFragmentOrigin], attributes: [.font: UIFont.monospacedSystemFont(ofSize: 16, weight: .regular)], context: nil)
+        }
+        do {
+            let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("test.pdf")
+            try data.write(to: url, options: .atomic)
+            print("Written PDF file to \(url)")
+        } catch {
+            print(error)
+        }
     }
     
     
