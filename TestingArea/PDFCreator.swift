@@ -23,7 +23,7 @@ class PDFCreator {
     }()
     
     
-    func pdfWithText(_ text: String, attributes: [NSAttributedString.Key: Any]) -> Data {
+    func pdfWithText(_ text: NSAttributedString) -> Data {
         //1
         let pdfMetaData = [
             kCGPDFContextCreator: "PDF Creator",
@@ -42,26 +42,16 @@ class PDFCreator {
         let data = renderer.pdfData { (context) in
             
             //6
-            self.addText(text, attributes: attributes, context: context)
+            self.addText(text, context: context)
         }
         
         return data
     }
     
     @discardableResult
-    func addText(_ text : String, attributes: [NSAttributedString.Key: Any], context : UIGraphicsPDFRendererContext) -> CGFloat {
-        
-        // 2
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .natural
-        paragraphStyle.lineBreakMode = .byWordWrapping
-        
-        //4
-        let currentText = CFAttributedStringCreate(nil,
-                                                   text as CFString,
-                                                   attributes as CFDictionary)
+    func addText(_ text : NSAttributedString, context : UIGraphicsPDFRendererContext) -> CGFloat {
         //5
-        let framesetter = CTFramesetterCreateWithAttributedString(currentText!)
+        let framesetter = CTFramesetterCreateWithAttributedString(text)
         
         //6
         var currentRange = CFRangeMake(0, 0)
@@ -80,7 +70,7 @@ class PDFCreator {
             
             //10
             /* If we're at the end of the text, exit the loop. */
-            if currentRange.location == CFAttributedStringGetLength(currentText) {
+            if currentRange.location == text.length {
                 done = true
             }
             
