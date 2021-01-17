@@ -33,6 +33,15 @@ class MyViewController2: UIViewController {
         self.image.image = image
     }
     
+    func test2() {
+        let attrString = NSMutableAttributedString(string: "􀈂", attributes: [.font: UIFont.systemFont(ofSize: 11)])
+        attrString.append(NSAttributedString(string: " Hello!"))
+        UIGraphicsBeginImageContext(CGSize(width: 100, height: 100))
+        attrString.draw(in: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.image.image = image
+    }
         
     @IBAction private func click() {
     }
