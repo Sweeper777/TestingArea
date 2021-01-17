@@ -20,6 +20,17 @@ class MyViewController2: UIViewController {
         super.viewDidLoad()
     }
     
+    func test1() {
+        let icon = NSTextAttachment()
+        icon.image = UIImage(systemName: "questionmark.circle.fill")!
+        let attrString = NSMutableAttributedString(attachment: icon)
+        attrString.append(NSAttributedString(string: " Hello!"))
+        UIGraphicsBeginImageContext(CGSize(width: 100, height: 100))
+        attrString.draw(in: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.image.image = image
+    }
     
     @IBAction private func click() {
         
