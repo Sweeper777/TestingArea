@@ -87,3 +87,19 @@ extension UIView {
         }
     }
 }
+
+extension NSLayoutManager {
+    func isContainerTruncated(container: NSTextContainer) -> Bool {
+        let glyphRangeOfContainer = glyphRange(for: container)
+        var isTruncating = false
+        enumerateLineFragments(forGlyphRange: glyphRangeOfContainer) { _, _, _, glyphRange, stop in
+            let truncatedRange = self.truncatedGlyphRange(inLineFragmentForGlyphAt: glyphRange.lowerBound)
+            if truncatedRange.location != NSNotFound {
+              isTruncating = true
+              print("Truncated!")
+              stop.pointee = true
+            }
+        }
+        return isTruncating
+    }
+}
