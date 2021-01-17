@@ -18,6 +18,7 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UIFont.systemFont(ofSize: 11).fontName)
     }
     
     func test1() {
@@ -32,7 +33,7 @@ class MyViewController2: UIViewController {
         self.image.image = image
     }
     
-    @IBAction private func click() {
         
+    @IBAction private func click() {
     }
 }
