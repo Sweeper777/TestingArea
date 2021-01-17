@@ -42,6 +42,35 @@ class MyViewController2: UIViewController {
         UIGraphicsEndImageContext()
         self.image.image = image
     }
+    
+    func test3() {
+        let icon = NSTextAttachment()
+        icon.image = UIImage(named: "settings")!
+        let attrString = NSMutableAttributedString(attachment: icon)
+        attrString.append(NSAttributedString(string: " Hello!"))
+        UIGraphicsBeginImageContext(CGSize(width: 100, height: 100))
+        
+        let currentContext = UIGraphicsGetCurrentContext()
+        
+        currentContext?.textMatrix = .identity
+        
+        let frameRect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let framePath = CGMutablePath()
+        framePath.addRect(frameRect, transform: .identity)
+        
+        let framesetter = CTFramesetterCreateWithAttributedString(attrString)
+        let frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), framePath, nil)
+        
+        currentContext?.translateBy(x: 0, y: 100)
+        currentContext?.scaleBy(x: 1.0, y: -1.0)
+        
+        CTFrameDraw(frameRef, currentContext!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.image.image = image
+    }
+    
         
     @IBAction private func click() {
     }
