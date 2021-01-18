@@ -105,6 +105,7 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
+        self.image.image = page2
     }
 }
 
