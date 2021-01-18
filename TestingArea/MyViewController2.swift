@@ -91,6 +91,9 @@ class MyViewController2: UIViewController {
         container2.lineBreakMode = .byTruncatingTail
         let textView1 = UITextView(frame: rect1, textContainer: container1)
         let textView2 = UITextView(frame: rect2, textContainer: container2)
+        layoutManager.addTextContainer(textView1.textContainer)
+        layoutManager.addTextContainer(textView2.textContainer)
+        
         print(layoutManager.isContainerTruncated(container: container1))
         print(layoutManager.isContainerTruncated(container: container2))
         
