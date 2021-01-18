@@ -18,6 +18,7 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        test4()
         print(UIFont.systemFont(ofSize: 11).fontName)
     }
     
@@ -71,7 +72,35 @@ class MyViewController2: UIViewController {
         self.image.image = image
     }
     
+    var page1: UIImage!
+    var page2: UIImage!
+    
+    func test4() {
+        let icon = NSTextAttachment()
+        icon.image = UIImage(systemName: "questionmark.circle.fill")!
+        let attrString = NSTextStorage(string: "Hello World! ")
+        attrString.append(NSAttributedString(attachment: icon))
+        attrString.append(NSAttributedString(string: " Hello! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vulputate diam lacus. Pellentesque ultricies felis in fringilla vulputate. Nunc et venenatis magna. Donec congue, urna vel viverra mollis, odio ipsum efficitur massa, a malesuada erat elit non justo. Curabitur volutpat nibh nisl, eu scelerisque magna pretium eget. Nulla ultricies id."))
+        let layoutManager = NSLayoutManager()
+        attrString.addLayoutManager(layoutManager)
+        let rect1 = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let rect2 = CGRect(x: 0, y: 110, width: 100, height: 100)
+        let container1 = NSTextContainer(size: rect1.size)
+        container1.lineBreakMode = .byTruncatingTail
+        let container2 = NSTextContainer(size: rect2.size)
+        container2.lineBreakMode = .byTruncatingTail
+        let textView1 = UITextView(frame: rect1, textContainer: container1)
+        let textView2 = UITextView(frame: rect2, textContainer: container2)
+        print(layoutManager.isContainerTruncated(container: container1))
+        print(layoutManager.isContainerTruncated(container: container2))
         
+        self.page1 = textView1.asImage()
+        
+        self.page2 = textView2.asImage()
+        
+        self.image.image = page1
+    }
+    
     @IBAction private func click() {
     }
 }
