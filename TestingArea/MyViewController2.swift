@@ -16,62 +16,19 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     let disposeBag = DisposeBag()
     
+    var gr: UITapGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         test4()
         print(UIFont.systemFont(ofSize: 11).fontName)
+        
+        gr = UITapGestureRecognizer(target: self, action: #selector(grAction))
+        gr.numberOfTapsRequired = 1
+        gr.numberOfTouchesRequired = 1
+        image.addGestureRecognizer(gr)
+        image.isUserInteractionEnabled = true
     }
-    
-    func test1() {
-        let icon = NSTextAttachment()
-        icon.image = UIImage(systemName: "questionmark.circle.fill")!
-        let attrString = NSMutableAttributedString(attachment: icon)
-        attrString.append(NSAttributedString(string: " Hello!"))
-        UIGraphicsBeginImageContext(CGSize(width: 100, height: 100))
-        attrString.draw(in: CGRect(x: 0, y: 0, width: 100, height: 100))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.image.image = image
-    }
-    
-    func test2() {
-        let attrString = NSMutableAttributedString(string: "􀈂", attributes: [.font: UIFont.systemFont(ofSize: 11)])
-        attrString.append(NSAttributedString(string: " Hello!"))
-        UIGraphicsBeginImageContext(CGSize(width: 100, height: 100))
-        attrString.draw(in: CGRect(x: 0, y: 0, width: 100, height: 100))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.image.image = image
-    }
-    
-    func test3() {
-        let icon = NSTextAttachment()
-        icon.image = UIImage(named: "settings")!
-        let attrString = NSMutableAttributedString(attachment: icon)
-        attrString.append(NSAttributedString(string: " Hello!"))
-        UIGraphicsBeginImageContext(CGSize(width: 100, height: 100))
-        
-        let currentContext = UIGraphicsGetCurrentContext()
-        
-        currentContext?.textMatrix = .identity
-        
-        let frameRect = CGRect(x: 0, y: 0, width: 100, height: 100)
-        let framePath = CGMutablePath()
-        framePath.addRect(frameRect, transform: .identity)
-        
-        let framesetter = CTFramesetterCreateWithAttributedString(attrString)
-        let frameRef = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), framePath, nil)
-        
-        currentContext?.translateBy(x: 0, y: 100)
-        currentContext?.scaleBy(x: 1.0, y: -1.0)
-        
-        CTFrameDraw(frameRef, currentContext!)
-        
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.image.image = image
-    }
-    
     var page1: UIImage!
     var page2: UIImage!
     
@@ -106,6 +63,10 @@ class MyViewController2: UIViewController {
     
     @IBAction private func click() {
         self.image.image = page2
+    }
+    
+    @objc func grAction(_ sender: UITapGestureRecognizer) {
+        print(sender.state.rawValue)
     }
 }
 
