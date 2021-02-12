@@ -51,7 +51,28 @@ class MyViewController2: UIViewController {
             circlePath.fill()
             circlePath.stroke()
 
+            (pieceName as NSString).draw(at: CGPoint(
+                x: position.x + textOffset.x,
+                y: position.y + textOffset.y
+            ), withAttributes: [.font: font, .foregroundColor: UIColor.white])
         }
+        
+        let fontSize = calculateFontSize()
+        let font = UIFont.systemFont(ofSize: fontSize)
+        let offset = calculateOffset(withFont: font)
+        UIGraphicsBeginImageContext(CGSize(width: 500, height: 500))
+        drawChessPiece("將", position: .zero, backgroundColor: .black, font: font, textOffset: offset)
+        drawChessPiece("帥", position: CGPoint(x: 100, y: 100), backgroundColor: .red, font: font, textOffset: offset)
+        let image = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        let url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            .appendingPathComponent("icon.png")
+        try! image.pngData()?.write(to: url)
+        print(url)
+        
     }
+    
+    @IBAction private func click() {
+        
     }
 }
