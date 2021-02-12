@@ -20,7 +20,16 @@ class MyViewController2: UIViewController {
         super.viewDidLoad()
         
         
+        let squareSize = 400.f
+        let strokeWidth = squareSize / 20
         
+        func calculateFontSize() -> CGFloat {
+            fontSizeThatFits(
+                    size: CGSize(width: squareSize / 2,
+                    height: squareSize / 2), text: "将",
+                    font: UIFont.systemFont(ofSize: 1)
+            )
+        }
         
         
 
