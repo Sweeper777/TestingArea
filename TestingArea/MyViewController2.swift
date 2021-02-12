@@ -39,6 +39,17 @@ class MyViewController2: UIViewController {
             )
         }
         
+        func drawChessPiece(_ pieceName: String, position: CGPoint, backgroundColor: UIColor, font: UIFont, textOffset: CGPoint) {
+            let centerOfPiece = CGPoint(x: position.x + squareSize / 2, y: position.y + squareSize / 2)
+            let circlePath = UIBezierPath(
+                    ovalIn: CGRect(origin: centerOfPiece, size: .zero)
+                            .insetBy(dx: -squareSize * 0.4, dy: -squareSize * 0.4)
+            )
+            circlePath.lineWidth = strokeWidth * 1.2
+            UIColor.black.setStroke()
+            backgroundColor.setFill()
+            circlePath.fill()
+            circlePath.stroke()
 
         }
     }
