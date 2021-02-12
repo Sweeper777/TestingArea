@@ -31,6 +31,13 @@ class MyViewController2: UIViewController {
             )
         }
         
+        func calculateOffset(withFont font: UIFont) -> CGPoint {
+            let sizeWithFont = ("将" as NSString).size(withAttributes: [.font: font])
+            return CGPoint(
+                    x: (squareSize - sizeWithFont.width) / 2,
+                    y: (squareSize - sizeWithFont.height) / 2
+            )
+        }
         
 
         }
