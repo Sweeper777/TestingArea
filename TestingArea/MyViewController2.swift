@@ -18,61 +18,23 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let squareSize = 400.f
-        let strokeWidth = squareSize / 20
-        
-        func calculateFontSize() -> CGFloat {
-            fontSizeThatFits(
-                    size: CGSize(width: squareSize / 2,
-                    height: squareSize / 2), text: "将",
-                    font: UIFont.systemFont(ofSize: 1)
-            )
-        }
-        
-        func calculateOffset(withFont font: UIFont) -> CGPoint {
-            let sizeWithFont = ("将" as NSString).size(withAttributes: [.font: font])
-            return CGPoint(
-                    x: (squareSize - sizeWithFont.width) / 2,
-                    y: (squareSize - sizeWithFont.height) / 2
-            )
-        }
-        
-        func drawChessPiece(_ pieceName: String, position: CGPoint, backgroundColor: UIColor, font: UIFont, textOffset: CGPoint) {
-            let centerOfPiece = CGPoint(x: position.x + squareSize / 2, y: position.y + squareSize / 2)
-            let circlePath = UIBezierPath(
-                    ovalIn: CGRect(origin: centerOfPiece, size: .zero)
-                            .insetBy(dx: -squareSize * 0.4, dy: -squareSize * 0.4)
-            )
-            circlePath.lineWidth = strokeWidth * 1.2
-            UIColor.black.setStroke()
-            backgroundColor.setFill()
-            circlePath.fill()
-            circlePath.stroke()
-
-            (pieceName as NSString).draw(at: CGPoint(
-                x: position.x + textOffset.x,
-                y: position.y + textOffset.y
-            ), withAttributes: [.font: font, .foregroundColor: UIColor.white])
-        }
-        
-        let fontSize = calculateFontSize()
-        let font = UIFont.systemFont(ofSize: fontSize)
-        let offset = calculateOffset(withFont: font)
-        UIGraphicsBeginImageContext(CGSize(width: 500, height: 500))
-        drawChessPiece("將", position: .zero, backgroundColor: .black, font: font, textOffset: offset)
-        drawChessPiece("帥", position: CGPoint(x: 100, y: 100), backgroundColor: .red, font: font, textOffset: offset)
-        let image = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        let url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
-            .appendingPathComponent("icon.png")
-        try! image.pngData()?.write(to: url)
-        print(url)
-        
+        textview.delegate = self
     }
     
     @IBAction private func click() {
         
+    }
+}
+
+extension MyViewController2 : UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+          
+        let textLowerCased = text.lowercased()
+
+        textView.text = (textView.text as NSString).replacingCharacters(in: range, with: textLowerCased)
+
+        let numberOfChars = textView.text.count
+        
+        return numberOfChars <= 200
     }
 }
