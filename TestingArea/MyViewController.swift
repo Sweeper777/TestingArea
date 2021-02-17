@@ -2,6 +2,8 @@ import UIKit
 import SCLAlertView
 import RxSwift
 import RxCocoa
+import GridLayout
+import PaddingLabel
 
 class MyViewController: UIViewController{
     override func viewDidLoad() {
@@ -10,6 +12,14 @@ class MyViewController: UIViewController{
         ])
     }
     
+    func test1() -> UIView {
+        let gridItems = (0..<31).map {
+            GridItem(generateLabel(text: "\($0 + 1)"), row: $0 % 7, column: $0 / 7)
+        }
+        let grid = UIView.gridLayoutView(items: gridItems,
+                                         rows: Array(repeating: .auto, count: 7),
+                                         columns: Array(repeating: .auto, count: 5))
+        return grid
     }
     
     
