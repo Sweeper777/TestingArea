@@ -1,6 +1,8 @@
 PODS:
   - Alamofire (5.2.2)
   - Differentiator (4.0.1)
+  - GridLayout (0.2.6)
+  - PaddingLabel (1.2)
   - PathKit (1.0.0)
   - Realm (10.0.0-beta.2):
     - Realm/Headers (= 10.0.0-beta.2)
@@ -22,11 +24,11 @@ PODS:
     - PathKit (~> 1.0.0)
   - SwiftyJSON (5.0.0)
   - SwiftyUtils (4.0.0)
-  - TagsPanelView (0.0.1)
-  - TagWriteView (1.4.0)
 
 DEPENDENCIES:
   - Alamofire
+  - GridLayout
+  - PaddingLabel
   - RealmSwift (= 10.0.0-beta.2)
   - RxCocoa
   - RxDataSources
@@ -35,13 +37,13 @@ DEPENDENCIES:
   - Stencil
   - SwiftyJSON
   - SwiftyUtils (from `https://github.com/tbaranes/SwiftyUtils.git`, commit `adf37824622a46190aef33be686163311888a3c9`)
-  - TagsPanelView
-  - TagWriteView
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Differentiator
+    - GridLayout
+    - PaddingLabel
     - PathKit
     - Realm
     - RealmSwift
@@ -51,8 +53,6 @@ SPEC REPOS:
     - RxSwift
     - Stencil
     - SwiftyJSON
-    - TagsPanelView
-    - TagWriteView
 
 EXTERNAL SOURCES:
   SCLAlertView:
@@ -72,6 +72,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  GridLayout: ceca008dc47e27e48612adb7007e53b011894d08
+  PaddingLabel: 21ab5282c780366018b04c30e3920c2f55a2fd14
   PathKit: 364e0de7fb5adb142aecab4e112187e5548fc4b6
   Realm: 211e32e680c354c9b1a2bdc0e3aeb01c25849641
   RealmSwift: f9043abf9b6821ad5c3032c2a36b5ddfc90b4ce3
@@ -83,9 +85,7 @@ SPEC CHECKSUMS:
   Stencil: 19487b54873a6ed8d8e4cccc4b45c1a601941f06
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
-  TagsPanelView: 90bd57253f611437f90f0b3f7df94623cf6593aa
-  TagWriteView: b8f94df2042d6c2055cb03a7eac219d4d7403148
 
-PODFILE CHECKSUM: 39bb55ea39ffb587d281c86c3d2f5d8edd5d4f8d
+PODFILE CHECKSUM: 28aabea51a8c2c451cccb74fd69a20ea2fc79bd0
 
 COCOAPODS: 1.10.0.rc.1

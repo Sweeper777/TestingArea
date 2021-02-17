@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double TagWriteViewVersionNumber;
-FOUNDATION_EXPORT const unsigned char TagWriteViewVersionString[];
+FOUNDATION_EXPORT double PaddingLabelVersionNumber;
+FOUNDATION_EXPORT const unsigned char PaddingLabelVersionString[];
 

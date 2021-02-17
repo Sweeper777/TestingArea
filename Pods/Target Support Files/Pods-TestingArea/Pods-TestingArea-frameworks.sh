@@ -177,6 +177,8 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GridLayout/GridLayout.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PaddingLabel/PaddingLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework"
@@ -188,12 +190,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Stencil/Stencil.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TagWriteView/TagWriteView.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TagsPanelView/TagsPanelView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GridLayout/GridLayout.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PaddingLabel/PaddingLabel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Realm/Realm.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework"
@@ -205,8 +207,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Stencil/Stencil.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TagWriteView/TagWriteView.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TagsPanelView/TagsPanelView.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

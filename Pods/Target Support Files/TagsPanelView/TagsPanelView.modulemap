@@ -1,6 +1,0 @@
-framework module TagsPanelView {
-  umbrella header "TagsPanelView-umbrella.h"
-
-  export *
-  module * { export * }
-}

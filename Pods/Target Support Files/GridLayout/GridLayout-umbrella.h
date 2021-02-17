@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "TagsPanelView.h"
+#import "FrenzyApps_Layout.h"
 
-FOUNDATION_EXPORT double TagsPanelViewVersionNumber;
-FOUNDATION_EXPORT const unsigned char TagsPanelViewVersionString[];
+FOUNDATION_EXPORT double GridLayoutVersionNumber;
+FOUNDATION_EXPORT const unsigned char GridLayoutVersionString[];
 
