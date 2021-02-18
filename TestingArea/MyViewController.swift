@@ -8,8 +8,13 @@ import PaddingLabel
 class MyViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSLayoutConstraint.activate([
-        ])
+//        let grid = test3()
+//        view.addSubview(grid)
+//        NSLayoutConstraint.activate([
+//            grid.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            grid.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+//        ])
+        
     }
     
     func test1() -> UIView {
