@@ -42,6 +42,25 @@ class MyViewController: UIViewController{
         return grid
     }
     
+    func test3() -> UIView {
+        var white = true
+        var gridItems = [GridItem]()
+        for i in 0..<31 {
+            gridItems.append(
+                GridItem(generatePaddingLabel(
+                            text: "\(i + 1)",
+                            textColor: white ? .black : .white,
+                            bgColor: white ? .white : .black),
+                         row: i % 7, column: i / 7,
+                         horizontalAlignment: .stretch)
+            )
+            white.toggle()
+        }
+        let grid = UIView.gridLayoutView(items: gridItems,
+                                         rows: Array(repeating: .fill, count: 7),
+                                         columns: Array(repeating: .fill, count: 5))
+        return grid
+    }
     
     func generateLabel(text: String, textColor: UIColor = .black, bgColor: UIColor = .white) -> UILabel {
         let label = UILabel(frame: .zero)
