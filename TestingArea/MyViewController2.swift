@@ -18,7 +18,6 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textview.delegate = self
     }
     
     @IBAction private func click() {
@@ -26,15 +25,21 @@ class MyViewController2: UIViewController {
     }
 }
 
-extension MyViewController2 : UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-          
-        let textLowerCased = text.lowercased()
+class ImagePrintPageRenderer: UIPrintPageRenderer {
+    let image: UIImage
 
-        textView.text = (textView.text as NSString).replacingCharacters(in: range, with: textLowerCased)
-
-        let numberOfChars = textView.text.count
-        
-        return numberOfChars <= 200
+    init(image: UIImage) {
+        self.image = image
     }
+
+    override func drawPage(at pageIndex: Int, in printableRect: CGRect) {
+        let xScale = printableRect.width / image.size.width
+        let yScale = printableRect.height / image.size.height
+        let scale = min(xScale, yScale)
+        image.draw(in: CGRect(origin: printableRect.origin, size: CGSize(width: image.size.width * scale, height: image.size.height * scale)))
+    }
+
+//    override func drawPrintFormatter(_ printFormatter: UIPrintFormatter, forPageAt pageIndex: Int) {
+//
+//    }
 }
