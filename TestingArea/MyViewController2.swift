@@ -21,7 +21,15 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
-        
+        let imageView = image!
+        imageView.image = UIImage(named: "soLogo")
+        let renderer = ImagePrintPageRenderer(image: imageView.image!)
+//        let formatter = imageView.viewPrintFormatter()
+//        renderer.addPrintFormatter(formatter, startingAtPageAt: 0)
+        let printJob = UIPrintInfo(dictionary: [:])
+        printJob.orientation = .landscape
+        let shareSheet = UIActivityViewController(activityItems: [imageView.image!, renderer, printJob], applicationActivities: [])
+        self.present(shareSheet, animated: true, completion: nil)
     }
 }
 
