@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftyUtils
+import SwiftUI
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -18,36 +19,17 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textfield.delegate = foo
     }
     
+    private let foo = Foo()
+    
     @IBAction private func click() {
-        let imageView = image!
-        imageView.image = UIImage(named: "soLogo")
-        let renderer = ImagePrintPageRenderer(image: imageView.image!)
-//        let formatter = imageView.viewPrintFormatter()
-//        renderer.addPrintFormatter(formatter, startingAtPageAt: 0)
-        let printJob = UIPrintInfo(dictionary: [:])
-        printJob.orientation = .landscape
-        let shareSheet = UIActivityViewController(activityItems: [imageView.image!, renderer, printJob], applicationActivities: [])
-        self.present(shareSheet, animated: true, completion: nil)
     }
-}
-
-class ImagePrintPageRenderer: UIPrintPageRenderer {
-    let image: UIImage
-
-    init(image: UIImage) {
-        self.image = image
+    
+    private class Foo: NSObject, UITextFieldDelegate {
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            print("DID BEGIN EDITING!")
+        }
     }
-
-    override func drawPage(at pageIndex: Int, in printableRect: CGRect) {
-        let xScale = printableRect.width / image.size.width
-        let yScale = printableRect.height / image.size.height
-        let scale = min(xScale, yScale)
-        image.draw(in: CGRect(origin: printableRect.origin, size: CGSize(width: image.size.width * scale, height: image.size.height * scale)))
-    }
-
-//    override func drawPrintFormatter(_ printFormatter: UIPrintFormatter, forPageAt pageIndex: Int) {
-//
-//    }
 }
