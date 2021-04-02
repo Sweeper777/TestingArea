@@ -4,8 +4,7 @@ import Alamofire
 import SCLAlertView
 
 class MyTableViewController: UITableViewController {
-    @IBOutlet var moreButton: UIBarButtonItem!
-    
+
     let data = ["Hello", "World", "Some", "Text"]
     
     @objc func foo() {
@@ -24,6 +23,11 @@ class MyTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         cell.textLabel?.text = data[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        print(tableView.cellForRow(at: IndexPath(row: 1, section: 0)) ?? "nil")
     }
 }
 
