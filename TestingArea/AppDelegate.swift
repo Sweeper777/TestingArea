@@ -103,3 +103,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
 }
+
+
+@objc(ABCAnimal)
+public enum Animal : Int {
+    case cat, dog
+}
