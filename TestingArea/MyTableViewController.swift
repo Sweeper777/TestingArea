@@ -29,5 +29,7 @@ class MyTableViewController: UITableViewController {
         print(indexPath.row)
         print(tableView.cellForRow(at: IndexPath(row: 1, section: 0)) ?? "nil")
     }
+    
+    
 }
 
