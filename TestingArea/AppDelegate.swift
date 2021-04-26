@@ -2,6 +2,7 @@ import UIKit
 import CoreData
 import AVFoundation
 import RealmSwift
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -105,7 +106,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 }
 
 
-@objc(ABCAnimal)
-public enum Animal : Int {
-    case cat, dog
+protocol LosslessDataRepresentable {
+    static func
+}
+
+extension AppStorage {
+    convenience init(wrappedValue: Value, _ key: String, store: UserDefaults? = nil) where Value : RawRepresentable {
+        <#statements#>
+    }
 }
