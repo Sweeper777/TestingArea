@@ -104,14 +104,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
 }
-
-
-protocol LosslessDataRepresentable {
-    static func
-}
-
-extension AppStorage {
-    convenience init(wrappedValue: Value, _ key: String, store: UserDefaults? = nil) where Value : RawRepresentable {
-        <#statements#>
-    }
-}

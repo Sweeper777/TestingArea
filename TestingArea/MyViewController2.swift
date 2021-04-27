@@ -18,6 +18,8 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     let disposeBag = DisposeBag()
     
+    let searchController = UISearchController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.addTarget(self, action: #selector(click), for: .valueChanged)
@@ -32,13 +34,42 @@ class MyViewController2: UIViewController {
 
         textview.attributedText = attrStr
         label.attributedText = attrStr
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+        definesPresentationContext = true
+
+        searchController.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+//        searchController.searchResultsUpdater = self
+
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search channels"
+
+        // search icon settings
+        searchController.searchBar.searchTextField.leftView?.tintColor = .link
+        searchController.searchBar.setImage(UIImage(systemName: "globe"), for: .bookmark, state: .normal)
+//        searchController.searchBar.showsSearchResultsButton = true
+        searchController.searchBar.showsBookmarkButton = true
     }
     
     @IBAction private func click() {
         presentedViewController?.dismiss(animated: true, completion: nil)
+        let picker = UIDocumentPickerViewController(forOpeningContentTypes: [.pdf])
+        present(picker, animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("")
+    }
+}
+
+extension MyViewController2: UISearchControllerDelegate, UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("clicked")
+    }
+    
+    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+        print("clicked")
     }
 }
