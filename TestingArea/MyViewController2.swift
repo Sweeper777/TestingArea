@@ -11,7 +11,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     @IBOutlet var segmentedControl: UISegmentedControl!
-    @IBOutlet var datePicker: UIDatePicker!
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -20,14 +19,19 @@ class MyViewController2: UIViewController {
     
     let searchController = UISearchController()
     
+    lazy var chatBoxView: UIView = {
+        let chatBoxView = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 85))
+        chatBoxView.backgroundColor = .red
+        return chatBoxView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        datePicker.addTarget(self, action: #selector(click), for: .valueChanged)
-        textview.isEditable = false
-        textview.isScrollEnabled = true
-        let foo = Foo()
-        button.addTarget(foo, action: #selector(foo.foo), for: .touchUpInside)
-        view.setContentHuggingPriority(.required, for: .vertical)
+        textfield.inputAccessoryView = chatBoxView
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        print(chatBoxView.constraints)
     }
     
     @IBAction private func click() {
