@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		5A4FF54622CF846B00B564A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A4FF54522CF846B00B564A2 /* Assets.xcassets */; };
 		5A50EB7522DF11D20028A479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A50EB7322DF11D20028A479 /* Main.storyboard */; };
 		5A53AEB822F2F2CC0043D2EE /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A53AEB722F2F2CC0043D2EE /* SheetViewController.swift */; };
+		5A67541C2642376C0029264C /* LLVM in Frameworks */ = {isa = PBXBuildFile; productRef = 5A67541B2642376C0029264C /* LLVM */; };
 		5A8AC6AF2415992A0003703A /* china.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5A8AC6AE2415992A0003703A /* china.svg */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A67541C2642376C0029264C /* LLVM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +158,9 @@
 			dependencies = (
 			);
 			name = TestingAreaForMac;
+			packageProductDependencies = (
+				5A67541B2642376C0029264C /* LLVM */,
+			);
 			productName = TestingAreaForMac;
 			productReference = 5A4FF53E22CF846A00B564A2 /* TestingAreaForMac.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +193,9 @@
 				Base,
 			);
 			mainGroup = 5A4FF53522CF846A00B564A2;
+			packageReferences = (
+				5A67541A2642376C0029264C /* XCRemoteSwiftPackageReference "LLVMSwift" */,
+			);
 			productRefGroup = 5A4FF53F22CF846A00B564A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -521,6 +529,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A67541A2642376C0029264C /* XCRemoteSwiftPackageReference "LLVMSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/llvm-swift/LLVMSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A67541B2642376C0029264C /* LLVM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A67541A2642376C0029264C /* XCRemoteSwiftPackageReference "LLVMSwift" */;
+			productName = LLVM;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A4FF53622CF846A00B564A2 /* Project object */;
 }
