@@ -11,6 +11,9 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     @IBOutlet var segmentedControl: UISegmentedControl!
+    @IBOutlet var label: UILabel!
+    @IBOutlet var c1: NSLayoutConstraint!
+    @IBOutlet var c2: NSLayoutConstraint!
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -19,43 +22,22 @@ class MyViewController2: UIViewController {
     
     let searchController = UISearchController()
     
-    lazy var chatBoxView: UIView = {
-        let chatBoxView = UIView(frame: CGRect(x: 0, y: 0, width: 375, height: 85))
-        chatBoxView.backgroundColor = .red
-        return chatBoxView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        textfield.inputAccessoryView = chatBoxView
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        print(chatBoxView.constraints)
+        NSLayoutConstraint.deactivate([c1, c2])
+        label.translatesAutoresizingMaskIntoConstraints = true
+        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut) {
+            self.label.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        }
     }
     
     @IBAction private func click() {
-        let vc = UIStoryboard.main?.instantiateViewController(identifier: "ProblemVC")
-        navigationController?.pushViewController(vc!, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("")
-    }
-}
-
-extension MyViewController2: UISearchControllerDelegate, UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("clicked")
-    }
-    
-    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
-        print("clicked")
-    }
-}
-
-class Foo: NSObject {
-    @objc func foo() {
-        print("clicked")
     }
 }
