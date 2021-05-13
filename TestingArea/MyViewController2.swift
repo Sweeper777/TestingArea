@@ -35,6 +35,11 @@ class MyViewController2: UIViewController {
     }
     
     @IBAction private func click() {
+    label.translatesAutoresizingMaskIntoConstraints = false
+    UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut) {
+        NSLayoutConstraint.activate([self.c1, self.c2])
+        self.view.layoutIfNeeded()
+    }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
