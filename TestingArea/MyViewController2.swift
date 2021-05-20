@@ -6,7 +6,7 @@ import SwiftUI
 import Alamofire
 
 @available(iOS 10.0, *)
-class MyViewController2: UIViewController {
+class MyViewController2: UIViewController, UITextFieldDelegate {
     @IBOutlet var textview: UITextView!
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
@@ -24,6 +24,8 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textfield.delegate = self
+        textfield.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -45,4 +47,18 @@ class MyViewController2: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("")
     }
+    
+    let katakanas =
+        "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン"
+    let hiraganas =
+        "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん"
+    @objc func textFieldChanged() {
+//        print(textfield.markedTextRange)
+        let newString = textfield.text ?? ""
+        if !(newString.count == 1 &&
+                katakanas.contains(newString.first!)) && textfield.markedTextRange == nil {
+            textfield.text = ""
+        }
+    }
+    
 }
