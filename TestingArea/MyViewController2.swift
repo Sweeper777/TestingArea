@@ -61,4 +61,11 @@ class MyViewController2: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let firstChar = textField.text?.first,
+           (katakanas.contains(firstChar)) && string != "" {
+            return false
+        }
+        return true
+    }
 }
