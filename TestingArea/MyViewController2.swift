@@ -24,6 +24,14 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let fooA = FooStruct(bar_value: 23)
+        let fooB = FooStruct(bar_value: 19)
+        let swiftFooArray = [fooA, fooB]
+        swiftFooArray.withUnsafeBufferPointer { (bufferPointer) in
+            let f = FooArray(foos: UnsafeMutablePointer(mutating: bufferPointer.baseAddress), foo_count: 2)
+            print_foo_array(f)
+        }
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
