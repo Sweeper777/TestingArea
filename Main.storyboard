@@ -74,8 +74,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj3-pu-dZZ">
-                                <rect key="frame" x="16" y="323" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Very long text fjijf fkwnf fn wfsrg" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj3-pu-dZZ">
+                                <rect key="frame" x="166" y="469" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -83,18 +84,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pj3-pu-dZZ" firstAttribute="centerY" secondItem="T5E-wd-qiu" secondAttribute="centerY" id="G6l-wk-6oO"/>
-                            <constraint firstItem="pj3-pu-dZZ" firstAttribute="leading" secondItem="T5E-wd-qiu" secondAttribute="leadingMargin" id="q06-cL-qci"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WN4-pT-4GI">
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
                         <outlet property="button" destination="ocK-bo-Y9C" id="ubh-lD-3Wi"/>
-                        <outlet property="c1" destination="G6l-wk-6oO" id="AAl-mL-ktV"/>
-                        <outlet property="c2" destination="q06-cL-qci" id="eWJ-uz-hsR"/>
                         <outlet property="label" destination="pj3-pu-dZZ" id="seO-r2-xnx"/>
                         <outlet property="segmentedControl" destination="PeU-uR-UvD" id="eTn-e5-1wg"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
@@ -103,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpo-us-K3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.724637681159422" y="182.60869565217394"/>
+            <point key="canvasLocation" x="50.399999999999999" y="182.15892053973016"/>
         </scene>
         <!--Probelm VC-->
         <scene sceneID="N06-uN-k0T">
