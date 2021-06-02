@@ -11,9 +11,6 @@ class MyViewController2: UIViewController {
     @IBOutlet var textfield: UITextField!
     @IBOutlet var button: UIButton!
     @IBOutlet var segmentedControl: UISegmentedControl!
-    @IBOutlet var label: UILabel!
-    @IBOutlet var c1: NSLayoutConstraint!
-    @IBOutlet var c2: NSLayoutConstraint!
     
     @objc let fontStyles: [UIFont.TextStyle] = [.body, .callout, .caption1, .caption2, .footnote, .headline, .subheadline, .title1, .title2, .title3]
     // normal(4):       17, 16, 12, 11, 13, 17(b), 15, 28, 22, 20
@@ -25,29 +22,29 @@ class MyViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fooA = FooStruct(bar_value: 23)
-        let fooB = FooStruct(bar_value: 19)
-        let swiftFooArray = [fooA, fooB]
-        swiftFooArray.withUnsafeBufferPointer { (bufferPointer) in
-            let f = FooArray(foos: UnsafeMutablePointer(mutating: bufferPointer.baseAddress), foo_count: 2)
-            print_foo_array(f)
-        }
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        NSLayoutConstraint.deactivate([c1, c2])
-        label.translatesAutoresizingMaskIntoConstraints = true
-        UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut) {
-            self.label.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        }
+        
     }
     
+    var ob: NSKeyValueObservation?
+    
     @IBAction private func click() {
-    label.translatesAutoresizingMaskIntoConstraints = false
-    UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut) {
-        NSLayoutConstraint.activate([self.c1, self.c2])
-        self.view.layoutIfNeeded()
-    }
+        let vc = storyboard?.instantiateViewController(identifier: "second") as! MyViewController
+        vc.modalPresentationStyle = .overFullScreen
+
+        present(vc, animated: false) { //vc presentation completion handler
+            
+            //adding a completion handler to the UIViewPropertyAnimator
+            self.ob?.invalidate()
+            self.ob = vc.blurView.animator?.observe(\.isRunning, options: [.new], changeHandler: { (animator, change) in
+                if !(change.newValue!) {
+                    print("completed")
+                }
+            })
+            vc.blurView.animator?.startAnimation()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
