@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -74,14 +73,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Very long text fjijf fkwnf fn wfsrg" textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj3-pu-dZZ">
-                                <rect key="frame" x="166" y="469" width="69" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -90,7 +81,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="button" destination="ocK-bo-Y9C" id="ubh-lD-3Wi"/>
-                        <outlet property="label" destination="pj3-pu-dZZ" id="seO-r2-xnx"/>
                         <outlet property="segmentedControl" destination="PeU-uR-UvD" id="eTn-e5-1wg"/>
                         <outlet property="textfield" destination="Sws-XP-erq" id="Ryr-Y4-AtO"/>
                         <outlet property="textview" destination="4qu-IC-9ga" id="dVQ-iq-rAi"/>
@@ -103,7 +93,7 @@
         <!--Probelm VC-->
         <scene sceneID="N06-uN-k0T">
             <objects>
-                <viewController storyboardIdentifier="ProblemVC" id="BdK-0G-Xl3" userLabel="Probelm VC" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" id="BdK-0G-Xl3" userLabel="Probelm VC" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OpP-9z-h5Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,6 +128,15 @@
                                     <constraint firstAttribute="width" secondItem="U1J-Jq-rwt" secondAttribute="height" multiplier="7:6" id="STP-wY-veN"/>
                                 </constraints>
                             </stackView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5S2-8W-3O6" customClass="BlurEffectView" customModule="TestingArea" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dhE-uj-ZHr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wgl-gV-tap"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,6 +147,9 @@
                             <constraint firstItem="U1J-Jq-rwt" firstAttribute="leading" secondItem="wgl-gV-tap" secondAttribute="leading" constant="10" id="wcS-AJ-eVo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="5S2-8W-3O6" id="fj4-ik-CJm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTA-xX-zRK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,8 +161,5 @@
         <image name="home" width="25" height="25"/>
         <image name="my_image" width="200" height="200"/>
         <image name="settings" width="25" height="25"/>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
