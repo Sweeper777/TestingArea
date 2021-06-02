@@ -54,3 +54,26 @@ class MyViewController2: UIViewController {
         print("")
     }
 }
+
+final class BlurEffectView: UIVisualEffectView {
+    
+    deinit {
+    animator?.stopAnimation(true)
+    }
+
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+   }
+
+    private let theEffect: UIVisualEffect = UIBlurEffect(style: .regular)
+    lazy var animator: UIViewPropertyAnimator? = {
+        let anim = UIViewPropertyAnimator(duration: 1, curve: .linear) { [unowned self] in
+            self.effect = self.theEffect
+        }
+        anim.pausesOnCompletion = true
+        self.effect = nil
+        return anim
+    }()
+
+}
+
