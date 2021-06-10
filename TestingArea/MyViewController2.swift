@@ -55,9 +55,15 @@ class MyViewController2: UIViewController {
     }
 }
 
+class Foo  {
+    func processCompleted() {
+        
     }
+    
 }
 
+extension Foo : PrintProtocolDelegate{
+    @objc func didClose(withTrailingMetadata trailingMetadata: [AnyHashable : Any]?, error: Error?) {
         
     }
 }
