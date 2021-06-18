@@ -33,21 +33,15 @@ class MyViewController2: UIViewController {
     
     var ob: NSKeyValueObservation?
     
+    override func viewWillAppear(_ animated: Bool) {
+        print("Appeared!")
+    }
+    
     @IBAction private func click() {
         let vc = storyboard?.instantiateViewController(identifier: "second") as! MyViewController
         vc.modalPresentationStyle = .overFullScreen
 
-        present(vc, animated: false) { //vc presentation completion handler
-            
-            //adding a completion handler to the UIViewPropertyAnimator
-            self.ob?.invalidate()
-            self.ob = vc.blurView.animator?.observe(\.isRunning, options: [.new], changeHandler: { (animator, change) in
-                if !(change.newValue!) {
-                    print("completed")
-                }
-            })
-            vc.blurView.animator?.startAnimation()
-        }
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
