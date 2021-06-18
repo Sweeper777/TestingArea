@@ -4,6 +4,7 @@ PODS:
   - GridLayout (0.2.6)
   - PaddingLabel (1.2)
   - PathKit (1.0.0)
+  - Punycode (2.1.0)
   - Realm (10.0.0-beta.2):
     - Realm/Headers (= 10.0.0-beta.2)
   - Realm/Headers (10.0.0-beta.2)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Alamofire
   - GridLayout
   - PaddingLabel
+  - Punycode
   - RealmSwift (= 10.0.0-beta.2)
   - RxCocoa
   - RxDataSources
@@ -45,6 +47,7 @@ SPEC REPOS:
     - GridLayout
     - PaddingLabel
     - PathKit
+    - Punycode
     - Realm
     - RealmSwift
     - RxCocoa
@@ -75,6 +78,7 @@ SPEC CHECKSUMS:
   GridLayout: ceca008dc47e27e48612adb7007e53b011894d08
   PaddingLabel: 21ab5282c780366018b04c30e3920c2f55a2fd14
   PathKit: 364e0de7fb5adb142aecab4e112187e5548fc4b6
+  Punycode: efcc033c34024be90475b2b4fc74cbb8e9bc0b1e
   Realm: 211e32e680c354c9b1a2bdc0e3aeb01c25849641
   RealmSwift: f9043abf9b6821ad5c3032c2a36b5ddfc90b4ce3
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -86,6 +90,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: 28aabea51a8c2c451cccb74fd69a20ea2fc79bd0
+PODFILE CHECKSUM: e2b96a77324397fa2c742d48e0db6b8dcd36653f
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.10.1

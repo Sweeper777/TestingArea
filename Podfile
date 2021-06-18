@@ -15,6 +15,7 @@ target 'TestingArea' do
     pod 'Stencil'
     pod 'GridLayout'
     pod 'PaddingLabel'
+    pod 'Punycode' 
     target 'MyTodayExtension' do
       inherit! :search_paths
     end
