@@ -4,6 +4,7 @@ import RxCocoa
 import SwiftyUtils
 import SwiftUI
 import Alamofire
+import Punycode
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -21,6 +22,8 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("zerø.info".idnaEncoded)
         
         let loader = UINib(nibName: "MyCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
         loader.frame = CGRect(x: 50, y: 100, width: 300, height: 100)
