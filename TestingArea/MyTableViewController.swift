@@ -20,16 +20,10 @@ class MyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MyCell
+        cell.becomeFirstResponder()
         cell.textLabel?.text = data[indexPath.row]
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        print(tableView.cellForRow(at: IndexPath(row: 1, section: 0)) ?? "nil")
-    }
-    
-    
 }
 
