@@ -7,6 +7,14 @@ class MyTableViewController: UITableViewController {
 
     let data = ["Hello", "World", "Some", "Text"]
     
+    override func viewDidLoad() {
+        DispatchQueue.global().async {
+            DispatchQueue.main.sync {
+                print("Hello")
+            }
+        }
+    }
+    
     @objc func foo() {
         print("Hello World")
     }
