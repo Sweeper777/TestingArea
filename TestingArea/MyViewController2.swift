@@ -2,9 +2,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftyUtils
-import SwiftUI
-import Alamofire
-import Punycode
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -22,12 +19,6 @@ class MyViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("zerø.info".idnaEncoded)
-        
-        let loader = UINib(nibName: "MyCell", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
-        loader.frame = CGRect(x: 50, y: 100, width: 300, height: 100)
-        view.addSubview(loader)
     }
     
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
@@ -52,15 +43,8 @@ class MyViewController2: UIViewController {
     }
 }
 
-class Foo  {
-    func processCompleted() {
-        
-    }
-    
-}
-
-extension Foo : PrintProtocolDelegate{
-    @objc func didClose(withTrailingMetadata trailingMetadata: [AnyHashable : Any]?, error: Error?) {
-        
+@objc public class SwiftClass: NSObject {
+    @objc func method(completion: IndexChangeBlock) {
+        completion(100)
     }
 }
