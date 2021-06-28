@@ -1,10 +1,11 @@
 
 import UIKit
+import SpriteKit
 
 class MyViewController: UIViewController {
     
     
     override func viewDidLoad() {
-//        seg.setBackgroundImage(UIImage(color: .clear), for: .normal, barMetrics: .default)
+        view = SKView()
     }
 }
