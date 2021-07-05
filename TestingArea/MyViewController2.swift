@@ -2,6 +2,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SwiftyUtils
+import Alamofire
 
 @available(iOS 10.0, *)
 class MyViewController2: UIViewController {
@@ -15,8 +16,6 @@ class MyViewController2: UIViewController {
     // large text(7):   23, 22, 18, 17, 19, 23(b), 21, 34, 28, 26
     let disposeBag = DisposeBag()
     
-    let searchController = UISearchController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,26 +24,7 @@ class MyViewController2: UIViewController {
         
     }
     
-    var ob: NSKeyValueObservation?
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("Appeared!")
-    }
-    
     @IBAction private func click() {
-        let vc = storyboard?.instantiateViewController(identifier: "second") as! MyViewController
-        vc.modalPresentationStyle = .overFullScreen
-
-        navigationController?.pushViewController(vc, animated: false)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("")
-    }
-}
-
-@objc public class SwiftClass: NSObject {
-    @objc func method(completion: IndexChangeBlock) {
-        completion(100)
+        
     }
 }
