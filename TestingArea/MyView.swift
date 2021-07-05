@@ -9,6 +9,12 @@ class TwoCirclesView: UIView {
     var turn: CGFloat = 0
     var speed: CGFloat = 1
     
+    @objc func update() {
+        if roll {
+            updateTurn()
+        }
+        position += speed
+        setNeedsDisplay()
     }
     
     private func degToRad(_ deg: CGFloat) -> CGFloat {
