@@ -1,12 +1,15 @@
 import UIKit
+import SwiftyUtils
 
-class MyCell: UITableViewCell {
-    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        super.motionBegan(motion, with: event)
-        print("Moved!")
+class TwoCirclesView: UIView {
+    var stationaryCircleRadius: CGFloat = 120
+    var movingCircleRadius: CGFloat = 40
+    var roll = true
+    var position: CGFloat = 0
+    var turn: CGFloat = 0
+    var speed: CGFloat = 1
+    
     }
     
-    override var canBecomeFirstResponder: Bool {
-        true
     }
 }
