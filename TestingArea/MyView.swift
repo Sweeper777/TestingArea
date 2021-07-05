@@ -27,6 +27,24 @@ class TwoCirclesView: UIView {
         turn += deltaTheta
     }
     
+    override func draw(_ rect: CGRect) {
+        UIColor.black.setStroke()
+        let stationaryCircleFrame = CGRect(x: bounds.midX, y: bounds.midY, width: 0, height: 0)
+            .insetBy(dx: -stationaryCircleRadius, dy: -stationaryCircleRadius)
+        let stationaryCirclePath = UIBezierPath(ovalIn: stationaryCircleFrame)
+        stationaryCirclePath.lineWidth = 2
+        stationaryCirclePath.stroke()
+        
+        let movingCircleCenterX = sin(degToRad(position)) * (stationaryCircleRadius + movingCircleRadius) + bounds.midX
+        let movingCircleCenterY = -cos(degToRad(position)) * (stationaryCircleRadius + movingCircleRadius) + bounds.midY
+        let movingCircleFrame = CGRect(x: movingCircleCenterX, y: movingCircleCenterY, width: 0, height: 0)
+            .insetBy(dx: -movingCircleRadius, dy: -movingCircleRadius)
+        let movingCirclePath = UIBezierPath(ovalIn: movingCircleFrame)
+        movingCirclePath.lineWidth = 2
+        movingCirclePath.stroke()
+        
+        drawRotatedText("A", in: movingCircleFrame,
+                        angle: degToRad(position) + turn, font: .systemFont(ofSize: 18), color: .black)
     }
 }
 
