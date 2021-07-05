@@ -11,6 +11,16 @@ class TwoCirclesView: UIView {
     
     }
     
+    private func degToRad(_ deg: CGFloat) -> CGFloat {
+        (deg / 180 * .pi)
+    }
+    
+    private func updateTurn() {
+        let arcLengthTraveled = degToRad(speed) * stationaryCircleRadius
+        let deltaTheta = arcLengthTraveled / movingCircleRadius
+        turn += deltaTheta
+    }
+    
     }
 }
 
