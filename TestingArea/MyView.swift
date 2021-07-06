@@ -5,8 +5,24 @@ class TwoCirclesView: UIView {
     var stationaryCircleRadius: CGFloat = 120
     var movingCircleRadius: CGFloat = 40
     var roll = true
-    var position: CGFloat = 0
-    var turn: CGFloat = 0
+    var position: CGFloat = 0 {
+        didSet {
+            if position > 360 {
+                position.formTruncatingRemainder(dividingBy: 360)
+                print("one revolution!")
+            }
+        }
+    }
+    
+    var turn: CGFloat = 0 {
+        didSet {
+            if turn > 2 * .pi {
+                turn.formTruncatingRemainder(dividingBy: 2 * .pi)
+                print("one rotation!")
+            }
+        }
+    }
+    
     var speed: CGFloat = 1
     
     @objc func update() {
