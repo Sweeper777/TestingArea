@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k73-cf-Sru">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BdK-0G-Xl3">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -101,7 +101,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="ut6-ji-FM7" style="IBUITableViewCellStyleDefault" id="YFY-TA-Adk" customClass="MyCell" customModule="TestingArea" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="24.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YFY-TA-Adk" id="MoL-Tg-njP">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -132,50 +132,15 @@
         <scene sceneID="N06-uN-k0T">
             <objects>
                 <viewController storyboardIdentifier="second" id="BdK-0G-Xl3" userLabel="Probelm VC" customClass="MyViewController" customModule="TestingArea" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OpP-9z-h5Y">
+                    <view key="view" contentMode="scaleToFill" id="OpP-9z-h5Y" customClass="TwoCirclesView" customModule="TestingArea" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U1J-Jq-rwt">
-                                <rect key="frame" x="10" y="100" width="355" height="304.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DVS-Se-oNo">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="148"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="zvj-11-n0n">
-                                                <rect key="frame" x="0.0" y="0.0" width="173.5" height="148"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-vd-cXd">
-                                                <rect key="frame" x="181.5" y="0.0" width="173.5" height="148"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LVh-tL-6qU">
-                                        <rect key="frame" x="0.0" y="156" width="355" height="148.5"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_image" translatesAutoresizingMaskIntoConstraints="NO" id="QYi-ac-Cm0">
-                                                <rect key="frame" x="0.0" y="0.0" width="173.5" height="148.5"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="bOS-hQ-TLG">
-                                                <rect key="frame" x="181.5" y="0.0" width="173.5" height="148.5"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="U1J-Jq-rwt" secondAttribute="height" multiplier="7:6" id="STP-wY-veN"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wgl-gV-tap"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="U1J-Jq-rwt" firstAttribute="centerX" secondItem="OpP-9z-h5Y" secondAttribute="centerX" id="6HN-pp-7Jw"/>
-                            <constraint firstItem="U1J-Jq-rwt" firstAttribute="top" secondItem="wgl-gV-tap" secondAttribute="top" constant="100" id="S0N-kV-ntK"/>
-                            <constraint firstItem="wgl-gV-tap" firstAttribute="trailing" secondItem="U1J-Jq-rwt" secondAttribute="trailing" constant="10" id="rKR-yf-Tbe"/>
-                            <constraint firstItem="U1J-Jq-rwt" firstAttribute="leading" secondItem="wgl-gV-tap" secondAttribute="leading" constant="10" id="wcS-AJ-eVo"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="twoCirlcesView" destination="OpP-9z-h5Y" id="8Eq-pu-tZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MTA-xX-zRK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,10 +148,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="example" width="392" height="238"/>
-        <image name="home" width="25" height="25"/>
-        <image name="my_image" width="200" height="200"/>
-        <image name="settings" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
