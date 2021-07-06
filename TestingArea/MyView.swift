@@ -9,7 +9,6 @@ class TwoCirclesView: UIView {
         didSet {
             if position > 360 {
                 position.formTruncatingRemainder(dividingBy: 360)
-                print("one revolution!")
             }
         }
     }
@@ -18,7 +17,6 @@ class TwoCirclesView: UIView {
         didSet {
             if turn > 2 * .pi {
                 turn.formTruncatingRemainder(dividingBy: 2 * .pi)
-                print("one rotation!")
             }
         }
     }
@@ -58,6 +56,11 @@ class TwoCirclesView: UIView {
         let movingCirclePath = UIBezierPath(ovalIn: movingCircleFrame)
         movingCirclePath.lineWidth = 2
         movingCirclePath.stroke()
+        
+        if (degToRad(position) + turn).truncatingRemainder(dividingBy: 2 * .pi) < 1 {
+            UIColor.red.setFill()
+            movingCirclePath.fill()
+        }
         
         drawRotatedText("A", in: movingCircleFrame,
                         angle: degToRad(position) + turn, font: .systemFont(ofSize: 18), color: .black)
